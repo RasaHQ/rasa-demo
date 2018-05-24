@@ -1,0 +1,108 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_ask_usecase
+- utter_ask_businessmail
+- utter_ask_jobfunction
+- utter_ask_email
+- utter_ask_budget
+- utter_ask_company
+- utter_ask_goal
+- utter_moreinformation
+- utter_confirm_salesrequest
+- utter_docu
+- utter_confirmationemail
+- utter_sales_contact
+actions:
+- utter_greet
+- utter_ask_usecase
+- utter_ask_businessmail
+- utter_ask_jobfunction
+- utter_ask_email
+- utter_ask_budget
+- utter_ask_company
+- utter_ask_goal
+- utter_moreinformation
+- utter_confirm_salesrequest
+- utter_docu
+- utter_confirmationemail
+- utter_sales_contact
+config:
+  store_entities_as_slots: true
+entities:
+- jobfunction
+- company
+- email
+- name
+- budget
+intents:
+- utter_confirmationemail
+- enter_jobfunction
+- utter_ask_jobfunction
+- utter_ask_usecase
+- enter_name
+- utter_ask_email
+- utter_ask_goal
+- enter_emailaddress
+- utter_moreinformation
+- utter_confirm_salesrequest
+- utter_docu
+- mood_confirm
+- enter_usecase
+- utter_greet
+- utter_ask_businessmail
+- enter_company
+- contact_sales
+- signup_newsletter
+- utter_ask_company
+- utter_sales_contact
+- enter_budget
+- utter_ask_budget
+slots:
+  budget:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  company:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  email:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  jobfunction:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  name:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_budget:
+  - text: Ok, thank you. What's your yearly budget for conversational AI?
+  utter_ask_businessmail:
+  - text: And your business email?
+  utter_ask_company:
+  - text: And the name of the company you work for?
+  utter_ask_email:
+  - text: Great - what's your email address?
+  utter_ask_goal:
+  - text: I'm the Rasa Bot and I can help you to get started with Rasa. You can either
+      sign up for the newsletter or request a call with our sales team. What do you
+      want to do?
+  utter_ask_jobfunction:
+  - text: What's your job function?
+  utter_ask_usecase:
+  - text: Tell me more about your use case, what do you want to build with Rasa?
+  utter_confirm_salesrequest:
+  - text: Great, thank you! You'll hear from us.
+  utter_confirmationemail:
+  - text: Wonderful, thank you. We sent you a confirmation email.
+  utter_docu:
+  - text: I you want to learn more about the technical side of things, check our documentation
+      (link).
+  utter_greet:
+  - text: Hey there!
+  utter_moreinformation:
+  - text: Sure, to find the right person to talk to, it would be great if you could
+      give us a few more information about you and the company you work for.
+  utter_sales_contact:
+  - text: "Thank you! \nOur sales team will contact you - what's your name?"
+topics: []
