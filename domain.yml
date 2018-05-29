@@ -8,6 +8,7 @@ action_names:
 - utter_ask_budget
 - utter_ask_company
 - utter_ask_goal
+- utter_inform_privacypolicy
 - utter_moreinformation
 - utter_confirm_salesrequest
 - utter_docu
@@ -22,6 +23,7 @@ actions:
 - utter_ask_budget
 - utter_ask_company
 - utter_ask_goal
+- utter_inform_privacypolicy
 - utter_moreinformation
 - utter_confirm_salesrequest
 - utter_docu
@@ -100,6 +102,8 @@ templates:
       (link).
   utter_greet:
   - text: Hey there!
+  utter_inform_privacypolicy:
+  - text: Before we start chatting, please make sure you've checked our privacy policy: https://rasa.com/privacy-policy/
   utter_moreinformation:
   - text: Sure, to find the right person to talk to, it would be great if you could
       give us a few more information about you and the company you work for.
