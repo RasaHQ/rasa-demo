@@ -1,0 +1,25 @@
+language: python
+sudo: required
+services:
+- docker
+before_install:
+- openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv
+  -in travis_gcloud_auth.json.enc -out travis_gcloud_auth.json -d
+- chmod +x docker-deploy.sh
+- docker login -u _json_key -p "$(cat travis_gcloud_auth.json)" https://gcr.io
+- docker pull gcr.io/replicated-test/killer-demo:latest || true
+script:
+- docker build --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} -t gcr.io/replicated-test/killer-demo:v$TRAVIS_BUILD_NUMBER
+  -t gcr.io/replicated-test/killer-demo:latest --cache-from gcr.io/replicated-test/killer-demo:latest
+  .
+- docker push gcr.io/replicated-test/killer-demo:v$TRAVIS_BUILD_NUMBER
+- docker push gcr.io/replicated-test/killer-demo:latest
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: "./docker-deploy.sh"
+  on:
+    branch: master
+addons:
+  ssh_known_hosts:
+  - 35.233.89.43
