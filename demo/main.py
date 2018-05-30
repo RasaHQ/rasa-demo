@@ -14,7 +14,7 @@ logger = logging.getLogger()  # get the root logger
 
 
 def run_remote():
-    from rasa_extensions.core.remote import run_with_remote_core
+    from rasa_core.remote import RemoteAgent
 
     logging.basicConfig(level="DEBUG")
 
@@ -24,11 +24,12 @@ def run_remote():
     input_channel = HttpInputChannel(config.self_port, "/",
                                      rasa_in)
 
-    run_with_remote_core(config.core_model_dir,
-                         input_channel,
-                         config.remote_core_endpoint,
-                         config.rasa_core_token
-                         )
+    agent = RemoteAgent.load(config.core_model_dir,
+                             config.remote_core_endpoint,
+                             config.rasa_core_token
+                             )
+
+    agent.handle_channel(input_channel)
 
 
 if __name__ == "__main__":
