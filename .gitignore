@@ -1,4 +1,3 @@
 venv/
-models/
 travis_gcloud_auth.json
 docker-compose.override.yml
