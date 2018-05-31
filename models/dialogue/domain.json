@@ -1,14 +1,9 @@
 {
   "states": [
-    "intent_enter_jobfunction", 
-    "intent_enter_name", 
-    "intent_enter_emailaddress", 
+    "intent_enter_data", 
     "intent_mood_confirm", 
-    "intent_enter_usecase", 
-    "intent_enter_company", 
     "intent_contact_sales", 
     "intent_signup_newsletter", 
-    "intent_enter_budget", 
     "intent_greet", 
     "entity_jobfunction", 
     "entity_company", 

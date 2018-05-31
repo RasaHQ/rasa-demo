@@ -6,15 +6,10 @@ entities:
   - budget
 
 intents:
-  - enter_jobfunction
-  - enter_name
-  - enter_emailaddress
+  - enter_data
   - mood_confirm
-  - enter_usecase
-  - enter_company
   - contact_sales
   - signup_newsletter
-  - enter_budget
   - greet
 
 slots:
