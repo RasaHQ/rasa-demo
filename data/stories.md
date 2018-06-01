@@ -2,6 +2,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14,6 +15,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -25,6 +27,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -56,6 +59,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -81,6 +85,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -113,6 +118,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -145,6 +151,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -184,6 +191,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -223,6 +231,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -232,6 +241,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -241,6 +251,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -266,6 +277,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -288,6 +300,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -297,6 +310,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction

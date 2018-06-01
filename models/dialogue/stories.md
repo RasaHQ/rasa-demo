@@ -1,7 +1,8 @@
-## Generated Story -6109485633026070210
+## Generated Story -5148171801812253416
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9,6 +10,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -34,11 +50,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -9113492455152399597
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -1241828221570351429
+## Generated Story 2584090205404402008
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -64,14 +95,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -81,10 +104,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -239099452531991765
+## Generated Story -7518410660887881354
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -92,11 +116,38 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 
-## Generated Story 7029151119648525865
+## Generated Story 2152422320312506157
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -122,19 +173,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 8364497156929663581
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -143,6 +184,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -168,6 +212,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3173713361725937288
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -175,12 +225,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 
-## Generated Story 8232442567289488567
+## Generated Story 4003729780315586090
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -189,8 +239,31 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -199,8 +272,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -7660669118949887924
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -226,11 +303,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -3924692045041655848
+## Generated Story 4341075692374021044
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -256,8 +350,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -5178135702252029103
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -265,9 +363,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -294,10 +389,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -4741844083823480377
+## Generated Story -4899924293416762560
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -323,11 +419,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -7432543669456175294
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -336,11 +439,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -5980551321199189177
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -349,6 +450,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -375,20 +479,39 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 7282905388155031819
+## Generated Story 7052621229110211397
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
+    - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -396,6 +519,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -421,11 +548,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 3789779453349361853
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -434,6 +571,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -459,6 +599,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 5684760113961576339
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -468,8 +614,20 @@
     - utter_docu
 * mood_confirm
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -477,6 +635,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -503,10 +665,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 9058694429021861563
+## Generated Story -9010999023655409684
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -532,6 +695,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -540,6 +707,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -548,16 +718,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -584,10 +747,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 8680432209770176516
+## Generated Story 6844713394122905768
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -595,10 +759,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -606,6 +781,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -632,10 +811,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 8106110808127033911
+## Generated Story -8042169921933572568
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -646,6 +826,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -656,6 +837,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -682,8 +864,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -691,6 +885,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -717,10 +915,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -6840640056623631980
+## Generated Story 7034652304194856058
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -728,6 +927,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -753,9 +953,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -763,36 +972,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -4392256690124228806
-* greet
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -818,8 +1012,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7511498596502193474
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -828,8 +1026,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -856,8 +1052,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -865,6 +1073,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -891,10 +1103,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -7815516821008819419
+## Generated Story -4201902424228149524
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -920,6 +1133,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -931,6 +1152,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -938,6 +1160,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -964,10 +1201,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 5217709673067719591
+## Generated Story -2635591472054519263
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -994,8 +1239,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1003,6 +1260,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1029,18 +1290,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -8912600038577642337
+## Generated Story 2208996670110783292
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1066,9 +1320,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1076,6 +1330,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1101,11 +1359,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 2693683334274328120
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1114,6 +1371,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1944781561740231573
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1139,6 +1402,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1147,9 +1422,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 7396891948992653175
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1175,6 +1453,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1183,6 +1469,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1192,10 +1482,22 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 3685455442943813158
+## Generated Story 8072736157888717003
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1203,9 +1505,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+
+## Generated Story 7543396804165924025
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1239,6 +1553,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1248,10 +1566,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 7930664332872056322
+## Generated Story -4589630243607261041
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1280,6 +1599,29 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -2237847905545078239
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1305,6 +1647,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1313,6 +1659,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 2998801236890049586
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1321,11 +1673,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 3270736299483790658
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1334,8 +1685,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 5923339401564184648
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1343,9 +1698,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1374,31 +1726,21 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -1234374924010511229
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1407,6 +1749,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1415,11 +1760,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 7966154418319125431
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1445,8 +1788,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1455,8 +1800,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -4571010515475651830
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1482,9 +1839,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1510,14 +1876,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1527,10 +1885,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 466311349473222289
+## Generated Story -5117570971353999179
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1542,6 +1901,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1567,14 +1927,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1584,10 +1936,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -1609004042139737620
+## Generated Story -4048278622480782324
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1613,6 +1966,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1624,6 +1985,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1657,52 +2019,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 1454388970134763558
+## Generated Story 4311125474069991356
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1710,10 +2032,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1739,14 +2061,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1756,18 +2070,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 1016143271751528438
+## Generated Story 2631867995135320048
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1796,6 +2103,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1829,6 +2137,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -8464323151358704096
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1837,11 +2151,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4269185613513140589
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1849,6 +2161,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1877,6 +2193,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1902,14 +2219,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1919,10 +2228,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 2490527754151666151
+## Generated Story 6043468984059349987
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1950,6 +2260,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -1960,6 +2271,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1985,21 +2297,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story -7805423903162016338
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2025,14 +2326,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2041,9 +2334,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -4521176368426881902
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2051,11 +2347,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story 2352959888403562866
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2081,31 +2373,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story -2896070999138339934
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2114,8 +2410,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -5137025102143844336
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2141,9 +2441,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2151,22 +2448,36 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -2946416958329159331
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2174,11 +2485,13 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 
-## Generated Story -7513890633305200111
+## Generated Story 5906131598963496459
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2214,26 +2527,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story 1603751901215805540
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2267,21 +2561,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 
-## Generated Story 7212316740940075688
+## Generated Story -644348819563556398
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2315,31 +2600,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story -4326876064092178346
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2347,11 +2607,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -3750508012964578706
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2385,21 +2645,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 
-## Generated Story -5654199845413788018
+## Generated Story 5088446638198637330
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2428,6 +2679,15 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2453,6 +2713,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 6767704117133308510
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2460,12 +2726,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 743574932622963731
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2474,9 +2738,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2502,29 +2763,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story -2563751880643194530
+## Generated Story -5604527673039163288
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2533,8 +2777,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2560,9 +2802,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2588,6 +2847,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -5884815378878662403
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2595,12 +2860,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 367027532359928573
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2626,8 +2885,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2636,8 +2897,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2663,9 +2922,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -2900903577140745814
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2699,11 +2961,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -4763559882603747678
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2737,9 +2998,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 6444202193349059908
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2765,19 +3037,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -6648582924675912726
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2785,9 +3048,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2813,6 +3074,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 4662318482799673367
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2821,11 +3088,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4732460065936323612
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2851,17 +3125,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 9010152659293265493
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2887,6 +3156,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2895,11 +3167,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -5655515845773228578
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2925,14 +3195,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2941,9 +3207,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -2969,6 +3232,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 1984393714471567894
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2977,11 +3246,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4681892490303611256
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -2990,6 +3257,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3015,6 +3285,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3023,9 +3297,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3051,26 +3322,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 5159867496560778251
+## Generated Story -4359446337546685950
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3096,9 +3353,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3124,27 +3392,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -2809081692434856366
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3170,17 +3421,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3189,6 +3432,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3214,6 +3460,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -4732808863522260656
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3222,11 +3474,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -5579636521408051680
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3252,25 +3503,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3279,6 +3514,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3304,29 +3542,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story -1915660106436203112
+## Generated Story -2553253233016060087
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3334,9 +3555,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3362,9 +3584,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3373,6 +3595,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3398,6 +3623,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -2648057064149659739
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3406,11 +3637,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -770509116923078381
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3418,6 +3647,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3446,14 +3679,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3479,6 +3705,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3487,11 +3716,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4391844200327137512
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3517,17 +3744,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 6648529129554278593
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3561,11 +3783,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 5908412433423606668
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3573,17 +3790,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3609,6 +3820,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3617,11 +3831,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 1491694213622498550
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3647,25 +3859,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 2625922831885404153
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3699,11 +3898,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 2463389391609940957
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3731,6 +3929,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3741,6 +3940,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3766,9 +3966,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3874951168705381217
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3802,27 +4005,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 7031936374400241592
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3848,9 +4034,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3859,6 +4045,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3884,30 +4073,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story -4720085056446771381
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+## Generated Story -1907084450326561861
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3949,11 +4120,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -9019349595278833653
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -3981,6 +4151,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -3991,6 +4162,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4016,19 +4188,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -8680595030642898250
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4036,9 +4201,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4064,22 +4226,38 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 7628418059236106273
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
+    - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4090,16 +4268,38 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
+
+## Generated Story 2596699125921479861
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4125,11 +4325,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -4428791859289842568
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4155,6 +4354,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4163,19 +4365,40 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
+
+## Generated Story 3671688645507173238
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4184,8 +4407,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4211,11 +4432,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 6007503003949160982
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4224,8 +4440,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4233,9 +4451,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -5102094899432656772
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4264,6 +4485,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4271,9 +4493,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 3661068707509384266
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4282,8 +4507,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4309,11 +4532,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 1810187673589995770
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4321,9 +4543,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+
+## Generated Story 8513331689042616864
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4331,9 +4556,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4341,9 +4567,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 1877384146671368760
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4369,11 +4598,31 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 
-## Generated Story 7839200885010663966
+## Generated Story -5559864191275678847
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4381,7 +4630,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4407,9 +4655,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+
+## Generated Story 5747732961771180200
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4420,6 +4682,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4430,6 +4693,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4455,11 +4719,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -922462697395263943
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4467,6 +4730,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+
+## Generated Story -7671173884377167076
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4492,9 +4761,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4503,8 +4777,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4512,9 +4788,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -8771265889738107915
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4540,12 +4819,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6918441772988111466
-* greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
@@ -4573,6 +4861,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4580,9 +4869,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 3071043733626360127
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4591,8 +4883,23 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+
+## Generated Story -6983820864267352550
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4618,11 +4925,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 6721642660251708296
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4664,9 +4970,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -6952193120718432162
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4674,9 +4983,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4685,8 +4995,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4712,11 +5020,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 5631257094749310938
+## Generated Story -4348526671760154889
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4742,14 +5059,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4758,19 +5070,38 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4779,8 +5110,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4806,11 +5135,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 3865823893267267698
+## Generated Story -3860069487317025992
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4819,9 +5157,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4847,8 +5182,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4857,8 +5194,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4884,11 +5219,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -6596471352864232273
+## Generated Story 57130365181611322
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4899,6 +5243,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4909,6 +5254,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4937,6 +5283,15 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4962,8 +5317,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -4972,8 +5325,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1911458731248041145
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -4999,11 +5363,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -60526440513589015
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5045,9 +5408,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 7377205255480907742
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5073,8 +5439,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5083,8 +5455,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5110,11 +5492,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 6412721345264210773
+## Generated Story -6063921373275922132
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5151,6 +5550,15 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5176,8 +5584,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5186,8 +5592,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 4340462468555675658
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5213,11 +5623,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6309070770408610558
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5225,6 +5642,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5250,36 +5668,32 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 2208793026651159333
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5288,8 +5702,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5315,11 +5727,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 2548711785075528555
+## Generated Story -5569212078315182494
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5356,6 +5777,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5381,8 +5803,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 2282155140162221428
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5390,9 +5832,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5418,16 +5861,40 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -5911291125838773665
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -1731957695779540435
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data
@@ -5451,6 +5918,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5476,8 +5944,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5486,8 +5960,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 6117358662694987672
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5513,11 +5991,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -5447990998228944276
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5543,8 +6036,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5553,36 +6052,24 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 3345682631553407
+* greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5608,8 +6095,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5618,8 +6111,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -2757617775729994364
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5645,11 +6142,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 5124019131953957179
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5657,9 +6149,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5685,8 +6179,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5695,8 +6195,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -3347758475828833018
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5722,11 +6234,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 731152650619886191
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5768,9 +6287,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -6308115966600435031
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5798,6 +6320,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5808,6 +6331,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5833,11 +6357,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -622441176460000472
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5863,6 +6386,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5871,9 +6402,41 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 2250527396613303088
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5899,11 +6462,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 8623063104142641430
+## Generated Story -4040583516932615020
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5914,6 +6494,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5924,6 +6505,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5952,6 +6534,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -5977,11 +6560,39 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -6205858497011977618
+## Generated Story -4316683926952120484
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -5990,6 +6601,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6018,6 +6632,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6044,10 +6659,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 5697760890831724982
+## Generated Story 3291329352867778660
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6073,9 +6700,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -8155577770153790719
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6101,11 +6738,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 7190023003952370266
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6131,6 +6767,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -5077625892347966589
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6139,17 +6781,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6176,10 +6811,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -6284628081954629302
+## Generated Story 6262198098579586154
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6187,9 +6823,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6215,11 +6849,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -2035742184373860805
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6245,18 +6878,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 142467605662307880
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6282,9 +6909,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6311,10 +6955,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 6249733984359645624
+## Generated Story -6383254316727456598
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6359,6 +7004,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6385,21 +7031,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 4082586385231987553
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+## Generated Story 1027233709064047760
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6425,11 +7061,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -2926565070206645367
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6437,6 +7068,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6462,9 +7098,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7609938659310816663
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6490,11 +7129,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6831271836487680428
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6502,6 +7139,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6530,39 +7171,67 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
 
-## Generated Story -1250615816474608563
+## Generated Story -3228071678008076384
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6588,9 +7257,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 4544968441557084617
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6599,11 +7271,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -7501921683623770083
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6612,6 +7282,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6640,6 +7313,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6647,12 +7321,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -4302042060815320311
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6678,38 +7346,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story -8484589721467521949
+## Generated Story -3282683445358670515
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6746,6 +7388,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6753,12 +7396,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -3326353557672464867
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6784,9 +7421,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -2611604345641547317
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6795,11 +7435,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -4192738862393733462
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6825,8 +7460,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6834,9 +7471,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -6862,9 +7496,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7405311326199196199
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6872,12 +7509,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 845905300122445049
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6885,22 +7520,37 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
 
-## Generated Story 8246957767627133735
+## Generated Story 3839806443757709195
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6934,17 +7584,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6953,11 +7592,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -1007649040809001840
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -6965,23 +7603,37 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
 
-## Generated Story 4275896075186388097
+## Generated Story -7510529498440948532
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7017,6 +7669,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7024,7 +7677,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7051,28 +7703,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -6206766683809782648
+## Generated Story 1494259947095850645
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7098,11 +7733,17 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 1378923965489324962
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7128,6 +7769,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3355011886150654238
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7139,6 +7786,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7146,7 +7794,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7173,20 +7820,39 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 5450568763695437116
+## Generated Story 927042044589743372
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7197,6 +7863,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7225,6 +7892,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7232,7 +7900,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7259,10 +7926,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -9190165825372356257
+## Generated Story 7210591616639915629
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7288,8 +7956,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7298,8 +7972,17 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7325,9 +8008,47 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 3707243266422721754
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7336,6 +8057,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7362,10 +8086,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 536367042887083640
+## Generated Story -6403543210661745513
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7374,6 +8099,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7399,9 +8128,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7410,6 +8156,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7436,29 +8196,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 8757895576961593457
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+## Generated Story 5023251823458281964
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7484,11 +8226,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -4008388668483878560
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7522,6 +8279,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7530,9 +8291,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7541,6 +8302,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7567,10 +8331,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -4875300867428665126
+## Generated Story -2149876013683126864
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7578,7 +8343,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7604,6 +8368,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7613,8 +8381,20 @@
     - utter_docu
 * mood_confirm
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7623,6 +8403,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7649,10 +8432,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -6882751052775658196
+## Generated Story -6480113979674334503
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7678,9 +8470,33 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7689,6 +8505,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7715,10 +8534,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -4680237422723153308
+## Generated Story 909467713609379790
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7752,6 +8580,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7759,35 +8591,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7796,6 +8603,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7804,16 +8614,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7840,10 +8643,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 484272090661706524
+## Generated Story 4552861583810933217
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7888,6 +8692,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7913,9 +8718,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7923,6 +8728,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7948,11 +8757,32 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -3779529135270425896
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -7978,9 +8808,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 7126355502837374336
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7989,8 +8833,20 @@
     - utter_confirmationemail
     - utter_docu
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -7998,6 +8854,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8024,10 +8884,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 6145722810526002680
+## Generated Story -4019450067810829413
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8035,7 +8896,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8064,6 +8924,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8097,6 +8958,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8105,9 +8970,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8115,6 +8980,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8141,10 +9010,33 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 8975000021024519614
+## Generated Story 2223860794707914609
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8170,6 +9062,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8177,10 +9073,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8206,6 +9098,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8214,6 +9110,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8222,16 +9121,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8258,10 +9150,33 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -9018493135651438493
+## Generated Story 4056697531649835771
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8287,8 +9202,33 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8299,6 +9239,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8324,9 +9265,37 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -8140091447859655622
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8335,8 +9304,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8345,8 +9316,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8373,8 +9342,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8382,6 +9363,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8408,10 +9393,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 6498246644878865878
+## Generated Story 2608524229650092749
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8440,6 +9433,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8473,6 +9467,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8481,9 +9479,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8491,6 +9489,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8517,20 +9519,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -134433769397443220
+## Generated Story 7670730106933953228
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8538,9 +9531,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8569,6 +9563,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8579,6 +9574,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8589,6 +9585,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8614,9 +9611,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 8324628987067051994
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8624,6 +9624,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8649,19 +9650,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 3106699543391751644
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8690,6 +9682,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8697,9 +9690,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8707,6 +9701,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8733,10 +9731,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -7162693412656469847
+## Generated Story -3678927076444059724
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8772,6 +9771,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8779,7 +9779,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8806,8 +9805,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8815,6 +9826,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8841,10 +9856,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 5580740028551409521
+## Generated Story -8942255032735875053
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8852,7 +9868,45 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* contact_sales
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
@@ -8877,9 +9931,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 8094129904190032371
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8905,14 +9962,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -8921,16 +9973,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -8956,21 +10001,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -435412035941410672
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9005,8 +10039,20 @@
     - utter_docu
 * mood_confirm
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9014,6 +10060,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9040,10 +10090,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -6993129560624376956
+## Generated Story 5775133774410196725
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9051,7 +10102,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9080,6 +10130,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9113,9 +10164,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9123,36 +10171,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -6656662861254567027
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9163,6 +10186,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9173,6 +10197,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9198,9 +10223,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 8450606376218788182
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9208,10 +10236,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9219,36 +10247,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 3565908954782051531
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9285,6 +10284,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9293,9 +10293,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9303,6 +10303,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9329,10 +10333,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 6147826435555968230
+## Generated Story 2725256162179159231
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9340,7 +10345,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9369,6 +10373,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9376,7 +10381,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9405,6 +10409,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9412,36 +10417,13 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+* mood_confirm
 
-## Generated Story 2730750893812040004
+## Generated Story -584391711541255512
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9452,6 +10434,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9462,6 +10445,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9490,6 +10474,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9515,14 +10507,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9531,9 +10519,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 3090589164201163831
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9541,6 +10532,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9566,11 +10561,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 5796949958442970050
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9579,6 +10573,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 8155596820075428705
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9612,19 +10612,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9632,6 +10623,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9657,11 +10649,47 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 8737834222488172948
+## Generated Story -1540885057228134906
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9670,6 +10698,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 6485583134830083244
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9698,6 +10739,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9723,9 +10765,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9733,36 +10772,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 8836973205684534383
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9771,8 +10793,34 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 5667700324789005419
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9781,8 +10829,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 992222191870094655
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9808,9 +10860,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9836,8 +10905,32 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -7763290156209015050
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9846,8 +10939,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9873,9 +10968,51 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -8879951488426729683
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9883,6 +11020,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9908,11 +11046,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 7185479839391319155
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9921,6 +11066,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 5021367666798532774
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9946,9 +11097,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -9957,6 +11108,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -9985,6 +11139,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10018,6 +11173,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10027,10 +11186,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 2169833773152449748
+## Generated Story 4044597336633615013
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10038,6 +11198,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10063,9 +11224,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10073,35 +11243,46 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -6807614775714147318
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10127,6 +11308,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10135,6 +11320,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10144,10 +11333,23 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -4695099120999304072
+## Generated Story -6796472874091586527
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10156,8 +11358,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10166,8 +11370,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1269199449765028890
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10193,20 +11408,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10240,6 +11445,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10249,10 +11458,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 6330883846083535425
+## Generated Story -3829483214694690229
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10260,9 +11470,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10288,6 +11495,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10299,6 +11510,29 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 9175531054161600752
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10324,27 +11558,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -5129495808868097583
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10353,8 +11570,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10363,8 +11582,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1231681764573374968
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10390,9 +11613,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10418,14 +11658,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10434,9 +11669,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10462,14 +11697,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10479,10 +11710,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 3658970178403533
+## Generated Story -4241943516926379763
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10519,6 +11751,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10544,9 +11777,31 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -8370752245388196936
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10572,6 +11827,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10580,6 +11839,35 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10589,10 +11877,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 6489426389643715065
+## Generated Story -7569506533018224019
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10600,9 +11889,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10611,8 +11901,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10638,9 +11930,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10649,8 +11938,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 1771170850658244847
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10658,9 +11951,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10689,6 +11979,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10730,11 +12021,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -6490191822123517851
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10760,9 +12050,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10770,9 +12057,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+
+## Generated Story 7113420195149455643
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10798,14 +12097,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10814,11 +12109,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 8926352392875479657
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10852,6 +12146,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -2061879192247172563
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10860,9 +12160,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10888,9 +12199,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10916,14 +12240,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10933,20 +12249,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 1712789093517457114
+## Generated Story -6387132425218268765
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -10954,9 +12261,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -10983,35 +12287,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11020,8 +12298,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11050,6 +12326,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11075,14 +12352,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11092,10 +12361,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -855346992212898193
+## Generated Story 6216069730336149241
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11104,6 +12374,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11137,9 +12411,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11147,9 +12418,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11183,19 +12456,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* signup_newsletter
+
+## Generated Story -1146929759151305660
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 8836932219272150734
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11221,8 +12494,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11231,8 +12506,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11258,9 +12535,53 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -6493642287189447073
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11269,8 +12590,38 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11281,6 +12632,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11309,6 +12661,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11342,6 +12695,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1839152812675206109
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11350,11 +12709,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 1550634353006103312
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11362,6 +12719,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11390,6 +12751,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11415,25 +12784,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11459,14 +12813,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11476,10 +12822,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -2100651067711404655
+## Generated Story -3702108819410360972
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11524,6 +12871,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11549,14 +12897,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11568,6 +12908,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11593,14 +12934,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11610,10 +12943,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story 3009344864167243981
+## Generated Story -528845940350432436
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11621,7 +12955,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11650,6 +12983,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11657,9 +12991,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11685,14 +13016,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11702,10 +13054,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -7125028859778011671
+## Generated Story 1679813915115807906
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11742,6 +13095,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11767,25 +13121,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11819,6 +13158,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 1095340914504983608
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11826,12 +13171,21 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -6741695006024446609
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11865,9 +13219,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -6007220398486475062
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11901,6 +13266,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11908,10 +13277,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11945,6 +13314,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -882888696440499803
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -11952,12 +13327,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -7840850005736028637
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -11986,14 +13355,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12030,6 +13392,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12063,6 +13426,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1461311696428195820
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12070,12 +13439,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 4502054307849471498
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12101,28 +13468,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12156,6 +13505,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -4845522661899612846
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12163,12 +13518,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 2811885479482535169
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12177,34 +13530,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12241,6 +13566,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12266,14 +13592,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12283,10 +13601,11 @@
     - utter_docu
 * mood_confirm
 
-## Generated Story -1609688829649021859
+## Generated Story 9124890746884918998
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12295,8 +13614,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12305,8 +13626,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12332,9 +13655,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 8170606309407832806
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12360,14 +13694,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12376,21 +13702,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story 3746123611846605681
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12427,6 +13742,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12452,9 +13768,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12462,11 +13775,13 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 
-## Generated Story -3142389172815811321
+## Generated Story 1496411890680000213
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12492,6 +13807,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12500,9 +13818,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12528,14 +13846,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12547,6 +13886,32 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12554,11 +13919,13 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 
-## Generated Story 8012951993534010596
+## Generated Story 7186393573344775475
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12594,6 +13961,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12627,6 +13995,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12635,21 +14007,37 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_confirm_salesrequest
 
-## Generated Story 7517336413705854797
+## Generated Story 1211200083653053816
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12686,6 +14074,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12711,17 +14100,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12729,11 +14111,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -5336531471076523947
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12759,25 +14137,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story -3778050844928017729
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12803,9 +14168,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12813,19 +14178,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -5154487624979255859
-* greet
+* mood_confirm
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12854,6 +14210,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12879,14 +14236,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12898,6 +14247,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12905,11 +14255,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -4569145441437581821
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12935,17 +14281,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 6883181574978570494
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -12979,9 +14320,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -12989,18 +14327,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story 6565462590072431336
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13026,9 +14357,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13062,9 +14402,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -8049234439443118366
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13072,11 +14415,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -8252022395800218311
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13105,6 +14447,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13112,9 +14455,38 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
+* mood_confirm
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
+
+## Generated Story -746971478757367905
+* greet
+    - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13122,11 +14494,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -6750886271759296013
-* greet
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13135,6 +14506,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13160,9 +14534,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13196,9 +14583,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 1300859297927020601
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13206,11 +14596,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -7736189003179115150
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13236,28 +14621,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13265,11 +14657,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -7200571202046336955
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13278,8 +14666,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13288,8 +14678,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13315,9 +14703,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3867244431848956152
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13326,8 +14717,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13336,8 +14729,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13363,21 +14766,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 
-## Generated Story 6922869997021507414
+## Generated Story -818744926200439863
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13403,8 +14797,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13413,8 +14813,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13440,19 +14842,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13463,6 +14855,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13488,21 +14881,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story 929386032339192777
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13536,41 +14918,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 
-## Generated Story 9136085968284657724
+## Generated Story -7303860589040788132
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13579,8 +14932,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13606,9 +14957,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13620,6 +14968,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13627,21 +14976,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story -7494120584043858662
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13650,8 +14988,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13677,9 +15013,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 793473291613460474
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13705,8 +15051,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13715,8 +15063,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13742,9 +15100,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 5961361485802074755
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13752,11 +15113,30 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story 4736874121474812421
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13782,14 +15162,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story -8953450415053559211
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13798,9 +15176,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13826,6 +15201,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13834,29 +15213,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story 4405446519848643957
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13864,9 +15224,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -13892,6 +15250,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 6770238275493980334
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13899,10 +15263,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13910,11 +15274,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-
-## Generated Story 9079912349982906423
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13948,17 +15311,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 7970709782527318490
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13966,21 +15324,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-
-## Generated Story -8953132427989604469
+    - utter_confirm_salesrequest
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -13988,7 +15360,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14017,6 +15388,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14024,9 +15396,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14052,6 +15422,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3696669657592264367
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14059,12 +15435,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -5075360985689935562
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14090,17 +15460,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14109,9 +15472,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14137,19 +15497,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 6942752404931739053
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14183,27 +15534,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+
+## Generated Story -3848198987668448368
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14237,11 +15573,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 2558495700777783383
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14270,6 +15613,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14277,9 +15621,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14305,19 +15647,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 4126413665352401196
+## Generated Story -7436631501611355843
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14328,6 +15663,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14338,6 +15674,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14366,6 +15703,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14373,10 +15711,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14402,19 +15736,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -6885550760004033176
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14422,6 +15747,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14447,9 +15773,24 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 8718979546824771419
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14494,6 +15835,15 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14519,6 +15869,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 3223759607885653700
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14526,12 +15882,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 5501794580175560427
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14565,9 +15919,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14593,9 +15964,34 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -1614679581165899570
 * greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14621,6 +16017,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14628,12 +16028,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 6529467979115852115
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14659,25 +16053,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14703,14 +16082,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14719,9 +16093,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14747,6 +16121,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 4051116334064979978
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14754,12 +16134,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -6437306748561460455
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14788,6 +16162,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14821,17 +16196,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14857,6 +16225,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14865,11 +16236,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 5394531226986865486
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14895,8 +16264,45 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 2822448885557864174
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14905,8 +16311,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14932,19 +16340,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -14955,6 +16353,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -14983,6 +16382,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15008,19 +16408,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 3812288682935355135
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15029,6 +16419,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15054,9 +16447,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -8113513310097830187
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15101,6 +16497,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15134,21 +16531,38 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -2375396124736531117
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15159,6 +16573,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15184,9 +16599,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -2488591129823281652
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15212,14 +16630,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15228,9 +16641,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15256,19 +16669,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -6411834115234146763
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15305,6 +16709,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15330,14 +16735,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15346,9 +16746,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15374,19 +16774,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 2409956429315621507
+## Generated Story -827430492352193775
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15394,19 +16787,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15435,6 +16815,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15442,19 +16823,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15480,9 +16877,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15508,6 +16916,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -4266530837212055912
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15516,11 +16930,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 3967812398316969385
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15529,6 +16941,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15557,6 +16972,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15565,6 +16981,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15590,9 +17010,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15618,19 +17049,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story -6054298829549082365
+## Generated Story 3642023300133015001
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15638,7 +17062,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15667,6 +17094,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15692,6 +17120,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15700,9 +17131,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15728,19 +17159,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 4793805933349737967
+## Generated Story 1664880816232770568
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15748,9 +17172,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15776,17 +17197,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15820,18 +17234,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -3329081850112704224
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15857,9 +17263,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -15868,6 +17274,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15893,9 +17302,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 7888366468598873306
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15921,19 +17340,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -3154149391370705493
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -15978,6 +17388,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16003,9 +17414,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16031,19 +17453,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 9164679242690780106
+## Generated Story -8026178671680607987
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16051,9 +17466,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16061,37 +17477,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16119,6 +17508,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16129,6 +17519,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16154,9 +17545,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 3494648114058072027
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16190,11 +17592,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 5515529043121820970
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16202,6 +17603,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16227,9 +17632,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16238,6 +17643,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16263,9 +17671,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3149952403605851312
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16274,6 +17696,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16299,19 +17725,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 95722582035439915
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16320,6 +17736,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16345,34 +17764,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -8964855504598309393
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16384,6 +17781,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16392,6 +17790,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16417,6 +17819,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16425,11 +17830,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -1479982898467632307
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16455,9 +17858,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 8529323160974323958
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16491,17 +17897,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16510,6 +17909,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16535,6 +17938,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16543,11 +17949,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -4530602527283243973
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16573,27 +17977,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+
+## Generated Story 7347777369743123079
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16627,11 +18016,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -7514489947045907023
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16665,35 +18053,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16719,19 +18082,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 17110294813217565
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16740,6 +18093,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16765,9 +18121,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 7315656090825614829
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16775,7 +18134,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16804,6 +18162,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16812,6 +18171,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16837,6 +18200,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16845,18 +18211,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4901584249621443226
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16882,9 +18239,24 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -1429268235740869012
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16929,14 +18301,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -16962,29 +18327,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -3435252528213384130
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -16995,6 +18340,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17020,9 +18366,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7742492949021522605
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17030,10 +18379,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17075,19 +18424,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 1291265469460699675
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17113,9 +18453,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17123,17 +18463,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
+* mood_confirm
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17159,19 +18492,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story -1470054831400913597
+## Generated Story 7987198038229664807
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17208,6 +18534,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17236,14 +18563,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17269,6 +18589,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17277,21 +18600,40 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -2187971402779308969
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
+
+## Generated Story -6101421385952549063
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17300,8 +18642,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17330,6 +18670,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17338,8 +18679,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17347,9 +18690,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -8775203783696045307
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17378,14 +18731,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17411,6 +18757,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17419,11 +18773,30 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 
-## Generated Story 2177789264439145488
+## Generated Story 109406156178703380
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17449,8 +18822,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17458,9 +18833,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17489,6 +18861,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17496,19 +18869,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 9060758387492189134
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17534,9 +18900,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17570,6 +18945,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17577,12 +18956,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 
-## Generated Story 609863183377486091
+## Generated Story -6716343269665097855
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17593,6 +18972,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17603,6 +18983,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17631,6 +19012,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17656,6 +19045,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+
+## Generated Story -6632940830283620618
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17664,6 +19070,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17672,9 +19082,23 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+
+## Generated Story 1625118718080271982
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17708,19 +19132,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 7505674310788614519
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17746,6 +19161,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17753,7 +19172,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 3202613848914374959
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17761,10 +19185,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17790,33 +19210,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -17850,36 +19247,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -4632152271032492711
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17887,35 +19258,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -6733019480984992145
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17923,7 +19271,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17935,6 +19286,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17942,32 +19294,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+
+## Generated Story 3632710591622204314
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17975,12 +19307,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story -5017779983340349489
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -17988,9 +19318,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18027,6 +19355,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18034,7 +19363,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -4464164429292334601
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18060,19 +19394,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 77761346057159507
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18081,6 +19405,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18109,6 +19436,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18142,6 +19470,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18149,10 +19481,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 4871833022318329468
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18160,7 +19494,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18186,6 +19523,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18193,12 +19534,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 
-## Generated Story 5934691720007728339
+## Generated Story 8893994420845819644
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18243,6 +19584,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18268,9 +19610,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18279,31 +19618,23 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+
+## Generated Story -6246365829190217120
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18311,12 +19642,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 7806685148959118876
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18324,9 +19653,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18334,37 +19664,24 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -8686113340743638501
+* greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18390,8 +19707,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18400,36 +19715,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18437,32 +19734,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+
+## Generated Story 7001328372002694943
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18471,11 +19759,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -537640422586747276
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18501,6 +19787,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18512,6 +19802,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18519,10 +19810,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 3665358942658133330
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18564,36 +19857,21 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4686972310902824071
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18601,10 +19879,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story -2654244628781410496
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18630,14 +19917,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18649,6 +19932,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18656,9 +19940,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 6714384608564191773
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18666,9 +19953,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18694,11 +19978,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -5991954991108437767
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18732,9 +20015,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+
+## Generated Story 6018580745432433857
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18760,9 +20057,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18771,8 +20065,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18781,8 +20073,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18808,11 +20102,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -4716232269543754121
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18821,6 +20113,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18849,6 +20144,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18856,7 +20152,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+
+## Generated Story 2095164049710379145
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18882,19 +20183,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18905,6 +20196,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18930,21 +20222,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -7299671925504036747
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -18979,18 +20260,9 @@
     - utter_docu
 * mood_confirm
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -18999,8 +20271,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19026,11 +20296,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -5820832796868821908
+## Generated Story 1836907383281744807
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19038,6 +20317,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19063,9 +20343,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19099,9 +20392,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19110,8 +20400,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -3757880020660396186
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19119,9 +20413,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19147,11 +20438,17 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 7827019081268631377
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19177,14 +20474,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19193,9 +20486,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19221,14 +20511,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19237,9 +20519,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -8012210448455266721
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19250,6 +20535,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19260,6 +20546,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19285,11 +20572,17 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -8415838901895991014
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19315,6 +20608,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19323,9 +20620,31 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19334,9 +20653,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 7041417637635462756
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19344,9 +20666,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19355,8 +20678,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19382,11 +20703,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -5138987774941589215
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19420,9 +20748,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 8301362138993837057
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19433,6 +20772,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19441,8 +20781,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19451,8 +20793,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19478,21 +20818,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 8142431285365613217
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19501,8 +20826,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 450874180728396307
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19528,34 +20857,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19573,28 +20874,9 @@
     - utter_docu
 * mood_confirm
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19620,21 +20902,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 4193868058826296998
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19645,6 +20915,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19673,6 +20944,15 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19698,8 +20978,31 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 3931590975794552469
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19710,6 +21013,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19738,6 +21042,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19746,8 +21051,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19756,8 +21063,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19783,11 +21088,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -5576903826118633237
+## Generated Story -339515122715636804
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19832,6 +21146,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19840,18 +21155,9 @@
     - utter_confirmationemail
     - utter_docu
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19860,8 +21166,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19887,11 +21191,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 7168529798214820040
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19900,8 +21199,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 9049551548426824617
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19909,9 +21212,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19940,17 +21240,32 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
+    - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19959,8 +21274,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -19969,8 +21286,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -19996,11 +21311,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 8517769888888173821
+## Generated Story -8419136779373479626
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20026,19 +21350,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20047,8 +21358,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20057,8 +21366,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20084,11 +21395,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 5385715506674271609
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20097,8 +21403,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20107,8 +21415,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20134,9 +21440,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 8898166573681967880
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20145,8 +21462,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20155,8 +21474,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20182,9 +21511,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -5565488185140847246
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20192,9 +21532,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20202,9 +21543,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20230,11 +21580,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -6962576209889998503
+## Generated Story 1099207610502951792
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20260,25 +21627,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20307,6 +21659,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20315,18 +21668,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20352,11 +21693,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 714654976442884236
+## Generated Story -2280849105859124770
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20392,39 +21742,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20434,18 +21752,9 @@
     - utter_docu
 * mood_confirm
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20454,8 +21763,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20481,38 +21788,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -8585692754340090550
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -376585995072761154
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20520,9 +21809,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20549,18 +21839,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20569,8 +21850,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20596,9 +21875,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20607,8 +21883,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -3771748041994157197
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20616,9 +21896,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20644,19 +21921,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -3210786632493402203
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20682,9 +21950,34 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20710,14 +22003,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20726,19 +22011,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -1116445983279710157
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20746,9 +22024,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20774,11 +22049,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 3898707925620584881
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20815,6 +22089,15 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20848,19 +22131,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -4002710782364671039
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20869,8 +22145,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20896,11 +22174,34 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 4507812473793207879
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20926,9 +22227,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20937,6 +22235,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -6014669662485640728
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -20971,18 +22275,9 @@
     - utter_docu
 * mood_confirm
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -20991,8 +22286,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21018,11 +22311,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 4731706058430866756
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21064,9 +22356,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -3533373060607274528
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21077,6 +22372,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21102,18 +22398,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21139,36 +22427,40 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 773519205845006612
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 2804270518240305870
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21180,6 +22472,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21221,9 +22514,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -5797229657823745751
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21249,18 +22552,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21286,11 +22581,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 8504074009852559888
-* greet
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21299,6 +22597,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21324,9 +22626,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -5978599528610109358
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21360,9 +22681,29 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21388,8 +22729,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21398,8 +22745,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -6561300828451092682
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21425,11 +22776,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -1844492939878118279
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21437,6 +22795,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21465,14 +22824,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21498,9 +22850,50 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 1602881359437251100
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21526,8 +22919,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21536,8 +22935,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -619236224645457468
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21563,21 +22973,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 4274011345221889435
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21586,8 +22985,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21613,9 +23014,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story 1518101060752595775
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21643,6 +23063,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21653,6 +23074,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21681,6 +23103,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21706,8 +23129,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21716,8 +23137,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21743,11 +23166,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story -3388510977358017614
+## Generated Story 5823412916644862991
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21758,6 +23198,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21768,6 +23209,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21796,11 +23238,24 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data
@@ -21837,9 +23292,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 2252808741544637734
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21865,18 +23331,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21902,11 +23360,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -1411256752399858464
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21932,9 +23389,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -7510600477230317545
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -21942,7 +23418,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -21968,17 +23443,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22004,8 +23472,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22014,8 +23480,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22041,11 +23509,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 6394475993884765937
+## Generated Story 4221699732647609389
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22053,6 +23538,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22078,9 +23564,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22122,36 +23621,23 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 8928009685687881434
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22160,8 +23646,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22187,11 +23671,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 1430493217478846439
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22217,8 +23708,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22227,8 +23724,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 4593741834128978184
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22254,9 +23755,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22265,8 +23763,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22275,8 +23771,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22302,9 +23800,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22330,8 +23837,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22340,38 +23845,20 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 
-## Generated Story 1738124779103959002
+## Generated Story 798001381186606501
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22380,34 +23867,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22415,9 +23877,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22443,8 +23906,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22452,9 +23917,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22480,11 +23942,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 2792056359088883790
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22510,9 +23971,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22520,9 +23986,20 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
+
+## Generated Story -1344208936618358456
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22548,8 +24025,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22557,9 +24036,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22585,11 +24061,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -1458560370291262222
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22631,34 +24106,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 625958162297320807
 * greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22666,7 +24119,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22678,6 +24134,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22703,8 +24160,28 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## Generated Story -4287713754432519493
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22713,8 +24190,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22740,11 +24219,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6536886060165808790
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22753,8 +24227,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22763,8 +24235,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22790,9 +24264,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22801,8 +24272,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22811,36 +24280,19 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -416111947946742791
+* greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22866,8 +24318,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22876,8 +24330,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22903,11 +24355,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6854350924163080593
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22941,9 +24392,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22952,9 +24400,12 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story 7619243725306487165
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -22980,8 +24431,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -22990,8 +24447,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23017,11 +24476,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -3042801838893267210
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23030,6 +24487,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23058,6 +24518,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23099,9 +24560,23 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+
+## Generated Story -2020777068607325616
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23127,18 +24602,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23165,10 +24632,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -7147929092467342339
+## Generated Story 6078465695174928699
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23179,6 +24647,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23189,6 +24658,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23217,6 +24687,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23228,6 +24699,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23253,8 +24725,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7359092214063946816
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23262,9 +24738,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23290,11 +24763,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -616828559896508110
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23303,34 +24775,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23356,9 +24804,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -824752717104633300
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23384,8 +24835,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23394,8 +24851,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23421,11 +24880,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 2020470967410468514
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23434,6 +24888,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23459,9 +24917,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -2903484842167051083
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23487,6 +24948,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23498,6 +24967,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23525,6 +24995,7 @@
     - utter_confirm_salesrequest
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23535,6 +25006,7 @@
 * mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23560,11 +25032,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -265638234191415078
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23590,14 +25061,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story -5275765353790454301
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23605,10 +25074,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23637,6 +25102,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23662,8 +25128,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23672,8 +25136,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23700,10 +25166,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -4928824727514264266
+## Generated Story -1581267044507197676
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23714,6 +25192,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23739,6 +25218,23 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 2513752194833486603
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23750,6 +25246,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23775,8 +25272,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7513652646510992599
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23784,9 +25285,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23812,21 +25310,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 2392199740460296456
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -23835,8 +25322,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -23859,2769 +25344,13 @@
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 6905178264744764641
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -2866627222976881751
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 7473963375346481418
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -5385669294359920811
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -8479967463352280007
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -5826863265798308443
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -3837848413773101909
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -2289063385832337764
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 939820464946040938
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -9108124022075842799
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -8192783637592498153
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 1326038906497949654
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 2672227586991104285
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 8202272420207057900
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -6547708597587609209
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -4362522885697134111
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 1063295097263012969
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 8122344607019136657
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story -550547769889742345
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-
-## Generated Story 5718705647378993303
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 5889662510645860943
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -6825910157263331676
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -1726763548398067728
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 138645007952583018
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 1279498836819780580
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 2637533408185109228
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -4319501218926889200
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -1647805207550591840
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story 4407365927070345305
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26647,8 +25376,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -1718936403697005018
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -26657,8 +25390,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26684,9 +25415,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -26695,8 +25423,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -26704,9 +25434,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26732,32 +25463,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 
-## Generated Story 3046760855418887080
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+## Generated Story 599787883325360482
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26783,17 +25494,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -26802,11 +25502,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 5084115000488282366
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -26840,47 +25539,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -307537644373554141
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26906,17 +25568,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -3768185836453709769
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26942,9 +25599,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -26953,19 +25610,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 4822704508465238810
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -26994,14 +25641,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27027,9 +25667,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27038,11 +25675,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story -2608429703727007439
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27068,17 +25704,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story -8967350134580762015
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27087,9 +25718,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27098,19 +25729,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 5115534482596103076
-* greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27139,6 +25760,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27164,22 +25793,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-
-## Generated Story -7775145000623827976
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27205,14 +25822,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 8673278756144744936
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27220,10 +25835,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27252,6 +25863,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27259,12 +25871,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-
-## Generated Story 2921890410425291014
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27290,17 +25896,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27326,25 +25925,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story -2846706909023894130
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27353,11 +25939,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 3300504140799516780
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27383,25 +25964,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27427,48 +25993,41 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
+    - utter_inform_privacypolicy
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_confirm_salesrequest
 
-## Generated Story -2291092186912575435
+## Generated Story -6022654048156891731
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27476,9 +26035,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27507,6 +26063,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27532,8 +26089,14 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27542,8 +26105,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27569,9 +26134,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -6831996584189893185
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27580,19 +26148,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-
-## Generated Story 8947365480880710225
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27618,9 +26177,26 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27646,9 +26222,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 106019917259958729
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27682,11 +26261,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 7029927458352835669
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27694,9 +26272,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27722,6 +26302,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 4358006870473103810
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27733,6 +26319,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27741,6 +26328,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27767,10 +26358,22 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -8804034314403590081
+## Generated Story 3726929408961998942
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27804,9 +26407,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27815,6 +26415,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27840,9 +26444,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 2319278485160763472
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -27850,7 +26457,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27876,11 +26482,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6073475583675790007
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27925,6 +26530,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27950,17 +26563,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -4553925927059769653
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -27986,11 +26594,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -7087815987112593311
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28027,6 +26642,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28052,6 +26675,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 3079755952055658173
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28059,10 +26688,35 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28070,7 +26724,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28096,11 +26749,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 3214934247846489825
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28108,7 +26760,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28134,9 +26785,24 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 7039321673787498798
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28181,6 +26847,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28188,7 +26855,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28215,10 +26881,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 5276642476644787192
+## Generated Story -2346484299088734612
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28244,8 +26918,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28254,8 +26930,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28284,6 +26958,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28291,9 +26966,37 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* enter_data{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - slot{"jobfunction": "Product Manager"}
+    - utter_ask_usecase
+* enter_data
+    - utter_ask_budget
+* enter_data{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - slot{"budget": "100k"}
+    - utter_sales_contact
+* enter_data{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - slot{"name": "Max Meier"}
+    - utter_ask_company
+* enter_data{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - slot{"company": "Allianz"}
+    - utter_ask_businessmail
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirm_salesrequest
+
+## Generated Story -7831974647789383779
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28301,9 +27004,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28332,6 +27032,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28340,6 +27041,17 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28366,10 +27078,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -5959332407064325700
+## Generated Story -5130522735454547513
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28406,6 +27127,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28413,10 +27135,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28424,7 +27146,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28451,20 +27172,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 7530343468269630706
+## Generated Story 2626269812638845751
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28473,8 +27185,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28500,28 +27210,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28547,11 +27239,17 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -8637866065420025905
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28577,6 +27275,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 7335278491324945541
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28584,10 +27288,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28613,25 +27317,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28639,7 +27328,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28666,10 +27354,19 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 5525179376011700961
+## Generated Story -2732989565814851164
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28698,6 +27395,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28705,9 +27403,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28715,7 +27415,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28742,17 +27441,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story 7918574697567348406
+## Generated Story 6993159004399514953
 * greet
     - utter_greet
     - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28778,9 +27471,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28789,34 +27479,6 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28825,6 +27487,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28850,11 +27516,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 5415949528752560593
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28862,7 +27535,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28888,9 +27560,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -5763649446670716228
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28898,9 +27573,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* greet
+* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28909,6 +27585,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28934,11 +27613,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -1204829333207037786
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -28974,6 +27652,14 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -28999,25 +27685,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story 286774594739772202
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29025,7 +27698,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29051,11 +27723,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -820622630631802897
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29081,9 +27752,18 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29091,7 +27771,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29117,6 +27796,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -5899236861358731102
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29125,9 +27810,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29136,6 +27821,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29161,11 +27849,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -3827455936043102956
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29174,8 +27861,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29183,9 +27872,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29211,9 +27897,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 9007034968701600752
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29239,8 +27928,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29249,8 +27936,18 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* signup_newsletter
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29276,9 +27973,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29287,6 +27984,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29312,11 +28012,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story 6824863654589657627
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29324,7 +28023,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29350,17 +28048,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
+
+## Generated Story -1618669007870648833
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29371,6 +28064,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29404,11 +28098,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -2219706910744446795
-* greet
-    - utter_greet
-    - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29417,8 +28106,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29426,9 +28117,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29454,29 +28142,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -305355668883700898
 * greet
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
-    - utter_greet
-    - utter_ask_goal
-* signup_newsletter
-    - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - slot{"email": "maxmeier@firma.de"}
-    - utter_confirmationemail
-    - utter_docu
-* mood_confirm
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29502,9 +28173,9 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29513,6 +28184,9 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29538,11 +28212,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
-
-## Generated Story -6480234461731859907
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29576,6 +28249,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29583,10 +28260,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-* greet
-    - utter_greet
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29612,6 +28285,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story 8163824826145192849
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29619,7 +28298,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29627,10 +28309,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29638,7 +28320,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29665,10 +28346,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
 
-## Generated Story -3215500628089808399
+## Generated Story -1020327444148378797
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29677,8 +28359,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29687,36 +28371,17 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+* greet
     - utter_greet
     - utter_ask_goal
-* contact_sales
-    - utter_moreinformation
-    - utter_ask_jobfunction
-* enter_data{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - slot{"jobfunction": "Product Manager"}
-    - utter_ask_usecase
-* enter_data
-    - utter_ask_budget
-* enter_data{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - slot{"budget": "100k"}
-    - utter_sales_contact
-* enter_data{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - slot{"name": "Max Meier"}
-    - utter_ask_company
-* enter_data{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - slot{"company": "Allianz"}
-    - utter_ask_businessmail
+    - utter_inform_privacypolicy
+* signup_newsletter
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
-    - utter_confirm_salesrequest
-* greet
-    - utter_greet
-    - utter_ask_goal
+    - utter_confirmationemail
+    - utter_docu
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -29742,6 +28407,12 @@
     - slot{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirm_salesrequest
+
+## Generated Story -7142649637333946374
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29749,7 +28420,10 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29761,6 +28435,7 @@
 * greet
     - utter_greet
     - utter_ask_goal
+    - utter_inform_privacypolicy
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
@@ -29768,7 +28443,6 @@
     - slot{"email": "maxmeier@firma.de"}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
