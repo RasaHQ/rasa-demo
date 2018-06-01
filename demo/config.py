@@ -15,7 +15,7 @@ auth_token = os.environ.get("AUTH_TOKEN", "")
 
 twilio_number = os.environ.get("TWILIO_NUMBER", "")
 
-platform_api = os.environ.get("PLATFORM_API", "")
+platform_api = os.environ.get("RASA_API_ENDPOINT_URL", "")
 
 self_port = int(os.environ.get("SELF_PORT", "5001"))
 

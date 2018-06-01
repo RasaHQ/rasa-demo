@@ -9,6 +9,9 @@
         "email"
       ]
     }, 
+    "utter_docu": {
+      "slots": []
+    }, 
     "utter_confirm_salesrequest": {
       "slots": []
     }
