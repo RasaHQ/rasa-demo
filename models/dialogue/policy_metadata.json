@@ -1,5 +1,10 @@
 {
   "action_fingerprints": {
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
+    }, 
     "action_listen": {
       "slots": [
         "jobfunction", 

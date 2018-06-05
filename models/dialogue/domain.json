@@ -15,6 +15,7 @@
     "slot_email_0", 
     "slot_jobfunction_0", 
     "slot_name_0", 
+    "slot_subscribed_0", 
     "prev_action_listen", 
     "prev_action_restart", 
     "prev_utter_greet", 
@@ -30,6 +31,7 @@
     "prev_utter_confirm_salesrequest", 
     "prev_utter_docu", 
     "prev_utter_confirmationemail", 
-    "prev_utter_sales_contact"
+    "prev_utter_sales_contact", 
+    "prev_action_subscribe_newsletter"
   ]
 }

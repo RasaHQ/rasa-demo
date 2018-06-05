@@ -7,14 +7,15 @@ from __future__ import unicode_literals
 import logging
 
 from mailchimp3 import MailChimp
+from mailchimp3.mailchimpclient import MailChimpError
 from hashlib import md5
 
 
 class MailChimpAPI(object):
 
-    def __init__(self, user='lastmile2015', api_key="b067e0bf30dd712db4070e08e7c0b250-us12"):
+    def __init__(self, api_key):
 
-        self.client = MailChimp(mc_api=api_key, mc_user=user)
+        self.client = MailChimp(mc_api=api_key)
 
     def get_all_members(self):
         list = self.client.lists.members.all('297618692e', get_all=True)
@@ -27,5 +28,11 @@ class MailChimpAPI(object):
         return user
 
     def subscribe_user(self, list_id, email):
+        try:
+            self.client.lists.members.create(list_id, data={
+                                'email_address': email,
+                                'status': 'pending'})
+            return True
 
-        return
+        except MailChimpError:
+            return False

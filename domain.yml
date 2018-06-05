@@ -23,6 +23,8 @@ slots:
     type: text
   name:
     type: text
+  subscribed:
+    type: bool
 
 templates:
   utter_ask_budget:
@@ -73,3 +75,4 @@ actions:
   - utter_docu
   - utter_confirmationemail
   - utter_sales_contact
+  - demo.actions.ActionSubscribeNewsletter

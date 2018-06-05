@@ -1,1 +1,2 @@
 rasa_core==0.9.3
+mailchimp3==3.0.2

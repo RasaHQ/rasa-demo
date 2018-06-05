@@ -14,6 +14,7 @@ action_names:
 - utter_docu
 - utter_confirmationemail
 - utter_sales_contact
+- action_subscribe_newsletter
 actions:
 - utter_greet
 - utter_ask_usecase
@@ -29,6 +30,7 @@ actions:
 - utter_docu
 - utter_confirmationemail
 - utter_sales_contact
+- demo.actions.ActionSubscribeNewsletter
 config:
   store_entities_as_slots: true
 entities:
@@ -59,6 +61,9 @@ slots:
   name:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  subscribed:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
 templates:
   utter_ask_budget:
   - text: Ok, thank you. What's your yearly budget for conversational AI?
