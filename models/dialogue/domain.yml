@@ -14,6 +14,11 @@ action_names:
 - utter_docu
 - utter_confirmationemail
 - utter_sales_contact
+- utter_already_subscribed
+- action_subscribe_newsletter
+- action_store_sales_info
+- action_store_budget
+- action_store_usecase
 actions:
 - utter_greet
 - utter_ask_usecase
@@ -29,6 +34,11 @@ actions:
 - utter_docu
 - utter_confirmationemail
 - utter_sales_contact
+- utter_already_subscribed
+- demo.actions.ActionSubscribeNewsletter
+- demo.actions.ActionStoreSalesInfo
+- demo.actions.ActionStoreBudget
+- demo.actions.ActionStoreUsecase
 config:
   store_entities_as_slots: true
 entities:
@@ -36,7 +46,8 @@ entities:
 - company
 - email
 - name
-- budget
+- amount-of-money
+- number
 intents:
 - enter_data
 - mood_confirm
@@ -50,6 +61,9 @@ slots:
   company:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  data_stored:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
@@ -59,7 +73,16 @@ slots:
   name:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  subscribed:
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
+  use_case:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
 templates:
+  utter_already_subscribed:
+  - text: Looks like you're already subscribed - congrats, that was a good choice!
+      If you haven't received a newsletter in a while, maybe check your spam folder.
   utter_ask_budget:
   - text: Ok, thank you. What's your yearly budget for conversational AI?
   utter_ask_businessmail:
@@ -79,7 +102,7 @@ templates:
   utter_confirm_salesrequest:
   - text: Great, thank you! You'll hear from us.
   utter_confirmationemail:
-  - text: Wonderful, thank you. We sent you a confirmation email.
+  - text: Wonderful, thank you. We sent a confirmation email to {email}.
   utter_docu:
   - text: I you want to learn more about the technical side of things, check our documentation
       (link).

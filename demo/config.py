@@ -24,3 +24,9 @@ core_model_dir = os.environ.get("CORE_MODEL_DIR", "models/dialogue/")
 remote_core_endpoint = os.environ.get("RASA_REMOTE_CORE_ENDPOINT_URL", "")
 
 rasa_core_token = os.environ.get("RASA_CORE_TOKEN", "")
+
+mailchimp_api_key = os.environ.get("MAILCHIMP_API_KEY", "")
+
+mailchimp_list = os.environ.get("MAILCHIMP_LIST", "")
+
+gdrive_credentials = os.environ.get("GDRIVE_CREDENTIALS", "")

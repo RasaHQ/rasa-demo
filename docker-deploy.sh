@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh travis@35.233.89.43 bash -c "'
+ssh travis@35.206.176.121 bash -c "'
   set -Eeuo pipefail
   cd /etc/rasaplatform/
   sudo docker login -u _json_key -p \"\$(cat /etc/rasaplatform/travis-gcloud.json)\" https://gcr.io

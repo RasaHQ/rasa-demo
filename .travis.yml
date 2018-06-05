@@ -22,4 +22,5 @@ deploy:
     branch: master
 addons:
   ssh_known_hosts:
-  - 35.233.89.43
+  - 35.206.176.121
+  - website-demo.rasa.com
