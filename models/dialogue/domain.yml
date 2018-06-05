@@ -102,7 +102,7 @@ templates:
   utter_confirm_salesrequest:
   - text: Great, thank you! You'll hear from us.
   utter_confirmationemail:
-  - text: Wonderful, thank you. We sent you a confirmation email.
+  - text: Wonderful, thank you. We sent a confirmation email to {email}.
   utter_docu:
   - text: I you want to learn more about the technical side of things, check our documentation
       (link).
