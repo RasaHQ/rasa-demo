@@ -3,7 +3,8 @@ entities:
   - company
   - email
   - name
-  - budget
+  - amount-of-money
+  - number
 
 intents:
   - enter_data
@@ -24,6 +25,10 @@ slots:
   name:
     type: text
   subscribed:
+    type: bool
+  use_case:
+    type: text
+  data_stored:
     type: bool
 
 templates:
@@ -46,7 +51,7 @@ templates:
   utter_confirm_salesrequest:
     - text: "Great, thank you! You'll hear from us."
   utter_confirmationemail:
-    - text: "Wonderful, thank you. We sent you a confirmation email."
+    - text: "Wonderful, thank you. We sent a confirmation email to {email}."
   utter_docu:
     - text: "I you want to learn more about the technical side of things, check our documentation
       (link)."
@@ -59,6 +64,9 @@ templates:
         give us a few more information about you and the company you work for."
   utter_sales_contact:
     - text: "Thank you! Our sales team will contact you - what's your name?"
+  utter_already_subscribed:
+    - text: "Looks like you're already subscribed - congrats, that was a good choice!
+    If you haven't received a newsletter in a while, maybe check your spam folder."
 
 actions:
   - utter_greet
@@ -75,4 +83,8 @@ actions:
   - utter_docu
   - utter_confirmationemail
   - utter_sales_contact
+  - utter_already_subscribed
   - demo.actions.ActionSubscribeNewsletter
+  - demo.actions.ActionStoreSalesInfo
+  - demo.actions.ActionStoreBudget
+  - demo.actions.ActionStoreUsecase

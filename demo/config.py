@@ -28,3 +28,5 @@ rasa_core_token = os.environ.get("RASA_CORE_TOKEN", "")
 mailchimp_api_key = os.environ.get("MAILCHIMP_API_KEY", "")
 
 mailchimp_list = os.environ.get("MAILCHIMP_LIST", "")
+
+gdrive_credentials = os.environ.get("GDRIVE_CREDENTIALS", "")

@@ -9,13 +9,16 @@
     "entity_company", 
     "entity_email", 
     "entity_name", 
-    "entity_budget", 
+    "entity_amount-of-money", 
+    "entity_number", 
     "slot_budget_0", 
     "slot_company_0", 
+    "slot_data_stored_0", 
     "slot_email_0", 
     "slot_jobfunction_0", 
     "slot_name_0", 
     "slot_subscribed_0", 
+    "slot_use_case_0", 
     "prev_action_listen", 
     "prev_action_restart", 
     "prev_utter_greet", 
@@ -32,6 +35,10 @@
     "prev_utter_docu", 
     "prev_utter_confirmationemail", 
     "prev_utter_sales_contact", 
-    "prev_action_subscribe_newsletter"
+    "prev_utter_already_subscribed", 
+    "prev_action_subscribe_newsletter", 
+    "prev_action_store_sales_info", 
+    "prev_action_store_budget", 
+    "prev_action_store_usecase"
   ]
 }

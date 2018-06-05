@@ -9,16 +9,30 @@
       "slots": [
         "jobfunction", 
         "company", 
-        "budget", 
-        "name", 
-        "email"
+        "email", 
+        "name"
       ]
+    }, 
+    "action_store_budget": {
+      "slots": [
+        "budget"
+      ]
+    }, 
+    "utter_confirm_salesrequest": {
+      "slots": []
     }, 
     "utter_docu": {
       "slots": []
     }, 
-    "utter_confirm_salesrequest": {
-      "slots": []
+    "action_store_sales_info": {
+      "slots": [
+        "data_stored"
+      ]
+    }, 
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
     }
   }, 
   "policy_names": [
