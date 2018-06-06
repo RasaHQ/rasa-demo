@@ -36,7 +36,7 @@
     }
   }, 
   "policy_names": [
-    "rasa_core.policies.memoization.MemoizationPolicy", 
+    "rasa_core.policies.augmented_memoization.AugmentedMemoizationPolicy", 
     "rasa_core.policies.keras_policy.KerasPolicy"
   ], 
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble", 
@@ -44,5 +44,5 @@
     3, 
     5
   ], 
-  "rasa_core": "0.9.3"
+  "rasa_core": "0.10.0a1"
 }

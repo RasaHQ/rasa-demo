@@ -116,4 +116,3 @@ templates:
       give us a few more information about you and the company you work for.
   utter_sales_contact:
   - text: Thank you! Our sales team will contact you - what's your name?
-topics: []

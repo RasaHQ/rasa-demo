@@ -13,6 +13,56 @@
     - utter_docu
 * mood_confirm
 
+## just newsletter (with email already) + confirm
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_confirmationemail
+    - utter_docu
+* mood_confirm
+
+## just newsletter (with email already)
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_confirmationemail
+    - utter_docu
+
+## just newsletter (with email already) + confirm - already subscribed
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - action_subscribe_newsletter
+    - slot{"subscribed": false}
+    - utter_already_subscribed
+    - utter_docu
+* mood_confirm
+
+## just newsletter (with email already) - already subscribed
+* greet
+    - utter_greet
+    - utter_ask_goal
+    - utter_inform_privacypolicy
+* signup_newsletter{"email": "maxmeier@firma.de"}
+    - slot{"email": "maxmeier@firma.de"}
+    - action_subscribe_newsletter
+    - slot{"subscribed": false}
+    - utter_already_subscribed
+    - utter_docu
+
 ## just newsletter +confirm - already subscribed
 * greet
     - utter_greet
