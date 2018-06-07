@@ -1655,7 +1655,57 @@
                         "entity": "jobfunction"
                     }
                 ]
-            }
+            },
+            {
+                "text": "I want to talk to a human",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "let me speak with a real person please",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "are there also humans working for your company?",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "gimme a proper human",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "I don't wanna talk to a bot",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "Can I speak to anyone who can really help me?",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "I dont like to talk to a machine",
+                "intent": "human_handoff",
+                "entities": []
+            },
+             {
+                "text": "can you please connect me to a real rasa employee?",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "give me a human now",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "that's annoying I'd like to speak to someone real",
+                "intent": "human_handoff",
+                "entities": []
+            },
         ]
     }
 }
