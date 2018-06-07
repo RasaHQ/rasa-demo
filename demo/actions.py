@@ -91,3 +91,18 @@ class ActionStoreUsecase(Action):
         use_case = tracker.latest_message.text
 
         return [SlotSet('use_case', use_case)]
+
+
+class ActionChitchat(Action):
+
+    def name(self):
+        return "action_chitchat"
+
+    def run(self, dispatcher, tracker, domain):
+
+        intent = tracker.latest_message.intent.get('name')
+
+        if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
+                      'ask_whatspossible']:
+            dispatcher.utter_template('utter_' + intent)
+        return []

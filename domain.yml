@@ -12,6 +12,12 @@ intents:
   - contact_sales
   - signup_newsletter
   - greet
+  - deny
+  - affirm
+  - ask_builder
+  - ask_weather
+  - ask_howdoing
+  - ask_whatspossible
 
 slots:
   budget:
@@ -58,7 +64,13 @@ templates:
   utter_greet:
     - text: "Hey there!"
   utter_inform_privacypolicy:
-    - text: "Before we start chatting, please make sure you've checked our privacy policy: https://rasa.com/privacy-policy/"
+    - text: "Before we start chatting, please make sure you've checked our privacy policy: https://rasa.com/privacy-policy/.
+    Do you accept?"
+      buttons:
+        - title: "Yes"
+          payload: "/mood_confirm"
+        - title: "No"
+          payload: "/deny"
   utter_moreinformation:
     - text: "Sure, to find the right person to talk to, it would be great if you could
         give us a few more information about you and the company you work for."
@@ -67,6 +79,16 @@ templates:
   utter_already_subscribed:
     - text: "Looks like you're already subscribed - congrats, that was a good choice!
     If you haven't received a newsletter in a while, maybe check your spam folder."
+  utter_no_speak:
+    - text: "I'm afraid we can't chat then :("
+  utter_ask_whatspossible:
+    - text: "You can book a sales call or subscribe to our newsletter."
+  utter_ask_weather:
+    - text: "I don't know about where you live, but in my world it's always sunny"
+  utter_ask_builder:
+    - text: "The coolest person ever: Akela from Rasa"
+  utter_ask_howdoing:
+    - text: "I'm great!"
 
 actions:
   - utter_greet
@@ -84,7 +106,9 @@ actions:
   - utter_confirmationemail
   - utter_sales_contact
   - utter_already_subscribed
+  - utter_no_speak
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget
   - demo.actions.ActionStoreUsecase
+  - demo.actions.ActionChitchat

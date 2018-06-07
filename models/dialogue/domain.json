@@ -5,6 +5,12 @@
     "intent_contact_sales", 
     "intent_signup_newsletter", 
     "intent_greet", 
+    "intent_deny", 
+    "intent_affirm", 
+    "intent_ask_builder", 
+    "intent_ask_weather", 
+    "intent_ask_howdoing", 
+    "intent_ask_whatspossible", 
     "entity_jobfunction", 
     "entity_company", 
     "entity_email", 
@@ -36,9 +42,11 @@
     "prev_utter_confirmationemail", 
     "prev_utter_sales_contact", 
     "prev_utter_already_subscribed", 
+    "prev_utter_no_speak", 
     "prev_action_subscribe_newsletter", 
     "prev_action_store_sales_info", 
     "prev_action_store_budget", 
-    "prev_action_store_usecase"
+    "prev_action_store_usecase", 
+    "prev_action_chitchat"
   ]
 }
