@@ -63,7 +63,7 @@ templates:
     - text: "Sure, to find the right person to talk to, it would be great if you could
         give us a few more information about you and the company you work for."
   utter_sales_contact:
-    - text: "Thank you! Our sales team will contact you - what's your name?"
+    - text: "Thank you! No I need a few more details that help our sales team to contact you. Let's start! What's your name? "
   utter_already_subscribed:
     - text: "Looks like you're already subscribed - congrats, that was a good choice!
     If you haven't received a newsletter in a while, maybe check your spam folder."
