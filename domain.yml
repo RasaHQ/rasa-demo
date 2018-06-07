@@ -12,6 +12,7 @@ intents:
   - contact_sales
   - signup_newsletter
   - greet
+  - humand_handoff
   - deny
   - affirm
   - ask_builder
@@ -79,6 +80,8 @@ templates:
   utter_already_subscribed:
     - text: "Looks like you're already subscribed - congrats, that was a good choice!
     If you haven't received a newsletter in a while, maybe check your spam folder."
+  utter_contact_email: 
+    - text: "You can email us at hi@rasa.com."
   utter_no_speak:
     - text: "I'm afraid we can't chat then :("
   utter_ask_whatspossible:
@@ -106,6 +109,7 @@ actions:
   - utter_confirmationemail
   - utter_sales_contact
   - utter_already_subscribed
+  - utter_contact_email
   - utter_no_speak
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
