@@ -1,5 +1,8 @@
 {
   "action_fingerprints": {
+    "action_chitchat": {
+      "slots": []
+    }, 
     "action_subscribe_newsletter": {
       "slots": [
         "subscribed"
@@ -9,8 +12,8 @@
       "slots": [
         "jobfunction", 
         "company", 
-        "email", 
-        "name"
+        "name", 
+        "email"
       ]
     }, 
     "action_store_budget": {
@@ -22,6 +25,9 @@
       "slots": []
     }, 
     "utter_docu": {
+      "slots": []
+    }, 
+    "utter_no_speak": {
       "slots": []
     }, 
     "action_store_sales_info": {
@@ -44,5 +50,5 @@
     3, 
     5
   ], 
-  "rasa_core": "0.10.0a1"
+  "rasa_core": "0.9.1"
 }
