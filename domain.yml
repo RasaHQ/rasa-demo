@@ -12,6 +12,13 @@ intents:
   - contact_sales
   - signup_newsletter
   - greet
+  - human_handoff
+  - deny
+  - ask_builder
+  - ask_weather
+  - ask_howdoing
+  - ask_whatspossible
+  - out_of_scope
 
 slots:
   budget:
@@ -41,32 +48,52 @@ templates:
   utter_ask_email:
     - text: "Great - what's your email address?"
   utter_ask_goal:
-    - text: "I'm the Rasa Bot and I can help you to get started with Rasa. You can either
-        sign up for the newsletter or request a call with our sales team. What do you
+    - text: "Awesome, thanks! Here you can either
+        subscribe to our newsletter or request a call with our sales team. What do you
         want to do?"
   utter_ask_jobfunction:
     - text: "What's your job function?"
   utter_ask_usecase:
-    - text: "Tell me more about your use case, what do you want to build with Rasa?"
+    - text: "Tell me more about your use case, what kind of bot do you want to build with Rasa?"
   utter_confirm_salesrequest:
-    - text: "Great, thank you! You'll hear from us."
+    - text: "Great, that’s all we needed! You'll hear from us soon."
   utter_confirmationemail:
     - text: "Wonderful, thank you. We sent a confirmation email to {email}."
   utter_docu:
-    - text: "I you want to learn more about the technical side of things, check our documentation
+    - text: "If you want to learn more about the technical side of things, check out our documentation:
       (link)."
   utter_greet:
-    - text: "Hey there!"
+    - text: "Hey there, welcome to Rasa! Feel free to browse around our website."
   utter_inform_privacypolicy:
-    - text: "Before we start chatting, please make sure you've checked our privacy policy: https://rasa.com/privacy-policy/"
+    - text: "Before we start chatting, please read and accept our privacy policy https://rasa.com/privacy-policy/.
+    Do you accept?"
+      buttons:
+        - title: "Accept"
+          payload: "/mood_confirm"
+        - title: "Decline"
+          payload: "/deny"
   utter_moreinformation:
     - text: "Sure, to find the right person to talk to, it would be great if you could
-        give us a few more information about you and the company you work for."
+        give us a little more information about you and the company you work for."
   utter_sales_contact:
-    - text: "Thank you! Our sales team will contact you - what's your name?"
+    - text: "Thank you! Now I need a few more details that help our sales team to contact you. Let's start! What's your name? "
   utter_already_subscribed:
     - text: "Looks like you're already subscribed - congrats, that was a good choice!
     If you haven't received a newsletter in a while, maybe check your spam folder."
+  utter_contact_email:
+    - text: "You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com."
+  utter_no_speak:
+    - text: "I'm afraid we can't chat then :("
+  utter_ask_whatspossible:
+    - text: "You can book a sales call or subscribe to our newsletter."
+  utter_ask_weather:
+    - text: "I don't know about where you live, but in my world it's always sunny."
+  utter_ask_builder:
+    - text: "The coolest person ever: Akela from Rasa"
+  utter_ask_howdoing:
+    - text: "I'm great! Thanks for asking."
+  utter_out_of_scope:
+      - text: "Sorry, I can’t deal with that request."
 
 actions:
   - utter_greet
@@ -84,7 +111,13 @@ actions:
   - utter_confirmationemail
   - utter_sales_contact
   - utter_already_subscribed
+  - utter_contact_email
+  - utter_no_speak
+  - utter_out_of_scope
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget
   - demo.actions.ActionStoreUsecase
+  - demo.actions.ActionChitchat
+  - demo.actions.ActionStoreName
+  - demo.actions.ActionStoreCompany
