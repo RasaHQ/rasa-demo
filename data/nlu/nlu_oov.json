@@ -1,0 +1,36 @@
+{
+    "rasa_nlu_data": {
+        "common_examples": [
+            {
+                "text": "oov",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "My budget is oov",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "My email is oov",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "oov per year",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "the name of the company is oov",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "I work for oov",
+                "intent": "enter_data",
+                "entities": []
+            }
+        ]
+    }
+}

@@ -106,3 +106,32 @@ class ActionChitchat(Action):
                       'ask_whatspossible']:
             dispatcher.utter_template('utter_' + intent)
         return []
+
+
+class ActionStoreName(Action):
+
+    def name(self):
+        return "action_store_name"
+
+    def run(self, dispatcher, tracker, domain):
+        person_name = next(tracker.get_latest_entity_values('name'), None)
+        if not person_name:
+            person_name = next(tracker.get_latest_entity_values('PERSON'),
+                               None)
+        if not person_name:
+            person_name = tracker.latest_message.text
+
+        return [SlotSet('name', person_name)]
+
+
+class ActionStoreCompany(Action):
+
+    def name(self):
+        return "action_store_company"
+
+    def run(self, dispatcher, tracker, domain):
+        company = next(tracker.get_latest_entity_values('company'), None)
+        if not company:
+            company = tracker.latest_message.text
+
+        return [SlotSet('company', company)]

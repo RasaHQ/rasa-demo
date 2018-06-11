@@ -23,6 +23,7 @@
 
 ## just newsletter (with email already) + confirm
 * greet
+    - utter_greet
     - utter_inform_privacypolicy
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - slot{"email": "maxmeier@firma.de"}
@@ -147,9 +148,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -187,9 +190,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -219,9 +224,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -251,9 +258,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -291,9 +300,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -340,9 +351,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -381,9 +394,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -413,9 +428,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
@@ -454,9 +471,11 @@
     - slot{"budget": "100k"}
     - utter_sales_contact
 * enter_data{"name": "Max Meier"}
+    - action_store_name
     - slot{"name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
+    - action_store_company
     - slot{"company": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}

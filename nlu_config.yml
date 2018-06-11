@@ -4,11 +4,25 @@ pipeline:
 - name: intent_featurizer_spacy
 - name: ner_crf
 - name: ner_spacy
+  features:
+  - - low
+    - title
+    - upper
+  - - bias
+    - low
+    - prefix5
+    - prefix2
+    - suffix5
+    - suffix3
+    - suffix2
+    - upper
+    - title
+    - digit
+    - pattern
+    - pos
+    - pos2
+  - - low
+    - title
+    - upper
 - name: intent_classifier_sklearn
-- name: ner_duckling_http
-  url: "http://localhost:8000"
-  dimensions:
-  - number
-  - email
-  - amount-of-money
 language: en
