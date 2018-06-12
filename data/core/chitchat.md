@@ -24,12 +24,13 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter + confirm
 * greet
@@ -43,12 +44,13 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter + confirm
 * greet
@@ -62,12 +64,13 @@
     - action_chitchat
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -79,12 +82,13 @@
 * mood_confirm
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -96,12 +100,13 @@
     - action_chitchat
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter (with email already)
 * greet
@@ -113,6 +118,7 @@
 * mood_confirm
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
@@ -129,6 +135,7 @@
     - action_chitchat
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
@@ -145,12 +152,13 @@
 * mood_confirm
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
@@ -162,12 +170,13 @@
     - action_chitchat
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -179,6 +188,7 @@
 * mood_confirm
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
@@ -195,6 +205,7 @@
     - action_chitchat
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
@@ -213,12 +224,13 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -232,12 +244,13 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -251,12 +264,13 @@
     - action_chitchat
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+* mood_confirm OR thank
 
 ## just newsletter
 * greet
@@ -270,6 +284,7 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
@@ -288,6 +303,7 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
@@ -306,6 +322,7 @@
     - action_chitchat
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
@@ -324,6 +341,7 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
@@ -342,6 +360,7 @@
 * signup_newsletter
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
@@ -360,6 +379,7 @@
     - action_chitchat
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": false}
@@ -380,7 +400,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -393,13 +413,14 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -419,7 +440,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -432,13 +453,14 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -458,7 +480,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -471,13 +493,14 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -494,7 +517,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing
     - action_chitchat
@@ -510,13 +533,14 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -534,7 +558,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -550,13 +574,14 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -575,7 +600,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -592,13 +617,14 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -615,7 +641,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -628,16 +654,17 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing
     - action_chitchat
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}
@@ -654,7 +681,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -667,16 +694,17 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing
     - action_chitchat
     - utter_ask_businessmail
 * enter_data{"email": "maxmeier@firma.de"}
+    - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
     - slot{"data_stored": true}

@@ -10,9 +10,6 @@
     }, 
     "action_listen": {
       "slots": [
-        "jobfunction", 
-        "company", 
-        "name", 
         "email"
       ]
     }, 
@@ -21,19 +18,24 @@
         "budget"
       ]
     }, 
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    }, 
     "action_store_company": {
       "slots": [
-        "company"
+        "company_name"
       ]
     }, 
     "action_store_name": {
       "slots": [
-        "name"
+        "person_name"
       ]
     }, 
     "action_store_job": {
       "slots": [
-        "jobfunction"
+        "job_function"
       ]
     }, 
     "utter_confirm_salesrequest": {

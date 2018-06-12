@@ -11,7 +11,7 @@ help:
 	@echo "        Spin up a server that serves as an endpoint to receive facebook user messages."
 
 train-nlu:
-	python -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu -o models --project nlu --verbose
+	python -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/nlu.json -o models --project nlu --verbose
 
 train-core:
 	python -m rasa_core.train -s data/core -d domain.yml -o models/dialogue --epochs 200

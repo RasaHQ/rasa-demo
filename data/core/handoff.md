@@ -225,7 +225,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * human_handoff
     - utter_contact_email
@@ -242,7 +242,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -264,7 +264,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -289,7 +289,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -302,7 +302,7 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * human_handoff
     - utter_contact_email
@@ -318,7 +318,7 @@
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
     - action_store_job
-    - slot{"jobfunction": "Product Manager"}
+    - slot{"job_function": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
     - action_store_usecase
@@ -331,11 +331,11 @@
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
-    - slot{"name": "Max Meier"}
+    - slot{"person_name": "Max Meier"}
     - utter_ask_company
 * enter_data{"company": "Allianz"}
     - action_store_company
-    - slot{"company": "Allianz"}
+    - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
 * human_handoff
     - utter_contact_email

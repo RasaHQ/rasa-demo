@@ -2676,42 +2676,12 @@
                 "entities": []
             }, 
             {
-                "text": "Been busy lately?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "Bro, whats up?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "Do you feel good?", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
             {
-                "text": "Hope all is well?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "hope you're having a pleasant evening", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "hope your day is going well", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "how are things going", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how are things", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
@@ -2746,16 +2716,6 @@
                 "entities": []
             }, 
             {
-                "text": "How are you feeling today?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how are you getting on", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "how are you today", 
                 "intent": "ask_howdoing", 
                 "entities": []
@@ -2767,21 +2727,6 @@
             }, 
             {
                 "text": "how do you do?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how do you feel", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how has your day been", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how has your day been going", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
@@ -2806,27 +2751,7 @@
                 "entities": []
             }, 
             {
-                "text": "how is your day going on", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "how is your evening", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how is your life", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how is your morning going", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how is your morning so far", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
@@ -2861,16 +2786,6 @@
                 "entities": []
             }, 
             {
-                "text": "How's my brother from another mother?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "how's your day", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "how's your day going", 
                 "intent": "ask_howdoing", 
                 "entities": []
@@ -2901,27 +2816,7 @@
                 "entities": []
             }, 
             {
-                "text": "Is there anything that you would like to share with me?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "So what have you been up to?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "what about your day", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "what was your day like", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "What's cracking ", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
@@ -2936,17 +2831,7 @@
                 "entities": []
             }, 
             {
-                "text": "what's happening?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
                 "text": "What's new?", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "What's on your mind?", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
@@ -2957,16 +2842,6 @@
             }, 
             {
                 "text": "What's up ", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "What's up dude", 
-                "intent": "ask_howdoing", 
-                "entities": []
-            }, 
-            {
-                "text": "You don't seem like your usual self today?", 
                 "intent": "ask_howdoing", 
                 "entities": []
             }, 
@@ -3146,97 +3021,12 @@
                 "entities": []
             }, 
             {
-                "text": "By whom were you molded?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Can I ask who formed you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "can you share your boss with me?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
             {
-                "text": "can you share your creator with me?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "can you share your inventor with me?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "can you share your owner with me?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "can you tell me who created you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "can you tell me who your boss is?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "can you tell me who made you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Do you have family?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Do you have parents?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "From where did you originate?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "How did you see sunlight?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "i need to ask you: who is behind this", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "i want to get to know your boss", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "i want to get to know your creator", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "i want to get to know your founder", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "i want to get to know your owner", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "i want to get to know your parents", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3252,11 +3042,6 @@
             }, 
             {
                 "text": "i want to know the company which invented you", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "i want to know who created you", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3281,37 +3066,12 @@
                 "entities": []
             }, 
             {
-                "text": "tell me more about your boss", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "tell me more about your company", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "tell me more about your creators", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
             {
                 "text": "tell me more about your founders", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "tell me more about your owner", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "tell me more about your parents", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "which company are you working for?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3326,47 +3086,12 @@
                 "entities": []
             }, 
             {
-                "text": "which company designed you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "which company do you work for?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "which company generated you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "which company invented you?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
             {
-                "text": "which company is behind all this?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "which company is behind you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Which programmer is behind you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "Who's your boss?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who brought you into existence?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3377,11 +3102,6 @@
             }, 
             {
                 "text": "Who built you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who coded you?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3397,16 +3117,6 @@
             }, 
             {
                 "text": "Who designed you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who devised you dear bot?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "who do you think your boss is?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3431,11 +3141,6 @@
                 "entities": []
             }, 
             {
-                "text": "Who had the idea to create you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "who had the idea to generate you?", 
                 "intent": "ask_builder", 
                 "entities": []
@@ -3446,27 +3151,12 @@
                 "entities": []
             }, 
             {
-                "text": "who has built you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who invented you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "who is behind all this?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
             {
                 "text": "Who is the legal owner of you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who is the mastermind behind you?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3482,31 +3172,6 @@
             }, 
             {
                 "text": "who is your creator?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who is your dad?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who is your inventor?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who is your master?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who is your mom?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who is your owner?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3531,11 +3196,6 @@
                 "entities": []
             }, 
             {
-                "text": "Who prepared you?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "Who produced you?", 
                 "intent": "ask_builder", 
                 "entities": []
@@ -3546,22 +3206,7 @@
                 "entities": []
             }, 
             {
-                "text": "Who tinkered you together?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
                 "text": "Who went through the trouble of setting you up?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Who figured you out?", 
-                "intent": "ask_builder", 
-                "entities": []
-            }, 
-            {
-                "text": "Why do you exist?", 
                 "intent": "ask_builder", 
                 "entities": []
             }, 
@@ -3569,6 +3214,987 @@
                 "text": "Akela", 
                 "intent": "enter_data", 
                 "entities": []
+            }, 
+            {
+                "text": "a health bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "help@help.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 13, 
+                        "value": "help@help.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "i'm a developer", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 6, 
+                        "extractor": "ner_crf", 
+                        "end": 15, 
+                        "value": "developer", 
+                        "entity": "jobfunction"
+                    }
+                ]
+            }, 
+            {
+                "text": "i want to build a health bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "200k", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 4, 
+                        "value": "200000", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "My name is Alex", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 11, 
+                        "extractor": "ner_crf", 
+                        "end": 15, 
+                        "value": "Alex", 
+                        "entity": "name"
+                    }
+                ]
+            }, 
+            {
+                "text": "Rasa", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "end": 4, 
+                        "value": "Rasa", 
+                        "entity": "company"
+                    }
+                ]
+            }, 
+            {
+                "text": "test@test.com", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "2000k", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 5, 
+                        "value": "2000000", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "I'm Akela", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 4, 
+                        "end": 9, 
+                        "value": "Akela", 
+                        "entity": "name"
+                    }
+                ]
+            }, 
+            {
+                "text": "i want to build all the bots", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "contact sales", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "20k", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "i want to build bots", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "i want to contact sales", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "developer", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 9, 
+                        "value": "developer", 
+                        "entity": "jobfunction"
+                    }
+                ]
+            }, 
+            {
+                "text": "a cool bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "id like a call please", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "Developer Advocate", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 18, 
+                        "value": "Developer Advocate", 
+                        "entity": "jobfunction"
+                    }
+                ]
+            }, 
+            {
+                "text": "It is juste@rasa.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 6, 
+                        "extractor": "ner_crf", 
+                        "end": 20, 
+                        "value": "juste@rasa.com", 
+                        "entity": "email"
+                    }, 
+                    {
+                        "start": 6, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 20, 
+                        "value": "juste@rasa.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "Subscribe to Rasa newsletter", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "I would like to have a call with sales team", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "thanks!", 
+                "intent": "thank", 
+                "entities": []
+            }, 
+            {
+                "text": "Yes", 
+                "intent": "mood_confirm", 
+                "entities": []
+            }, 
+            {
+                "text": "Newsletter", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "juste@rasa.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 14, 
+                        "value": "juste@rasa.com", 
+                        "entity": "email"
+                    }, 
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 14, 
+                        "value": "juste@rasa.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "Cool. Thanks", 
+                "intent": "thank", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 12, 
+                        "value": "Cool. Thanks", 
+                        "entity": "name"
+                    }
+                ]
+            }, 
+            {
+                "text": "thanks ", 
+                "intent": "thank", 
+                "entities": []
+            }, 
+            {
+                "text": "reddit", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 6, 
+                        "value": "reddit", 
+                        "entity": "company"
+                    }
+                ]
+            }, 
+            {
+                "text": "a bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "thanks this is great news", 
+                "intent": "thank", 
+                "entities": []
+            }, 
+            {
+                "text": "philipp@thephilippcompany.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 29, 
+                        "value": "philipp@thephilippcompany.com", 
+                        "entity": "email"
+                    }, 
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 29, 
+                        "value": "philipp@thephilippcompany.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "philipp company", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 15, 
+                        "value": "philipp company", 
+                        "entity": "company"
+                    }
+                ]
+            }, 
+            {
+                "text": "philipp", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 7, 
+                        "value": "philipp", 
+                        "entity": "name"
+                    }
+                ]
+            }, 
+            {
+                "text": "hii", 
+                "intent": "greet", 
+                "entities": []
+            }, 
+            {
+                "text": "i want to built a philipp bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "philipp@rasa.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 16, 
+                        "value": "philipp@rasa.com", 
+                        "entity": "email"
+                    }, 
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 16, 
+                        "value": "philipp@rasa.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "a shitty bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "i would like to speak to a person", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "ulrike@rasa.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 15, 
+                        "value": "ulrike@rasa.com", 
+                        "entity": "email"
+                    }, 
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 15, 
+                        "value": "ulrike@rasa.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "accept", 
+                "intent": "mood_confirm", 
+                "entities": []
+            }, 
+            {
+                "text": "I accept", 
+                "intent": "mood_confirm", 
+                "entities": []
+            }, 
+            {
+                "text": "show me a picture of a chicken", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "joey@koolmanconsulting.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 26, 
+                        "value": "joey@koolmanconsulting.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "Joey Faulkner PhD", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 13, 
+                        "value": "Joey Faulkner", 
+                        "entity": "name"
+                    }
+                ]
+            }, 
+            {
+                "text": "one which asks me loads about myself", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 3, 
+                        "value": "1", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "i accept", 
+                "intent": "mood_confirm", 
+                "entities": []
+            }, 
+            {
+                "text": "chief nerd at rasa technologies", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "i want someone to call me", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "hello sweet boy", 
+                "intent": "greet", 
+                "entities": []
+            }, 
+            {
+                "text": "Elise", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "end": 5, 
+                        "value": "Elise", 
+                        "entity": "name"
+                    }
+                ]
+            }, 
+            {
+                "text": " request a call ", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "subscribe", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "request a call", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "myemail@gmail.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 17, 
+                        "value": "myemail@gmail.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "get the newsletter", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "ok i accept", 
+                "intent": "mood_confirm", 
+                "entities": []
+            }, 
+            {
+                "text": "123@skdv.fvsdj", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 14, 
+                        "value": "123@skdv.fvsdj", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "decline", 
+                "intent": "deny", 
+                "entities": []
+            }, 
+            {
+                "text": "I want to talk to sales", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "neither", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "i don't have one", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 13, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 16, 
+                        "value": "1", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "I also want to subscribe", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "ok its sam@gaus.co.uk", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 7, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 21, 
+                        "value": "sam@gaus.co.uk", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "id like to subscribe", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "thank you", 
+                "intent": "thank", 
+                "entities": []
+            }, 
+            {
+                "text": "I'd like to subscribe ", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "I want the newsletter", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "I want french cuisine", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "sign up", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "i want to signup", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "i am hungry", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "restaurants", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "newsletter please", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "restaurant", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "you're a loser lmao", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "can i be shown a gluten free restaurant", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "i don't care!!!!", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "i do not care how are you", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "again?", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "oh wait i gave you my work email address can i change it?", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "hang on let me find it", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "stop it, i do not care!!!", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "really? you're so touchy?", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "how come?", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "have no idea", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "I do not know yet", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "I changed my mind", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "what?", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "ulrikovitcheisenkleber@eisenkleberlimitedcokg.com", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 49, 
+                        "value": "ulrikovitcheisenkleber@eisenkleberlimitedcokg.com", 
+                        "entity": "email"
+                    }, 
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 49, 
+                        "value": "ulrikovitcheisenkleber@eisenkleberlimitedcokg.com", 
+                        "entity": "email"
+                    }
+                ]
+            }, 
+            {
+                "text": "eisenkleber limited co kg", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "ulrikovitch eisenkleber", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "did i break you", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "don't have one", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 11, 
+                        "extractor": "ner_spacy", 
+                        "end": 14, 
+                        "value": "one", 
+                        "entity": "CARDINAL"
+                    }, 
+                    {
+                        "start": 11, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 14, 
+                        "value": "1", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "i'd like to talk to a sales person", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "N26", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_spacy", 
+                        "end": 3, 
+                        "value": "N26", 
+                        "entity": "ORG"
+                    }, 
+                    {
+                        "start": 1, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 3, 
+                        "value": "26", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "designer", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_crf", 
+                        "end": 8, 
+                        "value": "designer", 
+                        "entity": "jobfunction"
+                    }
+                ]
+            }, 
+            {
+                "text": "whats the weather like tomorrow?", 
+                "intent": "ask_weather", 
+                "entities": [
+                    {
+                        "start": 23, 
+                        "extractor": "ner_spacy", 
+                        "end": 31, 
+                        "value": "tomorrow", 
+                        "entity": "DATE"
+                    }, 
+                    {
+                        "start": 23, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 31, 
+                        "value": "2018-06-07T00:00:00.000-07:00", 
+                        "entity": "time"
+                    }
+                ]
+            }, 
+            {
+                "text": "But I wanted a sales call", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "can you put me in touch with a human?", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "I don't wanna tell the name of my company", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "that link doesn't work! ", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "you already have that", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "a pizza bot", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "operations", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "this is a really frustrating experience", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "none i will build it from scraps", 
+                "intent": "enter_data", 
+                "entities": [
+                    {
+                        "start": 0, 
+                        "extractor": "ner_duckling_http", 
+                        "end": 4, 
+                        "value": "0", 
+                        "entity": "number"
+                    }
+                ]
+            }, 
+            {
+                "text": "no idea", 
+                "intent": "enter_data", 
+                "entities": []
+            }, 
+            {
+                "text": "no stop", 
+                "intent": "out_of_scope", 
+                "entities": []
+            }, 
+            {
+                "text": "I wanna talk to your sales guy", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "id like to talk to someone who can explain me what i can do with rasa", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "can someone help me with infos about the rasa platform", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "I want information about the platform", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "how does your pricing work?", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "are there different packages customers can book?", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "please provide information on your enterprise package ", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "i need to know how i can book support", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "we started working with rasa but now we need support", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "we built a bot with rasa but now we're interested in the platform", 
+                "intent": "contact_sales", 
+                "entities": []
+            }, 
+            {
+                "text": "nl ", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "id like to receive the newsletter", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "i want the newsletter ", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "add me as your subscriber ", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "add me to the subscription list ", 
+                "intent": "signup_newsletter", 
+                "entities": []
+            }, 
+            {
+                "text": "let me talk to a human", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "id like to talk to a real rasa employee", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "i dont wanna talk to a bot", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "talking to a bot is stupid ", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "i want to talk to someone who is smarter than you", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "can i please speak to a human?", 
+                "intent": "human_handoff", 
+                "entities": []
+            }, 
+            {
+                "text": "i'd rather speak with a real rasa employee", 
+                "intent": "human_handoff", 
+                "entities": []
+            }
+        ], 
+        "regex_features": [
+            {
+                "pattern": "hey[^\\s]*", 
+                "name": "greet"
+            }, 
+            {
+                "pattern": "[0-9]{5}", 
+                "name": "zipcode"
             }
         ]
     }

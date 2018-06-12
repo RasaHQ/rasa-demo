@@ -27,6 +27,7 @@ action_names:
 - action_store_name
 - action_store_company
 - action_store_job
+- action_store_email
 actions:
 - utter_greet
 - utter_ask_usecase
@@ -55,6 +56,7 @@ actions:
 - demo.actions.ActionStoreName
 - demo.actions.ActionStoreCompany
 - demo.actions.ActionStoreJob
+- demo.actions.ActionStoreEmail
 config:
   store_entities_as_slots: true
 entities:
@@ -77,11 +79,12 @@ intents:
 - ask_howdoing
 - ask_whatspossible
 - out_of_scope
+- thank
 slots:
   budget:
     initial_value: null
     type: rasa_core.slots.TextSlot
-  company:
+  company_name:
     initial_value: null
     type: rasa_core.slots.TextSlot
   data_stored:
@@ -90,10 +93,10 @@ slots:
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
-  jobfunction:
+  job_function:
     initial_value: null
     type: rasa_core.slots.TextSlot
-  name:
+  person_name:
     initial_value: null
     type: rasa_core.slots.TextSlot
   subscribed:
@@ -158,6 +161,7 @@ templates:
   utter_no_speak:
   - text: I'm afraid we can't chat then :(
   utter_out_of_scope:
-  - text: Sorry, I can’t deal with that request.
+  - text: Sorry, I can’t deal with that request. You can either book a sales call
+      or subscribe to our newsletter
   utter_sales_contact:
   - text: Thank you! Now I need some contact details. Let's start!

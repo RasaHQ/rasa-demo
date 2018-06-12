@@ -19,17 +19,18 @@ intents:
   - ask_howdoing
   - ask_whatspossible
   - out_of_scope
+  - thank
 
 slots:
   budget:
     type: text
-  company:
+  company_name:
     type: text
   email:
     type: text
-  jobfunction:
+  job_function:
     type: text
-  name:
+  person_name:
     type: text
   subscribed:
     type: bool
@@ -94,7 +95,7 @@ templates:
   utter_ask_howdoing:
     - text: "I'm great! Thanks for asking."
   utter_out_of_scope:
-      - text: "Sorry, I can’t deal with that request."
+      - text: "Sorry, I can’t deal with that request. You can either book a sales call or subscribe to our newsletter"
 
 actions:
   - utter_greet
@@ -124,3 +125,4 @@ actions:
   - demo.actions.ActionStoreName
   - demo.actions.ActionStoreCompany
   - demo.actions.ActionStoreJob
+  - demo.actions.ActionStoreEmail

@@ -12,6 +12,7 @@
     "intent_ask_howdoing", 
     "intent_ask_whatspossible", 
     "intent_out_of_scope", 
+    "intent_thank", 
     "entity_jobfunction", 
     "entity_company", 
     "entity_email", 
@@ -19,11 +20,11 @@
     "entity_amount-of-money", 
     "entity_number", 
     "slot_budget_0", 
-    "slot_company_0", 
+    "slot_company_name_0", 
     "slot_data_stored_0", 
     "slot_email_0", 
-    "slot_jobfunction_0", 
-    "slot_name_0", 
+    "slot_job_function_0", 
+    "slot_person_name_0", 
     "slot_subscribed_0", 
     "slot_use_case_0", 
     "prev_action_listen", 
@@ -54,6 +55,7 @@
     "prev_action_chitchat", 
     "prev_action_store_name", 
     "prev_action_store_company", 
-    "prev_action_store_job"
+    "prev_action_store_job", 
+    "prev_action_store_email"
   ]
 }

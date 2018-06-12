@@ -7,7 +7,8 @@ from __future__ import unicode_literals
 import logging
 
 from rasa_core.actions.action import Action
-from rasa_core.events import SlotSet
+from rasa_core.events import SlotSet, UserUtteranceReverted, ActionReverted
+
 from demo.api import MailChimpAPI
 from demo import config
 from demo.gdrive_service import GDriveService
@@ -45,10 +46,10 @@ class ActionStoreSalesInfo(Action):
     def run(self, dispatcher, tracker, domain):
         import datetime
         budget = tracker.get_slot('budget')
-        company = tracker.get_slot('company')
+        company = tracker.get_slot('company_name')
         email = tracker.get_slot('email')
-        jobfunction = tracker.get_slot('jobfunction')
-        name = tracker.get_slot('name')
+        jobfunction = tracker.get_slot('job_function')
+        name = tracker.get_slot('person_name')
         use_case = tracker.get_slot('use_case')
         date = datetime.datetime.now().strftime("%d/%m/%Y")
 
@@ -122,7 +123,7 @@ class ActionStoreName(Action):
         if not person_name:
             person_name = tracker.latest_message.text
 
-        return [SlotSet('name', person_name)]
+        return [SlotSet('person_name', person_name)]
 
 
 class ActionStoreCompany(Action):
@@ -135,7 +136,7 @@ class ActionStoreCompany(Action):
         if not company:
             company = tracker.latest_message.text
 
-        return [SlotSet('company', company)]
+        return [SlotSet('company_name', company)]
 
 
 class ActionStoreJob(Action):
@@ -150,4 +151,17 @@ class ActionStoreJob(Action):
         if not jobfunction:
             jobfunction = tracker.latest_message.text
 
-        return [SlotSet('jobfunction', jobfunction)]
+        return [SlotSet('job_function', jobfunction)]
+
+
+class ActionStoreEmail(Action):
+
+    def name(self):
+        return "action_store_email"
+
+    def run(self, dispatcher, tracker, domain):
+        email = next(tracker.get_latest_entity_values('email'), None)
+
+        if not email:
+            dispatcher.utter_message("We need your email, please enter a valid one.")
+            return [UserUtteranceReverted()]
