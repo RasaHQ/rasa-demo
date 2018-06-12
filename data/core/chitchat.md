@@ -379,6 +379,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -389,6 +390,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -416,6 +418,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -426,6 +429,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -453,6 +457,7 @@
     - action_chitchat
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -463,6 +468,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -487,6 +493,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing
@@ -500,6 +507,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -525,6 +533,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -538,6 +547,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -564,6 +574,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -574,9 +585,11 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing
     - action_chitchat
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -601,6 +614,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -611,6 +625,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}
@@ -638,6 +653,7 @@
     - utter_moreinformation
     - utter_ask_jobfunction
 * enter_data{"jobfunction": "Product Manager"}
+    - action_store_job
     - slot{"jobfunction": "Product Manager"}
     - utter_ask_usecase
 * enter_data    
@@ -648,6 +664,7 @@
     - action_store_budget
     - slot{"budget": "100k"}
     - utter_sales_contact
+    - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
     - slot{"name": "Max Meier"}

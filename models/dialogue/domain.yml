@@ -18,6 +18,7 @@ action_names:
 - utter_contact_email
 - utter_no_speak
 - utter_out_of_scope
+- utter_ask_name
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -25,6 +26,7 @@ action_names:
 - action_chitchat
 - action_store_name
 - action_store_company
+- action_store_job
 actions:
 - utter_greet
 - utter_ask_usecase
@@ -44,6 +46,7 @@ actions:
 - utter_contact_email
 - utter_no_speak
 - utter_out_of_scope
+- utter_ask_name
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -51,6 +54,7 @@ actions:
 - demo.actions.ActionChitchat
 - demo.actions.ActionStoreName
 - demo.actions.ActionStoreCompany
+- demo.actions.ActionStoreJob
 config:
   store_entities_as_slots: true
 entities:
@@ -119,9 +123,11 @@ templates:
   - text: I'm great! Thanks for asking.
   utter_ask_jobfunction:
   - text: What's your job function?
+  utter_ask_name:
+  - text: What's your name?
   utter_ask_usecase:
-  - text: Tell me more about your use case, what kind of bot do you want to build
-      with Rasa?
+  - text: 'Tell me more about your use case: what kind of bot do you want to build
+      with Rasa?'
   utter_ask_weather:
   - text: I don't know about where you live, but in my world it's always sunny.
   utter_ask_whatspossible:
@@ -147,12 +153,11 @@ templates:
     text: Before we start chatting, please read and accept our privacy policy https://rasa.com/privacy-policy/.
       Do you accept?
   utter_moreinformation:
-  - text: Sure, to find the right person to talk to, it would be great if you could
-      give us a little more information about you and the company you work for.
+  - text: Sure! To find the right person to talk to, I need a little more information
+      about you and your company.
   utter_no_speak:
   - text: I'm afraid we can't chat then :(
   utter_out_of_scope:
   - text: Sorry, I can’t deal with that request.
   utter_sales_contact:
-  - text: 'Thank you! Now I need a few more details that help our sales team to contact
-      you. Let''s start! What''s your name? '
+  - text: Thank you! Now I need some contact details. Let's start!

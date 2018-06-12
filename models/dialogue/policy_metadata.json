@@ -31,16 +31,21 @@
         "name"
       ]
     }, 
+    "action_store_job": {
+      "slots": [
+        "jobfunction"
+      ]
+    }, 
     "utter_confirm_salesrequest": {
       "slots": []
     }, 
-    "utter_contact_email": {
+    "utter_docu": {
       "slots": []
     }, 
     "utter_no_speak": {
       "slots": []
     }, 
-    "utter_out_of_scope": {
+    "utter_contact_email": {
       "slots": []
     }, 
     "action_store_sales_info": {
@@ -52,9 +57,6 @@
       "slots": [
         "use_case"
       ]
-    }, 
-    "utter_docu": {
-      "slots": []
     }
   }, 
   "policy_names": [

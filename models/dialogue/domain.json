@@ -46,12 +46,14 @@
     "prev_utter_contact_email", 
     "prev_utter_no_speak", 
     "prev_utter_out_of_scope", 
+    "prev_utter_ask_name", 
     "prev_action_subscribe_newsletter", 
     "prev_action_store_sales_info", 
     "prev_action_store_budget", 
     "prev_action_store_usecase", 
     "prev_action_chitchat", 
     "prev_action_store_name", 
-    "prev_action_store_company"
+    "prev_action_store_company", 
+    "prev_action_store_job"
   ]
 }

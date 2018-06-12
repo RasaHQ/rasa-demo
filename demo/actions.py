@@ -34,6 +34,7 @@ class ActionSubscribeNewsletter(Action):
                 subscribed = False
 
             return [SlotSet('subscribed', subscribed)]
+        return []
 
 
 class ActionStoreSalesInfo(Action):
@@ -135,3 +136,18 @@ class ActionStoreCompany(Action):
             company = tracker.latest_message.text
 
         return [SlotSet('company', company)]
+
+
+class ActionStoreJob(Action):
+
+    def name(self):
+        return "action_store_job"
+
+    def run(self, dispatcher, tracker, domain):
+        jobfunction = next(tracker.get_latest_entity_values('jobfunction'),
+                           None)
+
+        if not jobfunction:
+            jobfunction = tracker.latest_message.text
+
+        return [SlotSet('jobfunction', jobfunction)]

@@ -1,8 +1,11 @@
-language: "en"
-
 pipeline:
-- name: "tokenizer_whitespace"
-- name: "ner_crf"
-- name: "intent_featurizer_count_vectors"
-  OOV_token: "oov"
-- name: "intent_classifier_tensorflow_embedding"
+- name: tokenizer_whitespace
+- name: ner_crf
+- name: intent_featurizer_count_vectors
+  OOV_token: oov
+- name: intent_classifier_tensorflow_embedding
+- name: ner_duckling_http
+  dimensions:
+  - email
+  - number
+language: en

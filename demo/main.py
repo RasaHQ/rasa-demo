@@ -13,6 +13,17 @@ from rasa_core.channels.rest import HttpInputChannel
 logger = logging.getLogger()  # get the root logger
 
 
+def run_widget():
+    import os
+    from rasa_core.agent import Agent
+    from rasa_addons.webchat import WebChatInput, SocketInputChannel
+
+    agent = Agent.load('models/dialogue/',
+                       interpreter='models/nlu/current/')
+    input_channel = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
+    agent.handle_channel(SocketInputChannel(5500, "/", input_channel))
+
+
 def run_remote():
     from rasa_core.remote import RemoteAgent
 

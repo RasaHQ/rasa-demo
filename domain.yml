@@ -54,7 +54,7 @@ templates:
   utter_ask_jobfunction:
     - text: "What's your job function?"
   utter_ask_usecase:
-    - text: "Tell me more about your use case, what kind of bot do you want to build with Rasa?"
+    - text: "Tell me more about your use case: what kind of bot do you want to build with Rasa?"
   utter_confirm_salesrequest:
     - text: "Great, that’s all we needed! You'll hear from us soon."
   utter_confirmationemail:
@@ -73,10 +73,11 @@ templates:
         - title: "Decline"
           payload: "/deny"
   utter_moreinformation:
-    - text: "Sure, to find the right person to talk to, it would be great if you could
-        give us a little more information about you and the company you work for."
+    - text: "Sure! To find the right person to talk to, I need a little more information about you and your company."
   utter_sales_contact:
-    - text: "Thank you! Now I need a few more details that help our sales team to contact you. Let's start! What's your name? "
+    - text: "Thank you! Now I need some contact details. Let's start!"
+  utter_ask_name:
+    - text: "What's your name?"
   utter_already_subscribed:
     - text: "Looks like you're already subscribed - congrats, that was a good choice!
     If you haven't received a newsletter in a while, maybe check your spam folder."
@@ -114,6 +115,7 @@ actions:
   - utter_contact_email
   - utter_no_speak
   - utter_out_of_scope
+  - utter_ask_name
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget
@@ -121,3 +123,4 @@ actions:
   - demo.actions.ActionChitchat
   - demo.actions.ActionStoreName
   - demo.actions.ActionStoreCompany
+  - demo.actions.ActionStoreJob

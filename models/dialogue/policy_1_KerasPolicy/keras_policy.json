@@ -1,5 +1,5 @@
 {
-  "epochs": 400, 
+  "epochs": 200, 
   "weights": "keras_weights.h5", 
   "arch": "keras_arch.json"
 }
