@@ -30,3 +30,9 @@ mailchimp_api_key = os.environ.get("MAILCHIMP_API_KEY", "")
 mailchimp_list = os.environ.get("MAILCHIMP_LIST", "")
 
 gdrive_credentials = os.environ.get("GDRIVE_CREDENTIALS", "")
+
+access_token = os.environ.get("TELEGRAM_TOKEN", "")
+
+verify = os.environ.get("TELEGRAM_VERIFY", "rasas_bot")
+
+webhook_url = os.environ.get("WEBHOOK_URL", "https://website-demo.rasa.com/webhook")

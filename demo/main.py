@@ -30,10 +30,13 @@ def run_remote():
     logging.basicConfig(level="DEBUG")
 
     from rasa_extensions.core.channels.rasa_chat import RasaChatInput
+    from rasa_core.channels.telegram import TelegramInput
 
     rasa_in = RasaChatInput(config.platform_api)
+    telegram_in = TelegramInput(config.access_token, config.verify,
+                                config.webhook_url)
     input_channel = HttpInputChannel(config.self_port, "/",
-                                     rasa_in)
+                                     rasa_in, telegram_in)
 
     agent = RemoteAgent.load(config.core_model_dir,
                              config.remote_core_endpoint,
