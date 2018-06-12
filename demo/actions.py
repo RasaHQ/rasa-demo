@@ -165,3 +165,5 @@ class ActionStoreEmail(Action):
         if not email:
             dispatcher.utter_message("We need your email, please enter a valid one.")
             return [UserUtteranceReverted()]
+
+        return [SlotSet('email', email)]

@@ -3,10 +3,8 @@
     "action_chitchat": {
       "slots": []
     }, 
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
+    "utter_out_of_scope": {
+      "slots": []
     }, 
     "action_listen": {
       "slots": [
@@ -17,6 +15,9 @@
       "slots": [
         "budget"
       ]
+    }, 
+    "utter_contact_email": {
+      "slots": []
     }, 
     "action_store_email": {
       "slots": [
@@ -47,8 +48,10 @@
     "utter_no_speak": {
       "slots": []
     }, 
-    "utter_contact_email": {
-      "slots": []
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
     }, 
     "action_store_sales_info": {
       "slots": [

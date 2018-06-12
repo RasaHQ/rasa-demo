@@ -37,7 +37,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -54,7 +54,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
 - action_subscribe_newsletter
@@ -71,7 +71,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -144,7 +144,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -161,7 +161,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -177,7 +177,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -193,7 +193,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -224,7 +224,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -239,7 +239,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -270,7 +270,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -307,7 +307,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -344,7 +344,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -352,7 +352,7 @@
     - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -390,7 +390,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -398,7 +398,7 @@
     - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -414,7 +414,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -446,7 +446,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -461,7 +461,7 @@
     - utter_ask_goal
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -493,7 +493,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -530,7 +530,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -538,7 +538,7 @@
     - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
@@ -577,7 +577,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -585,7 +585,7 @@
     - utter_confirm_salesrequest
 * signup_newsletter
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
