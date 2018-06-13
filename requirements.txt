@@ -2,3 +2,4 @@ rasa_core==0.9.3
 mailchimp3==3.0.2
 oauth2client==4.1.2
 gspread==3.0.0
+git+https://github.com/mrbot-ai/rasa-addons
