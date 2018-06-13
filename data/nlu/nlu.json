@@ -1176,11 +1176,6 @@
                 "entities": []
             },
             {
-                "text": "deny", 
-                "intent": "deny",
-                "entities": []
-            },
-            {
                 "text": "definitely not",
                 "intent": "deny",
                 "entities": []
@@ -4190,6 +4185,775 @@
                 "text": "i'd rather speak with a real rasa employee",
                 "intent": "human_handoff",
                 "entities": []
+            },
+            {
+                "text": "Vladimir",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 8,
+                        "value": "Vladimir",
+                        "entity": "name"
+                    }
+                ]
+            },
+            {
+                "text": "around 200k",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "i want to build a bot about me",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "i'm a dev",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 6,
+                        "end": 9,
+                        "value": "dev",
+                        "entity": "jobfunction"
+                    }
+                ]
+            },
+            {
+                "text": "i don't have it",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "how are you?",
+                "intent": "ask_howdoing",
+                "entities": []
+            },
+            {
+                "text": "deny",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "i want to build an insurance bot",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "product manager",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "extractor": "ner_crf",
+                        "end": 15,
+                        "value": "product manager",
+                        "entity": "jobfunction"
+                    }
+                ]
+            },
+            {
+                "text": "help@rasa.com",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "extractor": "ner_duckling_http",
+                        "end": 13,
+                        "value": "help@rasa.com",
+                        "entity": "email"
+                    }
+                ]
+            },
+            {
+                "text": "BBC",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "BBC",
+                        "entity": "name"
+                    }
+                ]
+            },
+            {
+                "text": "i wanna build all the bots",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "i'm a product manager",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 6,
+                        "extractor": "ner_crf",
+                        "end": 21,
+                        "value": "product manager",
+                        "entity": "jobfunction"
+                    }
+                ]
+            },
+            {
+                "text": "i want a french restaurant",
+                "intent": "out_of_scope",
+                "entities": []
+            },
+            {
+                "text": "hows the weather in bot world",
+                "intent": "ask_weather",
+                "entities": []
+            },
+            {
+                "text": "and who built u?",
+                "intent": "ask_builder",
+                "entities": []
+            },
+            {
+                "text": "newsletter please my email is linda@yolo.de",
+                "intent": "signup_newsletter",
+                "entities": [
+                    {
+                        "start": 30,
+                        "extractor": "ner_duckling_http",
+                        "end": 43,
+                        "value": "linda@yolo.de",
+                        "entity": "email"
+                    }
+                ]
+            },
+            {
+                "text": "Freya",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 5,
+                        "value": "Freya",
+                        "entity": "name"
+                    }
+                ]
+            },
+            {
+                "text": "300k ",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "extractor": "ner_duckling_http",
+                        "end": 4,
+                        "value": "300000",
+                        "entity": "number"
+                    }
+                ]
+            },
+            {
+                "text": "I want a bot that sales my product that philipp finally can focus on important stuff",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "i work in biz dev",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 10,
+                        "end": 17,
+                        "value": "biz dev",
+                        "entity": "jobfunction"
+                    }
+                ]
+            },
+            {
+                "text": "Philipp ist cool AG",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "let me talk to your sales people",
+                "intent": "contact_sales",
+                "entities": []
+            },
+            {
+                "text": "i decline",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "i want to talk to someone else",
+                "intent": "human_handoff",
+                "entities": []
+            },
+            {
+                "text": "great thanks",
+                "intent": "thank",
+                "entities": []
+            },
+            {
+                "text": "yoo",
+                "intent": "greet",
+                "entities": []
+            },
+            {
+                "text": "hey there",
+                "intent": "greet",
+                "entities": []
+            },
+            {
+                "text": "i want to receive your nl",
+                "intent": "signup_newsletter",
+                "entities": []
+            },
+            {
+                "text": "my email is kevin@yoloooz.de",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 12,
+                        "extractor": "ner_duckling_http",
+                        "end": 28,
+                        "value": "kevin@yoloooz.de",
+                        "entity": "email"
+                    }
+                ]
+            },
+            {
+                "text": "who is this",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who am i talking to",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "what's your name",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who am i speaking with",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who r u",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "what's your name bot",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "whats ur name",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "what are you called?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who is talking?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who speaks?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who talks?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who are you and what do you want from me",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who are you?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who is it?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "who are u?",
+                "intent": "ask_whoisit",
+                "entities": []
+            },
+            {
+                "text": "I want to learn more about your pricing ",
+                "intent": "contact_sales",
+                "entities": []
+            },
+            {
+                "text": "ceo",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 3,
+                        "value": "ceo",
+                        "entity": "jobfunction"
+                    }
+                ]
+            },
+            {
+                "text": "a sales bot",
+                "intent": "enter_data",
+                "entities": []
+            },
+            {
+                "text": "200000000",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "extractor": "ner_duckling_http",
+                        "end": 9,
+                        "value": "200000000",
+                        "entity": "number"
+                    }
+                ]
+            },
+            {
+                "text": "linda",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "end": 5,
+                        "value": "linda",
+                        "entity": "name"
+                    }
+                ]
+            },
+            {
+                "text": "linda@mail.com",
+                "intent": "enter_data",
+                "entities": [
+                    {
+                        "start": 0,
+                        "extractor": "ner_duckling_http",
+                        "end": 14,
+                        "value": "linda@mail.com",
+                        "entity": "email"
+                    }
+                ]
+            },
+            {
+                "text": "hiihihi",
+                "intent": "greet",
+                "entities": []
+            },
+            {
+              "text": "let me talk to a real person",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "please give me a human",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "i want to talk to a person",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "customer service",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "i want to speak to customer service",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "someone from customer care",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "can you forward me to your team",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "service agent",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "human handoff",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "give me a human",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "speak to a real person",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "i want to speak to a real person",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "wrong i want to speak to a human",
+              "intent": "human_handoff"
+            },
+            {
+              "text": "i want the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to subsribe to the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "can you pelase subscribe me to the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "can you subscribe me to the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "subscription newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "newsletter subscription",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "gimme the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i need the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "may i receive the newsletter from now on ",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i would love to get the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "please send me the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "send me the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to receive the newsletter from now on",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "get newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "get the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to get the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "im craving the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i prefer to get the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "subscribe me to the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "please subscribe me to your newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i would love to receive the rasa newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "sign me up for that newsletter ",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "sign me up for the rasa newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to sign up for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "lets do the newsletter signup ",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "newsletter registration",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "register me for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "please sign me up for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "add me to the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "add me to the newsletter list ",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i need to be on the newsletter list ",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to join the newsletter mails",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to receive the newsletter emails",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "can you sign me up for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "join that newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i want to join the newsletter list ",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "how about the newsletter signup",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "subscribe to newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "newsletter it is",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "i go for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "lets try the newsletter signup",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "lets try the newsletter registration",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "how about the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "newsletter registration first",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "first lets sign up for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "now i want to signup for the newsletter",
+              "intent": "signup_newsletter"
+            },
+            {
+              "text": "contact sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to contact sales now",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "let me contact sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "connect to sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "connect me to your sales department",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "sales department",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "can you connect me to sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to be connected to your sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "sales team connection",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "connect to the sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to connect your sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i need to speak to your sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "can i talk to a sales representative",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to connect to sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "get me the sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "sales contact",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "contact sales for me ",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "next the sales contact",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "please connect me to sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i need to talk to sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to be in touch with sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "call with sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to have a call with sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "let me call the sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i need a call from sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "request sales call",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "request call",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i need the call request",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "let me have the call ",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i want to call",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "call sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "request call with sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "contact call with sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "request sales team",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "contact to sales ",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i choose the call",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "i choose the call with sales",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "have a call",
+              "intent": "contact_sales"
+            },
+            {
+              "text": "call",
+              "intent": "contact_sales"
             }
         ],
         "regex_features": [

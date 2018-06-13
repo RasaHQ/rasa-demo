@@ -13,6 +13,7 @@
     "intent_ask_whatspossible", 
     "intent_out_of_scope", 
     "intent_thank", 
+    "intent_ask_whoisit", 
     "entity_jobfunction", 
     "entity_company", 
     "entity_email", 

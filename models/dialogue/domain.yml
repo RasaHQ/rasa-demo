@@ -80,6 +80,7 @@ intents:
 - ask_whatspossible
 - out_of_scope
 - thank
+- ask_whoisit
 slots:
   budget:
     initial_value: null
@@ -135,6 +136,8 @@ templates:
   - text: I don't know about where you live, but in my world it's always sunny.
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
+  utter_ask_whoisit:
+  - text: I'm Udo, the Rasa bot
   utter_confirm_salesrequest:
   - text: Great, that’s all we needed! You'll hear from us soon.
   utter_confirmationemail:
