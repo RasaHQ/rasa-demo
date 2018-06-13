@@ -32,7 +32,7 @@ def run_remote():
     from rasa_addons.webchat import WebChatInput, SocketInputChannel
 
     rasa_in = RasaChatInput(config.platform_api)
-    widget_in = input_channel = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
+    widget_in = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
     input_channel = SocketInputChannel(config.self_port, "/",
                                        rasa_in, widget_in)
 
