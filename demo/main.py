@@ -6,8 +6,7 @@ from __future__ import unicode_literals
 import logging
 
 from demo import config
-
-from rasa_core.channels.rest import HttpInputChannel
+import os
 
 
 logger = logging.getLogger()  # get the root logger
@@ -30,10 +29,12 @@ def run_remote():
     logging.basicConfig(level="DEBUG")
 
     from rasa_extensions.core.channels.rasa_chat import RasaChatInput
+    from rasa_addons.webchat import WebChatInput, SocketInputChannel
 
     rasa_in = RasaChatInput(config.platform_api)
-    input_channel = HttpInputChannel(config.self_port, "/",
-                                     rasa_in)
+    widget_in = input_channel = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
+    input_channel = SocketInputChannel(config.self_port, "/",
+                                       rasa_in, widget_in)
 
     agent = RemoteAgent.load(config.core_model_dir,
                              config.remote_core_endpoint,
