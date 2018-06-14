@@ -104,6 +104,10 @@ templates:
     - text: "You can still change your mind below though."
   utter_must_accept:
     - text: "We can't speak until you accept."
+  utter_noworries:
+    - text: "No worries!"
+  utter_bye:
+    - text: "Goodbye!"
 
 actions:
   - utter_greet
@@ -127,6 +131,8 @@ actions:
   - utter_ask_name
   - utter_change_mind
   - utter_must_accept
+  - utter_noworries
+  - utter_bye
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget

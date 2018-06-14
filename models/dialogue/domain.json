@@ -52,6 +52,8 @@
     "prev_utter_ask_name", 
     "prev_utter_change_mind", 
     "prev_utter_must_accept", 
+    "prev_utter_noworries", 
+    "prev_utter_bye", 
     "prev_action_subscribe_newsletter", 
     "prev_action_store_sales_info", 
     "prev_action_store_budget", 

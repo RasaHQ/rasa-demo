@@ -19,6 +19,14 @@
 * deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye
     - action_pause
 
+## thanks
+* thank
+    - utter_noworries
+
+## bye
+* bye
+    - utter_bye
+
 ## deny, then accept privacy policy - sales
 * greet
     - utter_greet
@@ -119,7 +127,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## say random stuff, then accept privacy policy - newsletter
 * greet
@@ -139,7 +147,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter + confirm
 * greet
@@ -156,7 +164,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -169,7 +177,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already)
 * greet
@@ -198,7 +206,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -229,7 +237,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter
 * greet
@@ -499,7 +507,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -546,7 +554,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -623,7 +631,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## sales, then newsletter (already subscribed), then confirm
 * greet
@@ -670,4 +678,4 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm

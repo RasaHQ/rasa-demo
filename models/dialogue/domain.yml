@@ -21,6 +21,8 @@ action_names:
 - utter_ask_name
 - utter_change_mind
 - utter_must_accept
+- utter_noworries
+- utter_bye
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -53,6 +55,8 @@ actions:
 - utter_ask_name
 - utter_change_mind
 - utter_must_accept
+- utter_noworries
+- utter_bye
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -145,6 +149,8 @@ templates:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
   - text: I'm Udo, the Rasa bot
+  utter_bye:
+  - text: Goodbye!
   utter_change_mind:
   - text: You can still change your mind below though.
   utter_confirm_salesrequest:
@@ -174,6 +180,8 @@ templates:
   - text: We can't speak until you accept.
   utter_no_speak:
   - text: I'm afraid we can't chat then :(
+  utter_noworries:
+  - text: No worries!
   utter_out_of_scope:
   - text: Sorry, I can’t deal with that request. You can either book a sales call
       or subscribe to our newsletter

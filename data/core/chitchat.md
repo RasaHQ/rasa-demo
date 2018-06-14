@@ -21,7 +21,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter + confirm
 * greet
@@ -41,7 +41,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter + confirm
 * greet
@@ -61,7 +61,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -79,7 +79,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -97,7 +97,7 @@
     - slot{"subscribed": true}
     - utter_confirmationemail
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already)
 * greet
@@ -149,7 +149,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
@@ -167,7 +167,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -221,7 +221,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -241,7 +241,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -261,7 +261,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm OR thank
+* mood_confirm
 
 ## just newsletter
 * greet

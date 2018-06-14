@@ -13,6 +13,14 @@
         "email"
       ]
     }, 
+    "utter_noworries": {
+      "slots": []
+    }, 
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
+    }, 
     "action_store_budget": {
       "slots": [
         "budget"
@@ -53,10 +61,8 @@
         "data_stored"
       ]
     }, 
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
+    "utter_bye": {
+      "slots": []
     }, 
     "action_store_name": {
       "slots": [
