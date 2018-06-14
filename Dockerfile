@@ -36,6 +36,6 @@ COPY . /app
 
 RUN  pip install -e .
 
-EXPOSE 5002
+EXPOSE 5001
 
 CMD ["python", "demo/main.py"]
