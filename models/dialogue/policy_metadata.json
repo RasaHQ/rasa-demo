@@ -3,8 +3,10 @@
     "action_chitchat": {
       "slots": []
     }, 
-    "utter_out_of_scope": {
-      "slots": []
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
     }, 
     "action_listen": {
       "slots": [
@@ -16,7 +18,7 @@
         "budget"
       ]
     }, 
-    "utter_contact_email": {
+    "utter_out_of_scope": {
       "slots": []
     }, 
     "action_store_email": {
@@ -29,10 +31,8 @@
         "company_name"
       ]
     }, 
-    "action_store_name": {
-      "slots": [
-        "person_name"
-      ]
+    "utter_contact_email": {
+      "slots": []
     }, 
     "action_store_job": {
       "slots": [
@@ -45,13 +45,8 @@
     "utter_docu": {
       "slots": []
     }, 
-    "utter_no_speak": {
+    "action_pause": {
       "slots": []
-    }, 
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
     }, 
     "action_store_sales_info": {
       "slots": [
@@ -62,6 +57,11 @@
       "slots": [
         "use_case"
       ]
+    }, 
+    "action_store_name": {
+      "slots": [
+        "person_name"
+      ]
     }
   }, 
   "policy_names": [
@@ -71,7 +71,7 @@
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble", 
   "max_histories": [
     3, 
-    5
+    3
   ], 
   "rasa_core": "0.10.0a2"
 }

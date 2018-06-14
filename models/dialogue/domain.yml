@@ -19,6 +19,8 @@ action_names:
 - utter_no_speak
 - utter_out_of_scope
 - utter_ask_name
+- utter_change_mind
+- utter_must_accept
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -28,6 +30,7 @@ action_names:
 - action_store_company
 - action_store_job
 - action_store_email
+- action_pause
 actions:
 - utter_greet
 - utter_ask_usecase
@@ -48,6 +51,8 @@ actions:
 - utter_no_speak
 - utter_out_of_scope
 - utter_ask_name
+- utter_change_mind
+- utter_must_accept
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -57,6 +62,7 @@ actions:
 - demo.actions.ActionStoreCompany
 - demo.actions.ActionStoreJob
 - demo.actions.ActionStoreEmail
+- demo.actions.ActionPause
 config:
   store_entities_as_slots: true
 entities:
@@ -81,6 +87,7 @@ intents:
 - out_of_scope
 - thank
 - ask_whoisit
+- bye
 slots:
   budget:
     initial_value: null
@@ -108,7 +115,7 @@ slots:
     type: rasa_core.slots.TextSlot
 templates:
   utter_already_subscribed:
-  - text: Looks like you're already subscribed - congrats, that was a good choice!
+  - text: Looks like {email} is already subscribed - congrats, that was a good choice!
       If you haven't received a newsletter in a while, maybe check your spam folder.
   utter_ask_budget:
   - text: Ok, thank you. What's your yearly budget for conversational AI?
@@ -138,6 +145,8 @@ templates:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
   - text: I'm Udo, the Rasa bot
+  utter_change_mind:
+  - text: You can still change your mind below though.
   utter_confirm_salesrequest:
   - text: Great, that’s all we needed! You'll hear from us soon.
   utter_confirmationemail:
@@ -161,6 +170,8 @@ templates:
   utter_moreinformation:
   - text: Sure! To find the right person to talk to, I need a little more information
       about you and your company.
+  utter_must_accept:
+  - text: We can't speak until you accept.
   utter_no_speak:
   - text: I'm afraid we can't chat then :(
   utter_out_of_scope:

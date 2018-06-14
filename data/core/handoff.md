@@ -2,20 +2,6 @@
 * human_handoff
     - utter_contact_email
 
-## deny privacy policy
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* human_handoff
-    - utter_contact_email
-
-## just newsletter + confirm
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* human_handoff
-    - utter_contact_email
-
 ## just newsletter + confirm
 * greet
     - utter_greet

@@ -2,15 +2,6 @@
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit
     - action_chitchat
 
-## deny privacy policy
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit
-    - action_chitchat
-    - utter_inform_privacypolicy
-* deny
-    - utter_no_speak
 
 ## just newsletter + confirm
 * greet

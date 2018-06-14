@@ -2,16 +2,6 @@
 * out_of_scope
     - utter_out_of_scope
 
-## deny privacy policy
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* out_of_scope
-    - utter_out_of_scope
-    - utter_inform_privacypolicy
-* deny
-    - utter_no_speak
-
 ## just newsletter + confirm
 * greet
     - utter_greet

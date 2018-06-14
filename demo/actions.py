@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 import logging
 
 from rasa_core.actions.action import Action
-from rasa_core.events import SlotSet, UserUtteranceReverted, ActionReverted
+from rasa_core.events import SlotSet, UserUtteranceReverted, ConversationPaused
 
 from demo.api import MailChimpAPI
 from demo import config
@@ -167,3 +167,13 @@ class ActionStoreEmail(Action):
             return [UserUtteranceReverted()]
 
         return [SlotSet('email', email)]
+
+
+class ActionPause(Action):
+
+    def name(self):
+        return "action_pause"
+
+    def run(self, dispatcher, tracker, domain):
+
+        return [ConversationPaused()]
