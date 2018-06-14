@@ -24,15 +24,8 @@ class ActionSubscribeNewsletter(Action):
     def run(self, dispatcher, tracker, domain):
         email = tracker.get_slot('email')
         if email:
-            # for now we'll do this randomly
-            # client = MailChimpAPI(config.mailchimp_api_key)
-            # subscribed = client.subscribe_user(config.mailchimp_list, email)
-            import random
-
-            if random.random() < 0.5:
-                subscribed = True
-            else:
-                subscribed = False
+            client = MailChimpAPI(config.mailchimp_api_key)
+            subscribed = client.subscribe_user(config.mailchimp_list, email)
 
             return [SlotSet('subscribed', subscribed)]
         return []
