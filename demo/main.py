@@ -34,7 +34,7 @@ def run_remote():
     rasa_in = RasaChatInput(config.platform_api)
     widget_in = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
     input_channel = SocketInputChannel(config.self_port, "/",
-                                       widget_in, rasa_in)
+                                       widget_in)
 
     agent = RemoteAgent.load(config.core_model_dir,
                              config.remote_core_endpoint,
