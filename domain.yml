@@ -59,7 +59,7 @@ templates:
   utter_ask_usecase:
     - text: "Tell me more about your use case: what kind of bot do you want to build with Rasa?"
   utter_confirm_salesrequest:
-    - text: "Great, that’s all we needed! You'll hear from us soon."
+    - text: "Great, that’s all we needed! You'll hear from us soon with more information on the next steps."
   utter_confirmationemail:
     - text: "Wonderful, thank you. We sent a confirmation email to {email}."
   utter_docu:
@@ -78,7 +78,7 @@ templates:
   utter_moreinformation:
     - text: "Sure! To find the right person to talk to, I need a little more information about you and your company."
   utter_sales_contact:
-    - text: "Thank you! Now I need some contact details. Let's start!"
+    - text: "Thank you! Now I need some contact details that someone can get in touch with you. Let's start!"
   utter_ask_name:
     - text: "What's your name?"
   utter_already_subscribed:
