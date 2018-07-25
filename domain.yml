@@ -97,7 +97,8 @@ templates:
   utter_ask_howdoing:
     - text: "I'm great! Thanks for asking."
   utter_out_of_scope:
-    - text: "Sorry, I can’t deal with that request. You can either book a sales call or subscribe to our newsletter"
+    - text: "I didn’t get it since I’m still learning. If you want to learn how you can get started with Rasa check our docs.
+    I can help you to subscribe for our newsletter or get in touch with sales. What do you want to do?"
   utter_ask_whoisit:
     - text: "I'm Udo, the Rasa bot"
   utter_change_mind:
