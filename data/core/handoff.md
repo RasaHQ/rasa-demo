@@ -7,6 +7,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -16,8 +17,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * human_handoff
     - utter_contact_email
@@ -34,6 +37,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -50,6 +54,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -66,6 +71,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -82,6 +88,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -98,6 +105,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -107,8 +115,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * human_handoff
     - utter_contact_email
@@ -125,6 +135,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -134,8 +145,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * human_handoff
     - utter_contact_email
@@ -153,6 +166,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -162,8 +176,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * human_handoff
     - utter_contact_email
@@ -182,6 +198,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * human_handoff
     - utter_contact_email
@@ -192,6 +209,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -205,6 +223,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -222,6 +241,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -244,6 +264,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -255,6 +276,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -269,6 +291,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -280,6 +303,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -298,6 +322,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -309,6 +334,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget

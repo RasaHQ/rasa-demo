@@ -98,7 +98,7 @@ class ActionChitchat(Action):
         intent = tracker.latest_message.intent.get('name')
 
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
-                      'ask_whatspossible', 'ask_whoisit']:
+                      'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa']:
             dispatcher.utter_template('utter_' + intent)
         return []
 

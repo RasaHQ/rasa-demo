@@ -43,15 +43,19 @@ slots:
 
 templates:
   utter_ask_budget:
-    - text: "Ok, thank you. What's your yearly budget for conversational AI?"
+    - text: "What's your yearly budget for conversational AI?"
   utter_ask_businessmail:
     - text: "And your business email?"
   utter_ask_company:
     - text: "And the name of the company you work for?"
+  utter_great:
+    - text: "Great!"
   utter_ask_email:
-    - text: "Great - what's your email address?"
+    - text: "What's your email address?"
+  utter_awesome:
+    - text: "Awesome, thanks!"
   utter_ask_goal:
-    - text: "Awesome, thanks! Here you can either
+    - text: "Here you can either
         subscribe to our newsletter or request a call with our sales team. What do you
         want to do?"
   utter_ask_jobfunction:
@@ -96,6 +100,8 @@ templates:
     - text: "The coolest person ever: Akela from Rasa"
   utter_ask_howdoing:
     - text: "I'm great! Thanks for asking."
+  utter_ask_whatisrasa:
+    - text: "Rasa is a framework to build bots! You can read more about it here in the docs or on our website."
   utter_out_of_scope:
     - text: "Sorry, I can’t deal with that request. You can either book a sales call or subscribe to our newsletter"
   utter_ask_whoisit:
@@ -108,6 +114,10 @@ templates:
     - text: "No worries!"
   utter_bye:
     - text: "Goodbye!"
+  utter_default:
+    - text: "Sorry, I didn't get that. Could you please rephrase?"
+  utter_thank_usecase:
+    - text: "Cool, thank you!"
 
 actions:
   - utter_greet
@@ -133,6 +143,9 @@ actions:
   - utter_must_accept
   - utter_noworries
   - utter_bye
+  - utter_awesome
+  - utter_great
+  - utter_thank_usecase
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget

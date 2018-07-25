@@ -23,6 +23,9 @@ action_names:
 - utter_must_accept
 - utter_noworries
 - utter_bye
+- utter_awesome
+- utter_great
+- utter_thank_usecase
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -57,6 +60,9 @@ actions:
 - utter_must_accept
 - utter_noworries
 - utter_bye
+- utter_awesome
+- utter_great
+- utter_thank_usecase
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -77,21 +83,36 @@ entities:
 - amount-of-money
 - number
 intents:
-- enter_data
-- mood_confirm
-- contact_sales
-- signup_newsletter
-- greet
-- human_handoff
-- deny
-- ask_builder
-- ask_weather
-- ask_howdoing
-- ask_whatspossible
-- out_of_scope
-- thank
-- ask_whoisit
-- bye
+- deny:
+    use_entities: true
+- ask_whatspossible:
+    use_entities: true
+- ask_weather:
+    use_entities: true
+- contact_sales:
+    use_entities: true
+- enter_data:
+    use_entities: true
+- ask_builder:
+    use_entities: true
+- ask_howdoing:
+    use_entities: true
+- greet:
+    use_entities: true
+- human_handoff:
+    use_entities: true
+- signup_newsletter:
+    use_entities: true
+- ask_whoisit:
+    use_entities: true
+- mood_confirm:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- bye:
+    use_entities: true
+- thank:
+    use_entities: true
 slots:
   budget:
     initial_value: null
@@ -122,7 +143,7 @@ templates:
   - text: Looks like {email} is already subscribed - congrats, that was a good choice!
       If you haven't received a newsletter in a while, maybe check your spam folder.
   utter_ask_budget:
-  - text: Ok, thank you. What's your yearly budget for conversational AI?
+  - text: What's your yearly budget for conversational AI?
   utter_ask_builder:
   - text: 'The coolest person ever: Akela from Rasa'
   utter_ask_businessmail:
@@ -130,10 +151,10 @@ templates:
   utter_ask_company:
   - text: And the name of the company you work for?
   utter_ask_email:
-  - text: Great - what's your email address?
+  - text: What's your email address?
   utter_ask_goal:
-  - text: Awesome, thanks! Here you can either subscribe to our newsletter or request
-      a call with our sales team. What do you want to do?
+  - text: Here you can either subscribe to our newsletter or request a call with our
+      sales team. What do you want to do?
   utter_ask_howdoing:
   - text: I'm great! Thanks for asking.
   utter_ask_jobfunction:
@@ -145,10 +166,15 @@ templates:
       with Rasa?'
   utter_ask_weather:
   - text: I don't know about where you live, but in my world it's always sunny.
+  utter_ask_whatisrasa:
+  - text: Rasa is a framework to build bots! You can read more about it here in the
+      docs or on our website.
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
   - text: I'm Udo, the Rasa bot
+  utter_awesome:
+  - text: Awesome, thanks!
   utter_bye:
   - text: Goodbye!
   utter_change_mind:
@@ -160,9 +186,13 @@ templates:
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at
       hi@rasa.com.
+  utter_default:
+  - text: Sorry, I didn't get that. Could you please rephrase?
   utter_docu:
   - text: 'If you want to learn more about the technical side of things, check out
       our documentation: https://core.rasa.com/'
+  utter_great:
+  - text: Great!
   utter_greet:
   - text: Hey there, welcome to Rasa! Feel free to browse around our website.
   utter_inform_privacypolicy:
@@ -187,3 +217,5 @@ templates:
       or subscribe to our newsletter
   utter_sales_contact:
   - text: Thank you! Now I need some contact details. Let's start!
+  utter_thank_usecase:
+  - text: Cool, thank you!

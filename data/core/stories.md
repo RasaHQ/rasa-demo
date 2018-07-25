@@ -36,6 +36,7 @@
     - utter_change_mind
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -47,6 +48,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -76,6 +78,7 @@
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -87,6 +90,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -117,8 +121,10 @@
     - utter_change_mind
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -137,8 +143,10 @@
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -154,8 +162,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -184,6 +194,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
@@ -198,6 +209,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
@@ -213,6 +225,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
@@ -227,8 +240,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -244,8 +259,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -260,8 +277,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -276,8 +295,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -296,6 +317,7 @@
 * enter_data
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -322,8 +344,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -342,6 +366,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -368,6 +393,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -379,6 +405,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -405,6 +432,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -416,6 +444,7 @@
 * enter_data
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -437,6 +466,7 @@
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -451,6 +481,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -462,6 +493,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -483,6 +515,7 @@
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -497,8 +530,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -518,6 +553,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -544,8 +580,10 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -565,6 +603,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -591,6 +630,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -602,6 +642,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -623,6 +664,7 @@
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
@@ -638,6 +680,7 @@
     - utter_greet
     - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -649,6 +692,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * enter_data{"number": "100"} OR enter_data{"amount-of-money": "100k"} OR enter_data{"number": "100", "amount-of-money": "100"}
     - action_store_budget
@@ -670,6 +714,7 @@
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
 * signup_newsletter
+    - utter_great
     - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email

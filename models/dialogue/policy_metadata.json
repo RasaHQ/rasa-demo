@@ -13,21 +13,10 @@
         "email"
       ]
     }, 
-    "utter_noworries": {
-      "slots": []
-    }, 
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
-    }, 
     "action_store_budget": {
       "slots": [
         "budget"
       ]
-    }, 
-    "utter_out_of_scope": {
-      "slots": []
     }, 
     "action_store_email": {
       "slots": [
@@ -61,8 +50,10 @@
         "data_stored"
       ]
     }, 
-    "utter_bye": {
-      "slots": []
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
     }, 
     "action_store_name": {
       "slots": [
@@ -72,12 +63,14 @@
   }, 
   "policy_names": [
     "rasa_core.policies.memoization.MemoizationPolicy", 
-    "rasa_core.policies.keras_policy.KerasPolicy"
+    "rasa_core.policies.keras_policy.KerasPolicy", 
+    "rasa_core.policies.fallback.FallbackPolicy"
   ], 
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble", 
   "max_histories": [
     3, 
-    3
+    3, 
+    null
   ], 
-  "rasa_core": "0.10.0a2"
+  "rasa_core": "0.10.2"
 }
