@@ -25,6 +25,7 @@ def run_widget():
 
 def run_remote():
     from rasa_core.remote import RemoteAgent
+    from rasa_core.utils import EndpointConfig
 
     logging.basicConfig(level="DEBUG")
 
@@ -36,9 +37,13 @@ def run_remote():
     input_channel = SocketInputChannel(config.self_port, "/",
                                        rasa_in, widget_in)
 
+    core_endpoint_config = EndpointConfig(
+        url=config.remote_core_endpoint,
+        token=config.rasa_core_token
+    )
+
     agent = RemoteAgent.load(config.core_model_dir,
-                             config.remote_core_endpoint,
-                             config.rasa_core_token
+                             core_endpoint=core_endpoint_config
                              )
 
     agent.handle_channel(input_channel)
