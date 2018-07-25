@@ -1176,6 +1176,16 @@
                 "entities": []
             },
             {
+                "text": "never mind",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "nevermind",
+                "intent": "deny",
+                "entities": []
+            },
+            {
                 "text": "definitely not",
                 "intent": "deny",
                 "entities": []
@@ -1288,6 +1298,46 @@
             {
                 "text": "yep, will do thank you",
                 "intent": "mood_confirm",
+                "entities": []
+            },
+            {
+                "text": "what's the newsletter about?",
+                "intent": "ask_newsletter_content",
+                "entities": []
+            },
+            {
+                "text": "are the newsletter worth the subscription",
+                "intent": "ask_newsletter_content",
+                "entities": []
+            },
+            {
+                "text": "cool! can I do something else here?",
+                "intent": "feedback+happy+ask_whatspossible",
+                "entities": []
+            },
+            {
+                "text": "what is in the newsletter?",
+                "intent": "ask_newsletter_content",
+                "entities": []
+            },
+            {
+                "text": "what do you write about",
+                "intent": "ask_newsletter_content",
+                "entities": []
+            },
+            {
+                "text": "what is it about",
+                "intent": "ask_newsletter_content",
+                "entities": []
+            },
+            {
+                "text": "what's in it?",
+                "intent": "ask_newsletter_content",
+                "entities": []
+            },
+            {
+                "text": "tell me what the newletter is about!",
+                "intent": "ask_newsletter_content",
                 "entities": []
             },
             {
@@ -1519,6 +1569,96 @@
             },
             {
                 "text": "no thanks",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "no company!!",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "why do you want to know?",
+                "intent": "ask_why_needed",
+                "entities": []
+            },
+            {
+                "text": "I guess I requested a call not an email but that's probably ok",
+                "intent": "feedback+unhappy",
+                "entities": []
+            },
+            {
+                "text": "you're a loser lmao",
+                "intent": "feedback+unhappy",
+                "entities": []
+            },
+            {
+                "text": "you already have it!",
+                "intent": "feedback",
+                "entities": []
+            },
+            {
+                "text": "you are dumb",
+                "intent": "feedback",
+                "entities": []
+            },
+            {
+                "text": "why don't you understand me?",
+                "intent": "feedback",
+                "entities": []
+            },
+            {
+                "text": "why do you not respond?",
+                "intent": "feedback",
+                "entities": []
+            },
+            {
+                "text": "this sux",
+                "intent": "feedback",
+                "entities": []
+            }, 
+            {
+                "text": "all bots suck",
+                "intent": "feedback",
+                "entities": []
+            }, 
+            {
+                "text": "I'm not giving you my email address",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "can't tell you",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "oh no",
+                "intent": "feedback+unhappy",
+                "entities": []
+            },
+            {
+                "text": ":(",
+                "intent": "feedback+unhappy",
+                "entities": []
+            },
+            {
+                "text": "I already said earlier",
+                "intent": "feedback+unhappy",
+                "entities": []
+            },
+            {
+                "text": "ok cool",
+                "intent": "feedback+happy",
+                "entities": []
+            },
+            {
+                "text": "no way am I giving you my email",
+                "intent": "deny",
+                "entities": []
+            },
+            {
+                "text": "no I don't want to get any messages from you",
                 "intent": "deny",
                 "entities": []
             },
