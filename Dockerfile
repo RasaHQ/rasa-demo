@@ -29,8 +29,7 @@ WORKDIR /app
 
 COPY requirements.txt ./
 
-RUN pip install -r requirements.txt && \
-    pip install git+https://${GITHUB_TOKEN}:x-oauth-basic@github.com/rasaHQ/rasa_extensions.git@8f86990777679fa1b084868351bd62d9a3e989f5
+RUN pip install -r requirements.txt
 
 COPY . /app
 

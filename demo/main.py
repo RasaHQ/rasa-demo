@@ -28,7 +28,7 @@ def run_remote():
 
     logging.basicConfig(level="DEBUG")
 
-    from rasa_extensions.core.channels.rasa_chat import RasaChatInput
+    from rasa_core.channels.rasa_chat import RasaChatInput
     from rasa_addons.webchat import WebChatInput, SocketInputChannel
 
     rasa_in = RasaChatInput(config.platform_api)
