@@ -1,7 +1,15 @@
 # killer-demo
 
-Demo for the website and customer presentations.
+## Introduction
+This is a demo of how a bot built with Rasa can look like. The purspose of this repo is to help you to build a dope bot with Rasa. 
 
-Two skills: 
-1. Newsletter signup 
-2. Request Sales Call 
+It's the alpha version of the bot that supports two user goals: 
+- Subscribing to the newsletter
+- Placing a request for a call with the sales team
+
+You find planned enhancement for the demo in the [Project Board](https://github.com/RasaHQ/killer-demo/projects/1)
+
+## License
+Code: Licensed under the xx. Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt). 
+Training Data: Licensed under the xxx. Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt).
+>> change links
