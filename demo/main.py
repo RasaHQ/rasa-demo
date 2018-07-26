@@ -42,8 +42,14 @@ def run_remote():
         token=config.rasa_core_token
     )
 
+    nlg_endpoint_config = EndpointConfig(
+        url=config.rasa_nlg_endpoint,
+        token=config.rasa_platform_token
+    )
+
     agent = RemoteAgent.load(config.core_model_dir,
-                             core_endpoint=core_endpoint_config
+                             core_endpoint=core_endpoint_config,
+                             nlg_endpoint=nlg_endpoint_config
                              )
 
     agent.handle_channel(input_channel)
