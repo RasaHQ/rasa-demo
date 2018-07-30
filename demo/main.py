@@ -48,8 +48,7 @@ def run_remote():
     )
 
     agent = RemoteAgent.load(config.core_model_dir,
-                             core_endpoint=core_endpoint_config,
-                             nlg_endpoint=nlg_endpoint_config
+                             core_endpoint=core_endpoint_config
                              )
 
     agent.handle_channel(input_channel)
