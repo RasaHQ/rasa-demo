@@ -1,4 +1,5 @@
 # killer-demo
+:tiger: how a dope bot built with Rasa can look like
 
 ## Introduction
 This is a demo of how a bot built with Rasa can look like. The purspose of this repo is to help you to build a dope bot with Rasa. 
