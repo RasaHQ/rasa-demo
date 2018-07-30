@@ -10,6 +10,6 @@ It's the alpha version of the bot that supports two user goals:
 You find planned enhancement for the demo in the [Project Board](https://github.com/RasaHQ/killer-demo/projects/1)
 
 ## License
-Code: Licensed under the xx. Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt). 
-Training Data: Licensed under the xxx. Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt).
->> change links
+Code: Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE.txt). Licensees may convey the work under this license. There is no warranty for the work. 
+
+
