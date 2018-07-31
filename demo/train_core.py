@@ -15,7 +15,7 @@ agent = Agent('domain.yml', policies=[
         MemoizationPolicy(max_history=3),
         KerasPolicy(MaxHistoryTrackerFeaturizer(BinarySingleStateFeaturizer(),
                                                 max_history=3)),
-        FallbackPolicy(nlu_threshold=0.8, core_threshold=0.5)])
+        FallbackPolicy(nlu_threshold=0.8, core_threshold=0.3)])
 
 training_data = agent.load_data('data/core/')
 
