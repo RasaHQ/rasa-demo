@@ -7,7 +7,7 @@ entities:
   - number
 
 intents:
-  - enter_data
+  - enter_data: {use_entities: false}
   - mood_confirm
   - contact_sales
   - signup_newsletter
@@ -97,15 +97,17 @@ templates:
   utter_ask_weather:
     - text: "I don't know about where you live, but in my world it's always sunny."
   utter_ask_builder:
-    - text: "The coolest person ever: Akela from Rasa"
+    - text: "The engineers at Rasa"
   utter_ask_howdoing:
     - text: "I'm great! Thanks for asking."
   utter_ask_whatisrasa:
     - text: "Rasa is a framework to build bots! You can read more about it here in the docs or on our website."
   utter_out_of_scope:
-    - text: "Sorry, I can’t deal with that request. You can either book a sales call or subscribe to our newsletter"
+    - text: "Sorry, I can’t deal with that request."
+  utter_possibilities:
+    - text: "You can either book a sales call or subscribe to our newsletter."
   utter_ask_whoisit:
-    - text: "I'm Udo, the Rasa bot"
+    - text: "I'm the Rasa bot!"
   utter_change_mind:
     - text: "You can still change your mind below though."
   utter_must_accept:
@@ -138,6 +140,7 @@ actions:
   - utter_contact_email
   - utter_no_speak
   - utter_out_of_scope
+  - utter_possibilities
   - utter_ask_name
   - utter_change_mind
   - utter_must_accept

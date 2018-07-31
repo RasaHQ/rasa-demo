@@ -18,6 +18,7 @@ action_names:
 - utter_contact_email
 - utter_no_speak
 - utter_out_of_scope
+- utter_possibilities
 - utter_ask_name
 - utter_change_mind
 - utter_must_accept
@@ -55,6 +56,7 @@ actions:
 - utter_contact_email
 - utter_no_speak
 - utter_out_of_scope
+- utter_possibilities
 - utter_ask_name
 - utter_change_mind
 - utter_must_accept
@@ -92,7 +94,7 @@ intents:
 - contact_sales:
     use_entities: true
 - enter_data:
-    use_entities: true
+    use_entities: false
 - ask_builder:
     use_entities: true
 - ask_howdoing:
@@ -145,7 +147,7 @@ templates:
   utter_ask_budget:
   - text: What's your yearly budget for conversational AI?
   utter_ask_builder:
-  - text: 'The coolest person ever: Akela from Rasa'
+  - text: The engineers at Rasa
   utter_ask_businessmail:
   - text: And your business email?
   utter_ask_company:
@@ -172,7 +174,7 @@ templates:
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
-  - text: I'm Udo, the Rasa bot
+  - text: I'm the Rasa bot!
   utter_awesome:
   - text: Awesome, thanks!
   utter_bye:
@@ -180,7 +182,8 @@ templates:
   utter_change_mind:
   - text: You can still change your mind below though.
   utter_confirm_salesrequest:
-  - text: Great, that’s all we needed! You'll hear from us soon.
+  - text: Great, that’s all we needed! You'll hear from us soon with more information
+      on the next steps.
   utter_confirmationemail:
   - text: Wonderful, thank you. We sent a confirmation email to {email}.
   utter_contact_email:
@@ -213,9 +216,11 @@ templates:
   utter_noworries:
   - text: No worries!
   utter_out_of_scope:
-  - text: Sorry, I can’t deal with that request. You can either book a sales call
-      or subscribe to our newsletter
+  - text: Sorry, I can’t deal with that request.
+  utter_possibilities:
+  - text: You can either book a sales call or subscribe to our newsletter.
   utter_sales_contact:
-  - text: Thank you! Now I need some contact details. Let's start!
+  - text: Thank you! Now I need some contact details that someone can get in touch
+      with you. Let's start!
   utter_thank_usecase:
   - text: Cool, thank you!
