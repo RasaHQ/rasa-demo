@@ -16,11 +16,6 @@
     "utter_noworries": {
       "slots": []
     }, 
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
-    }, 
     "utter_canthelp": {
       "slots": []
     }, 
@@ -38,6 +33,9 @@
       "slots": [
         "company_name"
       ]
+    }, 
+    "utter_ask_goal": {
+      "slots": []
     }, 
     "utter_contact_email": {
       "slots": []
@@ -61,13 +59,18 @@
         "data_stored"
       ]
     }, 
-    "utter_bye": {
-      "slots": []
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
     }, 
     "action_store_name": {
       "slots": [
         "person_name"
       ]
+    }, 
+    "utter_possibilities": {
+      "slots": []
     }
   }, 
   "policy_names": [

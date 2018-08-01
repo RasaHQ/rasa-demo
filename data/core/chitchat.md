@@ -2,6 +2,20 @@
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit OR ask_whatisrasa
     - action_chitchat
 
+## more chitchat
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit OR ask_whatisrasa
+    - action_chitchat
+    - utter_ask_goal
+* ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit OR ask_whatisrasa
+    - action_chitchat
+    - utter_ask_goal
+
 ## just newsletter + confirm
 * greet
     - utter_greet
@@ -392,6 +406,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit OR ask_whatisrasa
     - action_chitchat

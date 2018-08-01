@@ -253,6 +253,7 @@
 * enter_data    
     - action_store_usecase
     - slot{"use_case": "bots"}
+    - utter_thank_usecase
     - utter_ask_budget
 * canthelp
     - utter_canthelp
