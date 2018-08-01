@@ -99,7 +99,7 @@ class ActionChitchat(Action):
 
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
                       'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa']:
-            dispatcher.utter_template('utter_' + intent)
+            dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
 
@@ -156,7 +156,7 @@ class ActionStoreEmail(Action):
         email = next(tracker.get_latest_entity_values('email'), None)
 
         if not email:
-            dispatcher.utter_message("We need your email, please enter a valid one.")
+            dispatcher.utter_message("We need your email, please enter a valid one.", tracker)
             return [UserUtteranceReverted()]
 
         return [SlotSet('email', email)]

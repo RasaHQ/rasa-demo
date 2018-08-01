@@ -27,6 +27,7 @@ action_names:
 - utter_awesome
 - utter_great
 - utter_thank_usecase
+- utter_canthelp
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -65,6 +66,7 @@ actions:
 - utter_awesome
 - utter_great
 - utter_thank_usecase
+- utter_canthelp
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -100,6 +102,8 @@ intents:
 - ask_howdoing:
     use_entities: true
 - greet:
+    use_entities: true
+- canthelp:
     use_entities: true
 - human_handoff:
     use_entities: true
@@ -170,7 +174,7 @@ templates:
   - text: I don't know about where you live, but in my world it's always sunny.
   utter_ask_whatisrasa:
   - text: Rasa is a framework to build bots! You can read more about it here in the
-      docs or on our website.
+      docs or on our website (https://rasa.com/).
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
@@ -179,6 +183,10 @@ templates:
   - text: Awesome, thanks!
   utter_bye:
   - text: Goodbye!
+  utter_canthelp:
+  - text: I'm sorry I couldn't help you. If you have general questions about the Stack,
+      please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com
+      for anything else.
   utter_change_mind:
   - text: You can still change your mind below though.
   utter_confirm_salesrequest:

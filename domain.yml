@@ -22,6 +22,7 @@ intents:
   - thank
   - ask_whoisit
   - bye
+  - canthelp
 
 slots:
   budget:
@@ -101,7 +102,7 @@ templates:
   utter_ask_howdoing:
     - text: "I'm great! Thanks for asking."
   utter_ask_whatisrasa:
-    - text: "Rasa is a framework to build bots! You can read more about it here in the docs or on our website."
+    - text: "Rasa is a framework to build bots! You can read more about it here in the docs or on our website (https://rasa.com/)."
   utter_out_of_scope:
     - text: "Sorry, I can’t deal with that request."
   utter_possibilities:
@@ -120,6 +121,8 @@ templates:
     - text: "Sorry, I didn't get that. Could you please rephrase?"
   utter_thank_usecase:
     - text: "Cool, thank you!"
+  utter_canthelp:
+    - text: "I'm sorry I couldn't help you. If you have general questions about the Stack, please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com for anything else."
 
 actions:
   - utter_greet
@@ -149,6 +152,7 @@ actions:
   - utter_awesome
   - utter_great
   - utter_thank_usecase
+  - utter_canthelp
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget
