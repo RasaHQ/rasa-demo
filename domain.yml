@@ -18,6 +18,7 @@ intents:
   - ask_weather
   - ask_howdoing
   - ask_whatspossible
+  - ask_whatisrasa
   - out_of_scope
   - thank
   - ask_whoisit

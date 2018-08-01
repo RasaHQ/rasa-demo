@@ -109,6 +109,8 @@ intents:
     use_entities: true
 - signup_newsletter:
     use_entities: true
+- thank:
+    use_entities: true
 - ask_whoisit:
     use_entities: true
 - mood_confirm:
@@ -117,7 +119,7 @@ intents:
     use_entities: true
 - bye:
     use_entities: true
-- thank:
+- ask_whatisrasa:
     use_entities: true
 slots:
   budget:

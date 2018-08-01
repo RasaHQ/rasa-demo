@@ -13,6 +13,14 @@
         "email"
       ]
     }, 
+    "utter_noworries": {
+      "slots": []
+    }, 
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
+    }, 
     "utter_canthelp": {
       "slots": []
     }, 
@@ -31,10 +39,8 @@
         "company_name"
       ]
     }, 
-    "action_store_name": {
-      "slots": [
-        "person_name"
-      ]
+    "utter_contact_email": {
+      "slots": []
     }, 
     "action_store_job": {
       "slots": [
@@ -44,7 +50,7 @@
     "utter_confirm_salesrequest": {
       "slots": []
     }, 
-    "utter_contact_email": {
+    "utter_docu": {
       "slots": []
     }, 
     "action_pause": {
@@ -55,13 +61,13 @@
         "data_stored"
       ]
     }, 
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
-    }, 
-    "utter_docu": {
+    "utter_bye": {
       "slots": []
+    }, 
+    "action_store_name": {
+      "slots": [
+        "person_name"
+      ]
     }
   }, 
   "policy_names": [
