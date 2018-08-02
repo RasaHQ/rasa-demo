@@ -52,6 +52,7 @@ templates:
     - text: "And the name of the company you work for?"
   utter_great:
     - text: "Great!"
+    - text: "That's great!"
   utter_ask_email:
     - text: "What's your email address?"
   utter_awesome:
@@ -106,6 +107,9 @@ templates:
     - text: "Rasa is a framework to build bots! You can read more about it here in the docs or on our website (https://rasa.com/)."
   utter_out_of_scope:
     - text: "Sorry, I can’t deal with that request."
+    - text: "I'm sorry, I can't handle that request." 
+    - text: "I think I can't help you here, I'm sorry."
+    - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request." 
   utter_possibilities:
     - text: "You can either book a sales call or subscribe to our newsletter."
   utter_ask_whoisit:
@@ -116,8 +120,13 @@ templates:
     - text: "We can't speak until you accept."
   utter_noworries:
     - text: "No worries!"
+    - text: "You're welcome!"
+    - text: "I'm happy to help."
   utter_bye:
     - text: "Goodbye!"
+    - text: "Bye!"
+    - text: "Ciao!"
+    - text: "It was nice to meet you."
   utter_default:
     - text: "Sorry, I didn't get that. Could you please rephrase?"
   utter_thank_usecase:
