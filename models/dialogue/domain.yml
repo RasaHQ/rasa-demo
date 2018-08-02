@@ -203,7 +203,7 @@ templates:
   - text: Sorry, I didn't get that. Could you please rephrase?
   utter_docu:
   - text: 'If you want to learn more about the technical side of things, check out
-      our documentation: https://core.rasa.com/'
+      our documentation: https://www.rasa.com/docs/'
   utter_great:
   - text: Great!
   utter_greet:

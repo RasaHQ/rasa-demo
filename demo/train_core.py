@@ -12,9 +12,9 @@ from rasa_core.policies.fallback import FallbackPolicy
 
 
 agent = Agent('domain.yml', policies=[
-        MemoizationPolicy(max_history=3),
+        MemoizationPolicy(max_history=6),
         KerasPolicy(MaxHistoryTrackerFeaturizer(BinarySingleStateFeaturizer(),
-                                                max_history=3)),
+                                                max_history=6)),
         FallbackPolicy(nlu_threshold=0.8, core_threshold=0.3)])
 
 training_data = agent.load_data('data/core/')

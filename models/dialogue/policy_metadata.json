@@ -13,9 +13,6 @@
         "email"
       ]
     }, 
-    "utter_noworries": {
-      "slots": []
-    }, 
     "utter_canthelp": {
       "slots": []
     }, 
@@ -80,8 +77,8 @@
   ], 
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble", 
   "max_histories": [
-    3, 
-    3, 
+    6, 
+    6, 
     null
   ], 
   "rasa_core": "0.10.2"

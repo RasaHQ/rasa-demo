@@ -70,7 +70,7 @@ templates:
     - text: "Wonderful, thank you. We sent a confirmation email to {email}."
   utter_docu:
     - text: "If you want to learn more about the technical side of things, check out our documentation:
-      https://core.rasa.com/"
+      https://www.rasa.com/docs/"
   utter_greet:
     - text: "Hey there, welcome to Rasa! Feel free to browse around our website."
   utter_inform_privacypolicy:
