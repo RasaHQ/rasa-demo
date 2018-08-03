@@ -1,88 +1,79 @@
 {
   "action_fingerprints": {
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    }, 
     "action_listen": {
       "slots": [
         "email"
       ]
-    }, 
-    "utter_noworries": {
-      "slots": []
-    }, 
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
-    }, 
-    "utter_canthelp": {
-      "slots": []
-    }, 
-    "action_store_budget": {
-      "slots": [
-        "budget"
-      ]
-    }, 
+    },
     "action_store_email": {
       "slots": [
         "email"
       ]
-    }, 
-    "action_store_company": {
+    },
+    "action_subscribe_newsletter": {
       "slots": [
-        "company_name"
+        "subscribed"
       ]
-    }, 
-    "utter_ask_goal": {
-      "slots": []
-    }, 
-    "utter_contact_email": {
-      "slots": []
-    }, 
+    },
     "action_store_job": {
       "slots": [
         "job_function"
       ]
-    }, 
-    "utter_confirm_salesrequest": {
-      "slots": []
-    }, 
-    "utter_docu": {
-      "slots": []
-    }, 
-    "action_pause": {
-      "slots": []
-    }, 
-    "action_store_sales_info": {
+    },
+    "action_store_usecase": {
       "slots": [
-        "data_stored"
+        "use_case"
       ]
-    }, 
-    "utter_bye": {
-      "slots": []
-    }, 
+    },
+    "action_store_budget": {
+      "slots": [
+        "budget"
+      ]
+    },
     "action_store_name": {
       "slots": [
         "person_name"
       ]
-    }, 
-    "utter_possibilities": {
+    },
+    "action_store_company": {
+      "slots": [
+        "company_name"
+      ]
+    },
+    "action_store_sales_info": {
+      "slots": [
+        "data_stored"
+      ]
+    },
+    "utter_confirm_salesrequest": {
+      "slots": []
+    },
+    "utter_ask_goal": {
+      "slots": []
+    },
+    "action_pause": {
+      "slots": []
+    },
+    "utter_contact_email": {
+      "slots": []
+    },
+    "utter_docu": {
+      "slots": []
+    },
+    "utter_canthelp": {
       "slots": []
     }
-  }, 
-  "policy_names": [
-    "rasa_core.policies.memoization.MemoizationPolicy", 
-    "rasa_core.policies.keras_policy.KerasPolicy", 
-    "rasa_core.policies.fallback.FallbackPolicy"
-  ], 
-  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble", 
+  },
+  "rasa_core": "0.10.3",
   "max_histories": [
-    6, 
-    6, 
+    6,
+    6,
     null
-  ], 
-  "rasa_core": "0.10.2"
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.fallback.FallbackPolicy"
+  ]
 }

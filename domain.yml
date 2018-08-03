@@ -45,7 +45,7 @@ slots:
 
 templates:
   utter_ask_budget:
-    - text: "What's your annual budget for conversational AI? 👍"
+    - text: "What's your annual budget for conversational AI? 💸"
   utter_ask_businessmail:
     - text: "What's your business email?"
   utter_ask_company:
@@ -136,7 +136,7 @@ templates:
     - text: "Ciao!"
     - text: "Bye, was nice talking to you!"
   utter_default:
-    - text: "Sorry, I didn't get that. Could you please rephrase?"
+    - text: "Sorry, I didn't get that 🤷🏻‍. Could you please rephrase?"
     - text: "I didn't understand, could you rephrase that?"
     - text: "I'm sorry, but I didn't understand you. Could you please rephrase what you just said?"
     - text: "I'm afraid I didn't get what you just said. Could you rephrase that?"

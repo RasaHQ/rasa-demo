@@ -1,3 +1,5 @@
+%YAML 1.1
+---
 action_factory: null
 action_names:
 - utter_greet
@@ -87,39 +89,39 @@ entities:
 - amount-of-money
 - number
 intents:
-- deny:
-    use_entities: true
-- ask_whatspossible:
-    use_entities: true
-- ask_weather:
+- enter_data:
+    use_entities: false
+- mood_confirm:
     use_entities: true
 - contact_sales:
     use_entities: true
-- enter_data:
-    use_entities: false
-- ask_builder:
-    use_entities: true
-- ask_howdoing:
+- signup_newsletter:
     use_entities: true
 - greet:
     use_entities: true
-- canthelp:
-    use_entities: true
 - human_handoff:
     use_entities: true
-- signup_newsletter:
+- deny:
+    use_entities: true
+- ask_builder:
+    use_entities: true
+- ask_weather:
+    use_entities: true
+- ask_howdoing:
+    use_entities: true
+- ask_whatspossible:
+    use_entities: true
+- ask_whatisrasa:
+    use_entities: true
+- out_of_scope:
     use_entities: true
 - thank:
     use_entities: true
 - ask_whoisit:
     use_entities: true
-- mood_confirm:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
 - bye:
     use_entities: true
-- ask_whatisrasa:
+- canthelp:
     use_entities: true
 slots:
   budget:
@@ -148,10 +150,10 @@ slots:
     type: rasa_core.slots.TextSlot
 templates:
   utter_already_subscribed:
-  - text: "Looks like {email} is already subscribed - good choice! If you haven't\
-      \ received a newsletter in a while, maybe check your spam folder \uD83D\uDDD1"
+  - text: Looks like {email} is already subscribed - good choice! If you haven't received
+      a newsletter in a while, maybe check your spam folder 🗑
   utter_ask_budget:
-  - text: "What's your annual budget for conversational AI? \uD83D\uDC4D"
+  - text: What's your annual budget for conversational AI? 💸
   utter_ask_builder:
   - text: The engineers at Rasa
   utter_ask_businessmail:
@@ -161,21 +163,21 @@ templates:
   utter_ask_email:
   - text: What's your email address?
   utter_ask_goal:
-  - text: "Do you want more Rasa in your life? You can subscribe to our newsletter\
-      \ or you can talk to our nice sales team \uD83E\uDDDE‍"
+  - text: Do you want more Rasa in your life? You can subscribe to our newsletter
+      or you can talk to our nice sales team 🧞‍
   utter_ask_howdoing:
   - text: I'm great! Thanks for asking.
   - text: I'm good, thanks!
   - text: A little bit too warm, otherwise fine.
   utter_ask_jobfunction:
-  - text: "What's your job? \uD83D\uDD74"
+  - text: What's your job? 🕴
   utter_ask_name:
   - text: What's your name?
   utter_ask_usecase:
   - text: What kind of bot do you want to build with Rasa?
   utter_ask_weather:
   - text: I don't know about where you live, but in my world it's always sunny ☀️
-  - text: "Honestly it's a bit too hot these days \uD83D\uDE05"
+  - text: Honestly it's a bit too hot these days 😅
   - text: Blue skies and sun shine!
   - text: Let's just say it hasn't rained in weeks ☀️
   utter_ask_whatisrasa:
@@ -184,11 +186,11 @@ templates:
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
-  - text: "I'm the Rasa bot! \uD83E\uDD16"
+  - text: I'm the Rasa bot! 🤖
   utter_awesome:
-  - text: "Awesome, thanks! \uD83D\uDC4D"
-  - text: "Sweet, thank you! \uD83D\uDE04"
-  - text: "Thanks! \uD83D\uDC4C"
+  - text: Awesome, thanks! 👍
+  - text: Sweet, thank you! 😄
+  - text: Thanks! 👌
   - text: Cool, thank you!
   utter_bye:
   - text: Goodbye!
@@ -209,7 +211,7 @@ templates:
   - text: You can’t speak to a human directly in this chat, but you can email us at
       hi@rasa.com.
   utter_default:
-  - text: Sorry, I didn't get that. Could you please rephrase?
+  - text: Sorry, I didn't get that 🤷🏻‍. Could you please rephrase?
   - text: I didn't understand, could you rephrase that?
   - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
       just said?
@@ -220,10 +222,10 @@ templates:
   utter_docu:
   - text: 'If you want some more awesome Rasa content, check out our docs: https://www.rasa.com/docs/'
   utter_great:
-  - text: "Great! \uD83D\uDC4D"
-  - text: "That's great! \uD83D\uDE4C"
-  - text: "Awesome! \uD83C\uDF89"
-  - text: "Cool, let's do it \uD83D\uDE80"
+  - text: Great! 👍
+  - text: That's great! 🙌
+  - text: Awesome! 🎉
+  - text: Cool, let's do it 🚀
   utter_greet:
   - text: Hey there, welcome to Rasa!
   utter_inform_privacypolicy:
@@ -235,11 +237,11 @@ templates:
     text: Before we start chatting, please read and accept our privacy policy https://rasa.com/privacy-policy/.
       Do you accept?
   utter_moreinformation:
-  - text: "Sure! Let's get to know each other first \uD83D\uDE09"
+  - text: Sure! Let's get to know each other first 😉
   utter_must_accept:
   - text: We can't speak until you accept.
   utter_no_speak:
-  - text: "I'm afraid we can't chat then \uD83D\uDE22"
+  - text: I'm afraid we can't chat then 😢
   utter_noworries:
   - text: No worries!
   - text: You're welcome!
@@ -253,6 +255,6 @@ templates:
   utter_possibilities:
   - text: You can either book a sales call or subscribe to our newsletter.
   utter_sales_contact:
-  - text: "Thanks, now I need to know how we can reach you \uD83D\uDCDE"
+  - text: Thanks, now I need to know how we can reach you 📞
   utter_thank_usecase:
   - text: Cool, thank you!
