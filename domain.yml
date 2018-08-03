@@ -149,6 +149,8 @@ templates:
     - text: "I'm sorry I couldn't help you. If you have general questions about the Stack, please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com for anything else."
   utter_nohelp:
     - text: "I'm afraid I can't help you then! For now I only have two skills:"
+  utter_thumbsup:
+    - text: "👍"
 
 actions:
   - utter_greet
@@ -180,6 +182,7 @@ actions:
   - utter_thank_usecase
   - utter_canthelp
   - utter_nohelp
+  - utter_thumbsup
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget

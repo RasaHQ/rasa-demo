@@ -31,6 +31,7 @@ action_names:
 - utter_thank_usecase
 - utter_canthelp
 - utter_nohelp
+- utter_thumbsup
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -71,6 +72,7 @@ actions:
 - utter_thank_usecase
 - utter_canthelp
 - utter_nohelp
+- utter_thumbsup
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -262,3 +264,5 @@ templates:
   - text: Thanks, now I need to know how we can reach you.
   utter_thank_usecase:
   - text: Cool, thank you!
+  utter_thumbsup:
+  - text: 👍

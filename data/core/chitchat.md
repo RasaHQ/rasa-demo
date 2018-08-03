@@ -472,7 +472,6 @@
     - utter_ask_name
 * ask_weather OR ask_builder OR ask_whatspossible OR ask_howdoing OR ask_whoisit OR ask_whatisrasa
     - action_chitchat
-    - utter_sales_contact
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name
