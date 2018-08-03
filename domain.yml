@@ -120,6 +120,11 @@ templates:
     - text: "Goodbye!"
   utter_default:
     - text: "Sorry, I didn't get that. Could you please rephrase?"
+    - text: "I didn't understand, could you rephrase that?"
+    - text: "I'm sorry, but I didn't understand you. Could you please rephrase what you just said?"
+    - text: "I'm afraid I didn't get what you just said. Could you rephrase that?"
+    - text: "Could you please find another way to phrase what you just said? Unfortunately, I didn't understand that."
+    - text: "Could you rephrase your message? I didn't get it, I'm sorry."
   utter_thank_usecase:
     - text: "Cool, thank you!"
   utter_canthelp:
