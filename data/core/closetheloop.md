@@ -141,6 +141,7 @@
     - slot{"email":"alan@rasa.com"}
     - action_subscribe_newsletter
     - slot{"subscribed":true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 * thank
@@ -169,6 +170,7 @@
     - slot{"email":"alan@rasa.com"}
     - action_subscribe_newsletter
     - slot{"subscribed":true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 * thank

@@ -62,6 +62,7 @@
     "prev_utter_great",
     "prev_utter_thank_usecase",
     "prev_utter_canthelp",
+    "prev_utter_nohelp",
     "prev_action_subscribe_newsletter",
     "prev_action_store_sales_info",
     "prev_action_store_budget",

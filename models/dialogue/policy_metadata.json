@@ -45,6 +45,9 @@
         "data_stored"
       ]
     },
+    "utter_docu": {
+      "slots": []
+    },
     "utter_confirm_salesrequest": {
       "slots": []
     },
@@ -54,13 +57,16 @@
     "action_pause": {
       "slots": []
     },
-    "utter_contact_email": {
-      "slots": []
-    },
-    "utter_docu": {
+    "action_chitchat": {
       "slots": []
     },
     "utter_canthelp": {
+      "slots": []
+    },
+    "utter_possibilities": {
+      "slots": []
+    },
+    "utter_contact_email": {
       "slots": []
     }
   },

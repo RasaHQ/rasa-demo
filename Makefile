@@ -11,16 +11,16 @@ help:
 	@echo "        Spin up a server that serves as an endpoint to receive facebook user messages."
 
 train-nlu:
-	python -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/nlu.json -o models --project nlu --verbose
+	python3 -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/nlu.json -o models --project nlu --verbose
 
 train-core:
-	python demo/train_core.py
+	python3 demo/train_core.py
 
 run:
-	python -m rasa_core.run -d models/dialogue -u models/nlu/default/current -p 5002 -c facebook --credentials credentials.yml
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/default/current -p 5002 -c facebook --credentials credentials.yml
 
 run-cmdline:
-	python -m rasa_core.run -d models/dialogue -u models/nlu/current --debug
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug
 
 visualize:
-	python -m rasa_core.visualize -s stories.md -d domain.yml -o story_graph.png
+	python3 -m rasa_core.visualize -s stories.md -d domain.yml -o story_graph.png

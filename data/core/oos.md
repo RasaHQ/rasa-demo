@@ -21,9 +21,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
 
 ## just newsletter + confirm
 * greet
@@ -44,9 +46,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -63,9 +67,11 @@
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
 
 ## just newsletter (with email already)
 * greet
@@ -82,6 +88,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 
@@ -103,6 +110,7 @@
     - utter_already_subscribed
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -143,6 +151,7 @@
     - utter_already_subscribed
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -166,6 +175,7 @@
     - utter_already_subscribed
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
 
 ## just newsletter
 * greet
@@ -185,6 +195,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 
@@ -207,6 +218,7 @@
     - slot{"email": "maxmeier@firma.de"}
     - action_subscribe_newsletter
     - slot{"subscribed": true}
+    - utter_awesome
     - utter_confirmationemail
     - utter_docu
 
@@ -454,7 +466,6 @@
 * out_of_scope
     - utter_out_of_scope
     - utter_possibilities
-    - utter_sales_contact
     - utter_ask_name
 * enter_data{"name": "Max Meier"}
     - action_store_name

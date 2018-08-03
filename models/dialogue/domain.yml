@@ -30,6 +30,7 @@ action_names:
 - utter_great
 - utter_thank_usecase
 - utter_canthelp
+- utter_nohelp
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -69,6 +70,7 @@ actions:
 - utter_great
 - utter_thank_usecase
 - utter_canthelp
+- utter_nohelp
 - demo.actions.ActionSubscribeNewsletter
 - demo.actions.ActionStoreSalesInfo
 - demo.actions.ActionStoreBudget
@@ -155,7 +157,8 @@ templates:
   utter_ask_budget:
   - text: What's your annual budget for conversational AI? 💸
   utter_ask_builder:
-  - text: The engineers at Rasa
+  - text: The engineers at Rasa 🛠
+  - text: One of the smart engineers at Rasa! 🧠
   utter_ask_businessmail:
   - text: What's your business email?
   utter_ask_company:
@@ -206,7 +209,7 @@ templates:
   utter_confirm_salesrequest:
   - text: Thanks a bunch, we'll be in touch soon! ✉️
   utter_confirmationemail:
-  - text: Wonderful, thank you. We sent a confirmation email to {email}.
+  - text: We sent a confirmation email to {email}.
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at
       hi@rasa.com.
@@ -216,8 +219,7 @@ templates:
   - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
       just said?
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
-  - text: Could you please find another way to phrase what you just said? Unfortunately,
-      I didn't understand that.
+  - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_docu:
   - text: 'If you want some more awesome Rasa content, check out our docs: https://www.rasa.com/docs/'
@@ -242,6 +244,8 @@ templates:
   - text: We can't speak until you accept.
   utter_no_speak:
   - text: I'm afraid we can't chat then 😢
+  utter_nohelp:
+  - text: "I'm afraid I can't help you then! For now I only have two skills:"
   utter_noworries:
   - text: No worries!
   - text: You're welcome!
@@ -249,12 +253,12 @@ templates:
   utter_out_of_scope:
   - text: Sorry, I can’t deal with that request.
   - text: I'm sorry, I can't handle that request.
-  - text: I think I can't help you here, I'm sorry.
+  - text: I can't help you with that, I'm sorry.
   - text: Even a Rasa bot is not completely perfect - it seems like I can't handle
       that request.
   utter_possibilities:
   - text: You can either book a sales call or subscribe to our newsletter.
   utter_sales_contact:
-  - text: Thanks, now I need to know how we can reach you 📞
+  - text: Thanks, now I need to know how we can reach you.
   utter_thank_usecase:
   - text: Cool, thank you!
