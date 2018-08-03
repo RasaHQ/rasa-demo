@@ -45,35 +45,38 @@ slots:
 
 templates:
   utter_ask_budget:
-    - text: "What's your yearly budget for conversational AI?"
+    - text: "What's your annual budget for conversational AI? 👍"
   utter_ask_businessmail:
-    - text: "And your business email?"
+    - text: "What's your business email?"
   utter_ask_company:
-    - text: "And the name of the company you work for?"
+    - text: "What company do you work for?"
   utter_great:
-    - text: "Great!"
-    - text: "That's great!"
+    - text: "Great! 👍"
+    - text: "That's great! 🙌"
+    - text: "Awesome! 🎉"
+    - text: "Cool, let's do it 🚀"
   utter_ask_email:
     - text: "What's your email address?"
   utter_awesome:
-    - text: "Awesome, thanks!"
+    - text: "Awesome, thanks! 👍"
+    - text: "Sweet, thank you! 😄"
+    - text: "Thanks! 👌"
+    - text: "Cool, thank you!"
   utter_ask_goal:
-    - text: "Here you can either
-        subscribe to our newsletter or request a call with our sales team. What do you
-        want to do?"
+    - text: "Do you want more Rasa in your life? You can subscribe to our newsletter or you can talk to our nice sales team 🧞‍"
   utter_ask_jobfunction:
-    - text: "What's your job function?"
+    - text: "What's your job? 🕴"
   utter_ask_usecase:
-    - text: "Tell me more about your use case: what kind of bot do you want to build with Rasa?"
+    - text: "What kind of bot do you want to build with Rasa?"
   utter_confirm_salesrequest:
-    - text: "Great, that’s all we needed! You'll hear from us soon with more information on the next steps."
+    - text: "Thanks a bunch, we'll be in touch soon! ✉️"
   utter_confirmationemail:
     - text: "Wonderful, thank you. We sent a confirmation email to {email}."
   utter_docu:
-    - text: "If you want to learn more about the technical side of things, check out our documentation:
+    - text: "If you want some more awesome Rasa content, check out our docs:
       https://www.rasa.com/docs/"
   utter_greet:
-    - text: "Hey there, welcome to Rasa! Feel free to browse around our website."
+    - text: "Hey there, welcome to Rasa!"
   utter_inform_privacypolicy:
     - text: "Before we start chatting, please read and accept our privacy policy https://rasa.com/privacy-policy/.
     Do you accept?"
@@ -83,37 +86,42 @@ templates:
         - title: "Decline"
           payload: "/deny"
   utter_moreinformation:
-    - text: "Sure! To find the right person to talk to, I need a little more information about you and your company."
+    - text: "Sure! Let's get to know each other first 😉"
   utter_sales_contact:
-    - text: "Thank you! Now I need some contact details that someone can get in touch with you. Let's start!"
+    - text: "Thanks, now I need to know how we can reach you 📞"
   utter_ask_name:
     - text: "What's your name?"
   utter_already_subscribed:
-    - text: "Looks like {email} is already subscribed - congrats, that was a good choice!
-    If you haven't received a newsletter in a while, maybe check your spam folder."
+    - text: "Looks like {email} is already subscribed - good choice!
+    If you haven't received a newsletter in a while, maybe check your spam folder 🗑"
   utter_contact_email:
     - text: "You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com."
   utter_no_speak:
-    - text: "I'm afraid we can't chat then :("
+    - text: "I'm afraid we can't chat then 😢"
   utter_ask_whatspossible:
     - text: "You can book a sales call or subscribe to our newsletter."
   utter_ask_weather:
-    - text: "I don't know about where you live, but in my world it's always sunny."
+    - text: "I don't know about where you live, but in my world it's always sunny ☀️"
+    - text: "Honestly it's a bit too hot these days 😅"
+    - text: "Blue skies and sun shine!"
+    - text: "Let's just say it hasn't rained in weeks ☀️"
   utter_ask_builder:
     - text: "The engineers at Rasa"
   utter_ask_howdoing:
     - text: "I'm great! Thanks for asking."
+    - text: "I'm good, thanks!"
+    - text: "A little bit too warm, otherwise fine."
   utter_ask_whatisrasa:
     - text: "Rasa is a framework to build bots! You can read more about it here in the docs or on our website (https://rasa.com/)."
   utter_out_of_scope:
     - text: "Sorry, I can’t deal with that request."
-    - text: "I'm sorry, I can't handle that request." 
+    - text: "I'm sorry, I can't handle that request."
     - text: "I think I can't help you here, I'm sorry."
-    - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request." 
+    - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request."
   utter_possibilities:
     - text: "You can either book a sales call or subscribe to our newsletter."
   utter_ask_whoisit:
-    - text: "I'm the Rasa bot!"
+    - text: "I'm the Rasa bot! 🤖"
   utter_change_mind:
     - text: "You can still change your mind below though."
   utter_must_accept:
@@ -126,7 +134,7 @@ templates:
     - text: "Goodbye!"
     - text: "Bye!"
     - text: "Ciao!"
-    - text: "It was nice to meet you."
+    - text: "Bye, was nice talking to you!"
   utter_default:
     - text: "Sorry, I didn't get that. Could you please rephrase?"
     - text: "I didn't understand, could you rephrase that?"

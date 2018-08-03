@@ -19,5 +19,5 @@ agent = Agent('domain.yml', policies=[
 
 training_data = agent.load_data('data/core/')
 
-agent.train(training_data, epochs=200)
+agent.train(training_data, epochs=100)
 agent.persist('models/dialogue')

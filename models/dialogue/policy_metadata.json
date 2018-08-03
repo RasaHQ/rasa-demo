@@ -1,8 +1,5 @@
 {
   "action_fingerprints": {
-    "action_chitchat": {
-      "slots": []
-    }, 
     "action_subscribe_newsletter": {
       "slots": [
         "subscribed"
@@ -11,6 +8,14 @@
     "action_listen": {
       "slots": [
         "email"
+      ]
+    }, 
+    "utter_noworries": {
+      "slots": []
+    }, 
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
       ]
     }, 
     "utter_canthelp": {
@@ -56,10 +61,8 @@
         "data_stored"
       ]
     }, 
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
+    "utter_bye": {
+      "slots": []
     }, 
     "action_store_name": {
       "slots": [

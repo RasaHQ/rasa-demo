@@ -148,43 +148,53 @@ slots:
     type: rasa_core.slots.TextSlot
 templates:
   utter_already_subscribed:
-  - text: Looks like {email} is already subscribed - congrats, that was a good choice!
-      If you haven't received a newsletter in a while, maybe check your spam folder.
+  - text: "Looks like {email} is already subscribed - good choice! If you haven't\
+      \ received a newsletter in a while, maybe check your spam folder \uD83D\uDDD1"
   utter_ask_budget:
-  - text: What's your yearly budget for conversational AI?
+  - text: "What's your annual budget for conversational AI? \uD83D\uDC4D"
   utter_ask_builder:
   - text: The engineers at Rasa
   utter_ask_businessmail:
-  - text: And your business email?
+  - text: What's your business email?
   utter_ask_company:
-  - text: And the name of the company you work for?
+  - text: What company do you work for?
   utter_ask_email:
   - text: What's your email address?
   utter_ask_goal:
-  - text: Here you can either subscribe to our newsletter or request a call with our
-      sales team. What do you want to do?
+  - text: "Do you want more Rasa in your life? You can subscribe to our newsletter\
+      \ or you can talk to our nice sales team \uD83E\uDDDE‍"
   utter_ask_howdoing:
   - text: I'm great! Thanks for asking.
+  - text: I'm good, thanks!
+  - text: A little bit too warm, otherwise fine.
   utter_ask_jobfunction:
-  - text: What's your job function?
+  - text: "What's your job? \uD83D\uDD74"
   utter_ask_name:
   - text: What's your name?
   utter_ask_usecase:
-  - text: 'Tell me more about your use case: what kind of bot do you want to build
-      with Rasa?'
+  - text: What kind of bot do you want to build with Rasa?
   utter_ask_weather:
-  - text: I don't know about where you live, but in my world it's always sunny.
+  - text: I don't know about where you live, but in my world it's always sunny ☀️
+  - text: "Honestly it's a bit too hot these days \uD83D\uDE05"
+  - text: Blue skies and sun shine!
+  - text: Let's just say it hasn't rained in weeks ☀️
   utter_ask_whatisrasa:
   - text: Rasa is a framework to build bots! You can read more about it here in the
       docs or on our website (https://rasa.com/).
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_whoisit:
-  - text: I'm the Rasa bot!
+  - text: "I'm the Rasa bot! \uD83E\uDD16"
   utter_awesome:
-  - text: Awesome, thanks!
+  - text: "Awesome, thanks! \uD83D\uDC4D"
+  - text: "Sweet, thank you! \uD83D\uDE04"
+  - text: "Thanks! \uD83D\uDC4C"
+  - text: Cool, thank you!
   utter_bye:
   - text: Goodbye!
+  - text: Bye!
+  - text: Ciao!
+  - text: Bye, was nice talking to you!
   utter_canthelp:
   - text: I'm sorry I couldn't help you. If you have general questions about the Stack,
       please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com
@@ -192,8 +202,7 @@ templates:
   utter_change_mind:
   - text: You can still change your mind below though.
   utter_confirm_salesrequest:
-  - text: Great, that’s all we needed! You'll hear from us soon with more information
-      on the next steps.
+  - text: Thanks a bunch, we'll be in touch soon! ✉️
   utter_confirmationemail:
   - text: Wonderful, thank you. We sent a confirmation email to {email}.
   utter_contact_email:
@@ -201,13 +210,22 @@ templates:
       hi@rasa.com.
   utter_default:
   - text: Sorry, I didn't get that. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
+      just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: Could you please find another way to phrase what you just said? Unfortunately,
+      I didn't understand that.
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_docu:
-  - text: 'If you want to learn more about the technical side of things, check out
-      our documentation: https://www.rasa.com/docs/'
+  - text: 'If you want some more awesome Rasa content, check out our docs: https://www.rasa.com/docs/'
   utter_great:
-  - text: Great!
+  - text: "Great! \uD83D\uDC4D"
+  - text: "That's great! \uD83D\uDE4C"
+  - text: "Awesome! \uD83C\uDF89"
+  - text: "Cool, let's do it \uD83D\uDE80"
   utter_greet:
-  - text: Hey there, welcome to Rasa! Feel free to browse around our website.
+  - text: Hey there, welcome to Rasa!
   utter_inform_privacypolicy:
   - buttons:
     - payload: /mood_confirm
@@ -217,20 +235,24 @@ templates:
     text: Before we start chatting, please read and accept our privacy policy https://rasa.com/privacy-policy/.
       Do you accept?
   utter_moreinformation:
-  - text: Sure! To find the right person to talk to, I need a little more information
-      about you and your company.
+  - text: "Sure! Let's get to know each other first \uD83D\uDE09"
   utter_must_accept:
   - text: We can't speak until you accept.
   utter_no_speak:
-  - text: I'm afraid we can't chat then :(
+  - text: "I'm afraid we can't chat then \uD83D\uDE22"
   utter_noworries:
   - text: No worries!
+  - text: You're welcome!
+  - text: I'm happy to help.
   utter_out_of_scope:
   - text: Sorry, I can’t deal with that request.
+  - text: I'm sorry, I can't handle that request.
+  - text: I think I can't help you here, I'm sorry.
+  - text: Even a Rasa bot is not completely perfect - it seems like I can't handle
+      that request.
   utter_possibilities:
   - text: You can either book a sales call or subscribe to our newsletter.
   utter_sales_contact:
-  - text: Thank you! Now I need some contact details that someone can get in touch
-      with you. Let's start!
+  - text: "Thanks, now I need to know how we can reach you \uD83D\uDCDE"
   utter_thank_usecase:
   - text: Cool, thank you!
