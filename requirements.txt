@@ -1,4 +1,4 @@
-rasa_core==0.10.2
+-e git+https://github.com/RasaHQ/rasa_core.git@63d8c024adc2eb822c64d8f52a1a07fe6f4b2d39#egg=rasa_core
 mailchimp3==3.0.2
 oauth2client==4.1.2
 gspread==3.0.0
