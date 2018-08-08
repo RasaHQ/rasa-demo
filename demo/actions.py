@@ -17,6 +17,8 @@ logger = logging.getLogger(__name__)
 
 
 class ActionSubscribeNewsletter(Action):
+    """ This action calls our newsletter API and subscribes the user with
+    their email address"""
 
     def name(self):
         return "action_subscribe_newsletter"
@@ -25,6 +27,7 @@ class ActionSubscribeNewsletter(Action):
         email = tracker.get_slot('email')
         if email:
             client = MailChimpAPI(config.mailchimp_api_key)
+            # if the email is already subscribed, this returns False
             subscribed = client.subscribe_user(config.mailchimp_list, email)
 
             return [SlotSet('subscribed', subscribed)]
@@ -32,6 +35,7 @@ class ActionSubscribeNewsletter(Action):
 
 
 class ActionStoreSalesInfo(Action):
+    """Saves the information collected in the sales flow into a spreadsheet"""
 
     def name(self):
         return "action_store_sales_info"
@@ -60,16 +64,24 @@ class ActionStoreSalesInfo(Action):
 
 
 class ActionStoreBudget(Action):
+    """Stores the budget in a slot"""
 
     def name(self):
         return "action_store_budget"
 
     def run(self, dispatcher, tracker, domain):
 
+        # the entity can be one of two entities from duckling,
+        # number or amount-of-money
         budget = next(tracker.get_latest_entity_values('number'), None)
         if not budget:
             budget = next(tracker.get_latest_entity_values('amount-of-money'),
                           None)
+
+        # as a fallback, if no entity is recognised (e.g. in a sentence
+        # like "I have no money") we store the whole user utterance in the slot
+        # In future this should be stored in a `budget_unconfirmed` slot where
+        # the user will then be asked to confirm this is there budget
         if not budget:
             budget = tracker.latest_message.text
 
@@ -77,18 +89,22 @@ class ActionStoreBudget(Action):
 
 
 class ActionStoreUsecase(Action):
+    """Stores the bot use case in a slot"""
 
     def name(self):
         return "action_store_usecase"
 
     def run(self, dispatcher, tracker, domain):
 
+        # we grab the whole user utterance here as there are no real entities
+        # in the use case
         use_case = tracker.latest_message.text
 
         return [SlotSet('use_case', use_case)]
 
 
 class ActionChitchat(Action):
+    """Returns the chitchat utterance dependent on the intent"""
 
     def name(self):
         return "action_chitchat"
@@ -97,6 +113,7 @@ class ActionChitchat(Action):
 
         intent = tracker.latest_message.intent.get('name')
 
+        # retrieve the correct chitchat utterance dependent on the intent
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
                       'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa']:
             dispatcher.utter_template('utter_' + intent, tracker)
@@ -104,15 +121,15 @@ class ActionChitchat(Action):
 
 
 class ActionStoreName(Action):
+    """Stores the users name in a slot"""
 
     def name(self):
         return "action_store_name"
 
     def run(self, dispatcher, tracker, domain):
+
         person_name = next(tracker.get_latest_entity_values('name'), None)
-        if not person_name:
-            person_name = next(tracker.get_latest_entity_values('PERSON'),
-                               None)
+
         if not person_name:
             person_name = tracker.latest_message.text
 
