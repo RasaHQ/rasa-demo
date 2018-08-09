@@ -12,17 +12,6 @@ import os
 logger = logging.getLogger()  # get the root logger
 
 
-def run_widget():
-    import os
-    from rasa_core.agent import Agent
-    from rasa_addons.webchat import WebChatInput, SocketInputChannel
-
-    agent = Agent.load('models/dialogue/',
-                       interpreter='models/nlu/current/')
-    input_channel = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
-    agent.handle_channel(SocketInputChannel(5500, "/", input_channel))
-
-
 def run_remote():
     from rasa_core.remote import RemoteAgent
     from rasa_core.utils import EndpointConfig
@@ -32,21 +21,26 @@ def run_remote():
     from rasa_core.channels.rasa_chat import RasaChatInput
     from rasa_addons.webchat import WebChatInput, SocketInputChannel
 
+    # definte the input channels for the platform and the chat widget
     rasa_in = RasaChatInput(config.platform_api)
-    widget_in = WebChatInput(static_assets_path=os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static'))
+    widget_in = WebChatInput(static_assets_path=os.path.join(
+                os.path.dirname(os.path.realpath(__file__)), 'static'))
     input_channel = SocketInputChannel(config.self_port, "/",
                                        rasa_in, widget_in)
 
+    # define the core endpoint
     core_endpoint_config = EndpointConfig(
         url=config.remote_core_endpoint,
         token=config.rasa_core_token
     )
 
+    # define the nlg endpoint
     nlg_endpoint_config = EndpointConfig(
         url=config.rasa_nlg_endpoint,
         token=config.rasa_platform_token
     )
 
+    # start the remote agent
     agent = RemoteAgent.load(config.core_model_dir,
                              core_endpoint=core_endpoint_config,
                              nlg_endpoint=nlg_endpoint_config

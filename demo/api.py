@@ -4,35 +4,26 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-import logging
-
 from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
-from hashlib import md5
 
 
 class MailChimpAPI(object):
+    """Class to connect to the MailChimp API"""
 
     def __init__(self, api_key):
 
         self.client = MailChimp(mc_api=api_key)
 
-    def get_all_members(self):
-        list = self.client.lists.members.all('297618692e', get_all=True)
-
-    def check_subscribed(self, list_id, email):
-        hashed_email = md5(email.lower()).hexdigest()
-        user = self.client.lists.members.get(list_id=list_id,
-                                             subscriber_hash=hashed_email).json()
-
-        return user
-
     def subscribe_user(self, list_id, email):
+        # subscribe the user to the newsletter if they're not already
+        # subscribed, with the status pending
         try:
             self.client.lists.members.create(list_id, data={
                                 'email_address': email,
                                 'status': 'pending'})
             return True
 
+        # if the user is already subscribed, return False
         except MailChimpError:
             return False

@@ -5,7 +5,9 @@ pipeline:
   OOV_token: oov
 - name: intent_classifier_tensorflow_embedding
 - name: ner_duckling_http
+  url: http://localhost:8000
   dimensions:
   - email
   - number
+  - amount-of-money
 language: en

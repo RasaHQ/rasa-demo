@@ -27,6 +27,8 @@ class GDriveService(object):
     def __init__(self, gdrive_credentials_json=config.gdrive_credentials):
         scopes = ['https://spreadsheets.google.com/feeds',
                   'https://www.googleapis.com/auth/drive']
+
+        # authenticate the service with a json key
         with tempfile.NamedTemporaryFile(suffix="_credentials.json") as f:
             f.write(gdrive_credentials_json)
             f.flush()
@@ -35,6 +37,7 @@ class GDriveService(object):
                                                             scopes=scopes)
 
     def request_sheet(self, sheet_name):
+        # fetch a specific sheet
         logging.debug("Refreshing auth")
         try:
             return gspread.authorize(self.credentials).open(sheet_name)
@@ -44,12 +47,13 @@ class GDriveService(object):
             return None
 
     def store_data(self, data):
-        """Adds a single new row to the sheet containing the users name and
-        address."""
+        """Adds a single new row to the sheet containing the users
+        infomration"""
         self.append_row(self.SPREADSHEET_NAME, data,
                         self.SHEET_NAME)
 
     def append_row(self, sheet_name, row_values, worksheet_name):
+        # add a row to the spreadsheet
         sheet = self.request_sheet(sheet_name)
         try:
             worksheet = sheet.worksheet(worksheet_name)
