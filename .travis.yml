@@ -7,13 +7,13 @@ before_install:
   -in travis_gcloud_auth.json.enc -out travis_gcloud_auth.json -d
 - chmod +x docker-deploy.sh
 - docker login -u _json_key -p "$(cat travis_gcloud_auth.json)" https://gcr.io
-- docker pull gcr.io/replicated-test/killer-demo:latest || true
+- docker pull gcr.io/replicated-test/rasa-demo:latest || true
 script:
-- docker build --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} -t gcr.io/replicated-test/killer-demo:v$TRAVIS_BUILD_NUMBER
-  -t gcr.io/replicated-test/killer-demo:latest --cache-from gcr.io/replicated-test/killer-demo:latest
+- docker build --build-arg GITHUB_TOKEN=${GITHUB_TOKEN} -t gcr.io/replicated-test/rasa-demo:v$TRAVIS_BUILD_NUMBER
+  -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest
   .
-- docker push gcr.io/replicated-test/killer-demo:v$TRAVIS_BUILD_NUMBER
-- docker push gcr.io/replicated-test/killer-demo:latest
+- docker push gcr.io/replicated-test/rasa-demo:v$TRAVIS_BUILD_NUMBER
+- docker push gcr.io/replicated-test/rasa-demo:latest
 deploy:
   provider: script
   skip_cleanup: true
