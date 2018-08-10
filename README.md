@@ -1,5 +1,5 @@
 # Rasa Demo bot
-[![Build Status](https://travis-ci.com/RasaHQ/rasa-demo.svg?branch=master)](https://travis-ci.com/RasaHQ/rasa-demo)
+[![Build Status](https://travis-ci.com/RasaHQ/killer-demo.svg?branch=master)](https://travis-ci.com/RasaHQ/killer-demo)
 
 ## :surfer: Introduction
 The purpose of this repo is to help you build a cool bot with Rasa.
