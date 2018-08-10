@@ -1,4 +1,4 @@
-# Rasa Demo bot
+# Rasa Demo bot 
 [![Build Status](https://travis-ci.com/RasaHQ/rasa-demo.svg?branch=master)](https://travis-ci.com/RasaHQ/rasa-demo)
 
 ## :surfer: Introduction
