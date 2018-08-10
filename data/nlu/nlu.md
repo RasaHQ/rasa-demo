@@ -1,0 +1,1258 @@
+## intent:ask_builder
+- can you share your boss with me?
+- i want to get to know your owner
+- i want to know the company which designed you
+- i want to know the company which generated you
+- i want to know the company which invented you
+- i want to know who invented you
+- May I ask who invented you?
+- please tell me the company who created you
+- please tell me who created you
+- tell me more about your creators
+- tell me more about your founders
+- which company brought you into existence?
+- which company created you?
+- which company invented you?
+- Who's your boss?
+- Who's your builder?
+- Who built you?
+- Who created you?
+- Who is your creator?
+- Who designed you?
+- who do you work for?
+- Who fabricated you?
+- Who generated you?
+- who had the idea to build you?
+- who had the idea to generate you?
+- who had the idea to make you?
+- who is behind all this?
+- Who is the legal owner of you?
+- who is your boss tell me
+- who is your boss?
+- who is your creator?
+- Who is your programmer?
+- Who made you?
+- Who modeled you?
+- Who owns you?
+- Who produced you?
+- Who thought to make you?
+- Who went through the trouble of setting you up?
+- and who built u?
+- who built you?
+- who build yoi
+- who made you?
+- where were you made?
+- why were you made?
+- how were you made?
+- who created you?
+
+## intent:ask_howdoing
+- Ahoy matey how are you?
+- are you alright
+- are you having a good day
+- Are you ok?
+- are you okay
+- Do you feel good?
+- how are things going
+- how are things with you?
+- How are things?
+- how are you
+- how are you doing
+- how are you doing this morning
+- how are you feeling
+- how are you today
+- How are you?
+- how do you do?
+- how have you been
+- how is it going
+- how is your day
+- how is your day going
+- how is your evening
+- How was your day?
+- How's it going
+- How's it hanging?
+- how's life
+- how's life been treating you?
+- How's life treating you friend?
+- how's your day going
+- How've you been?
+- I'm fine and you
+- is everything all right
+- Is everything ok?
+- is everything okay
+- what about your day
+- What's going on?
+- what's good
+- What's new?
+- What's up man
+- What's up
+- how are you?
+- Do you have a great day?
+- how are you doing today my sweet friend
+- how are you doing?
+- how are u
+- How are you?
+
+## intent:ask_weather
+- How is the weather today?
+- What's the weather like?
+- How is the weather?
+- What is the weather at your place?
+- Do you have good weather?
+- Is it raining?
+- What's it like out there?
+- Is it hot or cold?
+- Beautiful day, isn't it?
+- What's the weather forecast?
+- Is it quite breezy outside?
+- Will I require my raincoat today?
+- What is the weather for tomorrow?
+- Nice day out today?
+- What is the temperature today?
+- Can we expect any thunderstorms?
+- Will the skies be clear today?
+- Are we in for a scorcher?
+- Looks like a beautiful day hey?
+- Will we build a snowman today?
+- Is it humid out there today?
+- Are there any meteorological changes that I need to be aware of?
+- whats the weather like tomorrow
+- hows the weather in bot world
+- how is the weather in berlin?
+- what's the weather today?
+- how's the weather?
+- what's the weather like where you are?
+- is the sun out where you are?
+- is it sunny
+- is the sun out where zou are?
+- what"s the weather
+- whats the weather in berlin?
+- how's the weather in berlin
+
+## intent:ask_whatisrasa
+- How does Rasa work?
+- Can you tell me more about rasa?
+- What does Rasa build?
+- What do you do at Rasa?
+- What is Rasa?
+- What does Rasa make?
+- Can you tell me what Rasa does?
+- Give me more information about Rasa
+- what does rasa do?
+- I want to learn what rasa does
+- What does rasa do exactly?
+- tell me more about rasa
+- tell me more about your company
+- tell me more about rasa
+- I want to learn what rasa is
+- what can i do with rasa
+- what do you guys do at rasa
+- what does rasa do
+- what is rasa
+- I want to know what rasa actually does that isn't clear to me yet
+- i havent understood yet what rasa actually is
+- can you pls explain what rasa does
+- explain me what rasa does
+- explain me what rasa is
+- i dont get what rasa is
+- what is rasa actually
+- what is rasa?
+- i want to learn something about rasa
+- i want to know what rasa does
+- what is rasa core?
+- what can i build with rasa core?
+- What is rasa doing exactly?
+- What do you do as a company?
+
+## intent:ask_whatspossible
+- help
+- help please
+- i don't know what i want
+- I need some help
+- options
+- show me the menu
+- show me what's possible
+- so what can you do
+- so what can you help me with?
+- what are you good at?
+- what can I do here
+- what can I do with this bot
+- what is this bot for
+- cool! can I do something else here?
+- help me
+- talk to me!
+- come back
+- how can you help me
+- what else can i do
+- are there any other options?
+- hm that doesnt quite help me is there anything else you can do?
+- what can i do here
+- what can i do now
+- um what now
+- so now what
+- help?
+- now what?
+- Great, is there anything else you can do, bot?
+- what can you do?
+- how can you help me?
+- can you do anything else?
+- i asked you if you can do anything else
+- anything els
+- so what next?
+- what else can I do here?
+- Can you explain me in one sentence what you are doing?
+- what are the options?
+
+## intent:ask_whoisit
+- who is this
+- who am i talking to
+- what's your name
+- who am i speaking with
+- who r u
+- what's your name bot
+- whats ur name
+- what are you called?
+- who is talking?
+- who speaks?
+- who talks?
+- who are you and what do you want from me
+- who are you?
+- who is it?
+- who are u?
+- who are you
+- I want to know who you are
+- who are y
+- yes but who are you in your heart
+- are you a bot?
+- who is this?
+- hi! what's your name?
+
+## intent:bye
+- goodbye
+- goodnight
+- good bye
+- good night
+- see ya
+- toodle-oo
+- bye bye
+- gotta go
+- farewell
+- catch you later
+- bye for now
+- bye
+- bye was nice talking to you
+- bye udo
+- bye bye bot
+- bye bot
+- k byyye #slay
+- tlak to you later
+- ciao
+- Bye bye
+- then bye
+- tschüssikowski
+- bye!
+
+## intent:canthelp
+- ok then you cant help me
+- that was shit, you're not helping
+- you can't help me
+- you can't help me with what i need
+- i guess you can't help me then
+- ok i guess you can't help me
+- that's not what i want
+- ok, but that doesnt help me
+- this is leading to nothing
+- this conversation is not really helpful
+- you cannot help me with what I want
+- I think you cant help me
+- hm i don't think you can do what i want
+- stop
+- stop go back
+- do you get anything?
+- and you call yourself bot company? pff
+- and that's it?
+- nothing else?
+
+## intent:contact_sales
+- I wanna talk to your sales people.
+- I want to talk to your sales people
+- I want to speak with sales
+- Sales
+- Please schedule a sales call
+- Please connect me to someone from sales
+- I want to get in touch with your sales guys
+- I would like to talk to someone from your sales team
+- sales please
+- I want to talk with sales about our project
+- I want an offer for your platform
+- I wanna have a subscription for your product
+- I want to learn more about your pricing
+- I want to talk to someone about your pricing system
+- give me someone who can explain your business model
+- have a call with the sales team
+- let me talk to your sales guys
+- sales
+- I want a sales call
+- I want to contact the sales team
+- I want to talk to your sales guys
+- i want to contact your sales team
+- I also want to book a sales call
+- I want to contact sales
+- I want to book a call with your sales team
+- contact sales
+- i want to contact sales
+- id like a call please
+- I would like to have a call with sales team
+- i want someone to call me
+-  request a call
+- request a call
+- I want to talk to sales
+- i'd like to talk to a sales person
+- But I wanted a sales call
+- I wanna talk to your sales guy
+- id like to talk to someone who can explain me what i can do with rasa
+- can someone help me with infos about the rasa platform
+- I want information about the platform
+- how does your pricing work?
+- are there different packages customers can book?
+- please provide information on your enterprise package
+- i need to know how i can book support
+- we started working with rasa but now we need support
+- we built a bot with rasa but now we're interested in the platform
+- let me talk to your sales people
+- I want to learn more about your pricing
+- contact sales
+- i want to contact sales now
+- let me contact sales
+- connect to sales
+- connect me to your sales department
+- sales department
+- can you connect me to sales
+- i want to be connected to your sales team
+- sales team connection
+- connect to the sales team
+- i want to connect your sales
+- i need to speak to your sales team
+- can i talk to a sales representative
+- i want to connect to sales
+- get me the sales team
+- sales contact
+- contact sales for me
+- next the sales contact
+- please connect me to sales
+- i need to talk to sales
+- i want to be in touch with sales
+- call with sales team
+- i want to have a call with sales
+- let me call the sales team
+- i need a call from sales
+- request sales call
+- request call
+- i need the call request
+- let me have the call
+- i want to call
+- call sales
+- request call with sales team
+- contact call with sales
+- sales team
+- request sales team
+- contact to sales
+- i choose the call
+- i choose the call with sales
+- have a call
+- call
+- I would like to have a demo scheduled
+- but I want a sales call
+- Can I have a call tomorrow at 3pm?
+- i want to learn more about Rasa Platform
+- book a call
+- sales sales sales
+- book a sales call
+- i think I want to talk to your sales folks
+- just gimme a call
+- ok i want to talk to your sales guys
+- i want to buy the rasa platform
+- i want to connect to your sales team
+- I want to buy the rasa platform
+- i want a sales call
+- sales call
+- I would like to contact your sales team please
+- Ok I want to talk to your sales team immediately
+- hm ok then i want to talk to the sales dude
+- i want to talk to sales
+- a call
+- let' contact sales now
+- obviously talk to your awesome sales team
+- hmmm sales
+- ok sales
+- let me talk to sales
+- sales pl
+- lets talk to sales
+- let me talk to your sales people!
+- can i talk to your disagreeable sales man?
+- can i get a ssales call
+- can i speak to the sales team
+- talk to sales team
+- I want to talk to your sales team
+- Can I have a call?
+
+## intent:deny
+- no
+- definitely not
+- never
+- absolutely not
+- i don't think so
+- i'm afraid not
+- no sir
+- no ma'am
+- no way
+- no sorry
+- No, not really.
+- nah not for me
+- nah
+- no and no again
+- no go
+- no thanks
+- decline
+- deny
+- i decline
+- never mind
+- I'm not giving you my email address
+- no I haven't decided yet if I want to sign up
+- I don't want to give it to you
+- I'm not going to give it to you
+- no i don't accept
+- no!!!!
+- no you did it wrong
+- no i can't
+- i'm not sure
+- NEIN
+- nein
+- not really
+- i guess it means - no
+- i don't want to
+- i don't want either of those
+
+## intent:enter_data
+- 100k
+- 100k
+- 240k/year
+- 150,000 USD
+- 150,000$/ year
+- around $500,000 per year
+- we plan with 250.000 euro for one year
+- bout 4,000,000 INR
+- 50,000,000 INR
+- 60 million INR
+- we think 4 million INR/ year
+- between 100 to 200.000
+- 50,000 dollar
+- not sure yet, we plan with 50 thousand euro at the moment
+- 75000-150000 euro
+- our estimation is 10k
+- I work for [Bayer](company)
+- The name of the company is [Daimler](company)
+- company: [uber](company)
+- it's a small company from the US, the name is [Microsoft](company)
+- it's a tech company, [apple](company)
+- [microsoft](company)
+- [clue](company)
+- [SAP](company)
+- [IBM](company)
+- [t-mobile US](company)
+- [vodafone](company)
+- [accenture](company)
+- [McKinsey Germany](company)
+- [BCG brazil](company)
+- [BCG digital ventures](company)
+- I work for [Stanford University](company)
+- I work for the [AI research group of the turing centre of the UBC, Vancouver, Canada](company)
+- maxmeier@firma.de
+- bot-fan@bots.com
+- maxmeier@firma.de
+- bot-fan@bots.com
+- my email is email@rasa.com
+- my email is markjobs@ibm.com
+- my email is khardik.kmosu@bol.net.in
+- my business mail is mikemiller@sales.apple.com
+- email = stephanywhite@microsoft.com
+- mail: julianfrank@hotmail.com
+- santaklaus@googlemail.com
+- saswatkarhar@rediffmail.com
+- nerd@stanford.edu
+- alexander.denker@tu-berlin.de
+- sislawawa@india.com
+- chengming@aliyun.com
+- solomq122@qq.mail.com
+- [Product Manager](jobfunction)
+- I'm a [product manager](jobfunction)
+- I work as a [project manager](jobfunction)
+- I'm the [developer](jobfunction)
+- [data analyst](jobfunction)
+- [data scientist](jobfunction)
+- [dev](jobfunction)
+- [engineer](jobfunction)
+- [brand manager](jobfunction)
+- [marketing](jobfunction)
+- [sales manager](jobfunction)
+- [growth manager](jobfunction)
+- [CTO](jobfunction)
+- [CEO](jobfunction)
+- [COO](jobfunction)
+- [assistant to the CEO](jobfunction)
+- I'm the [lead engineer](jobfunction)
+- I'm a [python developer](jobfunction)
+- I'm an [AI researcher](jobfunction)
+- [Max Meier](name)
+- My name is [Max Meier](name)
+- [Ralph White](name)
+- I'm [Tom Miller](name)
+- [Ann Snyder](name)
+- [Victoria McMillan](name)
+- [Denise Perry](name)
+- [Bob Geldorf](name)
+- [Susan Catterfeld](name)
+- [Taylor Shwed](name)
+- [Meredith Grey](name)
+- [Alex Karev](name)
+- We plan to build a sales bot to increase our sales by 500%.
+- we plan to build a sales bot to increase our revenue by 100%.
+- a insurance tool that consults potential customers on the best life insurance to choose.
+- we're building a conversational assistant for our employees to book meeting rooms.
+- I work in [project management](jobfunction)
+- i'm a developer
+- my name is [linda](name)
+- I work in [innvoation](jobfunction)
+- my job function is [developer](jobfunction)
+- I am responsible for our [innovation department](jobfunction)
+- I work as a [frontend dev](jobfunction)
+- [project manager](jobfunction)
+- I'm a [project manager](jobfunction)
+- I'm [project manager](jobfunction)
+- it's foo@bar.com
+- 10000000
+- [ACME Mops](company)
+- mrmop@mops.app
+- 5 bucks
+- I'm a [janitor](jobfunction)
+- My email is linda@linda.linda
+- I wanna build a bot that sends the people cute animal pictures based on their favorite color
+- I'm a [developer](jobfunction)
+- I want to build a cool bot
+- my emayl is yolo at yolo.de
+- [manager](jobfunction)
+- adele@gmx.com
+- my name is [marc](name)
+- one trillion dollar
+- I'm a[ full stack develope](jobfunction:full stack developer)r
+- moabit@yoga.com
+- it's the [moabit yoga studio](company)
+- my name is [oli miller](name)
+- 100000k
+- I'm in [project mgmt](jobfunction)
+- 10000 dollars
+- 400 trilion
+- philipp@superphilipp.philipp
+- I'm in [business ](jobfunction)
+- 5 mln
+- [Alex](name:alex)
+- my name is [loretta meier](name)
+- I wanna build a super bot to send me cute animal pictures
+- 10000k
+- [Developer](jobfunction:developer)
+- I want to build a sales bot
+- 50k
+- I want to build a bot
+- a chatbot for mops - mopbot
+- [Mr. Mop](name)
+- loretta@strawberry-ice.come because I work in the department for strawberry ice
+- the ice cream factory is the company
+- not sure yet
+- 2 euro
+- [Philip](name)
+- [Bosch](company)
+- I want to build an FAQ bot
+- I'm a [python developer](jobfunction)
+- [Jim](name)
+- hello@hello.com
+- I want to build a lot of different bots
+- I'm a [machine learning engineer](jobfunction)
+- we don't have one
+- hi@rasa.com
+- [Helvetia](company)
+- [Jim Halpert](name)
+- I want to build a health insurance bot
+- I'm a [software engineer](jobfunction)
+- [John Smith](name)
+- [Jenny](name)
+- [douglas](company)
+- [klaus klausson](name)
+- 5 euros
+- i'd like to build a transformer
+- i'm a [race car driver](jobfunction)
+- klausimausi@apple.com
+- ifuckrobots666@apple.com
+- my name is [saswat](name)
+- i am [self emplayed](jobfunction)
+- a sentient robot
+- [rasa](company)
+- i have none
+- one bot
+- akela@philipp.com
+- i want to build a bot
+- oov
+- My budget is oov
+- My email is oov
+- oov per year
+- the name of the company is oov
+- I work for oov
+- [Akela](name)
+- a health bot
+- help@help.com
+- i'm a [developer](jobfunction)
+- i want to build a health bot
+- 200k
+- My name is [Alex](name)
+- [Rasa](company)
+- test@test.com
+- 2000k
+- I'm [Akela](name)
+- i want to build all the bots
+- 20k
+- i want to build bots
+- [developer](jobfunction)
+- a cool bot
+- [Developer Advocate](jobfunction)
+- [reddit](company)
+- a bot
+- philipp@thephilippcompany.com
+- [philipp company](company)
+- [philipp](name)
+- i want to built a philipp bot
+- joey@koolmanconsulting.com
+- one which asks me loads about myself
+- chief nerd at rasa technologies
+- [Elise](name)
+- myemail@gmail.com
+- 123@skdv.fvsdj
+- i don't have one
+- have no idea
+- I do not know yet
+- ulrikovitcheisenkleber@eisenkleberlimitedcokg.com
+- eisenkleber limited co kg
+- ulrikovitch eisenkleber
+- don't have one
+- [designer](jobfunction)
+- a pizza bot
+- operations
+- none i will build it from scraps
+- no idea
+- [Vladimir](name)
+- around 200k
+- i want to build a bot about me
+- i'm a [dev](jobfunction)
+- i don't have it
+- i want to build an insurance bot
+- [product manager](jobfunction)
+- help@rasa.com email
+- [BBC](name)
+- i wanna build all the bots
+- i'm a [product manager](jobfunction)
+- [Freya](name)
+- 300k number
+- i work in [biz dev](jobfunction)
+- my email is kevin@yoloooz.de
+- [ceo](jobfunction)
+- a sales bot
+- 200000000
+- [linda](name)
+- linda@mail.com
+- none
+- i don't know
+- [Zendesk](company)
+- [Jacqueline](name)
+- 123@gmail.com
+- udo@udo.ai
+- hey@kldpeffesfoken.oinwf
+- Evaluate Rasa :-)
+- The master of desaster
+- [head of biz deve](jobfunction)
+- [Udo](name)
+- [Udo.AI](company)
+- maybe then instead alex+rasarasa@rasa.com
+- can you try alex+123@rasa.com instead?
+- linda@yoloyolo.de
+- [Linda](name)
+- problem solving
+- a chocolate bot
+- a good one?
+- elise
+- elise@gmail.com
+- a customer service support system
+- one that flatters me every morning
+- I'm the boss
+- 90k
+- Rasa bot
+- i'm[donezo](name)
+- my function is [to serve butter](jobfunction)
+- [wurst co kg](company)
+- [No company!! ](company)
+- [I am a freelancer ](company)
+- [Foudner](jobfunction)
+- linda@linda.com
+- i'm in [customer success](jobfunction)
+- i'm [head of sales](jobfunction)
+- [linda's company](company)
+- a akela bot
+- i'm in [sales](jobfunction)
+- I work for the [New York Times](company)
+- the [New York Times](company)
+- [Ali Park](name)
+- 1 million
+- I'm an [engineer](jobfunction)
+- it's [Ali Park](name)
+- 2 million
+- ali@nytimes.com
+- I work for the [new york times](company)
+- I work at the [NYT](company)
+- there is no budget
+- i'm a[ develope](jobfunction)
+- lead generation
+- 100000
+- im in [marketing](jobfunction)
+- linda@rasa.ai
+- yesplease@yes.com
+- SCALABLE MINDS (company)
+- My name is [Tom](name)
+- 500k
+- I would like to build an ice cube dispenser bot
+- I'm a [business woman](jobfunction)
+- 0
+- im a [developer](jobfunction)
+- a great one
+- one that will get me promoted
+- conversational
+-  propella@daskapital.de
+- [Bolschewistische Kurkapelle Schwarz-Rot](company)
+- [akela propella](name)
+- schlabberjimmy@glibberglitter.edu
+- i'm a glibber and glitter salesman
+- schnuffelknuddelbaerchen33@rasa.de
+- i have about 200 bucks in my savings account
+- None
+- 200 bucks
+- i'd like to build sentient glibber or glitter
+- bigassnerd@rasa.com
+- [sam](name)
+- like 60 quid
+- nothing
+- tamedmouse@micerevolution.fr
+- volodimir@rasa.com
+- [volodimir voldemarich](name)
+- idk
+- the bot that helps you choose insurance for the car ;)
+- [ml researcher](jobfunction)
+- junk@junk.com
+- j@p.com
+- i don't think either of those
+- ok I'm actually an [engineer](jobfunction)
+- al@acme.org
+- [ACME brands](company)
+- [Al Capone](name)
+- £50k
+- the bot should help with HR stuff
+- I'm a bot [developer](jobfunction)
+- none@none.co.uk
+- [Juste P](name)
+- 50
+- I am a [Data Scientist](jobfunction)
+- I am a [head of business intelligence](jobfunction)
+- my own
+- $1
+- juste@juste.com
+- [Juste](name)
+- 1 euro
+- a bot which sends cute shiba pictures
+- [developer advocate](jobfunction)
+- shiba@shiba.com
+- tylerthemateman@clubmate.com
+- [Tyler](company)
+- I'm a [construction worker](jobfunction)
+- I want to build a kick ass bot
+- 1 million big ones
+- [Club Mate](company)
+- me@me.com
+- herbert@gmail.com
+- Herbert
+- 10 m
+- chief lemonade officer
+- a cool boy
+- an ice cream bot
+- 500 million
+- my name is [jimmy](name)
+- half a million
+- it's [akela](name)
+- [AI researcher](jobfunction)
+- a big ol transformer
+- big old bot
+- hi@elise.de
+- ulle@gmx.de
+- [CSI](company)
+- 5 quid
+- me@you.de
+- i am a [projject manager](jobfunction)
+- 120000
+- akela@akela.com
+- akela's company
+- [akela](name)
+- one billion
+- an akela bot that I can talk to akela all the time
+- i'm in [marketing](jobfunction)
+- ACME bank (company)
+- [Alan](name)
+- about 10 k
+- i want a great bot to impress my boss
+- one like this
+- badass bot tester
+- a bot to get a promotion
+- im a [dev](jobfunction)
+- 10
+- I'm a real good [engineer](jobfunction)
+- [James](name)
+- ames@rasa.com
+- valid_email@one.de
+- valid@one.email
+- unemployed
+- on that will get me promoted
+- I spend money
+- it's 500000000
+- A wolf bot
+- [akilla](name)
+- a turtle
+- i sell turtles
+- 123@akela.com
+- An ice cube bot
+- jimmy neutron industries
+- ok its email@email.com
+- Im a [full stack developer](jobfunction)
+- akelaistcool@schwabenländle.de
+- spam bot
+- the bot like you
+- picking my nose
+- im a [freelancer](jobfunction)
+- health care
+- something to talk to my friends while I'm busy working
+
+## intent:greet
+- Hi
+- Hey
+- Hi bot
+- Hey bot
+- Hello
+- Good morning
+- hi again
+- hi folks
+- hi Mister
+- hi pal!
+- hi there
+- greetings
+- hello everybody
+- hello is anybody there
+- hello robot
+- hallo
+- heeey
+- hi hi
+- hey
+- hey hey
+- hello there
+- hi
+- hello
+- yo
+- hola
+- hi?
+- hey bot!
+- hello friend
+- good morning
+- hii
+- hello sweet boy
+- yoo
+- hey there
+- hiihihi
+- hello sweatheart
+- hellooo
+- helloooo
+- heyo
+- ayyyy whaddup
+- hello?
+- Hallo
+- heya
+- hey bot
+- howdy
+- Hellllooooooo
+- whats up
+- Hei
+- Well hello there ;)
+- I said, helllllloooooO!!!!
+- Heya
+- Whats up my bot
+- hiii
+- heyho
+- hey, let's talk
+- hey let's talk
+- jojojo
+- hey dude
+- hello it is me again
+- what up
+- hi there
+- hi
+- jop
+- hi friend
+- hi there it's me
+
+## intent:human_handoff
+- I want to talk to a human
+- let me speak with a real person please
+- are there also humans working for your company?
+- gimme a proper human
+- I don't wanna talk to a bot
+- Can I speak to anyone who can really help me?
+- I dont like to talk to a machine
+- can you please connect me to a real rasa employee?
+- give me a human now
+- that's annoying I'd like to speak to someone real
+- i would like to speak to a person
+- can you put me in touch with a human?
+- let me talk to a human
+- id like to talk to a real rasa employee
+- i dont wanna talk to a bot
+- talking to a bot is stupid
+- i want to talk to someone who is smarter than you
+- can i please speak to a human?
+- i'd rather speak with a real rasa employee
+- i want to talk to someone else
+- let me talk to a real person
+- please give me a human
+- i want to talk to a person
+- customer service
+- i want to speak to customer service
+- someone from customer care
+- can you forward me to your team
+- service agent
+- human handoff
+- give me a human
+- speak to a real person
+- i want to speak to a real person
+- wrong i want to speak to a human
+- Could I talk to Akela?
+- i want to talk to someone at rasa
+- i want to speak to a manager
+- I want to talk to the founders
+- i want to talk to a human
+
+## intent:mood_confirm
+- yes
+- of course
+- sure
+- yeah
+- ok
+- cool
+- go for it
+- yep
+- yep, will do thank you
+- I'm sure I will!
+- oh awesome!
+- Yes
+- accept
+- I accept
+- i accept
+- ok i accept
+- I changed my mind. I want to accept it
+- ok cool
+- alright
+- i will!
+- ok, I behave now
+- yop
+- oki doki
+- yes please
+- yes please!
+- jo
+- yep if i have to
+- amayzing
+- confirm
+- nice
+- coolio
+- definitely yes without a doubt
+- yas
+- yup
+- perfect
+- sure thing
+- absolutely
+- Oh, ok
+- Sure
+- hm, i'd like that
+- ja
+- sure!
+- yes i accept
+- Sweet
+- amazing!
+- how nice!
+- cool!
+- yay
+- yes accept please
+- great
+- oh cool
+- yes
+- fine
+
+## intent:out_of_scope
+- I want pizza
+- please help with my ice cream it's dripping
+- no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+- i want a non dripping ice cream
+- hey little mama let em whisper in your ear
+- someone call the police i think the bot died
+- show me a picture of a chicken
+- neither
+- I want french cuisine
+- i am hungry
+- restaurants
+- restaurant
+- you're a loser lmao
+- can i be shown a gluten free restaurant
+- i don't care!!!!
+- i do not care how are you
+- again?
+- oh wait i gave you my work email address can i change it?
+- hang on let me find it
+- stop it, i do not care!!!
+- really? you're so touchy?
+- how come?
+- I changed my mind
+- what?
+- did i break you
+- I don't wanna tell the name of my company
+- that link doesn't work!
+- you already have that
+- this is a really frustrating experience
+- no stop
+- i want a french restaurant
+- shit bot
+- do you want to marry me?
+- give me food
+- i want food
+- udo, I want to marry you
+- i wanna party
+- shitmuncher
+- I like you
+- i want pizza
+- i want pizza!!
+- silly bot
+- i want to eat
+- you are a stupid bot
+- i hate you
+- Can I ask you questions first?
+- is it a wasteland full of broken robot parts?
+- i can't deal with _your_ request
+- are you vegan
+- who will anser my email?
+- do you sell vacuum robots?
+- i want to buy a roomba for my grandson
+- and make chicken noises into the phone
+- is barbara still married to you
+- what's your wife doing this weekend
+- how are the kids
+- you're rather dull
+- personal or work?
+- are you using Rasa Core and NLU ?
+- tell me a joke
+- what else?
+- I already told you! I'm a shitmuncher
+- I'm a shitmuncher
+- who are the engineers at rasa?
+- who are they?
+- can we keep chatting?
+- talk to me
+- who is your favourite robot?
+- a tamed mouse will arrive at your doorstep in the next couple of days
+- you will know it from the single red rose it carries between its teeth
+- i will tame a mouse for you
+- isn't the newsletter just spam?
+- go back
+- can you help me with the docs?
+- sorry, i cannot rephrase
+- and your REST API doesn't work
+- i told you already
+- better than you
+- oh my god, not again!
+- you are a badass bot!
+- lol
+- why do you need that?
+- is that any of your business
+- can you help me with your docs?
+- i immediately need help with implementing the coolest bot you can imagine
+- can you help me with your docs
+- can you tell me how to build a bot?
+- can you learn from our conversation?
+- common, just try
+- hey, I contacted you a couple of days ago but didn't get any response, any news?
+- please hurry, i have deadline in two weeks to deliver the bot it is for very big company
+- you are annoying
+- Do I have to accept?
+- Is Rasa really smart?
+- kannst du auch deutsch?
+- are the newsletter worth the subscription?
+- it's a pity
+- i want more of you in my life!
+- the one that is better than you
+- you suck
+- bots are bad
+- i dont like bots
+ - do you have a phone number?
+- technical side of things?
+- where do you live?
+- how are akela's cats doing?
+- but I just told you that :(
+- Why don’t you answer?
+- But you're an english site :(
+- can you help me to build a bot
+
+## intent:signup_newsletter
+- I wanna sign up for the newsletter.
+- I want to sign up for the newsletter.
+- I would like to sign up for the newsletter.
+- Sign me up for the newsletter.
+- Sign up.
+- Newsletter please.
+- add me to the newsletter
+- newsletter
+- sign up for the NL
+- yeaaah lets go for the newsletter
+- I want to subscribe to your newsletter
+- newsletter pls
+- sign up to the newsletter
+- get the latest news from Rasa
+- sign me up for the newsletter - my email is yesplease@rasa.ai
+- newsletter, here is my email: sisi@rasa.com
+- newsletter - my email is lol@rasa.com
+- Subscribe to Rasa newsletter
+- Newsletter
+- subscribe
+- get the newsletter
+- I also want to subscribe
+- id like to subscribe
+- I'd like to subscribe
+- I want the newsletter
+- sign up
+- i want to signup
+- newsletter please
+- nl
+- id like to receive the newsletter
+- i want the newsletter
+- add me as your subscriber
+- add me to the subscription list
+- newsletter please my email is linda@yolo.de
+- i want to receive your nl
+- i want the newsletter
+- i want to subsribe to the newsletter
+- can you pelase subscribe me to the newsletter
+- can you subscribe me to the newsletter
+- subscription newsletter
+- newsletter subscription
+- gimme the newsletter
+- i need the newsletter
+- may i receive the newsletter from now on
+- i would love to get the newsletter
+- please send me the newsletter
+- send me the newsletter
+- i want to receive the newsletter from now on
+- get newsletter
+- get the newsletter
+- i want to get the newsletter
+- i'm craving the newsletter
+- i prefer to get the newsletter
+- subscribe me to the newsletter
+- please subscribe me to your newsletter
+- i would love to receive the rasa newsletter
+- sign me up for that newsletter
+- sign me up for the rasa newsletter
+- i want to sign up for the newsletter
+- lets do the newsletter signup
+- newsletter registration
+- register me for the newsletter
+- please sign me up for the newsletter
+- add me to the newsletter
+- add me to the newsletter list
+- i need to be on the newsletter list
+- i want to join the newsletter mails
+- i want to receive the newsletter emails
+- can you sign me up for the newsletter
+- join that newsletter
+- i want to join the newsletter list
+- how about the newsletter signup
+- subscribe to newsletter
+- newsletter it is
+- i go for the newsletter
+- lets try the newsletter signup
+- lets try the newsletter registration
+- how about the newsletter
+- newsletter registration first
+- first lets sign up for the newsletter
+- now i want to signup for the newsletter
+- can you add alan@mail.com to the newsletter list?
+- i want on this dope newsletter - my email is alex@mail.com
+- but please sign me up for the newsletter!
+- i want to signup for the nl
+- subscribe example@rasa.com to the newsletter
+- subscribe hi@rasa.com to the newsletter
+- subscribe to the newsletter
+- please subscribe me to the newsletter alex@example.cz
+- subscribe my email alex@mail.mail to the newsletter
+- Subscribe
+- i also want to sign up for the newsletter
+- subscribe to your newsletter
+- can i get emails from you
+- news
+- i'd like your newspaper please
+- sign up for newsletter
+- what about signing up for the newsletter?
+- get a subscription
+- to make a subscribtion
+- let's make a subscribtion
+- I would love to subscribe to a newsletter!
+- i need this dope newsletter
+- oh actually i want to get the newsletter
+- i want to subscribe to your newsletter
+- can i sign up to the newsletter too?
+- do the newsletter then
+- i want to subscribe
+- i want newsletter
+- i want on that dope newsletter
+- Subscribe
+
+## intent:thank
+- Thanks
+- Thank you
+- Thank you so much
+- Thanks bot
+- Thanks for that
+- cheers
+- cheers bro
+- ok thanks!
+- perfect thank you
+- thanks a bunch for everything
+- thanks for the help
+- thanks a lot
+- amazing, thanks
+- cool, thanks
+- cool thank you
+- thanks
+- thanks!
+- Cool. Thanks
+- thanks
+- thanks this is great news
+- thank you
+- great thanks
+- Thanks!
+- cool thanks
+- thanks for forum link, I'll check it out
+- thanks!
