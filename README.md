@@ -1,4 +1,5 @@
 # Rasa Demo bot
+[![Build Status](https://travis-ci.com/RasaHQ/rasa-demo.svg?branch=master)](https://travis-ci.com/RasaHQ/rasa-demo)
 
 ## :surfer: Introduction
 The purpose of this repo is to help you build a cool bot with Rasa.
@@ -31,6 +32,12 @@ make run-cmdline
 ```
 
 There are some custom actions that require connections to external services, specifically `ActionSubscribeNewsletter` and `ActionStoreSalesInfo`. For these to run you would need to have your own MailChimp newsletter and an excel spreadsheet to connect to.
+
+If you would like to run the bot on the website, you need to install the great [Rasa Addons](https://github.com/mrbot-ai/rasa-addons) repo:
+```
+pip install git+https://github.com/mrbot-ai/rasa-addons@0.3.3
+```
+Then follow the instructions [here](https://github.com/mrbot-ai/rasa-webchat) to place the chat widget on your website.
 
 ## 👩‍💻 Overview of the files
 
