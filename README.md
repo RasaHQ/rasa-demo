@@ -24,7 +24,11 @@ To train the core model: `make train-core`
 
 To train the NLU model: `make train-nlu`
 
-To run the bot with both these models: `make run-cmdline`
+To run the bot with both these models:
+```
+docker run -p 8000:8000 rasa/duckling
+make run-cmdline
+```
 
 ## 👩‍💻 Overview of the files
 
