@@ -30,6 +30,8 @@ docker run -p 8000:8000 rasa/duckling
 make run-cmdline
 ```
 
+There are some custom actions that require connections to external services, specifically `ActionSubscribeNewsletter` and `ActionStoreSalesInfo`. For these to run you would need to have your own MailChimp newsletter and an excel spreadsheet to connect to.
+
 ## 👩‍💻 Overview of the files
 
 `data/core/` - contains stories for Rasa Core
