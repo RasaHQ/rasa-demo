@@ -5,10 +5,10 @@
 The purpose of this repo is to help you build a cool bot with Rasa.
 
 It's the alpha version of the bot that supports two user goals:
-- Subscribing to the newsletter
-- Placing a request for a call with the sales team
+- Subscribing to the Rasa newsletter
+- Placing a request for a call with Rasa's sales team
 
-You can find planned enhancement for the demo in the [Project Board](https://github.com/RasaHQ/killer-demo/projects/1)
+You can find planned enhancements for the demo in the [Project Board](https://github.com/RasaHQ/killer-demo/projects/1)
 
 ## 🤖 Installation + Running of the bot
 
