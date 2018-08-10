@@ -73,8 +73,8 @@ templates:
   utter_confirmationemail:
     - text: "We sent a confirmation email to {email}."
   utter_docu:
-    - text: "If you want some more awesome Rasa content, check out our docs:
-      https://www.rasa.com/docs/"
+    - text: "If you want some more awesome Rasa content, check out our forum:
+      https://forum.rasa.com/"
   utter_greet:
     - text: "Hey there, welcome to Rasa!"
   utter_inform_privacypolicy:
@@ -151,6 +151,8 @@ templates:
     - text: "I'm afraid I can't help you then! For now I only have two skills:"
   utter_thumbsup:
     - text: "👍"
+  utter_cantsignup:
+    - text: "I can't sign you up if you don't provide your email 😉"
 
 actions:
   - utter_greet
@@ -183,6 +185,7 @@ actions:
   - utter_canthelp
   - utter_nohelp
   - utter_thumbsup
+  - utter_cantsignup
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget

@@ -48,22 +48,25 @@
     "utter_thumbsup": {
       "slots": []
     },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_ask_goal": {
+    "utter_docu": {
       "slots": []
     },
     "action_pause": {
       "slots": []
     },
+    "utter_possibilities": {
+      "slots": []
+    },
     "utter_confirm_salesrequest": {
       "slots": []
     },
-    "utter_docu": {
+    "utter_contact_email": {
       "slots": []
     },
     "utter_canthelp": {
+      "slots": []
+    },
+    "utter_ask_goal": {
       "slots": []
     },
     "action_chitchat": {
@@ -71,15 +74,9 @@
     },
     "utter_noworries": {
       "slots": []
-    },
-    "utter_bye": {
-      "slots": []
-    },
-    "utter_contact_email": {
-      "slots": []
     }
   },
-  "rasa_core": "0.10.3",
+  "rasa_core": "0.10.4",
   "max_histories": [
     6,
     6,

@@ -3,6 +3,31 @@
     - utter_out_of_scope
     - utter_possibilities
 
+## say random stuff outside the flows 1
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* greet OR enter_data OR mood_confirm
+    - utter_possibilities
+
+## say random stuff outside the flows 2
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* deny
+    - utter_no_speak
+    - utter_change_mind
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* greet OR enter_data OR mood_confirm
+    - utter_possibilities
+
+
 ## just newsletter + confirm
 * greet
     - utter_greet

@@ -13,7 +13,7 @@ help:
 	@echo "        Saves the story graphs into a file"
 
 train-nlu:
-	python3 -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/nlu.json -o models --project nlu --verbose
+	python3 -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/ -o models --project nlu --verbose
 
 train-core:
 	python3 demo/train_core.py
