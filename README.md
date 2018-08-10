@@ -21,15 +21,21 @@ This will install the bot and all of its requirements.
 Note that it was written in Python 3 so might not work with PY2.
 
 To train the core model: `make train-core`
+
 To train the NLU model: `make train-nlu`
+
 To run the bot with both these models: `make run-cmdline`
 
 ## 👩‍💻 Overview of the files
 
 `data/core/` - contains stories for Rasa Core
+
 `data/nlu` - contains example NLU training data
+
 `demo` - contains custom action/api code
+
 `domain.yml` - the domain file for Core
+
 `nlu_tensorflow.yml` - the NLU config file
 
 
