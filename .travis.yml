@@ -14,12 +14,6 @@ script:
   .
 - docker push gcr.io/replicated-test/rasa-demo:v$TRAVIS_BUILD_NUMBER
 - docker push gcr.io/replicated-test/rasa-demo:latest
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: "./docker-deploy.sh"
-  on:
-    branch: master
 addons:
   ssh_known_hosts:
   - 35.206.176.121
