@@ -5,16 +5,6 @@
         "email"
       ]
     },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    },
     "action_store_job": {
       "slots": [
         "job_function"
@@ -40,9 +30,19 @@
         "company_name"
       ]
     },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
       ]
     },
     "utter_thumbsup": {
@@ -54,25 +54,28 @@
     "action_pause": {
       "slots": []
     },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_confirm_salesrequest": {
+    "utter_ask_goal": {
       "slots": []
     },
     "utter_contact_email": {
       "slots": []
     },
-    "utter_canthelp": {
-      "slots": []
-    },
-    "utter_ask_goal": {
+    "utter_confirm_salesrequest": {
       "slots": []
     },
     "action_chitchat": {
       "slots": []
     },
-    "utter_noworries": {
+    "utter_nohelp": {
+      "slots": []
+    },
+    "utter_bye": {
+      "slots": []
+    },
+    "utter_canthelp": {
+      "slots": []
+    },
+    "utter_possibilities": {
       "slots": []
     }
   },

@@ -111,7 +111,8 @@ class ActionChitchat(Action):
 
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
-                      'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa']:
+                      'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa',
+                      'ask_isbot']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 

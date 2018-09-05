@@ -2,6 +2,7 @@
   "states": [
     "intent_ask_builder",
     "intent_ask_howdoing",
+    "intent_ask_isbot",
     "intent_ask_weather",
     "intent_ask_whatisrasa",
     "intent_ask_whatspossible",

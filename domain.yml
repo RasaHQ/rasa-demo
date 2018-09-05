@@ -19,6 +19,7 @@ intents:
   - ask_howdoing
   - ask_whatspossible
   - ask_whatisrasa
+  - ask_isbot
   - out_of_scope
   - thank
   - ask_whoisit
@@ -148,11 +149,13 @@ templates:
   utter_canthelp:
     - text: "I'm sorry I couldn't help you. If you have general questions about the Stack, please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com for anything else."
   utter_nohelp:
-    - text: "I'm afraid I can't help you then! For now I only have two skills:"
+    - text: "For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!"
   utter_thumbsup:
     - text: "👍"
   utter_cantsignup:
     - text: "I can't sign you up if you don't provide your email 😉"
+  utter_ask_isbot:
+    - text: "Yep I'm a bot!"
 
 actions:
   - utter_greet

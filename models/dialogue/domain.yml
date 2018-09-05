@@ -119,6 +119,8 @@ intents:
     use_entities: true
 - ask_whatisrasa:
     use_entities: true
+- ask_isbot:
+    use_entities: true
 - out_of_scope:
     use_entities: true
 - thank:
@@ -251,7 +253,8 @@ templates:
   utter_no_speak:
   - text: I'm afraid we can't chat then 😢
   utter_nohelp:
-  - text: "I'm afraid I can't help you then! For now I only have two skills:"
+  - text: For now that's all I can do, so feel free to try it out. If you have any
+      suggestions for what I should learn, let me know!
   utter_noworries:
   - text: No worries!
   - text: You're welcome!

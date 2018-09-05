@@ -178,3 +178,16 @@
 * out_of_scope
     - utter_out_of_scope
     - utter_possibilities
+
+# story number 6
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* ask_whoisit
+    - action_chitchat
+    - utter_ask_goal
+* ask_whatspossible
+    - action_chitchat
