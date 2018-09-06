@@ -37,4 +37,4 @@ RUN  pip install -e .
 
 EXPOSE 5001
 
-CMD ["python" ,"-m", "rasa_core_sdk.endpoint", "--actions", "demo.actions"]
+CMD ["python" ,"-m", "rasa_core_sdk.endpoint", "--actions", "demo.actions", "-p", "5001"]
