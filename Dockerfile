@@ -37,4 +37,4 @@ RUN  pip install -e .
 
 EXPOSE 5001
 
-CMD ["python", "demo/main.py"]
+CMD ["make", "run-actions"]
