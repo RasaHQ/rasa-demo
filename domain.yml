@@ -5,6 +5,7 @@ entities:
   - name
   - amount-of-money
   - number
+  - value
 
 intents:
   - enter_data: {use_entities: false}
@@ -25,6 +26,7 @@ intents:
   - ask_whoisit
   - bye
   - canthelp
+  - feedback
 
 slots:
   budget:
@@ -43,6 +45,8 @@ slots:
     type: text
   data_stored:
     type: bool
+  feedback_value:
+    type: unfeaturized
 
 templates:
   utter_ask_budget:
@@ -144,6 +148,13 @@ templates:
     - text: "I'm afraid I didn't get what you just said. Could you rephrase that?"
     - text: "I didn't quite get that, could you rephrase your message?"
     - text: "Could you rephrase your message? I didn't get it, I'm sorry."
+  utter_ask_feedback:
+    - text: "How is this conversation going?"
+      buttons:
+        - title: "👍"
+          payload: "/feedback{\"feedback_value\":\"positive\"}"
+        - title: "👎"
+          payload: "/feedback{\"feedback_value\":\"negative\"}"
   utter_thank_usecase:
     - text: "Cool, thank you!"
   utter_canthelp:
@@ -152,6 +163,8 @@ templates:
     - text: "For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!"
   utter_thumbsup:
     - text: "👍"
+    - text: "ok"
+    - text: "got it"
   utter_cantsignup:
     - text: "I can't sign you up if you don't provide your email 😉"
   utter_ask_isbot:
@@ -189,13 +202,14 @@ actions:
   - utter_nohelp
   - utter_thumbsup
   - utter_cantsignup
-  - demo.actions.ActionSubscribeNewsletter
-  - demo.actions.ActionStoreSalesInfo
-  - demo.actions.ActionStoreBudget
-  - demo.actions.ActionStoreUsecase
-  - demo.actions.ActionChitchat
-  - demo.actions.ActionStoreName
-  - demo.actions.ActionStoreCompany
-  - demo.actions.ActionStoreJob
-  - demo.actions.ActionStoreEmail
-  - demo.actions.ActionPause
+  - utter_ask_feedback
+  - action_subscribe_newsletter
+  - action_store_sales_info
+  - action_store_budget
+  - action_store_usecase
+  - action_chitchat
+  - action_store_name
+  - action_store_company
+  - action_store_job
+  - action_store_email
+  - action_pause

@@ -140,6 +140,11 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
+
 
 ## say random stuff, then accept privacy policy - newsletter
 * greet
@@ -164,6 +169,10 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
 
 ## just newsletter + confirm
 * greet
@@ -184,6 +193,10 @@
     - utter_confirmationemail
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
 
 ## newsletter, don't give email once
@@ -334,6 +347,11 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
+
 
 ## just newsletter (with email already)
 * greet
@@ -367,6 +385,11 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
+
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -402,6 +425,11 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
+
 
 ## just newsletter
 * greet
@@ -789,6 +817,10 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -872,6 +904,10 @@
     - utter_docu
 * mood_confirm
     - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
 
 ## sales, then newsletter (already subscribed), then confirm
 * greet
@@ -922,6 +958,10 @@
     - utter_already_subscribed
     - utter_docu
 * mood_confirm
+    - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
 
 ## neither options
@@ -1009,3 +1049,34 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+
+## chitchat --> email --> no email
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* ask_whatspossible
+    - action_chitchat
+    - utter_ask_goal
+* ask_weather
+    - action_chitchat
+    - utter_ask_goal
+* ask_weather
+    - action_chitchat
+* enter_data
+    - action_default_fallback
+* ask_weather
+    - action_chitchat
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* deny
+    - utter_cantsignup
+* mood_confirm
+    - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
