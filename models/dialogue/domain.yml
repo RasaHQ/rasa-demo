@@ -1,7 +1,6 @@
 %YAML 1.1
 ---
-action_factory: null
-action_names:
+actions:
 - utter_greet
 - utter_ask_usecase
 - utter_ask_businessmail
@@ -43,48 +42,6 @@ action_names:
 - action_store_job
 - action_store_email
 - action_pause
-actions:
-- utter_greet
-- utter_ask_usecase
-- utter_ask_businessmail
-- utter_ask_jobfunction
-- utter_ask_email
-- utter_ask_budget
-- utter_ask_company
-- utter_ask_goal
-- utter_inform_privacypolicy
-- utter_moreinformation
-- utter_confirm_salesrequest
-- utter_docu
-- utter_confirmationemail
-- utter_sales_contact
-- utter_already_subscribed
-- utter_contact_email
-- utter_no_speak
-- utter_out_of_scope
-- utter_possibilities
-- utter_ask_name
-- utter_change_mind
-- utter_must_accept
-- utter_noworries
-- utter_bye
-- utter_awesome
-- utter_great
-- utter_thank_usecase
-- utter_canthelp
-- utter_nohelp
-- utter_thumbsup
-- utter_cantsignup
-- demo.actions.ActionSubscribeNewsletter
-- demo.actions.ActionStoreSalesInfo
-- demo.actions.ActionStoreBudget
-- demo.actions.ActionStoreUsecase
-- demo.actions.ActionChitchat
-- demo.actions.ActionStoreName
-- demo.actions.ActionStoreCompany
-- demo.actions.ActionStoreJob
-- demo.actions.ActionStoreEmail
-- demo.actions.ActionPause
 config:
   store_entities_as_slots: true
 entities:
@@ -178,6 +135,8 @@ templates:
   - text: I'm great! Thanks for asking.
   - text: I'm good, thanks!
   - text: A little bit too warm, otherwise fine.
+  utter_ask_isbot:
+  - text: Yep I'm a bot!
   utter_ask_jobfunction:
   - text: What's your job? 🕴
   utter_ask_name:
