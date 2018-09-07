@@ -108,7 +108,7 @@ class ActionChitchat(Action):
 
     def run(self, dispatcher, tracker, domain):
 
-        intent = tracker.latest_message.intent.get('name')
+        intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
