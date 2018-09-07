@@ -2,7 +2,18 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "email",
+        "feedback_value"
+      ]
+    },
+    "action_store_email": {
+      "slots": [
         "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
       ]
     },
     "action_store_job": {
@@ -30,37 +41,33 @@
         "company_name"
       ]
     },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
       ]
     },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    },
-    "utter_thumbsup": {
-      "slots": []
-    },
-    "utter_docu": {
+    "utter_possibilities": {
       "slots": []
     },
     "action_pause": {
       "slots": []
     },
+    "utter_docu": {
+      "slots": []
+    },
     "utter_ask_goal": {
       "slots": []
     },
-    "utter_contact_email": {
+    "utter_canthelp": {
       "slots": []
     },
     "utter_confirm_salesrequest": {
+      "slots": []
+    },
+    "utter_thumbsup": {
+      "slots": []
+    },
+    "utter_cantsignup": {
       "slots": []
     },
     "action_chitchat": {
@@ -69,13 +76,10 @@
     "utter_nohelp": {
       "slots": []
     },
-    "utter_bye": {
+    "utter_great": {
       "slots": []
     },
-    "utter_canthelp": {
-      "slots": []
-    },
-    "utter_possibilities": {
+    "utter_contact_email": {
       "slots": []
     }
   },

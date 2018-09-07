@@ -1163,14 +1163,10 @@
     - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
-    - utter_ask_goal
 * ask_weather
     - action_chitchat
-    - utter_ask_goal
 * ask_weather
     - action_chitchat
-* enter_data
-    - action_default_fallback
 * ask_weather
     - action_chitchat
 * signup_newsletter
