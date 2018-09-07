@@ -46,40 +46,34 @@
         "data_stored"
       ]
     },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "action_pause": {
-      "slots": []
-    },
     "utter_docu": {
       "slots": []
     },
     "utter_ask_goal": {
       "slots": []
     },
-    "utter_canthelp": {
-      "slots": []
-    },
-    "utter_confirm_salesrequest": {
+    "action_pause": {
       "slots": []
     },
     "utter_thumbsup": {
       "slots": []
     },
-    "utter_cantsignup": {
+    "utter_canthelp": {
       "slots": []
     },
     "action_chitchat": {
       "slots": []
     },
-    "utter_nohelp": {
-      "slots": []
-    },
-    "utter_great": {
+    "utter_possibilities": {
       "slots": []
     },
     "utter_contact_email": {
+      "slots": []
+    },
+    "utter_confirm_salesrequest": {
+      "slots": []
+    },
+    "utter_great": {
       "slots": []
     }
   },
