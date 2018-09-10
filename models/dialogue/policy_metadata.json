@@ -1,10 +1,73 @@
 {
+  "rasa_core": "0.11.3",
+  "max_histories": [
+    5
+  ],
+  "policy_names": [
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ],
+  "python": "3.5.4",
   "action_fingerprints": {
+    "action_store_company": {
+      "slots": [
+        "company_name"
+      ]
+    },
+    "utter_great": {
+      "slots": []
+    },
+    "utter_thumbsup": {
+      "slots": []
+    },
+    "utter_confirm_salesrequest": {
+      "slots": []
+    },
+    "utter_switch_dialogflow": {
+      "slots": []
+    },
+    "utter_ask_goal": {
+      "slots": []
+    },
+    "utter_possibilities": {
+      "slots": []
+    },
+    "action_store_sales_info": {
+      "slots": [
+        "data_stored"
+      ]
+    },
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
+    },
+    "action_store_name": {
+      "slots": [
+        "person_name"
+      ]
+    },
     "action_listen": {
       "slots": [
         "email",
         "feedback_value"
       ]
+    },
+    "action_store_job": {
+      "slots": [
+        "job_function"
+      ]
+    },
+    "utter_nohelp": {
+      "slots": []
+    },
+    "action_pause": {
+      "slots": []
+    },
+    "utter_docu": {
+      "slots": []
+    },
+    "utter_noworries": {
+      "slots": []
     },
     "action_store_email": {
       "slots": [
@@ -16,77 +79,17 @@
         "subscribed"
       ]
     },
-    "action_store_job": {
-      "slots": [
-        "job_function"
-      ]
-    },
-    "action_store_usecase": {
-      "slots": [
-        "use_case"
-      ]
-    },
     "action_store_budget": {
       "slots": [
         "budget"
       ]
     },
-    "action_store_name": {
-      "slots": [
-        "person_name"
-      ]
-    },
-    "action_store_company": {
-      "slots": [
-        "company_name"
-      ]
-    },
-    "action_store_sales_info": {
-      "slots": [
-        "data_stored"
-      ]
-    },
-    "utter_docu": {
-      "slots": []
-    },
-    "utter_ask_goal": {
-      "slots": []
-    },
-    "action_pause": {
-      "slots": []
-    },
-    "utter_thumbsup": {
-      "slots": []
-    },
-    "utter_canthelp": {
+    "utter_contact_email": {
       "slots": []
     },
     "action_chitchat": {
       "slots": []
-    },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_contact_email": {
-      "slots": []
-    },
-    "utter_confirm_salesrequest": {
-      "slots": []
-    },
-    "utter_great": {
-      "slots": []
     }
   },
-  "rasa_core": "0.10.4",
-  "max_histories": [
-    6,
-    6,
-    null
-  ],
-  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
-  "policy_names": [
-    "rasa_core.policies.memoization.MemoizationPolicy",
-    "rasa_core.policies.keras_policy.KerasPolicy",
-    "rasa_core.policies.fallback.FallbackPolicy"
-  ]
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble"
 }

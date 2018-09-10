@@ -238,6 +238,7 @@
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
 
+
 ## story number 8
 * greet
     - utter_greet
@@ -462,3 +463,4 @@
     - utter_possibilities
 * enter_data
     - utter_possibilities
+
