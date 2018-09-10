@@ -6,7 +6,7 @@
     - utter_no_speak
     - utter_change_mind
     - utter_inform_privacypolicy
-* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_no_speak
     - utter_bye
     - action_pause
@@ -15,10 +15,10 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
-* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_no_speak
     - utter_bye
     - action_pause
@@ -83,7 +83,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
@@ -209,7 +209,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
