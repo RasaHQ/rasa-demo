@@ -202,6 +202,7 @@ actions:
   - utter_nohelp
   - utter_thumbsup
   - utter_cantsignup
+  - utter_ask_feedback
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget

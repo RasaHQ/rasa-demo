@@ -32,6 +32,7 @@ actions:
 - utter_nohelp
 - utter_thumbsup
 - utter_cantsignup
+- utter_ask_feedback
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -51,6 +52,7 @@ entities:
 - name
 - amount-of-money
 - number
+- value
 intents:
 - enter_data:
     use_entities: false
@@ -88,6 +90,8 @@ intents:
     use_entities: true
 - canthelp:
     use_entities: true
+- feedback:
+    use_entities: true
 slots:
   budget:
     initial_value: null
@@ -101,6 +105,9 @@ slots:
   email:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  feedback_value:
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   job_function:
     initial_value: null
     type: rasa_core.slots.TextSlot
@@ -128,6 +135,13 @@ templates:
   - text: What company do you work for?
   utter_ask_email:
   - text: What's your email address?
+  utter_ask_feedback:
+  - buttons:
+    - payload: /feedback{"feedback_value":"positive"}
+      title: 👍
+    - payload: /feedback{"feedback_value":"negative"}
+      title: 👎
+    text: How is this conversation going?
   utter_ask_goal:
   - text: Do you want more Rasa in your life? You can subscribe to our newsletter
       or you can talk to our nice sales team 🧞‍
@@ -232,3 +246,5 @@ templates:
   - text: Cool, thank you!
   utter_thumbsup:
   - text: 👍
+  - text: ok
+  - text: got it
