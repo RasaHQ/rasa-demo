@@ -22,6 +22,7 @@
     - slot{"subscribed":false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 * thank
     - utter_noworries
 * contact_sales
@@ -55,6 +56,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## story number 2
 * greet
@@ -74,9 +76,9 @@
     - slot{"subscribed":false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 * out_of_scope
-    - utter_out_of_scope
-    - utter_possibilities
+    - utter_thumbsup
 
 ## story number 3
 * greet
@@ -124,6 +126,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## story number 4
 * greet
@@ -144,6 +147,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * thank
     - utter_noworries
 * ask_whatspossible
@@ -173,6 +177,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * thank
     - utter_noworries
 * out_of_scope
@@ -237,6 +242,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## story number 8
 * greet
@@ -315,8 +321,9 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * enter_data
-    - utter_possibilities
+    - utter_thumbsup
 
 ## story number 12
 * greet
@@ -341,8 +348,9 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * enter_data
-    - utter_possibilities
+    - utter_thumbsup
 
 ## story number 13
 * greet
@@ -367,6 +375,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 

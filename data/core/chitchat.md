@@ -66,6 +66,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 
@@ -90,6 +91,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 
@@ -111,6 +113,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 
@@ -132,6 +135,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
@@ -150,6 +154,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 
@@ -170,6 +175,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -191,6 +197,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 
@@ -214,6 +221,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
 
@@ -238,6 +246,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter
 * greet
@@ -260,6 +269,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter - already subscribed
 * greet
@@ -281,6 +291,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter - already subscribed
 * greet
@@ -302,6 +313,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 
 ## just sales
 * greet
@@ -344,6 +356,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## just sales
 * greet
@@ -386,6 +399,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## just sales
 * greet
@@ -428,6 +442,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 
 ## just sales
@@ -472,6 +487,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 
 
@@ -516,6 +532,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## just sales
 * greet
@@ -558,6 +575,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 
 ## just sales
 * greet
@@ -600,3 +618,4 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
