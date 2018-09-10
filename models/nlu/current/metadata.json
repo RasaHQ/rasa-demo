@@ -1,4 +1,5 @@
 {
+    "trained_at": "20180910-111535",
     "language": "en",
     "pipeline": [
         {
@@ -6,7 +7,8 @@
             "class": "rasa_nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer"
         },
         {
-            "BILOU_flag": true,
+            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
+            "L1_c": 0.1,
             "features": [
                 [
                     "low",
@@ -32,73 +34,59 @@
                     "upper"
                 ]
             ],
-            "max_iterations": 50,
-            "L1_c": 0.1,
+            "BILOU_flag": true,
             "L2_c": 0.1,
+            "max_iterations": 50,
             "name": "ner_crf",
-            "classifier_file": "crf_model.pkl",
-            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor"
+            "classifier_file": "crf_model.pkl"
         },
         {
-            "token_pattern": "(?u)\\b\\w+\\b",
-            "strip_accents": null,
-            "stop_words": null,
-            "min_df": 1,
-            "max_df": 1.0,
-            "min_ngram": 1,
-            "max_ngram": 1,
+            "class": "rasa_nlu.featurizers.count_vectors_featurizer.CountVectorsFeaturizer",
             "max_features": null,
+            "token_pattern": "(?u)\\b\\w+\\b",
             "lowercase": true,
+            "strip_accents": null,
+            "min_df": 1,
             "OOV_token": "oov",
             "OOV_words": [],
-            "name": "intent_featurizer_count_vectors",
+            "max_ngram": 1,
+            "min_ngram": 1,
+            "stop_words": null,
             "featurizer_file": "intent_featurizer_count_vectors.pkl",
-            "class": "rasa_nlu.featurizers.count_vectors_featurizer.CountVectorsFeaturizer"
+            "name": "intent_featurizer_count_vectors",
+            "max_df": 1.0
         },
         {
-            "num_hidden_layers_a": 2,
+            "similarity_type": "cosine",
+            "C2": 0.002,
+            "mu_pos": 0.8,
+            "mu_neg": -0.4,
+            "intent_split_symbol": "_",
+            "classifier_file": "intent_classifier_tensorflow_embedding.ckpt",
+            "embed_dim": 20,
+            "num_neg": 20,
+            "droprate": 0.2,
+            "use_max_sim_neg": true,
+            "epochs": 300,
+            "class": "rasa_nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier",
             "hidden_layer_size_a": [
                 256,
                 128
             ],
+            "C_emb": 0.8,
             "num_hidden_layers_b": 0,
+            "num_hidden_layers_a": 2,
+            "name": "intent_classifier_tensorflow_embedding",
             "hidden_layer_size_b": [],
+            "evaluate_on_num_examples": 1000,
+            "evaluate_every_num_epochs": 10,
+            "intent_tokenization_flag": false,
             "batch_size": [
                 64,
                 256
-            ],
-            "epochs": 300,
-            "embed_dim": 20,
-            "mu_pos": 0.8,
-            "mu_neg": -0.4,
-            "similarity_type": "cosine",
-            "num_neg": 20,
-            "use_max_sim_neg": true,
-            "C2": 0.002,
-            "C_emb": 0.8,
-            "droprate": 0.2,
-            "intent_tokenization_flag": false,
-            "intent_split_symbol": "_",
-            "evaluate_every_num_epochs": 10,
-            "evaluate_on_num_examples": 1000,
-            "name": "intent_classifier_tensorflow_embedding",
-            "classifier_file": "intent_classifier_tensorflow_embedding.ckpt",
-            "class": "rasa_nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier"
-        },
-        {
-            "dimensions": [
-                "email",
-                "number",
-                "amount-of-money"
-            ],
-            "url": "http://localhost:8000",
-            "locale": null,
-            "timezone": null,
-            "name": "ner_duckling_http",
-            "class": "rasa_nlu.extractors.duckling_http_extractor.DucklingHTTPExtractor"
+            ]
         }
     ],
     "training_data": "training_data.json",
-    "trained_at": "20180810-145830",
-    "rasa_nlu_version": "0.13.0"
+    "rasa_nlu_version": "0.13.1"
 }

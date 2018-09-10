@@ -6,6 +6,7 @@ entities:
   - amount-of-money
   - number
   - value
+  - current_api
 
 intents:
   - enter_data: {use_entities: false}
@@ -27,6 +28,9 @@ intents:
   - bye
   - canthelp
   - feedback
+  - switch
+  - how_to_get_started
+  - technical_question
 
 slots:
   budget:
@@ -80,6 +84,16 @@ templates:
   utter_docu:
     - text: "If you want some more awesome Rasa content, check out our forum:
       https://forum.rasa.com/"
+  utter_quickstart:
+    - text: "we have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
+  utter_quickstart_nlu_only:
+    - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
+  utter_ask_migration:
+    - text: "Are you starting a new project, or looking to switch over from LUIS, DialogFlow, or another API?"
+  utter_switch_dialogflow:
+    - text: "We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/."
+  utter_switch_luis:
+    - text: "We have a guide for migrating from LUIS here: http://rasa.com/docs/getting-started/luis/."
   utter_greet:
     - text: "Hey there, welcome to Rasa!"
   utter_inform_privacypolicy:
@@ -203,6 +217,11 @@ actions:
   - utter_thumbsup
   - utter_cantsignup
   - utter_ask_feedback
+  - utter_quickstart
+  - utter_quickstart_nlu_only
+  - utter_ask_migration
+  - utter_switch_dialogflow
+  - utter_switch_luis
   - demo.actions.ActionSubscribeNewsletter
   - demo.actions.ActionStoreSalesInfo
   - demo.actions.ActionStoreBudget

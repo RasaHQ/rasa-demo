@@ -1256,3 +1256,54 @@
 - cool thanks
 - thanks for forum link, I'll check it out
 - thanks!
+
+## intent:how_to_get_started
+- how do I get started with Rasa
+- how do I use rasa
+- what is the difference between rasa nlu and rasa core
+- how to start with rasa
+- how to start with it
+- where to start the development of rasa
+- WHAT IS RASA
+- WHAT IS IT
+- so, how do I use rasa?
+- can i just test features without having to deal with your predefined conversation
+- can you guide me know to create knowledge base chatbot
+- how can I learn rasa
+- i want to use rasa to build my chatbot
+- how do i get rasa core
+
+## intent:technical_question
+- what is duckling
+- where to train intents in rasa?
+- duckling
+- dicklung
+- what is duckling
+- i need a help to integrate rasa with a messenger
+- what infrastructure is required to run a bot?
+- can you help me with this problem
+- help me wih the installation
+- having trouble with rasa installation
+- i am having trouble setting this up
+- how about interactive learning
+- interactive learning?
+
+
+## intent:new_project
+- I'm starting a brand new project
+- new project
+- starting fresh
+- fresh start
+- starting a new project
+- beginning
+- I am going to begin a new project
+- this is a new project
+
+## intent:switch
+- I currently use [dialog flow](current_api:dialogflow)
+- I currently use [LUIS](current_api:luis)
+- I use [luis](current_api) at the moment
+- [luis](current_api) atm
+- switching from [DialogFlow](current_api:dialogflow)
+- I use [DialogFlow](current_api:dialogflow)
+
