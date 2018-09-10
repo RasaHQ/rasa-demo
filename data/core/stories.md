@@ -6,7 +6,7 @@
     - utter_no_speak
     - utter_change_mind
     - utter_inform_privacypolicy
-* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_no_speak
     - utter_bye
     - action_pause
@@ -15,10 +15,10 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
-* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_no_speak
     - utter_bye
     - action_pause
@@ -73,12 +73,17 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
+
 
 ## say random stuff, then accept privacy policy - sales
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
@@ -115,6 +120,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## deny, then accept privacy policy - newsletter
 * greet
@@ -138,8 +147,37 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
+
+## deny, then accept privacy policy - newsletter
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* deny
+    - utter_no_speak
+    - utter_change_mind
+    - utter_inform_privacypolicy
 * mood_confirm
-    - utter_thumbsup
+    - utter_awesome
+    - utter_ask_goal
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+    - action_store_email
+    - slot{"email": "maxmeier@firma.de"}
+- action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_awesome
+    - utter_confirmationemail
+    - utter_docu
+    - utter_ask_feedback
+* mood_confirm
+    - utter_great
+
 
 ## say random stuff, then accept privacy policy - newsletter
 * greet
@@ -162,7 +200,34 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
+
+## say random stuff, then accept privacy policy - newsletter
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+    - utter_must_accept
+    - utter_inform_privacypolicy
 * mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+    - action_store_email
+    - slot{"email": "maxmeier@firma.de"}
+- action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_awesome
+    - utter_confirmationemail
+    - utter_docu
+    - utter_ask_feedback
+* deny
     - utter_thumbsup
 
 ## just newsletter + confirm
@@ -183,8 +248,55 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
+
+## just newsletter + confirm
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+    - action_store_email
+    - slot{"email": "maxmeier@firma.de"}
+    - action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_awesome
+    - utter_confirmationemail
+    - utter_docu
+    - utter_ask_feedback
+* out_of_scope
+    - utter_thumbsup
+
+## just newsletter + confirm
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+    - action_store_email
+    - slot{"email": "maxmeier@firma.de"}
+    - action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_awesome
+    - utter_confirmationemail
+    - utter_docu
+    - utter_ask_feedback
+* enter_data
+    - utter_thumbsup
+
 
 ## newsletter, don't give email once
 * greet
@@ -250,6 +362,9 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - utter_great
 
 ## newsletter, don't give email twice then contact sales
 * greet
@@ -296,6 +411,9 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - utter_great
 
 ## newsletter, don't give email twice
 * greet
@@ -332,8 +450,11 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
+
 
 ## just newsletter (with email already)
 * greet
@@ -365,8 +486,11 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
+
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -400,8 +524,11 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
+
 
 ## just newsletter
 * greet
@@ -489,6 +616,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## newsletter (already subscribed) then sales
 * greet
@@ -538,6 +669,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## just sales
 * greet
@@ -577,6 +712,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## just sales + confirm
 * greet
@@ -616,8 +755,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
-* mood_confirm
-    - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## sales then newsletter
 * greet
@@ -736,8 +877,6 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
-    - utter_thumbsup
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -769,6 +908,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## newsletters (already subscribed), confirm, then sales
 * greet
@@ -787,7 +930,9 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
 * contact_sales
     - utter_moreinformation
@@ -820,6 +965,10 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
 
 ## sales, then newsletter, then confirm
 * greet
@@ -870,7 +1019,9 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
 
 ## sales, then newsletter (already subscribed), then confirm
@@ -921,7 +1072,9 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
-* mood_confirm
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
     - utter_thumbsup
 
 ## neither options
@@ -1009,3 +1162,34 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
+* feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - utter_great
+
+## chitchat --> email --> no email
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* ask_whatspossible
+    - action_chitchat
+* ask_weather
+    - action_chitchat
+* ask_weather
+    - action_chitchat
+* ask_weather
+    - action_chitchat
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* deny
+    - utter_cantsignup
+* mood_confirm
+    - utter_thumbsup
+    - utter_ask_feedback
+* feedback{"feedback_value": "negative"}
+    - slot{"feedback_value": "negative"}
+    - utter_thumbsup
