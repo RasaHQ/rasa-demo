@@ -6,6 +6,16 @@
         "feedback_value"
       ]
     },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
+    },
     "action_store_job": {
       "slots": [
         "job_function"
@@ -31,49 +41,33 @@
         "company_name"
       ]
     },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
       ]
     },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    },
-    "utter_ask_goal": {
-      "slots": []
-    },
-    "action_pause": {
+    "utter_ask_feedback": {
       "slots": []
     },
     "utter_thumbsup": {
       "slots": []
     },
-    "utter_canthelp": {
+    "action_pause": {
+      "slots": []
+    },
+    "action_chitchat": {
       "slots": []
     },
     "utter_canthelp": {
-      "slots": []
-    },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_contact_email": {
-      "slots": []
-    },
-    "utter_confirm_salesrequest": {
       "slots": []
     },
     "utter_great": {
+      "slots": []
+    },
+    "utter_nohelp": {
+      "slots": []
+    },
+    "utter_ask_goal": {
       "slots": []
     }
   },
