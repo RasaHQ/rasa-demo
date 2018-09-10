@@ -1108,7 +1108,6 @@
 - bots are bad
 - i dont like bots
  - do you have a phone number?
-- technical side of things?
 - where do you live?
 - how are akela's cats doing?
 - but I just told you that :(
@@ -1263,6 +1262,9 @@
 - what is the difference between rasa nlu and rasa core
 - how to start with rasa
 - how to start with it
+- how to build a bot?
+- how can I build a chatbot
+- what can I do with Rasa?
 - where to start the development of rasa
 - WHAT IS RASA
 - WHAT IS IT
@@ -1287,6 +1289,20 @@
 - i am having trouble setting this up
 - how about interactive learning
 - interactive learning?
+- technical side of things?
+- does rasa have all the same features as [luis](current_api)
+- is rasa better than [dialogflow](current_api)
+- should I use rasa instead of ibm Watson api
+- Is Rasa better than Dialogflow?
+- db processing
+- how do slots work
+- what components of Rasa are open source
+- how to integrate rasa chatbot with my website
+- how works rasa
+- with exceptions
+- which language is rasa programmed in
+- what technologies did u use to create more mature chatbot?
+- which technology is used to create you
 
 
 ## intent:new_project
@@ -1306,4 +1322,6 @@
 - [luis](current_api) atm
 - switching from [DialogFlow](current_api:dialogflow)
 - I use [DialogFlow](current_api:dialogflow)
+- i want to switch from [dialogflow](current_api) to Rasa
+- I want to move from [LUIS.ai](current_api:luis) to Rasa
 

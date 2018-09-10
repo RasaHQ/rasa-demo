@@ -1727,208 +1727,208 @@
         "intent": "enter_data"
       },
       {
-        "text": "I work for Bayer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Bayer",
             "end": 16,
+            "value": "Bayer",
+            "entity": "company",
             "start": 11
           }
-        ]
+        ],
+        "text": "I work for Bayer",
+        "intent": "enter_data"
       },
       {
-        "text": "The name of the company is Daimler",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Daimler",
             "end": 34,
+            "value": "Daimler",
+            "entity": "company",
             "start": 27
           }
-        ]
+        ],
+        "text": "The name of the company is Daimler",
+        "intent": "enter_data"
       },
       {
-        "text": "company: uber",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "uber",
             "end": 13,
+            "value": "uber",
+            "entity": "company",
             "start": 9
           }
-        ]
+        ],
+        "text": "company: uber",
+        "intent": "enter_data"
       },
       {
-        "text": "it's a small company from the US, the name is Microsoft",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Microsoft",
             "end": 55,
+            "value": "Microsoft",
+            "entity": "company",
             "start": 46
           }
-        ]
+        ],
+        "text": "it's a small company from the US, the name is Microsoft",
+        "intent": "enter_data"
       },
       {
-        "text": "it's a tech company, apple",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "apple",
             "end": 26,
+            "value": "apple",
+            "entity": "company",
             "start": 21
           }
-        ]
+        ],
+        "text": "it's a tech company, apple",
+        "intent": "enter_data"
       },
       {
-        "text": "microsoft",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
+            "end": 9,
             "value": "microsoft",
-            "end": 9,
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "microsoft",
+        "intent": "enter_data"
       },
       {
-        "text": "clue",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "clue",
             "end": 4,
+            "value": "clue",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "clue",
+        "intent": "enter_data"
       },
       {
-        "text": "SAP",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
+            "end": 3,
             "value": "SAP",
-            "end": 3,
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "SAP",
+        "intent": "enter_data"
       },
       {
-        "text": "IBM",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
+            "end": 3,
             "value": "IBM",
-            "end": 3,
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "IBM",
+        "intent": "enter_data"
       },
       {
-        "text": "t-mobile US",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "t-mobile US",
             "end": 11,
+            "value": "t-mobile US",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "t-mobile US",
+        "intent": "enter_data"
       },
       {
-        "text": "vodafone",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "vodafone",
             "end": 8,
+            "value": "vodafone",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "vodafone",
+        "intent": "enter_data"
       },
       {
-        "text": "accenture",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "accenture",
             "end": 9,
+            "value": "accenture",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "accenture",
+        "intent": "enter_data"
       },
       {
-        "text": "McKinsey Germany",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "McKinsey Germany",
             "end": 16,
+            "value": "McKinsey Germany",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "McKinsey Germany",
+        "intent": "enter_data"
       },
       {
-        "text": "BCG brazil",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "BCG brazil",
             "end": 10,
+            "value": "BCG brazil",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "BCG brazil",
+        "intent": "enter_data"
       },
       {
-        "text": "BCG digital ventures",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "BCG digital ventures",
             "end": 20,
+            "value": "BCG digital ventures",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "BCG digital ventures",
+        "intent": "enter_data"
       },
       {
-        "text": "I work for Stanford University",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Stanford University",
             "end": 30,
+            "value": "Stanford University",
+            "entity": "company",
             "start": 11
           }
-        ]
+        ],
+        "text": "I work for Stanford University",
+        "intent": "enter_data"
       },
       {
-        "text": "I work for the AI research group of the turing centre of the UBC, Vancouver, Canada",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "AI research group of the turing centre of the UBC, Vancouver, Canada",
             "end": 83,
+            "value": "AI research group of the turing centre of the UBC, Vancouver, Canada",
+            "entity": "company",
             "start": 15
           }
-        ]
+        ],
+        "text": "I work for the AI research group of the turing centre of the UBC, Vancouver, Canada",
+        "intent": "enter_data"
       },
       {
         "text": "maxmeier@firma.de",
@@ -1999,376 +1999,376 @@
         "intent": "enter_data"
       },
       {
-        "text": "Product Manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Product Manager",
             "end": 15,
+            "value": "Product Manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "Product Manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a product manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "product manager",
             "end": 21,
+            "value": "product manager",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a product manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I work as a project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 27,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 12
           }
-        ]
+        ],
+        "text": "I work as a project manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm the developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 17,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 8
           }
-        ]
+        ],
+        "text": "I'm the developer",
+        "intent": "enter_data"
       },
       {
-        "text": "data analyst",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "data analyst",
             "end": 12,
+            "value": "data analyst",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "data analyst",
+        "intent": "enter_data"
       },
       {
-        "text": "data scientist",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 14,
             "value": "data scientist",
-            "end": 14,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "data scientist",
+        "intent": "enter_data"
       },
       {
-        "text": "dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "dev",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "dev",
+        "intent": "enter_data"
       },
       {
-        "text": "engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 8,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "brand manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 13,
             "value": "brand manager",
-            "end": 13,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "brand manager",
+        "intent": "enter_data"
       },
       {
-        "text": "marketing",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "marketing",
             "end": 9,
+            "value": "marketing",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "marketing",
+        "intent": "enter_data"
       },
       {
-        "text": "sales manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "sales manager",
             "end": 13,
+            "value": "sales manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "sales manager",
+        "intent": "enter_data"
       },
       {
-        "text": "growth manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "growth manager",
             "end": 14,
+            "value": "growth manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "growth manager",
+        "intent": "enter_data"
       },
       {
-        "text": "CTO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "CTO",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "CTO",
+        "intent": "enter_data"
       },
       {
-        "text": "CEO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "CEO",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "CEO",
+        "intent": "enter_data"
       },
       {
-        "text": "COO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "COO",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "COO",
+        "intent": "enter_data"
       },
       {
-        "text": "assistant to the CEO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "assistant to the CEO",
             "end": 20,
+            "value": "assistant to the CEO",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "assistant to the CEO",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm the lead engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "lead engineer",
             "end": 21,
+            "value": "lead engineer",
+            "entity": "jobfunction",
             "start": 8
           }
-        ]
+        ],
+        "text": "I'm the lead engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a python developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "python developer",
             "end": 22,
+            "value": "python developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a python developer",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm an AI researcher",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "AI researcher",
             "end": 20,
+            "value": "AI researcher",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm an AI researcher",
+        "intent": "enter_data"
       },
       {
-        "text": "Max Meier",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Max Meier",
             "end": 9,
+            "value": "Max Meier",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Max Meier",
+        "intent": "enter_data"
       },
       {
-        "text": "My name is Max Meier",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Max Meier",
             "end": 20,
+            "value": "Max Meier",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "My name is Max Meier",
+        "intent": "enter_data"
       },
       {
-        "text": "Ralph White",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Ralph White",
             "end": 11,
+            "value": "Ralph White",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Ralph White",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm Tom Miller",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Tom Miller",
             "end": 14,
+            "value": "Tom Miller",
+            "entity": "name",
             "start": 4
           }
-        ]
+        ],
+        "text": "I'm Tom Miller",
+        "intent": "enter_data"
       },
       {
-        "text": "Ann Snyder",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
+            "end": 10,
             "value": "Ann Snyder",
-            "end": 10,
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Ann Snyder",
+        "intent": "enter_data"
       },
       {
-        "text": "Victoria McMillan",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Victoria McMillan",
             "end": 17,
+            "value": "Victoria McMillan",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Victoria McMillan",
+        "intent": "enter_data"
       },
       {
-        "text": "Denise Perry",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
+            "end": 12,
             "value": "Denise Perry",
-            "end": 12,
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Denise Perry",
+        "intent": "enter_data"
       },
       {
-        "text": "Bob Geldorf",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Bob Geldorf",
             "end": 11,
+            "value": "Bob Geldorf",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Bob Geldorf",
+        "intent": "enter_data"
       },
       {
-        "text": "Susan Catterfeld",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Susan Catterfeld",
             "end": 16,
+            "value": "Susan Catterfeld",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Susan Catterfeld",
+        "intent": "enter_data"
       },
       {
-        "text": "Taylor Shwed",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Taylor Shwed",
             "end": 12,
+            "value": "Taylor Shwed",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Taylor Shwed",
+        "intent": "enter_data"
       },
       {
-        "text": "Meredith Grey",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Meredith Grey",
             "end": 13,
+            "value": "Meredith Grey",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Meredith Grey",
+        "intent": "enter_data"
       },
       {
-        "text": "Alex Karev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Alex Karev",
             "end": 10,
+            "value": "Alex Karev",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Alex Karev",
+        "intent": "enter_data"
       },
       {
         "text": "We plan to build a sales bot to increase our sales by 500%.",
@@ -2387,116 +2387,116 @@
         "intent": "enter_data"
       },
       {
-        "text": "I work in project management",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project management",
             "end": 28,
+            "value": "project management",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "I work in project management",
+        "intent": "enter_data"
       },
       {
         "text": "i'm a developer",
         "intent": "enter_data"
       },
       {
-        "text": "my name is linda",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "linda",
             "end": 16,
+            "value": "linda",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is linda",
+        "intent": "enter_data"
       },
       {
-        "text": "I work in innvoation",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "innvoation",
             "end": 20,
+            "value": "innvoation",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "I work in innvoation",
+        "intent": "enter_data"
       },
       {
-        "text": "my job function is developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 28,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 19
           }
-        ]
+        ],
+        "text": "my job function is developer",
+        "intent": "enter_data"
       },
       {
-        "text": "I am responsible for our innovation department",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "innovation department",
             "end": 46,
+            "value": "innovation department",
+            "entity": "jobfunction",
             "start": 25
           }
-        ]
+        ],
+        "text": "I am responsible for our innovation department",
+        "intent": "enter_data"
       },
       {
-        "text": "I work as a frontend dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "frontend dev",
             "end": 24,
+            "value": "frontend dev",
+            "entity": "jobfunction",
             "start": 12
           }
-        ]
+        ],
+        "text": "I work as a frontend dev",
+        "intent": "enter_data"
       },
       {
-        "text": "project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 15,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "project manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 21,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a project manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 19,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 4
           }
-        ]
+        ],
+        "text": "I'm project manager",
+        "intent": "enter_data"
       },
       {
         "text": "it's foo@bar.com",
@@ -2507,16 +2507,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "ACME Mops",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "ACME Mops",
             "end": 9,
+            "value": "ACME Mops",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "ACME Mops",
+        "intent": "enter_data"
       },
       {
         "text": "mrmop@mops.app",
@@ -2527,16 +2527,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a janitor",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "janitor",
             "end": 13,
+            "value": "janitor",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a janitor",
+        "intent": "enter_data"
       },
       {
         "text": "My email is linda@linda.linda",
@@ -2547,16 +2547,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 15,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a developer",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a cool bot",
@@ -2567,92 +2567,92 @@
         "intent": "enter_data"
       },
       {
-        "text": "manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "manager",
             "end": 7,
+            "value": "manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "manager",
+        "intent": "enter_data"
       },
       {
         "text": "adele@gmx.com",
         "intent": "enter_data"
       },
       {
-        "text": "my name is marc",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "marc",
             "end": 15,
+            "value": "marc",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is marc",
+        "intent": "enter_data"
       },
       {
         "text": "one trillion dollar",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a full stack developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "full stack developer",
             "end": 25,
+            "value": "full stack developer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "I'm a full stack developer",
+        "intent": "enter_data"
       },
       {
         "text": "moabit@yoga.com",
         "intent": "enter_data"
       },
       {
-        "text": "it's the moabit yoga studio",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "moabit yoga studio",
             "end": 27,
+            "value": "moabit yoga studio",
+            "entity": "company",
             "start": 9
           }
-        ]
+        ],
+        "text": "it's the moabit yoga studio",
+        "intent": "enter_data"
       },
       {
-        "text": "my name is oli miller",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "oli miller",
             "end": 21,
+            "value": "oli miller",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is oli miller",
+        "intent": "enter_data"
       },
       {
         "text": "100000k",
         "intent": "enter_data"
       },
       {
-        "text": "I'm in project mgmt",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project mgmt",
             "end": 19,
+            "value": "project mgmt",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm in project mgmt",
+        "intent": "enter_data"
       },
       {
         "text": "10000 dollars",
@@ -2667,44 +2667,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm in business ",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "business ",
             "end": 16,
+            "value": "business ",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm in business ",
+        "intent": "enter_data"
       },
       {
         "text": "5 mln",
         "intent": "enter_data"
       },
       {
-        "text": "Alex",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "alex",
             "end": 4,
+            "value": "alex",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Alex",
+        "intent": "enter_data"
       },
       {
-        "text": "my name is loretta meier",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "loretta meier",
             "end": 24,
+            "value": "loretta meier",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is loretta meier",
+        "intent": "enter_data"
       },
       {
         "text": "I wanna build a super bot to send me cute animal pictures",
@@ -2715,16 +2715,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 9,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "Developer",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a sales bot",
@@ -2743,16 +2743,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Mr. Mop",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Mr. Mop",
             "end": 7,
+            "value": "Mr. Mop",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Mr. Mop",
+        "intent": "enter_data"
       },
       {
         "text": "loretta@strawberry-ice.come because I work in the department for strawberry ice",
@@ -2771,56 +2771,56 @@
         "intent": "enter_data"
       },
       {
-        "text": "Philip",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Philip",
             "end": 6,
+            "value": "Philip",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Philip",
+        "intent": "enter_data"
       },
       {
-        "text": "Bosch",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Bosch",
             "end": 5,
+            "value": "Bosch",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Bosch",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build an FAQ bot",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a python developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "python developer",
             "end": 22,
+            "value": "python developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a python developer",
+        "intent": "enter_data"
       },
       {
-        "text": "Jim",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jim",
             "end": 3,
+            "value": "Jim",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Jim",
+        "intent": "enter_data"
       },
       {
         "text": "hello@hello.com",
@@ -2831,16 +2831,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a machine learning engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "machine learning engineer",
             "end": 31,
+            "value": "machine learning engineer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a machine learning engineer",
+        "intent": "enter_data"
       },
       {
         "text": "we don't have one",
@@ -2851,92 +2851,92 @@
         "intent": "enter_data"
       },
       {
-        "text": "Helvetia",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Helvetia",
             "end": 8,
+            "value": "Helvetia",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Helvetia",
+        "intent": "enter_data"
       },
       {
-        "text": "Jim Halpert",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jim Halpert",
             "end": 11,
+            "value": "Jim Halpert",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Jim Halpert",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a health insurance bot",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a software engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "software engineer",
             "end": 23,
+            "value": "software engineer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a software engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "John Smith",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "John Smith",
             "end": 10,
+            "value": "John Smith",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "John Smith",
+        "intent": "enter_data"
       },
       {
-        "text": "Jenny",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jenny",
             "end": 5,
-            "start": 0
-          }
-        ]
-      },
-      {
-        "text": "douglas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "company",
-            "value": "douglas",
-            "end": 7,
-            "start": 0
-          }
-        ]
-      },
-      {
-        "text": "klaus klausson",
-        "intent": "enter_data",
-        "entities": [
-          {
+            "value": "Jenny",
             "entity": "name",
-            "value": "klaus klausson",
-            "end": 14,
             "start": 0
           }
-        ]
+        ],
+        "text": "Jenny",
+        "intent": "enter_data"
+      },
+      {
+        "entities": [
+          {
+            "end": 7,
+            "value": "douglas",
+            "entity": "company",
+            "start": 0
+          }
+        ],
+        "text": "douglas",
+        "intent": "enter_data"
+      },
+      {
+        "entities": [
+          {
+            "end": 14,
+            "value": "klaus klausson",
+            "entity": "name",
+            "start": 0
+          }
+        ],
+        "text": "klaus klausson",
+        "intent": "enter_data"
       },
       {
         "text": "5 euros",
@@ -2947,16 +2947,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm a race car driver",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "race car driver",
             "end": 21,
+            "value": "race car driver",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a race car driver",
+        "intent": "enter_data"
       },
       {
         "text": "klausimausi@apple.com",
@@ -2967,44 +2967,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "my name is saswat",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "saswat",
             "end": 17,
+            "value": "saswat",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is saswat",
+        "intent": "enter_data"
       },
       {
-        "text": "i am self emplayed",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "self emplayed",
             "end": 18,
+            "value": "self emplayed",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "i am self emplayed",
+        "intent": "enter_data"
       },
       {
         "text": "a sentient robot",
         "intent": "enter_data"
       },
       {
-        "text": "rasa",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "rasa",
             "end": 4,
+            "value": "rasa",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "rasa",
+        "intent": "enter_data"
       },
       {
         "text": "i have none",
@@ -3047,16 +3047,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Akela",
             "end": 5,
+            "value": "Akela",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Akela",
+        "intent": "enter_data"
       },
       {
         "text": "a health bot",
@@ -3067,16 +3067,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm a developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 15,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a developer",
+        "intent": "enter_data"
       },
       {
         "text": "i want to build a health bot",
@@ -3087,28 +3087,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "My name is Alex",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Alex",
             "end": 15,
+            "value": "Alex",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "My name is Alex",
+        "intent": "enter_data"
       },
       {
-        "text": "Rasa",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Rasa",
             "end": 4,
+            "value": "Rasa",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Rasa",
+        "intent": "enter_data"
       },
       {
         "text": "test@test.com",
@@ -3119,16 +3119,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm Akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Akela",
             "end": 9,
+            "value": "Akela",
+            "entity": "name",
             "start": 4
           }
-        ]
+        ],
+        "text": "I'm Akela",
+        "intent": "enter_data"
       },
       {
         "text": "i want to build all the bots",
@@ -3143,44 +3143,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 9,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "developer",
+        "intent": "enter_data"
       },
       {
         "text": "a cool bot",
         "intent": "enter_data"
       },
       {
-        "text": "Developer Advocate",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Developer Advocate",
             "end": 18,
+            "value": "Developer Advocate",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "Developer Advocate",
+        "intent": "enter_data"
       },
       {
-        "text": "reddit",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "reddit",
             "end": 6,
+            "value": "reddit",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "reddit",
+        "intent": "enter_data"
       },
       {
         "text": "a bot",
@@ -3191,28 +3191,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "philipp company",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "philipp company",
             "end": 15,
+            "value": "philipp company",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "philipp company",
+        "intent": "enter_data"
       },
       {
-        "text": "philipp",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "philipp",
             "end": 7,
+            "value": "philipp",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "philipp",
+        "intent": "enter_data"
       },
       {
         "text": "i want to built a philipp bot",
@@ -3231,16 +3231,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Elise",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Elise",
             "end": 5,
+            "value": "Elise",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Elise",
+        "intent": "enter_data"
       },
       {
         "text": "myemail@gmail.com",
@@ -3279,16 +3279,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "designer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "designer",
             "end": 8,
+            "value": "designer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "designer",
+        "intent": "enter_data"
       },
       {
         "text": "a pizza bot",
@@ -3307,16 +3307,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Vladimir",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Vladimir",
             "end": 8,
+            "value": "Vladimir",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Vladimir",
+        "intent": "enter_data"
       },
       {
         "text": "around 200k",
@@ -3327,16 +3327,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm a dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "dev",
             "end": 9,
+            "value": "dev",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a dev",
+        "intent": "enter_data"
       },
       {
         "text": "i don't have it",
@@ -3347,92 +3347,92 @@
         "intent": "enter_data"
       },
       {
-        "text": "product manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "product manager",
             "end": 15,
+            "value": "product manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "product manager",
+        "intent": "enter_data"
       },
       {
         "text": "help@rasa.com email",
         "intent": "enter_data"
       },
       {
-        "text": "BBC",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "BBC",
             "end": 3,
+            "value": "BBC",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "BBC",
+        "intent": "enter_data"
       },
       {
         "text": "i wanna build all the bots",
         "intent": "enter_data"
       },
       {
-        "text": "i'm a product manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "product manager",
             "end": 21,
+            "value": "product manager",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a product manager",
+        "intent": "enter_data"
       },
       {
-        "text": "Freya",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Freya",
             "end": 5,
+            "value": "Freya",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Freya",
+        "intent": "enter_data"
       },
       {
         "text": "300k number",
         "intent": "enter_data"
       },
       {
-        "text": "i work in biz dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "biz dev",
             "end": 17,
+            "value": "biz dev",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "i work in biz dev",
+        "intent": "enter_data"
       },
       {
         "text": "my email is kevin@yoloooz.de",
         "intent": "enter_data"
       },
       {
-        "text": "ceo",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "ceo",
             "end": 3,
+            "value": "ceo",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "ceo",
+        "intent": "enter_data"
       },
       {
         "text": "a sales bot",
@@ -3443,16 +3443,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "linda",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "linda",
             "end": 5,
+            "value": "linda",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "linda",
+        "intent": "enter_data"
       },
       {
         "text": "linda@mail.com",
@@ -3467,28 +3467,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "Zendesk",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Zendesk",
             "end": 7,
+            "value": "Zendesk",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Zendesk",
+        "intent": "enter_data"
       },
       {
-        "text": "Jacqueline",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jacqueline",
             "end": 10,
+            "value": "Jacqueline",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Jacqueline",
+        "intent": "enter_data"
       },
       {
         "text": "123@gmail.com",
@@ -3511,40 +3511,40 @@
         "intent": "enter_data"
       },
       {
-        "text": "head of biz deve",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "head of biz deve",
             "end": 16,
+            "value": "head of biz deve",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "head of biz deve",
+        "intent": "enter_data"
       },
       {
-        "text": "Udo",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Udo",
             "end": 3,
+            "value": "Udo",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Udo",
+        "intent": "enter_data"
       },
       {
-        "text": "Udo.AI",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Udo.AI",
             "end": 6,
+            "value": "Udo.AI",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Udo.AI",
+        "intent": "enter_data"
       },
       {
         "text": "maybe then instead alex+rasarasa@rasa.com",
@@ -3559,16 +3559,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Linda",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Linda",
             "end": 5,
+            "value": "Linda",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Linda",
+        "intent": "enter_data"
       },
       {
         "text": "problem solving",
@@ -3611,196 +3611,196 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'mdonezo",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "donezo",
             "end": 9,
+            "value": "donezo",
+            "entity": "name",
             "start": 3
           }
-        ]
+        ],
+        "text": "i'mdonezo",
+        "intent": "enter_data"
       },
       {
-        "text": "my function is to serve butter",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "to serve butter",
             "end": 30,
+            "value": "to serve butter",
+            "entity": "jobfunction",
             "start": 15
           }
-        ]
+        ],
+        "text": "my function is to serve butter",
+        "intent": "enter_data"
       },
       {
-        "text": "wurst co kg",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "wurst co kg",
             "end": 11,
+            "value": "wurst co kg",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "wurst co kg",
+        "intent": "enter_data"
       },
       {
-        "text": "No company!! ",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "No company!! ",
             "end": 13,
-            "start": 0
-          }
-        ]
-      },
-      {
-        "text": "I am a freelancer ",
-        "intent": "enter_data",
-        "entities": [
-          {
+            "value": "No company!! ",
             "entity": "company",
-            "value": "I am a freelancer ",
-            "end": 18,
             "start": 0
           }
-        ]
+        ],
+        "text": "No company!! ",
+        "intent": "enter_data"
       },
       {
-        "text": "Foudner",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Foudner",
-            "end": 7,
+            "end": 18,
+            "value": "I am a freelancer ",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "I am a freelancer ",
+        "intent": "enter_data"
+      },
+      {
+        "entities": [
+          {
+            "end": 7,
+            "value": "Foudner",
+            "entity": "jobfunction",
+            "start": 0
+          }
+        ],
+        "text": "Foudner",
+        "intent": "enter_data"
       },
       {
         "text": "linda@linda.com",
         "intent": "enter_data"
       },
       {
-        "text": "i'm in customer success",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "customer success",
             "end": 23,
+            "value": "customer success",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i'm in customer success",
+        "intent": "enter_data"
       },
       {
-        "text": "i'm head of sales",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "head of sales",
             "end": 17,
+            "value": "head of sales",
+            "entity": "jobfunction",
             "start": 4
           }
-        ]
+        ],
+        "text": "i'm head of sales",
+        "intent": "enter_data"
       },
       {
-        "text": "linda's company",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "linda's company",
             "end": 15,
+            "value": "linda's company",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "linda's company",
+        "intent": "enter_data"
       },
       {
         "text": "a akela bot",
         "intent": "enter_data"
       },
       {
-        "text": "i'm in sales",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "sales",
             "end": 12,
+            "value": "sales",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i'm in sales",
+        "intent": "enter_data"
       },
       {
-        "text": "I work for the New York Times",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "New York Times",
             "end": 29,
+            "value": "New York Times",
+            "entity": "company",
             "start": 15
           }
-        ]
+        ],
+        "text": "I work for the New York Times",
+        "intent": "enter_data"
       },
       {
-        "text": "the New York Times",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "New York Times",
             "end": 18,
+            "value": "New York Times",
+            "entity": "company",
             "start": 4
           }
-        ]
+        ],
+        "text": "the New York Times",
+        "intent": "enter_data"
       },
       {
-        "text": "Ali Park",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Ali Park",
             "end": 8,
+            "value": "Ali Park",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Ali Park",
+        "intent": "enter_data"
       },
       {
         "text": "1 million",
         "intent": "enter_data"
       },
       {
-        "text": "I'm an engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 15,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm an engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "it's Ali Park",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Ali Park",
             "end": 13,
+            "value": "Ali Park",
+            "entity": "name",
             "start": 5
           }
-        ]
+        ],
+        "text": "it's Ali Park",
+        "intent": "enter_data"
       },
       {
         "text": "2 million",
@@ -3811,44 +3811,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "I work for the new york times",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "new york times",
             "end": 29,
+            "value": "new york times",
+            "entity": "company",
             "start": 15
           }
-        ]
+        ],
+        "text": "I work for the new york times",
+        "intent": "enter_data"
       },
       {
-        "text": "I work at the NYT",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "NYT",
             "end": 17,
+            "value": "NYT",
+            "entity": "company",
             "start": 14
           }
-        ]
+        ],
+        "text": "I work at the NYT",
+        "intent": "enter_data"
       },
       {
         "text": "there is no budget",
         "intent": "enter_data"
       },
       {
-        "text": "i'm a develope",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": " develope",
             "end": 14,
+            "value": " develope",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "i'm a develope",
+        "intent": "enter_data"
       },
       {
         "text": "lead generation",
@@ -3859,16 +3859,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "im in marketing",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "marketing",
             "end": 15,
+            "value": "marketing",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "im in marketing",
+        "intent": "enter_data"
       },
       {
         "text": "linda@rasa.ai",
@@ -3883,16 +3883,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "My name is Tom",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Tom",
             "end": 14,
+            "value": "Tom",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "My name is Tom",
+        "intent": "enter_data"
       },
       {
         "text": "500k",
@@ -3903,32 +3903,32 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a business woman",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "business woman",
             "end": 20,
+            "value": "business woman",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a business woman",
+        "intent": "enter_data"
       },
       {
         "text": "0",
         "intent": "enter_data"
       },
       {
-        "text": "im a developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 14,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "im a developer",
+        "intent": "enter_data"
       },
       {
         "text": "a great one",
@@ -3947,28 +3947,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "Bolschewistische Kurkapelle Schwarz-Rot",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Bolschewistische Kurkapelle Schwarz-Rot",
             "end": 39,
+            "value": "Bolschewistische Kurkapelle Schwarz-Rot",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Bolschewistische Kurkapelle Schwarz-Rot",
+        "intent": "enter_data"
       },
       {
-        "text": "akela propella",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akela propella",
             "end": 14,
+            "value": "akela propella",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "akela propella",
+        "intent": "enter_data"
       },
       {
         "text": "schlabberjimmy@glibberglitter.edu",
@@ -4003,16 +4003,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "sam",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "sam",
             "end": 3,
+            "value": "sam",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "sam",
+        "intent": "enter_data"
       },
       {
         "text": "like 60 quid",
@@ -4031,16 +4031,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "volodimir voldemarich",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "volodimir voldemarich",
             "end": 21,
+            "value": "volodimir voldemarich",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "volodimir voldemarich",
+        "intent": "enter_data"
       },
       {
         "text": "idk",
@@ -4051,16 +4051,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "ml researcher",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "ml researcher",
             "end": 13,
+            "value": "ml researcher",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "ml researcher",
+        "intent": "enter_data"
       },
       {
         "text": "junk@junk.com",
@@ -4075,44 +4075,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "ok I'm actually an engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 27,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 19
           }
-        ]
+        ],
+        "text": "ok I'm actually an engineer",
+        "intent": "enter_data"
       },
       {
         "text": "al@acme.org",
         "intent": "enter_data"
       },
       {
-        "text": "ACME brands",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "ACME brands",
             "end": 11,
+            "value": "ACME brands",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "ACME brands",
+        "intent": "enter_data"
       },
       {
-        "text": "Al Capone",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Al Capone",
             "end": 9,
+            "value": "Al Capone",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Al Capone",
+        "intent": "enter_data"
       },
       {
         "text": "£50k",
@@ -4123,60 +4123,60 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a bot developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 19,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "I'm a bot developer",
+        "intent": "enter_data"
       },
       {
         "text": "none@none.co.uk",
         "intent": "enter_data"
       },
       {
-        "text": "Juste P",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Juste P",
             "end": 7,
+            "value": "Juste P",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Juste P",
+        "intent": "enter_data"
       },
       {
         "text": "50",
         "intent": "enter_data"
       },
       {
-        "text": "I am a Data Scientist",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Data Scientist",
             "end": 21,
+            "value": "Data Scientist",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I am a Data Scientist",
+        "intent": "enter_data"
       },
       {
-        "text": "I am a head of business intelligence",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "head of business intelligence",
             "end": 36,
+            "value": "head of business intelligence",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I am a head of business intelligence",
+        "intent": "enter_data"
       },
       {
         "text": "my own",
@@ -4191,16 +4191,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Juste",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Juste",
             "end": 5,
+            "value": "Juste",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Juste",
+        "intent": "enter_data"
       },
       {
         "text": "1 euro",
@@ -4211,16 +4211,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "developer advocate",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer advocate",
             "end": 18,
+            "value": "developer advocate",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "developer advocate",
+        "intent": "enter_data"
       },
       {
         "text": "shiba@shiba.com",
@@ -4231,28 +4231,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "Tyler",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Tyler",
             "end": 5,
+            "value": "Tyler",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Tyler",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a construction worker",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "construction worker",
             "end": 25,
+            "value": "construction worker",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a construction worker",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a kick ass bot",
@@ -4263,16 +4263,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Club Mate",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Club Mate",
             "end": 9,
+            "value": "Club Mate",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Club Mate",
+        "intent": "enter_data"
       },
       {
         "text": "me@me.com",
@@ -4307,44 +4307,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "my name is jimmy",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "jimmy",
             "end": 16,
+            "value": "jimmy",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is jimmy",
+        "intent": "enter_data"
       },
       {
         "text": "half a million",
         "intent": "enter_data"
       },
       {
-        "text": "it's akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akela",
             "end": 10,
+            "value": "akela",
+            "entity": "name",
             "start": 5
           }
-        ]
+        ],
+        "text": "it's akela",
+        "intent": "enter_data"
       },
       {
-        "text": "AI researcher",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "AI researcher",
             "end": 13,
+            "value": "AI researcher",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "AI researcher",
+        "intent": "enter_data"
       },
       {
         "text": "a big ol transformer",
@@ -4363,16 +4363,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "CSI",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "CSI",
             "end": 3,
+            "value": "CSI",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "CSI",
+        "intent": "enter_data"
       },
       {
         "text": "5 quid",
@@ -4383,16 +4383,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i am a projject manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "projject manager",
             "end": 23,
+            "value": "projject manager",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i am a projject manager",
+        "intent": "enter_data"
       },
       {
         "text": "120000",
@@ -4407,16 +4407,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akela",
             "end": 5,
+            "value": "akela",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "akela",
+        "intent": "enter_data"
       },
       {
         "text": "one billion",
@@ -4427,32 +4427,32 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm in marketing",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "marketing",
             "end": 16,
+            "value": "marketing",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i'm in marketing",
+        "intent": "enter_data"
       },
       {
         "text": "ACME bank (company)",
         "intent": "enter_data"
       },
       {
-        "text": "Alan",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Alan",
             "end": 4,
+            "value": "Alan",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Alan",
+        "intent": "enter_data"
       },
       {
         "text": "about 10 k",
@@ -4475,44 +4475,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "im a dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "dev",
             "end": 8,
+            "value": "dev",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "im a dev",
+        "intent": "enter_data"
       },
       {
         "text": "10",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a real good engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 24,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 16
           }
-        ]
+        ],
+        "text": "I'm a real good engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "James",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "James",
             "end": 5,
+            "value": "James",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "James",
+        "intent": "enter_data"
       },
       {
         "text": "ames@rasa.com",
@@ -4547,16 +4547,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "akilla",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akilla",
             "end": 6,
+            "value": "akilla",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "akilla",
+        "intent": "enter_data"
       },
       {
         "text": "a turtle",
@@ -4583,16 +4583,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Im a full stack developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "full stack developer",
             "end": 25,
+            "value": "full stack developer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "Im a full stack developer",
+        "intent": "enter_data"
       },
       {
         "text": "akelaistcool@schwabenländle.de",
@@ -4611,16 +4611,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "im a freelancer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "freelancer",
             "end": 15,
+            "value": "freelancer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "im a freelancer",
+        "intent": "enter_data"
       },
       {
         "text": "health care",
@@ -5663,10 +5663,6 @@
         "intent": "out_of_scope"
       },
       {
-        "text": "technical side of things?",
-        "intent": "out_of_scope"
-      },
-      {
         "text": "where do you live?",
         "intent": "out_of_scope"
       },
@@ -6259,6 +6255,18 @@
         "intent": "how_to_get_started"
       },
       {
+        "text": "how to build a bot?",
+        "intent": "how_to_get_started"
+      },
+      {
+        "text": "how can I build a chatbot",
+        "intent": "how_to_get_started"
+      },
+      {
+        "text": "what can I do with Rasa?",
+        "intent": "how_to_get_started"
+      },
+      {
         "text": "where to start the development of rasa",
         "intent": "how_to_get_started"
       },
@@ -6347,6 +6355,78 @@
         "intent": "technical_question"
       },
       {
+        "text": "technical side of things?",
+        "intent": "technical_question"
+      },
+      {
+        "entities": [
+          {
+            "end": 44,
+            "value": "luis",
+            "entity": "current_api",
+            "start": 40
+          }
+        ],
+        "text": "does rasa have all the same features as luis",
+        "intent": "technical_question"
+      },
+      {
+        "entities": [
+          {
+            "end": 30,
+            "value": "dialogflow",
+            "entity": "current_api",
+            "start": 20
+          }
+        ],
+        "text": "is rasa better than dialogflow",
+        "intent": "technical_question"
+      },
+      {
+        "text": "should I use rasa instead of ibm Watson api",
+        "intent": "technical_question"
+      },
+      {
+        "text": "Is Rasa better than Dialogflow?",
+        "intent": "technical_question"
+      },
+      {
+        "text": "db processing",
+        "intent": "technical_question"
+      },
+      {
+        "text": "how do slots work",
+        "intent": "technical_question"
+      },
+      {
+        "text": "what components of Rasa are open source",
+        "intent": "technical_question"
+      },
+      {
+        "text": "how to integrate rasa chatbot with my website",
+        "intent": "technical_question"
+      },
+      {
+        "text": "how works rasa",
+        "intent": "technical_question"
+      },
+      {
+        "text": "with exceptions",
+        "intent": "technical_question"
+      },
+      {
+        "text": "which language is rasa programmed in",
+        "intent": "technical_question"
+      },
+      {
+        "text": "what technologies did u use to create more mature chatbot?",
+        "intent": "technical_question"
+      },
+      {
+        "text": "which technology is used to create you",
+        "intent": "technical_question"
+      },
+      {
         "text": "I'm starting a brand new project",
         "intent": "new_project"
       },
@@ -6379,76 +6459,100 @@
         "intent": "new_project"
       },
       {
-        "text": "I currently use dialog flow",
-        "intent": "switch",
         "entities": [
           {
-            "entity": "current_api",
-            "value": "dialogflow",
             "end": 27,
+            "value": "dialogflow",
+            "entity": "current_api",
             "start": 16
           }
-        ]
+        ],
+        "text": "I currently use dialog flow",
+        "intent": "switch"
       },
       {
-        "text": "I currently use LUIS",
-        "intent": "switch",
         "entities": [
           {
-            "entity": "current_api",
-            "value": "luis",
             "end": 20,
+            "value": "luis",
+            "entity": "current_api",
             "start": 16
           }
-        ]
+        ],
+        "text": "I currently use LUIS",
+        "intent": "switch"
       },
       {
-        "text": "I use luis at the moment",
-        "intent": "switch",
         "entities": [
           {
-            "entity": "current_api",
-            "value": "luis",
             "end": 10,
+            "value": "luis",
+            "entity": "current_api",
             "start": 6
           }
-        ]
+        ],
+        "text": "I use luis at the moment",
+        "intent": "switch"
       },
       {
-        "text": "luis atm",
-        "intent": "switch",
         "entities": [
           {
-            "entity": "current_api",
-            "value": "luis",
             "end": 4,
+            "value": "luis",
+            "entity": "current_api",
             "start": 0
           }
-        ]
+        ],
+        "text": "luis atm",
+        "intent": "switch"
       },
       {
-        "text": "switching from DialogFlow",
-        "intent": "switch",
         "entities": [
           {
-            "entity": "current_api",
-            "value": "dialogflow",
             "end": 25,
+            "value": "dialogflow",
+            "entity": "current_api",
             "start": 15
           }
-        ]
+        ],
+        "text": "switching from DialogFlow",
+        "intent": "switch"
       },
       {
-        "text": "I use DialogFlow",
-        "intent": "switch",
         "entities": [
           {
-            "entity": "current_api",
-            "value": "dialogflow",
             "end": 16,
+            "value": "dialogflow",
+            "entity": "current_api",
             "start": 6
           }
-        ]
+        ],
+        "text": "I use DialogFlow",
+        "intent": "switch"
+      },
+      {
+        "entities": [
+          {
+            "end": 32,
+            "value": "dialogflow",
+            "entity": "current_api",
+            "start": 22
+          }
+        ],
+        "text": "i want to switch from dialogflow to Rasa",
+        "intent": "switch"
+      },
+      {
+        "entities": [
+          {
+            "end": 27,
+            "value": "luis",
+            "entity": "current_api",
+            "start": 20
+          }
+        ],
+        "text": "I want to move from LUIS.ai to Rasa",
+        "intent": "switch"
       },
       {
         "text": "can you share your boss with me?",
@@ -8175,208 +8279,208 @@
         "intent": "enter_data"
       },
       {
-        "text": "I work for Bayer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Bayer",
             "end": 16,
+            "value": "Bayer",
+            "entity": "company",
             "start": 11
           }
-        ]
+        ],
+        "text": "I work for Bayer",
+        "intent": "enter_data"
       },
       {
-        "text": "The name of the company is Daimler",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Daimler",
             "end": 34,
+            "value": "Daimler",
+            "entity": "company",
             "start": 27
           }
-        ]
+        ],
+        "text": "The name of the company is Daimler",
+        "intent": "enter_data"
       },
       {
-        "text": "company: uber",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "uber",
             "end": 13,
+            "value": "uber",
+            "entity": "company",
             "start": 9
           }
-        ]
+        ],
+        "text": "company: uber",
+        "intent": "enter_data"
       },
       {
-        "text": "it's a small company from the US, the name is Microsoft",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Microsoft",
             "end": 55,
+            "value": "Microsoft",
+            "entity": "company",
             "start": 46
           }
-        ]
+        ],
+        "text": "it's a small company from the US, the name is Microsoft",
+        "intent": "enter_data"
       },
       {
-        "text": "it's a tech company, apple",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "apple",
             "end": 26,
+            "value": "apple",
+            "entity": "company",
             "start": 21
           }
-        ]
+        ],
+        "text": "it's a tech company, apple",
+        "intent": "enter_data"
       },
       {
-        "text": "microsoft",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
+            "end": 9,
             "value": "microsoft",
-            "end": 9,
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "microsoft",
+        "intent": "enter_data"
       },
       {
-        "text": "clue",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "clue",
             "end": 4,
+            "value": "clue",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "clue",
+        "intent": "enter_data"
       },
       {
-        "text": "SAP",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
+            "end": 3,
             "value": "SAP",
-            "end": 3,
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "SAP",
+        "intent": "enter_data"
       },
       {
-        "text": "IBM",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
+            "end": 3,
             "value": "IBM",
-            "end": 3,
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "IBM",
+        "intent": "enter_data"
       },
       {
-        "text": "t-mobile US",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "t-mobile US",
             "end": 11,
+            "value": "t-mobile US",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "t-mobile US",
+        "intent": "enter_data"
       },
       {
-        "text": "vodafone",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "vodafone",
             "end": 8,
+            "value": "vodafone",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "vodafone",
+        "intent": "enter_data"
       },
       {
-        "text": "accenture",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "accenture",
             "end": 9,
+            "value": "accenture",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "accenture",
+        "intent": "enter_data"
       },
       {
-        "text": "McKinsey Germany",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "McKinsey Germany",
             "end": 16,
+            "value": "McKinsey Germany",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "McKinsey Germany",
+        "intent": "enter_data"
       },
       {
-        "text": "BCG brazil",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "BCG brazil",
             "end": 10,
+            "value": "BCG brazil",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "BCG brazil",
+        "intent": "enter_data"
       },
       {
-        "text": "BCG digital ventures",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "BCG digital ventures",
             "end": 20,
+            "value": "BCG digital ventures",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "BCG digital ventures",
+        "intent": "enter_data"
       },
       {
-        "text": "I work for Stanford University",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Stanford University",
             "end": 30,
+            "value": "Stanford University",
+            "entity": "company",
             "start": 11
           }
-        ]
+        ],
+        "text": "I work for Stanford University",
+        "intent": "enter_data"
       },
       {
-        "text": "I work for the AI research group of the turing centre of the UBC, Vancouver, Canada",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "AI research group of the turing centre of the UBC, Vancouver, Canada",
             "end": 83,
+            "value": "AI research group of the turing centre of the UBC, Vancouver, Canada",
+            "entity": "company",
             "start": 15
           }
-        ]
+        ],
+        "text": "I work for the AI research group of the turing centre of the UBC, Vancouver, Canada",
+        "intent": "enter_data"
       },
       {
         "text": "maxmeier@firma.de",
@@ -8447,376 +8551,376 @@
         "intent": "enter_data"
       },
       {
-        "text": "Product Manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Product Manager",
             "end": 15,
+            "value": "Product Manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "Product Manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a product manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "product manager",
             "end": 21,
+            "value": "product manager",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a product manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I work as a project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 27,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 12
           }
-        ]
+        ],
+        "text": "I work as a project manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm the developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 17,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 8
           }
-        ]
+        ],
+        "text": "I'm the developer",
+        "intent": "enter_data"
       },
       {
-        "text": "data analyst",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "data analyst",
             "end": 12,
+            "value": "data analyst",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "data analyst",
+        "intent": "enter_data"
       },
       {
-        "text": "data scientist",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 14,
             "value": "data scientist",
-            "end": 14,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "data scientist",
+        "intent": "enter_data"
       },
       {
-        "text": "dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "dev",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "dev",
+        "intent": "enter_data"
       },
       {
-        "text": "engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 8,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "brand manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 13,
             "value": "brand manager",
-            "end": 13,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "brand manager",
+        "intent": "enter_data"
       },
       {
-        "text": "marketing",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "marketing",
             "end": 9,
+            "value": "marketing",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "marketing",
+        "intent": "enter_data"
       },
       {
-        "text": "sales manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "sales manager",
             "end": 13,
+            "value": "sales manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "sales manager",
+        "intent": "enter_data"
       },
       {
-        "text": "growth manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "growth manager",
             "end": 14,
+            "value": "growth manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "growth manager",
+        "intent": "enter_data"
       },
       {
-        "text": "CTO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "CTO",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "CTO",
+        "intent": "enter_data"
       },
       {
-        "text": "CEO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "CEO",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "CEO",
+        "intent": "enter_data"
       },
       {
-        "text": "COO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
+            "end": 3,
             "value": "COO",
-            "end": 3,
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "COO",
+        "intent": "enter_data"
       },
       {
-        "text": "assistant to the CEO",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "assistant to the CEO",
             "end": 20,
+            "value": "assistant to the CEO",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "assistant to the CEO",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm the lead engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "lead engineer",
             "end": 21,
+            "value": "lead engineer",
+            "entity": "jobfunction",
             "start": 8
           }
-        ]
+        ],
+        "text": "I'm the lead engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a python developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "python developer",
             "end": 22,
+            "value": "python developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a python developer",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm an AI researcher",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "AI researcher",
             "end": 20,
+            "value": "AI researcher",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm an AI researcher",
+        "intent": "enter_data"
       },
       {
-        "text": "Max Meier",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Max Meier",
             "end": 9,
+            "value": "Max Meier",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Max Meier",
+        "intent": "enter_data"
       },
       {
-        "text": "My name is Max Meier",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Max Meier",
             "end": 20,
+            "value": "Max Meier",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "My name is Max Meier",
+        "intent": "enter_data"
       },
       {
-        "text": "Ralph White",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Ralph White",
             "end": 11,
+            "value": "Ralph White",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Ralph White",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm Tom Miller",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Tom Miller",
             "end": 14,
+            "value": "Tom Miller",
+            "entity": "name",
             "start": 4
           }
-        ]
+        ],
+        "text": "I'm Tom Miller",
+        "intent": "enter_data"
       },
       {
-        "text": "Ann Snyder",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
+            "end": 10,
             "value": "Ann Snyder",
-            "end": 10,
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Ann Snyder",
+        "intent": "enter_data"
       },
       {
-        "text": "Victoria McMillan",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Victoria McMillan",
             "end": 17,
+            "value": "Victoria McMillan",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Victoria McMillan",
+        "intent": "enter_data"
       },
       {
-        "text": "Denise Perry",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
+            "end": 12,
             "value": "Denise Perry",
-            "end": 12,
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Denise Perry",
+        "intent": "enter_data"
       },
       {
-        "text": "Bob Geldorf",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Bob Geldorf",
             "end": 11,
+            "value": "Bob Geldorf",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Bob Geldorf",
+        "intent": "enter_data"
       },
       {
-        "text": "Susan Catterfeld",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Susan Catterfeld",
             "end": 16,
+            "value": "Susan Catterfeld",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Susan Catterfeld",
+        "intent": "enter_data"
       },
       {
-        "text": "Taylor Shwed",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Taylor Shwed",
             "end": 12,
+            "value": "Taylor Shwed",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Taylor Shwed",
+        "intent": "enter_data"
       },
       {
-        "text": "Meredith Grey",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Meredith Grey",
             "end": 13,
+            "value": "Meredith Grey",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Meredith Grey",
+        "intent": "enter_data"
       },
       {
-        "text": "Alex Karev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Alex Karev",
             "end": 10,
+            "value": "Alex Karev",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Alex Karev",
+        "intent": "enter_data"
       },
       {
         "text": "We plan to build a sales bot to increase our sales by 500%.",
@@ -8835,116 +8939,116 @@
         "intent": "enter_data"
       },
       {
-        "text": "I work in project management",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project management",
             "end": 28,
+            "value": "project management",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "I work in project management",
+        "intent": "enter_data"
       },
       {
         "text": "i'm a developer",
         "intent": "enter_data"
       },
       {
-        "text": "my name is linda",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "linda",
             "end": 16,
+            "value": "linda",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is linda",
+        "intent": "enter_data"
       },
       {
-        "text": "I work in innvoation",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "innvoation",
             "end": 20,
+            "value": "innvoation",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "I work in innvoation",
+        "intent": "enter_data"
       },
       {
-        "text": "my job function is developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 28,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 19
           }
-        ]
+        ],
+        "text": "my job function is developer",
+        "intent": "enter_data"
       },
       {
-        "text": "I am responsible for our innovation department",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "innovation department",
             "end": 46,
+            "value": "innovation department",
+            "entity": "jobfunction",
             "start": 25
           }
-        ]
+        ],
+        "text": "I am responsible for our innovation department",
+        "intent": "enter_data"
       },
       {
-        "text": "I work as a frontend dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "frontend dev",
             "end": 24,
+            "value": "frontend dev",
+            "entity": "jobfunction",
             "start": 12
           }
-        ]
+        ],
+        "text": "I work as a frontend dev",
+        "intent": "enter_data"
       },
       {
-        "text": "project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 15,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "project manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 21,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a project manager",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm project manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project manager",
             "end": 19,
+            "value": "project manager",
+            "entity": "jobfunction",
             "start": 4
           }
-        ]
+        ],
+        "text": "I'm project manager",
+        "intent": "enter_data"
       },
       {
         "text": "it's foo@bar.com",
@@ -8955,16 +9059,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "ACME Mops",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "ACME Mops",
             "end": 9,
+            "value": "ACME Mops",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "ACME Mops",
+        "intent": "enter_data"
       },
       {
         "text": "mrmop@mops.app",
@@ -8975,16 +9079,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a janitor",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "janitor",
             "end": 13,
+            "value": "janitor",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a janitor",
+        "intent": "enter_data"
       },
       {
         "text": "My email is linda@linda.linda",
@@ -8995,16 +9099,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 15,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a developer",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a cool bot",
@@ -9015,92 +9119,92 @@
         "intent": "enter_data"
       },
       {
-        "text": "manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "manager",
             "end": 7,
+            "value": "manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "manager",
+        "intent": "enter_data"
       },
       {
         "text": "adele@gmx.com",
         "intent": "enter_data"
       },
       {
-        "text": "my name is marc",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "marc",
             "end": 15,
+            "value": "marc",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is marc",
+        "intent": "enter_data"
       },
       {
         "text": "one trillion dollar",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a full stack developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "full stack developer",
             "end": 25,
+            "value": "full stack developer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "I'm a full stack developer",
+        "intent": "enter_data"
       },
       {
         "text": "moabit@yoga.com",
         "intent": "enter_data"
       },
       {
-        "text": "it's the moabit yoga studio",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "moabit yoga studio",
             "end": 27,
+            "value": "moabit yoga studio",
+            "entity": "company",
             "start": 9
           }
-        ]
+        ],
+        "text": "it's the moabit yoga studio",
+        "intent": "enter_data"
       },
       {
-        "text": "my name is oli miller",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "oli miller",
             "end": 21,
+            "value": "oli miller",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is oli miller",
+        "intent": "enter_data"
       },
       {
         "text": "100000k",
         "intent": "enter_data"
       },
       {
-        "text": "I'm in project mgmt",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "project mgmt",
             "end": 19,
+            "value": "project mgmt",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm in project mgmt",
+        "intent": "enter_data"
       },
       {
         "text": "10000 dollars",
@@ -9115,44 +9219,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm in business ",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "business ",
             "end": 16,
+            "value": "business ",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm in business ",
+        "intent": "enter_data"
       },
       {
         "text": "5 mln",
         "intent": "enter_data"
       },
       {
-        "text": "Alex",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "alex",
             "end": 4,
+            "value": "alex",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Alex",
+        "intent": "enter_data"
       },
       {
-        "text": "my name is loretta meier",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "loretta meier",
             "end": 24,
+            "value": "loretta meier",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is loretta meier",
+        "intent": "enter_data"
       },
       {
         "text": "I wanna build a super bot to send me cute animal pictures",
@@ -9163,16 +9267,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 9,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "Developer",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a sales bot",
@@ -9191,16 +9295,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Mr. Mop",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Mr. Mop",
             "end": 7,
+            "value": "Mr. Mop",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Mr. Mop",
+        "intent": "enter_data"
       },
       {
         "text": "loretta@strawberry-ice.come because I work in the department for strawberry ice",
@@ -9219,56 +9323,56 @@
         "intent": "enter_data"
       },
       {
-        "text": "Philip",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Philip",
             "end": 6,
+            "value": "Philip",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Philip",
+        "intent": "enter_data"
       },
       {
-        "text": "Bosch",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Bosch",
             "end": 5,
+            "value": "Bosch",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Bosch",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build an FAQ bot",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a python developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "python developer",
             "end": 22,
+            "value": "python developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a python developer",
+        "intent": "enter_data"
       },
       {
-        "text": "Jim",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jim",
             "end": 3,
+            "value": "Jim",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Jim",
+        "intent": "enter_data"
       },
       {
         "text": "hello@hello.com",
@@ -9279,16 +9383,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a machine learning engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "machine learning engineer",
             "end": 31,
+            "value": "machine learning engineer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a machine learning engineer",
+        "intent": "enter_data"
       },
       {
         "text": "we don't have one",
@@ -9299,92 +9403,92 @@
         "intent": "enter_data"
       },
       {
-        "text": "Helvetia",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Helvetia",
             "end": 8,
+            "value": "Helvetia",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Helvetia",
+        "intent": "enter_data"
       },
       {
-        "text": "Jim Halpert",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jim Halpert",
             "end": 11,
+            "value": "Jim Halpert",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Jim Halpert",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a health insurance bot",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a software engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "software engineer",
             "end": 23,
+            "value": "software engineer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a software engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "John Smith",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "John Smith",
             "end": 10,
+            "value": "John Smith",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "John Smith",
+        "intent": "enter_data"
       },
       {
-        "text": "Jenny",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jenny",
             "end": 5,
-            "start": 0
-          }
-        ]
-      },
-      {
-        "text": "douglas",
-        "intent": "enter_data",
-        "entities": [
-          {
-            "entity": "company",
-            "value": "douglas",
-            "end": 7,
-            "start": 0
-          }
-        ]
-      },
-      {
-        "text": "klaus klausson",
-        "intent": "enter_data",
-        "entities": [
-          {
+            "value": "Jenny",
             "entity": "name",
-            "value": "klaus klausson",
-            "end": 14,
             "start": 0
           }
-        ]
+        ],
+        "text": "Jenny",
+        "intent": "enter_data"
+      },
+      {
+        "entities": [
+          {
+            "end": 7,
+            "value": "douglas",
+            "entity": "company",
+            "start": 0
+          }
+        ],
+        "text": "douglas",
+        "intent": "enter_data"
+      },
+      {
+        "entities": [
+          {
+            "end": 14,
+            "value": "klaus klausson",
+            "entity": "name",
+            "start": 0
+          }
+        ],
+        "text": "klaus klausson",
+        "intent": "enter_data"
       },
       {
         "text": "5 euros",
@@ -9395,16 +9499,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm a race car driver",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "race car driver",
             "end": 21,
+            "value": "race car driver",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a race car driver",
+        "intent": "enter_data"
       },
       {
         "text": "klausimausi@apple.com",
@@ -9415,44 +9519,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "my name is saswat",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "saswat",
             "end": 17,
+            "value": "saswat",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is saswat",
+        "intent": "enter_data"
       },
       {
-        "text": "i am self emplayed",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "self emplayed",
             "end": 18,
+            "value": "self emplayed",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "i am self emplayed",
+        "intent": "enter_data"
       },
       {
         "text": "a sentient robot",
         "intent": "enter_data"
       },
       {
-        "text": "rasa",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "rasa",
             "end": 4,
+            "value": "rasa",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "rasa",
+        "intent": "enter_data"
       },
       {
         "text": "i have none",
@@ -9495,16 +9599,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Akela",
             "end": 5,
+            "value": "Akela",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Akela",
+        "intent": "enter_data"
       },
       {
         "text": "a health bot",
@@ -9515,16 +9619,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm a developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 15,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a developer",
+        "intent": "enter_data"
       },
       {
         "text": "i want to build a health bot",
@@ -9535,28 +9639,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "My name is Alex",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Alex",
             "end": 15,
+            "value": "Alex",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "My name is Alex",
+        "intent": "enter_data"
       },
       {
-        "text": "Rasa",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Rasa",
             "end": 4,
+            "value": "Rasa",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Rasa",
+        "intent": "enter_data"
       },
       {
         "text": "test@test.com",
@@ -9567,16 +9671,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm Akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Akela",
             "end": 9,
+            "value": "Akela",
+            "entity": "name",
             "start": 4
           }
-        ]
+        ],
+        "text": "I'm Akela",
+        "intent": "enter_data"
       },
       {
         "text": "i want to build all the bots",
@@ -9591,44 +9695,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 9,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "developer",
+        "intent": "enter_data"
       },
       {
         "text": "a cool bot",
         "intent": "enter_data"
       },
       {
-        "text": "Developer Advocate",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Developer Advocate",
             "end": 18,
+            "value": "Developer Advocate",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "Developer Advocate",
+        "intent": "enter_data"
       },
       {
-        "text": "reddit",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "reddit",
             "end": 6,
+            "value": "reddit",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "reddit",
+        "intent": "enter_data"
       },
       {
         "text": "a bot",
@@ -9639,28 +9743,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "philipp company",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "philipp company",
             "end": 15,
+            "value": "philipp company",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "philipp company",
+        "intent": "enter_data"
       },
       {
-        "text": "philipp",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "philipp",
             "end": 7,
+            "value": "philipp",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "philipp",
+        "intent": "enter_data"
       },
       {
         "text": "i want to built a philipp bot",
@@ -9679,16 +9783,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Elise",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Elise",
             "end": 5,
+            "value": "Elise",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Elise",
+        "intent": "enter_data"
       },
       {
         "text": "myemail@gmail.com",
@@ -9727,16 +9831,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "designer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "designer",
             "end": 8,
+            "value": "designer",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "designer",
+        "intent": "enter_data"
       },
       {
         "text": "a pizza bot",
@@ -9755,16 +9859,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Vladimir",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Vladimir",
             "end": 8,
+            "value": "Vladimir",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Vladimir",
+        "intent": "enter_data"
       },
       {
         "text": "around 200k",
@@ -9775,16 +9879,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm a dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "dev",
             "end": 9,
+            "value": "dev",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a dev",
+        "intent": "enter_data"
       },
       {
         "text": "i don't have it",
@@ -9795,92 +9899,92 @@
         "intent": "enter_data"
       },
       {
-        "text": "product manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "product manager",
             "end": 15,
+            "value": "product manager",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "product manager",
+        "intent": "enter_data"
       },
       {
         "text": "help@rasa.com email",
         "intent": "enter_data"
       },
       {
-        "text": "BBC",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "BBC",
             "end": 3,
+            "value": "BBC",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "BBC",
+        "intent": "enter_data"
       },
       {
         "text": "i wanna build all the bots",
         "intent": "enter_data"
       },
       {
-        "text": "i'm a product manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "product manager",
             "end": 21,
+            "value": "product manager",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "i'm a product manager",
+        "intent": "enter_data"
       },
       {
-        "text": "Freya",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Freya",
             "end": 5,
+            "value": "Freya",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Freya",
+        "intent": "enter_data"
       },
       {
         "text": "300k number",
         "intent": "enter_data"
       },
       {
-        "text": "i work in biz dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "biz dev",
             "end": 17,
+            "value": "biz dev",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "i work in biz dev",
+        "intent": "enter_data"
       },
       {
         "text": "my email is kevin@yoloooz.de",
         "intent": "enter_data"
       },
       {
-        "text": "ceo",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "ceo",
             "end": 3,
+            "value": "ceo",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "ceo",
+        "intent": "enter_data"
       },
       {
         "text": "a sales bot",
@@ -9891,16 +9995,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "linda",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "linda",
             "end": 5,
+            "value": "linda",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "linda",
+        "intent": "enter_data"
       },
       {
         "text": "linda@mail.com",
@@ -9915,28 +10019,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "Zendesk",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Zendesk",
             "end": 7,
+            "value": "Zendesk",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Zendesk",
+        "intent": "enter_data"
       },
       {
-        "text": "Jacqueline",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Jacqueline",
             "end": 10,
+            "value": "Jacqueline",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Jacqueline",
+        "intent": "enter_data"
       },
       {
         "text": "123@gmail.com",
@@ -9959,40 +10063,40 @@
         "intent": "enter_data"
       },
       {
-        "text": "head of biz deve",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "head of biz deve",
             "end": 16,
+            "value": "head of biz deve",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "head of biz deve",
+        "intent": "enter_data"
       },
       {
-        "text": "Udo",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Udo",
             "end": 3,
+            "value": "Udo",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Udo",
+        "intent": "enter_data"
       },
       {
-        "text": "Udo.AI",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Udo.AI",
             "end": 6,
+            "value": "Udo.AI",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Udo.AI",
+        "intent": "enter_data"
       },
       {
         "text": "maybe then instead alex+rasarasa@rasa.com",
@@ -10007,16 +10111,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Linda",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Linda",
             "end": 5,
+            "value": "Linda",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Linda",
+        "intent": "enter_data"
       },
       {
         "text": "problem solving",
@@ -10059,196 +10163,196 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'mdonezo",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "donezo",
             "end": 9,
+            "value": "donezo",
+            "entity": "name",
             "start": 3
           }
-        ]
+        ],
+        "text": "i'mdonezo",
+        "intent": "enter_data"
       },
       {
-        "text": "my function is to serve butter",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "to serve butter",
             "end": 30,
+            "value": "to serve butter",
+            "entity": "jobfunction",
             "start": 15
           }
-        ]
+        ],
+        "text": "my function is to serve butter",
+        "intent": "enter_data"
       },
       {
-        "text": "wurst co kg",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "wurst co kg",
             "end": 11,
+            "value": "wurst co kg",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "wurst co kg",
+        "intent": "enter_data"
       },
       {
-        "text": "No company!! ",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "No company!! ",
             "end": 13,
-            "start": 0
-          }
-        ]
-      },
-      {
-        "text": "I am a freelancer ",
-        "intent": "enter_data",
-        "entities": [
-          {
+            "value": "No company!! ",
             "entity": "company",
-            "value": "I am a freelancer ",
-            "end": 18,
             "start": 0
           }
-        ]
+        ],
+        "text": "No company!! ",
+        "intent": "enter_data"
       },
       {
-        "text": "Foudner",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Foudner",
-            "end": 7,
+            "end": 18,
+            "value": "I am a freelancer ",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "I am a freelancer ",
+        "intent": "enter_data"
+      },
+      {
+        "entities": [
+          {
+            "end": 7,
+            "value": "Foudner",
+            "entity": "jobfunction",
+            "start": 0
+          }
+        ],
+        "text": "Foudner",
+        "intent": "enter_data"
       },
       {
         "text": "linda@linda.com",
         "intent": "enter_data"
       },
       {
-        "text": "i'm in customer success",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "customer success",
             "end": 23,
+            "value": "customer success",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i'm in customer success",
+        "intent": "enter_data"
       },
       {
-        "text": "i'm head of sales",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "head of sales",
             "end": 17,
+            "value": "head of sales",
+            "entity": "jobfunction",
             "start": 4
           }
-        ]
+        ],
+        "text": "i'm head of sales",
+        "intent": "enter_data"
       },
       {
-        "text": "linda's company",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "linda's company",
             "end": 15,
+            "value": "linda's company",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "linda's company",
+        "intent": "enter_data"
       },
       {
         "text": "a akela bot",
         "intent": "enter_data"
       },
       {
-        "text": "i'm in sales",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "sales",
             "end": 12,
+            "value": "sales",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i'm in sales",
+        "intent": "enter_data"
       },
       {
-        "text": "I work for the New York Times",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "New York Times",
             "end": 29,
+            "value": "New York Times",
+            "entity": "company",
             "start": 15
           }
-        ]
+        ],
+        "text": "I work for the New York Times",
+        "intent": "enter_data"
       },
       {
-        "text": "the New York Times",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "New York Times",
             "end": 18,
+            "value": "New York Times",
+            "entity": "company",
             "start": 4
           }
-        ]
+        ],
+        "text": "the New York Times",
+        "intent": "enter_data"
       },
       {
-        "text": "Ali Park",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Ali Park",
             "end": 8,
+            "value": "Ali Park",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Ali Park",
+        "intent": "enter_data"
       },
       {
         "text": "1 million",
         "intent": "enter_data"
       },
       {
-        "text": "I'm an engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 15,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I'm an engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "it's Ali Park",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Ali Park",
             "end": 13,
+            "value": "Ali Park",
+            "entity": "name",
             "start": 5
           }
-        ]
+        ],
+        "text": "it's Ali Park",
+        "intent": "enter_data"
       },
       {
         "text": "2 million",
@@ -10259,44 +10363,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "I work for the new york times",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "new york times",
             "end": 29,
+            "value": "new york times",
+            "entity": "company",
             "start": 15
           }
-        ]
+        ],
+        "text": "I work for the new york times",
+        "intent": "enter_data"
       },
       {
-        "text": "I work at the NYT",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "NYT",
             "end": 17,
+            "value": "NYT",
+            "entity": "company",
             "start": 14
           }
-        ]
+        ],
+        "text": "I work at the NYT",
+        "intent": "enter_data"
       },
       {
         "text": "there is no budget",
         "intent": "enter_data"
       },
       {
-        "text": "i'm a develope",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": " develope",
             "end": 14,
+            "value": " develope",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "i'm a develope",
+        "intent": "enter_data"
       },
       {
         "text": "lead generation",
@@ -10307,16 +10411,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "im in marketing",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "marketing",
             "end": 15,
+            "value": "marketing",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "im in marketing",
+        "intent": "enter_data"
       },
       {
         "text": "linda@rasa.ai",
@@ -10331,16 +10435,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "My name is Tom",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Tom",
             "end": 14,
+            "value": "Tom",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "My name is Tom",
+        "intent": "enter_data"
       },
       {
         "text": "500k",
@@ -10351,32 +10455,32 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a business woman",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "business woman",
             "end": 20,
+            "value": "business woman",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a business woman",
+        "intent": "enter_data"
       },
       {
         "text": "0",
         "intent": "enter_data"
       },
       {
-        "text": "im a developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 14,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "im a developer",
+        "intent": "enter_data"
       },
       {
         "text": "a great one",
@@ -10395,28 +10499,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "Bolschewistische Kurkapelle Schwarz-Rot",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Bolschewistische Kurkapelle Schwarz-Rot",
             "end": 39,
+            "value": "Bolschewistische Kurkapelle Schwarz-Rot",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Bolschewistische Kurkapelle Schwarz-Rot",
+        "intent": "enter_data"
       },
       {
-        "text": "akela propella",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akela propella",
             "end": 14,
+            "value": "akela propella",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "akela propella",
+        "intent": "enter_data"
       },
       {
         "text": "schlabberjimmy@glibberglitter.edu",
@@ -10451,16 +10555,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "sam",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "sam",
             "end": 3,
+            "value": "sam",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "sam",
+        "intent": "enter_data"
       },
       {
         "text": "like 60 quid",
@@ -10479,16 +10583,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "volodimir voldemarich",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "volodimir voldemarich",
             "end": 21,
+            "value": "volodimir voldemarich",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "volodimir voldemarich",
+        "intent": "enter_data"
       },
       {
         "text": "idk",
@@ -10499,16 +10603,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "ml researcher",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "ml researcher",
             "end": 13,
+            "value": "ml researcher",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "ml researcher",
+        "intent": "enter_data"
       },
       {
         "text": "junk@junk.com",
@@ -10523,44 +10627,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "ok I'm actually an engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 27,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 19
           }
-        ]
+        ],
+        "text": "ok I'm actually an engineer",
+        "intent": "enter_data"
       },
       {
         "text": "al@acme.org",
         "intent": "enter_data"
       },
       {
-        "text": "ACME brands",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "ACME brands",
             "end": 11,
+            "value": "ACME brands",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "ACME brands",
+        "intent": "enter_data"
       },
       {
-        "text": "Al Capone",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Al Capone",
             "end": 9,
+            "value": "Al Capone",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Al Capone",
+        "intent": "enter_data"
       },
       {
         "text": "£50k",
@@ -10571,60 +10675,60 @@
         "intent": "enter_data"
       },
       {
-        "text": "I'm a bot developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer",
             "end": 19,
+            "value": "developer",
+            "entity": "jobfunction",
             "start": 10
           }
-        ]
+        ],
+        "text": "I'm a bot developer",
+        "intent": "enter_data"
       },
       {
         "text": "none@none.co.uk",
         "intent": "enter_data"
       },
       {
-        "text": "Juste P",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Juste P",
             "end": 7,
+            "value": "Juste P",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Juste P",
+        "intent": "enter_data"
       },
       {
         "text": "50",
         "intent": "enter_data"
       },
       {
-        "text": "I am a Data Scientist",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "Data Scientist",
             "end": 21,
+            "value": "Data Scientist",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I am a Data Scientist",
+        "intent": "enter_data"
       },
       {
-        "text": "I am a head of business intelligence",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "head of business intelligence",
             "end": 36,
+            "value": "head of business intelligence",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "I am a head of business intelligence",
+        "intent": "enter_data"
       },
       {
         "text": "my own",
@@ -10639,16 +10743,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Juste",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Juste",
             "end": 5,
+            "value": "Juste",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Juste",
+        "intent": "enter_data"
       },
       {
         "text": "1 euro",
@@ -10659,16 +10763,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "developer advocate",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "developer advocate",
             "end": 18,
+            "value": "developer advocate",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "developer advocate",
+        "intent": "enter_data"
       },
       {
         "text": "shiba@shiba.com",
@@ -10679,28 +10783,28 @@
         "intent": "enter_data"
       },
       {
-        "text": "Tyler",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Tyler",
             "end": 5,
+            "value": "Tyler",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Tyler",
+        "intent": "enter_data"
       },
       {
-        "text": "I'm a construction worker",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "construction worker",
             "end": 25,
+            "value": "construction worker",
+            "entity": "jobfunction",
             "start": 6
           }
-        ]
+        ],
+        "text": "I'm a construction worker",
+        "intent": "enter_data"
       },
       {
         "text": "I want to build a kick ass bot",
@@ -10711,16 +10815,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Club Mate",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "Club Mate",
             "end": 9,
+            "value": "Club Mate",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "Club Mate",
+        "intent": "enter_data"
       },
       {
         "text": "me@me.com",
@@ -10755,44 +10859,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "my name is jimmy",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "jimmy",
             "end": 16,
+            "value": "jimmy",
+            "entity": "name",
             "start": 11
           }
-        ]
+        ],
+        "text": "my name is jimmy",
+        "intent": "enter_data"
       },
       {
         "text": "half a million",
         "intent": "enter_data"
       },
       {
-        "text": "it's akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akela",
             "end": 10,
+            "value": "akela",
+            "entity": "name",
             "start": 5
           }
-        ]
+        ],
+        "text": "it's akela",
+        "intent": "enter_data"
       },
       {
-        "text": "AI researcher",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "AI researcher",
             "end": 13,
+            "value": "AI researcher",
+            "entity": "jobfunction",
             "start": 0
           }
-        ]
+        ],
+        "text": "AI researcher",
+        "intent": "enter_data"
       },
       {
         "text": "a big ol transformer",
@@ -10811,16 +10915,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "CSI",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "company",
-            "value": "CSI",
             "end": 3,
+            "value": "CSI",
+            "entity": "company",
             "start": 0
           }
-        ]
+        ],
+        "text": "CSI",
+        "intent": "enter_data"
       },
       {
         "text": "5 quid",
@@ -10831,16 +10935,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "i am a projject manager",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "projject manager",
             "end": 23,
+            "value": "projject manager",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i am a projject manager",
+        "intent": "enter_data"
       },
       {
         "text": "120000",
@@ -10855,16 +10959,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "akela",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akela",
             "end": 5,
+            "value": "akela",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "akela",
+        "intent": "enter_data"
       },
       {
         "text": "one billion",
@@ -10875,32 +10979,32 @@
         "intent": "enter_data"
       },
       {
-        "text": "i'm in marketing",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "marketing",
             "end": 16,
+            "value": "marketing",
+            "entity": "jobfunction",
             "start": 7
           }
-        ]
+        ],
+        "text": "i'm in marketing",
+        "intent": "enter_data"
       },
       {
         "text": "ACME bank (company)",
         "intent": "enter_data"
       },
       {
-        "text": "Alan",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "Alan",
             "end": 4,
+            "value": "Alan",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "Alan",
+        "intent": "enter_data"
       },
       {
         "text": "about 10 k",
@@ -10923,44 +11027,44 @@
         "intent": "enter_data"
       },
       {
-        "text": "im a dev",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "dev",
             "end": 8,
+            "value": "dev",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "im a dev",
+        "intent": "enter_data"
       },
       {
         "text": "10",
         "intent": "enter_data"
       },
       {
-        "text": "I'm a real good engineer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "engineer",
             "end": 24,
+            "value": "engineer",
+            "entity": "jobfunction",
             "start": 16
           }
-        ]
+        ],
+        "text": "I'm a real good engineer",
+        "intent": "enter_data"
       },
       {
-        "text": "James",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "James",
             "end": 5,
+            "value": "James",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "James",
+        "intent": "enter_data"
       },
       {
         "text": "ames@rasa.com",
@@ -10995,16 +11099,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "akilla",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "name",
-            "value": "akilla",
             "end": 6,
+            "value": "akilla",
+            "entity": "name",
             "start": 0
           }
-        ]
+        ],
+        "text": "akilla",
+        "intent": "enter_data"
       },
       {
         "text": "a turtle",
@@ -11031,16 +11135,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "Im a full stack developer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "full stack developer",
             "end": 25,
+            "value": "full stack developer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "Im a full stack developer",
+        "intent": "enter_data"
       },
       {
         "text": "akelaistcool@schwabenländle.de",
@@ -11059,16 +11163,16 @@
         "intent": "enter_data"
       },
       {
-        "text": "im a freelancer",
-        "intent": "enter_data",
         "entities": [
           {
-            "entity": "jobfunction",
-            "value": "freelancer",
             "end": 15,
+            "value": "freelancer",
+            "entity": "jobfunction",
             "start": 5
           }
-        ]
+        ],
+        "text": "im a freelancer",
+        "intent": "enter_data"
       },
       {
         "text": "health care",
@@ -12733,35 +12837,36 @@
     ],
     "entity_synonyms": [
       {
-        "synonyms": [
-          " full stack develope"
-        ],
-        "value": "full stack developer"
-      },
-      {
+        "value": "alex",
         "synonyms": [
           "Alex"
-        ],
-        "value": "alex"
+        ]
       },
       {
+        "value": "developer",
         "synonyms": [
           "Developer"
-        ],
-        "value": "developer"
+        ]
       },
       {
+        "value": "full stack developer",
         "synonyms": [
-          "dialog flow",
-          "DialogFlow"
-        ],
-        "value": "dialogflow"
+          " full stack develope"
+        ]
       },
       {
+        "value": "dialogflow",
         "synonyms": [
-          "LUIS"
-        ],
-        "value": "luis"
+          "DialogFlow",
+          "dialog flow"
+        ]
+      },
+      {
+        "value": "luis",
+        "synonyms": [
+          "LUIS",
+          "LUIS.ai"
+        ]
       }
     ]
   }
