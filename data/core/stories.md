@@ -6,7 +6,7 @@
     - utter_no_speak
     - utter_change_mind
     - utter_inform_privacypolicy
-* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_no_speak
     - utter_bye
     - action_pause
@@ -15,10 +15,10 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
-* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* deny OR greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_no_speak
     - utter_bye
     - action_pause
@@ -83,7 +83,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
@@ -150,7 +150,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - utter_great
+    - utter_thumbsup
 
 ## deny, then accept privacy policy - newsletter
 * greet
@@ -176,14 +176,14 @@
     - utter_docu
     - utter_ask_feedback
 * mood_confirm
-    - utter_great
+    - utter_thumbsup
 
 
 ## say random stuff, then accept privacy policy - newsletter
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
@@ -209,7 +209,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* greet OR enter_data OR contact_sales OR signup_newsletter OR human_handoff OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
+* greet OR enter_data OR contact_sales OR signup_newsletter OR ask_builder OR ask_weather OR ask_howdoing OR ask_whatspossible OR out_of_scope OR thank OR ask_whoisit OR bye OR ask_whatisrasa
     - utter_must_accept
     - utter_inform_privacypolicy
 * mood_confirm
@@ -318,6 +318,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## newsletter, don't give email then contact sales
 * greet
@@ -437,11 +438,15 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter (with email already) + confirm
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -471,6 +476,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
@@ -506,6 +512,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -548,6 +555,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## just newsletter - already subscribed
 * greet
@@ -566,6 +574,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 
 ## newsletter then sales
 * greet
@@ -585,6 +594,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -638,6 +648,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -798,6 +809,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -809,6 +821,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## sales then newsletter - already subscribed
 * greet
@@ -848,6 +861,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -858,6 +872,7 @@
     - slot{"subscribed": false}
     - utter_already_subscribed
     - utter_docu
+    - utter_ask_feedback
 
 ## newsletters, confirm, then sales
 * greet
@@ -877,6 +892,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -1008,6 +1024,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -1062,6 +1079,7 @@
     - action_store_sales_info
     - slot{"data_stored": true}
     - utter_confirm_salesrequest
+    - utter_ask_feedback
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -1121,6 +1139,7 @@
     - utter_awesome
     - utter_confirmationemail
     - utter_docu
+    - utter_ask_feedback
 
 ## neither --> sales
 * greet
