@@ -135,3 +135,17 @@
 * technical_question
   - utter_cant_answer_tech_question
   - utter_docu
+
+
+## Generated Story -2693866830817074294
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_ask_migration
+* switch{"current_api": "dialogflow"}
+    - utter_switch_dialogflow
