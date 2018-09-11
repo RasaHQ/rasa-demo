@@ -46,28 +46,34 @@
         "data_stored"
       ]
     },
-    "utter_ask_feedback": {
-      "slots": []
-    },
     "utter_thumbsup": {
       "slots": []
     },
-    "action_pause": {
-      "slots": []
-    },
-    "action_chitchat": {
+    "utter_ask_feedback": {
       "slots": []
     },
     "utter_canthelp": {
       "slots": []
     },
-    "utter_great": {
+    "utter_ask_goal": {
       "slots": []
     },
     "utter_nohelp": {
       "slots": []
     },
-    "utter_ask_goal": {
+    "action_chitchat": {
+      "slots": []
+    },
+    "utter_cantsignup": {
+      "slots": []
+    },
+    "utter_great": {
+      "slots": []
+    },
+    "utter_contact_email": {
+      "slots": []
+    },
+    "utter_possibilities": {
       "slots": []
     }
   },
