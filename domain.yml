@@ -225,6 +225,7 @@ actions:
   - utter_ask_migration
   - utter_switch_dialogflow
   - utter_switch_luis
+  - utter_cant_answer_tech_question
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
