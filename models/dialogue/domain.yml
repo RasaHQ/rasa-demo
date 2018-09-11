@@ -38,6 +38,7 @@ actions:
 - utter_ask_migration
 - utter_switch_dialogflow
 - utter_switch_luis
+- utter_cant_answer_tech_question
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -60,51 +61,51 @@ entities:
 - value
 - current_api
 intents:
-- out_of_scope:
-    use_entities: true
-- ask_weather:
-    use_entities: true
-- feedback:
+- enter_data:
+    use_entities: false
+- mood_confirm:
     use_entities: true
 - contact_sales:
     use_entities: true
-- technical_question:
-    use_entities: true
-- human_handoff:
-    use_entities: true
-- mood_confirm:
-    use_entities: true
-- ask_howdoing:
+- signup_newsletter:
     use_entities: true
 - greet:
     use_entities: true
-- thank:
+- human_handoff:
     use_entities: true
-- how_to_get_started:
+- deny:
     use_entities: true
-- canthelp:
+- ask_builder:
+    use_entities: true
+- ask_weather:
+    use_entities: true
+- ask_howdoing:
+    use_entities: true
+- ask_whatspossible:
     use_entities: true
 - ask_whatisrasa:
     use_entities: true
+- ask_isbot:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- thank:
+    use_entities: true
 - ask_whoisit:
     use_entities: true
-- deny:
+- bye:
+    use_entities: true
+- canthelp:
+    use_entities: true
+- feedback:
     use_entities: true
 - switch:
     use_entities: true
 - new_project:
     use_entities: true
-- bye:
+- how_to_get_started:
     use_entities: true
-- ask_isbot:
-    use_entities: true
-- ask_whatspossible:
-    use_entities: true
-- signup_newsletter:
-    use_entities: true
-- enter_data:
-    use_entities: false
-- ask_builder:
+- technical_question:
     use_entities: true
 slots:
   budget:
@@ -113,6 +114,12 @@ slots:
   company_name:
     initial_value: null
     type: rasa_core.slots.TextSlot
+  current_api:
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - dialogflow
+    - luis
   data_stored:
     initial_value: null
     type: rasa_core.slots.BooleanSlot
@@ -196,6 +203,8 @@ templates:
   - text: Bye!
   - text: Ciao!
   - text: Bye, was nice talking to you!
+  utter_cant_answer_tech_question:
+  - text: I can't answer that
   utter_canthelp:
   - text: I'm sorry I couldn't help you. If you have general questions about the Stack,
       please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com

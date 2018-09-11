@@ -52,6 +52,11 @@ slots:
     type: bool
   feedback_value:
     type: unfeaturized
+  current_api:
+    type: categorical
+    values:
+      - dialogflow
+      - luis
 
 templates:
   utter_ask_budget:
@@ -184,6 +189,8 @@ templates:
     - text: "I can't sign you up if you don't provide your email 😉"
   utter_ask_isbot:
     - text: "Yep I'm a bot!"
+  utter_cant_answer_tech_question:
+    - text: "I can't answer that"
 
 actions:
   - utter_greet
@@ -223,6 +230,7 @@ actions:
   - utter_ask_migration
   - utter_switch_dialogflow
   - utter_switch_luis
+  - utter_cant_answer_tech_question
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
