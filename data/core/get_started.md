@@ -32,10 +32,6 @@
 * how_to_get_started
   - utter_quickstart
   - utter_ask_migration
-* new_project
-  - utter_quickstart
-  - utter_quickstart_nlu_only
-  - utter_docu
 
 ## story_005
 * greet
@@ -86,10 +82,6 @@
 * how_to_get_started
     - utter_quickstart
     - utter_ask_migration
-* new_project
-    - utter_quickstart
-    - utter_quickstart_nlu_only
-    - utter_docu
 * thank
     - utter_noworries
 
@@ -149,4 +141,35 @@
     - utter_ask_migration
 * switch{"current_api": "dialogflow"}
     - utter_switch_dialogflow
+
+
+## Generated Story 4741357980983644475
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* how_to_get_started{"product": "core"}
+    - utter_quickstart
+    - utter_ask_migration
+* switch{"current_api":"dialogflow"}
+    - utter_switch_dialogflow
+
+
+## Generated Story -8787504525886503727
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* switch
+    - utter_must_accept
+    - utter_inform_privacypolicy
+* mood_confirm
+    - utter_awesome
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_ask_migration
+* deny
+    - utter_thumbsup
 

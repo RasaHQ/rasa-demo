@@ -1259,7 +1259,7 @@
 ## intent:how_to_get_started
 - how do I get started with Rasa
 - how do I use rasa
-- what is the difference between rasa nlu and rasa core
+- what is the difference between rasa [nlu](product) and rasa [core](product)
 - how to start with rasa
 - how to start with it
 - how to build a bot?
@@ -1273,7 +1273,13 @@
 - can you guide me know to create knowledge base chatbot
 - how can I learn rasa
 - i want to use rasa to build my chatbot
-- how do i get rasa core
+- how do i get rasa [core](product)
+- how do I train rasa [nlu](product)
+- how do i learn rasa [core](product)
+- what is rasa [core](product)
+- what is [nlu](product)
+- I want to learn about rasa [core](product)
+- i want to use [nlu](product)
 
 ## intent:technical_question
 - what is duckling
@@ -1305,18 +1311,11 @@
 - which technology is used to create you
 
 
-## intent:new_project
-- I'm starting a brand new project
-- new project
-- starting fresh
-- fresh start
-- starting a new project
-- beginning
-- I am going to begin a new project
-- this is a new project
-
 ## intent:switch
 - I currently use [dialog flow](current_api:dialogflow)
+- I want to switch from [dialog flow](current_api:dialogflow) to rasa
+- I want to change from [dialog flow](current_api:dialogflow) to rasa
+- I want to convery my [dialog flow](current_api:dialogflow) bot to rasa
 - I currently use [LUIS](current_api:luis)
 - I use [luis](current_api) at the moment
 - [luis](current_api) atm
