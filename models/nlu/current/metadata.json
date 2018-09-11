@@ -2,16 +2,11 @@
     "language": "en",
     "pipeline": [
         {
-            "class": "rasa_nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer",
-            "name": "tokenizer_whitespace"
+            "name": "tokenizer_whitespace",
+            "class": "rasa_nlu.tokenizers.whitespace_tokenizer.WhitespaceTokenizer"
         },
         {
-            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor",
-            "L1_c": 0.1,
-            "classifier_file": "crf_model.pkl",
-            "max_iterations": 50,
             "BILOU_flag": true,
-            "name": "ner_crf",
             "features": [
                 [
                     "low",
@@ -37,56 +32,73 @@
                     "upper"
                 ]
             ],
-            "L2_c": 0.1
+            "max_iterations": 50,
+            "L1_c": 0.1,
+            "L2_c": 0.1,
+            "name": "ner_crf",
+            "classifier_file": "crf_model.pkl",
+            "class": "rasa_nlu.extractors.crf_entity_extractor.CRFEntityExtractor"
         },
         {
-            "class": "rasa_nlu.featurizers.count_vectors_featurizer.CountVectorsFeaturizer",
-            "stop_words": null,
-            "lowercase": true,
-            "min_df": 1,
             "token_pattern": "(?u)\\b\\w+\\b",
-            "name": "intent_featurizer_count_vectors",
             "strip_accents": null,
-            "OOV_words": [],
-            "min_ngram": 1,
-            "OOV_token": "oov",
-            "featurizer_file": "intent_featurizer_count_vectors.pkl",
+            "stop_words": null,
+            "min_df": 1,
             "max_df": 1.0,
+            "min_ngram": 1,
             "max_ngram": 1,
-            "max_features": null
+            "max_features": null,
+            "lowercase": true,
+            "OOV_token": "oov",
+            "OOV_words": [],
+            "name": "intent_featurizer_count_vectors",
+            "featurizer_file": "intent_featurizer_count_vectors.pkl",
+            "class": "rasa_nlu.featurizers.count_vectors_featurizer.CountVectorsFeaturizer"
         },
         {
-            "embed_dim": 20,
-            "class": "rasa_nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier",
+            "num_hidden_layers_a": 2,
             "hidden_layer_size_a": [
                 256,
                 128
             ],
-            "similarity_type": "cosine",
-            "use_max_sim_neg": true,
-            "name": "intent_classifier_tensorflow_embedding",
-            "intent_tokenization_flag": false,
-            "C_emb": 0.8,
-            "hidden_layer_size_b": [],
-            "mu_neg": -0.4,
-            "num_neg": 20,
-            "droprate": 0.2,
-            "C2": 0.002,
-            "classifier_file": "intent_classifier_tensorflow_embedding.ckpt",
-            "num_hidden_layers_a": 2,
-            "evaluate_every_num_epochs": 10,
-            "epochs": 300,
-            "intent_split_symbol": "_",
-            "evaluate_on_num_examples": 1000,
-            "mu_pos": 0.8,
             "num_hidden_layers_b": 0,
+            "hidden_layer_size_b": [],
             "batch_size": [
                 64,
                 256
-            ]
+            ],
+            "epochs": 300,
+            "embed_dim": 20,
+            "mu_pos": 0.8,
+            "mu_neg": -0.4,
+            "similarity_type": "cosine",
+            "num_neg": 20,
+            "use_max_sim_neg": true,
+            "C2": 0.002,
+            "C_emb": 0.8,
+            "droprate": 0.2,
+            "intent_tokenization_flag": false,
+            "intent_split_symbol": "_",
+            "evaluate_every_num_epochs": 10,
+            "evaluate_on_num_examples": 1000,
+            "name": "intent_classifier_tensorflow_embedding",
+            "classifier_file": "intent_classifier_tensorflow_embedding.ckpt",
+            "class": "rasa_nlu.classifiers.embedding_intent_classifier.EmbeddingIntentClassifier"
+        },
+        {
+            "dimensions": [
+                "email",
+                "number",
+                "amount-of-money"
+            ],
+            "url": "http://localhost:8000",
+            "locale": null,
+            "timezone": null,
+            "name": "ner_duckling_http",
+            "class": "rasa_nlu.extractors.duckling_http_extractor.DucklingHTTPExtractor"
         }
     ],
-    "rasa_nlu_version": "0.13.1",
-    "trained_at": "20180910-154551",
-    "training_data": "training_data.json"
+    "training_data": "training_data.json",
+    "trained_at": "20180911-113546",
+    "rasa_nlu_version": "0.13.2"
 }

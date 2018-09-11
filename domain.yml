@@ -52,6 +52,11 @@ slots:
     type: bool
   feedback_value:
     type: unfeaturized
+  current_api:
+    type: categorical
+    values:
+      - dialogflow
+      - luis
 
 templates:
   utter_ask_budget:
