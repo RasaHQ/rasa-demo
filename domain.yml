@@ -90,7 +90,7 @@ templates:
   utter_quickstart_nlu_only:
     - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
   utter_ask_migration:
-    - text: "Are you starting a new project, or looking to switch over from LUIS, DialogFlow, or another API?"
+    - text: "Do you want to know more about NLU or Core? Or are you looking to switch over from LUIS, DialogFlow, or another service?"
   utter_switch_dialogflow:
     - text: "We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/."
   utter_switch_luis:
@@ -184,6 +184,8 @@ templates:
     - text: "I can't sign you up if you don't provide your email 😉"
   utter_ask_isbot:
     - text: "Yep I'm a bot!"
+  utter_cant_answer_tech_question:
+    - text: "I can't answer that"
 
 actions:
   - utter_greet
