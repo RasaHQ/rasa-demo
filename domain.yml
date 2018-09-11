@@ -7,6 +7,7 @@ entities:
   - number
   - value
   - current_api
+  - product
 
 intents:
   - enter_data: {use_entities: false}
@@ -57,6 +58,11 @@ slots:
     values:
       - dialogflow
       - luis
+  product:
+    type: categorical
+    values:
+      - core
+      - nlu
 
 templates:
   utter_ask_budget:
