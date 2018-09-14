@@ -6,8 +6,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -16,8 +14,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -29,6 +25,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+    - utter_ask_goal
 * canthelp
     - utter_canthelp
 
@@ -36,8 +33,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -46,6 +41,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+    - utter_ask_goal
 * canthelp
     - utter_canthelp
 
@@ -53,8 +49,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -63,6 +57,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+    - utter_ask_goal
 * canthelp
     - utter_canthelp
 
@@ -70,8 +65,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -80,6 +73,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+    - utter_ask_goal
 * canthelp
     - utter_canthelp
 
@@ -87,8 +81,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -97,15 +89,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* canthelp
-    - utter_canthelp
-
-## just newsletter +confirm - already subscribed
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -114,8 +97,14 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
+    - utter_ask_goal
+* canthelp
+    - utter_canthelp
+
+## just newsletter +confirm - already subscribed
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -127,15 +116,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* canthelp
-    - utter_canthelp
-
-## just newsletter
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -144,8 +124,14 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
+    - utter_ask_goal
+* canthelp
+    - utter_canthelp
+
+## just newsletter
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -157,6 +143,7 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+    - utter_ask_goal
 * canthelp
     - utter_canthelp
 
@@ -165,8 +152,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -175,8 +160,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -189,16 +172,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* canthelp
-    - utter_canthelp
-
-
-## just sales
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * canthelp
     - utter_canthelp
@@ -208,8 +181,15 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
+    - utter_ask_goal
+* canthelp
+    - utter_canthelp
+
+
+## just sales
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -222,8 +202,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -240,8 +218,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -264,8 +240,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -291,8 +265,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -322,8 +294,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation

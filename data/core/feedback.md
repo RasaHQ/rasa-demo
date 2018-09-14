@@ -14,3 +14,8 @@
 * mood_confirm
     - utter_great
     - utter_thumbsup
+
+## feedback deny
+    - utter_ask_feedback
+* deny
+    - utter_thumbsup

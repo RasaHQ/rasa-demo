@@ -12,8 +12,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -26,8 +24,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
@@ -36,8 +32,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
@@ -49,8 +43,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -74,8 +66,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -99,8 +89,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -121,8 +109,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -141,8 +127,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -162,8 +146,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -181,8 +163,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -205,8 +185,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -229,8 +207,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -252,8 +228,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -275,8 +249,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -297,8 +269,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * signup_newsletter
     - utter_great
@@ -319,8 +289,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
@@ -362,8 +330,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -405,8 +371,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -449,8 +413,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -495,8 +457,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -538,8 +498,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
@@ -581,8 +539,6 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* mood_confirm
-    - utter_awesome
     - utter_ask_goal
 * contact_sales
     - utter_moreinformation
