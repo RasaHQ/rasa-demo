@@ -27,3 +27,6 @@ run-cmdline:
 
 visualize:
 	python3 -m rasa_core.visualize -s data/core/ -d domain.yml -o story_graph.png
+
+train-online:
+	python -m rasa_core.train -u models/nlu/current/ --online --core models/dialogue/

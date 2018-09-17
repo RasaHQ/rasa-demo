@@ -19,7 +19,7 @@ You can find planned enhancements for the demo in the
 To install the bot, please clone the repo and run:
 
 ```
-cd website-demo
+cd rasa-demo
 pip install -e .
 ```
 This will install the bot and all of its requirements.
