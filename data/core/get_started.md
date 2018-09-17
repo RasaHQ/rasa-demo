@@ -91,7 +91,6 @@
 ## tech question
 * technical_question
   - utter_cant_answer_tech_question
-  - utter_docu
 
 ## tech question again
 * greet
@@ -102,7 +101,6 @@
     - utter_switch_dialogflow
 * technical_question
   - utter_cant_answer_tech_question
-  - utter_docu
 
 
 ## tech question again
@@ -112,7 +110,6 @@
     - utter_ask_goal
 * technical_question
   - utter_cant_answer_tech_question
-  - utter_docu
 
 
 ## Generated Story -2693866830817074294
@@ -161,4 +158,64 @@
     - utter_switch_dialogflow
 * deny
     - utter_thumbsup
+
+
+## Generated Story 2468355885990537436
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_ask_migration
+* how_to_get_started{"product": "nlu"}
+    - slot{"product": "nlu"}
+    - utter_quickstart_nlu_only
+* technical_question
+    - utter_cant_answer_tech_question
+
+
+## Generated Story 7315307939407953944
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_ask_migration
+* how_to_get_started{"product": "core"}
+    - slot{"product": "core"}
+    - utter_quickstart
+* how_to_get_started{"product": "core"}
+    - slot{"product": "core"}
+    - utter_thumbsup
+* technical_question
+    - utter_cant_answer_tech_question
+
+## Generated Story -1300353667963597833
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* switch{"product": "dialogflow"}
+    - slot{"product": "dialogflow"}
+    - utter_switch_dialogflow
+* out_of_scope
+    - utter_docu
+* technical_question
+    - utter_cant_answer_tech_question
+
+
+## Generated Story -1809654165792994573
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+* how_to_get_started
+    - utter_quickstart
+    - utter_ask_migration
+* how_to_get_started{"product": "nlu"}
+    - slot{"product": "nlu"}
+    - utter_quickstart_nlu_only
+* switch{"product": "bot framework"}
+    - slot{"product": "bot framework"}
+    - utter_cant_answer_tech_question
 

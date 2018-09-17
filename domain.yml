@@ -109,13 +109,7 @@ templates:
   utter_greet:
     - text: "Hey there, welcome to Rasa!"
   utter_inform_privacypolicy:
-    - text: "Before we start chatting, please read and accept our privacy policy https://rasa.com/privacy-policy/.
-    Do you accept?"
-      buttons:
-        - title: "Accept"
-          payload: "/mood_confirm"
-        - title: "Decline"
-          payload: "/deny"
+    - text: "By chatting to me you agree to our privacy policy, which you can read here: https://rasa.com/privacy-policy/."
   utter_moreinformation:
     - text: "Sure! Let's get to know each other first 😉"
   utter_sales_contact:

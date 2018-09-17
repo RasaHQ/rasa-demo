@@ -1284,6 +1284,8 @@
 - [nlu](product)
 - rasa [stack](product:core)
 - how to learn rasa [stack](product:core)
+- I want to learn about rasa [nlu](product:nlu)
+- i want to learn about rasa [core](product:core)
 
 ## intent:technical_question
 - what is duckling
@@ -1313,13 +1315,18 @@
 - which language is rasa programmed in
 - what technologies did u use to create more mature chatbot?
 - which technology is used to create you
+- how do I install rasa in windows
+- having some problems with installation
+- how do I run rasa on windows
+- does rasa support voice input
+- is there an alexa integration
 
 
 ## intent:switch
 - I currently use [dialog flow](current_api:dialogflow)
 - I want to switch from [dialog flow](current_api:dialogflow) to rasa
 - I want to change from [dialog flow](current_api:dialogflow) to rasa
-- I want to convery my [dialog flow](current_api:dialogflow) bot to rasa
+- I want to convert my [dialog flow](current_api:dialogflow) bot to rasa
 - I currently use [LUIS](current_api:luis)
 - I use [luis](current_api) at the moment
 - [luis](current_api) atm
@@ -1333,3 +1340,7 @@
 - [bot framework](current_api)
 - I use [wit.ai](product)
 - chatfuel
+- how does rasa compare to [dialogflow](product)
+- how does rasa compare to [luis](product)
+- is rasa better than [dialog flow](product:dialogflow)
+- what is the difference between [bot framework](product) and rasa
