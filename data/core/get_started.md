@@ -44,14 +44,14 @@
 * thank
   - utter_noworries
 * out_of_scope
-  - utter_docu
+  - utter_out_of_scope
 
 ## story_006
 * how_to_get_started
   - utter_quickstart
   - utter_ask_migration
 * out_of_scope
-  - utter_docu
+  - utter_out_of_scope
 
 ## Generated Story -5718603718660805764
 * greet
@@ -194,11 +194,12 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
-* switch{"product": "dialogflow"}
-    - slot{"product": "dialogflow"}
+    - utter_ask_goal
+* switch{"current_api": "dialogflow"}
+    - slot{"current_api": "dialogflow"}
     - utter_switch_dialogflow
 * out_of_scope
-    - utter_docu
+    - utter_out_of_scope
 * technical_question
     - utter_cant_answer_tech_question
 
@@ -207,13 +208,13 @@
 * greet
     - utter_greet
     - utter_inform_privacypolicy
+    - utter_ask_goal
 * how_to_get_started
     - utter_quickstart
     - utter_ask_migration
 * how_to_get_started{"product": "nlu"}
     - slot{"product": "nlu"}
     - utter_quickstart_nlu_only
-* switch{"product": "bot framework"}
-    - slot{"product": "bot framework"}
+* switch{"current_api": "bot framework"}
+    - slot{"current_api": "bot framework"}
     - utter_cant_answer_tech_question
-
