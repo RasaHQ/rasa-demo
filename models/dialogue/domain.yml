@@ -1,5 +1,49 @@
 %YAML 1.1
 ---
+action_factory: null
+action_names:
+- utter_greet
+- utter_ask_usecase
+- utter_ask_businessmail
+- utter_ask_jobfunction
+- utter_ask_email
+- utter_ask_budget
+- utter_ask_company
+- utter_ask_goal
+- utter_inform_privacypolicy
+- utter_moreinformation
+- utter_confirm_salesrequest
+- utter_docu
+- utter_confirmationemail
+- utter_sales_contact
+- utter_already_subscribed
+- utter_contact_email
+- utter_no_speak
+- utter_out_of_scope
+- utter_possibilities
+- utter_ask_name
+- utter_change_mind
+- utter_must_accept
+- utter_noworries
+- utter_bye
+- utter_awesome
+- utter_great
+- utter_thank_usecase
+- utter_canthelp
+- utter_nohelp
+- utter_thumbsup
+- utter_cantsignup
+- utter_ask_feedback
+- action_subscribe_newsletter
+- action_store_sales_info
+- action_store_budget
+- action_store_usecase
+- action_chitchat
+- action_store_name
+- action_store_company
+- action_store_job
+- action_store_email
+- action_pause
 actions:
 - utter_greet
 - utter_ask_usecase
@@ -33,22 +77,16 @@ actions:
 - utter_thumbsup
 - utter_cantsignup
 - utter_ask_feedback
-- utter_quickstart
-- utter_quickstart_nlu_only
-- utter_ask_migration
-- utter_switch_dialogflow
-- utter_switch_luis
-- utter_cant_answer_tech_question
-- action_subscribe_newsletter
-- action_store_sales_info
-- action_store_budget
-- action_store_usecase
-- action_chitchat
-- action_store_name
-- action_store_company
-- action_store_job
-- action_store_email
-- action_pause
+- demo.actions.ActionSubscribeNewsletter
+- demo.actions.ActionStoreSalesInfo
+- demo.actions.ActionStoreBudget
+- demo.actions.ActionStoreUsecase
+- demo.actions.ActionChitchat
+- demo.actions.ActionStoreName
+- demo.actions.ActionStoreCompany
+- demo.actions.ActionStoreJob
+- demo.actions.ActionStoreEmail
+- demo.actions.ActionPause
 config:
   store_entities_as_slots: true
 entities:
@@ -59,7 +97,6 @@ entities:
 - amount-of-money
 - number
 - value
-- current_api
 intents:
 - enter_data:
     use_entities: false
@@ -99,14 +136,6 @@ intents:
     use_entities: true
 - feedback:
     use_entities: true
-- switch:
-    use_entities: true
-- new_project:
-    use_entities: true
-- how_to_get_started:
-    use_entities: true
-- technical_question:
-    use_entities: true
 slots:
   budget:
     initial_value: null
@@ -114,12 +143,6 @@ slots:
   company_name:
     initial_value: null
     type: rasa_core.slots.TextSlot
-  current_api:
-    initial_value: null
-    type: rasa_core.slots.CategoricalSlot
-    values:
-    - dialogflow
-    - luis
   data_stored:
     initial_value: null
     type: rasa_core.slots.BooleanSlot
@@ -174,9 +197,6 @@ templates:
   - text: Yep I'm a bot!
   utter_ask_jobfunction:
   - text: What's your job? 🕴
-  utter_ask_migration:
-  - text: Are you starting a new project, or looking to switch over from LUIS, DialogFlow,
-      or another API?
   utter_ask_name:
   - text: What's your name?
   utter_ask_usecase:
@@ -203,8 +223,6 @@ templates:
   - text: Bye!
   - text: Ciao!
   - text: Bye, was nice talking to you!
-  utter_cant_answer_tech_question:
-  - text: I can't answer that
   utter_canthelp:
   - text: I'm sorry I couldn't help you. If you have general questions about the Stack,
       please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com
@@ -266,18 +284,8 @@ templates:
       that request.
   utter_possibilities:
   - text: You can either book a sales call or subscribe to our newsletter.
-  utter_quickstart:
-  - text: 'we have a quickstart here where you can try the Rasa stack without installing
-      anything: https://rasa.com/docs/core/quickstart/'
-  utter_quickstart_nlu_only:
-  - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/\
-      \ . You don't have to install anything to try it out."
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
-  utter_switch_dialogflow:
-  - text: 'We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/.'
-  utter_switch_luis:
-  - text: 'We have a guide for migrating from LUIS here: http://rasa.com/docs/getting-started/luis/.'
   utter_thank_usecase:
   - text: Cool, thank you!
   utter_thumbsup:

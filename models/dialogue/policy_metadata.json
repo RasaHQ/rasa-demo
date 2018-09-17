@@ -3,7 +3,6 @@
     "action_listen": {
       "slots": [
         "email",
-        "current_api",
         "feedback_value"
       ]
     },
@@ -47,16 +46,13 @@
         "data_stored"
       ]
     },
-    "utter_great": {
+    "utter_thumbsup": {
       "slots": []
     },
     "utter_ask_feedback": {
       "slots": []
     },
-    "utter_thumbsup": {
-      "slots": []
-    },
-    "action_pause": {
+    "utter_canthelp": {
       "slots": []
     },
     "utter_ask_goal": {
@@ -65,18 +61,23 @@
     "utter_nohelp": {
       "slots": []
     },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_canthelp": {
-      "slots": []
-    },
     "action_chitchat": {
+      "slots": []
+    },
+    "utter_cantsignup": {
+      "slots": []
+    },
+    "utter_great": {
+      "slots": []
+    },
+    "utter_contact_email": {
+      "slots": []
+    },
+    "utter_possibilities": {
       "slots": []
     }
   },
-  "rasa_core": "0.11.3",
-  "python": "3.6.6",
+  "rasa_core": "0.10.4",
   "max_histories": [
     6,
     6,
