@@ -1280,6 +1280,10 @@
 - what is [nlu](product)
 - I want to learn about rasa [core](product)
 - i want to use [nlu](product)
+- [core](product)
+- [nlu](product)
+- rasa [stack](product:core)
+- how to learn rasa [stack](product:core)
 
 ## intent:technical_question
 - what is duckling
@@ -1323,4 +1327,9 @@
 - I use [DialogFlow](current_api:dialogflow)
 - i want to switch from [dialogflow](current_api) to Rasa
 - I want to move from [LUIS.ai](current_api:luis) to Rasa
-
+- [DialogFlow](current_api:dialogflow)
+- [luis.ai](current_api:luis)
+- [LUIS](current_api:luis)
+- [bot framework](current_api)
+- I use [wit.ai](product)
+- chatfuel
