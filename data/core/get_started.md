@@ -131,7 +131,6 @@
     - utter_ask_goal
 * how_to_get_started{"product": "core"}
     - utter_quickstart
-    - utter_ask_migration
 * switch{"current_api":"dialogflow"}
     - utter_switch_dialogflow
 
@@ -142,7 +141,6 @@
     - utter_ask_goal
 * how_to_get_started{"product": "nlu"}
     - utter_quickstart_nlu_only
-    - utter_ask_migration
 * switch{"current_api":"dialogflow"}
     - utter_switch_dialogflow
 
