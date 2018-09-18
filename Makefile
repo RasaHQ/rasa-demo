@@ -23,3 +23,12 @@ run-cmdline:
 
 visualize:
 	python3 -m rasa_core.visualize -s data/core/ -d domain.yml -o story_graph.png
+<<<<<<< Updated upstream
+=======
+
+train-online:
+	python -m rasa_core.train -u models/nlu/current/ --online --core models/dialogue/
+
+evaluate:
+	python -m rasa_core.evaluate -d models/dialogue -s data/core/
+>>>>>>> Stashed changes

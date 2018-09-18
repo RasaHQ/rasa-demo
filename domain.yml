@@ -52,7 +52,10 @@ slots:
   data_stored:
     type: bool
   feedback_value:
-    type: unfeaturized
+    type: categorical
+    values:
+      - positive
+      - negative
   current_api:
     type: categorical
     values:

@@ -66,7 +66,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - utter_thumbsup
+    - utter_great
 
 ## newsletter + mood_confirm feedback
 * greet

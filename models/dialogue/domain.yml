@@ -179,7 +179,10 @@ slots:
     type: rasa_core.slots.TextSlot
   feedback_value:
     initial_value: null
-    type: rasa_core.slots.UnfeaturizedSlot
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - positive
+    - negative
   job_function:
     initial_value: null
     type: rasa_core.slots.TextSlot
