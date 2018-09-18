@@ -231,13 +231,13 @@ actions:
   - utter_switch_dialogflow
   - utter_switch_luis
   - utter_cant_answer_tech_question
-  - demo.actions.ActionSubscribeNewsletter
-  - demo.actions.ActionStoreSalesInfo
-  - demo.actions.ActionStoreBudget
-  - demo.actions.ActionStoreUsecase
-  - demo.actions.ActionChitchat
-  - demo.actions.ActionStoreName
-  - demo.actions.ActionStoreCompany
-  - demo.actions.ActionStoreJob
-  - demo.actions.ActionStoreEmail
-  - demo.actions.ActionPause
+  - action_subscribe_newsletter
+  - action_store_sales_info
+  - action_store_budget
+  - action_store_usecase
+  - action_chitchat
+  - action_store_name
+  - action_store_company
+  - action_store_job
+  - action_store_email
+  - action_pause

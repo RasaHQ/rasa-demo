@@ -5663,10 +5663,6 @@
       },
       {
         "intent": "out_of_scope",
-        "text": "technical side of things?"
-      },
-      {
-        "intent": "out_of_scope",
         "text": "where do you live?"
       },
       {
@@ -6236,6 +6232,326 @@
       {
         "intent": "thank",
         "text": "thanks!"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how do I get started with Rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how do I use rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "what is the difference between rasa nlu and rasa core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how to start with rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how to start with it"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how to build a bot?"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how can I build a chatbot"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "what can I do with Rasa?"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "where to start the development of rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "WHAT IS RASA"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "WHAT IS IT"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "so, how do I use rasa?"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "can i just test features without having to deal with your predefined conversation"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "can you guide me know to create knowledge base chatbot"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how can I learn rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "i want to use rasa to build my chatbot"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how do i get rasa core"
+      },
+      {
+        "intent": "technical_question",
+        "text": "what is duckling"
+      },
+      {
+        "intent": "technical_question",
+        "text": "where to train intents in rasa?"
+      },
+      {
+        "intent": "technical_question",
+        "text": "duckling"
+      },
+      {
+        "intent": "technical_question",
+        "text": "dicklung"
+      },
+      {
+        "intent": "technical_question",
+        "text": "what is duckling"
+      },
+      {
+        "intent": "technical_question",
+        "text": "i need a help to integrate rasa with a messenger"
+      },
+      {
+        "intent": "technical_question",
+        "text": "what infrastructure is required to run a bot?"
+      },
+      {
+        "intent": "technical_question",
+        "text": "can you help me with this problem"
+      },
+      {
+        "intent": "technical_question",
+        "text": "help me wih the installation"
+      },
+      {
+        "intent": "technical_question",
+        "text": "having trouble with rasa installation"
+      },
+      {
+        "intent": "technical_question",
+        "text": "i am having trouble setting this up"
+      },
+      {
+        "intent": "technical_question",
+        "text": "how about interactive learning"
+      },
+      {
+        "intent": "technical_question",
+        "text": "interactive learning?"
+      },
+      {
+        "intent": "technical_question",
+        "text": "technical side of things?"
+      },
+      {
+        "intent": "technical_question",
+        "entities": [
+          {
+            "start": 40,
+            "end": 44,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "does rasa have all the same features as luis"
+      },
+      {
+        "intent": "technical_question",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "is rasa better than dialogflow"
+      },
+      {
+        "intent": "technical_question",
+        "text": "should I use rasa instead of ibm Watson api"
+      },
+      {
+        "intent": "technical_question",
+        "text": "Is Rasa better than Dialogflow?"
+      },
+      {
+        "intent": "technical_question",
+        "text": "db processing"
+      },
+      {
+        "intent": "technical_question",
+        "text": "how do slots work"
+      },
+      {
+        "intent": "technical_question",
+        "text": "what components of Rasa are open source"
+      },
+      {
+        "intent": "technical_question",
+        "text": "how to integrate rasa chatbot with my website"
+      },
+      {
+        "intent": "technical_question",
+        "text": "how works rasa"
+      },
+      {
+        "intent": "technical_question",
+        "text": "with exceptions"
+      },
+      {
+        "intent": "technical_question",
+        "text": "which language is rasa programmed in"
+      },
+      {
+        "intent": "technical_question",
+        "text": "what technologies did u use to create more mature chatbot?"
+      },
+      {
+        "intent": "technical_question",
+        "text": "which technology is used to create you"
+      },
+      {
+        "intent": "new_project",
+        "text": "I'm starting a brand new project"
+      },
+      {
+        "intent": "new_project",
+        "text": "new project"
+      },
+      {
+        "intent": "new_project",
+        "text": "starting fresh"
+      },
+      {
+        "intent": "new_project",
+        "text": "fresh start"
+      },
+      {
+        "intent": "new_project",
+        "text": "starting a new project"
+      },
+      {
+        "intent": "new_project",
+        "text": "beginning"
+      },
+      {
+        "intent": "new_project",
+        "text": "I am going to begin a new project"
+      },
+      {
+        "intent": "new_project",
+        "text": "this is a new project"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 16,
+            "end": 27,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I currently use dialog flow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 16,
+            "end": 20,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I currently use LUIS"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 6,
+            "end": 10,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I use luis at the moment"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "luis atm"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 15,
+            "end": 25,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "switching from DialogFlow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 6,
+            "end": 16,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I use DialogFlow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 22,
+            "end": 32,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "i want to switch from dialogflow to Rasa"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I want to move from LUIS.ai to Rasa"
       }
     ],
     "regex_features": [],
@@ -6256,6 +6572,20 @@
         "value": "developer",
         "synonyms": [
           "Developer"
+        ]
+      },
+      {
+        "value": "dialogflow",
+        "synonyms": [
+          "dialog flow",
+          "DialogFlow"
+        ]
+      },
+      {
+        "value": "luis",
+        "synonyms": [
+          "LUIS",
+          "LUIS.ai"
         ]
       }
     ]

@@ -2,10 +2,20 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "current_api",
-        "feedback_value",
+        "product",
         "email",
-        "product"
+        "current_api",
+        "feedback_value"
+      ]
+    },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
       ]
     },
     "action_store_job": {
@@ -33,19 +43,9 @@
         "company_name"
       ]
     },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
-      ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
       ]
     },
     "utter_ask_feedback": {
@@ -54,35 +54,36 @@
     "utter_thumbsup": {
       "slots": []
     },
-    "utter_ask_goal": {
+    "action_chitchat": {
       "slots": []
     },
-    "utter_cantsignup": {
-      "slots": []
-    },
-    "utter_canthelp": {
-      "slots": []
-    },
-    "utter_out_of_scope": {
-      "slots": []
-    },
-    "utter_noworries": {
-      "slots": []
-    },
-    "utter_cant_answer_tech_question": {
+    "utter_switch_dialogflow": {
       "slots": []
     },
     "utter_possibilities": {
       "slots": []
     },
-    "action_chitchat": {
+    "utter_ask_goal": {
       "slots": []
     },
-    "utter_ask_migration": {
+    "utter_noworries": {
+      "slots": []
+    },
+    "utter_out_of_scope": {
+      "slots": []
+    },
+    "utter_canthelp": {
+      "slots": []
+    },
+    "utter_nohelp": {
+      "slots": []
+    },
+    "utter_cantsignup": {
       "slots": []
     }
   },
-  "rasa_core": "0.10.4",
+  "rasa_core": "0.12.0a2",
+  "python": "3.6.6",
   "max_histories": [
     6,
     6,
