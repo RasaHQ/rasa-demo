@@ -12,6 +12,9 @@ help:
 	@echo "    visualize"
 	@echo "        Saves the story graphs into a file"
 
+run-actions:
+	python3 -m rasa_core_sdk.endpoint --actions demo.actions
+
 train-nlu:
 	python3 -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/ -o models --project nlu --verbose
 
@@ -19,16 +22,14 @@ train-core:
 	python3 demo/train_core.py
 
 run-cmdline:
-	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug
+	make run-actions&
+	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
 
 visualize:
 	python3 -m rasa_core.visualize -s data/core/ -d domain.yml -o story_graph.png
-<<<<<<< Updated upstream
-=======
 
 train-online:
 	python -m rasa_core.train -u models/nlu/current/ --online --core models/dialogue/
 
 evaluate:
 	python -m rasa_core.evaluate -d models/dialogue -s data/core/
->>>>>>> Stashed changes

@@ -2,8 +2,9 @@
 
 import logging
 
-from rasa_core.actions.action import Action
-from rasa_core.events import SlotSet, UserUtteranceReverted, ConversationPaused
+from rasa_core_sdk import Action
+from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
+                                 ConversationPaused
 
 from demo.api import MailChimpAPI
 from demo import config
@@ -79,7 +80,7 @@ class ActionStoreBudget(Action):
         # In future this should be stored in a `budget_unconfirmed` slot where
         # the user will then be asked to confirm this is there budget
         if not budget:
-            budget = tracker.latest_message.text
+            budget = tracker.latest_message.get('text')
 
         return [SlotSet('budget', budget)]
 
@@ -94,7 +95,7 @@ class ActionStoreUsecase(Action):
 
         # we grab the whole user utterance here as there are no real entities
         # in the use case
-        use_case = tracker.latest_message.text
+        use_case = tracker.latest_message.get('text')
 
         return [SlotSet('use_case', use_case)]
 
@@ -107,7 +108,7 @@ class ActionChitchat(Action):
 
     def run(self, dispatcher, tracker, domain):
 
-        intent = tracker.latest_message.intent.get('name')
+        intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
@@ -131,7 +132,7 @@ class ActionStoreName(Action):
         # in future this will be stored in a `name_unconfirmed` slot and the
         # user will be asked to confirm their name
         if not person_name:
-            person_name = tracker.latest_message.text
+            person_name = tracker.latest_message.get('text')
 
         return [SlotSet('person_name', person_name)]
 
@@ -149,7 +150,7 @@ class ActionStoreCompany(Action):
         # in future this will be stored in a `company_unconfirmed` slot and
         # the user will be asked to confirm their company name
         if not company:
-            company = tracker.latest_message.text
+            company = tracker.latest_message.get('text')
 
         return [SlotSet('company_name', company)]
 
@@ -168,7 +169,7 @@ class ActionStoreJob(Action):
         # in future this will be stored in a `job_unconfirmed` slot and
         # the user will be asked to confirm their job title
         if not jobfunction:
-            jobfunction = tracker.latest_message.text
+            jobfunction = tracker.latest_message.get('text')
 
         return [SlotSet('job_function', jobfunction)]
 

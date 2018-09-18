@@ -244,14 +244,6 @@
 * deny
     - utter_nohelp
 
-## story number 10
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* mood_confirm
-    - utter_thumbsup
-
 ## story number 11
 * greet
     - utter_greet
@@ -348,7 +340,7 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * greet
-    - utter_possibilities
+    - utter_greet
 * ask_howdoing
     - action_chitchat
 * ask_weather

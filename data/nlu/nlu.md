@@ -1108,7 +1108,6 @@
 - bots are bad
 - i dont like bots
  - do you have a phone number?
-- technical side of things?
 - where do you live?
 - how are akela's cats doing?
 - but I just told you that :(
@@ -1256,3 +1255,92 @@
 - cool thanks
 - thanks for forum link, I'll check it out
 - thanks!
+
+## intent:how_to_get_started
+- how do I get started with Rasa
+- how do I use rasa
+- what is the difference between rasa [nlu](product) and rasa [core](product)
+- how to start with rasa
+- how to start with it
+- how to build a bot?
+- how can I build a chatbot
+- what can I do with Rasa?
+- where to start the development of rasa
+- WHAT IS RASA
+- WHAT IS IT
+- so, how do I use rasa?
+- can i just test features without having to deal with your predefined conversation
+- can you guide me know to create knowledge base chatbot
+- how can I learn rasa
+- i want to use rasa to build my chatbot
+- how do i get rasa [core](product)
+- how do I train rasa [nlu](product)
+- how do i learn rasa [core](product)
+- what is rasa [core](product)
+- what is [nlu](product)
+- I want to learn about rasa [core](product)
+- i want to use [nlu](product)
+- [core](product)
+- [nlu](product)
+- rasa [stack](product:core)
+- how to learn rasa [stack](product:core)
+- I want to learn about rasa [nlu](product:nlu)
+- i want to learn about rasa [core](product:core)
+
+## intent:technical_question
+- what is duckling
+- where to train intents in rasa?
+- duckling
+- dicklung
+- what is duckling
+- i need a help to integrate rasa with a messenger
+- what infrastructure is required to run a bot?
+- can you help me with this problem
+- help me wih the installation
+- having trouble with rasa installation
+- i am having trouble setting this up
+- how about interactive learning
+- interactive learning?
+- technical side of things?
+- does rasa have all the same features as [luis](current_api)
+- is rasa better than [dialogflow](current_api)
+- should I use rasa instead of ibm Watson api
+- Is Rasa better than Dialogflow?
+- db processing
+- how do slots work
+- what components of Rasa are open source
+- how to integrate rasa chatbot with my website
+- how works rasa
+- with exceptions
+- which language is rasa programmed in
+- what technologies did u use to create more mature chatbot?
+- which technology is used to create you
+- how do I install rasa in windows
+- having some problems with installation
+- how do I run rasa on windows
+- does rasa support voice input
+- is there an alexa integration
+
+
+## intent:switch
+- I currently use [dialog flow](current_api:dialogflow)
+- I want to switch from [dialog flow](current_api:dialogflow) to rasa
+- I want to change from [dialog flow](current_api:dialogflow) to rasa
+- I want to convert my [dialog flow](current_api:dialogflow) bot to rasa
+- I currently use [LUIS](current_api:luis)
+- I use [luis](current_api) at the moment
+- [luis](current_api) atm
+- switching from [DialogFlow](current_api:dialogflow)
+- I use [DialogFlow](current_api:dialogflow)
+- i want to switch from [dialogflow](current_api) to Rasa
+- I want to move from [LUIS.ai](current_api:luis) to Rasa
+- [DialogFlow](current_api:dialogflow)
+- [luis.ai](current_api:luis)
+- [LUIS](current_api:luis)
+- [bot framework](current_api)
+- I use [wit.ai](product)
+- chatfuel
+- how does rasa compare to [dialogflow](product)
+- how does rasa compare to [luis](product)
+- is rasa better than [dialog flow](product:dialogflow)
+- what is the difference between [bot framework](product) and rasa

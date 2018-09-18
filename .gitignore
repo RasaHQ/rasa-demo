@@ -11,3 +11,4 @@ docker-compose.yml
 failed_stories.txt
 story_confmat.pdf
 demo/index.html
+credentials.yml

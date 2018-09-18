@@ -3,8 +3,8 @@ import io
 import os
 
 install_requires = [
-    'rasa_nlu[tensorflow]~=0.13.1',
-    'rasa_core~=0.10.4',
+    'rasa_nlu[tensorflow]~=0.13.2',
+    'rasa_core~=0.11.3',
     'mailchimp3~=3.0.2',
     'oauth2client~=4.1.2',
     'gspread~=3.0.0'
@@ -27,7 +27,7 @@ setup(
             "Programming Language :: Python :: 3.6"
         ],
         packages=find_packages(),
-        version='1.0',
+        version='1.1',
         install_requires=install_requires,
         description="Rasa Demo Bot",
         long_description=long_description,
