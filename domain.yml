@@ -1,3 +1,4 @@
+
 entities:
   - jobfunction
   - company
@@ -33,6 +34,9 @@ intents:
   - new_project
   - how_to_get_started
   - technical_question
+  - information_on_nlu_part
+  - pipeline_recommendation
+  - enter_bot_language
 
 slots:
   budget:
@@ -66,6 +70,15 @@ slots:
     values:
       - core
       - nlu
+  unknown_product:
+    type: text
+  nlu_part:
+    type: categorical
+    values:
+      - entity recognition
+      - intent classification
+  unknown_nlu_part:
+    type: text
 
 templates:
   utter_ask_budget:
@@ -100,11 +113,11 @@ templates:
     - text: "If you want some more awesome Rasa content, check out our forum:
       https://forum.rasa.com/"
   utter_quickstart:
-    - text: "we have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
+    - text: "We have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
   utter_quickstart_nlu_only:
     - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
   utter_ask_migration:
-    - text: "Do you want to know more about NLU or Core? Or are you looking to switch over from LUIS, DialogFlow, or another service?"
+    - text: "Are you looking to switch over from LUIS, DialogFlow, or another service?"
   utter_switch_dialogflow:
     - text: "We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/."
   utter_switch_luis:
@@ -194,6 +207,36 @@ templates:
     - text: "Yep I'm a bot!"
   utter_cant_answer_tech_question:
     - text: "I can't answer that"
+  utter_have_you_used_rasa_before:
+    - text: "Have you used Rasa before?"
+  utter_are_you_new_to_chatbots:
+    - text: "Alright, are you completly new to chatbots?"
+  utter_anything_else:
+    - text: "Cool 🚀. Is there anything else I can help you with?"
+  utter_encourage_building_bot:
+    - text: Cool, then good luck with building your first "I'm the Rasa bot 🤖!
+  utter_chatbot_tutorial:
+    - text: "No worries. There is course on Datacamp which teaches you how to build your own chatbots: https://www.datacamp.com/courses/building-chatbots-in-python 🤓"
+  utter_no_guide_for_switch:
+    - text: "Sorry, but we don't have a guide for this yet."
+  utter_ask_which_product:
+    - text: "Ok, would you like to know more about Core or NLU?"
+  utter_core_tutorial:
+    - text: "There was an interesting talk at the PyData conference about. Maybe this helps you: https://youtu.be/zRqjH7fT0G0?t=3021"
+  utter_ask_for_nlu_specifics:
+    - text: "Anything, in particular, e.g. intent classification or entity recognition?"
+  utter_dont_know_nlu_part:
+    - text: "Sorry, but I don't have any information on this topic. Is there another topic I can help you with?"
+  utter_nlu_intent_tutorial:
+    - text: "Our community member Bhavani Ravi wrote an excellent blog post on intent classification: https://hackernoon.com/intent-classification-demystifying-rasanlu-part-4-685fc02f5c1d ."
+  utter_nlu_entity_tutorial:
+    - text: "Our community member Bhavani Ravi wrote an excellent blog post on entity extraction: https://hackernoon.com/entity-extraction-demistifying-rasanlu-part-3-13a460451573 ."
+  utter_offer_recommendation:
+    - text: "I can also try and help recommending a pipeline."
+  utter_what_language:
+    - text: "What language is your bot in?"
+  utter_ask_entities:
+    - text: "To help you, what kind of entities do you want to extract?"
 
 actions:
   - utter_greet
@@ -234,6 +277,21 @@ actions:
   - utter_switch_dialogflow
   - utter_switch_luis
   - utter_cant_answer_tech_question
+  - utter_have_you_used_rasa_before
+  - utter_are_you_new_to_chatbots
+  - utter_encourage_building_bot
+  - utter_anything_else
+  - utter_chatbot_tutorial
+  - utter_no_guide_for_switch
+  - utter_ask_which_product
+  - utter_ask_for_nlu_specifics
+  - utter_core_tutorial
+  - utter_dont_know_nlu_part
+  - utter_nlu_intent_tutorial
+  - utter_nlu_entity_tutorial
+  - utter_offer_recommendation
+  - utter_what_language
+  - utter_ask_entities
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -244,3 +302,5 @@ actions:
   - action_store_job
   - action_store_email
   - action_pause
+  - action_store_unknown_product
+  - action_store_unknown_nlu_part

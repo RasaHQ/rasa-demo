@@ -1,220 +1,201 @@
-## story_001
-* how_to_get_started
-  - utter_quickstart
-  - utter_ask_migration
-* switch{"current_api": "dialogflow"}
-  - utter_switch_dialogflow
-
-## story_002
-* how_to_get_started
-  - utter_quickstart
-  - utter_ask_migration
-* switch{"current_api": "luis"}
-  - utter_switch_luis
-
-## story_003
-* how_to_get_started
-  - utter_quickstart
-  - utter_ask_migration
-* switch
-  - utter_quickstart_nlu_only
-* thank
-  - utter_noworries
-
-
-## story_004
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* how_to_get_started
-  - utter_quickstart
-  - utter_ask_migration
-
-## story_005
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* how_to_get_started
-  - utter_quickstart
-  - utter_ask_migration
-* switch
-  - utter_quickstart_nlu_only
-* thank
-  - utter_noworries
-* out_of_scope
-  - utter_out_of_scope
-
-## story_006
-* how_to_get_started
-  - utter_quickstart
-  - utter_ask_migration
-* out_of_scope
-  - utter_out_of_scope
-
-## Generated Story -5718603718660805764
+## new to rasa + not new to chatbots + not migrating
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
     - utter_quickstart
+    - utter_have_you_used_rasa_before
+* deny
+    - utter_are_you_new_to_chatbots
+* deny
+    - utter_ask_migration
+* deny 
+    - utter_encourage_building_bot
+    - utter_anything_else
+
+## new to rasa + not new to chatbots + migrating from dialogflow
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* deny
+    - utter_are_you_new_to_chatbots
+* deny
+    - utter_ask_migration
+* switch{"current_api": "dialogflow"}
+    - utter_switch_dialogflow
+    - utter_anything_else
+
+## new to rasa + not new to chatbots + migrating from luis
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* deny
+    - utter_are_you_new_to_chatbots
+* deny
     - utter_ask_migration
 * switch{"current_api": "luis"}
     - utter_switch_luis
-* thank
-    - utter_noworries
+    - utter_anything_else
 
-## Generated Story 4922905359326269181
+## new to rasa + not new to chatbots + migrating from something else
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
     - utter_quickstart
-    - utter_ask_migration
-* thank
-    - utter_noworries
-
-
-
-## Generated Story 6866562783165718158
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* switch{"current_api": "dialogflow"}
-    - utter_switch_dialogflow
-
-
-## tech question
-* technical_question
-  - utter_cant_answer_tech_question
-
-## tech question again
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* switch{"current_api": "dialogflow"}
-    - utter_switch_dialogflow
-* technical_question
-  - utter_cant_answer_tech_question
-
-
-## tech question again
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* technical_question
-  - utter_cant_answer_tech_question
-
-
-## Generated Story -2693866830817074294
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* how_to_get_started
-    - utter_quickstart
-    - utter_ask_migration
-* switch{"current_api": "dialogflow"}
-    - utter_switch_dialogflow
-
-
-## Generated Story 4741357980983644475
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* how_to_get_started{"product": "core"}
-    - utter_quickstart
-* switch{"current_api":"dialogflow"}
-    - utter_switch_dialogflow
-
-## Generated Story 4741357980983644475
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* how_to_get_started{"product": "nlu"}
-    - utter_quickstart_nlu_only
-* switch{"current_api":"dialogflow"}
-    - utter_switch_dialogflow
-
-
-## Generated Story -8787504525886503727
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* switch
-    - utter_ask_migration
-* switch{"current_api":"dialogflow"}
-    - utter_switch_dialogflow
+    - utter_have_you_used_rasa_before
 * deny
-    - utter_thumbsup
+    - utter_are_you_new_to_chatbots
+* deny
+    - utter_ask_migration
+* switch
+    - action_store_unknown_product
+    - slot{"unknown_product": "a product which is not core or nlu"}
+    - utter_no_guide_for_switch
+    - utter_anything_else
 
-
-## Generated Story 2468355885990537436
+## new to rasa + new to chatbots
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
     - utter_quickstart
-    - utter_ask_migration
-* how_to_get_started{"product": "nlu"}
-    - slot{"product": "nlu"}
-    - utter_quickstart_nlu_only
-* technical_question
-    - utter_cant_answer_tech_question
+    - utter_have_you_used_rasa_before
+* deny
+    - utter_are_you_new_to_chatbots
+* mood_confirm
+    - utter_chatbot_tutorial
+    - utter_anything_else
 
-
-## Generated Story 7315307939407953944
+## not new to rasa + core
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
     - utter_quickstart
-    - utter_ask_migration
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
 * how_to_get_started{"product": "core"}
-    - slot{"product": "core"}
-    - utter_quickstart
-* how_to_get_started{"product": "core"}
-    - slot{"product": "core"}
-    - utter_thumbsup
-* technical_question
-    - utter_cant_answer_tech_question
+    - utter_core_tutorial
+    - utter_anything_else
 
-## Generated Story -1300353667963597833
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* switch{"current_api": "dialogflow"}
-    - slot{"current_api": "dialogflow"}
-    - utter_switch_dialogflow
-* out_of_scope
-    - utter_out_of_scope
-* technical_question
-    - utter_cant_answer_tech_question
-
-
-## Generated Story -1809654165792994573
+## not new to rasa + nlu + nothing special
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
     - utter_quickstart
-    - utter_ask_migration
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - slot{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* deny
     - utter_quickstart_nlu_only
-* switch{"current_api": "bot framework"}
-    - slot{"current_api": "bot framework"}
-    - utter_cant_answer_tech_question
+    - utter_anything_else
+
+## not new to rasa + nlu + unknown topic
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* information_on_nlu_part
+    - action_store_unknown_nlu_part
+    - slot{"unknown_nlu_part": "a part of nlu which we dont provide additional content on."}
+    - utter_dont_know_nlu_part
+
+## not new to rasa + nlu + intent + no recommendation
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* information_on_nlu_part{"nlu_part": "intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+* deny
+    - utter_great
+    - utter_anything_else
+
+## not new to rasa + nlu + intent + pipeline recommendation
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* information_on_nlu_part{"nlu_part": "intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+* pipeline_recommendation
+    - utter_what_language
+* enter_bot_language{"bot_language": "en"}
+
+## not new to rasa + nlu + entity + no recommendation
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* information_on_nlu_part{"nlu_part": "entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+* deny
+    - utter_great
+    - utter_anything_else
+
+## not new to rasa + nlu + entity + pipeline recommendation
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* information_on_nlu_part{"nlu_part": "entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+* pipeline_recommendation
+    - utter_ask_entities

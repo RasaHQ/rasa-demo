@@ -187,7 +187,8 @@ class ActionStoreEmail(Action):
         # email and go back a turn in the conversation to ensure future
         # predictions aren't affected
         if not email:
-            dispatcher.utter_message("We need your email, please enter a valid one.")
+            dispatcher.utter_message("We need your email, "
+                                     "please enter a valid one.")
             return [UserUtteranceReverted()]
 
         return [SlotSet('email', email)]
@@ -202,3 +203,29 @@ class ActionPause(Action):
     def run(self, dispatcher, tracker, domain):
 
         return [ConversationPaused()]
+
+
+class ActionStoreUnknownProduct(Action):
+    """Stores unknown tools people are migrating from in a slot"""
+
+    def name(self):
+        return "action_store_unknown_product"
+
+    def run(self, dispatcher, tracker, domain):
+        # if we dont know the product the user is migrating from,
+        # store his last message in a slot.
+        return [SlotSet('unknown_product', tracker.latest_message.get('text'))]
+
+
+class ActionStoreUnknownNluPart(Action):
+    """Stores unknown parts of nlu which the user requests information on
+       in slot.
+    """
+
+    def name(self):
+        return "action_store_unknown_nlu_part"
+
+    def run(self, dispatcher, tracker, domain):
+        # if we dont know the part of nlu the user wants information on,
+        # store his last message in a slot.
+        return [SlotSet('unknown_nlu_part', tracker.latest_message.get('text'))]
