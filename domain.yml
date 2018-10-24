@@ -10,6 +10,8 @@ entities:
   - current_api
   - product
   - feedback_value
+  - language
+  - nlu_part
 
 intents:
   - enter_data: {use_entities: false}
@@ -37,7 +39,6 @@ intents:
   - technical_question
   - information_on_nlu_part
   - pipeline_recommendation
-  - enter_bot_language
 
 slots:
   budget:
@@ -72,14 +73,16 @@ slots:
       - core
       - nlu
   unknown_product:
-    type: text
+    type: unfeaturized
   nlu_part:
     type: categorical
     values:
       - entity recognition
       - intent classification
   unknown_nlu_part:
-    type: text
+    type: unfeaturized
+  can_use_spacy:
+    type: bool
 
 templates:
   utter_ask_budget:
@@ -223,11 +226,11 @@ templates:
   utter_ask_which_product:
     - text: "Ok, would you like to know more about Core or NLU?"
   utter_core_tutorial:
-    - text: "There was an interesting talk at the PyData conference about. Maybe this helps you: https://youtu.be/zRqjH7fT0G0?t=3021"
+    - text: "There was an interesting talk at the PyData conference about. Maybe this helps you: https://youtu.be/HV0bJMkzpO4"
   utter_ask_for_nlu_specifics:
     - text: "Anything, in particular, e.g. intent classification or entity recognition?"
   utter_dont_know_nlu_part:
-    - text: "Sorry, but I don't have any information on this topic. Is there another topic I can help you with?"
+    - text: "Hmm, seems like I haven't learnt about that part of NLU yet!"
   utter_nlu_intent_tutorial:
     - text: "Our community member Bhavani Ravi wrote an excellent blog post on intent classification: https://hackernoon.com/intent-classification-demystifying-rasanlu-part-4-685fc02f5c1d ."
   utter_nlu_entity_tutorial:
@@ -238,6 +241,12 @@ templates:
     - text: "What language is your bot in?"
   utter_ask_entities:
     - text: "To help you, what kind of entities do you want to extract?"
+  utter_search_bar:
+    - text: "Try using the search bar above for now."
+  utter_spacy_or_tensorflow:
+    - text: "Looks like for your {bot_language} bot, you can use either spacy or tensorflow_embedding!"
+  utter_tensorflow:
+    - text: "For {bot_language}, you can only use the tensorflow_embedding pipeline"
 
 actions:
   - utter_greet
@@ -293,6 +302,9 @@ actions:
   - utter_offer_recommendation
   - utter_what_language
   - utter_ask_entities
+  - utter_search_bar
+  - utter_spacy_or_tensorflow
+  - utter_tensorflow
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -305,3 +317,4 @@ actions:
   - action_pause
   - action_store_unknown_product
   - action_store_unknown_nlu_part
+  - action_store_bot_language

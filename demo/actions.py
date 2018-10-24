@@ -229,3 +229,20 @@ class ActionStoreUnknownNluPart(Action):
         # if we dont know the part of nlu the user wants information on,
         # store his last message in a slot.
         return [SlotSet('unknown_nlu_part', tracker.latest_message.get('text'))]
+
+
+class ActionStoreBotLanguage(Action):
+    """Takes the bot language and checks what pipelines can be used"""
+
+    def name(self):
+        return "action_store_bot_language"
+
+    def run(self, dispatcher, tracker, domain):
+        spacy_languages = ['english', 'french', 'german', 'spanish',
+                           'portuguese', 'french', 'italian', 'dutch']
+        language = tracker.get_slot('language')
+
+        if language in spacy_languages:
+            return [SlotSet('can_use_spacy', True)]
+        else:
+            return [SlotSet('can_use_spacy', False)]

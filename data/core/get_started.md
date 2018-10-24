@@ -10,7 +10,7 @@
     - utter_are_you_new_to_chatbots
 * deny
     - utter_ask_migration
-* deny 
+* deny
     - utter_encourage_building_bot
     - utter_anything_else
 
@@ -60,7 +60,6 @@
     - utter_ask_migration
 * switch
     - action_store_unknown_product
-    - slot{"unknown_product": "a product which is not core or nlu"}
     - utter_no_guide_for_switch
     - utter_anything_else
 
@@ -120,10 +119,11 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* information_on_nlu_part
+* nlu_info
     - action_store_unknown_nlu_part
-    - slot{"unknown_nlu_part": "a part of nlu which we dont provide additional content on."}
     - utter_dont_know_nlu_part
+    - utter_search_bar
+    - utter_anything_else
 
 ## not new to rasa + nlu + intent + no recommendation
 * greet
@@ -144,7 +144,7 @@
     - utter_great
     - utter_anything_else
 
-## not new to rasa + nlu + intent + pipeline recommendation
+## not new to rasa + nlu + intent + pipeline recommendation, spacy
 * greet
     - utter_greet
     - utter_inform_privacypolicy
@@ -159,9 +159,34 @@
 * information_on_nlu_part{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation
+* pipeline_recommendation OR mood_confirm
     - utter_what_language
-* enter_bot_language{"bot_language": "en"}
+* enter_data{"language": "en"}
+    - action_store_bot_language
+    - slot{"can_use_spacy": true}
+    - utter_spacy_or_tensorflow
+
+## not new to rasa + nlu + intent + pipeline recommendation, not spacy
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* information_on_nlu_part{"nlu_part": "intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+* pipeline_recommendation OR mood_confirm
+    - utter_what_language
+* enter_data{"language": "en"}
+    - action_store_bot_language
+    - slot{"can_use_spacy": false}
+    - utter_tensorflow
 
 ## not new to rasa + nlu + entity + no recommendation
 * greet
@@ -197,5 +222,5 @@
 * information_on_nlu_part{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation
+* pipeline_recommendation OR mood_confirm
     - utter_ask_entities
