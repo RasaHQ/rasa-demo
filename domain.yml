@@ -9,6 +9,7 @@ entities:
   - value
   - current_api
   - product
+  - feedback_value
 
 intents:
   - enter_data: {use_entities: false}
