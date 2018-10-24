@@ -137,7 +137,7 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* information_on_nlu_part{"nlu_part": "intent classification"}
+* nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * deny
@@ -156,7 +156,7 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* information_on_nlu_part{"nlu_part": "intent classification"}
+* nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * pipeline_recommendation OR mood_confirm
@@ -178,7 +178,7 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* information_on_nlu_part{"nlu_part": "intent classification"}
+* nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * pipeline_recommendation OR mood_confirm
@@ -200,7 +200,7 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* information_on_nlu_part{"nlu_part": "entity recognition"}
+* nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
 * deny
@@ -219,7 +219,7 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* information_on_nlu_part{"nlu_part": "entity recognition"}
+* nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
 * pipeline_recommendation OR mood_confirm
