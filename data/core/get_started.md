@@ -91,11 +91,7 @@
     - utter_core_tutorial
     - utter_anything_else
 
-## skip to info on core 
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+## skip to info on core
 * how_to_get_started{"product": "core"}
     - utter_core_tutorial
     - utter_anything_else
@@ -316,9 +312,27 @@
     - utter_duckling_info
 
 ## skip to info on nlu
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+
+## skip to info on nlu
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
+
+## skip to info on nlu entities
+* nlu_info{"nlu_part": "entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+
+## skip to info on nlu intents
+* nlu_info{"nlu_part": "intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+
+## skip to info on nlu intents
+* nlu_info{"nlu_part": "duckling"}
+    - utter_duckling_info
