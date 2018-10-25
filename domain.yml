@@ -91,6 +91,8 @@ slots:
       - ner_crf
       - ner_spacy
       - ner_duckling_http
+  language:
+    type: unfeaturized
 
 templates:
   utter_ask_budget:
