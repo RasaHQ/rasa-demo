@@ -300,6 +300,21 @@
     - slot{"entity_extractor": "ner_crf"}
     - utter_crf
 
+## not new to rasa + nlu + entity + duckling info
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* nlu_info{"nlu_part": "duckling"}
+    - utter_duckling_info
+
 ## skip to info on nlu
 * greet
     - utter_greet
