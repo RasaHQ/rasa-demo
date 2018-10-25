@@ -91,6 +91,15 @@
     - utter_core_tutorial
     - utter_anything_else
 
+## skip to info on core 
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started{"product": "core"}
+    - utter_core_tutorial
+    - utter_anything_else
+
 ## not new to rasa + nlu + nothing special
 * greet
     - utter_greet
@@ -188,6 +197,24 @@
     - slot{"can_use_spacy": false}
     - utter_tensorflow
 
+## not new to rasa + nlu + intent + tool recommendation
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* nlu_info{"nlu_part": "intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+* nlu_generation_tool_recommendation
+    - utter_nlu_tools
+
 ## not new to rasa + nlu + entity + no recommendation
 * greet
     - utter_greet
@@ -207,7 +234,7 @@
     - utter_great
     - utter_anything_else
 
-## not new to rasa + nlu + entity + pipeline recommendation
+## not new to rasa + nlu + entity + pipeline spacy
 * greet
     - utter_greet
     - utter_inform_privacypolicy
@@ -224,3 +251,59 @@
     - utter_offer_recommendation
 * pipeline_recommendation OR mood_confirm
     - utter_ask_entities
+* enter_data{"entity": "name"}
+    - action_store_entity_extractor
+    - slot{"entity_extractor": "ner_spacy"}
+    - utter_spacy
+
+## not new to rasa + nlu + entity + pipeline duckling
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* nlu_info{"nlu_part": "entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+* pipeline_recommendation OR mood_confirm
+    - utter_ask_entities
+* enter_data{"entity": "date ranges"}
+    - action_store_entity_extractor
+    - slot{"entity_extractor": "ner_duckling_http"}
+    - utter_duckling
+
+## not new to rasa + nlu + entity + pipeline ner_crf
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics
+* nlu_info{"nlu_part": "entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+* pipeline_recommendation OR mood_confirm
+    - utter_ask_entities
+* enter_data{"entity": "some custom entity"}
+    - action_store_entity_extractor
+    - slot{"entity_extractor": "ner_crf"}
+    - utter_crf
+
+## skip to info on nlu
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started{"product": "nlu"}
+    - utter_ask_for_nlu_specifics

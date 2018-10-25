@@ -246,3 +246,26 @@ class ActionStoreBotLanguage(Action):
             return [SlotSet('can_use_spacy', True)]
         else:
             return [SlotSet('can_use_spacy', False)]
+
+
+class ActionStoreEntityExtractor(Action):
+    """Takes the entity which the user wants to extract and checks
+        what pipelines can be used.
+    """
+
+    def name(self):
+        return "action_store_entity_extractor"
+
+    def run(self, dispatcher, tracker, domain):
+        spacy_entities = ['place', 'date', 'name', 'organisation']
+        duckling = ['money', 'duration', 'distance', 'ordinals']
+
+        entity_to_extract = tracker.get_slot('entity')
+
+        extractor = 'ner_crf'
+        if entity_to_extract in spacy_entities:
+            extractor = 'ner_spacy'
+        elif entity_to_extract in duckling:
+            extractor = 'ner_duckling_http'
+
+        return [SlotSet('entity_extractor', extractor)]
