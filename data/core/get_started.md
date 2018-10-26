@@ -96,6 +96,15 @@
     - utter_core_tutorial
     - utter_anything_else
 
+## skip to info on core
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started{"product": "core"}
+    - utter_core_tutorial
+    - utter_anything_else
+
 ## not new to rasa + nlu + nothing special
 * greet
     - utter_greet
