@@ -77,6 +77,19 @@
     - utter_chatbot_tutorial
     - utter_anything_else
 
+## not new to rasa + not interested in products
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
+* mood_confirm
+    - utter_ask_which_product
+* deny
+    - utter_thumbsup
+
 ## not new to rasa + core
 * greet
     - utter_greet

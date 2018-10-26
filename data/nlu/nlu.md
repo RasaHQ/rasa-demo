@@ -432,6 +432,8 @@
 - i guess it means - no
 - i don't want to
 - i don't want either of those
+- nah thanks
+- neither of these
 
 ## intent:enter_data
 - 100k
@@ -842,6 +844,273 @@
 - im a [freelancer](jobfunction)
 - health care
 - something to talk to my friends while I'm busy working
+- my bot is in [english](language)
+- the language is [english](language)
+- it’s in [english](language)
+- [english](language)
+- [english](language) is the language of my bot
+- it speaks [english](language)
+- I wrote it in [english](language)
+- it’s an [english](language) bot
+- it is in [english](language)
+- user can talk to my bot in [english](language)
+- the people speak [english](language)
+- user can communicate with the bot in [english](language)
+- the assistant is in [english](language)
+- the language of the ai assistant is [english](language)
+- the bot speaks [english](language)
+- the assistant speaks [english](language)
+- it’s available in [english](language)
+- until now it’s only in [english](language)
+- so far it only speaks [english](language)
+- [english](language) is the only language but I want to add more
+- it’s only in [english](language) but I plan to train it in other languages
+- language: [english](language)
+- language = [english](language)
+- its an [english](language) bot
+- I’ve trained it in [english](language)
+- all the training data was in [english](language)
+- it’s trained in [english](language)
+- it’s trained only in [english](language)
+- my bot is in [german](language)
+- the language is [german](language)
+- it’s in [german](language)
+- [german](language)
+- [german](language) is the language of my bot
+- it speaks [german](language)
+- I wrote it in [german](language)
+- it’s an [german](language) bot
+- it is in [german](language)
+- user can talk to my bot in [german](language)
+- the people speak [german](language)
+- user can communicate with the bot in [german](language)
+- the assistant is in [german](language)
+- the language of the ai assistant is [german](language)
+- the bot speaks [german](language)
+- the assistant speaks [german](language)
+- it’s available in [german](language)
+- until now it’s only in [german](language)
+- so far it only speaks [german](language)
+- [german](language) is the only language but I want to add more
+- it’s only in [german](language) but I plan to train it in other languages
+- language: [german](language)
+- language = [german](language)
+- its an [german](language) bot
+- I’ve trained it in [german](language)
+- all the training data was in [german](language)
+- it’s trained in [german](language)
+- it’s trained only in [german](language)
+- my bot is in [spanish](language)
+- the language is [spanish](language)
+- it’s in [spanish](language)
+- [spanish](language)
+- [spanish](language) is the language of my bot
+- it speaks [spanish](language)
+- I wrote it in [spanish](language)
+- it’s an [spanish](language) bot
+- it is in [spanish](language)
+- user can talk to my bot in [spanish](language)
+- the people speak [spanish](language)
+- user can communicate with the bot in [spanish](language)
+- the assistant is in [spanish](language)
+- the language of the ai assistant is [spanish](language)
+- the bot speaks [spanish](language)
+- the assistant speaks [spanish](language)
+- it’s available in [spanish](language)
+- until now it’s only in [spanish](language)
+- so far it only speaks [spanish](language)
+- [spanish](language) is the only language but I want to add more
+- it’s only in [spanish](language) but I plan to train it in other languages
+- language: [spanish](language)
+- language = [spanish](language)
+- its an [spanish](language) bot
+- I’ve trained it in [spanish](language)
+- all the training data was in [spanish](language)
+- it’s trained in [spanish](language)
+- it’s trained only in [spanish](language)
+- my bot is in [portuguese](language)
+- the language is [portuguese](language)
+- it’s in [portuguese](language)
+- [portuguese](language)
+- [portuguese](language) is the language of my bot
+- it speaks [portuguese](language)
+- I wrote it in [portuguese](language)
+- it’s an [portuguese](language) bot
+- it is in [portuguese](language)
+- user can talk to my bot in [portuguese](language)
+- the people speak [portuguese](language)
+- user can communicate with the bot in [portuguese](language)
+- the assistant is in [portuguese](language)
+- the language of the ai assistant is [portuguese](language)
+- the bot speaks [portuguese](language)
+- the assistant speaks [portuguese](language)
+- it’s available in [portuguese](language)
+- until now it’s only in [portuguese](language)
+- so far it only speaks [portuguese](language)
+- [portuguese](language) is the only language but I want to add more
+- it’s only in [portuguese](language) but I plan to train it in other languages
+- language: [portuguese](language)
+- language = [portuguese](language)
+- its an [portuguese](language) bot
+- I’ve trained it in [portuguese](language)
+- all the training data was in [portuguese](language)
+- it’s trained in [portuguese](language)
+- it’s trained only in [portuguese](language)
+- my bot is in [french](language)
+- the language is [french](language)
+- it’s in [french](language)
+- [french](language)
+- [french](language) is the language of my bot
+- it speaks [french](language)
+- I wrote it in [french](language)
+- it’s an [french](language) bot
+- it is in [french](language)
+- user can talk to my bot in [french](language)
+- the people speak [french](language)
+- user can communicate with the bot in [french](language)
+- the assistant is in [french](language)
+- the language of the ai assistant is [french](language)
+- the bot speaks [french](language)
+- the assistant speaks [french](language)
+- it’s available in [french](language)
+- until now it’s only in [french](language)
+- so far it only speaks [french](language)
+- [french](language) is the only language but I want to add more
+- it’s only in [french](language) but I plan to train it in other languages
+- language: [french](language)
+- language = [french](language)
+- its an [french](language) bot
+- I’ve trained it in [french](language)
+- all the training data was in [french](language)
+- it’s trained in [french](language)
+- it’s trained only in [french](language)
+- my bot is in [dutch](language)
+- the language is [dutch](language)
+- it’s in [dutch](language)
+- [dutch](language)
+- [dutch](language) is the language of my bot
+- it speaks [dutch](language)
+- I wrote it in [dutch](language)
+- it’s an [dutch](language) bot
+- it is in [dutch](language)
+- user can talk to my bot in [dutch](language)
+- the people speak [dutch](language)
+- user can communicate with the bot in [dutch](language)
+- the assistant is in [dutch](language)
+- the language of the ai assistant is [dutch](language)
+- the bot speaks [dutch](language)
+- the assistant speaks [dutch](language)
+- it’s available in [dutch](language)
+- until now it’s only in [dutch](language)
+- so far it only speaks [dutch](language)
+- [dutch](language) is the only language but I want to add more
+- it’s only in [dutch](language) but I plan to train it in other languages
+- language: [dutch](language)
+- language = [dutch](language)
+- its an [dutch](language) bot
+- I’ve trained it in [dutch](language)
+- all the training data was in [dutch](language)
+- it’s trained in [dutch](language)
+- it’s trained only in [dutch](language)
+- my bot is in [italian](language)
+- the language is [italian](language)
+- it’s in [italian](language)
+- [italian](language)
+- [italian](language) is the language of my bot
+- it speaks [italian](language)
+- I wrote it in [italian](language)
+- it’s an [italian](language) bot
+- it is in [italian](language)
+- user can talk to my bot in [italian](language)
+- the people speak [italian](language)
+- user can communicate with the bot in [italian](language)
+- the assistant is in [italian](language)
+- the language of the ai assistant is [italian](language)
+- the bot speaks [italian](language)
+- the assistant speaks [italian](language)
+- it’s available in [italian](language)
+- until now it’s only in [italian](language)
+- so far it only speaks [italian](language)
+- [italian](language) is the only language but I want to add more
+- it’s only in [italian](language) but I plan to train it in other languages
+- language: [italian](language)
+- language = [italian](language)
+- its an [italian](language) bot
+- I’ve trained it in [italian](language)
+- all the training data was in [italian](language)
+- it’s trained in [italian](language)
+- it’s trained only in [italian](language)
+- my bot is in [mandarin](language)
+- the language is [mandarin](language)
+- it’s in [mandarin](language)
+- [mandarin](language)
+- [mandarin](language) is the language of my bot
+- it speaks [mandarin](language)
+- I wrote it in [mandarin](language)
+- it’s an [mandarin](language) bot
+- it is in [mandarin](language)
+- user can talk to my bot in [mandarin](language)
+- the people speak [mandarin](language)
+- user can communicate with the bot in [mandarin](language)
+- the assistant is in [mandarin](language)
+- the language of the ai assistant is [mandarin](language)
+- the bot speaks [mandarin](language)
+- the assistant speaks [mandarin](language)
+- it’s available in [mandarin](language)
+- until now it’s only in [mandarin](language)
+- so far it only speaks [mandarin](language)
+- [mandarin](language) is the only language but I want to add more
+- it’s only in [mandarin](language) but I plan to train it in other languages
+- language: [mandarin](language)
+- language = [mandarin](language)
+- its an [mandarin](language) bot
+- I’ve trained it in [mandarin](language)
+- all the training data was in [mandarin](language)
+- it’s trained in [mandarin](language)
+- it’s trained only in [mandarin](language)
+- my bot is in [chinese](language)
+- the language is [chinese](language)
+- it’s in [chinese](language)
+- [chinese](language)
+- [chinese](language) is the language of my bot
+- it speaks [chinese](language)
+- I wrote it in [chinese](language)
+- it’s an [chinese](language) bot
+- it is in [chinese](language)
+- user can talk to my bot in [chinese](language)
+- the people speak [chinese](language)
+- user can communicate with the bot in [chinese](language)
+- the assistant is in [chinese](language)
+- the language of the ai assistant is [chinese](language)
+- the bot speaks [chinese](language)
+- the assistant speaks [chinese](language)
+- it’s available in [chinese](language)
+- until now it’s only in [chinese](language)
+- so far it only speaks [chinese](language)
+- [chinese](language) is the only language but I want to add more
+- it’s only in [chinese](language) but I plan to train it in other languages
+- language: [chinese](language)
+- language = [chinese](language)
+- its an [chinese](language) bot
+- I’ve trained it in [chinese](language)
+- all the training data was in [chinese](language)
+- it’s trained in [chinese](language)
+- it’s trained only in [chinese](language)
+- i want to extract [names](entity:name)
+- [places](entity:place)
+- [companies](entity:organisation)
+- get [dates](entity:date) from messages
+- a [place](entity)
+- [places](entity:place) and [names](entity:name)
+- i am interested in [ordinals](entity)
+- amounts of [money](entity)
+- how much [money](entity) 
+- [amounts](entity:money)
+- [how long](entity:duration)
+- extracting [durations](entity:duration)
+- [distances](entity:distance)
+- the [distance](entity) between places
+- the [distance](entity) from one place to an other
 
 ## intent:greet
 - Hi
@@ -908,6 +1177,9 @@
 - jop
 - hi friend
 - hi there it's me
+- good evening
+- good morning
+- good afternoon
 
 ## intent:human_handoff
 - I want to talk to a human
@@ -1286,6 +1558,12 @@
 - how to learn rasa [stack](product:core)
 - I want to learn about rasa [nlu](product:nlu)
 - i want to learn about rasa [core](product:core)
+- how to get started with [nlu](product)
+- give me some information on [nlu](product)
+- tell me how to get started with [core](product)
+- how about [nlu](product)
+- tell me about [core](product) please
+- what is this [nlu](product) thing?
 
 ## intent:technical_question
 - what is duckling
@@ -1321,7 +1599,6 @@
 - does rasa support voice input
 - is there an alexa integration
 
-
 ## intent:switch
 - I currently use [dialog flow](current_api:dialogflow)
 - I want to switch from [dialog flow](current_api:dialogflow) to rasa
@@ -1344,3 +1621,76 @@
 - how does rasa compare to [luis](product)
 - is rasa better than [dialog flow](product:dialogflow)
 - what is the difference between [bot framework](product) and rasa
+
+## intent:nlu_info
+- can you explain to me how [entity recognition](nlu_part) works?
+- how does [entity recognition](nlu_part) work?
+- an explanation of how [entity recognition](nlu_part) work would help
+- I still don’t get how [entity recognition](nlu_part) works
+- it would be helpful to learn more about [entity recognition](nlu_part)
+- tell me about [entity recognition](nlu_part)
+- I want to learn about [entity recognition](nlu_part)
+- [entity recognition](nlu_part)
+- what is [entity recognition](nlu_part)?
+- I don’t understand [entity recognition](nlu_part)
+- [entity recognition](nlu_part) - what is that?
+- I don’t understand how you handle [entity recognition](nlu_part) at Rasa
+- how is [entity recognition](nlu_part) managed in rasa?
+- I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
+- can you explain to me how [intent classification](nlu_part) works?
+- how does [intent classification](nlu_part) work?
+- an explanation of how [intent classification](nlu_part) work would help
+- I still don’t get how [intent classification](nlu_part) works
+- it would be helpful to learn more about [intent classification](nlu_part)
+- tell me about [intent classification](nlu_part)
+- I want to learn about [intent classification](nlu_part)
+- [intent classification](nlu_part)
+- what is [intent classification](nlu_part)?
+- I don’t understand [intent classification](nlu_part)
+- [intent classification](nlu_part) - what is that?
+- I don’t understand how you handle [intent classification](nlu_part) at Rasa
+- how is [intent classification](nlu_part) managed in rasa?
+- I checked the documentation on [intent classification](nlu_part) but I still don’t understand it
+- do you use [duckling](nlu_part)
+- I want to know if rasa works with [duckling](nlu_part)
+- [duckling](nlu_part)
+- how do you integrate [duckling](nlu_part)
+- does rasa work with [duckling](nlu_part)?
+- is [duckling](nlu_part) part of rasa?
+- [intents](nlu_part)
+
+## synonym:intent classification
+- intents
+- intent
+
+## synonym:entity recognition
+- entity extraction
+
+## intent:pipeline_recommendation
+- what pipeline should I start with?
+- what is the right pipeline to choose?
+- what I a good pipeline to start with?
+- what pipeline should i use?
+- what pipeline is better for what i want?
+- what pipeline should I start with?
+- should I better start with the tensorflow pipeline or spacy?
+- spacy or tensorflow, what is better to start?
+- I don’t know which pipeline to use
+- what pipeline is better?
+- which pipeline is better?
+- recommend pipeline
+- pipeline recommendation
+- give me a recommendation
+
+## intent:nlu_generation_tool_recommendation
+- which tools can I use to create nlu data
+- how can I get nlu data
+- where can i get data for the nlu
+- recommend me some nlu tools
+- how to work with nlu data
+- i need more nlu data
+- are there tools to create nlu data
+- i require more nlu data
+- need more data for nlu
+- i have to less nlu data
+- are there simpler ways to create nlu data
