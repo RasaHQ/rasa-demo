@@ -260,7 +260,7 @@ class ActionStoreEntityExtractor(Action):
         spacy_entities = ['place', 'date', 'name', 'organisation']
         duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money']
 
-        entity_to_extract = tracker.get_slot('entity')
+        entity_to_extract = next(tracker.get_latest_entity_values('entity'), None)
 
         extractor = 'ner_crf'
         if entity_to_extract in spacy_entities:
