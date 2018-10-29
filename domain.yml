@@ -1,3 +1,4 @@
+
 entities:
   - jobfunction
   - company
@@ -8,6 +9,10 @@ entities:
   - value
   - current_api
   - product
+  - feedback_value
+  - language
+  - nlu_part
+  - entity
 
 intents:
   - enter_data: {use_entities: false}
@@ -33,6 +38,9 @@ intents:
   - new_project
   - how_to_get_started
   - technical_question
+  - nlu_info
+  - pipeline_recommendation
+  - nlu_generation_tool_recommendation
 
 slots:
   budget:
@@ -66,6 +74,26 @@ slots:
     values:
       - core
       - nlu
+  unknown_product:
+    type: unfeaturized
+  nlu_part:
+    type: categorical
+    values:
+      - entity recognition
+      - intent classification
+      - duckling
+  unknown_nlu_part:
+    type: unfeaturized
+  can_use_spacy:
+    type: bool
+  entity_extractor:
+    type: categorical
+    values:
+      - ner_crf
+      - ner_spacy
+      - ner_duckling_http
+  language:
+    type: unfeaturized
 
 templates:
   utter_ask_budget:
@@ -100,11 +128,11 @@ templates:
     - text: "If you want some more awesome Rasa content, check out our forum:
       https://forum.rasa.com/"
   utter_quickstart:
-    - text: "we have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
+    - text: "We have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
   utter_quickstart_nlu_only:
     - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
   utter_ask_migration:
-    - text: "Do you want to know more about NLU or Core? Or are you looking to switch over from LUIS, DialogFlow, or another service?"
+    - text: "Are you looking to switch over from LUIS, DialogFlow, or another service?"
   utter_switch_dialogflow:
     - text: "We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/."
   utter_switch_luis:
@@ -194,6 +222,60 @@ templates:
     - text: "Yep I'm a bot!"
   utter_cant_answer_tech_question:
     - text: "I can't answer that"
+  utter_have_you_used_rasa_before:
+    - text: "Have you used Rasa before?"
+  utter_are_you_new_to_chatbots:
+    - text: "Alright, are you completly new to chatbots?"
+  utter_anything_else:
+    - text: "Is there anything else I can help you with?"
+  utter_encourage_building_bot:
+    - text: Cool, then good luck with building your first "I'm the Rasa bot 🤖!
+  utter_chatbot_tutorial:
+    - text: "No worries. There is course on Datacamp which teaches you how to build your own chatbots: https://www.datacamp.com/courses/building-chatbots-in-python 🤓"
+  utter_no_guide_for_switch:
+    - text: "Sorry, but we don't have a guide for this yet."
+  utter_ask_which_product:
+    - text: "Ok, would you like to know more about Core or NLU?"
+  utter_core_tutorial:
+    - text: "There was an interesting talk at the PyData conference about. Maybe this helps you: https://youtu.be/HV0bJMkzpO4"
+  utter_ask_for_nlu_specifics:
+    - text: "Anything, in particular, e.g. intent classification or entity recognition?"
+  utter_dont_know_nlu_part:
+    - text: "Hmm, seems like I haven't learnt about that part of NLU yet!"
+  utter_nlu_intent_tutorial:
+    - text: "Our community member Bhavani Ravi wrote an excellent blog post on intent classification: https://hackernoon.com/intent-classification-demystifying-rasanlu-part-4-685fc02f5c1d ."
+  utter_nlu_entity_tutorial:
+    - text: "Our community member Bhavani Ravi wrote an excellent blog post on entity extraction: https://hackernoon.com/entity-extraction-demistifying-rasanlu-part-3-13a460451573 ."
+  utter_offer_recommendation:
+    - text: "I can also try and help recommending a pipeline."
+  utter_what_language:
+    - text: "What language is your bot in?"
+  utter_ask_entities:
+    - text: "To help you, what kind of entities do you want to extract?"
+  utter_search_bar:
+    - text: "Try using the search bar above for now."
+  utter_spacy_or_tensorflow:
+    - text: "Looks like for your {language} bot, you can use either spacy or tensorflow_embedding!"
+  utter_tensorflow:
+    - text: "For {language}, you can only use the tensorflow_embedding pipeline"
+  utter_spacy:
+    - text: >
+        spaCy has excellent pre-trained named-entity recognisers for this. Check out this interactive demo https://demos.explosion.ai/displacy-ent/ .
+        Hence, I would suggest using the ner_crf component in your pipeline.
+  utter_duckling:
+    - text: >
+        Mhm, for this use case I would suggest the Facebook library Duckling 🐥
+        To do so, use the ner_duckling_http component in your pipeline and spin up a duckling server as it is described in their documentation: https://duckling.wit.ai/
+  utter_crf:
+    - text: >
+        I currently don't know a library which provides pretrained recognisers for that. Therefore, you best train the extraction by yourself using the ner_crf component.
+        So use that and annote your nlu data like it is described here: https://rasa.com/docs/nlu/dataformat/ .
+  utter_nlu_tools:
+    - text: >
+        A great tool to get more NLU data is Chatito (https://rodrigopivi.github.io/Chatito/).
+        If you find annotating your data cumbersome our NLU trainer might be help you to ease things: https://rasahq.github.io/rasa-nlu-trainer/
+  utter_duckling_info:
+    - text: "Duckling is a rule-based entity recognition library from Facebook. Here is the link to its documentation: https://duckling.wit.ai/"
 
 actions:
   - utter_greet
@@ -234,6 +316,29 @@ actions:
   - utter_switch_dialogflow
   - utter_switch_luis
   - utter_cant_answer_tech_question
+  - utter_have_you_used_rasa_before
+  - utter_are_you_new_to_chatbots
+  - utter_encourage_building_bot
+  - utter_anything_else
+  - utter_chatbot_tutorial
+  - utter_no_guide_for_switch
+  - utter_ask_which_product
+  - utter_ask_for_nlu_specifics
+  - utter_core_tutorial
+  - utter_dont_know_nlu_part
+  - utter_nlu_intent_tutorial
+  - utter_nlu_entity_tutorial
+  - utter_offer_recommendation
+  - utter_what_language
+  - utter_ask_entities
+  - utter_search_bar
+  - utter_spacy_or_tensorflow
+  - utter_tensorflow
+  - utter_spacy
+  - utter_duckling
+  - utter_crf
+  - utter_nlu_tools
+  - utter_duckling_info
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -244,3 +349,7 @@ actions:
   - action_store_job
   - action_store_email
   - action_pause
+  - action_store_unknown_product
+  - action_store_unknown_nlu_part
+  - action_store_bot_language
+  - action_store_entity_extractor

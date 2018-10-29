@@ -3,19 +3,11 @@
     "action_listen": {
       "slots": [
         "product",
+        "nlu_part",
         "email",
-        "current_api",
-        "feedback_value"
-      ]
-    },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
+        "language",
+        "feedback_value",
+        "current_api"
       ]
     },
     "action_store_job": {
@@ -43,9 +35,19 @@
         "company_name"
       ]
     },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
       ]
     },
     "utter_ask_feedback": {
@@ -54,35 +56,42 @@
     "utter_thumbsup": {
       "slots": []
     },
+    "utter_ask_goal": {
+      "slots": []
+    },
     "action_chitchat": {
       "slots": []
     },
-    "utter_switch_dialogflow": {
+    "utter_contact_email": {
+      "slots": []
+    },
+    "action_store_bot_language": {
+      "slots": [
+        "can_use_spacy"
+      ]
+    },
+    "utter_anything_else": {
+      "slots": []
+    },
+    "utter_great": {
       "slots": []
     },
     "utter_possibilities": {
       "slots": []
     },
-    "utter_ask_goal": {
-      "slots": []
-    },
-    "utter_noworries": {
-      "slots": []
-    },
-    "utter_out_of_scope": {
-      "slots": []
-    },
     "utter_canthelp": {
-      "slots": []
-    },
-    "utter_nohelp": {
       "slots": []
     },
     "utter_cantsignup": {
       "slots": []
+    },
+    "action_store_entity_extractor": {
+      "slots": [
+        "entity_extractor"
+      ]
     }
   },
-  "rasa_core": "0.12.0a2",
+  "rasa_core": "0.11.12",
   "python": "3.6.6",
   "max_histories": [
     6,
