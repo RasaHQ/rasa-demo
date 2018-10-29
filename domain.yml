@@ -227,7 +227,7 @@ templates:
   utter_are_you_new_to_chatbots:
     - text: "Alright, are you completly new to chatbots?"
   utter_anything_else:
-    - text: "Cool 🚀. Is there anything else I can help you with?"
+    - text: "Is there anything else I can help you with?"
   utter_encourage_building_bot:
     - text: Cool, then good luck with building your first "I'm the Rasa bot 🤖!
   utter_chatbot_tutorial:
@@ -260,23 +260,23 @@ templates:
     - text: "For {language}, you can only use the tensorflow_embedding pipeline"
   utter_spacy:
     - text: >
-        spaCy has excellent pre-trained named-entity recognisers for this. Check out this interactive demo https://demos.explosion.ai/displacy-ent/ . 
+        spaCy has excellent pre-trained named-entity recognisers for this. Check out this interactive demo https://demos.explosion.ai/displacy-ent/ .
         Hence, I would suggest using the ner_crf component in your pipeline.
   utter_duckling:
-    - text: > 
-        Mhm, for this use case I would suggest the Facebook library Duckling 🐥 
+    - text: >
+        Mhm, for this use case I would suggest the Facebook library Duckling 🐥
         To do so, use the ner_duckling_http component in your pipeline and spin up a duckling server as it is described in their documentation: https://duckling.wit.ai/
   utter_crf:
     - text: >
-        I currently don't know a library which provides pretrained recognisers for that. Therefore, you best train the extraction by yourself using the ner_crf component. 
+        I currently don't know a library which provides pretrained recognisers for that. Therefore, you best train the extraction by yourself using the ner_crf component.
         So use that and annote your nlu data like it is described here: https://rasa.com/docs/nlu/dataformat/ .
   utter_nlu_tools:
     - text: >
-        A great tool to get more NLU data is Chatito (https://rodrigopivi.github.io/Chatito/). 
+        A great tool to get more NLU data is Chatito (https://rodrigopivi.github.io/Chatito/).
         If you find annotating your data cumbersome our NLU trainer might be help you to ease things: https://rasahq.github.io/rasa-nlu-trainer/
   utter_duckling_info:
     - text: "Duckling is a rule-based entity recognition library from Facebook. Here is the link to its documentation: https://duckling.wit.ai/"
-  
+
 actions:
   - utter_greet
   - utter_ask_usecase

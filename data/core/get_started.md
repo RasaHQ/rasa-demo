@@ -192,6 +192,7 @@
     - action_store_bot_language
     - slot{"can_use_spacy": true}
     - utter_spacy_or_tensorflow
+    - utter_anything_else
 
 ## not new to rasa + nlu + intent + pipeline recommendation, not spacy
 * greet
@@ -214,6 +215,7 @@
     - action_store_bot_language
     - slot{"can_use_spacy": false}
     - utter_tensorflow
+    - utter_anything_else
 
 ## not new to rasa + nlu + intent + tool recommendation
 * greet
@@ -273,6 +275,7 @@
     - action_store_entity_extractor
     - slot{"entity_extractor": "ner_spacy"}
     - utter_spacy
+    - utter_anything_else
 
 ## not new to rasa + nlu + entity + pipeline duckling
 * greet
@@ -295,6 +298,7 @@
     - action_store_entity_extractor
     - slot{"entity_extractor": "ner_duckling_http"}
     - utter_duckling
+    - utter_anything_else
 
 ## not new to rasa + nlu + entity + pipeline ner_crf
 * greet
@@ -317,6 +321,7 @@
     - action_store_entity_extractor
     - slot{"entity_extractor": "ner_crf"}
     - utter_crf
+    - utter_anything_else
 
 ## not new to rasa + nlu + entity + duckling info
 * greet
@@ -332,6 +337,7 @@
     - utter_ask_for_nlu_specifics
 * nlu_info{"nlu_part": "duckling"}
     - utter_duckling_info
+    - utter_anything_else
 
 ## skip to info on nlu
 * how_to_get_started{"product": "nlu"}
@@ -358,3 +364,4 @@
 ## skip to info on nlu intents
 * nlu_info{"nlu_part": "duckling"}
     - utter_duckling_info
+    - utter_anything_else
