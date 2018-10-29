@@ -258,7 +258,7 @@ class ActionStoreEntityExtractor(Action):
 
     def run(self, dispatcher, tracker, domain):
         spacy_entities = ['place', 'date', 'name', 'organisation']
-        duckling = ['money', 'duration', 'distance', 'ordinals']
+        duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money']
 
         entity_to_extract = tracker.get_slot('entity')
 
