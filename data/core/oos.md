@@ -49,6 +49,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## just newsletter + confirm
 * greet
@@ -73,6 +74,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## just newsletter (with email already) + confirm
 * greet
@@ -93,6 +95,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## just newsletter (with email already)
 * greet
@@ -130,6 +133,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## just newsletter (with email already) - already subscribed
 * greet
@@ -169,6 +173,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## just newsletter +confirm - already subscribed
 * greet
@@ -192,6 +197,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## just newsletter
 * greet

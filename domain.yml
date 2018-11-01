@@ -41,6 +41,7 @@ intents:
   - nlu_info
   - pipeline_recommendation
   - nlu_generation_tool_recommendation
+  - rasa_cost
 
 slots:
   budget:
@@ -276,6 +277,8 @@ templates:
         If you find annotating your data cumbersome our NLU trainer might be help you to ease things: https://rasahq.github.io/rasa-nlu-trainer/
   utter_duckling_info:
     - text: "Duckling is a rule-based entity recognition library from Facebook. Here is the link to its documentation: https://duckling.wit.ai/"
+  utter_rasa_cost:
+    - text: "Rasa is free"
 
 actions:
   - utter_greet
@@ -339,6 +342,7 @@ actions:
   - utter_crf
   - utter_nlu_tools
   - utter_duckling_info
+  - utter_rasa_cost
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget

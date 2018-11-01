@@ -20,6 +20,7 @@
     - utter_ask_feedback
 * thank
     - utter_noworries
+    - utter_anything_else
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -72,6 +73,7 @@
     - utter_ask_feedback
 * out_of_scope
     - utter_thumbsup
+    - utter_anything_else
 
 ## story number 3
 * greet
@@ -139,6 +141,7 @@
     - utter_ask_feedback
 * thank
     - utter_noworries
+    - utter_anything_else
 * ask_whatspossible
     - action_chitchat
 * out_of_scope
@@ -167,6 +170,7 @@
     - utter_ask_feedback
 * thank
     - utter_noworries
+    - utter_anything_else
 * out_of_scope
     - utter_out_of_scope
     - utter_possibilities
@@ -283,6 +287,7 @@
     - utter_ask_feedback
 * enter_data
     - utter_thumbsup
+    - utter_anything_else
 
 ## story number 12
 * greet
@@ -308,6 +313,7 @@
     - utter_ask_feedback
 * enter_data
     - utter_thumbsup
+    - utter_anything_else
 
 ## story number 13
 * greet
@@ -333,6 +339,7 @@
     - utter_ask_feedback
 * mood_confirm
     - utter_thumbsup
+    - utter_anything_else
 
 ## story number 14
 * greet

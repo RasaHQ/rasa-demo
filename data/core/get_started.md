@@ -365,3 +365,18 @@
 * nlu_info{"nlu_part": "duckling"}
     - utter_duckling_info
     - utter_anything_else
+
+## switch immediately to luis
+* switch{"current_api":"luis"}
+    - utter_switch_luis
+    - utter_anything_else
+
+## switch immediately to dialogflow
+* switch{"current_api": "dialogflow"}
+    - utter_switch_dialogflow
+    - utter_anything_else
+
+## how much does rasa cost
+* rasa_cost
+    - utter_rasa_cost
+    - utter_anything_else
