@@ -380,3 +380,14 @@
 * rasa_cost
     - utter_rasa_cost
     - utter_anything_else
+
+## Story from conversation with 7559e5c4a34e4f469670fa66eb410c6c on November 2nd 2018
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* greet
+    - utter_greet
+* how_to_get_started
+    - utter_quickstart
+    - utter_have_you_used_rasa_before
