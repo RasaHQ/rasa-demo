@@ -42,6 +42,7 @@ intents:
   - pipeline_recommendation
   - nlu_generation_tool_recommendation
   - rasa_cost
+  - source_code
 
 slots:
   budget:
@@ -279,6 +280,10 @@ templates:
     - text: "Duckling is a rule-based entity recognition library from Facebook. Here is the link to its documentation: https://duckling.wit.ai/"
   utter_rasa_cost:
     - text: "Rasa is free"
+  utter_source_code:
+    - text: "You can find my source code [here](https://github.com/RasaHQ/rasa-demo/)"
+  utter_what_help:
+    - text: "Ok, what can I help you with?"
 
 actions:
   - utter_greet
@@ -343,6 +348,8 @@ actions:
   - utter_nlu_tools
   - utter_duckling_info
   - utter_rasa_cost
+  - utter_source_code
+  - utter_what_help
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget

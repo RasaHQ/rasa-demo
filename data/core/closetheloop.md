@@ -414,3 +414,59 @@
     - utter_possibilities
 * enter_data
     - utter_possibilities
+
+## story number 19
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* greet
+    - utter_greet
+* ask_whoisit
+    - action_chitchat
+* out_of_scope
+    - utter_out_of_scope
+    - utter_possibilities
+* how_to_get_started
+    - utter_ask_for_nlu_specifics
+* nlu_info{"nlu_part":"entity recognition"}
+    - slot{"nlu_part":"entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+* mood_confirm
+    - utter_ask_entities
+* enter_data
+    - action_store_entity_extractor
+    - slot{"entity_extractor":"ner_crf"}
+    - utter_crf
+    - utter_anything_else
+* nlu_info
+    - utter_nlu_entity_tutorial
+    - utter_anything_else
+* mood_confirm
+    - utter_what_help
+
+## Story from conversation with 8e2ed5e9a214439b82463f4246103725 on November 1st 2018
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* greet
+    - utter_greet
+* ask_whatspossible
+    - action_chitchat
+* how_to_get_started
+    - utter_ask_for_nlu_specifics
+* nlu_info{"nlu_part":"Entity recognition"}
+    - slot{"nlu_part":"Entity recognition"}
+    - utter_nlu_entity_tutorial
+    - utter_offer_recommendation
+* mood_confirm
+    - utter_ask_entities
+* out_of_scope
+    - action_store_entity_extractor
+    - slot{"entity_extractor":"ner_crf"}
+    - utter_crf
+    - utter_anything_else
+* deny
+    - utter_thumbsup

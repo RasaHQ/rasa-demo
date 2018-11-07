@@ -24,7 +24,7 @@ class GDriveService(object):
                   'https://www.googleapis.com/auth/drive']
 
         # authenticate the service with a json key
-        with tempfile.NamedTemporaryFile(suffix="_credentials.json") as f:
+        with tempfile.NamedTemporaryFile(suffix="_credentials.json", mode='w') as f:
             f.write(gdrive_credentials_json)
             f.flush()
             self.credentials = ServiceAccountCredentials.from_json_keyfile_name(

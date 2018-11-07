@@ -168,7 +168,7 @@
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * deny
-    - utter_great
+    - utter_thumbsup
     - utter_anything_else
 
 ## not new to rasa + nlu + intent + pipeline recommendation, spacy
@@ -251,7 +251,7 @@
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
 * deny
-    - utter_great
+    - utter_thumbsup
     - utter_anything_else
 
 ## not new to rasa + nlu + entity + pipeline spacy
@@ -379,4 +379,9 @@
 ## how much does rasa cost
 * rasa_cost
     - utter_rasa_cost
+    - utter_anything_else
+
+## source code
+* source_code
+    - utter_source_code
     - utter_anything_else
