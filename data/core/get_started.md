@@ -4,11 +4,11 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* deny
-    - utter_are_you_new_to_chatbots
-* deny
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* mood_confirm
     - utter_ask_migration
 * deny
     - utter_encourage_building_bot
@@ -20,11 +20,11 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* deny
-    - utter_are_you_new_to_chatbots
-* deny
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* mood_confirm
     - utter_ask_migration
 * switch{"current_api": "dialogflow"}
     - utter_switch_dialogflow
@@ -36,11 +36,11 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* deny
-    - utter_are_you_new_to_chatbots
-* deny
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* mood_confirm
     - utter_ask_migration
 * switch{"current_api": "luis"}
     - utter_switch_luis
@@ -52,30 +52,135 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* deny
-    - utter_are_you_new_to_chatbots
-* deny
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* mood_confirm
     - utter_ask_migration
 * switch
     - action_store_unknown_product
     - utter_no_guide_for_switch
     - utter_anything_else
 
-## new to rasa + new to chatbots
+## new to rasa/bots, explain stack and try it out
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* deny
-    - utter_are_you_new_to_chatbots
+    - utter_getstarted
+    - utter_first_bot_with_rasa
 * mood_confirm
-    - utter_chatbot_tutorial
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* mood_confirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* enter_data{"product":"stack"} OR mood_confirm
+    - utter_quickstart
     - utter_anything_else
+
+## new to rasa/bots, explain core and try out stack
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* enter_data{"product": "core"}
+    - utter_explain_core
+    - utter_also_explain_nlu
+* deny
+    - utter_tryout
+* enter_data{"product":"stack"} OR mood_confirm
+    - utter_quickstart
+    - utter_anything_else
+
+## new to rasa/bots, explain core, then nlu and try out stack
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* enter_data{"product": "core"}
+    - utter_explain_core
+    - utter_also_explain_nlu
+* mood_confirm
+    - utter_explain_nlu
+    - utter_tryout
+* enter_data{"product":"stack"} OR mood_confirm
+    - utter_quickstart
+    - utter_anything_else
+
+## new to rasa/bots, explain nlu and try out stack
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* enter_data{"product": "nlu"}
+    - utter_explain_nlu
+    - utter_also_explain_core
+* deny
+    - utter_tryout
+* enter_data{"product":"stack"} OR mood_confirm
+    - utter_quickstart
+    - utter_anything_else
+
+## new to rasa/bots, explain nlu then core and try out stack
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* enter_data{"product": "nlu"}
+    - utter_explain_nlu
+    - utter_also_explain_core
+* mood_confirm
+    - utter_explain_core
+    - utter_tryout
+* enter_data{"product":"stack"} OR mood_confirm
+    - utter_quickstart
+    - utter_anything_else
+
+
+
 
 ## not new to rasa + not interested in products
 * greet
@@ -83,9 +188,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * deny
     - utter_thumbsup
@@ -96,9 +201,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "core"}
     - utter_core_tutorial
@@ -124,9 +229,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -140,9 +245,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -158,9 +263,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -177,9 +282,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -200,9 +305,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -223,9 +328,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -241,9 +346,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -260,9 +365,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -283,9 +388,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -306,9 +411,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
@@ -329,9 +434,9 @@
     - utter_inform_privacypolicy
     - utter_ask_goal
 * how_to_get_started
-    - utter_quickstart
-    - utter_have_you_used_rasa_before
-* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
