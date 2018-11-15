@@ -79,6 +79,68 @@
     - utter_no_guide_for_switch
     - utter_anything_else
 
+##  migrating from dialogflow
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* mood_confirm
+    - utter_ask_migration
+* mood_confirm
+    - utter_ask_which_tool
+* switch{"current_api": "dialogflow"}
+    - utter_switch_dialogflow
+    - utter_anything_else
+
+## new to rasa + not new to chatbots + migrating from luis
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* mood_confirm
+    - utter_ask_migration
+* mood_confirm
+    - utter_ask_which_tool
+* switch{"current_api": "luis"}
+    - utter_switch_luis
+    - utter_anything_else
+
+## new to rasa + not new to chatbots + migrating from something else
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* mood_confirm
+    - utter_ask_migration
+* mood_confirm
+    - utter_ask_which_tool
+* switch
+    - action_store_unknown_product
+    - utter_no_guide_for_switch
+    - utter_anything_else
+
+
 ## new to rasa/bots, explain stack and try it out
 * greet
     - utter_greet
