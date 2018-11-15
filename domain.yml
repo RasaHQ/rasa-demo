@@ -76,6 +76,7 @@ slots:
     values:
       - core
       - nlu
+      - stack
   unknown_product:
     type: unfeaturized
   nlu_part:
@@ -96,6 +97,8 @@ slots:
       - ner_duckling_http
   language:
     type: unfeaturized
+  onboarding:
+    type: bool
 
 templates:
   utter_ask_budget:
@@ -134,7 +137,7 @@ templates:
   utter_quickstart_nlu_only:
     - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
   utter_ask_migration:
-    - text: "Are you looking to switch over from LUIS, DialogFlow, or another service?"
+    - text: "Are you migrating from another tool?"
   utter_switch_dialogflow:
     - text: "We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/."
   utter_switch_luis:
@@ -226,8 +229,8 @@ templates:
     - text: "I can't answer that"
   utter_have_you_used_rasa_before:
     - text: "Have you used Rasa before?"
-  utter_are_you_new_to_chatbots:
-    - text: "Alright, are you completly new to chatbots?"
+  utter_built_bot_before:
+    - text: "Alright, have you built a bot before?"
   utter_anything_else:
     - text: "Is there anything else I can help you with?"
   utter_encourage_building_bot:
@@ -284,6 +287,28 @@ templates:
     - text: "You can find my source code [here](https://github.com/RasaHQ/rasa-demo/)"
   utter_what_help:
     - text: "Ok, what can I help you with?"
+  utter_first_bot_with_rasa:
+    - text: "Is this your first time using Rasa?"
+  utter_getstarted:
+    - text: "To determine how I can help you best, I'm going to ask you a few questions."
+  utter_explain_stack:
+    - text: "Alright, I'll briefly explain the Rasa Stack then."
+  utter_stack_details:
+    - text: "The Rasa Stack is a framework to build contextual AI assistants and chatbots. It consists of two open source libraries (Rasa NLU and Rasa Core). Using machine learning, your bots can hold contextual conversations with users."
+  utter_explain_nlucore:
+    - text: "Would you like to know more about Rasa Core or Rasa NLU?"
+  utter_explain_nlu:
+    - text: 'Rasa NLU performs Natural Language Understanding, which means taking free-form text like "Please send the confirmation to amy@example.com" and turning it into structured data.'
+  utter_explain_core:
+    - text: "Rasa Core performs Dialog Management, which means keeping track of a conversation, and deciding how to proceed."
+  utter_tryout:
+    - text: "Would you like to try out the full stack, or just Rasa NLU?"
+  utter_also_explain_nlu:
+    - text: "Would you also like me to explain Rasa NLU?"
+  utter_also_explain_core:
+    - text: "Would you also like me to explain Rasa Core?"
+  utter_direct_install:
+    - text: "Alright, you can directly install it here: (link)"
 
 actions:
   - utter_greet
@@ -350,6 +375,18 @@ actions:
   - utter_rasa_cost
   - utter_source_code
   - utter_what_help
+  - utter_first_bot_with_rasa
+  - utter_getstarted
+  - utter_explain_stack
+  - utter_stack_details
+  - utter_explain_nlucore
+  - utter_explain_nlu
+  - utter_explain_core
+  - utter_tryout
+  - utter_also_explain_nlu
+  - utter_also_explain_core
+  - utter_direct_install
+  - utter_built_bot_before
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -364,3 +401,4 @@ actions:
   - action_store_unknown_nlu_part
   - action_store_bot_language
   - action_store_entity_extractor
+  - action_set_onboarding

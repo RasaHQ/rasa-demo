@@ -269,3 +269,22 @@ class ActionStoreEntityExtractor(Action):
             extractor = 'ner_duckling_http'
 
         return [SlotSet('entity_extractor', extractor)]
+
+
+class ActionSetOnboarding(Action):
+    """Sets the slot 'onboarding' to true/false dependent on whether the user
+    has built a bot with rasa before"""
+
+    def name(self):
+        return "action_set_onboarding"
+
+    def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message['intent'].get('name')
+        # latest_action = tracker.latest_action_name
+        # print(latest_action)
+        # if latest_action == 'utter_first_bot_with_rasa':
+        if intent == 'mood_confirm':
+            return [SlotSet('onboarding', True)]
+        elif intent == 'deny':
+            return [SlotSet('onboarding', False)]
+        return []
