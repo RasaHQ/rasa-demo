@@ -754,18 +754,6 @@
     - utter_duckling_info
     - utter_anything_else
 
-## skip to info on nlu
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-
-## skip to info on nlu
-* greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-
 ## skip to info on nlu entities
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
@@ -799,4 +787,26 @@
 ## source code
 * source_code
     - utter_source_code
+    - utter_anything_else
+
+## how to get started without privacy policy
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* mood_confirm
+    - utter_ask_migration
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* mood_confirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+    - utter_quickstart
     - utter_anything_else
