@@ -2,7 +2,8 @@
 
 import logging
 
-from rasa_core_sdk import Action, FormAction
+from rasa_core_sdk import Action
+from rasa_core_sdk.forms import FormAction
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
                                  ConversationPaused
 
@@ -301,10 +302,10 @@ class SuggestionForm(FormAction):
 
         return ["suggestion"]
 
-    def slot_mapping(self):
+    def slot_mappings(self):
 
         return {"suggestion": self.from_text()}
 
     def submit(self, dispatcher, tracker, domain):
-        dispatcher.utter_template('utter_thank_suggestion')
+        dispatcher.utter_template('utter_thank_suggestion', tracker)
         return []
