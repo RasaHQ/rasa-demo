@@ -2,7 +2,7 @@
 
 import logging
 
-from rasa_core_sdk import Action
+from rasa_core_sdk import Action, FormAction
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
                                  ConversationPaused
 
@@ -287,4 +287,24 @@ class ActionSetOnboarding(Action):
             return [SlotSet('onboarding', True)]
         elif intent == 'deny':
             return [SlotSet('onboarding', False)]
+        return []
+
+
+class SuggestionForm(FormAction):
+    """Accept free text input from the user for suggesetions"""
+
+    def name(self):
+        return "suggestion_form"
+
+    @staticmethod
+    def required_slots(tracker):
+
+        return ["suggestion"]
+
+    def slot_mapping(self):
+
+        return {"suggestion": self.from_text()}
+
+    def submit(self, dispatcher, tracker, domain):
+        dispatcher.utter_template('utter_thank_suggestion')
         return []

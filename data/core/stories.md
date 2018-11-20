@@ -6,6 +6,13 @@
 * bye
     - utter_bye
 
+## suggestion
+* suggestion
+    - utter_suggestion
+    - suggestion_form
+    - form{"name": "suggestion_form"}
+    - form{"name": null}
+
 ## sales
 * greet
     - utter_greet
