@@ -415,58 +415,93 @@
 * enter_data
     - utter_possibilities
 
-## story number 19
+## Story from conversation with 00e7815f79e4413abb0dfb4b392f1099 on November 15th 2018
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * greet
     - utter_greet
-* ask_whoisit
+* ask_whatisrasa
     - action_chitchat
-* out_of_scope
-    - utter_out_of_scope
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
+
+# story from linda
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* enter_data
     - utter_possibilities
 * how_to_get_started
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part":"entity recognition"}
-    - slot{"nlu_part":"entity recognition"}
-    - utter_nlu_entity_tutorial
-    - utter_offer_recommendation
-* mood_confirm
-    - utter_ask_entities
-* enter_data
-    - action_store_entity_extractor
-    - slot{"entity_extractor":"ner_crf"}
-    - utter_crf
-    - utter_anything_else
-* nlu_info
-    - utter_nlu_entity_tutorial
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
+## Story from conversation with dfbb633d10854f97b880a2496d632f0d on November 16th 2018
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* greet
+    - utter_greet
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
+
+## Story from conversation with alan on November 16th 2018
+* nlu_info{"nlu_part":"duckling"}
+    - slot{"nlu_part":"duckling"}
+    - utter_duckling_info
     - utter_anything_else
 * mood_confirm
     - utter_what_help
 
-## Story from conversation with 8e2ed5e9a214439b82463f4246103725 on November 1st 2018
+## Story from conversation with alan on November 16th 2018 2
+* nlu_info{"nlu_part":"intent classification"}
+    - slot{"nlu_part":"intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+* mood_confirm
+    - utter_what_language
+* enter_data{"language":"spanish"}
+    - slot{"language":"spanish"}
+    - action_store_bot_language
+    - slot{"can_use_spacy":true}
+    - utter_spacy_or_tensorflow
+    - utter_anything_else
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
+
+## Story from conversation with linda on November 15th 2018
+* greet
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_ask_goal
+* ask_whatisrasa
+    - action_chitchat
+    - utter_ask_goal
+* ask_whatisrasa
+    - action_chitchat
+    - utter_ask_goal
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
+## Story from conversation with 477ddbe73e374eedb07104c5d9f42c31 on November 16th 2018
 * greet
     - utter_greet
     - utter_inform_privacypolicy
     - utter_ask_goal
 * greet
     - utter_greet
-* ask_whatspossible
-    - action_chitchat
 * how_to_get_started
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part":"Entity recognition"}
-    - slot{"nlu_part":"Entity recognition"}
-    - utter_nlu_entity_tutorial
-    - utter_offer_recommendation
-* mood_confirm
-    - utter_ask_entities
-* out_of_scope
-    - action_store_entity_extractor
-    - slot{"entity_extractor":"ner_crf"}
-    - utter_crf
-    - utter_anything_else
-* deny
-    - utter_thumbsup
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* greet
+    - utter_greet
