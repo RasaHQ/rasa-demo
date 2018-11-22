@@ -1,3 +1,22 @@
+## intent:ask_faq_platform
+- what is rasa platform
+## intent:ask_faq_languages
+- what languages does rasa support
+## intent:ask_faq_tutorialcore
+- tutorial for NLU and core
+## intent:ask_faq_tutorialnlu
+- tutorial for NLU and core
+## intent:ask_faq_opensource
+- is rasa open source
+## intent:ask_faq_voice
+- rasa & voice / alexa
+## intent:ask_faq_slots
+- what are slots
+## intent:ask_faq_channels
+- what channels does rasa support
+## intent:ask_faq_differencecorenlu
+- difference core and NLU
+
 ## intent:ask_builder
 - can you share your boss with me?
 - i want to get to know your owner

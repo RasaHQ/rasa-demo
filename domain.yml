@@ -43,6 +43,15 @@ intents:
   - nlu_generation_tool_recommendation
   - rasa_cost
   - source_code
+  - ask_faq_platform
+  - ask_faq_languages
+  - ask_faq_tutorialcore
+  - ask_faq_tutorialnlu
+  - ask_faq_opensource
+  - ask_faq_voice
+  - ask_faq_slots
+  - ask_faq_channels
+  - ask_faq_differencecorenlu
 
 slots:
   budget:
@@ -311,6 +320,24 @@ templates:
     - text: "Alright, you can directly install it here: (link)"
   utter_ask_which_tool:
     - text: "Which tool are you migrating from?"
+  utter_ask_faq_platform:
+    - text: ""
+  utter_ask_faq_languages:
+    - text: ""
+  utter_ask_faq_tutorialcore:
+    - text: ""
+  utter_ask_faq_tutorialnlu:
+    - text: ""
+  utter_ask_faq_opensource:
+    - text: ""
+  utter_ask_faq_voice:
+    - text: ""
+  utter_ask_faq_slots:
+    - text: ""
+  utter_ask_faq_channels:
+    - text: ""
+  utter_ask_faq_differencecorenlu:
+    - text: ""
 
 actions:
   - utter_greet
@@ -390,6 +417,15 @@ actions:
   - utter_direct_install
   - utter_built_bot_before
   - utter_ask_which_tool
+  - utter_ask_faq_platform
+  - utter_ ask_faq_languages
+  - utter_ ask_faq_tutorialcore
+  - utter_ ask_faq_tutorialnlu
+  - utter_ ask_faq_opensource
+  - utter_ ask_faq_voice
+  - utter_ ask_faq_slots
+  - utter_ ask_faq_channels
+  - utter_ ask_faq_differencecorenlu
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget

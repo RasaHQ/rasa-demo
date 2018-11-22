@@ -4,7 +4,7 @@ import logging
 
 from rasa_core_sdk import Action
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
-                                 ConversationPaused
+    ConversationPaused
 
 from demo.api import MailChimpAPI
 from demo import config
@@ -92,7 +92,6 @@ class ActionStoreUsecase(Action):
         return "action_store_usecase"
 
     def run(self, dispatcher, tracker, domain):
-
         # we grab the whole user utterance here as there are no real entities
         # in the use case
         use_case = tracker.latest_message.get('text')
@@ -107,13 +106,29 @@ class ActionChitchat(Action):
         return "action_chitchat"
 
     def run(self, dispatcher, tracker, domain):
-
         intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
                       'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa',
                       'ask_isbot']:
+            dispatcher.utter_template('utter_' + intent, tracker)
+        return []
+
+
+class ActionFaqs(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self):
+        return "action_faqs"
+
+    def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message['intent'].get('name')
+
+        # retrieve the correct chitchat utterance dependent on the intent
+        if intent in ['ask_faq_platform', ' ask_faq_languages', ' ask_faq_tutorialcore', ' ask_faq_tutorialnlu',
+                      ' ask_faq_opensource', ' ask_faq_voice', ' ask_faq_slots', ' ask_faq_channels',
+                      ' ask_faq_differencecorenlu']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
@@ -125,7 +140,6 @@ class ActionStoreName(Action):
         return "action_store_name"
 
     def run(self, dispatcher, tracker, domain):
-
         person_name = next(tracker.get_latest_entity_values('name'), None)
 
         # if no name was extracted, use the whole user utterance
@@ -201,7 +215,6 @@ class ActionPause(Action):
         return "action_pause"
 
     def run(self, dispatcher, tracker, domain):
-
         return [ConversationPaused()]
 
 
