@@ -1,6 +1,7 @@
 ## thanks
 * thank
     - utter_noworries
+    - utter_anything_else
 
 ## bye
 * bye
@@ -8,6 +9,7 @@
 
 ## suggestion
 * suggestion
+    - utter_greet
     - utter_suggestion
     - suggestion_form
     - form{"name": "suggestion_form"}

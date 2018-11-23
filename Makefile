@@ -31,5 +31,5 @@ visualize:
 train-online:
 	python -m rasa_core.train -u models/nlu/current/ --online --core models/dialogue/
 
-evaluate:
-	python -m rasa_core.evaluate -d models/dialogue -s data/core/
+evaluate-core:
+	python -m rasa_core.evaluate --core models/dialogue -s data/core/
