@@ -242,6 +242,9 @@ class ActionStoreBotLanguage(Action):
         spacy_languages = ['english', 'french', 'german', 'spanish',
                            'portuguese', 'french', 'italian', 'dutch']
         language = tracker.get_slot('language')
+        if not language:
+            return [SlotSet('language', 'that language'),
+                    SlotSet('can_use_spacy', False)]
 
         if language in spacy_languages:
             return [SlotSet('can_use_spacy', True)]
