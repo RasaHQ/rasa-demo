@@ -43,6 +43,7 @@ intents:
   - nlu_generation_tool_recommendation
   - rasa_cost
   - source_code
+  - suggestion
 
 slots:
   budget:
@@ -99,6 +100,8 @@ slots:
     type: unfeaturized
   onboarding:
     type: bool
+  suggestion:
+    type: unfeaturized
 
 templates:
   utter_ask_budget:
@@ -311,6 +314,11 @@ templates:
     - text: "Alright, you can directly install it here: (link)"
   utter_ask_which_tool:
     - text: "Which tool are you migrating from?"
+  utter_suggestion:
+    - text: "Pls suggest"
+  utter_thank_suggestion:
+    - text: "Thanks for the suggestion"
+
 
 actions:
   - utter_greet
@@ -390,6 +398,7 @@ actions:
   - utter_direct_install
   - utter_built_bot_before
   - utter_ask_which_tool
+  - utter_suggestion
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -405,3 +414,6 @@ actions:
   - action_store_bot_language
   - action_store_entity_extractor
   - action_set_onboarding
+
+forms:
+  - suggestion_form
