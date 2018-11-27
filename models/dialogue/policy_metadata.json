@@ -2,13 +2,82 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "product",
         "nlu_part",
+        "feedback_value",
+        "current_api",
         "email",
         "language",
-        "feedback_value",
-        "current_api"
+        "product"
       ]
+    },
+    "action_set_onboarding": {
+      "slots": [
+        "onboarding"
+      ]
+    },
+    "utter_ask_goal": {
+      "slots": []
+    },
+    "action_chitchat": {
+      "slots": []
+    },
+    "utter_thumbsup": {
+      "slots": []
+    },
+    "utter_anything_else": {
+      "slots": []
+    },
+    "null": {
+      "slots": []
+    },
+    "utter_greet": {
+      "slots": []
+    },
+    "utter_also_explain_nlu": {
+      "slots": []
+    },
+    "utter_possibilities": {
+      "slots": []
+    },
+    "utter_tryout": {
+      "slots": []
+    },
+    "utter_nohelp": {
+      "slots": []
+    },
+    "utter_ask_migration": {
+      "slots": []
+    },
+    "action_store_unknown_product": {
+      "slots": [
+        "unknown_product"
+      ]
+    },
+    "utter_explain_nlucore": {
+      "slots": []
+    },
+    "action_store_bot_language": {
+      "slots": [
+        "can_use_spacy"
+      ]
+    },
+    "action_store_budget": {
+      "slots": [
+        "budget"
+      ]
+    },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
+    },
+    "utter_first_bot_with_rasa": {
+      "slots": []
     },
     "action_store_job": {
       "slots": [
@@ -18,11 +87,6 @@
     "action_store_usecase": {
       "slots": [
         "use_case"
-      ]
-    },
-    "action_store_budget": {
-      "slots": [
-        "budget"
       ]
     },
     "action_store_name": {
@@ -35,73 +99,20 @@
         "company_name"
       ]
     },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
       ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    },
-    "utter_ask_feedback": {
-      "slots": []
-    },
-    "utter_thumbsup": {
-      "slots": []
-    },
-    "utter_ask_goal": {
-      "slots": []
-    },
-    "action_chitchat": {
-      "slots": []
-    },
-    "utter_contact_email": {
-      "slots": []
-    },
-    "action_store_bot_language": {
-      "slots": [
-        "can_use_spacy"
-      ]
-    },
-    "utter_anything_else": {
-      "slots": []
-    },
-    "utter_great": {
-      "slots": []
-    },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_canthelp": {
-      "slots": []
-    },
-    "utter_cantsignup": {
-      "slots": []
-    },
-    "action_store_entity_extractor": {
-      "slots": [
-        "entity_extractor"
-      ]
     }
   },
-  "rasa_core": "0.11.12",
-  "python": "3.6.6",
+  "rasa_core": "0.13.0a1",
+  "python": "3.6.5",
   "max_histories": [
-    6,
-    6,
-    null
+    90
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
-    "rasa_core.policies.memoization.MemoizationPolicy",
-    "rasa_core.policies.keras_policy.KerasPolicy",
-    "rasa_core.policies.fallback.FallbackPolicy"
-  ]
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ],
+  "trained_at": "20181127-170352"
 }

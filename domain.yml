@@ -44,6 +44,10 @@ intents:
   - rasa_cost
   - source_code
   - suggestion
+  - suggestions
+  - restart
+  - Where can I integrate my bot
+  - None
 
 slots:
   budget:
@@ -75,6 +79,7 @@ slots:
   product:
     type: categorical
     values:
+      - both
       - core
       - nlu
       - stack
@@ -84,8 +89,12 @@ slots:
     type: categorical
     values:
       - entity recognition
+      - entity extraction
+      - intent
       - intent classification
+      - intent classificaton
       - duckling
+      - entity
   unknown_nlu_part:
     type: unfeaturized
   can_use_spacy:
@@ -414,6 +423,8 @@ actions:
   - action_store_bot_language
   - action_store_entity_extractor
   - action_set_onboarding
+  - success
+  - fail
 
-forms:
-  - suggestion_form
+#forms:
+#  - suggestion_form
