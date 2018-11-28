@@ -1111,6 +1111,13 @@
 - [distances](entity:distance)
 - the [distance](entity) between places
 - the [distance](entity) from one place to an other
+- I want to use [pip](package_manager)
+- [pip](package_manager)
+- [conda](package_manager)
+- i use [anaconda](package_manager)
+- please give me instructions for [pip](package_manager)
+- please [conda](package_manager)
+- [pip](package_manager) please
 
 ## intent:greet
 - Hi
@@ -1593,9 +1600,7 @@
 - which language is rasa programmed in
 - what technologies did u use to create more mature chatbot?
 - which technology is used to create you
-- how do I install rasa in windows
 - having some problems with installation
-- how do I run rasa on windows
 - does rasa support voice input
 - is there an alexa integration
 
@@ -1694,3 +1699,18 @@
 - need more data for nlu
 - i have to less nlu data
 - are there simpler ways to create nlu data
+
+## intent:install_rasa
+- I want to install Rasa Stack
+- How to install Rasa? 
+- Where to get Rasa Stack?
+- How to install Rasa Core?
+- install Rasa NLU
+- how do I install rasa in windows
+- how do I run rasa on windows
+- install Rasa on Linux
+- install Rasa on Mac
+- Can you help me to install Rasa?
+
+## synonym:conda
+- anaconda
