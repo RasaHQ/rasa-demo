@@ -14,6 +14,7 @@
     "intent_contact_sales",
     "intent_deny",
     "intent_enter_data",
+    "intent_event_restart",
     "intent_feedback",
     "intent_greet",
     "intent_how_to_get_started",
@@ -176,6 +177,8 @@
     "prev_action_store_entity_extractor",
     "prev_action_set_onboarding",
     "prev_success",
-    "prev_fail"
+    "prev_fail",
+    "prev_event_rewind",
+    "prev_event_restart"
   ]
 }

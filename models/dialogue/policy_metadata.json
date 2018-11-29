@@ -2,82 +2,18 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "nlu_part",
-        "feedback_value",
-        "current_api",
         "email",
+        "product",
+        "feedback_value",
+        "nlu_part",
         "language",
-        "product"
+        "current_api"
       ]
     },
     "action_set_onboarding": {
       "slots": [
         "onboarding"
       ]
-    },
-    "utter_ask_goal": {
-      "slots": []
-    },
-    "action_chitchat": {
-      "slots": []
-    },
-    "utter_thumbsup": {
-      "slots": []
-    },
-    "utter_anything_else": {
-      "slots": []
-    },
-    "null": {
-      "slots": []
-    },
-    "utter_greet": {
-      "slots": []
-    },
-    "utter_also_explain_nlu": {
-      "slots": []
-    },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_tryout": {
-      "slots": []
-    },
-    "utter_nohelp": {
-      "slots": []
-    },
-    "utter_ask_migration": {
-      "slots": []
-    },
-    "action_store_unknown_product": {
-      "slots": [
-        "unknown_product"
-      ]
-    },
-    "utter_explain_nlucore": {
-      "slots": []
-    },
-    "action_store_bot_language": {
-      "slots": [
-        "can_use_spacy"
-      ]
-    },
-    "action_store_budget": {
-      "slots": [
-        "budget"
-      ]
-    },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    },
-    "utter_first_bot_with_rasa": {
-      "slots": []
     },
     "action_store_job": {
       "slots": [
@@ -87,6 +23,11 @@
     "action_store_usecase": {
       "slots": [
         "use_case"
+      ]
+    },
+    "action_store_budget": {
+      "slots": [
+        "budget"
       ]
     },
     "action_store_name": {
@@ -99,9 +40,29 @@
         "company_name"
       ]
     },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
+    },
+    "action_store_unknown_product": {
+      "slots": [
+        "unknown_product"
+      ]
+    },
+    "action_store_bot_language": {
+      "slots": [
+        "can_use_spacy"
       ]
     }
   },
@@ -114,5 +75,5 @@
   "policy_names": [
     "rasa_core.policies.keras_policy.KerasPolicy"
   ],
-  "trained_at": "20181127-170352"
+  "trained_at": "20181129-160237"
 }

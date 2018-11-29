@@ -48,6 +48,7 @@ intents:
   - restart
   - Where can I integrate my bot
   - None
+  - event_restart
 
 slots:
   budget:
@@ -425,6 +426,8 @@ actions:
   - action_set_onboarding
   - success
   - fail
+  - event_rewind
+  - event_restart
 
 #forms:
 #  - suggestion_form

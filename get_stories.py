@@ -20,14 +20,16 @@ texts_no = []
 
 pbar = tqdm(reader)
 for row in pbar:
-    if row['sender_id'] and row['user goal fullfilled'] and row['user goal supported'] == 'getstarted':
+    if row['sender_id'] and row['user goal fullfilled'] and row['reason for failure'] != 'NLU':# and row['user goal supported'] == 'getstarted':
         total += 1
         response = requests.get(url.format(sender_id=row['sender_id']), headers=headers)
 
         text = response.text.replace('Generated Story',
                                      'Generated Story goal:{}, id:{}'
-                                     ''.format(row['user goal supported'],
-                                               row['sender_id']))
+                                     ''.format(row['user goal (if supported)'],
+                                               row['sender_id'])
+                                     ).replace('rewind', 'event_rewind'
+                                               ).replace('restart', 'event_restart')
 
         if 'es' in row['user goal fullfilled']:
             total_yes += 1
@@ -43,16 +45,16 @@ print(total)
 print(total_yes)
 print(total_no)
 
-os.remove("data/success/train_getstarted.md")
-with io.open('data/success/train_getstarted.md', 'a', encoding="utf-8") as f:
-    for text in texts_yes[:-5]:
+os.remove("data/success/train_no_NLU.md")
+with io.open('data/success/train_no_NLU.md', 'a', encoding="utf-8") as f:
+    for text in texts_yes[:-15]:
         f.write(text + "\n")
-    for text in texts_no[:-5]:
+    for text in texts_no[:-15]:
         f.write(text + "\n")
 
-os.remove("data/success/test_getstarted.md")
-with io.open('data/success/test_getstarted.md', 'a', encoding="utf-8") as f:
-    for text in texts_yes[-5:]:
+os.remove("data/success/test_no_NLU.md")
+with io.open('data/success/test_no_NLU.md', 'a', encoding="utf-8") as f:
+    for text in texts_yes[-15:]:
         f.write(text + "\n")
-    for text in texts_no[-5:]:
+    for text in texts_no[-15:]:
         f.write(text + "\n")

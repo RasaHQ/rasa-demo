@@ -96,6 +96,8 @@ actions:
 - action_set_onboarding
 - success
 - fail
+- event_rewind
+- event_restart
 config:
   store_entities_as_slots: true
 entities:
@@ -179,6 +181,8 @@ intents:
 - Where can I integrate my bot:
     use_entities: true
 - None:
+    use_entities: true
+- event_restart:
     use_entities: true
 slots:
   budget:
