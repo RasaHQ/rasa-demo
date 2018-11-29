@@ -418,19 +418,20 @@ actions:
   - utter_built_bot_before
   - utter_ask_which_tool
   - utter_ask_faq_platform
-  - utter_ ask_faq_languages
-  - utter_ ask_faq_tutorialcore
-  - utter_ ask_faq_tutorialnlu
-  - utter_ ask_faq_opensource
-  - utter_ ask_faq_voice
-  - utter_ ask_faq_slots
-  - utter_ ask_faq_channels
-  - utter_ ask_faq_differencecorenlu
+  - utter_ask_faq_languages
+  - utter_ask_faq_tutorialcore
+  - utter_ask_faq_tutorialnlu
+  - utter_ask_faq_opensource
+  - utter_ask_faq_voice
+  - utter_ask_faq_slots
+  - utter_ask_faq_channels
+  - utter_ask_faq_differencecorenlu
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
   - action_store_usecase
   - action_chitchat
+  - action_faqs
   - action_store_name
   - action_store_company
   - action_store_job

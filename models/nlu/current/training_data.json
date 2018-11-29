@@ -2,6 +2,42 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
+        "intent": "ask_faq_platform",
+        "text": "what is rasa platform"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "what languages does rasa support"
+      },
+      {
+        "intent": "ask_faq_tutorialcore",
+        "text": "tutorial for NLU and core"
+      },
+      {
+        "intent": "ask_faq_tutorialnlu",
+        "text": "tutorial for NLU and core"
+      },
+      {
+        "intent": "ask_faq_opensource",
+        "text": "is rasa open source"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "rasa & voice / alexa"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "what are slots"
+      },
+      {
+        "intent": "ask_faq_channels",
+        "text": "what channels does rasa support"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "text": "difference core and NLU"
+      },
+      {
         "intent": "ask_builder",
         "text": "can you share your boss with me?"
       },
@@ -1660,6 +1696,14 @@
       {
         "intent": "deny",
         "text": "i don't want either of those"
+      },
+      {
+        "intent": "deny",
+        "text": "nah thanks"
+      },
+      {
+        "intent": "deny",
+        "text": "neither of these"
       },
       {
         "intent": "enter_data",
@@ -4630,6 +4674,3216 @@
         "text": "something to talk to my friends while I'm busy working"
       },
       {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "english is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an english bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 44,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 43,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "english is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in english but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "language: english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "language = english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "its an english bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "german is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an german bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 33,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 43,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 42,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "german is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in german but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "language: german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "language = german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "its an german bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 35,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "spanish is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an spanish bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 44,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 43,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "spanish is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in spanish but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "language: spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "language = spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "its an spanish bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 23,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "portuguese is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 24,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 18,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an portuguese bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 19,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 37,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 27,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 47,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 46,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 25,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 28,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 33,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 32,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "portuguese is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 23,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in portuguese but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "language: portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 21,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "language = portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 17,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "its an portuguese bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 29,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 39,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 31,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "french is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an french bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 15,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 33,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 43,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 42,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 24,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "french is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in french but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "language: french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "language = french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "its an french bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 35,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 27,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 18,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "dutch is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 15,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 19,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an dutch bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 14,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 32,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 22,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 42,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 25,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 41,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 20,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 28,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 27,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "dutch is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 18,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in dutch but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 15,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "language: dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "language = dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "its an dutch bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 24,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "italian is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an italian bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 44,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 43,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "italian is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in italian but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "language: italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "language = italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "its an italian bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "mandarin is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 22,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an mandarin bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 25,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 45,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 44,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "mandarin is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in mandarin but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "language: mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "language = mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "its an mandarin bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 37,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "chinese is the language of my bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an chinese bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 16,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 24,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 44,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 43,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 29,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "chinese is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in chinese but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "language: chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "language = chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "its an chinese bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 26,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "I’ve trained it in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 36,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "name",
+            "entity": "entity"
+          }
+        ],
+        "text": "i want to extract names"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "place",
+            "entity": "entity"
+          }
+        ],
+        "text": "places"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "organisation",
+            "entity": "entity"
+          }
+        ],
+        "text": "companies"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 4,
+            "end": 9,
+            "value": "date",
+            "entity": "entity"
+          }
+        ],
+        "text": "get dates from messages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 2,
+            "end": 7,
+            "value": "place",
+            "entity": "entity"
+          }
+        ],
+        "text": "a place"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "place",
+            "entity": "entity"
+          },
+          {
+            "start": 11,
+            "end": 16,
+            "value": "name",
+            "entity": "entity"
+          }
+        ],
+        "text": "places and names"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 19,
+            "end": 27,
+            "value": "ordinals",
+            "entity": "entity"
+          }
+        ],
+        "text": "i am interested in ordinals"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "money",
+            "entity": "entity"
+          }
+        ],
+        "text": "amounts of money"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 14,
+            "value": "money",
+            "entity": "entity"
+          }
+        ],
+        "text": "how much money"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "money",
+            "entity": "entity"
+          }
+        ],
+        "text": "amounts"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "duration",
+            "entity": "entity"
+          }
+        ],
+        "text": "how long"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "duration",
+            "entity": "entity"
+          }
+        ],
+        "text": "extracting durations"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "distance",
+            "entity": "entity"
+          }
+        ],
+        "text": "distances"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "distance",
+            "entity": "entity"
+          }
+        ],
+        "text": "the distance between places"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 4,
+            "end": 12,
+            "value": "distance",
+            "entity": "entity"
+          }
+        ],
+        "text": "the distance from one place to an other"
+      },
+      {
         "intent": "greet",
         "text": "Hi"
       },
@@ -4884,6 +8138,18 @@
       {
         "intent": "greet",
         "text": "hi there it's me"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good afternoon"
       },
       {
         "intent": "human_handoff",
@@ -6243,6 +9509,20 @@
       },
       {
         "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 36,
+            "end": 39,
+            "value": "nlu",
+            "entity": "product"
+          },
+          {
+            "start": 49,
+            "end": 53,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
         "text": "what is the difference between rasa nlu and rasa core"
       },
       {
@@ -6299,7 +9579,231 @@
       },
       {
         "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 18,
+            "end": 22,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
         "text": "how do i get rasa core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 20,
+            "end": 23,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "how do I train rasa nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 20,
+            "end": 24,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "how do i learn rasa core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 13,
+            "end": 17,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "what is rasa core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 8,
+            "end": 11,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "what is nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 27,
+            "end": 31,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "I want to learn about rasa core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 14,
+            "end": 17,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "i want to use nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "rasa stack"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 18,
+            "end": 23,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "how to learn rasa stack"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 27,
+            "end": 30,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "I want to learn about rasa nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 27,
+            "end": 31,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "i want to learn about rasa core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 24,
+            "end": 27,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "how to get started with nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 28,
+            "end": 31,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "give me some information on nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 32,
+            "end": 36,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "tell me how to get started with core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 10,
+            "end": 13,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "how about nlu"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 14,
+            "end": 18,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "tell me about core please"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 13,
+            "end": 16,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "what is this nlu thing?"
       },
       {
         "intent": "technical_question",
@@ -6426,36 +9930,24 @@
         "text": "which technology is used to create you"
       },
       {
-        "intent": "new_project",
-        "text": "I'm starting a brand new project"
+        "intent": "technical_question",
+        "text": "how do I install rasa in windows"
       },
       {
-        "intent": "new_project",
-        "text": "new project"
+        "intent": "technical_question",
+        "text": "having some problems with installation"
       },
       {
-        "intent": "new_project",
-        "text": "starting fresh"
+        "intent": "technical_question",
+        "text": "how do I run rasa on windows"
       },
       {
-        "intent": "new_project",
-        "text": "fresh start"
+        "intent": "technical_question",
+        "text": "does rasa support voice input"
       },
       {
-        "intent": "new_project",
-        "text": "starting a new project"
-      },
-      {
-        "intent": "new_project",
-        "text": "beginning"
-      },
-      {
-        "intent": "new_project",
-        "text": "I am going to begin a new project"
-      },
-      {
-        "intent": "new_project",
-        "text": "this is a new project"
+        "intent": "technical_question",
+        "text": "is there an alexa integration"
       },
       {
         "intent": "switch",
@@ -6468,6 +9960,42 @@
           }
         ],
         "text": "I currently use dialog flow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 22,
+            "end": 33,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I want to switch from dialog flow to rasa"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 22,
+            "end": 33,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I want to change from dialog flow to rasa"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 21,
+            "end": 32,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I want to convert my dialog flow bot to rasa"
       },
       {
         "intent": "switch",
@@ -6552,9 +10080,642 @@
           }
         ],
         "text": "I want to move from LUIS.ai to Rasa"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "DialogFlow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "luis.ai"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "LUIS"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 0,
+            "end": 13,
+            "value": "bot framework",
+            "entity": "current_api"
+          }
+        ],
+        "text": "bot framework"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 6,
+            "end": 12,
+            "value": "wit.ai",
+            "entity": "product"
+          }
+        ],
+        "text": "I use wit.ai"
+      },
+      {
+        "intent": "switch",
+        "text": "chatfuel"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 25,
+            "end": 35,
+            "value": "dialogflow",
+            "entity": "product"
+          }
+        ],
+        "text": "how does rasa compare to dialogflow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 25,
+            "end": 29,
+            "value": "luis",
+            "entity": "product"
+          }
+        ],
+        "text": "how does rasa compare to luis"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 20,
+            "end": 31,
+            "value": "dialogflow",
+            "entity": "product"
+          }
+        ],
+        "text": "is rasa better than dialog flow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 31,
+            "end": 44,
+            "value": "bot framework",
+            "entity": "product"
+          }
+        ],
+        "text": "what is the difference between bot framework and rasa"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 26,
+            "end": 44,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "can you explain to me how entity recognition works?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 9,
+            "end": 27,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "how does entity recognition work?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 40,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "an explanation of how entity recognition work would help"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 40,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I still don’t get how entity recognition works"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 40,
+            "end": 58,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "it would be helpful to learn more about entity recognition"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 14,
+            "end": 32,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "tell me about entity recognition"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 40,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I want to learn about entity recognition"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "entity recognition"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 8,
+            "end": 26,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "what is entity recognition?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 19,
+            "end": 37,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I don’t understand entity recognition"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 18,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "entity recognition - what is that?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 34,
+            "end": 52,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I don’t understand how you handle entity recognition at Rasa"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 7,
+            "end": 25,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "how is entity recognition managed in rasa?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 31,
+            "end": 49,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I checked the documentation on entity recognition but I still don’t understand it"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 26,
+            "end": 47,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "can you explain to me how intent classification works?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 9,
+            "end": 30,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "how does intent classification work?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 43,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "an explanation of how intent classification work would help"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 43,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I still don’t get how intent classification works"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 40,
+            "end": 61,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "it would be helpful to learn more about intent classification"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 14,
+            "end": 35,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "tell me about intent classification"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 43,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I want to learn about intent classification"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "intent classification"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 8,
+            "end": 29,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "what is intent classification?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 19,
+            "end": 40,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I don’t understand intent classification"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "intent classification - what is that?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 34,
+            "end": 55,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I don’t understand how you handle intent classification at Rasa"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 7,
+            "end": 28,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "how is intent classification managed in rasa?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 31,
+            "end": 52,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I checked the documentation on intent classification but I still don’t understand it"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "do you use duckling"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 34,
+            "end": 42,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I want to know if rasa works with duckling"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "duckling"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "how do you integrate duckling"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 20,
+            "end": 28,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "does rasa work with duckling?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 3,
+            "end": 11,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "is duckling part of rasa?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "intents",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "intents"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline should I start with?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what is the right pipeline to choose?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what I a good pipeline to start with?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline should i use?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline is better for what i want?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline should I start with?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "should I better start with the tensorflow pipeline or spacy?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "spacy or tensorflow, what is better to start?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "I don’t know which pipeline to use"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline is better?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "which pipeline is better?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "recommend pipeline"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "pipeline recommendation"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "give me a recommendation"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "which tools can I use to create nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "how can I get nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "where can i get data for the nlu"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "recommend me some nlu tools"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "how to work with nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "i need more nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "are there tools to create nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "i require more nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "need more data for nlu"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "i have to less nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "are there simpler ways to create nlu data"
       }
     ],
     "regex_features": [],
+    "lookup_tables": [],
     "entity_synonyms": [
       {
         "value": "full stack developer",
@@ -6575,6 +10736,55 @@
         ]
       },
       {
+        "value": "name",
+        "synonyms": [
+          "names"
+        ]
+      },
+      {
+        "value": "place",
+        "synonyms": [
+          "places"
+        ]
+      },
+      {
+        "value": "organisation",
+        "synonyms": [
+          "companies"
+        ]
+      },
+      {
+        "value": "date",
+        "synonyms": [
+          "dates"
+        ]
+      },
+      {
+        "value": "money",
+        "synonyms": [
+          "amounts"
+        ]
+      },
+      {
+        "value": "duration",
+        "synonyms": [
+          "how long",
+          "durations"
+        ]
+      },
+      {
+        "value": "distance",
+        "synonyms": [
+          "distances"
+        ]
+      },
+      {
+        "value": "core",
+        "synonyms": [
+          "stack"
+        ]
+      },
+      {
         "value": "dialogflow",
         "synonyms": [
           "dialog flow",
@@ -6585,7 +10795,21 @@
         "value": "luis",
         "synonyms": [
           "LUIS",
-          "LUIS.ai"
+          "LUIS.ai",
+          "luis.ai"
+        ]
+      },
+      {
+        "value": "intent classification",
+        "synonyms": [
+          "intents",
+          "intent"
+        ]
+      },
+      {
+        "value": "entity recognition",
+        "synonyms": [
+          "entity extraction"
         ]
       }
     ]

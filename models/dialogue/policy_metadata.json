@@ -2,10 +2,10 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "language",
         "product",
         "nlu_part",
         "email",
-        "language",
         "feedback_value",
         "current_api"
       ]
@@ -53,7 +53,7 @@
     "utter_ask_feedback": {
       "slots": []
     },
-    "utter_thumbsup": {
+    "utter_anything_else": {
       "slots": []
     },
     "utter_ask_goal": {
@@ -62,46 +62,66 @@
     "action_chitchat": {
       "slots": []
     },
+    "action_faqs": {
+      "slots": []
+    },
+    "action_set_onboarding": {
+      "slots": [
+        "onboarding"
+      ]
+    },
+    "utter_canthelp": {
+      "slots": []
+    },
     "utter_contact_email": {
       "slots": []
     },
-    "action_store_bot_language": {
-      "slots": [
-        "can_use_spacy"
-      ]
-    },
-    "utter_anything_else": {
+    "utter_nohelp": {
       "slots": []
     },
-    "utter_great": {
+    "utter_first_bot_with_rasa": {
+      "slots": []
+    },
+    "utter_cantsignup": {
       "slots": []
     },
     "utter_possibilities": {
       "slots": []
     },
-    "utter_canthelp": {
+    "utter_offer_recommendation": {
       "slots": []
     },
-    "utter_cantsignup": {
+    "utter_greet": {
+      "slots": []
+    },
+    "utter_noworries": {
+      "slots": []
+    },
+    "utter_thumbsup": {
       "slots": []
     },
     "action_store_entity_extractor": {
       "slots": [
         "entity_extractor"
       ]
+    },
+    "action_store_bot_language": {
+      "slots": [
+        "can_use_spacy"
+      ]
     }
   },
   "rasa_core": "0.11.12",
-  "python": "3.6.6",
+  "python": "3.6.5",
   "max_histories": [
+    null,
     6,
-    6,
-    null
+    6
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
+    "rasa_core.policies.fallback.FallbackPolicy",
     "rasa_core.policies.memoization.MemoizationPolicy",
-    "rasa_core.policies.keras_policy.KerasPolicy",
-    "rasa_core.policies.fallback.FallbackPolicy"
+    "rasa_core.policies.keras_policy.KerasPolicy"
   ]
 }
