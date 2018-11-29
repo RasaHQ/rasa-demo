@@ -5,7 +5,7 @@ import logging
 from rasa_core_sdk import Action
 from rasa_core_sdk.forms import FormAction
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
-                                 ConversationPaused
+    ConversationPaused
 
 from demo.api import MailChimpAPI
 from demo import config
@@ -93,7 +93,6 @@ class ActionStoreUsecase(Action):
         return "action_store_usecase"
 
     def run(self, dispatcher, tracker, domain):
-
         # we grab the whole user utterance here as there are no real entities
         # in the use case
         use_case = tracker.latest_message.get('text')
@@ -108,13 +107,12 @@ class ActionChitchat(Action):
         return "action_chitchat"
 
     def run(self, dispatcher, tracker, domain):
-
         intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
-                      'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa',
-                      'ask_isbot']:
+        if intent in ['ask_builder', 'ask_weather', 'ask_howdoing', 'ask_whatspossible', 'ask_whatisrasa', 'ask_isbot',
+                      'ask_howold', 'ask_languagesbot', 'ask_restaurant', 'ask_time', 'ask_wherefrom', 'ask_whoami',
+                      'handleinsult', 'nicetomeeyou', 'telljoke']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
@@ -126,7 +124,6 @@ class ActionStoreName(Action):
         return "action_store_name"
 
     def run(self, dispatcher, tracker, domain):
-
         person_name = next(tracker.get_latest_entity_values('name'), None)
 
         # if no name was extracted, use the whole user utterance
@@ -202,7 +199,6 @@ class ActionPause(Action):
         return "action_pause"
 
     def run(self, dispatcher, tracker, domain):
-
         return [ConversationPaused()]
 
 
@@ -302,11 +298,9 @@ class SuggestionForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-
         return ["suggestion"]
 
     def slot_mappings(self):
-
         return {"suggestion": self.from_text()}
 
     def submit(self, dispatcher, tracker, domain):

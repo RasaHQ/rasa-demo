@@ -62,6 +62,23 @@ actions:
 - utter_crf
 - utter_nlu_tools
 - utter_duckling_info
+- utter_rasa_cost
+- utter_source_code
+- utter_what_help
+- utter_first_bot_with_rasa
+- utter_getstarted
+- utter_explain_stack
+- utter_stack_details
+- utter_explain_nlucore
+- utter_explain_nlu
+- utter_explain_core
+- utter_tryout
+- utter_also_explain_nlu
+- utter_also_explain_core
+- utter_direct_install
+- utter_built_bot_before
+- utter_ask_which_tool
+- utter_suggestion
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
@@ -76,6 +93,7 @@ actions:
 - action_store_unknown_nlu_part
 - action_store_bot_language
 - action_store_entity_extractor
+- action_set_onboarding
 config:
   store_entities_as_slots: true
 entities:
@@ -92,6 +110,8 @@ entities:
 - language
 - nlu_part
 - entity
+forms:
+- suggestion_form
 intents:
 - enter_data:
     use_entities: false
@@ -119,6 +139,24 @@ intents:
     use_entities: true
 - ask_isbot:
     use_entities: true
+- ask_howold:
+    use_entities: true
+- ask_languagesbot:
+    use_entities: true
+- ask_restaurant:
+    use_entities: true
+- ask_time:
+    use_entities: true
+- ask_wherefrom:
+    use_entities: true
+- ask_whoami:
+    use_entities: true
+- handleinsult:
+    use_entities: true
+- nicetomeeyou:
+    use_entities: true
+- telljoke:
+    use_entities: true
 - out_of_scope:
     use_entities: true
 - thank:
@@ -145,29 +183,42 @@ intents:
     use_entities: true
 - nlu_generation_tool_recommendation:
     use_entities: true
+- rasa_cost:
+    use_entities: true
+- source_code:
+    use_entities: true
+- suggestion:
+    use_entities: true
 slots:
   budget:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
   can_use_spacy:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
   company_name:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
   current_api:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.CategoricalSlot
     values:
     - dialogflow
     - luis
   data_stored:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
   email:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
   entity_extractor:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.CategoricalSlot
     values:
@@ -175,53 +226,78 @@ slots:
     - ner_spacy
     - ner_duckling_http
   feedback_value:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.CategoricalSlot
     values:
     - positive
     - negative
   job_function:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
   language:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
   nlu_part:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.CategoricalSlot
     values:
     - entity recognition
     - intent classification
     - duckling
+  onboarding:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.BooleanSlot
   person_name:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
   product:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.CategoricalSlot
     values:
     - core
     - nlu
+    - stack
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   subscribed:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
+  suggestion:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   unknown_nlu_part:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
   unknown_product:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
   use_case:
+    auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
 templates:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received
       a newsletter in a while, maybe check your spam folder 🗑
+  utter_also_explain_core:
+  - text: Would you also like me to explain Rasa Core?
+  utter_also_explain_nlu:
+  - text: Would you also like me to explain Rasa NLU?
   utter_anything_else:
   - text: Is there anything else I can help you with?
-  utter_are_you_new_to_chatbots:
-  - text: Alright, are you completly new to chatbots?
   utter_ask_budget:
   - text: What's your annual budget for conversational AI? 💸
   utter_ask_builder:
@@ -256,7 +332,7 @@ templates:
   utter_ask_jobfunction:
   - text: What's your job? 🕴
   utter_ask_migration:
-  - text: Are you looking to switch over from LUIS, DialogFlow, or another service?
+  - text: Are you migrating from another tool?
   utter_ask_name:
   - text: What's your name?
   utter_ask_usecase:
@@ -273,6 +349,8 @@ templates:
   - text: You can book a sales call or subscribe to our newsletter.
   utter_ask_which_product:
   - text: Ok, would you like to know more about Core or NLU?
+  utter_ask_which_tool:
+  - text: Which tool are you migrating from?
   utter_ask_whoisit:
   - text: I'm the Rasa bot! 🤖
   utter_awesome:
@@ -280,6 +358,8 @@ templates:
   - text: Sweet, thank you! 😄
   - text: Thanks! 👌
   - text: Cool, thank you!
+  utter_built_bot_before:
+  - text: Alright, have you built a bot before?
   utter_bye:
   - text: Goodbye!
   - text: Bye!
@@ -322,6 +402,8 @@ templates:
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
+  utter_direct_install:
+  - text: 'Alright, you can directly install it here: (link)'
   utter_docu:
   - text: 'If you want some more awesome Rasa content, check out our forum: https://forum.rasa.com/'
   utter_dont_know_nlu_part:
@@ -335,6 +417,21 @@ templates:
       is the link to its documentation: https://duckling.wit.ai/'
   utter_encourage_building_bot:
   - text: Cool, then good luck with building your first "I'm the Rasa bot 🤖!
+  utter_explain_core:
+  - text: Rasa Core performs Dialog Management, which means keeping track of a conversation,
+      and deciding how to proceed.
+  utter_explain_nlu:
+  - text: Rasa NLU performs Natural Language Understanding, which means taking free-form
+      text like "Please send the confirmation to amy@example.com" and turning it into
+      structured data.
+  utter_explain_nlucore:
+  - text: Would you like to know more about Rasa Core or Rasa NLU?
+  utter_explain_stack:
+  - text: Alright, I'll briefly explain the Rasa Stack then.
+  utter_first_bot_with_rasa:
+  - text: Is this your first time using Rasa?
+  utter_getstarted:
+  - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_great:
   - text: Great! 👍
   - text: That's great! 🙌
@@ -390,27 +487,43 @@ templates:
   utter_quickstart_nlu_only:
   - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/\
       \ . You don't have to install anything to try it out."
+  utter_rasa_cost:
+  - text: Rasa is free
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_search_bar:
   - text: Try using the search bar above for now.
+  utter_source_code:
+  - text: You can find my source code [here](https://github.com/RasaHQ/rasa-demo/)
   utter_spacy:
   - text: "spaCy has excellent pre-trained named-entity recognisers for this. Check\
       \ out this interactive demo https://demos.explosion.ai/displacy-ent/ . Hence,\
       \ I would suggest using the ner_crf component in your pipeline.\n"
   utter_spacy_or_tensorflow:
   - text: Looks like for your {language} bot, you can use either spacy or tensorflow_embedding!
+  utter_stack_details:
+  - text: The Rasa Stack is a framework to build contextual AI assistants and chatbots.
+      It consists of two open source libraries (Rasa NLU and Rasa Core). Using machine
+      learning, your bots can hold contextual conversations with users.
+  utter_suggestion:
+  - text: Pls suggest
   utter_switch_dialogflow:
   - text: 'We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/.'
   utter_switch_luis:
   - text: 'We have a guide for migrating from LUIS here: http://rasa.com/docs/getting-started/luis/.'
   utter_tensorflow:
   - text: For {language}, you can only use the tensorflow_embedding pipeline
+  utter_thank_suggestion:
+  - text: Thanks for the suggestion
   utter_thank_usecase:
   - text: Cool, thank you!
   utter_thumbsup:
   - text: 👍
   - text: ok
   - text: got it
+  utter_tryout:
+  - text: Would you like to try out the full stack, or just Rasa NLU?
+  utter_what_help:
+  - text: Ok, what can I help you with?
   utter_what_language:
   - text: What language is your bot in?

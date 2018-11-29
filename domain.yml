@@ -28,6 +28,15 @@ intents:
   - ask_whatspossible
   - ask_whatisrasa
   - ask_isbot
+  - ask_howold
+  - ask_languagesbot
+  - ask_restaurant
+  - ask_time
+  - ask_wherefrom
+  - ask_whoami
+  - handleinsult
+  - nicetomeeyou
+  - telljoke
   - out_of_scope
   - thank
   - ask_whoisit
