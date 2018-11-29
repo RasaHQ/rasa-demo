@@ -321,23 +321,25 @@ templates:
   utter_ask_which_tool:
     - text: "Which tool are you migrating from?"
   utter_ask_faq_platform:
-    - text: ""
+    - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
   utter_ask_faq_languages:
-    - text: ""
+    - text: "You can use Rasa NLU to build assistants in any language you want!"
   utter_ask_faq_tutorialcore:
-    - text: ""
+    - text: "You can find a preview of Rasa Core here."
   utter_ask_faq_tutorialnlu:
-    - text: ""
+    - text: "You can find a preview of Rass NLU here."
   utter_ask_faq_opensource:
-    - text: ""
+    - text: "Yes. We strive to provide well-maintained and documented open source tools, allowing all makers to build the best AI assistants without friction."
   utter_ask_faq_voice:
-    - text: ""
+    - text: "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
   utter_ask_faq_slots:
-    - text: ""
+    - text: "Slots act as a key-value store which can be used to store information the user provided (e.g their home city) as well as information gathered about the outside world (e.g. the result of a database query)."
   utter_ask_faq_channels:
-    - text: ""
+    - text: "We have a comprehensive list of connectors, but if you do not find the one you are looking for you can always create a custom connector following this guide."
   utter_ask_faq_differencecorenlu:
-    - text: ""
+    - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
+  utter_ask_voice:
+    - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
 
 actions:
   - utter_greet
@@ -441,4 +443,4 @@ actions:
   - action_store_unknown_nlu_part
   - action_store_bot_language
   - action_store_entity_extractor
-  - action_set_onboarding
+  - action_set_onboardingo

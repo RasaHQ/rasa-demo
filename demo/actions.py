@@ -126,9 +126,9 @@ class ActionFaqs(Action):
         intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_faq_platform', ' ask_faq_languages', ' ask_faq_tutorialcore', ' ask_faq_tutorialnlu',
-                      ' ask_faq_opensource', ' ask_faq_voice', ' ask_faq_slots', ' ask_faq_channels',
-                      ' ask_faq_differencecorenlu']:
+        if intent in ['ask_faq_platform', 'ask_faq_languages', 'ask_faq_tutorialcore', 'ask_faq_tutorialnlu',
+                      'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots', 'ask_faq_channels',
+                      'ask_faq_differencecorenlu']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
