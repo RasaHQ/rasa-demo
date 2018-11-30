@@ -295,7 +295,7 @@ class ActionSetOnboarding(Action):
 
 
 class SuggestionForm(FormAction):
-    """Accept free text input from the user for suggesetions"""
+    """Accept free text input from the user for suggestions"""
 
     def name(self):
         return "suggestion_form"
@@ -312,3 +312,34 @@ class SuggestionForm(FormAction):
     def submit(self, dispatcher, tracker, domain):
         dispatcher.utter_template('utter_thank_suggestion', tracker)
         return []
+
+
+class ActionStackInstallationCommand(Action):
+    """Utters the installation command for rasa depending whether
+       they are using `pip` or `conda`
+    """
+
+    def name(self):
+        return "action_select_installation_command"
+
+    def run(self, dispatcher, tracker, domain):
+        package_manager = tracker.get_slot('package_manager')
+
+        if package_manager == 'conda':
+            dispatcher.utter_template('utter_installation_with_conda' , tracker)
+        else:
+            dispatcher.utter_template('utter_installation_with_pip' , tracker) 
+
+        return []
+
+
+class ActionStoreProblemDescription(Action):
+    """Stores the problem description in a slot."""
+
+    def name(self):
+        return "action_store_problem_description"
+
+    def run(self, dispatcher, tracker, domain):
+        problem = tracker.latest_message.get('text')
+
+        return [SlotSet('problem_description', problem)]

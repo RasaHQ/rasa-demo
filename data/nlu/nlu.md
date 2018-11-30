@@ -1111,6 +1111,13 @@
 - [distances](entity:distance)
 - the [distance](entity) between places
 - the [distance](entity) from one place to an other
+- I want to use [pip](package_manager)
+- [pip](package_manager)
+- [conda](package_manager)
+- i use [anaconda](package_manager)
+- please give me instructions for [pip](package_manager)
+- please [conda](package_manager)
+- [pip](package_manager) please
 
 ## intent:greet
 - Hi
@@ -1593,9 +1600,7 @@
 - which language is rasa programmed in
 - what technologies did u use to create more mature chatbot?
 - which technology is used to create you
-- how do I install rasa in windows
 - having some problems with installation
-- how do I run rasa on windows
 - does rasa support voice input
 - is there an alexa integration
 
@@ -1694,3 +1699,57 @@
 - need more data for nlu
 - i have to less nlu data
 - are there simpler ways to create nlu data
+
+## intent:install_rasa
+- I want to install Rasa Stack
+- How to install Rasa? 
+- Where to get Rasa Stack?
+- How to install Rasa Core?
+- install Rasa NLU
+- how do I install rasa in windows
+- how do I run rasa on windows
+- install Rasa on Linux
+- install Rasa on Mac
+- Can you help me to install Rasa?
+- Just install Rasa Stack
+- How to install Rasa Stack
+- I'd like to install Rasa Core
+- I'd like to install Rasa NLU
+- Help me install Rasa
+- I want to do a Rasa Stack installation
+- I'm going to install Rasa Stack
+- Please help me install Rasa Stack
+- Please install Rasa Stack
+- I think I want to install Rasa Stack
+- How do I install Rasa Stack?
+- I want info on installing Rasa
+- I'd like to perform an installation of Rasa Stack
+- Let me install Rasa Stack.
+- I need Rasa Stack
+- Help me get Rasa Core.
+- Could I have Rasa Stack?
+- Could you install Rasa Stack for me?
+- Could you help me get Rasa stack?
+- I require Rasa Stack?
+- Please, I need Rasa Core.
+- Can you get me Rasa Core?
+- I need assistance in getting Rasa Stack.
+- I want to use Rasa Stack
+- I'm getting Rasa Stack
+- I have decided on Rasa Stack
+- I'm installing Rasa Stack
+- Rasa Stack is what I will be installing
+- I have chosen Rasa Stack
+- I need Rasa Stack.
+- I need to install Rasa Core.
+- I need to install Rasa NLU.
+- Do you mind helping me install Rasa?
+- Its urgent for me to install Rasa.
+- Please assist me with installing Rasa Stack.
+- I need to get Rasa Stack up and running.
+- Yes, I do need Rasa Stack.
+- Thank you in advance for suggesting I install Rasa NLU.
+- Installing Rasa Stack will be extremely helpful to me.
+
+## synonym:conda
+- anaconda
