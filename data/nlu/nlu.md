@@ -1711,6 +1711,45 @@
 - install Rasa on Linux
 - install Rasa on Mac
 - Can you help me to install Rasa?
+- Just install Rasa Stack
+- How to install Rasa Stack
+- I'd like to install Rasa Core
+- I'd like to install Rasa NLU
+- Help me install Rasa
+- I want to do a Rasa Stack installation
+- I'm going to install Rasa Stack
+- Please help me install Rasa Stack
+- Please install Rasa Stack
+- I think I want to install Rasa Stack
+- How do I install Rasa Stack?
+- I want info on installing Rasa
+- I'd like to perform an installation of Rasa Stack
+- Let me install Rasa Stack.
+- I need Rasa Stack
+- Help me get Rasa Core.
+- Could I have Rasa Stack?
+- Could you install Rasa Stack for me?
+- Could you help me get Rasa stack?
+- I require Rasa Stack?
+- Please, I need Rasa Core.
+- Can you get me Rasa Core?
+- I need assistance in getting Rasa Stack.
+- I want to use Rasa Stack
+- I'm getting Rasa Stack
+- I have decided on Rasa Stack
+- I'm installing Rasa Stack
+- Rasa Stack is what I will be installing
+- I have chosen Rasa Stack
+- I need Rasa Stack.
+- I need to install Rasa Core.
+- I need to install Rasa NLU.
+- Do you mind helping me install Rasa?
+- Its urgent for me to install Rasa.
+- Please assist me with installing Rasa Stack.
+- I need to get Rasa Stack up and running.
+- Yes, I do need Rasa Stack.
+- Thank you in advance for suggesting I install Rasa NLU.
+- Installing Rasa Stack will be extremely helpful to me.
 
 ## synonym:conda
 - anaconda
