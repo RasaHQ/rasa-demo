@@ -346,7 +346,7 @@ templates:
   utter_ask_whoami:
     -  text: "I hope you are being yourself."
   utter_handleinsult:
-    - text: ""
+    - text: "That is not nice!"
   utter_nicetomeeyou:
 	- text: "Thank you. It is a pleasure to meet you as well!"
 	- text: "It is nice to meet you too!"
