@@ -325,9 +325,9 @@ templates:
   utter_ask_faq_languages:
     - text: "You can use Rasa NLU to build assistants in any language you want!"
   utter_ask_faq_tutorialcore:
-    - text: "You can find a preview of Rasa Core here."
+    - text: "You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_tutorialnlu:
-    - text: "You can find a preview of Rasa NLU here."
+    - text: "You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_opensource:
     - text: "Yes. We strive to provide well-maintained and documented open source tools, allowing all makers to build the best AI assistants without friction."
   utter_ask_faq_voice:
