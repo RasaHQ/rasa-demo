@@ -423,6 +423,21 @@ actions:
   - action_store_bot_language
   - action_store_entity_extractor
   - action_set_onboarding
+  - utter_ask_weather
+  - utter_ask_builder
+  - utter_ask_howdoing
+  - utter_ask_whoisit
+  - utter_ask_whatisrasa
+  - utter_ask_isbot
+  - utter_ask_howold
+  - utter_ask_languagesbot
+  - utter_ask_restaurant
+  - utter_ask_time
+  - utter_ask_wherefrom
+  - utter_ask_whoami
+  - utter_handleinsult
+  - utter_nicetomeeyou
+  - utter_telljoke
 
 forms:
   - suggestion_form
