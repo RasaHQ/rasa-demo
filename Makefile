@@ -19,7 +19,7 @@ train-nlu:
 	python3 -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/ -o models --project nlu --verbose
 
 train-core:
-	python3 -m rasa_core.train -d domain.yml -s data/core --history 6 --nlu_threshold 0.8 --core_threshold 0.3 --epochs 100 --debug -o models/dialogue
+	python3 -m rasa_core.train -d domain.yml -s data/core -c policy.yml --debug -o models/dialogue
 
 run-cmdline:
 	make run-actions&
@@ -29,7 +29,7 @@ visualize:
 	python3 -m rasa_core.visualize -s data/core/ -d domain.yml -o story_graph.png
 
 train-online:
-	python3 -m rasa_core.train -u models/nlu/current/ --online --core models/dialogue/
+	python -m rasa_core.train -u models/nlu/current/ --online --core models/dialogue/
 
-evaluate:
-	python3 -m rasa_core.evaluate -d models/dialogue -s data/core/
+evaluate-core:
+	python -m rasa_core.evaluate --core models/dialogue -s data/core/

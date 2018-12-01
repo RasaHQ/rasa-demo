@@ -43,6 +43,8 @@ intents:
   - nlu_generation_tool_recommendation
   - rasa_cost
   - source_code
+  - suggestion
+  - install_rasa
   - ask_faq_platform
   - ask_faq_languages
   - ask_faq_tutorialcore
@@ -108,6 +110,13 @@ slots:
     type: unfeaturized
   onboarding:
     type: bool
+  suggestion:
+    type: unfeaturized
+  package_manager:
+    type: text
+  problem_description:
+    type: text
+
 
 templates:
   utter_ask_budget:
@@ -320,6 +329,33 @@ templates:
     - text: "Alright, you can directly install it here: (link)"
   utter_ask_which_tool:
     - text: "Which tool are you migrating from?"
+  utter_suggestion:
+    - text: "Pls suggest"
+  utter_thank_suggestion:
+    - text: "Thanks for the suggestion"
+  utter_ask_python_installed:
+    - text: "Do you have Python installed?"
+  utter_get_python:
+    - text: "Please install Python first. [Here is a guide](https://realpython.com/installing-python/) how to do so."
+  utter_ask_pip_or_conda:
+    - text: "Do you want to install pip or conda for the installation?"
+  utter_installation_with_pip:
+    - text: "Ok, install the Rasa Stack by executing 'pip install rasa_core' on your command line."
+  utter_installation_with_conda:
+    - text: "Ok, install the Rasa Stack by executing 'conda install rasa_core' on your command line."
+  utter_ask_ready_to_build:
+    - text: "Ready to start building a chatbot?"
+  utter_ask_describe_problem:
+    - text: "Can you describe the problem you are having?"
+  utter_direct_to_forum_for_help:
+    - text: "I cannot help you on that 🙁. Please get help in our [forum](https://forum.rasa.com/)."
+  utter_get_starter_pack:
+    - text: "Great, you installed Rasa! If you don't want to start from scratch, you can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack)."
+  utter_direct_to_step4:
+    - text: "Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/)."
+  utter_ask_if_problem:
+    - text: "Do you have a problem?"
+
   utter_ask_faq_platform:
     - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
   utter_ask_faq_languages:
@@ -419,6 +455,18 @@ actions:
   - utter_direct_install
   - utter_built_bot_before
   - utter_ask_which_tool
+  - utter_suggestion
+  - utter_ask_python_installed
+  - utter_get_python
+  - utter_ask_pip_or_conda
+  - utter_installation_with_pip
+  - utter_installation_with_conda
+  - utter_ask_ready_to_build
+  - utter_ask_describe_problem
+  - utter_direct_to_forum_for_help
+  - utter_get_starter_pack
+  - utter_direct_to_step4
+  - utter_ask_if_problem
   - utter_ask_faq_platform
   - utter_ask_faq_languages
   - utter_ask_faq_tutorialcore
@@ -443,4 +491,11 @@ actions:
   - action_store_unknown_nlu_part
   - action_store_bot_language
   - action_store_entity_extractor
+  - action_set_onboarding
+  - action_select_installation_command
+  - action_store_problem_description
+
+
+forms:
+  - suggestion_form
   - action_set_onboardingo

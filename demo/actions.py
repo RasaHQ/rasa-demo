@@ -3,6 +3,7 @@
 import logging
 
 from rasa_core_sdk import Action
+from rasa_core_sdk.forms import FormAction
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
     ConversationPaused
 
@@ -254,6 +255,9 @@ class ActionStoreBotLanguage(Action):
         spacy_languages = ['english', 'french', 'german', 'spanish',
                            'portuguese', 'french', 'italian', 'dutch']
         language = tracker.get_slot('language')
+        if not language:
+            return [SlotSet('language', 'that language'),
+                    SlotSet('can_use_spacy', False)]
 
         if language in spacy_languages:
             return [SlotSet('can_use_spacy', True)]
@@ -301,3 +305,54 @@ class ActionSetOnboarding(Action):
         elif intent == 'deny':
             return [SlotSet('onboarding', False)]
         return []
+
+
+class SuggestionForm(FormAction):
+    """Accept free text input from the user for suggestions"""
+
+    def name(self):
+        return "suggestion_form"
+
+    @staticmethod
+    def required_slots(tracker):
+
+        return ["suggestion"]
+
+    def slot_mappings(self):
+
+        return {"suggestion": self.from_text()}
+
+    def submit(self, dispatcher, tracker, domain):
+        dispatcher.utter_template('utter_thank_suggestion', tracker)
+        return []
+
+
+class ActionStackInstallationCommand(Action):
+    """Utters the installation command for rasa depending whether
+       they are using `pip` or `conda`
+    """
+
+    def name(self):
+        return "action_select_installation_command"
+
+    def run(self, dispatcher, tracker, domain):
+        package_manager = tracker.get_slot('package_manager')
+
+        if package_manager == 'conda':
+            dispatcher.utter_template('utter_installation_with_conda' , tracker)
+        else:
+            dispatcher.utter_template('utter_installation_with_pip' , tracker) 
+
+        return []
+
+
+class ActionStoreProblemDescription(Action):
+    """Stores the problem description in a slot."""
+
+    def name(self):
+        return "action_store_problem_description"
+
+    def run(self, dispatcher, tracker, domain):
+        problem = tracker.latest_message.get('text')
+
+        return [SlotSet('problem_description', problem)]
