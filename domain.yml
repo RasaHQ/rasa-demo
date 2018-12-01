@@ -474,6 +474,7 @@ actions:
   - utter_telljoke
   - utter_ask_whatismyname
   - utter_howwereyoubuilt
+  - utter_ask_whatspossible
 
 forms:
   - suggestion_form
