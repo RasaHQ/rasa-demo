@@ -46,7 +46,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"} OR enter_data
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -569,6 +569,7 @@
     - action_chitchat
 * how_to_get_started{"product":"nlu"}
     - utter_getstarted
+    - utter_first_bot_with_rasa
 
 ## Story from conversation with 29d264d8ce574a11bde572f0e79b73f3 on November 19th 2018
 * greet
