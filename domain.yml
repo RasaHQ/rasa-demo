@@ -48,7 +48,15 @@ intents:
   - start_step_1_get_started_flow
   - start_step_2_try_out_flow
   - start_step_3_installation_flow
-  
+  - ask_faq_platform
+  - ask_faq_languages
+  - ask_faq_tutorialcore
+  - ask_faq_tutorialnlu
+  - ask_faq_opensource
+  - ask_faq_voice
+  - ask_faq_slots
+  - ask_faq_channels
+  - ask_faq_differencecorenlu
 
 slots:
   budget:
@@ -348,7 +356,7 @@ templates:
     - text: "Great, you installed Rasa! If you don't want to start from scratch, you can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack)."
   utter_direct_to_step4:
     - text: "Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/)."
-  utter_ask_if_problem: 
+  utter_ask_if_problem:
     - text: "Do you have a problem?"
   utter_step1_get_started_prompt:
     - text: "I can give you more information on the Rasa Stack and its components Rasa Core and Rasa NLU."
@@ -358,6 +366,26 @@ templates:
   - text: "I can help you to install Rasa Stack."
 
 
+  utter_ask_faq_platform:
+    - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
+  utter_ask_faq_languages:
+    - text: "You can use Rasa NLU to build assistants in any language you want!"
+  utter_ask_faq_tutorialcore:
+    - text: "You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/)."
+  utter_ask_faq_tutorialnlu:
+    - text: "You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/)."
+  utter_ask_faq_opensource:
+    - text: "Yes. We strive to provide well-maintained and documented open source tools, allowing all makers to build the best AI assistants without friction."
+  utter_ask_faq_voice:
+    - text: "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
+  utter_ask_faq_slots:
+    - text: "Slots act as a key-value store which can be used to store information the user provided (e.g their home city) as well as information gathered about the outside world (e.g. the result of a database query)."
+  utter_ask_faq_channels:
+    - text: "We have a comprehensive list of connectors, but if you do not find the one you are looking for you can always create a custom connector following this guide."
+  utter_ask_faq_differencecorenlu:
+    - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
+  utter_ask_voice:
+    - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
 
 actions:
   - utter_greet
@@ -452,11 +480,21 @@ actions:
   - utter_step1_get_started_prompt
   - utter_step2_try_out_prompt
   - utter_step3_install_rasa_prompt
+  - utter_ask_faq_platform
+  - utter_ask_faq_languages
+  - utter_ask_faq_tutorialcore
+  - utter_ask_faq_tutorialnlu
+  - utter_ask_faq_opensource
+  - utter_ask_faq_voice
+  - utter_ask_faq_slots
+  - utter_ask_faq_channels
+  - utter_ask_faq_differencecorenlu
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
   - action_store_usecase
   - action_chitchat
+  - action_faqs
   - action_store_name
   - action_store_company
   - action_store_job
@@ -470,6 +508,7 @@ actions:
   - action_select_installation_command
   - action_store_problem_description
 
- 
+
 forms:
   - suggestion_form
+  - action_set_onboardingo
