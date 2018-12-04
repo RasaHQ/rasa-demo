@@ -8,9 +8,8 @@
     - utter_bye
 
 ## suggestion
-* suggestion
-    - utter_greet
-    - utter_suggestion
+* get_started_step4
+    - action_greet_user
     - suggestion_form
     - form{"name": "suggestion_form"}
     - form{"name": null}

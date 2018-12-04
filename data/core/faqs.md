@@ -1,8 +1,6 @@
 ## prompt for getting started
-* start_step_2_try_out_flow
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_step2_try_out_prompt
+* get_started_step2
+    - action_greet_user
 
 ## faqs
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu

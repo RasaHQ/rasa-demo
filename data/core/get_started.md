@@ -1,8 +1,6 @@
 ## prompt for getting started
-* start_step_1_get_started_flow
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_step1_get_started_prompt
+* get_started_step1
+    - action_greet_user
 
 ## new to rasa + not new to chatbots + not migrating
 * how_to_get_started

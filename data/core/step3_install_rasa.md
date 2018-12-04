@@ -1,8 +1,6 @@
 ## Get started from website (including privacy clause etc)
-* start_step_3_installation_flow
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_step3_install_rasa_prompt
+* get_started_step3
+    - action_greet_user
 
 ## Install Rasa Happy Path
 * install_rasa

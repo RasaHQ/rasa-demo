@@ -365,12 +365,19 @@ class ActionGreetUser(Action):
         return "action_greet_user"
 
     def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message['intent'].get('name')
         shown_privacy = tracker.get_slot("shown_privacy")
         if shown_privacy:
             dispatcher.utter_template("utter_greet", tracker)
-        else:
+            return []
+        elif intent == 'greet':
             dispatcher.utter_template("utter_greet", tracker)
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
             dispatcher.utter_template("utter_ask_goal", tracker)
+            return [SlotSet('shown_privacy', True)]
+        elif intent[:-1] == 'get_started_step':
+            dispatcher.utter_template("utter_greet", tracker)
+            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+            dispatcher.utter_template("utter_"+intent, tracker)
             return [SlotSet('shown_privacy', True)]
         return []
