@@ -1,2 +1,0 @@
-model_checkpoint_path: "/Users/oakela/Documents/RASA/killer-demo/models/nlu/current/intent_classifier_tensorflow_embedding.ckpt"
-all_model_checkpoint_paths: "/Users/oakela/Documents/RASA/killer-demo/models/nlu/current/intent_classifier_tensorflow_embedding.ckpt"
