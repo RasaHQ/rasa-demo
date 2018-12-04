@@ -10,9 +10,7 @@
 
 ## more faqs
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -22,9 +20,7 @@
 
 ## just newsletter + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -46,9 +42,7 @@
 
 ## just newsletter + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -70,9 +64,7 @@
 
 ## just newsletter (with email already) + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR  ask_faq_channels OR  ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -91,9 +83,7 @@
 
 ## just newsletter (with email already)
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -109,9 +99,7 @@
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -129,9 +117,7 @@
 
 ## just newsletter (with email already) - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -146,9 +132,7 @@
 
 ## just newsletter +confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -169,9 +153,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -210,9 +192,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -252,9 +232,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -296,9 +274,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -337,9 +313,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -378,9 +352,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -419,9 +391,7 @@
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -449,9 +419,7 @@
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -479,9 +447,7 @@
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -508,9 +474,7 @@
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -537,9 +501,7 @@
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -566,9 +528,7 @@
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -596,9 +556,7 @@
 
 ## new to rasa/bots, explain stack and try it out
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -623,9 +581,7 @@
 
 ## new to rasa/bots, explain stack and try it out
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -650,9 +606,7 @@
 
 ## new to rasa/bots, explain stack and try it out
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -677,9 +631,7 @@
 
 ## new to rasa/bots, explain core and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -705,9 +657,7 @@
 
 ## new to rasa/bots, explain core and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -734,9 +684,7 @@
 
 ## new to rasa/bots, explain core, then nlu and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -763,9 +711,7 @@
 
 ## new to rasa/bots, explain core, then nlu and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -793,9 +739,7 @@
 
 ## new to rasa/bots, explain nlu and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -821,9 +765,7 @@
 
 ## new to rasa/bots, explain nlu and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -850,9 +792,7 @@
 
 ## new to rasa/bots, don't explain and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -875,9 +815,7 @@
 
 ## new to rasa/bots, don't explain and try out stack
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -901,9 +839,7 @@
 
 ## new to rasa/bots, explain and skip to installation
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -929,9 +865,7 @@
 
 ## not new to rasa + not interested in products
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
     - utter_ask_goal
@@ -947,9 +881,7 @@
 
 ## not new to rasa + not interested in products
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -965,9 +897,7 @@
 
 ## not new to rasa + not interested in products
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -984,9 +914,7 @@
 
 ## not new to rasa + nlu + nothing special
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1006,9 +934,7 @@
 
 ## not new to rasa + nlu + unknown topic
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1030,9 +956,7 @@
 
 ## not new to rasa + nlu + intent + no recommendation
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1055,9 +979,7 @@
 
 ## not new to rasa + nlu + intent + pipeline recommendation, spacy
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1083,9 +1005,7 @@
 
 ## not new to rasa + nlu + intent + pipeline recommendation, not spacy
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1112,9 +1032,7 @@
 
 ## not new to rasa + nlu + entity + pipeline duckling
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1140,9 +1058,7 @@
 
 ## not new to rasa + nlu + entity + pipeline duckling
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa

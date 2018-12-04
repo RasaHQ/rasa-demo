@@ -15,11 +15,13 @@
     - form{"name": "suggestion_form"}
     - form{"name": null}
 
+## greet
+* greet
+    - action_greet_user
+
 ## sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -59,9 +61,7 @@
 
 ## newsletter + feedback
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -81,9 +81,7 @@
 
 ## newsletter + mood_confirm feedback
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -103,9 +101,7 @@
 
 ## newsletter + deny feedback
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -124,9 +120,7 @@
 
 ## newsletter, don't give email once
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -144,9 +138,7 @@
 
 ## newsletter, don't give email then contact sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -190,9 +182,7 @@
 
 ## newsletter, don't give email twice then contact sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -238,9 +228,7 @@
 
 ## newsletter, don't give email twice
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -260,9 +248,7 @@
 
 ## just newsletter (with email already) + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -280,9 +266,7 @@
 
 ## just newsletter (with email already)
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -295,9 +279,7 @@
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -314,9 +296,7 @@
 
 ## just newsletter (with email already) - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -328,9 +308,7 @@
 
 ## just newsletter +confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -350,9 +328,7 @@
 
 ## just newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -368,9 +344,7 @@
 
 ## just newsletter - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -385,9 +359,7 @@
 
 ## newsletter then sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -439,9 +411,7 @@
 
 ## newsletter (already subscribed) then sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -492,9 +462,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -534,9 +502,7 @@
 
 ## just sales + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -576,9 +542,7 @@
 
 ## sales then newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -626,9 +590,7 @@
 
 ## sales then newsletter - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -675,9 +637,7 @@
 
 ## newsletters, confirm, then sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -729,9 +689,7 @@
 
 ## newsletters (already subscribed), confirm, then sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -786,9 +744,7 @@
 
 ## sales, then newsletter, then confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -840,9 +796,7 @@
 
 ## sales, then newsletter (already subscribed), then confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -893,25 +847,19 @@
 
 ## neither options
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * deny
     - utter_nohelp
 
 ## deny, then accept privacy policy - neither options
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * deny
     - utter_nohelp
 
 ## neither --> newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * deny
     - utter_nohelp
 * signup_newsletter
@@ -929,9 +877,7 @@
 
 ## neither --> sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * deny
     - utter_nohelp
 * contact_sales
@@ -973,9 +919,7 @@
 
 ## chitchat --> email --> no email
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whatspossible
     - action_chitchat
 * ask_weather

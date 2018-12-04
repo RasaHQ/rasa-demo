@@ -341,7 +341,7 @@ class ActionStackInstallationCommand(Action):
         if package_manager == 'conda':
             dispatcher.utter_template('utter_installation_with_conda' , tracker)
         else:
-            dispatcher.utter_template('utter_installation_with_pip' , tracker) 
+            dispatcher.utter_template('utter_installation_with_pip' , tracker)
 
         return []
 
@@ -356,3 +356,21 @@ class ActionStoreProblemDescription(Action):
         problem = tracker.latest_message.get('text')
 
         return [SlotSet('problem_description', problem)]
+
+
+class ActionGreetUser(Action):
+    """Greets the user with/without privacy policy"""
+
+    def name(self):
+        return "action_greet_user"
+
+    def run(self, dispatcher, tracker, domain):
+        shown_privacy = tracker.get_slot("shown_privacy")
+        if shown_privacy:
+            dispatcher.utter_template("utter_greet", tracker)
+        else:
+            dispatcher.utter_template("utter_greet", tracker)
+            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+            dispatcher.utter_template("utter_ask_goal", tracker)
+            return [SlotSet('shown_privacy', True)]
+        return []

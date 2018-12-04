@@ -119,6 +119,8 @@ slots:
     type: text
   problem_description:
     type: text
+  shown_privacy:
+    type: unfeaturized
 
 
 templates:
@@ -507,6 +509,7 @@ actions:
   - action_set_onboarding
   - action_select_installation_command
   - action_store_problem_description
+  - action_greet_user
 
 
 forms:

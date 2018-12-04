@@ -10,9 +10,7 @@
 
 ## more chitchat
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -22,17 +20,13 @@
 
 ## ask_whatspossible
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whatspossible
     - action_chitchat
 
 ## ask_whatspossible more
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whatspossible
     - action_chitchat
 * ask_whatspossible
@@ -41,9 +35,7 @@
 
 ## just newsletter + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -65,9 +57,7 @@
 
 ## just newsletter + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -89,9 +79,7 @@
 
 ## just newsletter (with email already) + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -110,9 +98,7 @@
 
 ## just newsletter (with email already)
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -128,9 +114,7 @@
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -148,9 +132,7 @@
 
 ## just newsletter (with email already) - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -165,9 +147,7 @@
 
 ## just newsletter +confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -188,9 +168,7 @@
 
 ## just newsletter +confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -211,9 +189,7 @@
 
 ## just newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -232,9 +208,7 @@
 
 ## just newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -253,9 +227,7 @@
 
 ## just newsletter - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -273,9 +245,7 @@
 
 ## just newsletter - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -293,9 +263,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot
     - action_chitchat
     - utter_ask_goal
@@ -334,9 +302,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -375,9 +341,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -417,9 +381,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -461,9 +423,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -502,9 +462,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -543,9 +501,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction

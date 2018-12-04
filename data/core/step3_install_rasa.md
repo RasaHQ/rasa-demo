@@ -3,8 +3,6 @@
     - utter_greet
     - utter_inform_privacypolicy
     - utter_step3_install_rasa_prompt
-* install_rasa
-  - utter_ask_python_installed
 
 ## Install Rasa Happy Path
 * install_rasa

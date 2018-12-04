@@ -5,33 +5,25 @@
 
 ## say enter data outside the flows
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 
 ## say confirm outside the flows 2
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * mood_confirm
     - utter_thumbsup
 
 ## say greet outside the flows
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 
 ## just newsletter + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -53,9 +45,7 @@
 
 ## just newsletter + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -78,9 +68,7 @@
 
 ## just newsletter (with email already) + confirm
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -99,9 +87,7 @@
 
 ## just newsletter (with email already)
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -117,9 +103,7 @@
 
 ## just newsletter (with email already) + confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -137,9 +121,7 @@
 
 ## just newsletter (with email already) - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -154,9 +136,7 @@
 
 ## just newsletter +confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -177,9 +157,7 @@
 
 ## just newsletter +confirm - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -201,9 +179,7 @@
 
 ## just newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -222,9 +198,7 @@
 
 ## just newsletter
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -244,9 +218,7 @@
 
 ## just newsletter - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -264,9 +236,7 @@
 
 ## just newsletter - already subscribed
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -285,9 +255,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -326,9 +294,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -368,9 +334,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -411,9 +375,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -455,9 +417,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -497,9 +457,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -539,9 +497,7 @@
 
 ## just sales
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
