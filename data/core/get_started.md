@@ -1,3 +1,12 @@
+## prompt for getting started
+* start_step_1_get_started_flow
+    - utter_greet
+    - utter_inform_privacypolicy
+    - utter_step1_get_started_prompt
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
 ## new to rasa + not new to chatbots + not migrating
 * greet
     - utter_greet
