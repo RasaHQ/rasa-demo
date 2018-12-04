@@ -45,6 +45,10 @@ intents:
   - source_code
   - suggestion
   - install_rasa
+  - get_started_step1
+  - get_started_step2
+  - get_started_step3
+  - get_started_step4
   - ask_faq_platform
   - ask_faq_languages
   - ask_faq_tutorialcore
@@ -116,6 +120,8 @@ slots:
     type: text
   problem_description:
     type: text
+  shown_privacy:
+    type: unfeaturized
 
 
 templates:
@@ -355,6 +361,13 @@ templates:
     - text: "Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/)."
   utter_ask_if_problem:
     - text: "Do you have a problem?"
+  utter_get_started_step1:
+    - text: "I can give you more information on the Rasa Stack and its components Rasa Core and Rasa NLU."
+  utter_get_started_step2:
+    - text: "I can help you solving commonon problems with Rasa 🙂"
+  utter_get_started_step3:
+  - text: "I can help you to install Rasa Stack."
+
 
   utter_ask_faq_platform:
     - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
@@ -467,6 +480,10 @@ actions:
   - utter_get_starter_pack
   - utter_direct_to_step4
   - utter_ask_if_problem
+  - utter_get_started_step1
+  - utter_get_started_step2
+  - utter_get_started_step3
+  - utter_get_started_step4
   - utter_ask_faq_platform
   - utter_ask_faq_languages
   - utter_ask_faq_tutorialcore
@@ -494,6 +511,7 @@ actions:
   - action_set_onboarding
   - action_select_installation_command
   - action_store_problem_description
+  - action_greet_user
 
 
 forms:

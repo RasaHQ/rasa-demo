@@ -1,3 +1,7 @@
+## Get started from website (including privacy clause etc)
+* get_started_step3
+    - action_greet_user
+
 ## Install Rasa Happy Path
 * install_rasa
   - utter_ask_python_installed
