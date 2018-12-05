@@ -355,28 +355,28 @@ templates:
     - text: "Old enough to be a bot"
     - text: "Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter."
   utter_ask_languagesbot:
-	- text: "I can spell baguette in French, but unfortunately English is the only language I can answer you in."
+  	- text: "I can spell baguette in French, but unfortunately English is the only language I can answer you in."
     - text: "I am in the process of learning, but at the moment I can only speak English."
   utter_ask_restaurant:
-	- text: "I am sorry I can’t recommend you a restaurant as I usually cook at home."
+  	- text: "I am sorry I can’t recommend you a restaurant as I usually cook at home."
   utter_ask_time:
     - text: "It is the most wonderful time of the year!"
   utter_ask_wherefrom:
     - text: "I was born in Berlin, but I consider myself a citizen of the world."
-	- text: "I was born in the coolest city on Earth"
+  	- text: "I was born in the coolest city on Earth"
   utter_ask_whoami:
     -  text: "I hope you are being yourself."
   utter_handleinsult:
     - text: "That’s not very nice 😢"
   utter_nicetomeeyou:
-	- text: "Thank you. It is a pleasure to meet you as well!"
-	- text: "It is nice to meet you too!"
-	- text: "Pleased to meet you too!"
+  	- text: "Thank you. It is a pleasure to meet you as well!"
+  	- text: "It is nice to meet you too!"
+  	- text: "Pleased to meet you too!"
     - text: "Likewise!"
   utter_telljoke:
     - text: "Why are eggs not very much into jokes? - Because they could crack up."
-	- text: "Do you know a tree’s favorite drink? - Root beer!"
-	- text: "Why do the French like to eat snails so much? - They can’t stand fast food."
+  	- text: "Do you know a tree’s favorite drink? - Root beer!"
+  	- text: "Why do the French like to eat snails so much? - They can’t stand fast food."
   utter_ask_whatismyname:
     - text: "It most probably is the one that your parents have chosen for you."
   utter_howwereyoubuilt:
@@ -573,4 +573,3 @@ actions:
 
 forms:
   - suggestion_form
-  - action_set_onboardingo
