@@ -110,9 +110,9 @@ class ActionChitchat(Action):
         intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_builder', 'ask_howdoing', 'ask_weather',
-                      'ask_whatspossible', 'ask_whoisit', 'ask_whatisrasa',
-                      'ask_isbot']:
+        if intent in ['ask_builder', 'ask_weather', 'ask_howdoing', 'ask_whatspossible', 'ask_whatisrasa', 'ask_isbot',
+                      'ask_howold', 'ask_languagesbot', 'ask_restaurant', 'ask_time', 'ask_wherefrom', 'ask_whoami',
+                      'handleinsult', 'nicetomeeyou', 'telljoke', 'ask_whatismyname', 'howwereyoubuilt']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
@@ -315,11 +315,9 @@ class SuggestionForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-
         return ["suggestion"]
 
     def slot_mappings(self):
-
         return {"suggestion": self.from_text()}
 
     def submit(self, dispatcher, tracker, domain):
