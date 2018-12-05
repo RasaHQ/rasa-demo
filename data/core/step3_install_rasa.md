@@ -33,7 +33,7 @@
     - utter_ask_if_problem
 * mood_confirm
     - utter_ask_describe_problem
-* technical_question or enter_data or out_of_scope
+* technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
 
@@ -43,7 +43,7 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* technical_question or enter_data or out_of_scope
+* technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
 
@@ -60,7 +60,7 @@
 * enter_data{"package_manager": "pip"}
     - action_select_installation_command
     - utter_ask_ready_to_build
-* technical_question or enter_data or out_of_scope
+* technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
 * mood_confirm OR thank
