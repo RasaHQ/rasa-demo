@@ -55,6 +55,20 @@ intents:
   - rasa_cost
   - source_code
   - suggestion
+  - install_rasa
+  - get_started_step1
+  - get_started_step2
+  - get_started_step3
+  - get_started_step4
+  - ask_faq_platform
+  - ask_faq_languages
+  - ask_faq_tutorialcore
+  - ask_faq_tutorialnlu
+  - ask_faq_opensource
+  - ask_faq_voice
+  - ask_faq_slots
+  - ask_faq_channels
+  - ask_faq_differencecorenlu
 
 slots:
   budget:
@@ -113,6 +127,13 @@ slots:
     type: bool
   suggestion:
     type: unfeaturized
+  package_manager:
+    type: text
+  problem_description:
+    type: text
+  shown_privacy:
+    type: unfeaturized
+
 
 templates:
   utter_ask_budget:
@@ -360,8 +381,54 @@ templates:
     - text: "It most probably is the one that your parents have chosen for you."
   utter_howwereyoubuilt:
     - text: "I have been built with a lot of love and patience."
-
-
+  utter_ask_python_installed:
+    - text: "Do you have Python installed?"
+  utter_get_python:
+    - text: "Please install Python first. [Here is a guide](https://realpython.com/installing-python/) how to do so."
+  utter_ask_pip_or_conda:
+    - text: "Do you want to install pip or conda for the installation?"
+  utter_installation_with_pip:
+    - text: "Ok, install the Rasa Stack by executing 'pip install rasa_core' on your command line."
+  utter_installation_with_conda:
+    - text: "Ok, install the Rasa Stack by executing 'conda install rasa_core' on your command line."
+  utter_ask_ready_to_build:
+    - text: "Ready to start building a chatbot?"
+  utter_ask_describe_problem:
+    - text: "Can you describe the problem you are having?"
+  utter_direct_to_forum_for_help:
+    - text: "I cannot help you on that 🙁. Please get help in our [forum](https://forum.rasa.com/)."
+  utter_get_starter_pack:
+    - text: "Great, you installed Rasa! If you don't want to start from scratch, you can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack)."
+  utter_direct_to_step4:
+    - text: "Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/)."
+  utter_ask_if_problem:
+    - text: "Do you have a problem?"
+  utter_get_started_step1:
+    - text: "I can give you more information on the Rasa Stack and its components Rasa Core and Rasa NLU."
+  utter_get_started_step2:
+    - text: "I can help you solving commonon problems with Rasa 🙂"
+  utter_get_started_step3:
+  - text: "I can help you to install Rasa Stack."
+  utter_ask_faq_platform:
+    - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
+  utter_ask_faq_languages:
+    - text: "You can use Rasa NLU to build assistants in any language you want!"
+  utter_ask_faq_tutorialcore:
+    - text: "You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/)."
+  utter_ask_faq_tutorialnlu:
+    - text: "You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/)."
+  utter_ask_faq_opensource:
+    - text: "Yes. We strive to provide well-maintained and documented open source tools, allowing all makers to build the best AI assistants without friction."
+  utter_ask_faq_voice:
+    - text: "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
+  utter_ask_faq_slots:
+    - text: "Slots act as a key-value store which can be used to store information the user provided (e.g their home city) as well as information gathered about the outside world (e.g. the result of a database query)."
+  utter_ask_faq_channels:
+    - text: "We have a comprehensive list of connectors, but if you do not find the one you are looking for you can always create a custom connector following this guide."
+  utter_ask_faq_differencecorenlu:
+    - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
+  utter_ask_voice:
+    - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
 
 actions:
   - utter_greet
@@ -442,11 +509,36 @@ actions:
   - utter_built_bot_before
   - utter_ask_which_tool
   - utter_suggestion
+  - utter_ask_python_installed
+  - utter_get_python
+  - utter_ask_pip_or_conda
+  - utter_installation_with_pip
+  - utter_installation_with_conda
+  - utter_ask_ready_to_build
+  - utter_ask_describe_problem
+  - utter_direct_to_forum_for_help
+  - utter_get_starter_pack
+  - utter_direct_to_step4
+  - utter_ask_if_problem
+  - utter_get_started_step1
+  - utter_get_started_step2
+  - utter_get_started_step3
+  - utter_get_started_step4
+  - utter_ask_faq_platform
+  - utter_ask_faq_languages
+  - utter_ask_faq_tutorialcore
+  - utter_ask_faq_tutorialnlu
+  - utter_ask_faq_opensource
+  - utter_ask_faq_voice
+  - utter_ask_faq_slots
+  - utter_ask_faq_channels
+  - utter_ask_faq_differencecorenlu
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
   - action_store_usecase
   - action_chitchat
+  - action_faqs
   - action_store_name
   - action_store_company
   - action_store_job
@@ -475,6 +567,10 @@ actions:
   - utter_ask_whatismyname
   - utter_howwereyoubuilt
   - utter_ask_whatspossible
+  - action_select_installation_command
+  - action_store_problem_description
+  - action_greet_user
 
 forms:
   - suggestion_form
+  - action_set_onboardingo

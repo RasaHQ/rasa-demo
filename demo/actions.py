@@ -117,6 +117,23 @@ class ActionChitchat(Action):
         return []
 
 
+class ActionFaqs(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self):
+        return "action_faqs"
+
+    def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message['intent'].get('name')
+
+        # retrieve the correct chitchat utterance dependent on the intent
+        if intent in ['ask_faq_platform', 'ask_faq_languages', 'ask_faq_tutorialcore', 'ask_faq_tutorialnlu',
+                      'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots', 'ask_faq_channels',
+                      'ask_faq_differencecorenlu']:
+            dispatcher.utter_template('utter_' + intent, tracker)
+        return []
+
+
 class ActionStoreName(Action):
     """Stores the users name in a slot"""
 
@@ -291,7 +308,7 @@ class ActionSetOnboarding(Action):
 
 
 class SuggestionForm(FormAction):
-    """Accept free text input from the user for suggesetions"""
+    """Accept free text input from the user for suggestions"""
 
     def name(self):
         return "suggestion_form"
@@ -305,4 +322,60 @@ class SuggestionForm(FormAction):
 
     def submit(self, dispatcher, tracker, domain):
         dispatcher.utter_template('utter_thank_suggestion', tracker)
+        return []
+
+
+class ActionStackInstallationCommand(Action):
+    """Utters the installation command for rasa depending whether
+       they are using `pip` or `conda`
+    """
+
+    def name(self):
+        return "action_select_installation_command"
+
+    def run(self, dispatcher, tracker, domain):
+        package_manager = tracker.get_slot('package_manager')
+
+        if package_manager == 'conda':
+            dispatcher.utter_template('utter_installation_with_conda' , tracker)
+        else:
+            dispatcher.utter_template('utter_installation_with_pip' , tracker)
+
+        return []
+
+
+class ActionStoreProblemDescription(Action):
+    """Stores the problem description in a slot."""
+
+    def name(self):
+        return "action_store_problem_description"
+
+    def run(self, dispatcher, tracker, domain):
+        problem = tracker.latest_message.get('text')
+
+        return [SlotSet('problem_description', problem)]
+
+
+class ActionGreetUser(Action):
+    """Greets the user with/without privacy policy"""
+
+    def name(self):
+        return "action_greet_user"
+
+    def run(self, dispatcher, tracker, domain):
+        intent = tracker.latest_message['intent'].get('name')
+        shown_privacy = tracker.get_slot("shown_privacy")
+        if shown_privacy:
+            dispatcher.utter_template("utter_greet", tracker)
+            return []
+        elif intent == 'greet':
+            dispatcher.utter_template("utter_greet", tracker)
+            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+            dispatcher.utter_template("utter_ask_goal", tracker)
+            return [SlotSet('shown_privacy', True)]
+        elif intent[:-1] == 'get_started_step':
+            dispatcher.utter_template("utter_greet", tracker)
+            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+            dispatcher.utter_template("utter_"+intent, tracker)
+            return [SlotSet('shown_privacy', True)]
         return []

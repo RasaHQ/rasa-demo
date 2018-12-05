@@ -1,8 +1,6 @@
 ## story number 1
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * out_of_scope
     - utter_out_of_scope
     - utter_ask_goal
@@ -46,7 +44,7 @@
     - action_store_company
     - slot{"company_name": "Allianz"}
     - utter_ask_businessmail
-* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"} OR enter_data
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
     - action_store_sales_info
@@ -56,9 +54,7 @@
 
 ## story number 2
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -77,9 +73,7 @@
 
 ## story number 3
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -123,9 +117,7 @@
 
 ## story number 4
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -150,9 +142,7 @@
 
 ## story number 5
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -177,9 +167,7 @@
 
 ## story number 6
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whoisit
     - action_chitchat
     - utter_ask_goal
@@ -188,11 +176,9 @@
 
 ## story number 7
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * ask_whoisit
     - action_chitchat
 * contact_sales
@@ -230,9 +216,7 @@
 
 ## story number 8
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 * enter_data
@@ -240,9 +224,7 @@
 
 ## story number 9
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 * deny
@@ -250,9 +232,7 @@
 
 ## story number 11
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whatspossible
     - action_chitchat
 * ask_weather
@@ -269,9 +249,7 @@
 
 ## story number 12
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -291,9 +269,7 @@
 
 ## story number 12
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -317,9 +293,7 @@
 
 ## story number 13
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -343,11 +317,9 @@
 
 ## story number 14
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * ask_howdoing
     - action_chitchat
 * ask_weather
@@ -355,9 +327,7 @@
 
 ## story number 15
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather
     - action_chitchat
     - utter_ask_goal
@@ -366,17 +336,13 @@
 
 ## story number 16
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 
 ## story number 17
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * deny
     - utter_nohelp
 * out_of_scope
@@ -393,9 +359,7 @@
 
 ## story number 18
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_weather
     - action_chitchat
     - utter_ask_goal
@@ -417,11 +381,9 @@
 
 ## Story from conversation with 00e7815f79e4413abb0dfb4b392f1099 on November 15th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * ask_whatisrasa
     - action_chitchat
 * how_to_get_started
@@ -431,9 +393,7 @@
 
 # story from linda
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 * how_to_get_started
@@ -442,11 +402,9 @@
 
 ## Story from conversation with dfbb633d10854f97b880a2496d632f0d on November 16th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -480,9 +438,7 @@
 
 ## Story from conversation with linda on November 15th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whatisrasa
     - action_chitchat
     - utter_ask_goal
@@ -495,22 +451,18 @@
 
 ## Story from conversation with 477ddbe73e374eedb07104c5d9f42c31 on November 16th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
 * greet
-    - utter_greet
+    - action_greet_user
 
 ## Story from conversation with d75d1ac725164b3c976193eb54feb756 on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -527,11 +479,9 @@
 
 ## Story from conversation with 4986d88ccb784dc19dc5a553a8e07890 on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * ask_whatspossible
     - action_chitchat
 * how_to_get_started
@@ -556,9 +506,7 @@
 
 ## Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whoisit
     - action_chitchat
     - utter_ask_goal
@@ -569,14 +517,13 @@
     - action_chitchat
 * how_to_get_started{"product":"nlu"}
     - utter_getstarted
+    - utter_first_bot_with_rasa
 
 ## Story from conversation with 29d264d8ce574a11bde572f0e79b73f3 on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * ask_isbot
     - action_chitchat
 * mood_confirm
@@ -584,11 +531,9 @@
 
 ## Story from conversation with 6fd65c93e374489f9c8d76697ab9c493 on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * ask_howdoing
     - action_chitchat
 * mood_confirm
@@ -597,9 +542,7 @@
 ## Story from conversation with 35d1ecc91c364cbf8a6edf006e5d8c9a on November 19th 2018
 
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 * contact_sales
@@ -643,11 +586,9 @@
 ## Story from conversation with 4c274f8d470e4b77adbfefe7cda7cad7 on October 27th 2018
 
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * mood_confirm
     - utter_thumbsup
 * how_to_get_started
@@ -697,9 +638,7 @@
 
 ## Story from conversation with dominik on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * enter_data
     - utter_possibilities
 * how_to_get_started
@@ -746,9 +685,7 @@
 
 ## Story from conversation with dominik on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -767,9 +704,7 @@
 ## Story from conversation with 201bb55841154f858f524a485f8816c3 on November 18th 2018
 
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started{"product":"nlu"}
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -777,11 +712,9 @@
 ## Story from conversation with cd483ab3456d47dfb40bd1f51043fb54 on November 18th 2018
 
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * greet
-    - utter_greet
+    - action_greet_user
 * how_to_get_started{"product":"core"}
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -789,9 +722,7 @@
 ## Story from conversation with d75d1ac725164b3c976193eb54feb756 on November 19th 2018
 
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -809,9 +740,7 @@
 
 ## Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
 * greet
-    - utter_greet
-    - utter_inform_privacypolicy
-    - utter_ask_goal
+    - action_greet_user
 * ask_whoisit
     - action_chitchat
     - utter_ask_goal
