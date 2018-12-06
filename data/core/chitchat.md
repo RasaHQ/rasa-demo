@@ -542,7 +542,7 @@
 * greet
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
@@ -573,7 +573,7 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_first_bot_with_rasa
 * mood_confirm
     - action_set_onboarding
@@ -605,7 +605,7 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_built_bot_before
 * mood_confirm
     - utter_ask_migration
@@ -634,7 +634,7 @@
 * mood_confirm
     - utter_ask_migration
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_migration
 * deny
     - utter_explain_stack
@@ -665,7 +665,7 @@
     - utter_stack_details
     - utter_explain_nlucore
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_explain_nlucore
 * mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
@@ -696,7 +696,7 @@
     - utter_explain_core
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
@@ -714,36 +714,11 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_built_bot_before
 * deny
     - utter_explain_stack
     - utter_stack_details
-    - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
-    - utter_anything_else
-
-## new to rasa/bots, explain stack and try it out
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* mood_confirm
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
     - utter_explain_nlucore
 * mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
@@ -767,12 +742,37 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
+    - action_chitchat
+    - utter_explain_nlucore
+* mood_confirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+    - utter_quickstart
+    - utter_anything_else
+
+## new to rasa/bots, explain stack and try it out
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* mood_confirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
 * mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
@@ -796,7 +796,7 @@
     - utter_explain_core
     - utter_also_explain_nlu
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_also_explain_nlu
 * deny
     - utter_tryout
@@ -824,7 +824,7 @@
 * deny
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
@@ -849,7 +849,7 @@
     - utter_explain_core
     - utter_also_explain_nlu
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_also_explain_nlu
 * mood_confirm
     - utter_explain_nlu
@@ -879,7 +879,7 @@
     - utter_explain_nlu
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
@@ -904,7 +904,7 @@
     - utter_explain_nlu
     - utter_also_explain_core
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_also_explain_core
 * deny
     - utter_tryout
@@ -932,7 +932,7 @@
 * deny
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
@@ -954,7 +954,7 @@
     - utter_stack_details
     - utter_explain_nlucore
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_explain_nlucore
 * deny
     - utter_tryout
@@ -979,7 +979,7 @@
 * deny
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
@@ -1005,7 +1005,7 @@
     - utter_explain_core
     - utter_tryout
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_tryout
 * deny
     - utter_direct_install
@@ -1016,7 +1016,7 @@
 * greet
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
@@ -1035,7 +1035,7 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_first_bot_with_rasa
 * deny
     - action_set_onboarding
@@ -1055,7 +1055,7 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_which_product
 * deny
     - utter_thumbsup
@@ -1074,7 +1074,7 @@
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_for_nlu_specifics
 * deny
     - utter_quickstart_nlu_only
@@ -1094,7 +1094,7 @@
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_for_nlu_specifics
 * nlu_info
     - action_store_unknown_nlu_part
@@ -1119,7 +1119,7 @@
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_offer_recommendation
 * deny
     - utter_thumbsup
@@ -1144,7 +1144,7 @@
 * pipeline_recommendation OR mood_confirm
     - utter_what_language
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_what_language
 * enter_data{"language": "en"}
     - action_store_bot_language
@@ -1170,7 +1170,7 @@
 * pipeline_recommendation OR mood_confirm
     - utter_what_language
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_what_language
 * enter_data{"language": "en"}
     - action_store_bot_language
@@ -1195,7 +1195,7 @@
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_offer_recommendation
 * pipeline_recommendation OR mood_confirm
     - utter_ask_entities
@@ -1223,7 +1223,7 @@
 * pipeline_recommendation OR mood_confirm
     - utter_ask_entities
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
@@ -1237,7 +1237,7 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
-    - action_faqs
+    - action_chitchat
     - utter_first_bot_with_rasa
 * mood_confirm
     - action_set_onboarding
