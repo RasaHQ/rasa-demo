@@ -365,8 +365,13 @@ class ActionGreetUser(Action):
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message['intent'].get('name')
         shown_privacy = tracker.get_slot("shown_privacy")
-        if shown_privacy:
-            dispatcher.utter_template("utter_greet", tracker)
+        name_entity = next(tracker.get_latest_entity_values("name"), None)
+        if shown_privacy and name_entity and name_entity.lower() != 'sara':
+            dispatcher.utter_template("utter_greet_name", tracker,
+                                      name=name_entity)
+            return []
+        elif shown_privacy:
+            dispatcher.utter_template("utter_greet_noname", tracker)
             return []
         elif intent == 'greet':
             dispatcher.utter_template("utter_greet", tracker)
