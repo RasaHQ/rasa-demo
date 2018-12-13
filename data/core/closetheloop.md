@@ -3,7 +3,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -170,7 +169,6 @@
     - action_greet_user
 * ask_whoisit
     - action_chitchat
-    - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
 
@@ -330,7 +328,6 @@
     - action_greet_user
 * ask_weather
     - action_chitchat
-    - utter_ask_goal
 * enter_data
     - utter_possibilities
 
@@ -362,7 +359,6 @@
     - action_greet_user
 * ask_weather
     - action_chitchat
-    - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
 * deny
@@ -441,10 +437,8 @@
     - action_greet_user
 * ask_whatisrasa
     - action_chitchat
-    - utter_ask_goal
 * ask_whatisrasa
     - action_chitchat
-    - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -509,10 +503,8 @@
     - action_greet_user
 * ask_whoisit
     - action_chitchat
-    - utter_ask_goal
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
 * how_to_get_started{"product":"nlu"}
@@ -743,10 +735,8 @@
     - action_greet_user
 * ask_whoisit
     - action_chitchat
-    - utter_ask_goal
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * ask_whatspossible
     - action_chitchat
 * how_to_get_started{"product":"nlu"}

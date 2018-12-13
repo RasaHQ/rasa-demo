@@ -134,6 +134,8 @@ slots:
     type: text
   shown_privacy:
     type: unfeaturized
+  name:
+    type: text
 
 
 templates:
