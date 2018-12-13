@@ -15,7 +15,7 @@
     - form{"name": null}
 
 ## greet
-* greet
+* greet OR enter_data{"name"}
     - action_greet_user
 
 ## sales

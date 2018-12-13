@@ -13,10 +13,8 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 
 ## ask_whatspossible
 * greet
@@ -38,7 +36,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -82,7 +79,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -101,7 +97,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -117,7 +112,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -135,7 +129,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -150,7 +143,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -192,7 +184,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -230,7 +221,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -266,7 +256,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -543,7 +532,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -1017,7 +1005,6 @@
     - action_greet_user
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
-    - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa

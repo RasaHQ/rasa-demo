@@ -13,6 +13,7 @@ entities:
   - language
   - nlu_part
   - entity
+  - user_type
 
 intents:
   - enter_data: {use_entities: false}
@@ -429,6 +430,8 @@ templates:
     - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
   utter_ask_voice:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
+  utter_getstarted_new:
+    - text: "I see you're new, let me ask you a quick question before I help you get started:"
 
 actions:
   - utter_greet
@@ -567,6 +570,7 @@ actions:
   - utter_ask_whatismyname
   - utter_howwereyoubuilt
   - utter_ask_whatspossible
+  - utter_getstarted_new
   - action_select_installation_command
   - action_store_problem_description
   - action_greet_user
