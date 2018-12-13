@@ -17,7 +17,7 @@ entities:
 
 intents:
   - enter_data: {use_entities: false}
-  - mood_confirm
+  - affirm
   - contact_sales
   - signup_newsletter
   - greet

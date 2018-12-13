@@ -302,7 +302,7 @@ class ActionSetOnboarding(Action):
         # latest_action = tracker.latest_action_name
         # print(latest_action)
         # if latest_action == 'utter_first_bot_with_rasa':
-        if intent == 'mood_confirm':
+        if intent == 'affirm':
             return [SlotSet('onboarding', True)]
         elif intent == 'deny':
             return [SlotSet('onboarding', False)]

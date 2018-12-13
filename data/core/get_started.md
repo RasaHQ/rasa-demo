@@ -5,7 +5,7 @@
 ## prompt for getting started + confirm
 * get_started_step1
     - action_greet_user
-* mood_confirm
+* affirm
     - utter_getstarted
     - utter_first_bot_with_rasa
 
@@ -15,7 +15,7 @@
     - slot{"onboarding": true}
     - utter_getstarted_new
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 
 ## new to rasa at start
@@ -33,21 +33,21 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -56,11 +56,11 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * switch{"current_api": "dialogflow"}
     - utter_switch_dialogflow
@@ -71,11 +71,11 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * switch{"current_api": "luis"}
     - utter_switch_luis
@@ -86,11 +86,11 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * switch
     - action_store_unknown_product
@@ -102,13 +102,13 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
-* mood_confirm
+* affirm
     - utter_ask_which_tool
 * switch{"current_api": "dialogflow"}
     - utter_switch_dialogflow
@@ -119,13 +119,13 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
-* mood_confirm
+* affirm
     - utter_ask_which_tool
 * switch{"current_api": "luis"}
     - utter_switch_luis
@@ -136,13 +136,13 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
-* mood_confirm
+* affirm
     - utter_ask_which_tool
 * switch
     - action_store_unknown_product
@@ -155,7 +155,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -163,11 +163,11 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -176,7 +176,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -189,7 +189,7 @@
     - utter_also_explain_nlu
 * deny
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -198,7 +198,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -209,10 +209,10 @@
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
-* mood_confirm
+* affirm
     - utter_explain_nlu
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -221,7 +221,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -234,7 +234,7 @@
     - utter_also_explain_core
 * deny
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -243,7 +243,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -254,10 +254,10 @@
 * how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
     - utter_also_explain_core
-* mood_confirm
+* affirm
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -267,7 +267,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -277,7 +277,7 @@
     - utter_explain_nlucore
 * deny
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -287,7 +287,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -295,7 +295,7 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
@@ -308,7 +308,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -330,7 +330,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -352,7 +352,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -374,7 +374,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -396,7 +396,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -404,7 +404,7 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
@@ -417,7 +417,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -428,7 +428,7 @@
 * how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
     - utter_also_explain_core
-* mood_confirm
+* affirm
     - utter_explain_core
     - utter_tryout
 * how_to_get_started{"product": "nlu"}
@@ -536,7 +536,7 @@
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_what_language
 * enter_data{"language": "en"}
     - action_store_bot_language
@@ -558,7 +558,7 @@
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_what_language
 * enter_data{"language": "en"}
     - action_store_bot_language
@@ -615,7 +615,7 @@
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_ask_entities
 * enter_data{"entity": "name"}
     - action_store_entity_extractor
@@ -637,7 +637,7 @@
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
@@ -659,7 +659,7 @@
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_ask_entities
 * enter_data{"entity": "some custom entity"}
     - action_store_entity_extractor
@@ -721,20 +721,20 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
