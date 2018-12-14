@@ -34,6 +34,17 @@
     - action_select_installation_command
     - utter_ask_ready_to_build
 
+## Install Rasa: Ask Python installed -> Which version
+* install_rasa
+    - utter_ask_python_installed
+* ask_faq_python_version
+    - action_faqs
+    - utter_get_python
+    - utter_ask_pip_or_conda
+* enter_data{"package_manager": "pip"}
+    - action_select_installation_command
+    - utter_ask_ready_to_build
+
 ## Install Rasa: Deny ready to build -> Ask if problem -> Yes
 * enter_data{"package_manager": "pip"} OR install_rasa{"package_manager": "pip"}
     - action_select_installation_command
