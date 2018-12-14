@@ -14,6 +14,7 @@ entities:
   - nlu_part
   - entity
   - user_type
+  - package_manager
 
 intents:
   - enter_data: {use_entities: false}
