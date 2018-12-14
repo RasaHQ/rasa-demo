@@ -413,8 +413,9 @@ class ActionDefaultAskAffirmation(Action):
 
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
         first_intent_names = [intent.get('name', '')
-                              for intent in intent_ranking[:4]
+                              for intent in intent_ranking[:5]
                               if intent.get('name', '') not in ['deny',
+                                                                'affirm',
                                                                 'out_of_scope']]
 
         message_title = "Sorry, I'm not sure I've understood " \
