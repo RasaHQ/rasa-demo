@@ -444,7 +444,7 @@ templates:
     - text: "Click the button below if you want to start over."
       buttons:
       - title: "Restart"
-        payload: "/restart""
+        payload: "/restart"
 
 
 actions:
