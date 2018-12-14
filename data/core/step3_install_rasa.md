@@ -19,10 +19,10 @@
 * install_rasa{"package_manager": "pip"}
     - action_select_installation_command
     - utter_ask_ready_to_build
-* mood_confirm
+* affirm
     - utter_get_starter_pack
     - utter_direct_to_step4
-    - utter_anything_else 
+    - utter_anything_else
 
 ## Install Rasa: No Python installed
 * install_rasa
