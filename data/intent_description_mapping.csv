@@ -29,7 +29,7 @@ bye,Bye!
 canthelp,You can't help me.
 feedback,I want to give you feedback. 
 switch,I want to migrate.
-qhow_to_get_started,How to get started with Rasa?
+how_to_get_started,How to get started with Rasa?
 technical_question,A technical question.
 nlu_info,I want more information about NLU.
 pipeline_recommendation,I want a pipeline recommendation.
