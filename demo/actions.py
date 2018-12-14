@@ -463,17 +463,21 @@ class ActionDefaultFallback(Action):
 class FeedbackMessageForm(FormAction):
     """Accept free text input from the user for feedback."""
 
-    def name(self):
+    def name(self) -> Text:
         return "feedback_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker: Tracker) -> List[Text]:
         return ["feedback_message"]
 
-    def slot_mappings(self):
+    def slot_mappings(self) -> Dict[Text, Text]:
         return {"feedback_message": self.from_text()}
 
-    def submit(self, dispatcher, tracker, domain):
+    def submit(self,
+               dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]
+               ) -> List['Event']:
         dispatcher.utter_template('utter_thanks_for_feedback', tracker)
         dispatcher.utter_template('utter_restart_with_button', tracker)
 
