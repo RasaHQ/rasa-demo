@@ -56,7 +56,7 @@
 * technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
-    
+
 ## Install Rasa: Deny ready to build -> Ask if problem -> technical question
 * enter_data{"package_manager": "pip"} OR install_rasa{"package_manager": "pip"}
     - action_select_installation_command
