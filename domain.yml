@@ -48,7 +48,6 @@ intents:
   - canthelp
   - feedback
   - switch
-  - new_project
   - how_to_get_started
   - technical_question
   - nlu_info

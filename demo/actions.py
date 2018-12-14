@@ -413,15 +413,17 @@ class ActionDefaultAskAffirmation(Action):
 
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
         first_intent_names = [intent.get('name', '')
-                              for intent in intent_ranking[:2]]
-        print(first_intent_names)
+                              for intent in intent_ranking[:2]
+                              if intent.get('name', '') not in ['deny',
+                                                                'affirm',
+                                                                'out_of_scope']]
 
         message_title = "Sorry, I'm not sure I've understood " \
                         "you correctly 🤔 Do you mean..."
-        print(self.intent_mappings)
+
         mapped_intents = [(name, self.intent_mappings.get(name, name))
                           for name in first_intent_names]
-        print(mapped_intents)
+
         buttons = []
         for intent in mapped_intents:
             buttons.append({'title': intent[1],
