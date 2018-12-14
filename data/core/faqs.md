@@ -11,7 +11,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
 
@@ -21,7 +20,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -65,7 +63,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR  ask_faq_channels OR  ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -84,7 +81,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -100,7 +96,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -118,7 +113,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -154,7 +148,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction
@@ -392,7 +385,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -866,7 +858,6 @@
     - action_greet_user
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu
     - action_faqs
-    - utter_ask_goal
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa

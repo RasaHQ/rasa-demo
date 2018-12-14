@@ -18,7 +18,7 @@
 ## say greet outside the flows
 * greet
     - action_greet_user
-* greet
+* greet OR enter_data{"name": "akela"}
     - action_greet_user
 
 ## just newsletter + confirm
@@ -26,7 +26,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -71,7 +70,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -90,7 +88,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -106,7 +103,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -124,7 +120,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
@@ -139,7 +134,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -182,7 +176,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -221,7 +214,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * signup_newsletter
     - utter_great
     - utter_ask_email
@@ -258,7 +250,6 @@
     - action_greet_user
 * out_of_scope
     - utter_out_of_scope
-    - utter_ask_goal
 * contact_sales
     - utter_moreinformation
     - utter_ask_jobfunction

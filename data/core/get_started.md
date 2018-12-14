@@ -2,11 +2,38 @@
 * get_started_step1
     - action_greet_user
 
+## prompt for getting started + confirm
+* get_started_step1
+    - action_greet_user
+* mood_confirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+
+## new to rasa at start, built bot before
+* how_to_get_started{"user_type": "new"}
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_getstarted_new
+    - utter_built_bot_before
+* mood_confirm
+    - utter_ask_migration
+
+## new to rasa at start
+* how_to_get_started{"user_type": "new"}
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_getstarted_new
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+
 ## new to rasa + not new to chatbots + not migrating
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -29,7 +56,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -44,7 +71,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -59,7 +86,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -75,7 +102,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -92,7 +119,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -109,7 +136,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -128,7 +155,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -149,7 +176,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -171,7 +198,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -194,7 +221,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -216,7 +243,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -240,7 +267,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -260,7 +287,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -281,7 +308,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -303,7 +330,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -325,7 +352,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -347,7 +374,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -369,7 +396,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -390,7 +417,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -694,7 +721,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* mood_confirm OR how_to_get_started{"user_type": "new"}
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
