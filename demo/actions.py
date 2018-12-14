@@ -277,7 +277,7 @@ class ActionStoreEntityExtractor(Action):
 
     def run(self, dispatcher, tracker, domain):
         spacy_entities = ['place', 'date', 'name', 'organisation']
-        duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money']
+        duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money', 'numbers']
 
         entity_to_extract = next(tracker.get_latest_entity_values('entity'), None)
 
@@ -398,7 +398,7 @@ class ActionDefaultAskAffirmation(Action):
         import csv
 
         self.intent_mappings = {}
-        with open('../data/intent_description_mapping.csv',
+        with open('data/intent_description_mapping.csv',
                   newline='',
                   encoding='utf-8') as file:
             csv_reader = csv.reader(file)
@@ -414,20 +414,21 @@ class ActionDefaultAskAffirmation(Action):
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
         first_intent_names = [intent.get('name', '')
                               for intent in intent_ranking[:2]]
+        print(first_intent_names)
 
         message_title = "Sorry, I'm not sure I've understood " \
                         "you correctly 🤔 Do you mean..."
-
-        mapped_intents = [self.intent_mappings.get(name, name)
+        print(self.intent_mappings)
+        mapped_intents = [(name, self.intent_mappings.get(name, name))
                           for name in first_intent_names]
+        print(mapped_intents)
+        buttons = []
+        for intent in mapped_intents:
+            buttons.append({'title': intent[1],
+                            'payload': '/{}'.format(intent[0])})
 
-        buttons = [{'title': mapped_intents[0],
-                    'payload': '/{}'.format(first_intent_names[0])},
-                   {'title': mapped_intents[1],
-                    'payload': '/{}'.format(first_intent_names[1])},
-                   {'title': 'Something else',
-                    'payload': '/deny'}
-                   ]
+        buttons.append({'title': 'Something else',
+                        'payload': '/deny'})
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
 
