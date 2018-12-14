@@ -70,6 +70,7 @@ intents:
   - ask_faq_slots
   - ask_faq_channels
   - ask_faq_differencecorenlu
+  - ask_faq_python_version
 
 slots:
   budget:
@@ -550,6 +551,7 @@ actions:
   - utter_ask_faq_slots
   - utter_ask_faq_channels
   - utter_ask_faq_differencecorenlu
+  - utter_ask_faq_python_version
   - utter_ask_weather
   - utter_ask_builder
   - utter_ask_howdoing

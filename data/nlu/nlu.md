@@ -17,6 +17,9 @@
 ## intent:ask_faq_differencecorenlu
 - difference core and NLU
 
+## intent:ask_faq_python_version
+- What Python version should I use?
+
 ## intent:ask_builder
 - can you share your boss with me?
 - i want to get to know your owner
