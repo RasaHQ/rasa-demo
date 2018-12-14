@@ -395,13 +395,13 @@ class ActionDefaultAskAffirmation(Action):
         return "action_default_ask_affirmation"
 
     def __init__(self) -> None:
-        from csv import reader
+        import csv
 
         self.intent_mappings = {}
         with open('../data/intent_description_mapping.csv',
                   newline='',
                   encoding='utf-8') as file:
-            csv_reader = reader(file)
+            csv_reader = csv.reader(file)
             for row in csv_reader:
                 self.intent_mappings[row[0]] = row[1]
 
@@ -446,7 +446,7 @@ class ActionDefaultFallback(Action):
             ) -> List['Event']:
 
         # Fallback caused by TwoStageFallbackPolicy
-        if (len(tracker.events) > 3 and
+        if (len(tracker.events) >= 4 and
                 tracker.events[-4].get('name') ==
                 'action_default_ask_affirmation'):
 
