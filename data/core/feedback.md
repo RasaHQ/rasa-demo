@@ -13,7 +13,7 @@
 
 ## feedback3
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_great
     - utter_anything_else
 

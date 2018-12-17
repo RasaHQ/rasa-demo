@@ -309,7 +309,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -411,7 +411,7 @@
     - slot{"nlu_part":"duckling"}
     - utter_duckling_info
     - utter_anything_else
-* mood_confirm
+* affirm
     - utter_what_help
 
 ## Story from conversation with alan on November 16th 2018 2
@@ -419,7 +419,7 @@
     - slot{"nlu_part":"intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* mood_confirm
+* affirm
     - utter_what_language
 * enter_data{"language":"spanish"}
     - slot{"language":"spanish"}
@@ -481,7 +481,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding":true}
     - utter_built_bot_before
@@ -518,7 +518,7 @@
     - action_greet_user
 * ask_isbot
     - action_chitchat
-* mood_confirm
+* affirm
     - utter_thumbsup
 
 ## Story from conversation with 6fd65c93e374489f9c8d76697ab9c493 on November 19th 2018
@@ -528,7 +528,7 @@
     - action_greet_user
 * ask_howdoing
     - action_chitchat
-* mood_confirm
+* affirm
     - utter_thumbsup
 
 ## Story from conversation with 35d1ecc91c364cbf8a6edf006e5d8c9a on November 19th 2018
@@ -572,7 +572,7 @@
     - utter_ask_feedback
 * deny
     - utter_nohelp
-* mood_confirm
+* affirm
     - utter_thumbsup
 
 ## Story from conversation with 4c274f8d470e4b77adbfefe7cda7cad7 on October 27th 2018
@@ -581,7 +581,7 @@
     - action_greet_user
 * greet
     - action_greet_user
-* mood_confirm
+* affirm
     - utter_thumbsup
 * how_to_get_started
     - utter_getstarted
@@ -636,11 +636,11 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding":true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * switch{"current_api":"luis"}
     - slot{"current_api":"luis"}
@@ -660,7 +660,7 @@
     - slot{"nlu_part":"intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* mood_confirm
+* affirm
     - utter_what_language
 * enter_data{"language":"spanish"}
     - slot{"language":"spanish"}

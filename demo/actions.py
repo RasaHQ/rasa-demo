@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import logging
+from typing import Text, Dict, Any, List
 
-from rasa_core_sdk import Action
+from rasa_core_sdk import Action, Tracker
+from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
-    ConversationPaused
+    ConversationPaused, FollowupAction, Form
 
 from demo.api import MailChimpAPI
 from demo import config
@@ -275,7 +277,7 @@ class ActionStoreEntityExtractor(Action):
 
     def run(self, dispatcher, tracker, domain):
         spacy_entities = ['place', 'date', 'name', 'organisation']
-        duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money']
+        duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money', 'numbers']
 
         entity_to_extract = next(tracker.get_latest_entity_values('entity'), None)
 
@@ -300,7 +302,7 @@ class ActionSetOnboarding(Action):
         # latest_action = tracker.latest_action_name
         # print(latest_action)
         # if latest_action == 'utter_first_bot_with_rasa':
-        if intent == 'mood_confirm':
+        if intent == 'affirm':
             return [SlotSet('onboarding', True)]
         elif intent == 'deny':
             return [SlotSet('onboarding', False)]
@@ -384,3 +386,102 @@ class ActionGreetUser(Action):
             dispatcher.utter_template("utter_"+intent, tracker)
             return [SlotSet('shown_privacy', True)]
         return []
+
+
+class ActionDefaultAskAffirmation(Action):
+    """Asks for an affirmation of the intent if NLU threshold is not met."""
+
+    def name(self) -> Text:
+        return "action_default_ask_affirmation"
+
+    def __init__(self) -> None:
+        import csv
+
+        self.intent_mappings = {}
+        with open('data/intent_description_mapping.csv',
+                  newline='',
+                  encoding='utf-8') as file:
+            csv_reader = csv.reader(file)
+            for row in csv_reader:
+                self.intent_mappings[row[0]] = row[1]
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]
+            ) -> List['Event']:
+
+        intent_ranking = tracker.latest_message.get('intent_ranking', [])
+        first_intent_names = [intent.get('name', '')
+                              for intent in intent_ranking[:2]
+                              if intent.get('name', '') not in ['deny',
+                                                                'affirm',
+                                                                'out_of_scope']]
+
+        message_title = "Sorry, I'm not sure I've understood " \
+                        "you correctly 🤔 Do you mean..."
+
+        mapped_intents = [(name, self.intent_mappings.get(name, name))
+                          for name in first_intent_names]
+
+        buttons = []
+        for intent in mapped_intents:
+            buttons.append({'title': intent[1],
+                            'payload': '/{}'.format(intent[0])})
+
+        buttons.append({'title': 'Something else',
+                        'payload': '/deny'})
+
+        dispatcher.utter_button_message(message_title, buttons=buttons)
+
+        return []
+
+
+class ActionDefaultFallback(Action):
+
+    def name(self) -> Text:
+        return "action_default_fallback"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]
+            ) -> List['Event']:
+
+        # Fallback caused by TwoStageFallbackPolicy
+        if (len(tracker.events) >= 4 and
+                tracker.events[-4].get('name') ==
+                'action_default_ask_affirmation'):
+
+            return [SlotSet('feedback_value', 'negative'),
+                    Form('feedback_form'),
+                    FollowupAction('feedback_form')]
+
+        # Fallback caused by Core
+        else:
+            dispatcher.utter_template('utter_default', tracker)
+            return [UserUtteranceReverted()]
+
+
+class FeedbackMessageForm(FormAction):
+    """Accept free text input from the user for feedback."""
+
+    def name(self) -> Text:
+        return "feedback_form"
+
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return ["feedback_message"]
+
+    def slot_mappings(self) -> Dict[Text, Text]:
+        return {"feedback_message": self.from_text()}
+
+    def submit(self,
+               dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]
+               ) -> List['Event']:
+        dispatcher.utter_template('utter_thanks_for_feedback', tracker)
+        dispatcher.utter_template('utter_restart_with_button', tracker)
+
+        return [FollowupAction('action_listen')]

@@ -12,7 +12,7 @@
 ## say confirm outside the flows 2
 * greet
     - action_greet_user
-* mood_confirm
+* affirm
     - utter_thumbsup
 
 ## say greet outside the flows
@@ -38,7 +38,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -61,7 +61,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -79,7 +79,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -111,7 +111,7 @@
     - utter_already_subscribed
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -145,7 +145,7 @@
     - utter_already_subscribed
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -167,7 +167,7 @@
     - utter_already_subscribed
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 

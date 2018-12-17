@@ -32,7 +32,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -54,7 +54,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -72,7 +72,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -104,7 +104,7 @@
     - utter_already_subscribed
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -139,7 +139,7 @@
     - utter_already_subscribed
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -388,21 +388,21 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -416,21 +416,21 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -441,24 +441,24 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -468,11 +468,11 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
@@ -481,11 +481,11 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -495,11 +495,11 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
@@ -508,11 +508,11 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -522,24 +522,24 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -550,7 +550,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -561,11 +561,11 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -575,7 +575,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -586,11 +586,11 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -600,7 +600,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -608,14 +608,14 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -625,7 +625,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -641,7 +641,7 @@
     - utter_also_explain_nlu
 * deny
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -651,7 +651,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -667,7 +667,7 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -678,7 +678,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -692,10 +692,10 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_also_explain_nlu
-* mood_confirm
+* affirm
     - utter_explain_nlu
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -705,7 +705,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -716,13 +716,13 @@
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
-* mood_confirm
+* affirm
     - utter_explain_nlu
     - utter_tryout
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -733,7 +733,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -749,7 +749,7 @@
     - utter_also_explain_core
 * deny
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -759,7 +759,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -775,7 +775,7 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -786,7 +786,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -799,7 +799,7 @@
     - utter_explain_nlucore
 * deny
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -809,7 +809,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -822,7 +822,7 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else
 
@@ -833,7 +833,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -841,7 +841,7 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
@@ -981,7 +981,7 @@
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_what_language
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
@@ -1007,7 +1007,7 @@
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_what_language
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
@@ -1037,7 +1037,7 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
@@ -1060,7 +1060,7 @@
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
-* pipeline_recommendation OR mood_confirm
+* pipeline_recommendation OR affirm
     - utter_ask_entities
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
@@ -1079,20 +1079,20 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version
     - action_faqs
     - utter_first_bot_with_rasa
-* mood_confirm
+* affirm
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* mood_confirm
+* affirm
     - utter_ask_migration
 * deny
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* mood_confirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
     - utter_tryout
-* how_to_get_started{"product":"core"} OR mood_confirm OR how_to_get_started{"product":"stack"}
+* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
     - utter_anything_else

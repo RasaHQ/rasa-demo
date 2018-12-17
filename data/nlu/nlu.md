@@ -1250,7 +1250,7 @@
 - I want to talk to the founders
 - i want to talk to a human
 
-## intent:mood_confirm
+## intent:affirm
 - yes
 - of course
 - sure

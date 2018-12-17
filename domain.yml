@@ -14,10 +14,11 @@ entities:
   - nlu_part
   - entity
   - user_type
+  - package_manager
 
 intents:
   - enter_data: {use_entities: false}
-  - mood_confirm
+  - affirm
   - contact_sales
   - signup_newsletter
   - greet
@@ -47,7 +48,6 @@ intents:
   - canthelp
   - feedback
   - switch
-  - new_project
   - how_to_get_started
   - technical_question
   - nlu_info
@@ -94,6 +94,8 @@ slots:
     values:
       - positive
       - negative
+  feedback_message:
+    type: unfeaturized
   current_api:
     type: categorical
     values:
@@ -435,6 +437,16 @@ templates:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
   utter_getstarted_new:
     - text: "I see you're new, let me ask you a quick question before I help you get started:"
+  utter_ask_feedback_message:
+    - text: "I’m sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve."
+  utter_thanks_for_feedback:
+    - text: "Thanks! Check out our forum, some of the smart people from our community can answer your questions there."
+  utter_restart_with_button:
+    - text: "Click the button below if you want to start over."
+      buttons:
+      - title: "Restart"
+        payload: "/restart"
+
 
 actions:
   - utter_greet
@@ -540,22 +552,6 @@ actions:
   - utter_ask_faq_channels
   - utter_ask_faq_differencecorenlu
   - utter_ask_faq_python_version
-  - action_subscribe_newsletter
-  - action_store_sales_info
-  - action_store_budget
-  - action_store_usecase
-  - action_chitchat
-  - action_faqs
-  - action_store_name
-  - action_store_company
-  - action_store_job
-  - action_store_email
-  - action_pause
-  - action_store_unknown_product
-  - action_store_unknown_nlu_part
-  - action_store_bot_language
-  - action_store_entity_extractor
-  - action_set_onboarding
   - utter_ask_weather
   - utter_ask_builder
   - utter_ask_howdoing
@@ -575,9 +571,31 @@ actions:
   - utter_howwereyoubuilt
   - utter_ask_whatspossible
   - utter_getstarted_new
+  - utter_thanks_for_feedback
+  - utter_restart_with_button
+  - utter_ask_for_feedback_message
+  - action_subscribe_newsletter
+  - action_store_sales_info
+  - action_store_budget
+  - action_store_usecase
+  - action_chitchat
+  - action_faqs
+  - action_store_name
+  - action_store_company
+  - action_store_job
+  - action_store_email
+  - action_pause
+  - action_store_unknown_product
+  - action_store_unknown_nlu_part
+  - action_store_bot_language
+  - action_store_entity_extractor
+  - action_set_onboarding
   - action_select_installation_command
   - action_store_problem_description
   - action_greet_user
+  - action_default_fallback
+  - action_default_ask_affirmation
 
 forms:
   - suggestion_form
+  - feedback_form

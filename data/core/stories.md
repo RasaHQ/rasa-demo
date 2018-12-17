@@ -78,7 +78,7 @@
     - utter_great
     - utter_anything_else
 
-## newsletter + mood_confirm feedback
+## newsletter + affirm feedback
 * greet
     - action_greet_user
 * signup_newsletter
@@ -93,7 +93,7 @@
     - utter_confirmationemail
     - utter_docu
     - utter_ask_feedback
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_anything_else
 
@@ -932,7 +932,7 @@
     - utter_ask_email
 * deny
     - utter_cantsignup
-* mood_confirm
+* affirm
     - utter_thumbsup
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
@@ -942,5 +942,5 @@
 
 ## anything else?
     - utter_anything_else
-* mood_confirm
+* affirm
     - utter_what_help
