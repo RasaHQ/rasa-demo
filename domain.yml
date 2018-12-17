@@ -44,11 +44,6 @@ intents:
   - rasa_cost
   - source_code
   - suggestion
-  - suggestions
-  - restart
-  - Where can I integrate my bot
-  - None
-  - event_restart
 
 slots:
   budget:
@@ -80,7 +75,6 @@ slots:
   product:
     type: categorical
     values:
-      - both
       - core
       - nlu
       - stack
@@ -90,12 +84,8 @@ slots:
     type: categorical
     values:
       - entity recognition
-      - entity extraction
-      - intent
       - intent classification
-      - intent classificaton
       - duckling
-      - entity
   unknown_nlu_part:
     type: unfeaturized
   can_use_spacy:
@@ -428,6 +418,22 @@ actions:
   - fail
   - event_rewind
   - event_restart
+  - oos
+  - getstarted_1_success
+  - faq
+  - sales
+  - rasa_help
+  - suggestion
+  - chitchat
+  - rasa_help/ getstarted_1
+  - rasa_help_success
+  - getstarted_1
+  - subscribe_success
+  - privacypolicy
+  - subscribe
+  - whatspossible
+  - handoff
+  - sales_success
 
-#forms:
-#  - suggestion_form
+forms:
+  - suggestion_form

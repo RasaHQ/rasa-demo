@@ -98,6 +98,22 @@ actions:
 - fail
 - event_rewind
 - event_restart
+- oos
+- getstarted_1_success
+- faq
+- sales
+- rasa_help
+- suggestion
+- chitchat
+- rasa_help/ getstarted_1
+- rasa_help_success
+- getstarted_1
+- subscribe_success
+- privacypolicy
+- subscribe
+- whatspossible
+- handoff
+- sales_success
 config:
   store_entities_as_slots: true
 entities:
@@ -114,7 +130,8 @@ entities:
 - language
 - nlu_part
 - entity
-forms: []
+forms:
+- suggestion_form
 intents:
 - enter_data:
     use_entities: false
@@ -174,16 +191,6 @@ intents:
     use_entities: true
 - suggestion:
     use_entities: true
-- suggestions:
-    use_entities: true
-- restart:
-    use_entities: true
-- Where can I integrate my bot:
-    use_entities: true
-- None:
-    use_entities: true
-- event_restart:
-    use_entities: true
 slots:
   budget:
     auto_fill: true
@@ -241,12 +248,8 @@ slots:
     type: rasa_core.slots.CategoricalSlot
     values:
     - entity recognition
-    - entity extraction
-    - intent
     - intent classification
-    - intent classificaton
     - duckling
-    - entity
   onboarding:
     auto_fill: true
     initial_value: null
@@ -260,10 +263,13 @@ slots:
     initial_value: null
     type: rasa_core.slots.CategoricalSlot
     values:
-    - both
     - core
     - nlu
     - stack
+  requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
   subscribed:
     auto_fill: true
     initial_value: null
