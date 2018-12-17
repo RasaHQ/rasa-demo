@@ -245,6 +245,19 @@
 - can i build a voice bot
 - can i build a voice bot with rasa?
 
+## intent:ask_faq_community_size
+- How large is the Rasa community
+- how big is your community?
+- how many forum members do you have
+- do you have a large community
+- how many people are using Rasa
+
+## intent:ask_faq_what_is_forum
+- what is the forum
+- why should I join the forum
+- whats in the forum
+- what is the Rasa forum
+
 ## intent:ask_howbuilt
 - How were you built?
 - How were you made?
@@ -2354,3 +2367,21 @@
 
 ## synonym:conda
 - anaconda
+
+## intent:ask_which_events
+- Which community events do you have
+- Where can I meet Rasas
+- Do you have a user group
+- is there a meetup
+- is there a Rasa meetup
+- i want to meet Rasa
+
+## intent:ask_when_next_event
+- When is the next community event?
+- when is the next event in [Berlin](location)
+- is there a event in [Montreal](location)
+- is there a Rasa event in [San Francisco](location)
+- what's the next rasa event
+- whats the next community event
+- when is the next usergroup
+- do you have an event in [Berlin](location)

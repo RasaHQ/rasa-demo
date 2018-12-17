@@ -15,6 +15,7 @@ entities:
   - entity
   - user_type
   - package_manager
+  - location
 
 intents:
   - enter_data: {use_entities: false}
@@ -57,6 +58,10 @@ intents:
   - source_code
   - suggestion
   - install_rasa
+  - ask_which_events
+  - ask_when_next_event
+  - ask_why_contribute
+  - ask_how_contribute
   - get_started_step1
   - get_started_step2
   - get_started_step3
@@ -71,6 +76,8 @@ intents:
   - ask_faq_channels
   - ask_faq_differencecorenlu
   - ask_faq_python_version
+  - ask_faq_community_size
+  - ask_faq_what_is_forum
 
 slots:
   budget:
@@ -433,6 +440,10 @@ templates:
     - text: "We have a comprehensive list of connectors, but if you do not find the one you are looking for you can always create a custom connector following this guide."
   utter_ask_faq_differencecorenlu:
     - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
+  utter_ask_faq_community_size:
+    - text: ""
+  utter_ask_faq_what_is_forum:
+    - text: ""
   utter_ask_voice:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
   utter_getstarted_new:
@@ -446,6 +457,16 @@ templates:
       buttons:
       - title: "Restart"
         payload: "/restart"
+  utter_possibilities_to_contribute:
+    - text: ""
+  utter_recommend_forum:
+    - text: ""
+  utter_no_community_event:
+    - text: "Sorry, we currently don't have any planned community events 😞"
+  utter_describe_step4:
+    - text: ""
+  utter_reasons_to_contribute:
+    - text: ""
 
 
 actions:
@@ -552,6 +573,8 @@ actions:
   - utter_ask_faq_channels
   - utter_ask_faq_differencecorenlu
   - utter_ask_faq_python_version
+  - utter_ask_faq_community_size
+  - utter_ask_faq_what_is_forum
   - utter_ask_weather
   - utter_ask_builder
   - utter_ask_howdoing
@@ -574,6 +597,11 @@ actions:
   - utter_thanks_for_feedback
   - utter_restart_with_button
   - utter_ask_for_feedback_message
+  - utter_no_community_event
+  - utter_describe_step4
+  - utter_reasons_to_contribute
+  - utter_possibilities_to_contribute
+  - utter_recommend_forum
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -595,6 +623,7 @@ actions:
   - action_greet_user
   - action_default_fallback
   - action_default_ask_affirmation
+  - action_get_community_events
 
 forms:
   - suggestion_form

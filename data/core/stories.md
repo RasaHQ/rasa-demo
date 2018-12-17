@@ -7,13 +7,6 @@
 * bye
     - utter_bye
 
-## suggestion
-* get_started_step4
-    - action_greet_user
-    - suggestion_form
-    - form{"name": "suggestion_form"}
-    - form{"name": null}
-
 ## greet
 * greet OR enter_data{"name": "akela"}
     - action_greet_user
