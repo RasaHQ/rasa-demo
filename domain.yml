@@ -56,6 +56,7 @@ intents:
   - rasa_cost
   - source_code
   - suggestion
+  - suggestions
   - install_rasa
   - get_started_step1
   - get_started_step2
@@ -71,6 +72,9 @@ intents:
   - ask_faq_channels
   - ask_faq_differencecorenlu
   - ask_faq_python_version
+  - fallback
+  - None
+  - restart
 
 slots:
   budget:
@@ -99,12 +103,15 @@ slots:
     values:
       - dialogflow
       - luis
+      - chatfuel
+      - dialogueflow
   product:
     type: categorical
     values:
       - core
       - nlu
       - stack
+      - both
   unknown_product:
     type: unfeaturized
   nlu_part:
@@ -113,6 +120,12 @@ slots:
       - entity recognition
       - intent classification
       - duckling
+      - intent
+      - intents
+      - entity
+      - both
+      - chatfuel
+      - NER
   unknown_nlu_part:
     type: unfeaturized
   can_use_spacy:
@@ -594,6 +607,8 @@ actions:
   - whatspossible
   - handoff
   - sales_success
+  - event_rewind
+  - event_restart
 
 forms:
   - suggestion_form

@@ -2,92 +2,82 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "nlu_part",
-        "email",
-        "language",
-        "current_api",
+        "name",
+        "product",
         "feedback_value",
-        "product"
+        "email",
+        "current_api",
+        "language",
+        "nlu_part"
       ]
-    },
-    "whatspossible": {
-      "slots": []
     },
     "action_set_onboarding": {
       "slots": [
         "onboarding"
       ]
     },
-    "sales": {
+    "action_store_name": {
       "slots": [
-        "email",
-        "job_function",
-        "budget",
-        "use_case",
-        "data_stored",
-        "company_name",
         "person_name"
       ]
     },
-    "utter_greet": {
-      "slots": []
+    "action_store_company": {
+      "slots": [
+        "company_name"
+      ]
     },
     "suggestion_form": {
       "slots": [
-        "suggestion",
         "requested_slot",
-        "product"
+        "suggestion"
       ]
     },
-    "null": {
-      "slots": []
+    "action_store_unknown_product": {
+      "slots": [
+        "unknown_product"
+      ]
     },
-    "subscribe": {
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
       "slots": [
         "subscribed"
       ]
     },
-    "getstarted_1": {
-      "slots": []
-    },
-    "rasa_help": {
+    "action_store_job": {
       "slots": [
-        "language",
-        "entity_extractor",
-        "can_use_spacy",
-        "unknown_product",
-        "unknown_nlu_part"
+        "job_function"
       ]
     },
-    "utter_anything_else": {
-      "slots": []
+    "action_store_usecase": {
+      "slots": [
+        "use_case"
+      ]
     },
-    "utter_bye": {
-      "slots": []
+    "action_store_budget": {
+      "slots": [
+        "budget"
+      ]
     },
-    "chitchat": {
-      "slots": []
+    "action_store_sales_info": {
+      "slots": [
+        "data_stored"
+      ]
     },
-    "utter_noworries": {
-      "slots": []
-    },
-    "utter_ask_feedback": {
-      "slots": []
-    },
-    "handoff": {
-      "slots": []
-    },
-    "utter_thumbsup": {
-      "slots": []
-    },
-    "utter_nohelp": {
-      "slots": []
+    "action_store_bot_language": {
+      "slots": [
+        "language",
+        "can_use_spacy"
+      ]
     }
   },
-  "rasa_core": "0.13.0a3",
+  "rasa_core": "0.13.0a1",
   "python": "3.6.5",
   "max_histories": [
-    6,
+    null,
     2
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
@@ -95,5 +85,5 @@
     "rasa_core.policies.keras_policy.KerasPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20181214-154032"
+  "trained_at": "20181217-171040"
 }

@@ -1,7 +1,12 @@
 policies:
   - name: KerasPolicy
-    epochs: 100
-    max_history: 6
+    epochs: 200
+    batch_size: 8
+    featurizer:
+      - name: FullDialogueTrackerFeaturizer
+        state_featurizer:
+        - name: BinarySingleStateFeaturizer
+#    max_history: 6
 #  - name: MemoizationPolicy
 #    max_history: 6
 #  - name: FallbackPolicy

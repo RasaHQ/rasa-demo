@@ -6,15 +6,15 @@ import requests
 from tqdm import tqdm
 
 
-csvfile = codecs.open("data/Intents_ Actions >> User Goal - Sheet1.csv", 'r')
-reader = csv.DictReader(csvfile)
-pbar = tqdm(reader)
-topic_dict = {}
-for row in pbar:
-    if row['User goal'] and row['type'] == 'action':
-        topic_dict[row['Intent/Action Name'][2:]] = row['User goal']
-        if row['if_success']:
-            topic_dict[row['Intent/Action Name'][2:]] += '_' + row['if_success']
+# csvfile = codecs.open("data/Intents_ Actions >> User Goal - Sheet1.csv", 'r')
+# reader = csv.DictReader(csvfile)
+# pbar = tqdm(reader)
+# topic_dict = {}
+# for row in pbar:
+#     if row['User goal'] and row['type'] == 'action':
+#         topic_dict[row['Intent/Action Name'][2:]] = row['User goal']
+#         if row['if_success']:
+#             topic_dict[row['Intent/Action Name'][2:]] += '_' + row['if_success']
 
 # for topic in set(topic_dict.values()):
 #     print('- '+topic)
@@ -35,29 +35,29 @@ texts_no = []
 
 pbar = tqdm(reader)
 for row in pbar:
-    if row['sender_id'] and len(row['sender_id']) > 20 and row['reason for failure'] != 'NLU':  # and row['user goal fullfilled'] and row['user goal supported'] == 'getstarted':
+    if row['sender_id'] and len(row['sender_id']) > 20 and row['reason for failure'] != 'NLU' and row['user goal (if supported)'] and row['user goal (if supported)'] != '-': #row['user goal fullfilled']: # and row['user goal supported'] == 'getstarted':
         total += 1
         response = requests.get(url.format(sender_id=row['sender_id']), headers=headers)
+        if response.status_code == 200:
+            text = response.text.replace('Generated Story',
+                                         'Generated Story goal:{}, id:{}'
+                                         ''.format(row['user goal (if supported)'],
+                                                   row['sender_id'])
+                                         ).replace('rewind', 'event_rewind'
+                                                   ).replace('restart', 'event_restart')
 
-        text = response.text.replace('Generated Story',
-                                     'Generated Story goal:{}, id:{}'
-                                     ''.format(row['user goal (if supported)'],
-                                               row['sender_id'])
-                                     )#.replace('rewind', 'event_rewind'
-                                              # ).replace('restart', 'event_restart')
+            # for action, topic in topic_dict.items():
+            #     text = text.replace(action + '\n', topic + '\n')
 
-        for action, topic in topic_dict.items():
-            text = text.replace(action + '\n', topic + '\n')
-
-        texts_yes.append(text)
-        # if 'es' in row['user goal fullfilled']:
-        #     total_yes += 1
-        #     text_yes = text + '    - success\n'
-        #     texts_yes.append(text_yes)
-        # elif row['user goal fullfilled'] == 'no':
-        #     total_no += 1
-        #     text_no = text + '    - fail\n'
-        #     texts_no.append(text_no)
+            texts_yes.append(text)
+            # if 'es' in row['user goal fullfilled']:
+            #     total_yes += 1
+            #     text_yes = text + '    - success\n'
+            #     texts_yes.append(text_yes)
+            # elif row['user goal fullfilled'] == 'no':
+            #     total_no += 1
+            #     text_no = text + '    - fail\n'
+            #     texts_no.append(text_no)
 
 print('\n')
 print(total)
@@ -66,14 +66,14 @@ print(total_no)
 
 os.remove("data/success/train_no_NLU.md")
 with io.open('data/success/train_no_NLU.md', 'a', encoding="utf-8") as f:
-    for text in texts_yes[-600:-100]:
+    for text in texts_yes[-250:-50]:
         f.write(text + "\n")
     for text in texts_no[:-15]:
         f.write(text + "\n")
 
 os.remove("data/success/test_no_NLU.md")
 with io.open('data/success/test_no_NLU.md', 'a', encoding="utf-8") as f:
-    for text in texts_yes[-100:]:
+    for text in texts_yes[-50:]:
         f.write(text + "\n")
     for text in texts_no[-15:]:
         f.write(text + "\n")

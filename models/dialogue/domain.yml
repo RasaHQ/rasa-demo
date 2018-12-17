@@ -79,11 +79,37 @@ actions:
 - utter_built_bot_before
 - utter_ask_which_tool
 - utter_suggestion
+- utter_ask_python_installed
+- utter_get_python
+- utter_ask_pip_or_conda
+- utter_installation_with_pip
+- utter_installation_with_conda
+- utter_ask_ready_to_build
+- utter_ask_describe_problem
+- utter_direct_to_forum_for_help
+- utter_get_starter_pack
+- utter_direct_to_step4
+- utter_ask_if_problem
+- utter_get_started_step1
+- utter_get_started_step2
+- utter_get_started_step3
+- utter_get_started_step4
+- utter_ask_faq_platform
+- utter_ask_faq_languages
+- utter_ask_faq_tutorialcore
+- utter_ask_faq_tutorialnlu
+- utter_ask_faq_opensource
+- utter_ask_faq_voice
+- utter_ask_faq_slots
+- utter_ask_faq_channels
+- utter_ask_faq_differencecorenlu
+- utter_ask_faq_python_version
 - action_subscribe_newsletter
 - action_store_sales_info
 - action_store_budget
 - action_store_usecase
 - action_chitchat
+- action_faqs
 - action_store_name
 - action_store_company
 - action_store_job
@@ -94,10 +120,28 @@ actions:
 - action_store_bot_language
 - action_store_entity_extractor
 - action_set_onboarding
-- success
-- fail
-- event_rewind
-- event_restart
+- utter_ask_weather
+- utter_ask_builder
+- utter_ask_howdoing
+- utter_ask_whoisit
+- utter_ask_whatisrasa
+- utter_ask_isbot
+- utter_ask_howold
+- utter_ask_languagesbot
+- utter_ask_restaurant
+- utter_ask_time
+- utter_ask_wherefrom
+- utter_ask_whoami
+- utter_handleinsult
+- utter_nicetomeeyou
+- utter_telljoke
+- utter_ask_whatismyname
+- utter_howwereyoubuilt
+- utter_ask_whatspossible
+- utter_getstarted_new
+- action_select_installation_command
+- action_store_problem_description
+- action_greet_user
 - oos
 - getstarted_1_success
 - faq
@@ -114,6 +158,8 @@ actions:
 - whatspossible
 - handoff
 - sales_success
+- event_rewind
+- event_restart
 config:
   store_entities_as_slots: true
 entities:
@@ -130,6 +176,7 @@ entities:
 - language
 - nlu_part
 - entity
+- user_type
 forms:
 - suggestion_form
 intents:
@@ -158,6 +205,28 @@ intents:
 - ask_whatisrasa:
     use_entities: true
 - ask_isbot:
+    use_entities: true
+- ask_howold:
+    use_entities: true
+- ask_languagesbot:
+    use_entities: true
+- ask_restaurant:
+    use_entities: true
+- ask_time:
+    use_entities: true
+- ask_wherefrom:
+    use_entities: true
+- ask_whoami:
+    use_entities: true
+- ask_whatismyname:
+    use_entities: true
+- howwereyoubuilt:
+    use_entities: true
+- handleinsult:
+    use_entities: true
+- nicetomeeyou:
+    use_entities: true
+- telljoke:
     use_entities: true
 - out_of_scope:
     use_entities: true
@@ -191,6 +260,44 @@ intents:
     use_entities: true
 - suggestion:
     use_entities: true
+- suggestions:
+    use_entities: true
+- install_rasa:
+    use_entities: true
+- get_started_step1:
+    use_entities: true
+- get_started_step2:
+    use_entities: true
+- get_started_step3:
+    use_entities: true
+- get_started_step4:
+    use_entities: true
+- ask_faq_platform:
+    use_entities: true
+- ask_faq_languages:
+    use_entities: true
+- ask_faq_tutorialcore:
+    use_entities: true
+- ask_faq_tutorialnlu:
+    use_entities: true
+- ask_faq_opensource:
+    use_entities: true
+- ask_faq_voice:
+    use_entities: true
+- ask_faq_slots:
+    use_entities: true
+- ask_faq_channels:
+    use_entities: true
+- ask_faq_differencecorenlu:
+    use_entities: true
+- ask_faq_python_version:
+    use_entities: true
+- fallback:
+    use_entities: true
+- None:
+    use_entities: true
+- restart:
+    use_entities: true
 slots:
   budget:
     auto_fill: true
@@ -211,6 +318,8 @@ slots:
     values:
     - dialogflow
     - luis
+    - chatfuel
+    - dialogueflow
   data_stored:
     auto_fill: true
     initial_value: null
@@ -242,6 +351,10 @@ slots:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   nlu_part:
     auto_fill: true
     initial_value: null
@@ -250,11 +363,25 @@ slots:
     - entity recognition
     - intent classification
     - duckling
+    - intent
+    - intents
+    - entity
+    - both
+    - chatfuel
+    - ner
   onboarding:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.BooleanSlot
+  package_manager:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
   person_name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  problem_description:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.TextSlot
@@ -266,7 +393,12 @@ slots:
     - core
     - nlu
     - stack
+    - both
   requested_slot:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  shown_privacy:
     auto_fill: true
     initial_value: null
     type: rasa_core.slots.UnfeaturizedSlot
@@ -309,10 +441,39 @@ templates:
   - text: What's your business email?
   utter_ask_company:
   - text: What company do you work for?
+  utter_ask_describe_problem:
+  - text: Can you describe the problem you are having?
   utter_ask_email:
   - text: What's your email address?
   utter_ask_entities:
   - text: To help you, what kind of entities do you want to extract?
+  utter_ask_faq_channels:
+  - text: We have a comprehensive list of connectors, but if you do not find the one
+      you are looking for you can always create a custom connector following this
+      guide.
+  utter_ask_faq_differencecorenlu:
+  - text: Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide
+      what should happen next.
+  utter_ask_faq_languages:
+  - text: You can use Rasa NLU to build assistants in any language you want!
+  utter_ask_faq_opensource:
+  - text: Yes. We strive to provide well-maintained and documented open source tools,
+      allowing all makers to build the best AI assistants without friction.
+  utter_ask_faq_platform:
+  - text: Rasa Platform is our enterprise product. It expands Rasa Stack and empowers
+      business users to iterate faster, change the content of the AI assistant and
+      see what impact it had.
+  utter_ask_faq_slots:
+  - text: Slots act as a key-value store which can be used to store information the
+      user provided (e.g their home city) as well as information gathered about the
+      outside world (e.g. the result of a database query).
+  utter_ask_faq_tutorialcore:
+  - text: You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/).
+  utter_ask_faq_tutorialnlu:
+  - text: You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/).
+  utter_ask_faq_voice:
+  - text: Yes, that is possible! You can connect Rasa to any channel you like. Here
+      you can find more informations.
   utter_ask_feedback:
   - buttons:
     - payload: /feedback{"feedback_value":"positive"}
@@ -329,30 +490,61 @@ templates:
   - text: I'm great! Thanks for asking.
   - text: I'm good, thanks!
   - text: A little bit too warm, otherwise fine.
+  utter_ask_howold:
+  - text: '42'
+  - text: Old enough to be a bot
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
+      matter.
+  utter_ask_if_problem:
+  - text: Do you have a problem?
   utter_ask_isbot:
   - text: Yep I'm a bot!
   utter_ask_jobfunction:
   - text: What's your job? 🕴
+  utter_ask_languagesbot:
+  - text: I can spell baguette in French, but unfortunately English is the only language
+      I can answer you in.
+  - text: I am in the process of learning, but at the moment I can only speak English.
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:
   - text: What's your name?
+  utter_ask_pip_or_conda:
+  - text: Do you want to install pip or conda for the installation?
+  utter_ask_python_installed:
+  - text: Do you have Python installed?
+  utter_ask_ready_to_build:
+  - text: Ready to start building a chatbot?
+  utter_ask_restaurant:
+  - text: I am sorry I can’t recommend you a restaurant as I usually cook at home.
+  utter_ask_time:
+  - text: It is the most wonderful time of the year!
   utter_ask_usecase:
   - text: What kind of bot do you want to build with Rasa?
+  utter_ask_voice:
+  - text: Yes, that is possible! You can connect Rasa to any channel you like. Here
+      you can find more informations.
   utter_ask_weather:
   - text: I don't know about where you live, but in my world it's always sunny ☀️
   - text: Honestly it's a bit too hot these days 😅
   - text: Blue skies and sun shine!
   - text: Let's just say it hasn't rained in weeks ☀️
+  utter_ask_whatismyname:
+  - text: It most probably is the one that your parents have chosen for you.
   utter_ask_whatisrasa:
   - text: Rasa is a framework to build bots! You can read more about it here in the
       docs or on our website (https://rasa.com/).
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
+  utter_ask_wherefrom:
+  - text: I was born in Berlin, but I consider myself a citizen of the world.
+  - text: I was born in the coolest city on Earth
   utter_ask_which_product:
   - text: Ok, would you like to know more about Core or NLU?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
+  utter_ask_whoami:
+  - text: I hope you are being yourself.
   utter_ask_whoisit:
   - text: I'm the Rasa bot! 🤖
   utter_awesome:
@@ -406,6 +598,10 @@ templates:
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_direct_install:
   - text: 'Alright, you can directly install it here: (link)'
+  utter_direct_to_forum_for_help:
+  - text: I cannot help you on that 🙁. Please get help in our [forum](https://forum.rasa.com/).
+  utter_direct_to_step4:
+  - text: Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/).
   utter_docu:
   - text: 'If you want some more awesome Rasa content, check out our forum: https://forum.rasa.com/'
   utter_dont_know_nlu_part:
@@ -432,8 +628,24 @@ templates:
   - text: Alright, I'll briefly explain the Rasa Stack then.
   utter_first_bot_with_rasa:
   - text: Is this your first time using Rasa?
+  utter_get_python:
+  - text: Please install Python first. [Here is a guide](https://realpython.com/installing-python/)
+      how to do so.
+  utter_get_started_step1:
+  - text: I can give you more information on the Rasa Stack and its components Rasa
+      Core and Rasa NLU.
+  utter_get_started_step2:
+  - text: I can help you solving commonon problems with Rasa 🙂
+  utter_get_started_step3:
+  - text: I can help you to install Rasa Stack.
+  utter_get_starter_pack:
+  - text: Great, you installed Rasa! If you don't want to start from scratch, you
+      can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack).
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
+  utter_getstarted_new:
+  - text: "I see you're new, let me ask you a quick question before I help you get\
+      \ started:"
   utter_great:
   - text: Great! 👍
   - text: That's great! 🙌
@@ -441,15 +653,30 @@ templates:
   - text: Cool, let's do it 🚀
   utter_greet:
   - text: Hey there, welcome to Rasa!
+  utter_handleinsult:
+  - text: That’s not very nice 😢
   utter_have_you_used_rasa_before:
   - text: Have you used Rasa before?
+  utter_howwereyoubuilt:
+  - text: I have been built with a lot of love and patience.
   utter_inform_privacypolicy:
   - text: 'By chatting to me you agree to our privacy policy, which you can read here:
       https://rasa.com/privacy-policy/.'
+  utter_installation_with_conda:
+  - text: Ok, install the Rasa Stack by executing 'conda install rasa_core' on your
+      command line.
+  utter_installation_with_pip:
+  - text: Ok, install the Rasa Stack by executing 'pip install rasa_core' on your
+      command line.
   utter_moreinformation:
   - text: Sure! Let's get to know each other first 😉
   utter_must_accept:
   - text: We can't speak until you accept.
+  utter_nicetomeeyou:
+  - text: Thank you. It is a pleasure to meet you as well!
+  - text: It is nice to meet you too!
+  - text: Pleased to meet you too!
+  - text: Likewise!
   utter_nlu_entity_tutorial:
   - text: 'Our community member Bhavani Ravi wrote an excellent blog post on entity
       extraction: https://hackernoon.com/entity-extraction-demistifying-rasanlu-part-3-13a460451573
@@ -513,6 +740,10 @@ templates:
   - text: 'We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/.'
   utter_switch_luis:
   - text: 'We have a guide for migrating from LUIS here: http://rasa.com/docs/getting-started/luis/.'
+  utter_telljoke:
+  - text: Why are eggs not very much into jokes? - Because they could crack up.
+  - text: Do you know a tree’s favorite drink? - Root beer!
+  - text: Why do the French like to eat snails so much? - They can’t stand fast food.
   utter_tensorflow:
   - text: For {language}, you can only use the tensorflow_embedding pipeline
   utter_thank_suggestion:
