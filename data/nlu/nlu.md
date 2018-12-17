@@ -1,24 +1,603 @@
-## intent:ask_faq_platform
-- what is rasa platform
-## intent:ask_faq_languages
-- what languages does rasa support
-## intent:ask_faq_tutorialcore
-- tutorial for NLU and core
-## intent:ask_faq_tutorialnlu
-- tutorial for NLU and core
-## intent:ask_faq_opensource
-- is rasa open source
-## intent:ask_faq_voice
-- rasa & voice / alexa
-## intent:ask_faq_slots
-- what are slots
-## intent:ask_faq_channels
-- what channels does rasa support
-## intent:ask_faq_differencecorenlu
-- difference core and NLU
-
 ## intent:ask_faq_python_version
-- What Python version should I use?
+- which python version should i install
+- what version of python
+- which python do you support?
+- what python version do i install
+- what is python version required?
+- python version
+- what version does python needs
+- Which version of Python to install?
+- which version of python do i need
+- Which python version should I install to run Rasa example?
+
+## intent:ask_faq_channels
+- No, I mean how it is possible to use Skype as channel?
+- what channels do you support?
+- what chat channels does rasa uses
+- Channels
+- channels supported by Rasa
+- what are the channels Rasa NLU supports
+- which UI channel is used by Rasa ?
+- which messaging channels does rasa support?
+- which particular messaging channels are supported by rasa?
+- what are the messaging channels supported by rasa?
+- which messaging channels are supported by rasa?
+- rasa supports which messaging channels?
+- which messaging channels can I use with rasa?
+- which messaging channels can be used with rasa?
+- which messaging channels are compatible with rasa?
+- what are the messaging channels that can be used with rasa?
+- rasa can use which different messaging channels?
+- WHAT MESSAGING PORTALS DOES RASA SUPPORT?
+- DOES RASA SUPPORT MESSENGER?
+- DOES RASA SUPPORT THE WHATS APP?
+- DOES RASA SUPPORT SMS?
+- Do you know which messaging channels rasa supports?
+- Can you tell which messaging channels does rasa support?
+- Rasa supports some messaging channels, what are those?
+- What channels of communication does rasa support?
+
+## intent:ask_faq_differencecorenlu
+- What makes [core](product) and [nlu](product) different?
+- what is the main difference between [core](product) and [nlu](product)?
+- what is the primary difference between [core](product) and [nlu](product)?
+- what would you say the difference is between [core](product) and [nlu](product)?
+- what differences are there between [core](product) and [nlu](product)?
+- what differences exist between [core](product) and [nlu](product)?
+- what is different about [core](product) compared to [nlu](product)?
+- what makes [core](product) different from [nlu](product)?
+- what makes [core](product) and [nlu](product) unique from each other?
+- what are the primary areas of difference between [core](product) and [nlu](product)?
+- Do you know the difference between [core](product) and [nlu](product)?
+- What is the Similarities between [core](product) and [nlu](product)?
+- How does [core](product) differ to [nlu](product)?
+- What does [core](product) offer that [nlu](product) does not?
+- Is [nlu](product) different to [core](product) and, if so, how?
+- How does [nlu](product) contrast to [core](product)?
+- What sets [nlu](product) apart from [core](product)?
+- How does [core](product) compare to [nlu](product)?
+- What makes [core](product) distinct to [nlu](product)?
+- Do you know the difference between [core](product) and [nlu](product)?
+- What does [core](product) and [nlu](product) mean?
+- What makes [core](product) different from [nlu](product)?
+- What are some ways that [nlu](product) is different from [core](product)?
+- List the dissimilar qualities of [core](product) and [nlu](product)
+- How do [core](product) and [nlu](product) differ?
+- What makes [core](product) and [nlu](product) incompatible?
+- How do [core](product) and [nlu](product) conflict?
+- What facts diverge [core](product) from [nlu](product)?
+- In what ways are [core](product) and [nlu](product) unalike?
+- what is the difference between [core](product) and [nlu](product)
+- what is the difference between [core](product) and [nlu](product)
+- diffrence between rasa [core](product) and rasa [nlu](product)
+- rasa [core](product) vs rasa [nlu](product)
+- what's the difference between [core](product) and [nlu](product)?
+
+## intent:ask_faq_languages
+- does Rasa support other languages like spanish?
+- what language does rasa support?
+- which language do you support?
+- which languages supports rasa
+- can I use rasa also for another laguage?
+- [german](language)?
+- languages supported
+- what about languages supported in rasa?
+- can rasa speak [portuguese](language)?
+- How can I change the language
+- language
+- which languages do you support
+- Hello, rasa supports [spanish](language)?
+- What language you support?
+- What language u support?
+- your NLU understand [spanish](language)?
+- which languages are supported?
+- is it available in [Spanish](language)?
+- How many languages you can support?
+- Can I use Rasa with Thai language
+- What languages can you use?
+- how many natural language that rasa supported?
+- what language supported by rasa?
+- what language supported by rasa ?
+- need to use [portuguese](language)
+- which language can I use with rasa? 
+- my bot can be in [italian](language)?
+- chatbot language ?
+- I want Vietnamese language processing
+- I want to add Romanian language support
+- languages
+- support for serbian language
+- Does rasa support different languages
+
+## intent:ask_faq_opensource
+- Is Rasa open source
+- is rasa considered open source software?
+- is rasa open source?
+- is the software rasa open source?
+- is rasa an open source software?
+- would you consider rasa open source software?
+- could I call rasa open source software?
+- would rasa fall into the category of open source software?
+- would rasa be open source software?
+- would you call rasa open source software?
+- would people consider rasa an open source software?
+- Is rasa open source?
+- Is the rasa software open source?
+- The rasa software, is that open source?
+- Could you tell me whether rasa is open source or not?
+- How do I find out if rasa is open source?
+- Is Rasa a software formatted as open source?
+- would an example of open source software be rasa?
+- is rasa a type of open source software?
+- is rasa software that is classified as open source?
+- does rasa fall into the open source software category?
+- does rasa use open source software?
+- is rasa like an open source software
+- is this open source license
+
+## intent:ask_faq_platform
+- can someone help me with infos about the rasa platform
+- I want information about the platform
+- we built a bot with rasa but now we're interested in the platform
+- i want to learn more about Rasa Platform
+- what is the platform?
+- what is platform
+- what is the platform
+- what is the rasa platform
+- Can you tell me about the Platform?
+- can you tell me about the platform?
+- Tell me about rasa platform
+- what is platform?
+- tell me about rasa platform
+- platform functionalities
+- tell me more about rasa platform
+- what is rasa platform
+- Tell me about your platform
+- what is rasa platform?
+- tell me what is platform
+
+## intent:ask_faq_slots
+- how do slots work
+- In Rasa, what are slots used for?
+- What are slots?
+- slots
+- slots
+- help mi with slots
+- help mi with slots
+- tell me about slots
+- I need to know about slot filling 
+- I need to know about slot filling 
+- how to keep button system for slot selection
+- how to keep button system for slot selection
+- how can we keep buttons to get slots 
+- how can we keep buttons to get slots 
+- what are slots
+- what about slots
+- how slots are filled
+- how slots are filled
+- where slots getting values
+- how to set text slot without mentioned json
+- where slots getting values
+- what is slots
+- what is slots
+- tell me the slots?
+- Not sure what slots are?
+- slots, what do youi mean?
+- Not sure what slots are.
+- could you inform me of the meaning of slots?
+- I'd like to know the meaning of slots
+- slots are what exactly?
+- what do you think slots are?
+- I dunno what a slot is
+- What is the definition of slots
+- do you know what slots are?
+- what do you mean by slots?
+- what slots are?
+- What's the slots?
+- what slots are there?
+- which are the slots?
+- how are the slots?
+- which slots are there?
+
+
+## intent:ask_faq_voice
+- can I form a voice bot with rasa?
+- with rasa can I form a voice bot
+- It is possible to build a voice bot with rasa?
+- Can I use rasa to build a voice bot?
+- I'd like to build a voice bot with rasa.
+- I'd like to use rasa to build a voice bot.
+- Is it possible to use rasa to build a voice bot?
+- How can I build a voice bot with rasa?
+- How can I use to rasa to build a voice bot?
+- How can I build my voice bot using rasa?
+- How to build a voice bot using rasa?
+- How to use rasa to build a voice bot.
+- Can I build a rasa voice bot?
+- Could I build a rasa voice bot?
+- Is it possible to build a voice bot with rasa?
+- How could I construct a voice bot with rasa?
+- Can one make a voice bot with rasa?
+- what is the chance of building a rasa voice bot?
+- Building a rasa voice bot?
+- I can build a voice bot with rasa?
+- I could build a voice bot with rasa?
+- How to build a voice bot?
+- How to build a voice bot with rasa?
+- Can you build a voice bot using rasa?
+- Do you know how to build a voice bot with rasa?
+- Building a voice bot using rasa.
+- Rasa voice bot building.
+- What to do if I want to build a voice bot using rasa?
+- What can I do to build a voice bot with rasa?
+- When is the best time to build a voice bot with rasa?
+- When can I build a voice bot using rasa?
+- I can build a voice bot with rasa, right?
+- Will it be correct if I said I can build a voice bot with rasa?
+- can a voice bot be built using rasa?
+- can rasa be used to build a voice bot?
+- rasa can't be used to build a voice bot, can it?
+- Is rasa suitable to build voice bots?
+- Do you see an application of rasa in voice bot building?
+- Is rasa a good fit for building a voice bot?
+- Is rasa any good for building a voice bot?
+- Do you know if I can build a voice bot using rasa?
+- i want to build a voice bot 
+- can i build a voice bot
+- can i build a voice bot with rasa?
+
+## intent:ask_howbuilt
+- How were you built?
+- How were you made?
+- Tell me how you were made?
+- Let me know how you were made exactly
+- I'd like to know how you were created
+- Can you give me an idea as to how you were created?
+- I want to know how you were formed
+- What was the process for making you?
+- Can you explain how you were created?
+- Specify how you were created?
+- I'd like to know how you were put together?
+- Can you say how you were constructed?
+- How were you made?
+- in what way were you made?
+- How were you made into who you are?
+- How were you devised?
+- How exactly were you made?
+- How exactly were you devised?
+- so how were you made?
+- How did you come to be?
+- How were you made?
+- How were you constructed?
+- How were you formed?
+- How did they make you?
+- How did they build you?
+- How did they create you?
+- How were you made?
+- Do you know how you were made?
+- Do you know how you were built?
+- What process was used to create you?
+- What process was used to build you?
+- How did you come into being?
+- How were you conceived?
+- In which manner were you devised?
+- How were you constructed?
+- In what way were you shaped?
+- How were you formed?
+- By what means were you made?
+- You originated through what means?
+- How were you set up?
+- By what method were you fashioned?
+
+## intent:ask_howold
+- whats your age?
+- how old?
+- what's your age?
+- when were you born?
+- what is your birthday?
+- when is your birthday?
+- how many years old are you?
+- do you know how old you are?
+- what is your exact age?
+- what year were you born?
+- can you tell me your age?
+- What is your age?
+- What is your birthdate?
+- How old will you be on your next birthday?
+- When do you celebrate your day of birth?
+- How old were you on your last birthday?
+- How many candles were on your last birthday cake?
+- Do you have friends the same age as you, if so, how old are they?
+- Tell me your day, month and year of birth.
+- Whats your age?
+- and you are how many years old?
+- whats your birth year?
+- what age were you when you celebrated your last birthday?
+- how old were you when you celebrated your last birthday?
+- tell me your age?
+- how about your age
+- how old were you on your last birthday?
+- what age are you
+- how old will you be this year?
+- What is your age?
+- What year were you born?
+- How long have you been around?
+- How long have you been alive?
+- What was your age on your last birthday?
+- What will be your age on your next birthday?
+- How many years have you lived?
+- How many years have you been alive?
+- How long have you occupied the earth?
+
+## intent:ask_isbot
+- are you a bot?
+- are you a real bot?
+- are you a bot
+- are you really a bot
+- are you a robot
+- are you a robot
+- are you a rasa bot?
+- are you a rasa bot?
+- what are you, a bot?
+- tell me, are you a bot?
+- are you a Skynet ?
+- are you a chatbot
+- are you ai
+- are you artificial intelligence
+- are you artificial
+- i guess you are a chatbot
+- you are a robot
+- you are ai
+- you are chatbot
+- are you bot
+- are you a bot ?
+- you're a bot 
+- Are you the bot?
+- Hi there, are you the bot?
+- Are you a chat bot?
+- are you rasa bot?
+- Ar you a bot ?
+- are you robot
+- are you real
+- What are you ?
+- So I'm here Today to ask [one](number:1) very simple question, what are you ?
+- are you real lol
+- cuz you are a bot
+- are you bot?
+- oh are you chatbot?
+- are you sure that you're a bot?
+- are you a BOT 
+
+## intent:ask_languagesbot
+- Which languages do you speak?
+- What are the languages you can speak?
+- In which languages can you speak?
+- What languages do you know?
+- What languages are you fluent in?
+- In which languages are you fluent?
+- What languages can you converse in?
+- What languages do you know how to use?
+- Which languages are you familiar with?
+- What languages can you use?
+- what languages are you familiar with?
+- what languages you know?
+- In what languages are you fluent enough?
+- what languages you can speak ?
+- what languages are you comfortable speaking at?
+- what languages are you good at speaking?
+- what languages you are well versed ?
+- what languages you can be comfortable speaking?
+- what languages you prefer more speaking at?
+- what languages you can handle well?
+- Do you know any other languages?
+- Do you speak any other languages?
+- What languages do you know?
+- What languages do you speak?
+- What do you speak?
+- Speak any other languages?
+- Can you communicate in any other languages?
+- What languages can you communicate in?
+- How many languages do you know?
+- what languages do you know?
+- tell me some languages you know?
+- do you speak any other languages?
+- what else do you know besides English?
+- are you bilingual?
+- are you multilingual?
+- what foreign languages do you know?
+- what foreign languages are you fluent in?
+
+## intent:ask_restaurant
+- restaurants
+- can i be shown a gluten free restaurant
+- i want a french restaurant
+- i'm looking for a Chinese restaurant
+- I need a new restaurant
+- help me find restaurant
+- I'm gonna need help finding a restaurant
+- Hey help me find a restaurant
+- How can you help me find a restaurant.
+- Where is the restaurant
+- Show me how to find a restaurant
+- I need to find this restaurant
+- Help me with finding this restaurant
+- Hey, can you help me with locating this restaurant.
+- Find me a place to eat
+- Can you recommend a restaurant open right now
+- What's the closest restaurant open near me
+- I am hungry, find me some place to go
+- Suggest me a good restaurant around
+- Show me the closest open restaurant
+- What's a good place to eat nearby
+- Recommend me a restaurant around here.
+- Pick a restaurant for me, please
+- Help me find a restaurant
+- Can you find a restaurant for me?
+- Find a restaurant for me?
+- Would you find me a restaurant?
+- Would you find a restaurant for me?
+- Could you find me a restaurant?
+- Could you find a restaurant for me?
+- Could you find me a restaurant to eat at?
+- Find a restaurant for me to eat at.
+- Find me a restaurant where I can eat.
+- Find a restaurant for me where I can eat.
+- I need a restaurant.
+- Can you find me a restaurant?
+- Where should I eat?
+
+## intent:ask_time
+- what is the current time?
+- what is the time in Sydney?
+- whats the time now
+- what is the time ?
+- what is time in US ?
+- what is time is US ?
+- what is time is USA ?
+- what time it is
+- What is the time?
+- Can you give me the time?
+- Time?
+- Do you know the time?
+- Can you tell the time?
+- Give me the time.
+- Tell me the time.
+- Could you tell me what time is it?
+- Excuse me, what time is it?
+- Do you know what time it is?
+- Could you tell me the time?
+- Could you tell me the time, please?
+- What is the time?
+- Do you know the time?
+- Would you tell me what time it is?
+- Time, please!
+- Pardon me, but do you know the time?
+- Time?
+- What's the time?
+- Do you know what time it is?
+- What's the current time?
+- What time is it right now?
+- Do you have the time?
+- Can you tell me what time it is?
+- Hi, I need the time.
+- I need to know what time it is.
+- Tell me the time.
+- What is the time?
+- What's the time right now?
+- What is the current time?
+- Can you tell me the time?
+- What might the time be?
+- What is the hour and minute right now?
+- What time have we got?
+- What time is it right now?
+
+## intent:ask_whatismyname
+- what is my name?
+- May i know my name?
+- What is my name?
+- What do I call myself?
+- Tell me my name.
+- Explain my name to me.
+- What could be my name?
+- What name do I go by?
+- What name should I recognize for myself?
+- what's my name?
+- can you tell me my name?
+- What is my name?
+- Do I have a name?
+- Do I have a name? What is it?
+- What was I named?
+- Say my name.
+- Do you know my name?
+- What do people call me?
+- Can you tell me my name?
+- What else do people call me?
+- I have a name, what is it?
+- Tell me my name
+- I'd like to know my name
+- Inform me what my name is
+- Please let me know what my name is
+- Can you tell me what I am called?
+- I'd like to know what my name is
+- What is the name I was given?
+- What does everyone call me?
+- What am I called?
+- What did my parents name me?
+- What do my colleagues call me?
+- What would be the name on my tombstone?
+- Do you know what my name is?
+- What is my first name?
+- What is my full name?
+- What do people call me?
+- What exactly is my name?
+
+
+## intent:ask_wherefrom
+- where do you live
+- where are you from?
+- So where are you from
+- Where are you?
+- Where were you born?
+- What city were you born in?
+- Where did you grow up?
+- What state were you born in?
+- What country were you born in?
+- Where do you come from?
+- Where were you at before you were here?
+- Where from?
+- Do you know where you come from?
+- where's your home town?
+- what country are you from?
+- are you from around here?
+- where did you grow up?
+- where are your parents from?
+- where did you spend your youth?
+- where did you come from?
+- Where were you born?
+- Where do you consider home?
+- What city do you claim to for your birth?
+- What citizenship do you lay claim to?
+- What is your heritage?
+- What is your birthplace?
+- Where did you grow up?
+- You were conceived in what location?
+- What is your root?
+- What is your origin?
+- From where did you come?
+- Where did you come from?
+- Where did you originate?
+- Where are your roots?
+- Where are your origins?
+- What area are you from?
+- What location are you from?
+- What's the name of the place you came from?
+
+## intent:ask_whoami
+- Who am I?
+- Okay who am I?
+- WHo am I
+- Tell me who am I?
+- Tell me who I am?
+- Do you know who I am?
+- Can you tell me who I am?
+- How do I discover who I am?
+- How can I determine who I am?
+- Do you know who am I?
+- Can you tell me who am I?
+- How do I discover who am I?
+- How can I determine who am I?
+- who are I ?
+- who may i ?
+- Shall i know who am i?
+- Tell me who I am.
+- How do I identify myself?
+- Who could I be?
+- tell me who I am?
+- what's my identity?
+- tell me what my identity is?
+- can you tell me what I am?
+- can you tell me what my identity is?
+- can you tell me who I am?
+- who am i
 
 ## intent:ask_builder
 - can you share your boss with me?
