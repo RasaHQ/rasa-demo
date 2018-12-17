@@ -1,4 +1,4 @@
-# Sara - the Rasa Demo Bot 
+# Sara - the Rasa Demo Bot
 [![Build Status](https://travis-ci.com/RasaHQ/rasa-demo.svg?branch=master)](https://travis-ci.com/RasaHQ/rasa-demo)
 
 ## :surfer: Introduction
@@ -27,7 +27,9 @@ pip install -e .
 This will install the bot and all of its requirements.
 Note that it was written in Python 3 so might not work with PY2.
 
-To train the core model: `make train-core`
+To train the core model: `make train-core` (this will take 2h+ to train,
+if you want to train it faster, try the training command with
+`--augmentation 0`)
 
 To train the NLU model: `make train-nlu`
 
@@ -42,13 +44,9 @@ specifically `ActionSubscribeNewsletter` and `ActionStoreSalesInfo`. For these
 to run you would need to have your own MailChimp newsletter and a Google sheet
 to connect to.
 
-If you would like to run Sara on your website, you need to install the
-[Rasa Addons](https://github.com/mrbot-ai/rasa-addons) repo:
-```
-pip install git+https://github.com/mrbot-ai/rasa-addons@0.3.3
-```
-Then follow the instructions [here](https://github.com/mrbot-ai/rasa-webchat)
-to place the chat widget on your website.
+If you would like to run Sara on your website, follow the instructions
+[here](https://github.com/mrbot-ai/rasa-webchat) to place the chat widget on
+your website.
 
 ## 👩‍💻 Overview of the files
 
@@ -61,6 +59,8 @@ to place the chat widget on your website.
 `domain.yml` - the domain file for Core
 
 `nlu_tensorflow.yml` - the NLU config file
+
+`policy.yml` - the Core config file
 
 
 ## :gift: License
