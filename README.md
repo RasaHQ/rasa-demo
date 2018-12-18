@@ -27,7 +27,7 @@ pip install -e .
 This will install the bot and all of its requirements.
 Note that it was written in Python 3 so might not work with PY2.
 
-To train the core model: `make train-core` (this will take 2h+ to train,
+To train the core model: `make train-core` (this will take 2h+ and a significant amount of memory to train,
 if you want to train it faster, try the training command with
 `--augmentation 0`)
 
