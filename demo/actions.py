@@ -553,7 +553,7 @@ class CommunityEventAction(Action):
             if not events_for_location and events:
                 next_event = events[0]
                 dispatcher.utter_message("Sorry, there is currently no event "
-                                         "at your location. However, the next"
+                                         "at your location. However, the next "
                                          "event is the {} in {} on {}."
                                          "".format(next_event.name_as_link(),
                                                    next_event.location,
@@ -564,7 +564,7 @@ class CommunityEventAction(Action):
                                          "".format(location,
                                                    next_event.name_as_link(),
                                                    next_event.formatted_date()))
-        else:
+        elif events:
             next_event = events[0]
             dispatcher.utter_message("The next event is the {} in {} on {}."
                                      "".format(next_event.name_as_link(),
