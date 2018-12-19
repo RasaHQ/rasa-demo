@@ -448,6 +448,12 @@ templates:
       buttons:
       - title: "Restart"
         payload: "/restart"
+  utter_not_sure:
+    - text: "Hmm, not sure what you mean..."
+  utter_react_negative:
+    - text: "😢"
+  utter_react_positive:
+    - text: "😍"
 
 
 actions:
@@ -576,6 +582,7 @@ actions:
   - utter_thanks_for_feedback
   - utter_restart_with_button
   - utter_ask_for_feedback_message
+  - utter_not_sure
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -597,6 +604,8 @@ actions:
   - action_greet_user
   - action_default_fallback
   - action_default_ask_affirmation
+  - utter_react_positive
+  - utter_react_negative
 
 forms:
   - suggestion_form

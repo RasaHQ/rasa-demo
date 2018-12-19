@@ -945,6 +945,12 @@
 * affirm
     - utter_what_help
 
+## anything else?
+    - utter_anything_else
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
 ## positive reaction
 * react_positive
     - utter_react_positive
