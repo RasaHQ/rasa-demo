@@ -113,9 +113,12 @@ class ActionChitchat(Action):
         intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_builder', 'ask_weather', 'ask_howdoing', 'ask_whatspossible', 'ask_whatisrasa', 'ask_isbot',
-                      'ask_howold', 'ask_languagesbot', 'ask_restaurant', 'ask_time', 'ask_wherefrom', 'ask_whoami',
-                      'handleinsult', 'nicetomeeyou', 'telljoke', 'ask_whatismyname', 'howwereyoubuilt', 'ask_whoisit']:
+        if intent in ['ask_builder', 'ask_weather', 'ask_howdoing',
+                      'ask_whatspossible', 'ask_whatisrasa', 'ask_isbot',
+                      'ask_howold', 'ask_languagesbot', 'ask_restaurant',
+                      'ask_time', 'ask_wherefrom', 'ask_whoami',
+                      'handleinsult', 'nicetomeeyou', 'telljoke',
+                      'ask_whatismyname', 'howwereyoubuilt', 'ask_whoisit']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
@@ -130,9 +133,11 @@ class ActionFaqs(Action):
         intent = tracker.latest_message['intent'].get('name')
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_faq_platform', 'ask_faq_languages', 'ask_faq_tutorialcore', 'ask_faq_tutorialnlu',
-                      'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots', 'ask_faq_channels',
-                      'ask_faq_differencecorenlu', 'ask_faq_python_version', 'ask_faq_community_size',
+        if intent in ['ask_faq_platform', 'ask_faq_languages',
+                      'ask_faq_tutorialcore', 'ask_faq_tutorialnlu',
+                      'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots',
+                      'ask_faq_channels', 'ask_faq_differencecorenlu',
+                      'ask_faq_python_version', 'ask_faq_community_size',
                       'ask_faq_what_is_forum']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
@@ -246,7 +251,8 @@ class ActionStoreUnknownNluPart(Action):
     def run(self, dispatcher, tracker, domain):
         # if we dont know the part of nlu the user wants information on,
         # store his last message in a slot.
-        return [SlotSet('unknown_nlu_part', tracker.latest_message.get('text'))]
+        return [SlotSet('unknown_nlu_part',
+                tracker.latest_message.get('text'))]
 
 
 class ActionStoreBotLanguage(Action):
@@ -279,9 +285,11 @@ class ActionStoreEntityExtractor(Action):
 
     def run(self, dispatcher, tracker, domain):
         spacy_entities = ['place', 'date', 'name', 'organisation']
-        duckling = ['money', 'duration', 'distance', 'ordinals', 'time', 'amount-of-money', 'numbers']
+        duckling = ['money', 'duration', 'distance', 'ordinals', 'time',
+                    'amount-of-money', 'numbers']
 
-        entity_to_extract = next(tracker.get_latest_entity_values('entity'), None)
+        entity_to_extract = next(tracker.get_latest_entity_values('entity'),
+                                 None)
 
         extractor = 'ner_crf'
         if entity_to_extract in spacy_entities:
@@ -341,9 +349,9 @@ class ActionStackInstallationCommand(Action):
         package_manager = tracker.get_slot('package_manager')
 
         if package_manager == 'conda':
-            dispatcher.utter_template('utter_installation_with_conda' , tracker)
+            dispatcher.utter_template('utter_installation_with_conda', tracker)
         else:
-            dispatcher.utter_template('utter_installation_with_pip' , tracker)
+            dispatcher.utter_template('utter_installation_with_pip', tracker)
 
         return []
 
@@ -537,8 +545,9 @@ class CommunityEventAction(Action):
         events = self._get_events()
         event_items = ["- {} in {}".format(e.name, e.location) for e in events]
         locations = "\n".join(event_items)
-        dispatcher.utter_message("We currently have these events:\n"
-                                 "" + locations)
+        dispatcher.utter_message("Here are the next Rasa events:\n"
+                                 "" + locations +
+                                 "\nWe hope to see you at them!")
 
     def _utter_next_event(self,
                           tracker: Tracker,
@@ -552,7 +561,7 @@ class CommunityEventAction(Action):
                                    if e.location == location]
             if not events_for_location and events:
                 next_event = events[0]
-                dispatcher.utter_message("Sorry, there is currently no event "
+                dispatcher.utter_message("Sorry, there are currently no events "
                                          "at your location. However, the next "
                                          "event is the {} in {} on {}."
                                          "".format(next_event.name_as_link(),
@@ -561,12 +570,14 @@ class CommunityEventAction(Action):
             elif events_for_location:
                 next_event = events_for_location[0]
                 dispatcher.utter_message("The next event in {} is the {} on {}."
+                                         " Hope to see you there!"
                                          "".format(location,
                                                    next_event.name_as_link(),
                                                    next_event.formatted_date()))
         elif events:
             next_event = events[0]
-            dispatcher.utter_message("The next event is the {} in {} on {}."
+            dispatcher.utter_message("The next event is the {} in {} on {}. "
+                                     "Hope to see you there!"
                                      "".format(next_event.name_as_link(),
                                                next_event.location,
                                                next_event.formatted_date()))
