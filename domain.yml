@@ -442,7 +442,7 @@ templates:
   utter_ask_faq_differencecorenlu:
     - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
   utter_ask_faq_community_size:
-    - text: "Rasa has more than 2000 community members and 200 github contributors 🚀"
+    - text: "Rasa has more than 2000 community members and 200 github contributors 🚀."
   utter_ask_faq_what_is_forum:
     - text: "Our [forum](https://forum.rasa.com) is the place where all the community buzz happens. Join discussions, get the answers to your technical questions and stay up-to-date with what’s happening at Rasa."
   utter_ask_voice:
