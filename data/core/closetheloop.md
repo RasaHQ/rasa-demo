@@ -795,3 +795,98 @@
 * enter_data
     - utter_not_sure
     - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 15f92cc91e4e4c86826ffd023f4d1ef7 on December 16th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* how_to_get_started{"product":"nlu"}
+    - slot{"product":"nlu"}
+    - utter_quickstart_nlu_only
+    - utter_anything_else
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* ask_faq_languages
+    - action_store_problem_description
+    - slot{"problem_description":"what languages do you support?"}
+    - action_faqs
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* ask_faq_languages
+    - action_store_problem_description
+    - slot{"problem_description":"what languages do you support?"}
+    - action_faqs
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
