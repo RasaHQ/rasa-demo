@@ -390,6 +390,10 @@ class ActionGreetUser(Action):
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
             dispatcher.utter_template("utter_ask_goal", tracker)
             return [SlotSet('shown_privacy', True)]
+        elif intent == 'get_started_step4':
+            dispatcher.utter_template("utter_greet", tracker)
+            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+            return [SlotSet('shown_privacy', True)]
         elif intent[:-1] == 'get_started_step':
             dispatcher.utter_template("utter_greet", tracker)
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
