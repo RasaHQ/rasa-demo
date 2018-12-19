@@ -39,17 +39,21 @@ class CommunityEvent(object):
 
 
 def get_community_events() -> List[CommunityEvent]:
+    """Returns list of community events sorted ascending by their date."""
     from bs4 import BeautifulSoup
     import requests as r
 
-    community_page = r.get('https://rasa.com/community/join/').content
-    soup = BeautifulSoup(community_page, 'html.parser')
+    response = r.get('https://rasa.com/community/join/')
 
-    events = soup.find('ul', attrs={'class': 'bulleted'}).find_all('li')
-    events = [CommunityEvent.from_html(e) for e in events]
-    events = [e for e in events if e is not None]
+    if response.status_code == 200:
+        community_page = response.content
 
-    return sorted(events, key=lambda e: e.date)
+        soup = BeautifulSoup(community_page, 'html.parser')
 
+        events = soup.find('ul', attrs={'class': 'bulleted'}).find_all('li')
+        events = [CommunityEvent.from_html(e) for e in events]
+        events = [e for e in events if e is not None]
 
+        return sorted(events, key=lambda e: e.date)
 
+    return []
