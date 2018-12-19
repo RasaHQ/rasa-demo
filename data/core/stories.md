@@ -944,3 +944,11 @@
     - utter_anything_else
 * affirm
     - utter_what_help
+
+## positive reaction
+* react_positive
+    - utter_react_positive
+
+## negative reaction
+* react_negative
+    - utter_react_negative

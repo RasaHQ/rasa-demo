@@ -71,6 +71,8 @@ intents:
   - ask_faq_channels
   - ask_faq_differencecorenlu
   - ask_faq_python_version
+  - react_negative
+  - react_positive
 
 slots:
   budget:
