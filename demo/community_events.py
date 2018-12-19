@@ -42,6 +42,7 @@ def get_community_events() -> List[CommunityEvent]:
     """Returns list of community events sorted ascending by their date."""
     from bs4 import BeautifulSoup
     import requests as r
+    from datetime import datetime
 
     response = r.get('https://rasa.com/community/join/')
 
@@ -52,7 +53,9 @@ def get_community_events() -> List[CommunityEvent]:
 
         events = soup.find('ul', attrs={'class': 'bulleted'}).find_all('li')
         events = [CommunityEvent.from_html(e) for e in events]
-        events = [e for e in events if e is not None]
+
+        now = datetime.now()
+        events = [e for e in events if e is not None and e.date > now]
 
         return sorted(events, key=lambda e: e.date)
 
