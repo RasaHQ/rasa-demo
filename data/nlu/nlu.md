@@ -2409,7 +2409,7 @@
 - Sidney
 - Delhi
 - Mumbai
-- Tokio
+- Tokyo
 - Rio de Janeiro
 - Beijing
 - Guangzhou
