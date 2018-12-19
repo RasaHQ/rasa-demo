@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+from datetime import datetime
 from typing import Text, Dict, Any, List
 
 from rasa_core_sdk import Action, Tracker
@@ -131,7 +132,8 @@ class ActionFaqs(Action):
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in ['ask_faq_platform', 'ask_faq_languages', 'ask_faq_tutorialcore', 'ask_faq_tutorialnlu',
                       'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots', 'ask_faq_channels',
-                      'ask_faq_differencecorenlu', 'ask_faq_python_version']:
+                      'ask_faq_differencecorenlu', 'ask_faq_python_version', 'ask_faq_community_size',
+                      'ask_faq_what_is_forum']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
@@ -485,3 +487,86 @@ class FeedbackMessageForm(FormAction):
         dispatcher.utter_template('utter_restart_with_button', tracker)
 
         return [FollowupAction('action_listen')]
+
+
+class CommunityEventAction(Action):
+    """Utters Rasa community events."""
+
+    def __init__(self):
+        self.last_event_update = None
+        self.events = None
+        self.events = self._get_events()
+
+    def name(self) -> Text:
+        return "action_get_community_events"
+
+    def _get_events(self) -> List['CommunityEvent']:
+        if self.events is None or self._are_events_expired():
+            from demo.community_events import get_community_events
+            logger.debug("Getting events from website.")
+            self.last_event_update = datetime.now()
+            self.events = get_community_events()
+
+        return self.events
+
+    def _are_events_expired(self) -> bool:
+        # events are expired after 1 hour
+        return (
+            self.last_event_update is None or
+            (datetime.now() - self.last_event_update).total_seconds() > 3600)
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]
+            ) -> List['Event']:
+        intent = tracker.latest_message['intent'].get('name')
+        events = self._get_events()
+
+        if not events:
+            dispatcher.utter_template("utter_no_community_event", tracker)
+        elif intent == 'ask_which_events':
+            self._utter_event_overview(dispatcher)
+        elif intent == 'ask_when_next_event':
+            self._utter_next_event(tracker, dispatcher)
+
+        return []
+
+    def _utter_event_overview(self,
+                              dispatcher: CollectingDispatcher) -> None:
+        events = self._get_events()
+        event_items = ["- {} in {}".format(e.name, e.location) for e in events]
+        locations = "\n".join(event_items)
+        dispatcher.utter_message("We currently have these events:\n"
+                                 "" + locations)
+
+    def _utter_next_event(self,
+                          tracker: Tracker,
+                          dispatcher: CollectingDispatcher
+                          ) -> None:
+        location = next(tracker.get_latest_entity_values('location'), None)
+        events = self._get_events()
+
+        if location:
+            events_for_location = [e for e in events
+                                   if e.location == location]
+            if not events_for_location and events:
+                next_event = events[0]
+                dispatcher.utter_message("Sorry, there is currently no event "
+                                         "at your location. However, the next "
+                                         "event is the {} in {} on {}."
+                                         "".format(next_event.name_as_link(),
+                                                   next_event.location,
+                                                   next_event.formatted_date()))
+            elif events_for_location:
+                next_event = events_for_location[0]
+                dispatcher.utter_message("The next event in {} is the {} on {}."
+                                         "".format(location,
+                                                   next_event.name_as_link(),
+                                                   next_event.formatted_date()))
+        elif events:
+            next_event = events[0]
+            dispatcher.utter_message("The next event is the {} in {} on {}."
+                                     "".format(next_event.name_as_link(),
+                                               next_event.location,
+                                               next_event.formatted_date()))

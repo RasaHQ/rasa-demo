@@ -15,6 +15,7 @@ entities:
   - entity
   - user_type
   - package_manager
+  - location
 
 intents:
   - enter_data: {use_entities: false}
@@ -57,6 +58,11 @@ intents:
   - source_code
   - suggestion
   - install_rasa
+  - ask_which_events
+  - ask_when_next_event
+  - ask_why_contribute
+  - ask_how_contribute
+  - ask_question_in_forum
   - get_started_step1
   - get_started_step2
   - get_started_step3
@@ -73,6 +79,8 @@ intents:
   - ask_faq_python_version
   - react_negative
   - react_positive
+  - ask_faq_community_size
+  - ask_faq_what_is_forum
 
 slots:
   budget:
@@ -435,6 +443,10 @@ templates:
     - text: "We have a comprehensive list of connectors, but if you do not find the one you are looking for you can always create a custom connector following this guide."
   utter_ask_faq_differencecorenlu:
     - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
+  utter_ask_faq_community_size:
+    - text: "Rasa has more than 2000 community members and 200 github contributors 🚀."
+  utter_ask_faq_what_is_forum:
+    - text: "Our [forum](https://forum.rasa.com) is the place where all the community buzz happens. Join discussions, get the answers to your technical questions and stay up-to-date with what’s happening at Rasa."
   utter_ask_voice:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
   utter_getstarted_new:
@@ -454,6 +466,26 @@ templates:
     - text: "😢"
   utter_react_positive:
     - text: "😍"
+  utter_possibilities_to_contribute:
+    - text: |
+        You could for example
+        - work on small [Rasa Core](https://github.com/RasaHQ/rasa_core/labels/good%20first%20issue) or [Rasa NLU](https://github.com/RasaHQ/rasa_core/labels/good%20first%20issue) issues
+        - improve our documentation
+        - help others by answering questions on the [forum](https://forum.rasa.com)
+  utter_recommend_forum:
+    - text: "I suggest to sign up in our [forum](https://forum.rasa.com) to stay up to date on product updates, events, and resources."
+  utter_no_community_event:
+    - text: "Sorry, we currently don't have any planned community events 😞."
+  utter_describe_step4:
+    - text: "As Rasa developer you will be part of a huge community. You can ask me which events we have planned, how to contribute, or about our Rasa forum."
+  utter_reasons_to_contribute:
+    - text: |
+        Here a few reasons why you should contribute:
+        - Explore the source code in depth
+        - Check out issues and help solve them
+        - Contribute to open source software
+  utter_link_to_forum:
+    - text: "Click [here](https://forum.rasa.com) to get to the forum."
 
 
 actions:
@@ -560,6 +592,8 @@ actions:
   - utter_ask_faq_channels
   - utter_ask_faq_differencecorenlu
   - utter_ask_faq_python_version
+  - utter_ask_faq_community_size
+  - utter_ask_faq_what_is_forum
   - utter_ask_weather
   - utter_ask_builder
   - utter_ask_howdoing
@@ -583,6 +617,12 @@ actions:
   - utter_restart_with_button
   - utter_ask_for_feedback_message
   - utter_not_sure
+  - utter_no_community_event
+  - utter_describe_step4
+  - utter_reasons_to_contribute
+  - utter_possibilities_to_contribute
+  - utter_recommend_forum
+  - utter_link_to_forum
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -606,6 +646,7 @@ actions:
   - action_default_ask_affirmation
   - utter_react_positive
   - utter_react_negative
+  - action_get_community_events
 
 forms:
   - suggestion_form

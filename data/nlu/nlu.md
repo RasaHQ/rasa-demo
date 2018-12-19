@@ -245,6 +245,19 @@
 - can i build a voice bot
 - can i build a voice bot with rasa?
 
+## intent:ask_faq_community_size
+- How large is the Rasa community
+- how big is your community?
+- how many forum members do you have
+- do you have a large community
+- how many people are using Rasa
+
+## intent:ask_faq_what_is_forum
+- what is the forum
+- why should I join the forum
+- whats in the forum
+- what is the Rasa forum
+
 ## intent:ask_howbuilt
 - How were you built?
 - How were you made?
@@ -2354,3 +2367,77 @@
 
 ## synonym:conda
 - anaconda
+
+## intent:ask_which_events
+- Which community events do you have
+- Where can I meet Rasas
+- Do you have a user group
+- is there a meetup
+- is there a Rasa meetup
+- i want to meet Rasa
+
+## intent:ask_when_next_event
+- When is the next community event?
+- when is the next event in [Berlin](location)
+- is there a event in [Montreal](location)
+- is there a Rasa event in [San Francisco](location)
+- what's the next rasa event
+- whats the next community event
+- when is the next usergroup
+- do you have an event in [Berlin](location)
+
+## lookup:location
+- San Francisco
+- Montreal
+- New York
+- Washington
+- Berlin
+- Zurich
+- Hamburg
+- Frankfurt
+- Munich
+- Madrid
+- Cologne
+- Düsseldorf
+- Barcelona
+- Vienna
+- Warsaw
+- Paris
+- Rome
+- London
+- Prague
+- Sidney
+- Delhi
+- Mumbai
+- Tokyo
+- Rio de Janeiro
+- Beijing
+- Guangzhou
+- Shanghai
+- Chongqing
+- Hong Kong
+
+## intent:ask_question_in_forum
+- Hey, i want to ask a question in the forum
+- i want to get help in the forum
+- where can I find the forum
+- I have a problem
+- I need help with a problem
+- Can you help me to solve a problem?
+
+## intent:ask_why_contribute
+- why should I contribute to Rasa
+- why should I contribute
+- why should I help to improve Rasa
+- why contribute to Rasa
+
+## intent:ask_how_contribute
+- how contribute to Rasa?
+- how can I contribute to Rasa
+- how help Rasa
+- how to improve Rasa
+- how can I improve Rasa
+- I want to help to improve Rasa
+- I want to make Rasa better
+- how can I support the community
+- what can I do
