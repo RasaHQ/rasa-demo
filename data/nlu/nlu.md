@@ -2385,3 +2385,30 @@
 - whats the next community event
 - when is the next usergroup
 - do you have an event in [Berlin](location)
+
+## lookup:location
+- San Francisco
+- Montreal
+- New York
+- Washington
+- Berlin
+- Zurich
+- Hamburg
+- Frankfurt
+- Madrid
+- Barcelona
+- Vienna
+- Warsaw
+- Paris
+- Rome
+- London
+- Prague
+- Sidney
+- Delhi
+- Mumbai
+- Rio de Janeiro
+- Beijing
+- Guangzhou
+- Shanghai
+- Chongqing
+- Hong Kong
