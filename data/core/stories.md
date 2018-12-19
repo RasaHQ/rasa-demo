@@ -933,7 +933,26 @@
     - utter_thumbsup
     - utter_anything_else
 
-## anything else?
+## anything else? - yes
     - utter_anything_else
 * affirm
     - utter_what_help
+
+## anything else? - no
+    - utter_anything_else
+* deny
+    - utter_thumbsup
+
+## anything else?
+    - utter_anything_else
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## positive reaction
+* react_positive
+    - utter_react_positive
+
+## negative reaction
+* react_negative
+    - utter_react_negative

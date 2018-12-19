@@ -216,14 +216,17 @@
 * greet
     - action_greet_user
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 
 ## story number 9
 * greet
     - action_greet_user
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * deny
     - utter_nohelp
@@ -329,12 +332,14 @@
 * ask_weather
     - action_chitchat
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 
 ## story number 16
 * greet
     - action_greet_user
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 
 ## story number 17
@@ -364,6 +369,7 @@
 * deny
     - utter_nohelp
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * deny
     - utter_nohelp
@@ -371,8 +377,10 @@
     - utter_out_of_scope
     - utter_possibilities
 * enter_data{"number":5}
+    - utter_not_sure
     - utter_possibilities
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 
 ## Story from conversation with 00e7815f79e4413abb0dfb4b392f1099 on November 15th 2018
@@ -391,6 +399,7 @@
 * greet
     - action_greet_user
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * how_to_get_started
     - utter_getstarted
@@ -536,6 +545,7 @@
 * greet
     - action_greet_user
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * contact_sales
     - utter_moreinformation
@@ -622,16 +632,19 @@
     - utter_confirm_salesrequest
     - utter_ask_feedback
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * ask_weather
     - action_chitchat
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 
 ## Story from conversation with dominik on November 19th 2018
 * greet
     - action_greet_user
 * enter_data
+    - utter_not_sure
     - utter_possibilities
 * how_to_get_started
     - utter_getstarted
@@ -742,3 +755,138 @@
 * how_to_get_started{"product":"nlu"}
     - utter_getstarted
     - utter_first_bot_with_rasa
+
+## Story from conversation with cfa8bb9deaf0427498c662745431a282 on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_whatisrasa
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with cdd14d763a664a5b95e998ce165bd86f on December 16th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* how_to_get_started{"product":"stack"}
+    - slot{"product":"stack"}
+    - utter_quickstart
+    - utter_anything_else
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 15f92cc91e4e4c86826ffd023f4d1ef7 on December 16th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* how_to_get_started{"product":"nlu"}
+    - slot{"product":"nlu"}
+    - utter_quickstart_nlu_only
+    - utter_anything_else
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* ask_faq_languages
+    - action_store_problem_description
+    - slot{"problem_description":"what languages do you support?"}
+    - action_faqs
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_howdoing
+    - action_chitchat
+* ask_whoisit
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* ask_faq_languages
+    - action_store_problem_description
+    - slot{"problem_description":"what languages do you support?"}
+    - action_faqs
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* enter_data
+    - utter_not_sure
+    - utter_possibilities

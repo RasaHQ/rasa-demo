@@ -144,7 +144,7 @@
     - utter_ask_migration
 * affirm
     - utter_ask_which_tool
-* switch
+* switch OR enter_data
     - action_store_unknown_product
     - utter_no_guide_for_switch
     - utter_anything_else
