@@ -37,6 +37,11 @@ class CommunityEvent(object):
     def name_as_link(self):
         return "[{}]({})".format(self.name, self.link)
 
+    def as_kwargs(self):
+        return {'event_name': self.name_as_link(),
+                'event_location': self.location,
+                'event_date': self.formatted_date()}
+
 
 def get_community_events() -> List[CommunityEvent]:
     """Returns list of community events sorted ascending by their date."""
