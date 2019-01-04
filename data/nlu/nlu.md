@@ -2416,6 +2416,20 @@
 - Shanghai
 - Chongqing
 - Hong Kong
+- China
+- India
+- US
+- Germany
+- United States
+- UK
+- England
+- Brazil
+- France
+- Poland
+- Italy
+- Spain
+- Europe
+- Canada
 
 ## intent:ask_question_in_forum
 - Hey, i want to ask a question in the forum
