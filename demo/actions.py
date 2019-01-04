@@ -552,7 +552,7 @@ class CommunityEventAction(Action):
     def _utter_event_overview(self,
                               dispatcher: CollectingDispatcher) -> None:
         events = self._get_events()
-        event_items = ["- {} in {}".format(e.name, e.location) for e in events]
+        event_items = ["- {} in {}".format(e.name_as_link(), e.location) for e in events]
         locations = "\n".join(event_items)
         dispatcher.utter_message("Here are the next Rasa events:\n"
                                  "" + locations +
