@@ -563,23 +563,15 @@ class CommunityEventAction(Action):
                                    if e.location == location]
             if not events_for_location and events:
                 next_event = events[0]
-                dispatcher.utter_message("Sorry, there are currently no events "
-                                         "at your location. However, the next "
-                                         "event is the {} in {} on {}."
-                                         "".format(next_event.name_as_link(),
-                                                   next_event.location,
-                                                   next_event.formatted_date()))
+                dispatcher.utter_template(
+                    'utter_no_event_for_location_but_next',
+                    tracker, **next_event.as_kwargs())
             elif events_for_location:
                 next_event = events_for_location[0]
-                dispatcher.utter_message("The next event in {} is the {} on {}."
-                                         " Hope to see you there!"
-                                         "".format(location,
-                                                   next_event.name_as_link(),
-                                                   next_event.formatted_date()))
+                dispatcher.utter_template('utter_next_event_for_location',
+                                          tracker,
+                                          **next_event.as_kwargs())
         elif events:
             next_event = events[0]
-            dispatcher.utter_message("The next event is the {} in {} on {}. "
-                                     "Hope to see you there!"
-                                     "".format(next_event.name_as_link(),
-                                               next_event.location,
-                                               next_event.formatted_date()))
+            dispatcher.utter_template('utter_next_event', tracker,
+                                      **next_event.as_kwargs())
