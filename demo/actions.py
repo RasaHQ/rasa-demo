@@ -428,9 +428,7 @@ class ActionDefaultAskAffirmation(Action):
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
         first_intent_names = [intent.get('name', '')
                               for intent in intent_ranking[:2]
-                              if intent.get('name', '') not in ['deny',
-                                                                'affirm',
-                                                                'out_of_scope']]
+                              if intent.get('name', '') != 'out_of_scope']
 
         message_title = "Sorry, I'm not sure I've understood " \
                         "you correctly 🤔 Do you mean..."
@@ -444,7 +442,7 @@ class ActionDefaultAskAffirmation(Action):
                             'payload': '/{}'.format(intent[0])})
 
         buttons.append({'title': 'Something else',
-                        'payload': '/deny'})
+                        'payload': '/out_of_scope'})
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
 
