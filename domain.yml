@@ -81,6 +81,7 @@ intents:
   - react_positive
   - ask_faq_community_size
   - ask_faq_what_is_forum
+  - next_step
 
 slots:
   budget:
@@ -149,6 +150,8 @@ slots:
     type: unfeaturized
   name:
     type: text
+  step:
+    type: unfeaturized
 
 
 templates:
@@ -476,7 +479,7 @@ templates:
     - text: "I suggest to sign up in our [forum](https://forum.rasa.com) to stay up to date on product updates, events, and resources."
   utter_no_community_event:
     - text: "Sorry, we currently don't have any planned community events 😞."
-  utter_describe_step4:
+  utter_get_started_step4:
     - text: "As Rasa developer you will be part of a huge community. You can ask me which events we have planned, how to contribute, or about our Rasa forum."
   utter_reasons_to_contribute:
     - text: |
@@ -623,6 +626,7 @@ actions:
   - utter_possibilities_to_contribute
   - utter_recommend_forum
   - utter_link_to_forum
+  - utter_direct_step3
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -647,6 +651,7 @@ actions:
   - utter_react_positive
   - utter_react_negative
   - action_get_community_events
+  - action_next_step
 
 forms:
   - suggestion_form

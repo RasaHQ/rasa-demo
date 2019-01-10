@@ -1,36 +1,33 @@
 ## Step 4 prompt
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
-    
-## Happy path: Prompt -> Get event locations -> get next event 
+
+## Happy path: Prompt -> Get event locations -> get next event
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_which_events
     - action_get_community_events
 * ask_when_next_event
     - action_get_community_events
     - utter_recommend_forum
-    
-## Happy path: Prompt -> Get event locations -> get next event for location 
+
+## Happy path: Prompt -> Get event locations -> get next event for location
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_which_events
     - action_get_community_events
 * ask_when_next_event{"location": "Berlin"}
     - action_get_community_events
     - utter_recommend_forum
 
-## Happy path: Get event locations -> get next event 
+## Happy path: Get event locations -> get next event
 * ask_which_events
     - action_get_community_events
 * ask_when_next_event
     - action_get_community_events
     - utter_anything_else
-    
-## Happy path: Get event locations -> get next event for location 
+
+## Happy path: Get event locations -> get next event for location
 * ask_which_events
     - action_get_community_events
 * ask_when_next_event{"location": "Berlin"}
@@ -40,19 +37,17 @@
 ## Prompt -> Get next event
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_when_next_event
     - action_get_community_events
     - utter_recommend_forum
-    
+
 ## Prompt -> Get next event for location
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_when_next_event{"location": "Berlin"}
     - action_get_community_events
     - utter_recommend_forum
-    
+
 ## Get next event
 * ask_when_next_event
     - action_get_community_events
@@ -62,11 +57,10 @@
 * ask_when_next_event{"location": "Berlin"}
     - action_get_community_events
     - utter_anything_else
-    
+
 ## Prompt -> Contribute
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_why_contribute
     - utter_reasons_to_contribute
 * ask_how_contribute
@@ -81,10 +75,9 @@
 ## Prompt -> How can I contribute
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_how_contribute
     - utter_possibilities_to_contribute
-    
+
 ## How can I contribute
 * ask_how_contribute
     - utter_possibilities_to_contribute
@@ -92,10 +85,9 @@
 ## Prompt -> Get help in forum
 * get_started_step4
     - action_greet_user
-    - utter_describe_step4
 * ask_question_in_forum
     - utter_link_to_forum
- 
+
 ## Get help in the forum
 * ask_question_in_forum
     - utter_link_to_forum

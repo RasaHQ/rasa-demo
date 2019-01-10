@@ -49,7 +49,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa + not new to chatbots + migrating from dialogflow
 
@@ -169,7 +168,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain core and try out stack
 
@@ -191,7 +189,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain core, then nlu and try out stack
 
@@ -214,7 +211,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain nlu and try out stack
 
@@ -236,7 +232,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain nlu then core and try out stack
 
@@ -259,7 +254,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, don't explain and try out stack
@@ -279,7 +273,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, explain and skip to installation
@@ -737,4 +730,3 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else

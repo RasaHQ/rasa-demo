@@ -1,6 +1,11 @@
 ## prompt for getting started
 * get_started_step2
     - action_greet_user
+    - utter_direct_step3
+
+## next step prompt
+* next_step
+    - action_next_step
 
 ## faqs
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
