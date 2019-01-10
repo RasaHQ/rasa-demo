@@ -426,11 +426,13 @@ class ActionDefaultAskAffirmation(Action):
             ) -> List['Event']:
 
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
-        diff_intent_confidence = intent_ranking[0].get("confidence") - intent_ranking[1].get("confidence")
-        if len(intent_ranking) > 1 and diff_intent_confidence < 0.2:
-            intent_ranking = intent_ranking[:2]
-        else:
-            intent_ranking = intent_ranking[:1]
+        if len(intent_ranking) > 1:
+            diff_intent_confidence = (intent_ranking[0].get("confidence") -
+                                      intent_ranking[1].get("confidence"))
+            if diff_intent_confidence < 0.2:
+                intent_ranking = intent_ranking[:2]
+            else:
+                intent_ranking = intent_ranking[:1]
         first_intent_names = [intent.get('name', '')
                               for intent in intent_ranking
                               if intent.get('name', '') != 'out_of_scope']
