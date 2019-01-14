@@ -3,22 +3,23 @@ import csv
 import io
 import os
 import requests
+import random
 from tqdm import tqdm
 
 
-# csvfile = codecs.open("data/Intents_ Actions >> User Goal - Sheet1.csv", 'r')
-# reader = csv.DictReader(csvfile)
-# pbar = tqdm(reader)
-# topic_dict = {}
-# for row in pbar:
-#     if row['User goal'] and row['type'] == 'action':
-#         topic_dict[row['Intent/Action Name'][2:]] = row['User goal']
-#         if row['if_success']:
-#             topic_dict[row['Intent/Action Name'][2:]] += '_' + row['if_success']
+csvfile = codecs.open("data/Intents_ Actions >> User Goal - Sheet1.csv", 'r')
+reader = csv.DictReader(csvfile)
+pbar = tqdm(reader)
+topic_dict = {}
+for row in pbar:
+    if row['User goal'] and row['type'] in {'action', 'form'}:
+        topic_dict[row['Intent/Action Name'][2:]] = row['User goal']
+        if row['if_success']:
+            topic_dict[row['Intent/Action Name'][2:]] += '_' + row['if_success']
 
-# for topic in set(topic_dict.values()):
-#     print('- '+topic)
-# exit()
+for topic in set(topic_dict.values()):
+    print('- '+topic)
+print('\n')
 
 csvfile = codecs.open('data/Successful Conversations - main.csv', 'r')
 
@@ -35,19 +36,31 @@ texts_no = []
 
 pbar = tqdm(reader)
 for row in pbar:
-    if row['sender_id'] and len(row['sender_id']) > 20 and row['reason for failure'] != 'NLU' and row['user goal (if supported)'] and row['user goal (if supported)'] != '-': #row['user goal fullfilled']: # and row['user goal supported'] == 'getstarted':
+    if row['sender_id'] and len(row['sender_id']) > 20 and row['reason for failure'] != 'NLU' and row['user goal fullfilled'] and row['user goal fullfilled'] != 'neutral' and '11.2018' not in row['date']: #row['user goal fullfilled']: # and row['user goal supported'] == 'getstarted':
         total += 1
         response = requests.get(url.format(sender_id=row['sender_id']), headers=headers)
         if response.status_code == 200:
             text = response.text.replace('Generated Story',
-                                         'Generated Story goal:{}, id:{}'
+                                         'Generated Story goal:{}, id:{}, {}'
                                          ''.format(row['user goal (if supported)'],
-                                                   row['sender_id'])
-                                         ).replace('rewind', 'event_rewind'
-                                                   ).replace('restart', 'event_restart')
+                                                   row['sender_id'],
+                                                   row['date'])
+                                         )#.replace('- rewind', '- event_rewind'
+                                                   #)#.replace('- restart', '- event_restart')
 
-            # for action, topic in topic_dict.items():
-            #     text = text.replace(action + '\n', topic + '\n')
+            parts = text.split('\n')
+
+            continue_flag = False
+            if not parts[1].startswith('* get_started_step'):
+                continue_flag = True
+            for part in parts[2:]:
+                if part.startswith('* get_started_step'):
+                    continue_flag = True
+            if continue_flag:
+                continue
+
+            for action, topic in topic_dict.items():
+                text = text.replace(action + '\n', '{}: {}'.format(topic, action) + '\n')
 
             texts_yes.append(text)
             # if 'es' in row['user goal fullfilled']:
@@ -61,19 +74,21 @@ for row in pbar:
 
 print('\n')
 print(total)
-print(total_yes)
-print(total_no)
+print(len(texts_yes))
+print(len(texts_no))
 
-os.remove("data/success/train_no_NLU.md")
-with io.open('data/success/train_no_NLU.md', 'a', encoding="utf-8") as f:
-    for text in texts_yes[-250:-50]:
+random.shuffle(texts_yes)
+
+os.remove("data/success/train_goal.md")
+with io.open('data/success/train_goal.md', 'a', encoding="utf-8") as f:
+    for text in texts_yes[:-20]:#[-250:-50]:
         f.write(text + "\n")
     for text in texts_no[:-15]:
         f.write(text + "\n")
 
-os.remove("data/success/test_no_NLU.md")
-with io.open('data/success/test_no_NLU.md', 'a', encoding="utf-8") as f:
-    for text in texts_yes[-50:]:
+os.remove("data/success/test_goal.md")
+with io.open('data/success/test_goal.md', 'a', encoding="utf-8") as f:
+    for text in texts_yes[-20:]:
         f.write(text + "\n")
     for text in texts_no[-15:]:
         f.write(text + "\n")
