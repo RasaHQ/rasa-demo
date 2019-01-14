@@ -79,15 +79,15 @@ print(len(texts_no))
 
 random.shuffle(texts_yes)
 
-os.remove("data/success/train_goal.md")
-with io.open('data/success/train_goal.md', 'a', encoding="utf-8") as f:
+os.remove("data/success/train_for_success.md")
+with io.open('data/success/train_for_success.md', 'a', encoding="utf-8") as f:
     for text in texts_yes[:-20]:#[-250:-50]:
         f.write(text + "\n")
     for text in texts_no[:-15]:
         f.write(text + "\n")
 
-os.remove("data/success/test_goal.md")
-with io.open('data/success/test_goal.md', 'a', encoding="utf-8") as f:
+os.remove("data/success/test_for_success.md")
+with io.open('data/success/test_for_success.md', 'a', encoding="utf-8") as f:
     for text in texts_yes[-20:]:
         f.write(text + "\n")
     for text in texts_no[-15:]:

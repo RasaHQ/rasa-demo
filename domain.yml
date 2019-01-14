@@ -17,7 +17,7 @@ entities:
 
 intents:
   - enter_data: {use_entities: false}
-  - mood_confirm
+  - affirm
   - contact_sales
   - signup_newsletter
   - greet
@@ -75,6 +75,7 @@ intents:
   - fallback
   - None
   - restart
+  - ask_chitchat
 
 slots:
   budget:
@@ -150,7 +151,8 @@ slots:
     type: unfeaturized
   name:
     type: text
-
+  feedback_message:
+    type: unfeaturized
 
 templates:
   utter_ask_budget:
@@ -622,3 +624,5 @@ topics:
   - greet
   - chitchat
   - rasa_help_success
+  - subscribe_fail
+  - chitchat_fail

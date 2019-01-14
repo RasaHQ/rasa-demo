@@ -94,7 +94,7 @@
     - chitchat: utter_noworries
     - chitchat: utter_anything_else
 * enter_data
-    - greet_success: action_greet_user
+    - chitchat: action_greet_user
 
 ## Generated Story goal:1 step, id:f48bb43d6f5645d69b0c1cd1cfc9c62b, 12/15/18 923590105913609100
 * get_started_step1
