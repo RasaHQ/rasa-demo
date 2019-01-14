@@ -30,7 +30,7 @@
     - rewind
 * out_of_scope
     - oos: utter_out_of_scope
-    - chitcaht: utter_possibilities
+    - chitchat: utter_possibilities
 * affirm
     - fallback: action_default_fallback
     - rewind

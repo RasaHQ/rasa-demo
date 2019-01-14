@@ -591,24 +591,34 @@ actions:
   - action_select_installation_command
   - action_store_problem_description
   - action_greet_user
-  - oos
-  - getstarted_1_success
-  - faq
-  - sales
-  - rasa_help
-  - suggestion
-  - chitchat
-  - rasa_help/ getstarted_1
-  - rasa_help_success
-  - getstarted_1
-  - subscribe_success
-  - privacypolicy
-  - subscribe
-  - whatspossible
-  - handoff
-  - sales_success
-  - event_rewind
-  - event_restart
 
 forms:
   - suggestion_form
+
+topics:
+  - sales
+  - subscribe_success
+  - getstarted_2
+  - getstarted_1
+  - privacypolicy
+  - feedback
+  - rasa_help
+  - getstarted_1_success
+  - getstarted_3
+  - suggestion
+  - greet_success
+  - getstarted_1/rasa_help
+  - getstarted_4_success
+  - onboarding
+  - getstarted_3_success
+  - fallback
+  - faq
+  - sales_success
+  - subscribe
+  - handoff
+  - getstarted_4
+  - oos
+  - rasa_help/ getstarted_1
+  - greet
+  - chitchat
+  - rasa_help_success

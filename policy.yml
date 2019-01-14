@@ -1,5 +1,5 @@
 policies:
-  - name: KerasPolicy
+  - name: KerasTopicPolicy
     epochs: 200
     batch_size: 8
 #    featurizer:
