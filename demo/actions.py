@@ -601,7 +601,7 @@ class ActionNextStep(Action):
         step = tracker.get_slot('step')
 
         button = [{'title': 'Next step',
-                   'payload': '/get_started_step{}'.format(step)})
+                   'payload': '/get_started_step{}'.format(step)}]
 
         message = "Let's continue, please click the button below"
 
