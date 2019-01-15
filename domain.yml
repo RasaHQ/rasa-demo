@@ -187,7 +187,10 @@ templates:
     - text: "If you want some more awesome Rasa content, check out our forum:
       https://forum.rasa.com/"
   utter_quickstart:
-    - text: "We have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
+    - text: "Click the button below to go to our quickstart where you can try it out without installing anything"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step2"
   utter_quickstart_nlu_only:
     - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
   utter_ask_migration:
@@ -419,7 +422,10 @@ templates:
   utter_get_starter_pack:
     - text: "Great, you installed Rasa! If you don't want to start from scratch, you can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack)."
   utter_direct_to_step4:
-    - text: "Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/)."
+    - text: "The next step is to join our community, click the button below to continue."
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step4"
   utter_ask_if_problem:
     - text: "Do you have a problem?"
   utter_get_started_step1:
@@ -490,10 +496,10 @@ templates:
   utter_link_to_forum:
     - text: "Click [here](https://forum.rasa.com) to get to the forum."
   utter_direct_step3:
-    - text: '"If you have no questions, you can click the button below to go to the next step once you're ready. Or when you're finished asking questions, you can say "take me to the next step at any point"'
+    - text: '"If you have no questions, you can click the button below to go to the next step once you're ready. Or when you're finished asking questions, you can say "take me to the next step" at any point'
       buttons:
-        - title: "Next step"
-          payload: "/next_step"
+        - title: "Continue"
+          payload: "/get_started_step3"
 
 
 actions:
