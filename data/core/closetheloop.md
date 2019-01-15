@@ -791,7 +791,6 @@
 * how_to_get_started{"product":"stack"}
     - slot{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -890,3 +889,31 @@
 * enter_data
     - utter_not_sure
     - utter_possibilities
+
+## Story from conversation with 030829eb30ed4339985d7e71737f6c2d on January 1st 2019
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* greet
+    - action_greet_user
+* enter_data
+    - action_default_ask_affirmation
+    - action_revert_fallback_events
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* enter_data
+    - utter_not_sure
+    - utter_tryout

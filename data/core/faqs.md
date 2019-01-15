@@ -409,7 +409,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa + not new to chatbots + not migrating
@@ -437,7 +436,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa + not new to chatbots + not migrating
@@ -465,7 +463,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
@@ -492,7 +489,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
@@ -519,7 +515,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
@@ -546,7 +541,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, explain stack and try it out
@@ -572,7 +566,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain stack and try it out
 * greet
@@ -597,7 +590,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain stack and try it out
 * greet
@@ -622,7 +614,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain core and try out stack
 * greet
@@ -648,7 +639,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain core and try out stack
 * greet
@@ -674,7 +664,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, explain core, then nlu and try out stack
@@ -702,7 +691,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain core, then nlu and try out stack
 * greet
@@ -729,7 +717,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, explain nlu and try out stack
@@ -756,7 +743,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, explain nlu and try out stack
 * greet
@@ -782,7 +768,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, don't explain and try out stack
@@ -806,7 +791,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 ## new to rasa/bots, don't explain and try out stack
 * greet
@@ -829,7 +813,6 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
 
 
 ## new to rasa/bots, explain and skip to installation
@@ -1100,4 +1083,3 @@
     - utter_tryout
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
-    - utter_anything_else
