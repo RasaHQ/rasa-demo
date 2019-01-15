@@ -896,9 +896,6 @@
     - slot{"shown_privacy":true}
 * greet
     - action_greet_user
-* enter_data
-    - action_default_ask_affirmation
-    - action_revert_fallback_events
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
