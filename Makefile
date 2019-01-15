@@ -19,7 +19,7 @@ train-nlu:
 	python3 -m rasa_nlu.train -c nlu_tensorflow.yml --fixed_model_name current --data data/nlu/ -o models --project nlu --verbose
 
 train-core:
-	python3 -m rasa_core.train -d domain.yml -s data/success/train_vova.md -c policy.yml --debug -o models/dialogue --augmentation 0
+	python3 -m rasa_core.train -d domain.yml -s data/success/train_goal.md -c policy.yml --debug -o models/dialogue --augmentation 0
 
 run-cmdline:
 	make run-actions&

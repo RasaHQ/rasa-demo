@@ -1,4 +1,3 @@
->>>>>
 ## Generated Story goal:3 step, id:9cbbe8c0fa0841deb30fe973cd80c614, 05/01/19 -1765672058575339702
 * get_started_step1
     - greet_success: action_greet_user
@@ -24,10 +23,10 @@
     - rewind
     - rewind
 * enter_data
-    - getstarted_3: action_select_installation_command
-    - getstarted_3: utter_ask_ready_to_build
+    - chitchat: action_select_installation_command
+    - chitchat_fail: utter_ask_ready_to_build
 * affirm
-    - fallback: action_default_ask_affirmation
+    - getstarted_3: action_default_ask_affirmation
 * ask_whatspossible
     - fallback: action_default_fallback
     - slot{"feedback_value": "negative"}
@@ -45,7 +44,6 @@
     - action_restart
     - restart
 
->>>>>
 ## Generated Story goal:1 step, id:93b8b449ab074a6f973da26067b5c163, 12/17/18 -6676267086559597786
 * get_started_step1
     - greet_success: action_greet_user
@@ -62,10 +60,10 @@
     - getstarted_1: utter_stack_details
     - getstarted_1: utter_explain_nlucore
 * enter_data{"number": 1}
-    - chitchat: utter_great
-    - chitchat: utter_ask_email
+    - getstarted_1_fail: utter_great
+    - getstarted_1: utter_ask_email
 * deny
-    - subscribe_fail: utter_cantsignup
+    - getstarted_1: utter_cantsignup
 
 ## Generated Story goal:1 step, id:5b7be2c22b874342aeca4216cfd5d35a, 12/15/18 1624335723075150223
 * get_started_step1
@@ -216,7 +214,6 @@
     - getstarted_3: action_select_installation_command
     - getstarted_3: utter_ask_ready_to_build
 
->>>>>
 ## Generated Story goal:1 step, id:e8fc2e0b2c374353a63da30fb64748f3, 05/01/19 -1435447685661180167
 * get_started_step1
     - greet_success: action_greet_user
@@ -266,7 +263,6 @@
     - chitchat: utter_not_sure
     - chitchat: utter_possibilities
 
->>>>>
 ## Generated Story goal:1 step, id:3c9cd2509a78495bb5fd306618a9ba8e, 12/17/18 3076997113982385599
 * get_started_step1
     - greet_success: action_greet_user
@@ -277,11 +273,11 @@
 * enter_data
     - onboarding_fail: action_greet_user
 * affirm
-    - getstarted_1: utter_explain_nlu
+    - getstarted_1_fail: utter_explain_nlu
     - getstarted_1: utter_tryout
 * how_to_get_started{"product": "stack"}
     - slot{"product": "stack"}
-    - getstarted_1_success: utter_quickstart
+    - getstarted_1_fail: utter_quickstart
     - chitchat: utter_anything_else
 * source_code
     - faq: utter_source_code
@@ -359,7 +355,6 @@
     - action_restart
     - restart
 
->>>>>
 ## Generated Story goal:chitchat, id:b68bec79922b42b1b60bd13f3a3a5a14, 12/15/18 2244534826485528312
 * get_started_step1
     - greet_success: action_greet_user
@@ -400,24 +395,24 @@
     - subscribe: utter_great
     - subscribe: utter_ask_email
 * deny
-    - subscribe_fail: utter_cantsignup
+    - subscribe: utter_cantsignup
 * deny
-    - subscribe_fail: action_default_fallback
+    - subscribe: action_default_fallback
     - rewind
 * enter_data
     - subscribe: action_store_email
     - rewind
 * bye
-    - subscribe_fail: action_default_fallback
+    - chitchat: action_default_fallback
     - rewind
 * handleinsult
     - chitchat: action_chitchat
     - subscribe: utter_ask_email
 * deny
-    - subscribe_fail: utter_cantsignup
+    - subscribe: utter_cantsignup
 * deny
-    - subscribe_fail: utter_direct_install
-    - chitchat: utter_anything_else
+    - subscribe: utter_direct_install
+    - subscribe_fail: utter_anything_else
 * deny
     - chitchat: utter_nohelp
 

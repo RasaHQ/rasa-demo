@@ -14,6 +14,8 @@ entities:
   - nlu_part
   - entity
   - user_type
+  - package_manager
+  - location
 
 intents:
   - enter_data: {use_entities: false}
@@ -47,7 +49,6 @@ intents:
   - canthelp
   - feedback
   - switch
-  - new_project
   - how_to_get_started
   - technical_question
   - nlu_info
@@ -56,8 +57,12 @@ intents:
   - rasa_cost
   - source_code
   - suggestion
-  - suggestions
   - install_rasa
+  - ask_which_events
+  - ask_when_next_event
+  - ask_why_contribute
+  - ask_how_contribute
+  - ask_question_in_forum
   - get_started_step1
   - get_started_step2
   - get_started_step3
@@ -72,10 +77,11 @@ intents:
   - ask_faq_channels
   - ask_faq_differencecorenlu
   - ask_faq_python_version
-  - fallback
-  - None
+  - react_negative
+  - react_positive
+  - ask_faq_community_size
+  - ask_faq_what_is_forum
   - restart
-  - ask_chitchat
 
 slots:
   budget:
@@ -99,20 +105,19 @@ slots:
     values:
       - positive
       - negative
+  feedback_message:
+    type: unfeaturized
   current_api:
     type: categorical
     values:
       - dialogflow
       - luis
-      - chatfuel
-      - dialogueflow
   product:
     type: categorical
     values:
       - core
       - nlu
       - stack
-      - both
   unknown_product:
     type: unfeaturized
   nlu_part:
@@ -121,12 +126,6 @@ slots:
       - entity recognition
       - intent classification
       - duckling
-      - intent
-      - intents
-      - entity
-      - both
-      - chatfuel
-      - NER
   unknown_nlu_part:
     type: unfeaturized
   can_use_spacy:
@@ -151,8 +150,7 @@ slots:
     type: unfeaturized
   name:
     type: text
-  feedback_message:
-    type: unfeaturized
+
 
 templates:
   utter_ask_budget:
@@ -446,10 +444,50 @@ templates:
     - text: "We have a comprehensive list of connectors, but if you do not find the one you are looking for you can always create a custom connector following this guide."
   utter_ask_faq_differencecorenlu:
     - text: "Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next."
+  utter_ask_faq_community_size:
+    - text: "Rasa has more than 2000 community members and 200 github contributors 🚀."
+  utter_ask_faq_what_is_forum:
+    - text: "Our [forum](https://forum.rasa.com) is the place where all the community buzz happens. Join discussions, get the answers to your technical questions and stay up-to-date with what’s happening at Rasa."
   utter_ask_voice:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. Here you can find more informations."
   utter_getstarted_new:
     - text: "I see you're new, let me ask you a quick question before I help you get started:"
+  utter_ask_feedback_message:
+    - text: "I’m sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve."
+  utter_thanks_for_feedback:
+    - text: "Thanks! Check out our forum, some of the smart people from our community can answer your questions there."
+  utter_restart_with_button:
+    - text: "Click the button below if you want to start over."
+      buttons:
+      - title: "Restart"
+        payload: "/restart"
+  utter_not_sure:
+    - text: "Hmm, not sure what you mean..."
+  utter_react_negative:
+    - text: "😢"
+  utter_react_positive:
+    - text: "😍"
+  utter_possibilities_to_contribute:
+    - text: |
+        You could for example
+        - work on small [Rasa Core](https://github.com/RasaHQ/rasa_core/labels/good%20first%20issue) or [Rasa NLU](https://github.com/RasaHQ/rasa_core/labels/good%20first%20issue) issues
+        - improve our documentation
+        - help others by answering questions on the [forum](https://forum.rasa.com)
+  utter_recommend_forum:
+    - text: "I suggest to sign up in our [forum](https://forum.rasa.com) to stay up to date on product updates, events, and resources."
+  utter_no_community_event:
+    - text: "Sorry, we currently don't have any planned community events 😞."
+  utter_describe_step4:
+    - text: "As Rasa developer you will be part of a huge community. You can ask me which events we have planned, how to contribute, or about our Rasa forum."
+  utter_reasons_to_contribute:
+    - text: |
+        Here a few reasons why you should contribute:
+        - Explore the source code in depth
+        - Check out issues and help solve them
+        - Contribute to open source software
+  utter_link_to_forum:
+    - text: "Click [here](https://forum.rasa.com) to get to the forum."
+
 
 actions:
   - utter_greet
@@ -555,22 +593,8 @@ actions:
   - utter_ask_faq_channels
   - utter_ask_faq_differencecorenlu
   - utter_ask_faq_python_version
-  - action_subscribe_newsletter
-  - action_store_sales_info
-  - action_store_budget
-  - action_store_usecase
-  - action_chitchat
-  - action_faqs
-  - action_store_name
-  - action_store_company
-  - action_store_job
-  - action_store_email
-  - action_pause
-  - action_store_unknown_product
-  - action_store_unknown_nlu_part
-  - action_store_bot_language
-  - action_store_entity_extractor
-  - action_set_onboarding
+  - utter_ask_faq_community_size
+  - utter_ask_faq_what_is_forum
   - utter_ask_weather
   - utter_ask_builder
   - utter_ask_howdoing
@@ -590,39 +614,77 @@ actions:
   - utter_howwereyoubuilt
   - utter_ask_whatspossible
   - utter_getstarted_new
+  - utter_thanks_for_feedback
+  - utter_restart_with_button
+  - utter_ask_for_feedback_message
+  - utter_not_sure
+  - utter_no_community_event
+  - utter_describe_step4
+  - utter_reasons_to_contribute
+  - utter_possibilities_to_contribute
+  - utter_recommend_forum
+  - utter_link_to_forum
+  - action_subscribe_newsletter
+  - action_store_sales_info
+  - action_store_budget
+  - action_store_usecase
+  - action_chitchat
+  - action_faqs
+  - action_store_name
+  - action_store_company
+  - action_store_job
+  - action_store_email
+  - action_pause
+  - action_store_unknown_product
+  - action_store_unknown_nlu_part
+  - action_store_bot_language
+  - action_store_entity_extractor
+  - action_set_onboarding
   - action_select_installation_command
   - action_store_problem_description
   - action_greet_user
+  - action_default_fallback
+  - action_default_ask_affirmation
+  - utter_react_positive
+  - utter_react_negative
+  - action_get_community_events
 
 forms:
   - suggestion_form
+  - feedback_form
 
 topics:
-  - sales
-  - subscribe_success
-  - getstarted_2
-  - getstarted_1
-  - privacypolicy
-  - feedback
-  - rasa_help
-  - getstarted_1_success
-  - getstarted_3
-  - suggestion
-  - greet_success
-  - getstarted_1/rasa_help
-  - getstarted_4_success
-  - onboarding
-  - getstarted_3_success
-  - fallback
-  - faq
-  - sales_success
   - subscribe
-  - handoff
+  - getstarted_2
+  - getstarted_3_success
   - getstarted_4
-  - oos
   - rasa_help/ getstarted_1
-  - greet
+  - sales_success
+  - getstarted_1
+  - sales
+  - greet_success
+  - privacypolicy
+  - onboarding
+  - suggestion
   - chitchat
+  - getstarted_1/rasa_help
+  - subscribe_success
+  - oos
+  - handoff
+  - getstarted_1_success
+  - getstarted_4_success
+  - greet
+  - rasa_help
   - rasa_help_success
-  - subscribe_fail
+  - faq
+  - fallback
+  - feedback
+  - getstarted_3
   - chitchat_fail
+  - getstarted_1_fail
+  - feedback_success
+  - getstarted_3_fail
+  - greet_fail
+  - oos_failed
+  - sales_fail
+  - rasa_help_fail

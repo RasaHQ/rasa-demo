@@ -20,7 +20,7 @@ for row in pbar:
 for topic in set(topic_dict.values()):
     print('- '+topic)
 print('\n')
-
+exit()
 csvfile = codecs.open('data/Successful Conversations - main.csv', 'r')
 
 reader = csv.DictReader(csvfile)
