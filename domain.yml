@@ -496,7 +496,7 @@ templates:
   utter_link_to_forum:
     - text: "Click [here](https://forum.rasa.com) to get to the forum."
   utter_direct_step3:
-    - text: '"If you have no questions, you can click the button below to go to the next step once you're ready. Or when you're finished asking questions, you can say "take me to the next step" at any point'
+    - text: 'If you have no questions, you can click the button below to go to the next step once you're ready. Or when you're finished asking questions, you can say "take me to the next step" at any point'
       buttons:
         - title: "Continue"
           payload: "/get_started_step3"
