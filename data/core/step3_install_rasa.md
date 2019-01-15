@@ -13,7 +13,6 @@
 * affirm
     - utter_get_starter_pack
     - utter_direct_to_step4
-    - utter_anything_else
 
 ## Install Rasa: Happy Path with already provided package_manager
 * install_rasa{"package_manager": "pip"}
@@ -22,7 +21,6 @@
 * affirm
     - utter_get_starter_pack
     - utter_direct_to_step4
-    - utter_anything_else
 
 ## Install Rasa: No Python installed
 * install_rasa
@@ -56,6 +54,7 @@
 * technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
+    - utter_direct_to_step4
 
 ## Install Rasa: Deny ready to build -> Ask if problem -> technical question
 * enter_data{"package_manager": "pip"} OR install_rasa{"package_manager": "pip"}
@@ -66,6 +65,7 @@
 * technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
+    - utter_direct_to_step4
 
 ## Install Rasa: Deny ready to build -> Ask if problem -> technical question
 * enter_data{"package_manager": "pip"} OR install_rasa{"package_manager": "pip"}
@@ -83,8 +83,7 @@
 * technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_direct_to_forum_for_help
-* affirm OR thank
-    - utter_anything_else
+    - utter_direct_to_step4
 
 
 ## Install Rasa: Ask ready to build -> FAQ

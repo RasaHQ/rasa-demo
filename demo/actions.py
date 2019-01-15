@@ -378,27 +378,27 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message['intent'].get('name')
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if shown_privacy and name_entity and name_entity.lower() != 'sara':
-            dispatcher.utter_template("utter_greet_name", tracker,
-                                      name=name_entity)
-            return []
-        elif shown_privacy:
-            dispatcher.utter_template("utter_greet_noname", tracker)
-            return []
-        elif intent == 'greet':
-            dispatcher.utter_template("utter_greet", tracker)
-            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-            dispatcher.utter_template("utter_ask_goal", tracker)
-            return [SlotSet('shown_privacy', True)]
-        elif intent == 'get_started_step4':
-            dispatcher.utter_template("utter_greet", tracker)
-            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-            return [SlotSet('shown_privacy', True)]
-        elif intent[:-1] == 'get_started_step':
+        if intent == "greet":
+            if shown_privacy and name_entity and name_entity.lower() != 'sara':
+                dispatcher.utter_template("utter_greet_name", tracker,
+                                          name=name_entity)
+                return []
+            elif shown_privacy:
+                dispatcher.utter_template("utter_greet_noname", tracker)
+                return []
+            else:
+                dispatcher.utter_template("utter_greet", tracker)
+                dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+                dispatcher.utter_template("utter_ask_goal", tracker)
+                return [SlotSet('shown_privacy', True)]
+        elif intent[:-1] == 'get_started_step' and not shown_privacy:
             dispatcher.utter_template("utter_greet", tracker)
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
             dispatcher.utter_template("utter_"+intent, tracker)
-            return [SlotSet('shown_privacy', True)]
+            return [SlotSet('shown_privacy', True), SlotSet('step', intent[-1])]
+        elif intent[:-1] == 'get_started_step' and shown_privacy:
+            dispatcher.utter_template("utter_"+intent, tracker)
+            return [SlotSet('step', intent[-1])]
         return []
 
 
@@ -426,8 +426,15 @@ class ActionDefaultAskAffirmation(Action):
             ) -> List['Event']:
 
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
+        if len(intent_ranking) > 1:
+            diff_intent_confidence = (intent_ranking[0].get("confidence") -
+                                      intent_ranking[1].get("confidence"))
+            if diff_intent_confidence < 0.2:
+                intent_ranking = intent_ranking[:2]
+            else:
+                intent_ranking = intent_ranking[:1]
         first_intent_names = [intent.get('name', '')
-                              for intent in intent_ranking[:2]
+                              for intent in intent_ranking
                               if intent.get('name', '') != 'out_of_scope']
 
         message_title = "Sorry, I'm not sure I've understood " \
@@ -583,3 +590,21 @@ class CommunityEventAction(Action):
                                      "".format(next_event.name_as_link(),
                                                next_event.location,
                                                next_event.formatted_date()))
+
+
+class ActionNextStep(Action):
+
+    def name(self):
+        return "action_next_step"
+
+    def run(self, dispatcher, tracker, domain):
+        step = tracker.get_slot('step')
+
+        button = [{'title': 'Next step',
+                   'payload': '/get_started_step{}'.format(step)}]
+
+        message = "Let's continue, please click the button below"
+
+        dispatcher.utter_button_message(message, buttons=button)
+
+        return []
