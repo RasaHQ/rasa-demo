@@ -76,8 +76,8 @@
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * affirm
     - getstarted_1: action_set_onboarding
     - slot{"onboarding": true}
@@ -1005,23 +1005,24 @@
     - rewind
 * signup_newsletter
     - subscribe: utter_great
+    - subscribe: action_listen
 * out_of_scope
     - oos: utter_great
-    - oos_failed: utter_anything_else
+    - oos_fail: utter_anything_else
 * deny
     - chitchat: utter_ask_name
     - chitchat_fail: utter_anything_else
 * enter_data
     - chitchat: utter_great
-    - chitchat: utter_spacy_or_tensorflow
-    - chitchat: utter_anything_else
+    - chitchat_fail: utter_spacy_or_tensorflow
+    - chitchat_fail: utter_anything_else
 * enter_data
     - chitchat: utter_great
-    - chitchat: utter_spacy_or_tensorflow
+    - chitchat_fail: utter_spacy_or_tensorflow
     - chitchat_fail: utter_anything_else
 * deny
     - chitchat: utter_great
-    - chitchat: utter_anything_else
+    - chitchat_fail: utter_anything_else
 * enter_data
     - chitchat: utter_spacy_or_tensorflow
     - chitchat_fail: utter_anything_else
@@ -1052,11 +1053,12 @@
     - greet_success: action_greet_user
 * bye
     - chitchat: utter_ask_company
+    - chitchat_fail: action_listen
 * enter_data{"current_api": "dialogflow"}
     - slot{"current_api": "dialogflow"}
-    - chitchat: action_store_company
+    - getstarted_1_success: action_store_company
     - slot{"company_name": "google"}
-    - sales: utter_ask_businessmail
+    - getstarted_1_fail: utter_ask_businessmail
 * enter_data{"email": "arvind@google.com"}
     - slot{"email": "arvind@google.com"}
     - sales: action_store_email
@@ -1231,8 +1233,8 @@
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * affirm
     - getstarted_1: action_faqs
     - getstarted_1_fail: utter_first_bot_with_rasa
@@ -1472,7 +1474,7 @@
 * affirm
     - chitchat: utter_ask_describe_problem
 * enter_data
-    - fallback: action_default_ask_affirmation
+    - chitchat: action_default_ask_affirmation
 * greet
     - fallback: action_revert_fallback_events
     - rewind
@@ -1491,7 +1493,7 @@
 * ask_whatspossible
     - chitchat: action_chitchat
 * affirm
-    - fallback: action_default_ask_affirmation
+    - chitchat: action_default_ask_affirmation
 * telljoke
     - fallback: action_revert_fallback_events
     - rewind
@@ -1729,8 +1731,8 @@
     - getstarted_3: utter_get_python
     - getstarted_3: utter_ask_pip_or_conda
 * ask_faq_differencecorenlu
-    - getstarted_3: action_select_installation_command
-    - getstarted_3: utter_ask_ready_to_build
+    - faq: action_select_installation_command
+    - faq_fail: utter_ask_ready_to_build
 * deny
     - getstarted_3: utter_ask_if_problem
 * enter_data
@@ -2077,15 +2079,15 @@
 * how_to_get_started{"product": "nlu"}
     - slot{"product": "nlu"}
     - getstarted_1_success: utter_quickstart
-    - chitchat: utter_anything_else
+    - getstarted_1_fail: utter_anything_else
 
 ## Generated Story goal:1 step, id:decd65b902e148baac9a1e373c056474, 12/17/18 2076418664202927492
 * get_started_step1
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * affirm
     - getstarted_1: action_set_onboarding
     - slot{"onboarding": true}
@@ -2099,7 +2101,7 @@
 * how_to_get_started{"product": "nlu"}
     - slot{"product": "nlu"}
     - getstarted_1_success: utter_quickstart
-    - chitchat: utter_anything_else
+    - getstarted_1_fail: utter_anything_else
 * deny
     - chitchat: utter_nohelp
 
@@ -2355,8 +2357,8 @@
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * affirm
     - getstarted_1: action_set_onboarding
     - slot{"onboarding": true}
@@ -2424,7 +2426,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
 * how_to_get_started
-    - onboarding: action_default_ask_affirmation
+    - fallback: action_default_ask_affirmation
 * how_to_get_started{"user_type": "new"}
     - fallback: action_revert_fallback_events
     - rewind
@@ -2535,8 +2537,8 @@
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * affirm
     - getstarted_1: action_set_onboarding
     - slot{"onboarding": true}
@@ -2789,7 +2791,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
 * ask_isbot
-    - chitchat: action_default_ask_affirmation
+    - fallback: action_default_ask_affirmation
 * ask_isbot
     - fallback: action_revert_fallback_events
     - rewind
@@ -3179,7 +3181,7 @@
 * ask_whatspossible
     - chitchat: action_default_ask_affirmation
 * out_of_scope
-    - oos: action_default_ask_rephrase
+    - fallback: action_default_ask_rephrase
 * deny
     - fallback: action_revert_fallback_events
     - rewind

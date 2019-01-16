@@ -63,7 +63,7 @@
     - getstarted_1_fail: utter_great
     - getstarted_1: utter_ask_email
 * deny
-    - getstarted_1: utter_cantsignup
+    - subscribe: utter_cantsignup
 
 ## Generated Story goal:1 step, id:5b7be2c22b874342aeca4216cfd5d35a, 12/15/18 1624335723075150223
 * get_started_step1
@@ -108,6 +108,7 @@
 * enter_data{"email": "lavi@email.com"}
     - slot{"email": "lavi@email.com"}
     - chitchat: action_greet_user
+    - chitchat_fail: action_listen
 * greet
     - greet_success: action_greet_user
 * enter_data
@@ -268,8 +269,8 @@
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * enter_data
     - onboarding_fail: action_greet_user
 * affirm
@@ -512,6 +513,7 @@
     - rewind
 * enter_data
     - chitchat: action_greet_user
+    - chitchat_fail: action_listen
 * enter_data
     - chitchat: utter_possibilities
 * greet
@@ -551,12 +553,12 @@
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * enter_data
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - chitchat: utter_getstarted
+    - chitchat_fail: utter_first_bot_with_rasa
 * out_of_scope
     - oos: utter_out_of_scope
     - chitchat: utter_possibilities
-    - onboarding: utter_first_bot_with_rasa
+    - utter_first_bot_with_rasa
 * ask_whatspossible
     - chitchat: action_chitchat
     - onboarding: utter_first_bot_with_rasa

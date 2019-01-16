@@ -3,49 +3,42 @@
     "action_listen": {
       "slots": [
         "name",
-        "product",
-        "feedback_value",
-        "email",
-        "current_api",
+        "nlu_part",
         "language",
-        "nlu_part"
+        "feedback_value",
+        "current_api",
+        "product",
+        "package_manager",
+        "email"
       ]
+    },
+    "action_greet_user": {
+      "slots": [
+        "shown_privacy"
+      ]
+    },
+    "action_default_ask_affirmation": {
+      "slots": []
+    },
+    "utter_contact_email": {
+      "slots": []
+    },
+    "action_chitchat": {
+      "slots": []
     },
     "action_set_onboarding": {
       "slots": [
         "onboarding"
       ]
     },
-    "action_store_name": {
-      "slots": [
-        "person_name"
-      ]
+    "utter_first_bot_with_rasa": {
+      "slots": []
     },
-    "action_store_company": {
-      "slots": [
-        "company_name"
-      ]
+    "utter_built_bot_before": {
+      "slots": []
     },
-    "suggestion_form": {
-      "slots": [
-        "requested_slot",
-        "suggestion"
-      ]
-    },
-    "action_store_unknown_product": {
-      "slots": [
-        "unknown_product"
-      ]
-    },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
+    "utter_bye": {
+      "slots": []
     },
     "action_store_job": {
       "slots": [
@@ -62,28 +55,128 @@
         "budget"
       ]
     },
+    "action_store_name": {
+      "slots": [
+        "person_name"
+      ]
+    },
+    "action_store_company": {
+      "slots": [
+        "company_name"
+      ]
+    },
+    "utter_ask_businessmail": {
+      "slots": []
+    },
+    "action_default_ask_rephrase": {
+      "slots": []
+    },
+    "utter_explain_nlucore": {
+      "slots": []
+    },
+    "action_default_fallback": {
+      "slots": [
+        "feedback_message",
+        "feedback_value",
+        "requested_slot"
+      ]
+    },
+    "utter_thumbsup": {
+      "slots": []
+    },
+    "action_store_problem_description": {
+      "slots": [
+        "problem_description"
+      ]
+    },
+    "action_store_entity_extractor": {
+      "slots": [
+        "entity_extractor"
+      ]
+    },
+    "action_faqs": {
+      "slots": []
+    },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
+    },
+    "utter_anything_else": {
+      "slots": []
+    },
+    "utter_already_subscribed": {
+      "slots": []
+    },
+    "utter_what_help": {
+      "slots": []
+    },
+    "utter_ask_describe_problem": {
+      "slots": []
+    },
+    "null": {
+      "slots": []
+    },
+    "utter_tryout": {
+      "slots": []
+    },
+    "utter_out_of_scope": {
+      "slots": []
+    },
+    "utter_ask_jobfunction": {
+      "slots": []
+    },
+    "utter_canthelp": {
+      "slots": []
+    },
+    "action_store_unknown_nlu_part": {
+      "slots": [
+        "unknown_nlu_part"
+      ]
+    },
+    "utter_nohelp": {
+      "slots": []
+    },
+    "utter_ask_email": {
+      "slots": []
+    },
+    "utter_ask_which_tool": {
+      "slots": []
+    },
     "action_store_sales_info": {
       "slots": [
         "data_stored"
       ]
     },
-    "action_store_bot_language": {
+    "action_store_unknown_product": {
       "slots": [
-        "language",
-        "can_use_spacy"
+        "unknown_product"
       ]
+    },
+    "utter_possibilities": {
+      "slots": []
+    },
+    "utter_ask_usecase": {
+      "slots": []
     }
   },
-  "rasa_core": "0.13.0a1",
   "python": "3.6.5",
   "max_histories": [
-    null,
+    6,
     2
   ],
   "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
   "policy_names": [
-    "rasa_core.policies.keras_policy.KerasPolicy",
+    "rasa_core.policies.keras_topic_policy.KerasTopicPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20181217-171040"
+  "trained_at": "20190116-173641",
+  "rasa_core": "0.13.0a5",
+  "tensorflow": "1.12.0",
+  "sklearn": "0.19.1"
 }

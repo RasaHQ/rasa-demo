@@ -685,6 +685,10 @@ topics:
   - feedback_success
   - getstarted_3_fail
   - greet_fail
-  - oos_failed
+  - oos_fail
   - sales_fail
   - rasa_help_fail
+  - faq_fail
+  - onboarding_fail
+  - faq_success
+  - getstarted_4_fail
