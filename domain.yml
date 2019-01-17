@@ -500,6 +500,23 @@ templates:
       buttons:
         - title: "Continue"
           payload: "/get_started_step3"
+  utter_continue_step3:
+    - text: "Let's continue, click the button below"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step3"
+  utter_continue_step2:
+    - text: "Let's continue, click the button below"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step2"
+  utter_continue_step4:
+    - text: "Let's continue, click the button below"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step4"
+  utter_no_more_steps:
+    - text: "Looks like you've already completed all the steps!"
 
 
 actions:
