@@ -44,6 +44,7 @@
     - action_restart
     - restart
 
+>>>>
 ## Generated Story goal:1 step, id:93b8b449ab074a6f973da26067b5c163, 12/17/18 -6676267086559597786
 * get_started_step1
     - greet_success: action_greet_user
@@ -264,6 +265,7 @@
     - chitchat: utter_not_sure
     - chitchat: utter_possibilities
 
+>>>>>
 ## Generated Story goal:1 step, id:3c9cd2509a78495bb5fd306618a9ba8e, 12/17/18 3076997113982385599
 * get_started_step1
     - greet_success: action_greet_user

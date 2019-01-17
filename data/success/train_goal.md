@@ -15,11 +15,11 @@
     - getstarted_1: utter_explain_core
     - getstarted_1: utter_tryout
 * how_to_get_started
-    - fallback: action_default_fallback
+    - getstarted_1_success: action_default_fallback
     - rewind
 * how_to_get_started
     - getstarted_1_success: utter_quickstart_nlu_only
-    - chitchat: utter_anything_else
+    - getstarted_1_fail: utter_anything_else
 * enter_data
     - fallback: action_default_fallback
     - rewind
@@ -2048,6 +2048,7 @@
     - chitchat: utter_noworries
     - chitchat: utter_anything_else
 
+>>>>
 ## Generated Story goal:1 step, id:9978f875abec4c3c9955ec3d5dae51b1, 12/15/18 1526679696595893973
 * get_started_step1
     - greet_success: action_greet_user
@@ -2612,7 +2613,7 @@
     - getstarted_1: utter_tryout
 * how_to_get_started
     - getstarted_1_success: utter_quickstart_nlu_only
-    - chitchat: utter_anything_else
+    - getstarted_1_fail: utter_anything_else
 * deny
     - chitchat: utter_nohelp
 
@@ -3238,7 +3239,7 @@
     - getstarted_1: utter_tryout
 * how_to_get_started
     - getstarted_1_success: utter_quickstart_nlu_only
-    - chitchat: utter_anything_else
+    - getstarted_1_fail: utter_anything_else
 
 ## Generated Story goal:3 step, id:a1abb0d5bd294bb083c03f73eeb5e786, 05/01/19 -8888358178538347654
 * get_started_step1
