@@ -1929,8 +1929,8 @@
     - rewind
     - rewind
 * technical_question
-    - chitchat: utter_not_sure
-    - chitchat: utter_possibilities
+    - faq: utter_not_sure
+    - faq_fail: utter_possibilities
 * how_to_get_started
     - onboarding: utter_getstarted
     - onboarding: utter_first_bot_with_rasa
@@ -2048,7 +2048,6 @@
     - chitchat: utter_noworries
     - chitchat: utter_anything_else
 
->>>>
 ## Generated Story goal:1 step, id:9978f875abec4c3c9955ec3d5dae51b1, 12/15/18 1526679696595893973
 * get_started_step1
     - greet_success: action_greet_user
@@ -2076,7 +2075,8 @@
     - getstarted_1: utter_also_explain_core
 * enter_data{"email": "amy@example.com"}
     - slot{"email": "amy@example.com"}
-    - getstarted_1: utter_tryout
+    - chitchat: utter_tryout
+    - chitchat_fail: action_listen
 * how_to_get_started{"product": "nlu"}
     - slot{"product": "nlu"}
     - getstarted_1_success: utter_quickstart
@@ -2409,6 +2409,7 @@
     - getstarted_1: utter_ask_which_product
 * technical_question
     - faq: action_greet_user
+    - faq_fail: action_listen
 * greet
     - greet_success: action_greet_user
 * how_to_get_started
@@ -2465,9 +2466,9 @@
     - getstarted_3: action_select_installation_command
     - getstarted_3: utter_ask_ready_to_build
 * technical_question
-    - getstarted_3: action_store_problem_description
+    - faq: action_store_problem_description
     - slot{"problem_description": "error syntax"}
-    - getstarted_3_success: utter_direct_to_forum_for_help
+    - faq_success: utter_direct_to_forum_for_help
 * enter_data{"package_manager": "pip"}
     - slot{"package_manager": "pip"}
     - getstarted_3: action_store_entity_extractor
@@ -2771,8 +2772,8 @@
 * ask_howdoing
     - chitchat: action_chitchat
 * technical_question
-    - chitchat: utter_not_sure
-    - chitchat: utter_possibilities
+    - faq: utter_not_sure
+    - faq_fail: utter_possibilities
 * enter_data
     - chitchat: utter_not_sure
     - chitchat: utter_possibilities

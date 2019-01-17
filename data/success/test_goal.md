@@ -44,14 +44,13 @@
     - action_restart
     - restart
 
->>>>
 ## Generated Story goal:1 step, id:93b8b449ab074a6f973da26067b5c163, 12/17/18 -6676267086559597786
 * get_started_step1
     - greet_success: action_greet_user
     - slot{"shown_privacy": true}
 * technical_question
-    - onboarding: utter_getstarted
-    - onboarding: utter_first_bot_with_rasa
+    - faq: utter_getstarted
+    - faq_fail: utter_first_bot_with_rasa
 * affirm
     - getstarted_1: action_set_onboarding
     - slot{"onboarding": true}
@@ -61,8 +60,8 @@
     - getstarted_1: utter_stack_details
     - getstarted_1: utter_explain_nlucore
 * enter_data{"number": 1}
-    - getstarted_1_fail: utter_great
-    - getstarted_1: utter_ask_email
+    - chitchat: utter_great
+    - chitchat_fail: utter_ask_email
 * deny
     - subscribe: utter_cantsignup
 
@@ -265,7 +264,6 @@
     - chitchat: utter_not_sure
     - chitchat: utter_possibilities
 
->>>>>
 ## Generated Story goal:1 step, id:3c9cd2509a78495bb5fd306618a9ba8e, 12/17/18 3076997113982385599
 * get_started_step1
     - greet_success: action_greet_user
@@ -274,10 +272,11 @@
     - chitchat: utter_getstarted
     - chitchat_fail: utter_first_bot_with_rasa
 * enter_data
-    - onboarding_fail: action_greet_user
+    - chitchat: action_greet_user
+    - chitchat_fail: action_listen
 * affirm
-    - getstarted_1_fail: utter_explain_nlu
-    - getstarted_1: utter_tryout
+    - getstarted_1: utter_explain_nlu
+    - getstarted_1_fail: utter_tryout
 * how_to_get_started{"product": "stack"}
     - slot{"product": "stack"}
     - getstarted_1_fail: utter_quickstart
