@@ -2,6 +2,17 @@
 * get_started_step3
     - action_greet_user
 
+## transition from step 2
+* get_started_step2
+    - action_greet_user
+    - slot{"step":"2"}
+    - utter_direct_step3
+* get_started_step3
+    - action_greet_user
+    - slot{"step":"3"}
+* install_rasa
+    - utter_ask_python_installed
+
 ## Install Rasa: Happy Path
 * install_rasa
     - utter_ask_python_installed

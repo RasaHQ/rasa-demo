@@ -914,3 +914,83 @@
 * enter_data
     - utter_not_sure
     - utter_tryout
+
+## Story from conversation with e977c395a2404bef8ba7f0c3b7e65970 on January 8th 2019
+
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* how_to_get_started{"product":"core"}
+    - slot{"product":"core"}
+    - utter_explain_core
+    - utter_also_explain_nlu
+* affirm
+    - utter_explain_nlu
+    - utter_tryout
+* how_to_get_started{"product":"stack"}
+    - slot{"product":"stack"}
+    - utter_quickstart
+
+## Story from conversation with 602ddccbe2de4f46822e06e2781cf02d on January 8th 2019
+
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* greet
+    - action_greet_user
+* out_of_scope
+    - utter_out_of_scope
+* affirm
+    - utter_thumbsup
+* affirm
+    - utter_thumbsup
+
+## Story from conversation with 03727bb9d4cb4f64afdc383818739680 on January 17th 2019
+
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* greet
+    - action_greet_user
+* how_to_get_started{"user_type":"new"}
+    - action_set_onboarding
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* how_to_get_started{"product":"stack"}
+    - slot{"product":"stack"}
+    - utter_explain_core
+    - utter_also_explain_nlu
+* affirm
+    - utter_explain_nlu
+    - utter_tryout
+* affirm
+    - utter_quickstart
+* get_started_step2
+    - action_greet_user
+    - slot{"step":"2"}
+    - utter_direct_step3
+* get_started_step3
+    - action_greet_user
+    - slot{"step":"3"}
+* install_rasa
+    - utter_ask_python_installed
