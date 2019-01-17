@@ -598,15 +598,12 @@ class ActionNextStep(Action):
         return "action_next_step"
 
     def run(self, dispatcher, tracker, domain):
-        step = str(int(tracker.get_slot('step'))+1)
+        step = int(tracker.get_slot('step'))+1
 
-        # this is formatting to display a url correctly
-        message = ("Let's continue, please click [here](window.localStorage."
-                   "setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage"
-                   "%3A%22%2Fget_started_step{}%22%2Cexpiry%3ADate.now()%2B6e4%"
-                   "7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2F"
-                   "get_started_step{}%2F%22%3B)".format(step, step))
-
-        dispatcher.utter_message(message)
+        if step in [2, 3, 4]:
+            dispatcher.utter_template("utter_continue_step{}".format(step),
+                                      tracker)
+        else:
+            dispatcher.utter_template("utter_no_more_steps", tracker)
 
         return []
