@@ -978,10 +978,8 @@
     - utter_explain_nlucore
 * how_to_get_started{"product":"stack"}
     - slot{"product":"stack"}
-    - utter_explain_core
-    - utter_also_explain_nlu
-* affirm
     - utter_explain_nlu
+    - utter_explain_core
     - utter_tryout
 * affirm
     - utter_quickstart
