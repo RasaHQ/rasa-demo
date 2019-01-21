@@ -567,7 +567,8 @@ class CommunityEventAction(Action):
 
         if location:
             events_for_location = [e for e in events
-                                   if e.location == location]
+                                   if e.city == location or
+                                   e.country == location]
             if not events_for_location and events:
                 next_event = events[0]
                 dispatcher.utter_template(
