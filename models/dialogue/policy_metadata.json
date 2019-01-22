@@ -2,14 +2,14 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "name",
-        "nlu_part",
-        "language",
-        "feedback_value",
-        "current_api",
-        "product",
         "package_manager",
-        "email"
+        "language",
+        "nlu_part",
+        "current_api",
+        "email",
+        "product",
+        "feedback_value",
+        "name"
       ]
     },
     "action_greet_user": {
@@ -17,28 +17,61 @@
         "shown_privacy"
       ]
     },
-    "action_default_ask_affirmation": {
-      "slots": []
-    },
-    "utter_contact_email": {
-      "slots": []
-    },
-    "action_chitchat": {
-      "slots": []
-    },
     "action_set_onboarding": {
       "slots": [
         "onboarding"
       ]
     },
-    "utter_first_bot_with_rasa": {
+    "utter_what_help": {
       "slots": []
     },
-    "utter_built_bot_before": {
+    "action_default_ask_rephrase": {
       "slots": []
     },
-    "utter_bye": {
+    "action_default_ask_affirmation": {
       "slots": []
+    },
+    "utter_out_of_scope": {
+      "slots": []
+    },
+    "action_store_email": {
+      "slots": [
+        "email"
+      ]
+    },
+    "action_subscribe_newsletter": {
+      "slots": [
+        "subscribed"
+      ]
+    },
+    "utter_anything_else": {
+      "slots": []
+    },
+    "action_chitchat": {
+      "slots": []
+    },
+    "utter_canthelp": {
+      "slots": []
+    },
+    "action_store_company": {
+      "slots": [
+        "company_name"
+      ]
+    },
+    "action_faqs": {
+      "slots": []
+    },
+    "action_store_unknown_nlu_part": {
+      "slots": [
+        "unknown_nlu_part"
+      ]
+    },
+    "action_default_fallback": {
+      "slots": [
+        "requested_slot",
+        "feedback_value",
+        "feedback_message"
+      ]
     },
     "action_store_job": {
       "slots": [
@@ -60,28 +93,16 @@
         "person_name"
       ]
     },
-    "action_store_company": {
-      "slots": [
-        "company_name"
-      ]
-    },
     "utter_ask_businessmail": {
       "slots": []
     },
-    "action_default_ask_rephrase": {
+    "null": {
       "slots": []
     },
-    "utter_explain_nlucore": {
+    "utter_contact_email": {
       "slots": []
     },
-    "action_default_fallback": {
-      "slots": [
-        "feedback_message",
-        "feedback_value",
-        "requested_slot"
-      ]
-    },
-    "utter_thumbsup": {
+    "utter_ask_jobfunction": {
       "slots": []
     },
     "action_store_problem_description": {
@@ -89,80 +110,59 @@
         "problem_description"
       ]
     },
-    "action_store_entity_extractor": {
-      "slots": [
-        "entity_extractor"
-      ]
-    },
-    "action_faqs": {
-      "slots": []
-    },
-    "action_store_email": {
-      "slots": [
-        "email"
-      ]
-    },
-    "action_subscribe_newsletter": {
-      "slots": [
-        "subscribed"
-      ]
-    },
-    "utter_anything_else": {
-      "slots": []
-    },
-    "utter_already_subscribed": {
-      "slots": []
-    },
-    "utter_what_help": {
-      "slots": []
-    },
     "utter_ask_describe_problem": {
-      "slots": []
-    },
-    "null": {
       "slots": []
     },
     "utter_tryout": {
       "slots": []
     },
-    "utter_out_of_scope": {
+    "utter_first_bot_with_rasa": {
       "slots": []
     },
-    "utter_ask_jobfunction": {
+    "utter_built_bot_before": {
       "slots": []
     },
-    "utter_canthelp": {
+    "utter_bye": {
       "slots": []
     },
-    "action_store_unknown_nlu_part": {
+    "utter_explain_nlucore": {
+      "slots": []
+    },
+    "utter_thumbsup": {
+      "slots": []
+    },
+    "action_store_entity_extractor": {
       "slots": [
-        "unknown_nlu_part"
+        "entity_extractor"
       ]
     },
-    "utter_nohelp": {
+    "utter_already_subscribed": {
       "slots": []
     },
-    "utter_ask_email": {
+    "utter_ask_usecase": {
+      "slots": []
+    },
+    "utter_possibilities": {
+      "slots": []
+    },
+    "utter_nohelp": {
       "slots": []
     },
     "utter_ask_which_tool": {
       "slots": []
     },
-    "action_store_sales_info": {
-      "slots": [
-        "data_stored"
-      ]
+    "utter_ask_email": {
+      "slots": []
     },
     "action_store_unknown_product": {
       "slots": [
         "unknown_product"
       ]
     },
-    "utter_possibilities": {
-      "slots": []
-    },
-    "utter_ask_usecase": {
-      "slots": []
+    "action_store_sales_info": {
+      "slots": [
+        "data_stored"
+      ]
     }
   },
   "python": "3.6.5",
@@ -175,7 +175,7 @@
     "rasa_core.policies.keras_topic_policy.KerasTopicPolicy",
     "rasa_core.policies.form_policy.FormPolicy"
   ],
-  "trained_at": "20190116-173641",
+  "trained_at": "20190117-173649",
   "rasa_core": "0.13.0a5",
   "tensorflow": "1.12.0",
   "sklearn": "0.19.1"
