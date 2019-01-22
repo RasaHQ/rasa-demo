@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-
 import logging
 from datetime import datetime
 from typing import Text, Dict, Any, List
+import json
 
 from rasa_core_sdk import Action, Tracker
 from rasa_core_sdk.executor import CollectingDispatcher
@@ -443,10 +443,14 @@ class ActionDefaultAskAffirmation(Action):
         mapped_intents = [(name, self.intent_mappings.get(name, name))
                           for name in first_intent_names]
 
+        entities = tracker.latest_message.get("entities", [])
+        entities_json, entities_text = get_formatted_entities(entities)
+
         buttons = []
         for intent in mapped_intents:
-            buttons.append({'title': intent[1],
-                            'payload': '/{}'.format(intent[0])})
+            buttons.append({'title': intent[1] + entities_text,
+                            'payload': '/{}{}'.format(intent[0],
+                                                      entities_json)})
 
         buttons.append({'title': 'Something else',
                         'payload': '/out_of_scope'})
@@ -454,6 +458,22 @@ class ActionDefaultAskAffirmation(Action):
         dispatcher.utter_button_message(message_title, buttons=buttons)
 
         return []
+
+
+def get_formatted_entities(entities: List[Dict[str, Any]]) -> (Text, Text):
+    key_value_entities = {}
+    for e in entities:
+        key_value_entities[e.get("entity")] = e.get("value")
+    entities_json = ""
+    entities_text = ""
+    if len(entities) > 0:
+        entities_json = json.dumps(key_value_entities)
+        entities_text = ["'{}': '{}'".format(k, key_value_entities[k])
+                         for k in key_value_entities]
+        entities_text = ", ".join(entities_text)
+        entities_text = " ({})".format(entities_text)
+
+    return entities_json, entities_text
 
 
 class ActionDefaultFallback(Action):
