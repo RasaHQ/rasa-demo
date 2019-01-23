@@ -81,6 +81,7 @@ intents:
   - react_positive
   - ask_faq_community_size
   - ask_faq_what_is_forum
+  - next_step
 
 slots:
   budget:
@@ -149,6 +150,8 @@ slots:
     type: unfeaturized
   name:
     type: text
+  step:
+    type: unfeaturized
 
 
 templates:
@@ -184,7 +187,10 @@ templates:
     - text: "If you want some more awesome Rasa content, check out our forum:
       https://forum.rasa.com/"
   utter_quickstart:
-    - text: "We have a quickstart here where you can try the Rasa stack without installing anything: https://rasa.com/docs/core/quickstart/"
+    - text: "Click the button below to go to our quickstart where you can try it out without installing anything"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step2"
   utter_quickstart_nlu_only:
     - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/ . You don't have to install anything to try it out."
   utter_ask_migration:
@@ -416,7 +422,10 @@ templates:
   utter_get_starter_pack:
     - text: "Great, you installed Rasa! If you don't want to start from scratch, you can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack)."
   utter_direct_to_step4:
-    - text: "Since you are now also a chatbot builder, you should join our [community](https://rasa.com/docs/get_started_step4/)."
+    - text: "The next step is to join our community, click the button below to continue."
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step4"
   utter_ask_if_problem:
     - text: "Do you have a problem?"
   utter_get_started_step1:
@@ -482,8 +491,14 @@ templates:
     - text: "The next event in {event_location} is the {event_name} on {event_date}. Hope to see you there!"
   utter_next_event:
     - text: "The next event is the {event_name} in {event_location} on {event_date}. Hope to see you there!"
-  utter_describe_step4:
+  utter_get_started_step4:
     - text: "As Rasa developer you will be part of a huge community. You can ask me which events we have planned, how to contribute, or about our Rasa forum."
+  utter_no_event_for_location_but_next:
+    - text: "Sorry, there are currently no events at your location. However, the next event is the {event_name} in {event_location} on {event_date}."
+  utter_next_event_for_location:
+    - text: "The next event in {event_location} is the {event_name} on {event_date}. Hope to see you there!"
+  utter_next_event:
+    - text: "The next event is the {event_name} in {event_location} on {event_date}. Hope to see you there!"
   utter_reasons_to_contribute:
     - text: |
         Here a few reasons why you should contribute:
@@ -492,6 +507,28 @@ templates:
         - Contribute to open source software
   utter_link_to_forum:
     - text: "Click [here](https://forum.rasa.com) to get to the forum."
+  utter_direct_step3:
+    - text: "If you have no questions, you can click the button below to go to the next step once you're ready. Or when you're finished asking questions, you can say 'take me to the next step' at any point"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step3"
+  utter_continue_step3:
+    - text: "Let's continue, click the button below"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step3"
+  utter_continue_step2:
+    - text: "Let's continue, click the button below"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step2"
+  utter_continue_step4:
+    - text: "Let's continue, click the button below"
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step4"
+  utter_no_more_steps:
+    - text: "Looks like you've already completed all the steps!"
 
 
 actions:
@@ -632,6 +669,7 @@ actions:
   - utter_possibilities_to_contribute
   - utter_recommend_forum
   - utter_link_to_forum
+  - utter_direct_step3
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -656,6 +694,7 @@ actions:
   - utter_react_positive
   - utter_react_negative
   - action_get_community_events
+  - action_next_step
 
 forms:
   - suggestion_form

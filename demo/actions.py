@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-
 import logging
 from datetime import datetime
 from typing import Text, Dict, Any, List
+import json
 
 from rasa_core_sdk import Action, Tracker
 from rasa_core_sdk.executor import CollectingDispatcher
@@ -378,27 +378,27 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message['intent'].get('name')
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if shown_privacy and name_entity and name_entity.lower() != 'sara':
-            dispatcher.utter_template("utter_greet_name", tracker,
-                                      name=name_entity)
-            return []
-        elif shown_privacy:
-            dispatcher.utter_template("utter_greet_noname", tracker)
-            return []
-        elif intent == 'greet':
-            dispatcher.utter_template("utter_greet", tracker)
-            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-            dispatcher.utter_template("utter_ask_goal", tracker)
-            return [SlotSet('shown_privacy', True)]
-        elif intent == 'get_started_step4':
-            dispatcher.utter_template("utter_greet", tracker)
-            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-            return [SlotSet('shown_privacy', True)]
-        elif intent[:-1] == 'get_started_step':
+        if intent == "greet":
+            if shown_privacy and name_entity and name_entity.lower() != 'sara':
+                dispatcher.utter_template("utter_greet_name", tracker,
+                                          name=name_entity)
+                return []
+            elif shown_privacy:
+                dispatcher.utter_template("utter_greet_noname", tracker)
+                return []
+            else:
+                dispatcher.utter_template("utter_greet", tracker)
+                dispatcher.utter_template("utter_inform_privacypolicy", tracker)
+                dispatcher.utter_template("utter_ask_goal", tracker)
+                return [SlotSet('shown_privacy', True)]
+        elif intent[:-1] == 'get_started_step' and not shown_privacy:
             dispatcher.utter_template("utter_greet", tracker)
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
             dispatcher.utter_template("utter_"+intent, tracker)
-            return [SlotSet('shown_privacy', True)]
+            return [SlotSet('shown_privacy', True), SlotSet('step', intent[-1])]
+        elif intent[:-1] == 'get_started_step' and shown_privacy:
+            dispatcher.utter_template("utter_"+intent, tracker)
+            return [SlotSet('step', intent[-1])]
         return []
 
 
@@ -426,8 +426,15 @@ class ActionDefaultAskAffirmation(Action):
             ) -> List['Event']:
 
         intent_ranking = tracker.latest_message.get('intent_ranking', [])
+        if len(intent_ranking) > 1:
+            diff_intent_confidence = (intent_ranking[0].get("confidence") -
+                                      intent_ranking[1].get("confidence"))
+            if diff_intent_confidence < 0.2:
+                intent_ranking = intent_ranking[:2]
+            else:
+                intent_ranking = intent_ranking[:1]
         first_intent_names = [intent.get('name', '')
-                              for intent in intent_ranking[:2]
+                              for intent in intent_ranking
                               if intent.get('name', '') != 'out_of_scope']
 
         message_title = "Sorry, I'm not sure I've understood " \
@@ -436,10 +443,14 @@ class ActionDefaultAskAffirmation(Action):
         mapped_intents = [(name, self.intent_mappings.get(name, name))
                           for name in first_intent_names]
 
+        entities = tracker.latest_message.get("entities", [])
+        entities_json, entities_text = get_formatted_entities(entities)
+
         buttons = []
         for intent in mapped_intents:
-            buttons.append({'title': intent[1],
-                            'payload': '/{}'.format(intent[0])})
+            buttons.append({'title': intent[1] + entities_text,
+                            'payload': '/{}{}'.format(intent[0],
+                                                      entities_json)})
 
         buttons.append({'title': 'Something else',
                         'payload': '/out_of_scope'})
@@ -447,6 +458,22 @@ class ActionDefaultAskAffirmation(Action):
         dispatcher.utter_button_message(message_title, buttons=buttons)
 
         return []
+
+
+def get_formatted_entities(entities: List[Dict[str, Any]]) -> (Text, Text):
+    key_value_entities = {}
+    for e in entities:
+        key_value_entities[e.get("entity")] = e.get("value")
+    entities_json = ""
+    entities_text = ""
+    if len(entities) > 0:
+        entities_json = json.dumps(key_value_entities)
+        entities_text = ["'{}': '{}'".format(k, key_value_entities[k])
+                         for k in key_value_entities]
+        entities_text = ", ".join(entities_text)
+        entities_text = " ({})".format(entities_text)
+
+    return entities_json, entities_text
 
 
 class ActionDefaultFallback(Action):
@@ -560,7 +587,8 @@ class CommunityEventAction(Action):
 
         if location:
             events_for_location = [e for e in events
-                                   if e.location == location]
+                                   if e.city == location or
+                                   e.country == location]
             if not events_for_location and events:
                 next_event = events[0]
                 dispatcher.utter_template(
@@ -575,3 +603,20 @@ class CommunityEventAction(Action):
             next_event = events[0]
             dispatcher.utter_template('utter_next_event', tracker,
                                       **next_event.as_kwargs())
+
+
+class ActionNextStep(Action):
+
+    def name(self):
+        return "action_next_step"
+
+    def run(self, dispatcher, tracker, domain):
+        step = int(tracker.get_slot('step'))+1
+
+        if step in [2, 3, 4]:
+            dispatcher.utter_template("utter_continue_step{}".format(step),
+                                      tracker)
+        else:
+            dispatcher.utter_template("utter_no_more_steps", tracker)
+
+        return []

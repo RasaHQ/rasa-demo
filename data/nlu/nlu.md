@@ -99,7 +99,7 @@
 - what language supported by rasa?
 - what language supported by rasa ?
 - need to use [portuguese](language)
-- which language can I use with rasa? 
+- which language can I use with rasa?
 - my bot can be in [italian](language)?
 - chatbot language ?
 - I want Vietnamese language processing
@@ -164,12 +164,12 @@
 - help mi with slots
 - help mi with slots
 - tell me about slots
-- I need to know about slot filling 
-- I need to know about slot filling 
+- I need to know about slot filling
+- I need to know about slot filling
 - how to keep button system for slot selection
 - how to keep button system for slot selection
-- how can we keep buttons to get slots 
-- how can we keep buttons to get slots 
+- how can we keep buttons to get slots
+- how can we keep buttons to get slots
 - what are slots
 - what about slots
 - how slots are filled
@@ -241,7 +241,7 @@
 - Is rasa a good fit for building a voice bot?
 - Is rasa any good for building a voice bot?
 - Do you know if I can build a voice bot using rasa?
-- i want to build a voice bot 
+- i want to build a voice bot
 - can i build a voice bot
 - can i build a voice bot with rasa?
 
@@ -363,7 +363,7 @@
 - you are chatbot
 - are you bot
 - are you a bot ?
-- you're a bot 
+- you're a bot
 - Are you the bot?
 - Hi there, are you the bot?
 - Are you a chat bot?
@@ -378,7 +378,7 @@
 - are you bot?
 - oh are you chatbot?
 - are you sure that you're a bot?
-- are you a BOT 
+- are you a BOT
 
 ## intent:ask_languagesbot
 - Which languages do you speak?
@@ -1718,7 +1718,7 @@
 - [places](entity:place) and [names](entity:name)
 - i am interested in [ordinals](entity)
 - amounts of [money](entity)
-- how much [money](entity) 
+- how much [money](entity)
 - [amounts](entity:money)
 - [how long](entity:duration)
 - extracting [durations](entity:duration)
@@ -2316,7 +2316,7 @@
 
 ## intent:install_rasa
 - I want to install Rasa Stack
-- How to install Rasa? 
+- How to install Rasa?
 - Where to get Rasa Stack?
 - How to install Rasa Core?
 - install Rasa NLU
@@ -2419,6 +2419,7 @@
 - China
 - India
 - US
+- USA
 - Germany
 - United States
 - UK
@@ -2430,6 +2431,17 @@
 - Spain
 - Europe
 - Canada
+
+## synonym:USA
+- US
+- U.S.
+- USA
+- usa
+- United States
+
+## synonym:United Kingdom
+- UK
+- U.K.
 
 ## intent:ask_question_in_forum
 - Hey, i want to ask a question in the forum
@@ -2455,3 +2467,10 @@
 - I want to make Rasa better
 - how can I support the community
 - what can I do
+
+## intent:next_step
+- Take me to the next step
+- Next step
+- I want to go to the next step
+- Please take me to the next step
+- Next step please

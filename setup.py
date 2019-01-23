@@ -10,6 +10,7 @@ install_requires = [
     'gspread~=3.0.0',
     'beautifulsoup4~=4.6.3',
     'requests~=2.21.0',
+    'geopy~=1.18.1',
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
