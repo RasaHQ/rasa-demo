@@ -1,3 +1,4 @@
+import ssl
 from typing import List, Optional, Text
 import logging
 
@@ -71,8 +72,12 @@ def get_community_events() -> List[CommunityEvent]:
 
 def get_country_for(city: Text) -> Optional[Text]:
     from geopy.geocoders import Nominatim
-    geolocator = Nominatim()
-    location = geolocator.geocode(city, language='en', addressdetails=True)
+    ssl_context = ssl.create_default_context()
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+
+    geo_locator = Nominatim(ssl_context=ssl_context)
+    location = geo_locator.geocode(city, language='en', addressdetails=True)
 
     if location:
         return location.raw['address'].get('country')
