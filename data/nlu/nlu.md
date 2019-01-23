@@ -2423,7 +2423,6 @@
 - Germany
 - United States
 - UK
-- UK
 - England
 - Brazil
 - France
