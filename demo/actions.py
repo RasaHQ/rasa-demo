@@ -309,10 +309,9 @@ class ActionSetOnboarding(Action):
 
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message['intent'].get('name')
-        # latest_action = tracker.latest_action_name
-        # print(latest_action)
-        # if latest_action == 'utter_first_bot_with_rasa':
-        if intent == 'affirm':
+        user_type = next(tracker.get_latest_entity_values("user_type"), None)
+        is_new_user = intent == "how_to_get_started" and user_type == "new"
+        if intent == 'affirm' or is_new_user:
             return [SlotSet('onboarding', True)]
         elif intent == 'deny':
             return [SlotSet('onboarding', False)]
