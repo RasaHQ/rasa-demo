@@ -1167,8 +1167,3 @@
     - utter_tryout
 * affirm
     - utter_quickstart
-    - utter_anything_else
-* deny
-    - utter_nohelp
-* affirm
-    - utter_thumbsup
