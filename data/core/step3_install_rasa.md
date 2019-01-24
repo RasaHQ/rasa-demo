@@ -10,7 +10,7 @@
 * get_started_step3
     - action_greet_user
     - slot{"step":"3"}
-* install_rasa
+* install_rasa OR affirm
     - utter_ask_python_installed
 
 ## transition from step 2
@@ -21,7 +21,7 @@
 * get_started_step3
     - action_greet_user
     - slot{"step":"3"}
-* install_rasa
+* install_rasa OR affirm
     - utter_ask_python_installed
 * affirm
     - utter_ask_pip_or_conda
@@ -34,7 +34,7 @@
 * get_started_step3
     - action_greet_user
     - slot{"step":"3"}
-* install_rasa
+* install_rasa OR affirm
     - utter_ask_python_installed
 * deny
     - utter_get_python
@@ -42,6 +42,21 @@
 
 ## Install Rasa: Happy Path
 * install_rasa
+    - utter_ask_python_installed
+* affirm
+    - utter_ask_pip_or_conda
+* enter_data{"package_manager": "pip"}
+    - action_select_installation_command
+    - utter_ask_ready_to_build
+* affirm
+    - utter_get_starter_pack
+    - utter_direct_to_step4
+
+## Install Rasa: Happy Path
+* get_started_step3
+    - action_greet_user
+    - slot{"step":"3"}
+* install_rasa OR affirm
     - utter_ask_python_installed
 * affirm
     - utter_ask_pip_or_conda

@@ -992,3 +992,178 @@
     - slot{"step":"3"}
 * install_rasa
     - utter_ask_python_installed
+
+
+## Story from conversation with 4cdb0b3c6f6c4b3694fcb311ae72743b on January 21st 2019
+
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* affirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* ask_faq_differencecorenlu
+    - action_faqs
+    - utter_explain_nlucore
+* how_to_get_started{"product":"core"}
+    - utter_explain_core
+    - utter_also_explain_nlu
+
+
+## Story from conversation with 4b7ecc2cab6e42c5b1fedb8ab4056866 on December 29th 2018
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* ask_whoami
+    - action_chitchat
+* ask_languagesbot
+    - action_chitchat
+* ask_howold
+    - action_chitchat
+* out_of_scope{"number":42}
+    - utter_out_of_scope
+    - utter_possibilities
+* out_of_scope{"number":42}
+    - utter_out_of_scope
+    - utter_possibilities
+
+
+## Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* greet
+    - action_greet_user
+* ask_howdoing
+    - action_chitchat
+* ask_whatspossible
+    - action_chitchat
+* contact_sales
+    - utter_moreinformation
+    - utter_ask_jobfunction
+* react_positive
+    - utter_react_positive
+* enter_data{"jobfunction":"dancer"}
+    - utter_not_sure
+    - utter_possibilities
+
+
+## Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* greet
+    - action_greet_user
+* ask_whatspossible
+    - action_chitchat
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* ask_faq_differencecorenlu{"product":"nlu"}
+    - slot{"product":"nlu"}
+    - action_faqs
+    - utter_explain_nlucore
+* how_to_get_started{"product":"core"}
+    - utter_explain_core
+    - utter_also_explain_nlu
+
+
+## Story from conversation with 4a4e903fc43940db9ccdb9153dfdadcb on January 21st 2019
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* install_rasa
+    - utter_ask_python_installed
+* affirm
+    - utter_ask_pip_or_conda
+* enter_data{"package_manager":"pip"}
+    - slot{"package_manager":"pip"}
+    - action_select_installation_command
+    - utter_ask_ready_to_build
+* enter_data
+    - action_store_problem_description
+    - slot{"problem_description":"tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible."}
+    - utter_direct_to_forum_for_help
+    - utter_direct_to_step4
+* enter_data
+    - utter_not_sure
+    - utter_possibilities
+
+
+## Story from conversation with 5f3a2ea92d184a9f96df7240e4f7e2d9 on January 21st 2019
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* how_to_get_started{"product":"stack"}
+    - utter_quickstart
+
+
+## Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
+* get_started_step3
+    - action_greet_user
+    - slot{"shown_privacy":true}
+* rasa_cost
+    - utter_rasa_cost
+    - utter_anything_else
+* affirm
+    - utter_what_help
+* ask_whatspossible
+    - action_chitchat
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_tryout
+* affirm
+    - utter_quickstart
