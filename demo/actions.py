@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-
 import logging
 from datetime import datetime
 from typing import Text, Dict, Any, List
+import json
 
 from rasa_core_sdk import Action, Tracker
 from rasa_core_sdk.executor import CollectingDispatcher
@@ -442,10 +442,14 @@ class ActionDefaultAskAffirmation(Action):
         mapped_intents = [(name, self.intent_mappings.get(name, name))
                           for name in first_intent_names]
 
+        entities = tracker.latest_message.get("entities", [])
+        entities_json, entities_text = get_formatted_entities(entities)
+
         buttons = []
         for intent in mapped_intents:
-            buttons.append({'title': intent[1],
-                            'payload': '/{}'.format(intent[0])})
+            buttons.append({'title': intent[1] + entities_text,
+                            'payload': '/{}{}'.format(intent[0],
+                                                      entities_json)})
 
         buttons.append({'title': 'Something else',
                         'payload': '/out_of_scope'})
@@ -453,6 +457,22 @@ class ActionDefaultAskAffirmation(Action):
         dispatcher.utter_button_message(message_title, buttons=buttons)
 
         return []
+
+
+def get_formatted_entities(entities: List[Dict[str, Any]]) -> (Text, Text):
+    key_value_entities = {}
+    for e in entities:
+        key_value_entities[e.get("entity")] = e.get("value")
+    entities_json = ""
+    entities_text = ""
+    if len(entities) > 0:
+        entities_json = json.dumps(key_value_entities)
+        entities_text = ["'{}': '{}'".format(k, key_value_entities[k])
+                         for k in key_value_entities]
+        entities_text = ", ".join(entities_text)
+        entities_text = " ({})".format(entities_text)
+
+    return entities_json, entities_text
 
 
 class ActionDefaultFallback(Action):
@@ -551,7 +571,8 @@ class CommunityEventAction(Action):
     def _utter_event_overview(self,
                               dispatcher: CollectingDispatcher) -> None:
         events = self._get_events()
-        event_items = ["- {} in {}".format(e.name, e.location) for e in events]
+        event_items = ["- {} in {}".format(e.name_as_link(), e.city)
+                       for e in events]
         locations = "\n".join(event_items)
         dispatcher.utter_message("Here are the next Rasa events:\n"
                                  "" + locations +
@@ -566,29 +587,22 @@ class CommunityEventAction(Action):
 
         if location:
             events_for_location = [e for e in events
-                                   if e.location == location]
+                                   if e.city == location or
+                                   e.country == location]
             if not events_for_location and events:
                 next_event = events[0]
-                dispatcher.utter_message("Sorry, there are currently no events "
-                                         "at your location. However, the next "
-                                         "event is the {} in {} on {}."
-                                         "".format(next_event.name_as_link(),
-                                                   next_event.location,
-                                                   next_event.formatted_date()))
+                dispatcher.utter_template(
+                    'utter_no_event_for_location_but_next',
+                    tracker, **next_event.as_kwargs())
             elif events_for_location:
                 next_event = events_for_location[0]
-                dispatcher.utter_message("The next event in {} is the {} on {}."
-                                         " Hope to see you there!"
-                                         "".format(location,
-                                                   next_event.name_as_link(),
-                                                   next_event.formatted_date()))
+                dispatcher.utter_template('utter_next_event_for_location',
+                                          tracker,
+                                          **next_event.as_kwargs())
         elif events:
             next_event = events[0]
-            dispatcher.utter_message("The next event is the {} in {} on {}. "
-                                     "Hope to see you there!"
-                                     "".format(next_event.name_as_link(),
-                                               next_event.location,
-                                               next_event.formatted_date()))
+            dispatcher.utter_template('utter_next_event', tracker,
+                                      **next_event.as_kwargs())
 
 
 class ActionNextStep(Action):

@@ -2416,6 +2416,32 @@
 - Shanghai
 - Chongqing
 - Hong Kong
+- China
+- India
+- US
+- USA
+- Germany
+- United States
+- UK
+- England
+- Brazil
+- France
+- Poland
+- Italy
+- Spain
+- Europe
+- Canada
+
+## synonym:USA
+- US
+- U.S.
+- USA
+- usa
+- United States
+
+## synonym:United Kingdom
+- UK
+- U.K.
 
 ## intent:ask_question_in_forum
 - Hey, i want to ask a question in the forum

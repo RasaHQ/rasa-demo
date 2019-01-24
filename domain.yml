@@ -487,6 +487,12 @@ templates:
     - text: "Sorry, we currently don't have any planned community events 😞."
   utter_get_started_step4:
     - text: "As Rasa developer you will be part of a huge community. You can ask me which events we have planned, how to contribute, or about our Rasa forum."
+  utter_no_event_for_location_but_next:
+    - text: "Sorry, there are currently no events at your location. However, the next event is the {event_name} in {event_location} on {event_date}."
+  utter_next_event_for_location:
+    - text: "The next event in {event_location} is the {event_name} on {event_date}. Hope to see you there!"
+  utter_next_event:
+    - text: "The next event is the {event_name} in {event_location} on {event_date}. Hope to see you there!"
   utter_reasons_to_contribute:
     - text: |
         Here a few reasons why you should contribute:
@@ -649,6 +655,9 @@ actions:
   - utter_ask_for_feedback_message
   - utter_not_sure
   - utter_no_community_event
+  - utter_no_event_for_location_but_next
+  - utter_next_event_for_location
+  - utter_next_event
   - utter_describe_step4
   - utter_reasons_to_contribute
   - utter_possibilities_to_contribute

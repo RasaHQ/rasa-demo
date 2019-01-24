@@ -1,4 +1,5 @@
-from typing import List, Optional
+import ssl
+from typing import List, Optional, Text
 import logging
 
 logger = logging.getLogger(__name__)
@@ -6,9 +7,10 @@ logger = logging.getLogger(__name__)
 
 class CommunityEvent(object):
 
-    def __init__(self, name, location, date, link):
+    def __init__(self, name, city, country, date, link):
         self.name = name
-        self.location = location
+        self.city = city
+        self.country = country
         self.date = date
         self.link = link
 
@@ -24,18 +26,24 @@ class CommunityEvent(object):
                            "details from html.")
             return None
 
-        location, name, date_as_string = html.get_text().split(',')
+        city, name, date_as_string = html.get_text().split(',')
+        country = get_country_for(city)
 
         date_format = '%d %B %Y'
         date = datetime.strptime(date_as_string.strip(), date_format)
 
-        return cls(name.strip(), location.strip(), date, link.strip())
+        return cls(name.strip(), city.strip(), country, date, link.strip())
 
     def formatted_date(self):
         return self.date.strftime("%B %d, %Y")
 
     def name_as_link(self):
         return "[{}]({})".format(self.name, self.link)
+
+    def as_kwargs(self):
+        return {'event_name': self.name_as_link(),
+                'event_location': self.city,
+                'event_date': self.formatted_date()}
 
 
 def get_community_events() -> List[CommunityEvent]:
@@ -60,3 +68,18 @@ def get_community_events() -> List[CommunityEvent]:
         return sorted(events, key=lambda e: e.date)
 
     return []
+
+
+def get_country_for(city: Text) -> Optional[Text]:
+    from geopy.geocoders import Nominatim
+    ssl_context = ssl.create_default_context()
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+
+    geo_locator = Nominatim(ssl_context=ssl_context)
+    location = geo_locator.geocode(city, language='en', addressdetails=True)
+
+    if location:
+        return location.raw['address'].get('country')
+
+    return None
