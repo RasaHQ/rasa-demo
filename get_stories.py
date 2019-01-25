@@ -92,3 +92,15 @@ with io.open('data/success/test_for_success.md', 'a', encoding="utf-8") as f:
         f.write(text + "\n")
     for text in texts_no[-15:]:
         f.write(text + "\n")
+
+
+def label_file(path, output_path, topic_dict):
+    with io.open(path, "r", encoding="utf-8") as file:
+        text = file.read()
+
+        for action, topic in topic_dict.items():
+            text = text.replace(action + '\n',
+                                '{}: {}'.format(topic, action) + '\n')
+
+        with io.open(output_path, "w", encoding="utf-8") as f:
+            f.write(text)
