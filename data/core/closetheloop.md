@@ -582,6 +582,7 @@
     - utter_ask_feedback
 * deny
     - utter_thumbsup
+    - utter_anything_else
 * affirm
     - utter_thumbsup
 
