@@ -581,7 +581,7 @@
     - utter_confirm_salesrequest
     - utter_ask_feedback
 * deny
-    - utter_nohelp
+    - utter_thumbsup
 * affirm
     - utter_thumbsup
 
