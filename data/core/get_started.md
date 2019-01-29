@@ -459,12 +459,6 @@
     - utter_core_tutorial
     - utter_anything_else
 
-## skip to info on core
-
-* how_to_get_started{"product": "core"}
-    - utter_core_tutorial
-    - utter_anything_else
-
 ## not new to rasa + nlu + nothing special
 
 * how_to_get_started

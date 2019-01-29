@@ -292,30 +292,6 @@
     - utter_thumbsup
     - utter_anything_else
 
-## story number 13
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* out_of_scope
-    - utter_out_of_scope
-    - utter_possibilities
-    - utter_ask_email
-* enter_data{"email":"test@gmail.com"}
-    - slot{"email":"test@gmail.com"}
-    - action_store_email
-    - slot{"email":"test@gmail.com"}
-    - action_subscribe_newsletter
-    - slot{"subscribed":true}
-    - utter_awesome
-    - utter_confirmationemail
-    - utter_docu
-    - utter_ask_feedback
-* affirm
-    - utter_thumbsup
-    - utter_anything_else
-
 ## story number 14
 * greet
     - action_greet_user
@@ -331,13 +307,6 @@
     - action_greet_user
 * ask_weather
     - action_chitchat
-* enter_data
-    - utter_not_sure
-    - utter_possibilities
-
-## story number 16
-* greet
-    - action_greet_user
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -462,23 +431,6 @@
     - utter_first_bot_with_rasa
 * greet
     - action_greet_user
-
-## Story from conversation with d75d1ac725164b3c976193eb54feb756 on November 19th 2018
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding":false}
-    - utter_ask_which_product
-* how_to_get_started{"product":"core"}
-    - slot{"product":"core"}
-    - utter_core_tutorial
-    - utter_anything_else
-* how_to_get_started{"product":"nlu"}
-    - utter_ask_for_nlu_specifics
 
 ## Story from conversation with 4986d88ccb784dc19dc5a553a8e07890 on November 19th 2018
 * greet
@@ -725,38 +677,6 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 
-## Story from conversation with d75d1ac725164b3c976193eb54feb756 on November 19th 2018
-
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding":false}
-    - utter_ask_which_product
-* how_to_get_started{"product":"core"}
-    - slot{"product":"core"}
-    - utter_core_tutorial
-    - utter_anything_else
-* how_to_get_started{"product":"nlu"}
-    - slot{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-
-## Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
-* greet
-    - action_greet_user
-* ask_whoisit
-    - action_chitchat
-* out_of_scope
-    - utter_out_of_scope
-* ask_whatspossible
-    - action_chitchat
-* how_to_get_started{"product":"nlu"}
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-
 ## Story from conversation with cfa8bb9deaf0427498c662745431a282 on December 15th 2018
 * get_started_step1
     - action_greet_user
@@ -792,18 +712,6 @@
 * how_to_get_started{"product":"stack"}
     - slot{"product":"stack"}
     - utter_quickstart
-* enter_data
-    - utter_not_sure
-    - utter_possibilities
-
-## Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
-* get_started_step1
-    - action_greet_user
-    - slot{"shown_privacy":true}
-* ask_howdoing
-    - action_chitchat
-* ask_whoisit
-    - action_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities

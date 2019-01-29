@@ -8,7 +8,7 @@
 * human_handoff
     - utter_contact_email
 
-## just newsletter + confirm
+## just newsletter + handoff
 * greet
     - action_greet_user
 * signup_newsletter
@@ -16,37 +16,6 @@
     - utter_ask_email
 * human_handoff
     - utter_contact_email
-
-
-## just newsletter +confirm - already subscribed
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* human_handoff
-    - utter_contact_email
-
-
-## just newsletter
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* human_handoff
-    - utter_contact_email
-
-
-## just newsletter - already subscribed
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* human_handoff
-    - utter_contact_email
-
 
 ## just sales
 * greet

@@ -2,82 +2,13 @@
 * canthelp
     - utter_canthelp
 
-## just newsletter + confirm
+## greet + canthelp
 * greet
     - action_greet_user
 * canthelp
     - utter_canthelp
 
-## just newsletter + confirm
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already) + confirm
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already) + confirm
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already)
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already)
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already) + confirm - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already) + confirm - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already) - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter (with email already) - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter +confirm - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter +confirm - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter +confirm - already subscribed
+## greet + newsletter + canthelp
 * greet
     - action_greet_user
 * signup_newsletter
@@ -85,64 +16,6 @@
     - utter_ask_email
 * canthelp
     - utter_canthelp
-
-## just newsletter
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* canthelp
-    - utter_canthelp
-
-## just newsletter - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-
-## just newsletter - already subscribed
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-## just newsletter - already subscribed
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_great
-    - utter_ask_email
-* canthelp
-    - utter_canthelp
-
-
-## just sales
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
-
-## just sales
-* greet
-    - action_greet_user
-* canthelp
-    - utter_canthelp
-
 
 ## just sales
 * greet
