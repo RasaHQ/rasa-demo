@@ -17,7 +17,7 @@ class CommunityEvent(object):
     @classmethod
     def from_html(cls, html) -> Optional['CommunityEvent']:
         from datetime import datetime
-        link = html.a.get('href')
+        link = html.a.get("href")
 
         event_properties = html.get_text().split(',')
 
@@ -29,8 +29,9 @@ class CommunityEvent(object):
         city, name, date_as_string = html.get_text().split(',')
         country = get_country_for(city)
 
-        date_format = '%d %B %Y'
-        date = datetime.strptime(date_as_string.strip(), date_format)
+        date_format = "%d %B %Y"
+        date = datetime.strptime(date_as_string.strip(),
+                                 date_format).date()
 
         return cls(name.strip(), city.strip(), country, date, link.strip())
 
@@ -41,16 +42,16 @@ class CommunityEvent(object):
         return "[{}]({})".format(self.name, self.link)
 
     def as_kwargs(self):
-        return {'event_name': self.name_as_link(),
-                'event_location': self.city,
-                'event_date': self.formatted_date()}
+        return {"event_name": self.name_as_link(),
+                "event_location": self.city,
+                "event_date": self.formatted_date()}
 
 
 def get_community_events() -> List[CommunityEvent]:
     """Returns list of community events sorted ascending by their date."""
     from bs4 import BeautifulSoup
     import requests as r
-    from datetime import datetime
+    import datetime
 
     response = r.get('https://rasa.com/community/join/')
 
@@ -62,8 +63,8 @@ def get_community_events() -> List[CommunityEvent]:
         events = soup.find('ul', attrs={'class': 'bulleted'}).find_all('li')
         events = [CommunityEvent.from_html(e) for e in events]
 
-        now = datetime.now()
-        events = [e for e in events if e is not None and e.date > now]
+        now = datetime.date.today()
+        events = [e for e in events if e is not None and e.date >= now]
 
         return sorted(events, key=lambda e: e.date)
 
