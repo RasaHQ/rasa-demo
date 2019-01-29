@@ -671,8 +671,6 @@
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
     - utter_direct_to_step2
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
 
 
 ## new to rasa/bots, explain stack and try it out

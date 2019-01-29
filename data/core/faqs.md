@@ -529,9 +529,6 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
     - utter_direct_to_step2
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
-
 
 ## new to rasa/bots, explain stack and try it out
 * greet
