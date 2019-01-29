@@ -708,40 +708,7 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"stack"}
-    - slot{"product":"stack"}
-    - utter_quickstart
-* enter_data
-    - utter_not_sure
-    - utter_possibilities
-
-## Story from conversation with 15f92cc91e4e4c86826ffd023f4d1ef7 on December 16th 2018
-* get_started_step1
-    - action_greet_user
-    - slot{"shown_privacy":true}
-* enter_data
-    - utter_not_sure
-    - utter_possibilities
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm
-    - action_set_onboarding
-    - slot{"onboarding":true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"nlu"}
-    - slot{"product":"nlu"}
-    - utter_quickstart_nlu_only
-    - utter_anything_else
+    - utter_direct_to_step2
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -817,10 +784,10 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
+    - utter_direct_to_step2
 * enter_data
     - utter_not_sure
-    - utter_tryout
+    - utter_direct_to_step2
 
 ## Story from conversation with e977c395a2404bef8ba7f0c3b7e65970 on January 8th 2019
 
@@ -849,10 +816,7 @@
     - utter_also_explain_nlu
 * affirm
     - utter_explain_nlu
-    - utter_tryout
-* how_to_get_started{"product":"stack"}
-    - slot{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## Story from conversation with 602ddccbe2de4f46822e06e2781cf02d on January 8th 2019
 
@@ -887,9 +851,7 @@
     - slot{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* affirm
-    - utter_quickstart
+    - utter_direct_to_step2
 * get_started_step2
     - action_greet_user
     - slot{"step":"2"}
@@ -1039,10 +1001,7 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"stack"}
-    - utter_quickstart
-
+    - utter_direct_to_step2
 
 ## Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
 * get_started_step3
@@ -1071,6 +1030,4 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* affirm
-    - utter_quickstart
+    - utter_direct_to_step2

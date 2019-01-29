@@ -406,9 +406,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 
 ## new to rasa + not new to chatbots + not migrating
@@ -433,9 +431,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 
 ## new to rasa + not new to chatbots + not migrating
@@ -460,9 +456,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
@@ -486,9 +480,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
@@ -512,9 +504,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
@@ -535,10 +525,10 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
+    - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
-    - utter_tryout
+    - utter_direct_to_step2
 * how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
     - utter_quickstart
 
@@ -563,9 +553,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## new to rasa/bots, explain stack and try it out
 * greet
@@ -587,9 +575,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## new to rasa/bots, explain stack and try it out
 * greet
@@ -608,14 +594,12 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
+    - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain core and try out stack
+## new to rasa/bots, explain core and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -636,11 +620,9 @@
     - action_faqs
     - utter_also_explain_nlu
 * deny
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain core and try out stack
+## new to rasa/bots, explain core and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -658,15 +640,13 @@
     - utter_explain_core
     - utter_also_explain_nlu
 * deny
-    - utter_tryout
+    - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 
-## new to rasa/bots, explain core, then nlu and try out stack
+## new to rasa/bots, explain core, then nlu and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -688,11 +668,9 @@
     - utter_also_explain_nlu
 * affirm
     - utter_explain_nlu
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain core, then nlu and try out stack
+## new to rasa/bots, explain core, then nlu and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -711,15 +689,13 @@
     - utter_also_explain_nlu
 * affirm
     - utter_explain_nlu
-    - utter_tryout
+    - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 
-## new to rasa/bots, explain nlu and try out stack
+## new to rasa/bots, explain nlu and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -740,11 +716,9 @@
     - action_faqs
     - utter_also_explain_core
 * deny
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain nlu and try out stack
+## new to rasa/bots, explain nlu and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -762,15 +736,13 @@
     - utter_explain_nlu
     - utter_also_explain_core
 * deny
-    - utter_tryout
+    - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 
-## new to rasa/bots, don't explain and try out stack
+## new to rasa/bots, don't explain and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -788,11 +760,9 @@
     - action_faqs
     - utter_explain_nlucore
 * deny
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, don't explain and try out stack
+## new to rasa/bots, don't explain and direct to step2
 * greet
     - action_greet_user
 * how_to_get_started
@@ -807,39 +777,10 @@
     - utter_stack_details
     - utter_explain_nlucore
 * deny
-    - utter_tryout
+    - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
     - action_faqs
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
-
-
-## new to rasa/bots, explain and skip to installation
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_tryout
-* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum
-    - action_faqs
-    - utter_tryout
-* deny
-    - utter_direct_install
-    - utter_anything_else
-
+    - utter_direct_to_step2
 
 ## not new to rasa + not interested in products
 * greet
@@ -1080,6 +1021,4 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
