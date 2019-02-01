@@ -22,7 +22,7 @@ train-core:
 	python3 -m rasa_core.train -d domain.yml -s data/core -c policy.yml --debug -o models/dialogue
 
 train-memo:
-	python3 -m rasa_core.train -d domain.yml -s data/core -c augmentedmemo-only.yml --debug -o models/dialogue
+	python -m rasa_core.train -d domain.yml -s data/core -c augmentedmemo-only.yml --debug -o models/dialogue
 
 run-cmdline:
 	make run-actions&
