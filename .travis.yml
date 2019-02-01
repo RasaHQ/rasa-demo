@@ -2,9 +2,11 @@ language: python
 sudo: required
 services:
 - docker
+python:
+  - '3.6'
 before_install:
 - pip install -e .
-- make train-memo 
+- make train-memo
 - make evaluate-core
 - openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv
   -in travis_gcloud_auth.json.enc -out travis_gcloud_auth.json -d
