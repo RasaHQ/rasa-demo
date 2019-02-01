@@ -67,7 +67,7 @@
     - utter_docu
     - utter_ask_feedback
 * out_of_scope
-    - utter_out_of_scope
+    - utter_thumbsup
     - utter_anything_else
 
 ## story number 3
@@ -585,8 +585,8 @@
     - utter_confirm_salesrequest
     - utter_ask_feedback
 * enter_data
-    - utter_not_sure
-    - utter_possibilities
+    - utter_thumbsup
+    - utter_anything_else
 * ask_weather
     - action_chitchat
 * enter_data
