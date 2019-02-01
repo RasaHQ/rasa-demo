@@ -3,6 +3,9 @@ sudo: required
 services:
 - docker
 before_install:
+- pip install -e .
+- make train-memo 
+- make evaluate-core
 - openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv
   -in travis_gcloud_auth.json.enc -out travis_gcloud_auth.json -d
 - docker login -u _json_key -p "$(cat travis_gcloud_auth.json)" https://gcr.io

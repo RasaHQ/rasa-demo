@@ -21,6 +21,9 @@ train-nlu:
 train-core:
 	python3 -m rasa_core.train -d domain.yml -s data/core -c policy.yml --debug -o models/dialogue
 
+train-memo:
+	python3 -m rasa_core.train -d domain.yml -s data/core -c augmentedmemo-only.yml --debug -o models/dialogue
+
 run-cmdline:
 	make run-actions&
 	python3 -m rasa_core.run -d models/dialogue -u models/nlu/current --debug --endpoints endpoints.yml
