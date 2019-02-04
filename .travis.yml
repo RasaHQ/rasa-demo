@@ -6,6 +6,7 @@ python:
   - '3.6'
 before_install:
 - pip install -e .
+- echo "backend: Agg" > ~/.config/matplotlib/matplotlibrc
 - make train-memo
 - make evaluate-core
 - openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv
