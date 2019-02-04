@@ -408,15 +408,13 @@ class ActionDefaultAskAffirmation(Action):
         return "action_default_ask_affirmation"
 
     def __init__(self) -> None:
-        import csv
+        import pandas as pd
 
-        self.intent_mappings = {}
-        with open('data/intent_description_mapping.csv',
-                  newline='',
-                  encoding='utf-8') as file:
-            csv_reader = csv.reader(file)
-            for row in csv_reader:
-                self.intent_mappings[row[0]] = row[1]
+        self.intent_mappings = pd.read_csv("data/"
+                                           "intent_description_mapping.csv")
+        self.intent_mappings.fillna("", inplace=True)
+        self.intent_mappings.entities = self.intent_mappings.entities.map(
+            lambda entities: {e.strip() for e in entities.split(',')})
 
     def run(self,
             dispatcher: CollectingDispatcher,
@@ -436,19 +434,20 @@ class ActionDefaultAskAffirmation(Action):
                               for intent in intent_ranking
                               if intent.get('name', '') != 'out_of_scope']
 
-        message_title = "Sorry, I'm not sure I've understood " \
-                        "you correctly 🤔 Do you mean..."
-
-        mapped_intents = [(name, self.intent_mappings.get(name, name))
-                          for name in first_intent_names]
+        message_title = ("Sorry, I'm not sure I've understood "
+                         "you correctly 🤔 Do you mean...")
 
         entities = tracker.latest_message.get("entities", [])
-        entities_json, entities_text = get_formatted_entities(entities)
+        entities = {e["entity"]: e["value"] for e in entities}
+
+        entities_json = json.dumps(entities)
 
         buttons = []
-        for intent in mapped_intents:
-            buttons.append({'title': intent[1] + entities_text,
-                            'payload': '/{}{}'.format(intent[0],
+        for intent in first_intent_names:
+            logger.debug(intent)
+            logger.debug(entities)
+            buttons.append({'title': self.get_button_title(intent, entities),
+                            'payload': '/{}{}'.format(intent,
                                                       entities_json)})
 
         buttons.append({'title': 'Something else',
@@ -458,21 +457,24 @@ class ActionDefaultAskAffirmation(Action):
 
         return []
 
+    def get_button_title(self, intent: Text, entities: Dict[Text, Text]
+                         ) -> Text:
+        default_utterance_query = self.intent_mappings.intent == intent
+        utterance_query = (
+                (self.intent_mappings.entities == entities.keys()) &
+                default_utterance_query)
 
-def get_formatted_entities(entities: List[Dict[str, Any]]) -> (Text, Text):
-    key_value_entities = {}
-    for e in entities:
-        key_value_entities[e.get("entity")] = e.get("value")
-    entities_json = ""
-    entities_text = ""
-    if len(entities) > 0:
-        entities_json = json.dumps(key_value_entities)
-        entities_text = ["'{}': '{}'".format(k, key_value_entities[k])
-                         for k in key_value_entities]
-        entities_text = ", ".join(entities_text)
-        entities_text = " ({})".format(entities_text)
+        utterances = self.intent_mappings[utterance_query].button.tolist()
 
-    return entities_json, entities_text
+        if len(utterances) > 0:
+            button_title = utterances[0]
+        else:
+            utterances = (
+                self.intent_mappings[default_utterance_query]
+                    .button.tolist())
+            button_title = utterances[0] if len(utterances) > 0 else intent
+
+        return button_title.format(**entities)
 
 
 class ActionDefaultFallback(Action):
