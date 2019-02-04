@@ -4,7 +4,6 @@
     - utter_thumbsup
     - utter_anything_else
 
-
 ## feedback2
     - utter_ask_feedback
 * enter_data
@@ -17,11 +16,16 @@
     - utter_great
     - utter_anything_else
 
-
 ## feedback deny
     - utter_ask_feedback
 * deny
     - utter_thumbsup
+    - utter_anything_else
+
+## feedback thank
+    - utter_ask_feedback
+* thank
+    - utter_noworries
     - utter_anything_else
 
 ## feedback thumbsup

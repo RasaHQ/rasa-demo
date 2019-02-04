@@ -1,0 +1,4 @@
+policies:
+  - name: AugmentedMemoizationPolicy
+    max_history: 6
+  - name: FormPolicy

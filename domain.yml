@@ -358,8 +358,6 @@ templates:
     - text: 'Rasa NLU performs Natural Language Understanding, which means taking free-form text like "Please send the confirmation to amy@example.com" and turning it into structured data.'
   utter_explain_core:
     - text: "Rasa Core performs Dialog Management, which means keeping track of a conversation, and deciding how to proceed."
-  utter_tryout:
-    - text: "Would you like to try out the full stack, or just Rasa NLU?"
   utter_also_explain_nlu:
     - text: "Would you also like me to explain Rasa NLU?"
   utter_also_explain_core:
@@ -511,6 +509,11 @@ templates:
       buttons:
         - title: "Continue"
           payload: "/get_started_step3"
+  utter_direct_to_step2:
+    - text: "You can click the button below to go to the next step and to try out Rasa once you're ready."
+      buttons:
+        - title: "Continue"
+          payload: "/get_started_step2"
   utter_continue_step2:
     - text: "Let's continue, click the button below"
       buttons:
@@ -597,7 +600,6 @@ actions:
   - utter_explain_nlucore
   - utter_explain_nlu
   - utter_explain_core
-  - utter_tryout
   - utter_also_explain_nlu
   - utter_also_explain_core
   - utter_direct_install
@@ -663,6 +665,7 @@ actions:
   - utter_possibilities_to_contribute
   - utter_recommend_forum
   - utter_link_to_forum
+  - utter_direct_to_step2
   - utter_direct_step3
   - action_subscribe_newsletter
   - action_store_sales_info
@@ -692,4 +695,3 @@ actions:
 
 forms:
   - suggestion_form
-  - feedback_form
