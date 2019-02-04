@@ -737,7 +737,6 @@
     - utter_not_sure
     - utter_possibilities
 * ask_faq_languages
-    - slot{"problem_description":"what languages do you support?"}
     - action_faqs
 * enter_data
     - utter_not_sure
@@ -755,7 +754,6 @@
     - utter_not_sure
     - utter_possibilities
 * ask_faq_languages
-    - slot{"problem_description":"what languages do you support?"}
     - action_faqs
 * enter_data
     - utter_not_sure
@@ -787,7 +785,7 @@
     - utter_direct_to_step2
 * enter_data
     - utter_not_sure
-    - utter_direct_to_step2
+    - utter_possibilities
 
 ## Story from conversation with e977c395a2404bef8ba7f0c3b7e65970 on January 8th 2019
 
