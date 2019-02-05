@@ -4,19 +4,25 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+DATE_FORMAT = "%d %B %Y"
+
 
 class CommunityEvent(object):
 
-    def __init__(self, name, city, country, date, link):
+    def __init__(self, name, city, country, formatted_date, date, link):
         self.name = name
         self.city = city
         self.country = country
+        self.formatted_date = formatted_date
         self.date = date
         self.link = link
 
+    def __repr__(self):
+        return "{} ({}): {} ({})".format(self.name, self.city,
+                                         self.formatted_date, self.date)
+
     @classmethod
     def from_html(cls, html) -> Optional['CommunityEvent']:
-        from datetime import datetime
         link = html.a.get("href")
 
         event_properties = html.get_text().split(',')
@@ -29,14 +35,10 @@ class CommunityEvent(object):
         city, name, date_as_string = html.get_text().split(',')
         country = get_country_for(city)
 
-        date_format = "%d %B %Y"
-        date = datetime.strptime(date_as_string.strip(),
-                                 date_format).date()
+        date = parse_community_date(date_as_string).date()
 
-        return cls(name.strip(), city.strip(), country, date, link.strip())
-
-    def formatted_date(self):
-        return self.date.strftime("%B %d, %Y")
+        return cls(name.strip(), city.strip(), country, date_as_string.strip(),
+                   date, link.strip())
 
     def name_as_link(self):
         return "[{}]({})".format(self.name, self.link)
@@ -44,7 +46,19 @@ class CommunityEvent(object):
     def as_kwargs(self):
         return {"event_name": self.name_as_link(),
                 "event_location": self.city,
-                "event_date": self.formatted_date()}
+                "event_date": self.formatted_date}
+
+
+def parse_community_date(date_string: Text) -> 'datetime':
+    from datetime import datetime
+
+    dates = date_string.split("-")
+
+    try:
+        return datetime.strptime(dates[-1].strip(), DATE_FORMAT)
+    except Exception as e:
+        logger.warning(e)
+        return datetime.min
 
 
 def get_community_events() -> List[CommunityEvent]:
