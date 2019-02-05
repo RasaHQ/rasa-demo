@@ -456,7 +456,7 @@
     - utter_also_explain_nlu
 * how_to_get_started{"product":"core"}
     - slot{"product":"core"}
-    - utter_tryout
+    - utter_direct_to_step2
 
 
 ## Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
