@@ -46,9 +46,7 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + migrating from dialogflow
 
@@ -149,7 +147,7 @@
     - utter_anything_else
 
 
-## new to rasa/bots, explain stack and try it out
+## new to rasa/bots, explain stack
 
 * how_to_get_started
     - utter_getstarted
@@ -165,11 +163,9 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain core and try out stack
+## new to rasa/bots, explain core
 
 * how_to_get_started
     - utter_getstarted
@@ -186,11 +182,9 @@
     - utter_explain_core
     - utter_also_explain_nlu
 * deny
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain core, then nlu and try out stack
+## new to rasa/bots, explain core, then nlu
 
 * how_to_get_started
     - utter_getstarted
@@ -208,11 +202,9 @@
     - utter_also_explain_nlu
 * affirm
     - utter_explain_nlu
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain nlu and try out stack
+## new to rasa/bots, explain nlu
 
 * how_to_get_started
     - utter_getstarted
@@ -229,11 +221,9 @@
     - utter_explain_nlu
     - utter_also_explain_core
 * deny
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
-## new to rasa/bots, explain nlu then core and try out stack
+## new to rasa/bots, explain nlu then core
 
 * how_to_get_started
     - utter_getstarted
@@ -251,12 +241,10 @@
     - utter_also_explain_core
 * affirm
     - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
+    - utter_direct_to_step2
 
 
-## new to rasa/bots, don't explain and try out stack
+## new to rasa/bots, don't explain
 
 * how_to_get_started
     - utter_getstarted
@@ -270,164 +258,7 @@
     - utter_stack_details
     - utter_explain_nlucore
 * deny
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart
-
-
-## new to rasa/bots, explain and skip to installation
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_tryout
-* deny
-    - utter_direct_install
-    - utter_anything_else
-
-## new to rasa/bots, explain nlu and skip to installation
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* how_to_get_started{"product": "nlu"}
-    - utter_explain_nlu
-    - utter_also_explain_core
-* deny
-    - utter_tryout
-* deny
-    - utter_direct_install
-    - utter_anything_else
-
-## new to rasa/bots, explain core and skip to installation
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* how_to_get_started{"product": "core"}
-    - utter_explain_core
-    - utter_also_explain_nlu
-* deny
-    - utter_tryout
-* deny
-    - utter_direct_install
-    - utter_anything_else
-
-## new to rasa/bots, explain core and try nlu
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* how_to_get_started{"product": "core"}
-    - utter_explain_core
-    - utter_also_explain_nlu
-* deny
-    - utter_tryout
-* how_to_get_started{"product": "nlu"}
-    - utter_quickstart_nlu_only
-    - utter_anything_else
-
-## new to rasa/bots, explain nlu and try nlu
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* how_to_get_started{"product": "nlu"}
-    - utter_explain_nlu
-    - utter_also_explain_core
-* deny
-    - utter_tryout
-* how_to_get_started{"product": "nlu"}
-    - utter_quickstart_nlu_only
-    - utter_anything_else
-
-## new to rasa/bots, explain both and try nlu
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product": "nlu"}
-    - utter_quickstart_nlu_only
-    - utter_anything_else
-
-## new to rasa/bots, explain nlu then core and try nlu
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* how_to_get_started{"product": "nlu"}
-    - utter_explain_nlu
-    - utter_also_explain_core
-* affirm
-    - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product": "nlu"}
-    - utter_quickstart_nlu_only
-    - utter_anything_else
-
+    - utter_direct_to_step2
 
 ## not new to rasa + not interested in products
 
@@ -455,12 +286,6 @@
     - utter_anything_else
 
 ## skip to info on core
-* how_to_get_started{"product": "core"}
-    - utter_core_tutorial
-    - utter_anything_else
-
-## skip to info on core
-
 * how_to_get_started{"product": "core"}
     - utter_core_tutorial
     - utter_anything_else
@@ -709,24 +534,3 @@
 * source_code
     - utter_source_code
     - utter_anything_else
-
-## how to get started without privacy policy
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* affirm
-    - utter_ask_migration
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_tryout
-* how_to_get_started{"product":"core"} OR affirm OR how_to_get_started{"product":"stack"}
-    - utter_quickstart

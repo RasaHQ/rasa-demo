@@ -493,38 +493,15 @@ class ActionDefaultFallback(Action):
                 tracker.events[-4].get('name') ==
                 'action_default_ask_affirmation'):
 
+            dispatcher.utter_template('utter_restart_with_button', tracker)
+
             return [SlotSet('feedback_value', 'negative'),
-                    Form('feedback_form'),
-                    FollowupAction('feedback_form')]
+                    ConversationPaused()]
 
         # Fallback caused by Core
         else:
             dispatcher.utter_template('utter_default', tracker)
             return [UserUtteranceReverted()]
-
-
-class FeedbackMessageForm(FormAction):
-    """Accept free text input from the user for feedback."""
-
-    def name(self) -> Text:
-        return "feedback_form"
-
-    @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
-        return ["feedback_message"]
-
-    def slot_mappings(self) -> Dict[Text, Text]:
-        return {"feedback_message": self.from_text()}
-
-    def submit(self,
-               dispatcher: CollectingDispatcher,
-               tracker: Tracker,
-               domain: Dict[Text, Any]
-               ) -> List['Event']:
-        dispatcher.utter_template('utter_thanks_for_feedback', tracker)
-        dispatcher.utter_template('utter_restart_with_button', tracker)
-
-        return [FollowupAction('action_listen')]
 
 
 class CommunityEventAction(Action):
