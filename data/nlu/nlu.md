@@ -1,3 +1,16 @@
+## intent:ask_faq_tutorials
+- are there some tutorials i could look at
+- do you have tutorials
+- i need a tutorial on how to use rasa
+- rasa tutorial
+- can you show me a tutorial
+- i would like to follow a tutorial
+- do you have a tutorial i can follow
+- i am looking for a tutorial
+- i want a tutorial on rasa
+- i need a rasa tutorial
+- please show me a tutorial
+
 ## intent:ask_faq_python_version
 - which python version should i install
 - what version of python

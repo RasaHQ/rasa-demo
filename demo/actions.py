@@ -138,7 +138,7 @@ class ActionFaqs(Action):
                       'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots',
                       'ask_faq_channels', 'ask_faq_differencecorenlu',
                       'ask_faq_python_version', 'ask_faq_community_size',
-                      'ask_faq_what_is_forum']:
+                      'ask_faq_what_is_forum', 'ask_faq_tutorials']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
