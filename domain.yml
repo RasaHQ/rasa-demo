@@ -429,7 +429,7 @@ templates:
   utter_get_started_step3:
     - text: "I can help you to install Rasa Stack."
   utter_ask_faq_tutorials:
-    - text: "Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorial I wrote, but you can also check out some great tutorials written by the Rasa community [here](https://docs.google.com/spreadsheets/d/1lzvSRsTr0mQdJT_usvo1jMDzHjzvjVbiUkHpiGIKUgA/edit#gid=1717872446)"
+    - text: "Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that can help you get started and learn more about Rasa."
   utter_ask_faq_platform:
     - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
   utter_ask_faq_languages:
