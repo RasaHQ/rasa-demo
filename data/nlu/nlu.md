@@ -2444,6 +2444,7 @@
 - Spain
 - Europe
 - Canada
+- Ukraine
 
 ## synonym:USA
 - US
