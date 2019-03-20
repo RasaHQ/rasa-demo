@@ -2496,8 +2496,10 @@
 - I want more information on rasa [core](product)
 - I want more information on rasa [nlu](product)
 - tell me more
-- could you please explain that?
-- could you tell me more?
+- could you please explain that
+- could you tell me more
 - give me more information please
-- could you please give me some more information?
+- could you please give me some more information
 - i want more information
+- what is the difference
+- can you tell the difference
