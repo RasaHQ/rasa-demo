@@ -15,7 +15,7 @@
 * greet OR enter_data{"name": "akela"}
     - action_greet_user
 * elaboration_explanation
-    - utter_why_response
+    - utter_out_of_scope
 
 ## sales
 * greet

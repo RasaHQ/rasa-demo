@@ -182,8 +182,7 @@
     - utter_explain_core
     - utter_direct_to_step2
 * elaboration_explanation
-    - utter_explain_detailed_nlu
-    - utter_explain_detailed_core
+    - action_tell_more_about
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain core

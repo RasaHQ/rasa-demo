@@ -375,6 +375,10 @@ templates:
     - text: "Would you also like me to explain Rasa NLU?"
   utter_also_explain_core:
     - text: "Would you also like me to explain Rasa Core?"
+  utter_details_about_nlu:
+    - text: 'For a more detailed description of Rasa NLU please have a look at our documentation: https://rasa.com/docs/nlu/'
+  utter_details_about_core:
+    - text: 'For a more detailed description of Rasa Core please have a look at our documentation: https://rasa.com/docs/core/'
   utter_direct_install:
     - text: "Alright, you can directly install it here: (link)"
   utter_ask_which_tool:
@@ -543,9 +547,6 @@ templates:
           payload: "/get_started_step4"
   utter_no_more_steps:
     - text: "Looks like you've already completed all the steps!"
-  utter_why_response:
-    - text: "Why? That's a good question I cannot answer. I'm sorry."
-    - text: "Sorry, I'm just a bot. I cannot help you with that."
 
 
 actions:
@@ -625,11 +626,11 @@ actions:
   - utter_stack_details
   - utter_explain_nlucore
   - utter_explain_nlu
-  - utter_explain_detailed_core
-  - utter_explain_detailed_nlu
   - utter_explain_core
   - utter_also_explain_nlu
   - utter_also_explain_core
+  - utter_details_about_nlu
+  - utter_details_about_core
   - utter_direct_install
   - utter_built_bot_before
   - utter_ask_which_tool
@@ -695,7 +696,6 @@ actions:
   - utter_link_to_forum
   - utter_direct_to_step2
   - utter_direct_step3
-  - utter_why_response
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
@@ -717,6 +717,7 @@ actions:
   - utter_react_negative
   - action_get_community_events
   - action_next_step
+  - action_tell_more_about
 
 forms:
   - subscribe_newsletter_form
