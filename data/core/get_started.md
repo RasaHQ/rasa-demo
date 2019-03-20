@@ -146,7 +146,6 @@
     - utter_no_guide_for_switch
     - utter_anything_else
 
-
 ## new to rasa/bots, explain stack
 
 * how_to_get_started
@@ -163,6 +162,28 @@
 * affirm OR how_to_get_started{"product":"stack"}
     - utter_explain_nlu
     - utter_explain_core
+    - utter_direct_to_step2
+
+## new to rasa/bots, explain stack, detailed explanation
+
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm OR how_to_get_started{"user_type": "new"}
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_direct_to_step2
+* elaboration_explanation
+    - utter_explain_detailed_nlu
+    - utter_explain_detailed_core
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain core
@@ -242,7 +263,6 @@
 * affirm
     - utter_explain_core
     - utter_direct_to_step2
-
 
 ## new to rasa/bots, don't explain
 

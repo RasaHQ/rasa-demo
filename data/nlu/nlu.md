@@ -2490,9 +2490,15 @@
 - Please take me to the next step
 - Next step please
 
-## intent:elaboration_explain
+## intent:elaboration_explanation
+- tell me more about rasa [core](product)
+- tell me more about rasa [nlu](product)
+- I want more information on rasa [core](product)
+- I want more information on rasa [nlu](product)
+- why?
 - tell me more
-- could you please explain that
-- can you tell me more
-- please explain that
-- why is that
+- could you please explain that?
+- could you tell me more?
+- give me more information please
+- could you please give me some more information?
+- i want more information

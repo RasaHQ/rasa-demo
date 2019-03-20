@@ -11,6 +11,12 @@
 * greet OR enter_data{"name": "akela"}
     - action_greet_user
 
+## greet
+* greet OR enter_data{"name": "akela"}
+    - action_greet_user
+* elaboration_explanation
+    - utter_why_response
+
 ## sales
 * greet
     - action_greet_user
