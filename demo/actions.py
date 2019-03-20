@@ -85,6 +85,7 @@ class SubscribeNewsletterForm(FormAction):
         return []
 
 
+
 class SalesForm(FormAction):
     """Collects sales information and adds it to the spreadsheet"""
 
