@@ -2489,3 +2489,10 @@
 - I want to go to the next step
 - Please take me to the next step
 - Next step please
+
+## intent:elaboration_explain
+- tell me more
+- could you please explain that
+- can you tell me more
+- please explain that
+- why is that
