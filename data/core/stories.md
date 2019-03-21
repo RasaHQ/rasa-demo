@@ -39,6 +39,7 @@
     - utter_ask_email
 * explain
     - utter_response_why_email
+    - utter_ask_email
 * enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
     - action_store_email
     - slot{"email": "maxmeier@firma.de"}
