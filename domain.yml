@@ -83,7 +83,7 @@ intents:
   - ask_faq_community_size
   - ask_faq_what_is_forum
   - next_step
-  - elaboration_explanation
+  - explain
 
 slots:
   budget:
@@ -168,6 +168,9 @@ templates:
     - text: "Cool, let's do it 🚀"
   utter_ask_email:
     - text: "What's your email address?"
+  utter_response_why_email:
+    - text: "Because I need your email address to sign you up to the newsletter."
+    - text: "I need it so that I can sign you up to the newsletter."
   utter_awesome:
     - text: "Awesome, thanks! 👍"
     - text: "Sweet, thank you! 😄"
@@ -561,6 +564,7 @@ actions:
   - utter_ask_budget
   - utter_ask_company
   - utter_ask_goal
+  - utter_response_why_email
   - utter_inform_privacypolicy
   - utter_moreinformation
   - utter_confirm_salesrequest

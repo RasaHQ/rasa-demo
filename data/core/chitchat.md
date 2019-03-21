@@ -526,7 +526,7 @@
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
-* elaboration_explanation
+* explain
     - slot{"product": "core"}
     - action_tell_more_about
     - utter_also_explain_nlu
@@ -596,7 +596,7 @@
 * how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
     - utter_also_explain_core
-* elaboration_explanation
+* explain
     - slot{"product": "nlu"}
     - action_tell_more_about
     - utter_also_explain_core

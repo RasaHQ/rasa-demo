@@ -181,7 +181,7 @@
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
-* elaboration_explanation
+* explain
     - action_tell_more_about
     - utter_direct_to_step2
 

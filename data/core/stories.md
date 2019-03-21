@@ -12,9 +12,9 @@
     - action_greet_user
 
 ## greet
-* greet OR enter_data{"name": "akela"}
+* greet OR enter_data
     - action_greet_user
-* elaboration_explanation
+* explain
     - utter_out_of_scope
 
 ## sales
@@ -30,6 +30,23 @@
     - slot{"feedback_value": "positive"}
     - utter_great
     - utter_anything_else
+
+## newsletter + ask why email
+* greet
+    - action_greet_user
+* signup_newsletter
+    - utter_great
+    - utter_ask_email
+* explain
+    - utter_response_why_email
+* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
+    - action_store_email
+    - slot{"email": "maxmeier@firma.de"}
+- action_subscribe_newsletter
+    - slot{"subscribed": true}
+    - utter_awesome
+    - utter_confirmationemail
+    - utter_docu
 
 ## newsletter + feedback
 * greet
