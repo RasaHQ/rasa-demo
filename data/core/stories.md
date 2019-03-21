@@ -40,14 +40,6 @@
 * explain
     - utter_response_why_email
     - utter_ask_email
-* enter_data{"email": "maxmeier@firma.de"} OR enter_data{"number":"1"}
-    - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
-- action_subscribe_newsletter
-    - slot{"subscribed": true}
-    - utter_awesome
-    - utter_confirmationemail
-    - utter_docu
 
 ## newsletter + feedback
 * greet
