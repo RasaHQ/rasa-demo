@@ -4,9 +4,9 @@ from datetime import datetime
 from typing import Text, Dict, Any, List
 import json
 
-from rasa_core_sdk import Action, Tracker
+from rasa_core_sdk import Action, Tracker, ActionExecutionRejection
 from rasa_core_sdk.executor import CollectingDispatcher
-from rasa_core_sdk.forms import FormAction
+from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
 from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
     ConversationPaused, FollowupAction, Form
 
@@ -17,35 +17,159 @@ from demo.gdrive_service import GDriveService
 logger = logging.getLogger(__name__)
 
 
-class ActionSubscribeNewsletter(Action):
-    """ This action calls our newsletter API and subscribes the user with
-    their email address"""
+class SubscribeNewsletterForm(FormAction):
+    """Asks for the user's email, call the newsletter API and sign up user"""
 
     def name(self):
-        return "action_subscribe_newsletter"
+        return "subscribe_newsletter_form"
 
-    def run(self, dispatcher, tracker, domain):
+    @staticmethod
+    def required_slots(tracker):
+        return ["email"]
+
+    def slot_mappings(self):
+        return {"email": self.from_entity(entity="email")}
+
+    def validate(self, dispatcher, tracker, domain):
+        # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
+        """Validate given email, if no email is found but intent is enter_data,
+        ask again, otherwise let other policies take over """
+
+        # extract other slots that were not requested
+        # but set by corresponding entity
+        slot_values = self.extract_other_slots(dispatcher, tracker, domain)
+
+        # extract requested slot
+        slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
+        if slot_to_fill:
+            for slot, value in self.extract_requested_slot(dispatcher,
+                                                           tracker,
+                                                           domain).items():
+                validate_func = getattr(self, "validate_{}".format(slot),
+                                        lambda *x: value)
+                slot_values[slot] = validate_func(value, dispatcher, tracker,
+                                                  domain)
+
+            if not slot_values:
+
+                # ask for email again if none was detected by duckling
+                # and intent was enter_data
+                intent = tracker.latest_message['intent'].get('name')
+                if intent == "enter_data":
+                    dispatcher.utter_template('utter_no_email', tracker)
+                    return []
+                else:
+                    # reject to execute the form action if no email is found
+                    # and an intent other than enter_data is predicted
+                    # it will allow other policies to predict another action
+                    raise ActionExecutionRejection(self.name(),
+                                                   "Failed to validate slot "
+                                                   "{0} with action {1}"
+                                                   "".format(slot_to_fill,
+                                                             self.name()))
+
+        # validation succeed, set slots to extracted values
+        return [SlotSet(slot, value) for slot, value in slot_values.items()]
+
+    def submit(self,
+               dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]) -> List[Dict]:
+        """Once we have an email, attempt to add it to the database"""
+
         email = tracker.get_slot('email')
-        if email:
-            client = MailChimpAPI(config.mailchimp_api_key)
-            # if the email is already subscribed, this returns False
-            subscribed = client.subscribe_user(config.mailchimp_list, email)
+        client = MailChimpAPI(config.mailchimp_api_key)
+        # if the email is already subscribed, this returns False
+        added_to_list = client.subscribe_user(config.mailchimp_list, email)
 
-            return [SlotSet('subscribed', subscribed)]
+        # utter submit template
+        if added_to_list:
+            dispatcher.utter_template('utter_confirmationemail', tracker)
+        else:
+            dispatcher.utter_template('utter_already_subscribed', tracker)
         return []
 
 
-class ActionStoreSalesInfo(Action):
-    """Saves the information collected in the sales flow into a spreadsheet"""
+class SalesForm(FormAction):
+    """Collects sales information and adds it to the spreadsheet"""
 
     def name(self):
-        return "action_store_sales_info"
+        return "sales_form"
 
-    def run(self, dispatcher, tracker, domain):
+    @staticmethod
+    def required_slots(tracker):
+        return ["job_function", "use_case", "budget", "person_name",
+                "company_name", "business_email"]
+
+    def slot_mappings(self):
+        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
+        return {"job_function": [self.from_entity(entity="jobfunction"),
+                                 self.from_text(intent="enter_data")],
+                "use_case": self.from_text(intent="enter_data"),
+                "budget": [self.from_entity(entity="amount-of-money"),
+                           self.from_entity(entity="number"),
+                           self.from_text(intent="enter_data")],
+                "person_name": [self.from_entity(entity="name"),
+                                self.from_text(intent="enter_data")],
+                "company_name": [self.from_entity(entity="company"),
+                                 self.from_text(intent="enter_data")],
+                "business_email": self.from_entity(entity="email")}
+
+    def validate(self, dispatcher, tracker, domain):
+        # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
+        """Validate extracted input, if no valid email found but intent is
+        enter_data, re-ask for email, otherwise let other policies take over"""
+
+        # extract other slots that were not requested
+        # but set by corresponding entity
+        slot_values = self.extract_other_slots(dispatcher, tracker, domain)
+
+        # extract requested slot
+        slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
+        if slot_to_fill:
+            for slot, value in self.extract_requested_slot(dispatcher,
+                                                           tracker,
+                                                           domain).items():
+                validate_func = getattr(self, "validate_{}".format(slot),
+                                        lambda *x: value)
+                slot_values[slot] = validate_func(value, dispatcher, tracker,
+                                                  domain)
+            if not slot_values:
+
+                intent = tracker.latest_message['intent'].get('name')
+                if slot_to_fill == "business_email" and intent == "enter_data":
+                    dispatcher.utter_template('utter_no_email', tracker)
+                    return []
+                else:
+                    # reject to execute the form action
+                    # if some slot was requested but nothing was extracted
+                    # it will allow other policies to predict another action
+                    raise ActionExecutionRejection(self.name(),
+                                                   "Failed to validate slot "
+                                                   "{0} with action {1}"
+                                                   "".format(slot_to_fill,
+                                                             self.name()))
+
+        # validation succeed, set slots to extracted values
+        return [SlotSet(slot, value) for slot, value in slot_values.items()]
+
+    def submit(self,
+               dispatcher: CollectingDispatcher,
+               tracker: Tracker,
+               domain: Dict[Text, Any]) -> List[Dict]:
+        """Once we have all the infomration, attempt to add it to the
+        Google Drive database"""
+
         import datetime
         budget = tracker.get_slot('budget')
         company = tracker.get_slot('company_name')
-        email = tracker.get_slot('email')
+        email = tracker.get_slot('business_email')
         jobfunction = tracker.get_slot('job_function')
         name = tracker.get_slot('person_name')
         use_case = tracker.get_slot('use_case')
@@ -57,11 +181,13 @@ class ActionStoreSalesInfo(Action):
         gdrive = GDriveService()
         try:
             gdrive.store_data(sales_info)
-            return [SlotSet('data_stored', True)]
+            dispatcher.utter_template('utter_confirm_salesrequest', tracker)
+            return []
         except Exception as e:
             logger.error("Failed to write data to gdocs. Error: {}"
                          "".format(e.message), exc_info=True)
-            return [SlotSet('data_stored', False)]
+            dispatcher.utter_template('utter_salesrequest_failed', tracker)
+            return []
 
 
 class ActionStoreBudget(Action):
@@ -393,10 +519,10 @@ class ActionGreetUser(Action):
         elif intent[:-1] == 'get_started_step' and not shown_privacy:
             dispatcher.utter_template("utter_greet", tracker)
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-            dispatcher.utter_template("utter_"+intent, tracker)
+            dispatcher.utter_template("utter_" + intent, tracker)
             return [SlotSet('shown_privacy', True), SlotSet('step', intent[-1])]
         elif intent[:-1] == 'get_started_step' and shown_privacy:
-            dispatcher.utter_template("utter_"+intent, tracker)
+            dispatcher.utter_template("utter_" + intent, tracker)
             return [SlotSet('step', intent[-1])]
         return []
 
@@ -460,9 +586,8 @@ class ActionDefaultAskAffirmation(Action):
     def get_button_title(self, intent: Text, entities: Dict[Text, Text]
                          ) -> Text:
         default_utterance_query = self.intent_mappings.intent == intent
-        utterance_query = (
-                (self.intent_mappings.entities == entities.keys()) &
-                default_utterance_query)
+        utterance_query = (self.intent_mappings.entities == entities.keys() &
+                           default_utterance_query)
 
         utterances = self.intent_mappings[utterance_query].button.tolist()
 
@@ -590,7 +715,7 @@ class ActionNextStep(Action):
         return "action_next_step"
 
     def run(self, dispatcher, tracker, domain):
-        step = int(tracker.get_slot('step'))+1
+        step = int(tracker.get_slot('step')) + 1
 
         if step in [2, 3, 4]:
             dispatcher.utter_template("utter_continue_step{}".format(step),
