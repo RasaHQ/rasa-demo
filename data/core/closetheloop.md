@@ -757,7 +757,7 @@
     - sales_form
     - form{"name": null}
 
-# Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
+## Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
 * get_started_step1
     - action_greet_user
     - slot{"shown_privacy":true}
