@@ -673,7 +673,6 @@ actions:
   - utter_link_to_forum
   - utter_direct_to_step2
   - utter_direct_step3
-  - action_subscribe_newsletter
   - action_chitchat
   - action_faqs
   - action_store_email
