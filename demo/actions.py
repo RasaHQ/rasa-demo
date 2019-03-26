@@ -190,45 +190,6 @@ class SalesForm(FormAction):
             return []
 
 
-class ActionStoreBudget(Action):
-    """Stores the budget in a slot"""
-
-    def name(self):
-        return "action_store_budget"
-
-    def run(self, dispatcher, tracker, domain):
-
-        # the entity can be one of two entities from duckling,
-        # number or amount-of-money
-        budget = next(tracker.get_latest_entity_values('number'), None)
-        if not budget:
-            budget = next(tracker.get_latest_entity_values('amount-of-money'),
-                          None)
-
-        # as a fallback, if no entity is recognised (e.g. in a sentence
-        # like "I have no money") we store the whole user utterance in the slot
-        # In future this should be stored in a `budget_unconfirmed` slot where
-        # the user will then be asked to confirm this is there budget
-        if not budget:
-            budget = tracker.latest_message.get('text')
-
-        return [SlotSet('budget', budget)]
-
-
-class ActionStoreUsecase(Action):
-    """Stores the bot use case in a slot"""
-
-    def name(self):
-        return "action_store_usecase"
-
-    def run(self, dispatcher, tracker, domain):
-        # we grab the whole user utterance here as there are no real entities
-        # in the use case
-        use_case = tracker.latest_message.get('text')
-
-        return [SlotSet('use_case', use_case)]
-
-
 class ActionChitchat(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
@@ -269,61 +230,6 @@ class ActionFaqs(Action):
         return []
 
 
-class ActionStoreName(Action):
-    """Stores the users name in a slot"""
-
-    def name(self):
-        return "action_store_name"
-
-    def run(self, dispatcher, tracker, domain):
-        person_name = next(tracker.get_latest_entity_values('name'), None)
-
-        # if no name was extracted, use the whole user utterance
-        # in future this will be stored in a `name_unconfirmed` slot and the
-        # user will be asked to confirm their name
-        if not person_name:
-            person_name = tracker.latest_message.get('text')
-
-        return [SlotSet('person_name', person_name)]
-
-
-class ActionStoreCompany(Action):
-    """Stores the company name in a slot"""
-
-    def name(self):
-        return "action_store_company"
-
-    def run(self, dispatcher, tracker, domain):
-        company = next(tracker.get_latest_entity_values('company'), None)
-
-        # if no company entity was extracted, use the whole user utterance
-        # in future this will be stored in a `company_unconfirmed` slot and
-        # the user will be asked to confirm their company name
-        if not company:
-            company = tracker.latest_message.get('text')
-
-        return [SlotSet('company_name', company)]
-
-
-class ActionStoreJob(Action):
-    """Stores the job in a slot"""
-
-    def name(self):
-        return "action_store_job"
-
-    def run(self, dispatcher, tracker, domain):
-        jobfunction = next(tracker.get_latest_entity_values('jobfunction'),
-                           None)
-
-        # if no jobfunction entity was extracted, use the whole user utterance
-        # in future this will be stored in a `job_unconfirmed` slot and
-        # the user will be asked to confirm their job title
-        if not jobfunction:
-            jobfunction = tracker.latest_message.get('text')
-
-        return [SlotSet('job_function', jobfunction)]
-
-
 class ActionStoreEmail(Action):
     """Stores the email in a slot"""
 
@@ -337,8 +243,7 @@ class ActionStoreEmail(Action):
         # email and go back a turn in the conversation to ensure future
         # predictions aren't affected
         if not email:
-            dispatcher.utter_message("We need your email, "
-                                     "please enter a valid one.")
+            dispatcher.utter_template('utter_no_email', tracker)
             return [UserUtteranceReverted()]
 
         return [SlotSet('email', email)]
