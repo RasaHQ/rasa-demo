@@ -163,7 +163,7 @@ class SalesForm(FormAction):
                dispatcher: CollectingDispatcher,
                tracker: Tracker,
                domain: Dict[Text, Any]) -> List[Dict]:
-        """Once we have all the infomration, attempt to add it to the
+        """Once we have all the information, attempt to add it to the
         Google Drive database"""
 
         import datetime
