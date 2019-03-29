@@ -32,41 +32,45 @@ class SubscribeNewsletterForm(FormAction):
 
     def validate(self, dispatcher, tracker, domain):
         # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
-        """Validate given email, if no email is found but intent is enter_data,
-        ask again, otherwise let other policies take over """
+        """Validate extracted value of requested slot
+            else reject execution of the form action
 
+            If no extraction, re-ask only if intent is enter_data
+        """
         # extract other slots that were not requested
-        # but set by corresponding entity
+        # but set by corresponding entity or trigger intent mapping
         slot_values = self.extract_other_slots(dispatcher, tracker, domain)
 
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if slot_to_fill:
-            for slot, value in self.extract_requested_slot(dispatcher,
+            slot_values.update(self.extract_requested_slot(dispatcher,
                                                            tracker,
-                                                           domain).items():
-                validate_func = getattr(self, "validate_{}".format(slot),
-                                        lambda *x: value)
-                slot_values[slot] = validate_func(value, dispatcher, tracker,
-                                                  domain)
+                                                           domain))
 
             if not slot_values:
 
-                # ask for email again if none was detected by duckling
-                # and intent was enter_data
+                # if no email entity was picked up, but intent was
+                # enter_data, ask again instead of leaving the form
                 intent = tracker.latest_message['intent'].get('name')
                 if intent == "enter_data":
                     dispatcher.utter_template('utter_no_email', tracker)
                     return []
-                else:
-                    # reject to execute the form action if no email is found
-                    # and an intent other than enter_data is predicted
-                    # it will allow other policies to predict another action
-                    raise ActionExecutionRejection(self.name(),
-                                                   "Failed to validate slot "
-                                                   "{0} with action {1}"
-                                                   "".format(slot_to_fill,
-                                                             self.name()))
+
+                # reject to execute the form action
+                # if some slot was requested but nothing was extracted
+                # it will allow other policies to predict another action
+                raise ActionExecutionRejection(self.name(),
+                                               "Failed to extract slot {0} "
+                                               "with action {1}"
+                                               "".format(slot_to_fill,
+                                                         self.name()))
+
+            for slot, value in slot_values.items():
+                validate_func = getattr(self, "validate_{}".format(slot),
+                                        lambda *x: value)
+                slot_values[slot] = validate_func(value, dispatcher, tracker,
+                                                  domain)
 
         # validation succeed, set slots to extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
@@ -109,6 +113,10 @@ class SalesForm(FormAction):
             - a whole message
             or a list of them, where a first match will be picked"""
 
+        # For each slot other than email, if the entity isn't picked up, store
+        # the entire user utterance. In future this should be stored in a
+        # `<slot>_unconfirmed` slot where the user will then be asked to
+        # confirm this is their <slot>.
         return {"job_function": [self.from_entity(entity="jobfunction"),
                                  self.from_text(intent="enter_data")],
                 "use_case": self.from_text(intent="enter_data"),
@@ -127,34 +135,39 @@ class SalesForm(FormAction):
         enter_data, re-ask for email, otherwise let other policies take over"""
 
         # extract other slots that were not requested
-        # but set by corresponding entity
+        # but set by corresponding entity or trigger intent mapping
         slot_values = self.extract_other_slots(dispatcher, tracker, domain)
 
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if slot_to_fill:
-            for slot, value in self.extract_requested_slot(dispatcher,
+            slot_values.update(self.extract_requested_slot(dispatcher,
                                                            tracker,
-                                                           domain).items():
-                validate_func = getattr(self, "validate_{}".format(slot),
-                                        lambda *x: value)
-                slot_values[slot] = validate_func(value, dispatcher, tracker,
-                                                  domain)
+                                                           domain))
+
             if not slot_values:
 
+                # if no email entity was picked up, but intent was
+                # enter_data, ask again instead of leaving the form
                 intent = tracker.latest_message['intent'].get('name')
                 if slot_to_fill == "business_email" and intent == "enter_data":
                     dispatcher.utter_template('utter_no_email', tracker)
                     return []
-                else:
-                    # reject to execute the form action
-                    # if some slot was requested but nothing was extracted
-                    # it will allow other policies to predict another action
-                    raise ActionExecutionRejection(self.name(),
-                                                   "Failed to validate slot "
-                                                   "{0} with action {1}"
-                                                   "".format(slot_to_fill,
-                                                             self.name()))
+
+                # reject to execute the form action
+                # if some slot was requested but nothing was extracted
+                # it will allow other policies to predict another action
+                raise ActionExecutionRejection(self.name(),
+                                               "Failed to extract slot {0} "
+                                               "with action {1}"
+                                               "".format(slot_to_fill,
+                                                         self.name()))
+
+            for slot, value in slot_values.items():
+                validate_func = getattr(self, "validate_{}".format(slot),
+                                        lambda *x: value)
+                slot_values[slot] = validate_func(value, dispatcher, tracker,
+                                                  domain)
 
         # validation succeed, set slots to extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
