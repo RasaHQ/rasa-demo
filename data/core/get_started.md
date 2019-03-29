@@ -264,6 +264,40 @@
     - utter_explain_core
     - utter_direct_to_step2
 
+## new to rasa/bots, explain difference between nlu and core
+
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* explain
+    - utter_explain_stack
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_direct_to_step2
+
+## new to rasa/bots, explain difference between nlu and core
+
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm OR how_to_get_started{"user_type": "new"}
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_stack
+    - utter_stack_details
+    - utter_explain_nlucore
+* explain
+    - utter_explain_stack
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_direct_to_step2
+
 ## new to rasa/bots, don't explain
 
 * how_to_get_started

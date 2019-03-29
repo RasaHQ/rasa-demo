@@ -2502,6 +2502,6 @@
 - could you please give me some more information
 - i want more information
 - what is the difference
-- can you tell the difference
+- can you tell me the difference
 - why
 - why is that
