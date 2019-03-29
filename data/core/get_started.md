@@ -159,7 +159,7 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"} OR explain
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
@@ -177,7 +177,7 @@
     - utter_explain_stack
     - utter_stack_details
     - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+* affirm OR how_to_get_started{"product":"stack"} OR explain
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
