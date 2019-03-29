@@ -293,7 +293,6 @@
     - utter_stack_details
     - utter_explain_nlucore
 * explain
-    - utter_explain_stack
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
