@@ -50,6 +50,7 @@
     - utter_out_of_scope
     - sales_form
     - form{"name": null}
+    - utter_ask_feedback
 
 ## story number 4
 * greet
