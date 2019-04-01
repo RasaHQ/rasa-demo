@@ -22,6 +22,8 @@
     - utter_ask_feedback
 
 ## story number 2
+* greet
+    - action_greet_user
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
