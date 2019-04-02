@@ -69,7 +69,6 @@
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -84,7 +83,6 @@
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt
     - action_chitchat
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu

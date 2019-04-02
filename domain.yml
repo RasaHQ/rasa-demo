@@ -675,7 +675,6 @@ actions:
   - utter_direct_step3
   - action_chitchat
   - action_faqs
-  - action_store_email
   - action_pause
   - action_store_unknown_product
   - action_store_unknown_nlu_part

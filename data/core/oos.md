@@ -61,7 +61,6 @@
 * out_of_scope
     - utter_out_of_scope
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -76,7 +75,6 @@
 * out_of_scope
     - utter_out_of_scope
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu

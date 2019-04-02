@@ -80,7 +80,6 @@
     - action_deactivate_form
     - form{"name": null}
 * enter_data{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -144,7 +143,6 @@
 * deny
     - utter_thumbsup
 * enter_data{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
 
@@ -152,7 +150,6 @@
 * greet
     - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -166,7 +163,6 @@
 * greet
     - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu

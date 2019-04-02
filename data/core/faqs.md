@@ -58,7 +58,6 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR  ask_faq_channels OR  ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
     - action_faqs
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -73,7 +72,6 @@
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
     - action_faqs
 * signup_newsletter{"email": "maxmeier@firma.de"}
-    - action_store_email
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu

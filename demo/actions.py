@@ -243,25 +243,6 @@ class ActionFaqs(Action):
         return []
 
 
-class ActionStoreEmail(Action):
-    """Stores the email in a slot"""
-
-    def name(self):
-        return "action_store_email"
-
-    def run(self, dispatcher, tracker, domain):
-        email = next(tracker.get_latest_entity_values('email'), None)
-
-        # if no email entity was recognised, prompt the user to enter a valid
-        # email and go back a turn in the conversation to ensure future
-        # predictions aren't affected
-        if not email:
-            dispatcher.utter_template('utter_no_email', tracker)
-            return [UserUtteranceReverted()]
-
-        return [SlotSet('email', email)]
-
-
 class ActionPause(Action):
     """Pause the conversation"""
 
