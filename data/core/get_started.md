@@ -164,28 +164,6 @@
     - utter_explain_core
     - utter_direct_to_step2
 
-## new to rasa/bots, explain stack, detailed explanation
-
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"} OR explain
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_direct_to_step2
-* explain
-    - utter_details_about_nlu
-    - utter_details_about_core
-    - utter_direct_to_step2
-
 ## new to rasa/bots, explain core
 
 * how_to_get_started
@@ -264,7 +242,7 @@
     - utter_explain_core
     - utter_direct_to_step2
 
-## new to rasa/bots, explain difference between nlu and core
+## not new to rasa/bots, explain difference between nlu and core
 
 * how_to_get_started
     - utter_getstarted

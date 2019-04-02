@@ -289,29 +289,6 @@
     - action_faqs
     - utter_direct_to_step2
 
-## new to rasa + not new to chatbots + not migrating
-* greet
-    - action_greet_user
-* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
-    - action_faqs
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* affirm
-    - utter_ask_migration
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* explain
-    - utter_explain_nlu
-    - utter_explain_core
-    - utter_direct_to_step2
-
 ## new to rasa/bots, explain stack and try it out
 * greet
     - action_greet_user

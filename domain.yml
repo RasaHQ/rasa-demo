@@ -721,7 +721,6 @@ actions:
   - utter_react_negative
   - action_get_community_events
   - action_next_step
-  - action_tell_more_about
 
 forms:
   - subscribe_newsletter_form

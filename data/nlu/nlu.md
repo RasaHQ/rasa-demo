@@ -2491,10 +2491,6 @@
 - Next step please
 
 ## intent:explain
-- tell me more about rasa [core](product)
-- tell me more about rasa [nlu](product)
-- I want more information on rasa [core](product)
-- I want more information on rasa [nlu](product)
 - tell me more
 - could you please explain that
 - could you tell me more
