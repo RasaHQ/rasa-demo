@@ -285,7 +285,7 @@ templates:
   utter_cant_answer_tech_question:
     - text: "I can't answer that."
   utter_no_email:
-    - text: "I don't think that's a valid email -- I need one in order to contact you."
+    - text: "Hmm, I'm not sure that's a valid email, please make sure to include the full address 😅"
   utter_have_you_used_rasa_before:
     - text: "Have you used Rasa before?"
   utter_built_bot_before:

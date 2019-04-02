@@ -27,9 +27,6 @@ class SubscribeNewsletterForm(FormAction):
     def required_slots(tracker):
         return ["email"]
 
-    def slot_mappings(self):
-        return {"email": self.from_entity(entity="email")}
-
     def validate(self, dispatcher, tracker, domain):
         # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
         """Validate extracted value of requested slot
@@ -65,12 +62,6 @@ class SubscribeNewsletterForm(FormAction):
                                                "with action {1}"
                                                "".format(slot_to_fill,
                                                          self.name()))
-
-            for slot, value in slot_values.items():
-                validate_func = getattr(self, "validate_{}".format(slot),
-                                        lambda *x: value)
-                slot_values[slot] = validate_func(value, dispatcher, tracker,
-                                                  domain)
 
         # validation succeed, set slots to extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
@@ -162,12 +153,6 @@ class SalesForm(FormAction):
                                                "with action {1}"
                                                "".format(slot_to_fill,
                                                          self.name()))
-
-            for slot, value in slot_values.items():
-                validate_func = getattr(self, "validate_{}".format(slot),
-                                        lambda *x: value)
-                slot_values[slot] = validate_func(value, dispatcher, tracker,
-                                                  domain)
 
         # validation succeed, set slots to extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
