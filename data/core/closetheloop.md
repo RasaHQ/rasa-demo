@@ -7,7 +7,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -28,7 +27,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -59,7 +57,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -79,7 +76,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -157,7 +153,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -175,7 +170,6 @@
 * out_of_scope
     - utter_out_of_scope
     - subscribe_newsletter_form
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback

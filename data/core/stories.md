@@ -32,7 +32,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -48,7 +47,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -63,7 +61,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -84,7 +81,6 @@
     - form{"name": null}
 * enter_data{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -149,7 +145,6 @@
     - utter_thumbsup
 * enter_data{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
 
@@ -158,7 +153,6 @@
     - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -173,7 +167,6 @@
     - action_greet_user
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -186,7 +179,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -198,7 +190,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -226,7 +217,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -238,7 +228,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -270,7 +259,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -294,7 +282,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback

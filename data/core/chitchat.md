@@ -39,7 +39,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -57,7 +56,6 @@
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt OR ask_whatspossible
     - action_chitchat
     - subscribe_newsletter_form
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -72,7 +70,6 @@
     - action_chitchat
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -88,7 +85,6 @@
     - action_chitchat
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -103,7 +99,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -118,7 +113,6 @@
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR howwereyoubuilt OR ask_whatspossible
     - action_chitchat
     - subscribe_newsletter_form
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback

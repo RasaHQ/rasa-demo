@@ -90,7 +90,7 @@ slots:
   company_name:
     type: unfeaturized
   email:
-    type: text
+    type: unfeaturized
   business_email:
     type: unfeaturized
   job_function:

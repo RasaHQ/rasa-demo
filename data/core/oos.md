@@ -31,7 +31,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -49,7 +48,6 @@
 * out_of_scope
     - utter_out_of_scope
     - subscribe_newsletter_form
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -64,7 +62,6 @@
     - utter_out_of_scope
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -80,7 +77,6 @@
     - utter_out_of_scope
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - action_store_email
-    - slot{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
     - utter_docu
@@ -95,7 +91,6 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
@@ -110,7 +105,6 @@
 * out_of_scope
     - utter_out_of_scope
     - subscribe_newsletter_form
-    - slot{"email": "ella@ella.ella"}
     - form{"name": null}
     - utter_docu
     - utter_ask_feedback
