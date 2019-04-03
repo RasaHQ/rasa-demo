@@ -93,8 +93,8 @@ class SalesForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["job_function", "use_case", "budget", "person_name",
-                "company_name", "business_email"]
+        return ["job_function", "use_case", "budget", "name",
+                "company", "business_email"]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -108,15 +108,15 @@ class SalesForm(FormAction):
         # the entire user utterance. In future this should be stored in a
         # `<slot>_unconfirmed` slot where the user will then be asked to
         # confirm this is their <slot>.
-        return {"job_function": [self.from_entity(entity="jobfunction"),
+        return {"job_function": [self.from_entity(entity="job_function"),
                                  self.from_text(intent="enter_data")],
                 "use_case": self.from_text(intent="enter_data"),
                 "budget": [self.from_entity(entity="amount-of-money"),
                            self.from_entity(entity="number"),
                            self.from_text(intent="enter_data")],
-                "person_name": [self.from_entity(entity="name"),
+                "name": [self.from_entity(entity="name"),
                                 self.from_text(intent="enter_data")],
-                "company_name": [self.from_entity(entity="company"),
+                "company": [self.from_entity(entity="company"),
                                  self.from_text(intent="enter_data")],
                 "business_email": self.from_entity(entity="email")}
 
@@ -166,14 +166,14 @@ class SalesForm(FormAction):
 
         import datetime
         budget = tracker.get_slot('budget')
-        company = tracker.get_slot('company_name')
+        company = tracker.get_slot('company')
         email = tracker.get_slot('business_email')
-        jobfunction = tracker.get_slot('job_function')
-        name = tracker.get_slot('person_name')
+        job_function = tracker.get_slot('job_function')
+        name = tracker.get_slot('name')
         use_case = tracker.get_slot('use_case')
         date = datetime.datetime.now().strftime("%d/%m/%Y")
 
-        sales_info = [company, use_case, budget, date, name, jobfunction,
+        sales_info = [company, use_case, budget, date, name, job_function,
                       email]
 
         gdrive = GDriveService()
@@ -388,12 +388,9 @@ class ActionGreetUser(Action):
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         if intent == "greet":
-            if shown_privacy and name_entity and name_entity.lower() != 'sara':
-                dispatcher.utter_template("utter_greet_name", tracker,
-                                          name=name_entity)
-                return []
-            elif shown_privacy:
-                dispatcher.utter_template("utter_greet_noname", tracker)
+            if shown_privacy:
+                dispatcher.utter_template("utter_greet", tracker)
+                dispatcher.utter_template("utter_ask_goal", tracker)
                 return []
             else:
                 dispatcher.utter_template("utter_greet", tracker)

@@ -19,7 +19,7 @@
 ## say greet outside the flows
 * greet
     - action_greet_user
-* greet OR enter_data{"name": "akela"}
+* greet
     - action_greet_user
 
 ## just newsletter + confirm

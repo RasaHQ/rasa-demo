@@ -1114,25 +1114,25 @@
 - sislawawa@india.com
 - chengming@aliyun.com
 - solomq122@qq.mail.com
-- [Product Manager](jobfunction)
-- I'm a [product manager](jobfunction)
-- I work as a [project manager](jobfunction)
-- I'm the [developer](jobfunction)
-- [data analyst](jobfunction)
-- [data scientist](jobfunction)
-- [dev](jobfunction)
-- [engineer](jobfunction)
-- [brand manager](jobfunction)
-- [marketing](jobfunction)
-- [sales manager](jobfunction)
-- [growth manager](jobfunction)
-- [CTO](jobfunction)
-- [CEO](jobfunction)
-- [COO](jobfunction)
-- [assistant to the CEO](jobfunction)
-- I'm the [lead engineer](jobfunction)
-- I'm a [python developer](jobfunction)
-- I'm an [AI researcher](jobfunction)
+- [Product Manager](job_function)
+- I'm a [product manager](job_function)
+- I work as a [project manager](job_function)
+- I'm the [developer](job_function)
+- [data analyst](job_function)
+- [data scientist](job_function)
+- [dev](job_function)
+- [engineer](job_function)
+- [brand manager](job_function)
+- [marketing](job_function)
+- [sales manager](job_function)
+- [growth manager](job_function)
+- [CTO](job_function)
+- [CEO](job_function)
+- [COO](job_function)
+- [assistant to the CEO](job_function)
+- I'm the [lead engineer](job_function)
+- I'm a [python developer](job_function)
+- I'm an [AI researcher](job_function)
 - [Max Meier](name)
 - My name is [Max Meier](name)
 - [Ralph White](name)
@@ -1149,47 +1149,47 @@
 - we plan to build a sales bot to increase our revenue by 100%.
 - a insurance tool that consults potential customers on the best life insurance to choose.
 - we're building a conversational assistant for our employees to book meeting rooms.
-- I work in [project management](jobfunction)
+- I work in [project management](job_function)
 - i'm a developer
 - my name is [linda](name)
-- I work in [innvoation](jobfunction)
-- my job function is [developer](jobfunction)
-- I am responsible for our [innovation department](jobfunction)
-- I work as a [frontend dev](jobfunction)
-- [project manager](jobfunction)
-- I'm a [project manager](jobfunction)
-- I'm [project manager](jobfunction)
+- I work in [innvoation](job_function)
+- my job function is [developer](job_function)
+- I am responsible for our [innovation department](job_function)
+- I work as a [frontend dev](job_function)
+- [project manager](job_function)
+- I'm a [project manager](job_function)
+- I'm [project manager](job_function)
 - it's foo@bar.com
 - 10000000
 - [ACME Mops](company)
 - mrmop@mops.app
 - 5 bucks
-- I'm a [janitor](jobfunction)
+- I'm a [janitor](job_function)
 - My email is linda@linda.linda
 - I wanna build a bot that sends the people cute animal pictures based on their favorite color
-- I'm a [developer](jobfunction)
+- I'm a [developer](job_function)
 - I want to build a cool bot
 - my emayl is yolo at yolo.de
-- [manager](jobfunction)
+- [manager](job_function)
 - adele@gmx.com
 - my name is [marc](name)
 - one trillion dollar
-- I'm a [full stack developer](jobfunction:full stack developer)
+- I'm a [full stack developer](job_function:full stack developer)
 - moabit@yoga.com
 - it's the [moabit yoga studio](company)
 - my name is [oli miller](name)
 - 100000k
-- I'm in [project mgmt](jobfunction)
+- I'm in [project mgmt](job_function)
 - 10000 dollars
 - 400 trilion
 - philipp@superphilipp.philipp
-- I'm in [business](jobfunction)
+- I'm in [business](job_function)
 - 5 mln
 - [Alex](name:alex)
 - my name is [loretta meier](name)
 - I wanna build a super bot to send me cute animal pictures
 - 10000k
-- [Developer](jobfunction:developer)
+- [Developer](job_function:developer)
 - I want to build a sales bot
 - 50k
 - I want to build a bot
@@ -1202,28 +1202,28 @@
 - [Philip](name)
 - [Bosch](company)
 - I want to build an FAQ bot
-- I'm a [python developer](jobfunction)
+- I'm a [python developer](job_function)
 - [Jim](name)
 - hello@hello.com
 - I want to build a lot of different bots
-- I'm a [machine learning engineer](jobfunction)
+- I'm a [machine learning engineer](job_function)
 - we don't have one
 - hi@rasa.com
 - [Helvetia](company)
 - [Jim Halpert](name)
 - I want to build a health insurance bot
-- I'm a [software engineer](jobfunction)
+- I'm a [software engineer](job_function)
 - [John Smith](name)
 - [Jenny](name)
 - [douglas](company)
 - [klaus klausson](name)
 - 5 euros
 - i'd like to build a transformer
-- i'm a [race car driver](jobfunction)
+- i'm a [race car driver](job_function)
 - klausimausi@apple.com
 - ifuckrobots666@apple.com
 - my name is [saswat](name)
-- i am [self emplayed](jobfunction)
+- i am [self emplayed](job_function)
 - a sentient robot
 - [rasa](company)
 - i have none
@@ -1239,7 +1239,7 @@
 - [Akela](name)
 - a health bot
 - help@help.com
-- i'm a [developer](jobfunction)
+- i'm a [developer](job_function)
 - i want to build a health bot
 - 200k
 - My name is [Alex](name)
@@ -1250,9 +1250,9 @@
 - i want to build all the bots
 - 20k
 - i want to build bots
-- [developer](jobfunction)
+- [developer](job_function)
 - a cool bot
-- [Developer Advocate](jobfunction)
+- [Developer Advocate](job_function)
 - [reddit](company)
 - a bot
 - philipp@thephilippcompany.com
@@ -1272,7 +1272,7 @@
 - eisenkleber limited co kg
 - ulrikovitch eisenkleber
 - don't have one
-- [designer](jobfunction)
+- [designer](job_function)
 - a pizza bot
 - operations
 - none i will build it from scraps
@@ -1280,19 +1280,19 @@
 - [Vladimir](name)
 - around 200k
 - i want to build a bot about me
-- i'm a [dev](jobfunction)
+- i'm a [dev](job_function)
 - i don't have it
 - i want to build an insurance bot
-- [product manager](jobfunction)
+- [product manager](job_function)
 - help@rasa.com email
 - [BBC](name)
 - i wanna build all the bots
-- i'm a [product manager](jobfunction)
+- i'm a [product manager](job_function)
 - [Freya](name)
 - 300k number
-- i work in [biz dev](jobfunction)
+- i work in [biz dev](job_function)
 - my email is kevin@yoloooz.de
-- [ceo](jobfunction)
+- [ceo](job_function)
 - a sales bot
 - 200000000
 - [linda](name)
@@ -1306,7 +1306,7 @@
 - hey@kldpeffesfoken.oinwf
 - Evaluate Rasa :-)
 - The master of desaster
-- [head of biz deve](jobfunction)
+- [head of biz deve](job_function)
 - [Udo](name)
 - [Udo.AI](company)
 - maybe then instead alex+rasarasa@rasa.com
@@ -1324,41 +1324,41 @@
 - 90k
 - Rasa bot
 - i'm [donezo](name)
-- my function is [to serve butter](jobfunction)
+- my function is [to serve butter](job_function)
 - [wurst co kg](company)
 - [No company](company)!!
 - [I am a freelancer](company)
-- [Foudner](jobfunction)
+- [Foudner](job_function)
 - linda@linda.com
-- i'm in [customer success](jobfunction)
-- i'm [head of sales](jobfunction)
+- i'm in [customer success](job_function)
+- i'm [head of sales](job_function)
 - [linda's company](company)
 - a akela bot
-- i'm in [sales](jobfunction)
+- i'm in [sales](job_function)
 - I work for the [New York Times](company)
 - the [New York Times](company)
 - [Ali Park](name)
 - 1 million
-- I'm an [engineer](jobfunction)
+- I'm an [engineer](job_function)
 - it's [Ali Park](name)
 - 2 million
 - ali@nytimes.com
 - I work for the [new york times](company)
 - I work at the [NYT](company)
 - there is no budget
-- i'm a [develope](jobfunction)
+- i'm a [develope](job_function)
 - lead generation
 - 100000
-- im in [marketing](jobfunction)
+- im in [marketing](job_function)
 - linda@rasa.ai
 - yesplease@yes.com
 - SCALABLE MINDS (company)
 - My name is [Tom](name)
 - 500k
 - I would like to build an ice cube dispenser bot
-- I'm a [business woman](jobfunction)
+- I'm a [business woman](job_function)
 - 0
-- im a [developer](jobfunction)
+- im a [developer](job_function)
 - a great one
 - one that will get me promoted
 - conversational
@@ -1381,33 +1381,33 @@
 - [volodimir voldemarich](name)
 - idk
 - the bot that helps you choose insurance for the car ;)
-- [ml researcher](jobfunction)
+- [ml researcher](job_function)
 - junk@junk.com
 - j@p.com
 - i don't think either of those
-- ok I'm actually an [engineer](jobfunction)
+- ok I'm actually an [engineer](job_function)
 - al@acme.org
 - [ACME brands](company)
 - [Al Capone](name)
 - £50k
 - the bot should help with HR stuff
-- I'm a bot [developer](jobfunction)
+- I'm a bot [developer](job_function)
 - none@none.co.uk
 - [Juste P](name)
 - 50
-- I am a [Data Scientist](jobfunction)
-- I am a [head of business intelligence](jobfunction)
+- I am a [Data Scientist](job_function)
+- I am a [head of business intelligence](job_function)
 - my own
 - $1
 - juste@juste.com
 - [Juste](name)
 - 1 euro
 - a bot which sends cute shiba pictures
-- [developer advocate](jobfunction)
+- [developer advocate](job_function)
 - shiba@shiba.com
 - tylerthemateman@clubmate.com
 - [Tyler](company)
-- I'm a [construction worker](jobfunction)
+- I'm a [construction worker](job_function)
 - I want to build a kick ass bot
 - 1 million big ones
 - [Club Mate](company)
@@ -1422,7 +1422,7 @@
 - my name is [jimmy](name)
 - half a million
 - it's [akela](name)
-- [AI researcher](jobfunction)
+- [AI researcher](job_function)
 - a big ol transformer
 - big old bot
 - hi@elise.de
@@ -1430,14 +1430,14 @@
 - [CSI](company)
 - 5 quid
 - me@you.de
-- i am a [projject manager](jobfunction)
+- i am a [projject manager](job_function)
 - 120000
 - akela@akela.com
 - akela's company
 - [akela](name)
 - one billion
 - an akela bot that I can talk to akela all the time
-- i'm in [marketing](jobfunction)
+- i'm in [marketing](job_function)
 - ACME bank (company)
 - [Alan](name)
 - about 10 k
@@ -1445,9 +1445,9 @@
 - one like this
 - badass bot tester
 - a bot to get a promotion
-- im a [dev](jobfunction)
+- im a [dev](job_function)
 - 10
-- I'm a real good [engineer](jobfunction)
+- I'm a real good [engineer](job_function)
 - [James](name)
 - ames@rasa.com
 - valid_email@one.de
@@ -1464,12 +1464,12 @@
 - An ice cube bot
 - jimmy neutron industries
 - ok its email@email.com
-- Im a [full stack developer](jobfunction)
+- Im a [full stack developer](job_function)
 - akelaistcool@schwabenländle.de
 - spam bot
 - the bot like you
 - picking my nose
-- im a [freelancer](jobfunction)
+- im a [freelancer](job_function)
 - health care
 - something to talk to my friends while I'm busy working
 - my bot is in [english](language)

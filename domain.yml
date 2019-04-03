@@ -1,6 +1,6 @@
 
 entities:
-  - jobfunction
+  - job_function
   - company
   - email
   - name
@@ -87,7 +87,7 @@ intents:
 slots:
   budget:
     type: unfeaturized
-  company_name:
+  company:
     type: unfeaturized
   email:
     type: unfeaturized
@@ -95,7 +95,7 @@ slots:
     type: unfeaturized
   job_function:
     type: unfeaturized
-  person_name:
+  name:
     type: unfeaturized
   use_case:
     type: unfeaturized
@@ -147,8 +147,6 @@ slots:
     type: text
   shown_privacy:
     type: unfeaturized
-  name:
-    type: text
   step:
     type: unfeaturized
 
@@ -158,7 +156,7 @@ templates:
     - text: "What's your annual budget for conversational AI? 💸"
   utter_ask_business_email:
     - text: "What's your business email?"
-  utter_ask_company_name:
+  utter_ask_company:
     - text: "What company do you work for?"
   utter_great:
     - text: "Great! 👍"
@@ -207,7 +205,7 @@ templates:
     - text: "Sure! Let's get to know each other first 😉"
   utter_sales_contact:
     - text: "Thanks, now I need to know how we can reach you."
-  utter_ask_person_name:
+  utter_ask_name:
     - text: "What's your name?"
   utter_already_subscribed:
     - text: "Looks like {email} is already subscribed - good choice!
@@ -268,8 +266,6 @@ templates:
           payload: "/feedback{\"feedback_value\":\"positive\"}"
         - title: "👎"
           payload: "/feedback{\"feedback_value\":\"negative\"}"
-  utter_thank_usecase:
-    - text: "Cool, thank you!"
   utter_canthelp:
     - text: "I'm sorry I couldn't help you. If you have general questions about the Stack, please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com for anything else."
   utter_nohelp:
@@ -540,7 +536,7 @@ actions:
   - utter_ask_job_function
   - utter_ask_email
   - utter_ask_budget
-  - utter_ask_company_name
+  - utter_ask_company
   - utter_ask_goal
   - utter_inform_privacypolicy
   - utter_moreinformation
@@ -553,7 +549,7 @@ actions:
   - utter_no_speak
   - utter_out_of_scope
   - utter_possibilities
-  - utter_ask_person_name
+  - utter_ask_name
   - utter_change_mind
   - utter_must_accept
   - utter_noworries
