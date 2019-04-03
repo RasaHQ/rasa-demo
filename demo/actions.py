@@ -115,9 +115,9 @@ class SalesForm(FormAction):
                            self.from_entity(entity="number"),
                            self.from_text(intent="enter_data")],
                 "name": [self.from_entity(entity="name"),
-                                self.from_text(intent="enter_data")],
+                         self.from_text(intent="enter_data")],
                 "company": [self.from_entity(entity="company"),
-                                 self.from_text(intent="enter_data")],
+                            self.from_text(intent="enter_data")],
                 "business_email": self.from_entity(entity="email")}
 
     def validate(self, dispatcher, tracker, domain):
