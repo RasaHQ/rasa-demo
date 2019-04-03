@@ -63,6 +63,8 @@
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
+    - form{"name": "subscribe_newsletter_form"}
+    - form{"name": null}
     - utter_docu
     - utter_ask_feedback
 * affirm
@@ -77,6 +79,8 @@
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
+    - form{"name": "subscribe_newsletter_form"}
+    - form{"name": null}
     - utter_docu
     - utter_ask_feedback
 
