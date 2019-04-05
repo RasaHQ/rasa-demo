@@ -118,7 +118,7 @@ class ActionChitchat(Action):
                       'ask_howold', 'ask_languagesbot', 'ask_restaurant',
                       'ask_time', 'ask_wherefrom', 'ask_whoami',
                       'handleinsult', 'nicetomeeyou', 'telljoke',
-                      'ask_whatismyname', 'howwereyoubuilt', 'ask_whoisit']:
+                      'ask_whatismyname', 'ask_howbuilt', 'ask_whoisit']:
             dispatcher.utter_template('utter_' + intent, tracker)
         return []
 
