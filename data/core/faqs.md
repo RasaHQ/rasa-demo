@@ -769,3 +769,33 @@
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
+
+## FAQ - tell more about platform
+* ask_faq_platform
+    - action_faqs
+* explain
+    - utter_faq_platform_more
+
+## FAQ - tell more about languages
+* ask_faq_language
+    - action_faqs
+* explain
+    - utter_faq_language_more
+
+## FAQ - tell more about voice
+* ask_faq_voice
+    - action_faqs
+* explain
+    - utter_faq_voice_more
+
+## FAQ - tell more about slots
+* ask_faq_slots
+    - action_faqs
+* explain
+    - utter_faq_slots_more
+
+## FAQ - tell more about channels
+* ask_faq_channels
+    - action_faqs
+* explain
+    - utter_faq_channels_more

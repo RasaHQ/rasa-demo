@@ -169,7 +169,7 @@ templates:
   utter_ask_email:
     - text: "What's your email address?"
   utter_response_why_email:
-    - text: "Because I need your email address to sign you up to the newsletter."
+    - text: "I need your email address to sign you up to the newsletter."
     - text: "I need it so that I can sign you up to the newsletter."
   utter_awesome:
     - text: "Awesome, thanks! 👍"
@@ -232,8 +232,6 @@ templates:
     - text: "You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com."
   utter_no_speak:
     - text: "I'm afraid we can't chat then 😢"
-  utter_ask_whatspossible:
-    - text: "You can book a sales call or subscribe to our newsletter."
   utter_ask_weather:
     - text: "I don't know about where you live, but in my world it's always sunny ☀️"
     - text: "Honestly it's a bit too hot these days 😅"
@@ -255,6 +253,7 @@ templates:
     - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request."
   utter_possibilities:
     - text: "You can either book a sales call or subscribe to our newsletter."
+    - text: "You can book a sales call or subscribe to our newsletter."
   utter_ask_whoisit:
     - text: "I'm the Rasa bot! 🤖"
   utter_change_mind:
@@ -480,6 +479,16 @@ templates:
     - text: "Our [forum](https://forum.rasa.com) is the place where all the community buzz happens. Join discussions, get the answers to your technical questions and stay up-to-date with what’s happening at Rasa."
   utter_ask_voice:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. You can find more information [here](https://rasa.com/docs/core/connectors/)."
+  utter_faq_platform_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/platform/) for more information."
+  utter_faq_language_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/nlu/languages/) for more information."
+  utter_faq_voice_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/core/connectors/) for more information."
+  utter_faq_slots_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/core/slots/) for more information."
+  utter_faq_channels_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/core/connectors/#creating-a-new-channel) for more information."
   utter_getstarted_new:
     - text: "I see you're new, let me ask you a quick question before I help you get started:"
   utter_ask_feedback_message:
@@ -550,6 +559,8 @@ templates:
           payload: "/get_started_step4"
   utter_no_more_steps:
     - text: "Looks like you've already completed all the steps!"
+  utter_what_do_you_want_to_know:
+    - text: "What exactly do you want to know?"
 
 
 actions:
@@ -684,6 +695,7 @@ actions:
   - utter_ask_whatismyname
   - utter_ask_howbuilt
   - utter_ask_whatspossible
+  - utter_howwereyoubuilt
   - utter_getstarted_new
   - utter_thanks_for_feedback
   - utter_restart_with_button
@@ -700,6 +712,12 @@ actions:
   - utter_link_to_forum
   - utter_direct_to_step2
   - utter_direct_step3
+  - utter_faq_platform_more
+  - utter_faq_language_more
+  - utter_faq_voice_more
+  - utter_faq_slots_more
+  - utter_faq_channels_more
+  - utter_what_do_you_want_to_know
   - action_subscribe_newsletter
   - action_store_sales_info
   - action_store_budget
