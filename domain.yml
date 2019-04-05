@@ -180,6 +180,10 @@ templates:
     - text: "What's your job? 🕴"
   utter_ask_use_case:
     - text: "What kind of bot do you want to build with Rasa?"
+  utter_ask_continue_newsletter:
+    - text: "Do you still want to subscribe to the newsletter?"
+  utter_ask_continue_sales:
+    - text: "Do you still want to talk to sales?"
   utter_confirm_salesrequest:
     - text: "Thanks a bunch, we'll be in touch soon! ✉️"
   utter_salesrequest_failed:
@@ -559,6 +563,8 @@ actions:
   - utter_thank_usecase
   - utter_can_do
   - utter_canthelp
+  - utter_ask_continue_newsletter
+  - utter_ask_continue_sales
   - utter_nohelp
   - utter_thumbsup
   - utter_cantsignup

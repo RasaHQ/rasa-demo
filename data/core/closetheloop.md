@@ -34,22 +34,6 @@
     - utter_thumbsup
     - utter_anything_else
 
-## story number 3
-* greet
-    - action_greet_user
-* contact_sales
-    - utter_moreinformation
-    - sales_form
-    - form{"name": "sales_form"}
-* out_of_scope
-    - utter_out_of_scope
-    - sales_form
-* out_of_scope
-    - utter_out_of_scope
-    - sales_form
-    - form{"name": null}
-    - utter_ask_feedback
-
 ## story number 4
 * greet
     - action_greet_user
@@ -127,7 +111,7 @@
 * deny
     - utter_nohelp
 
-## story number 11
+## story number 11, continue
 * greet
     - action_greet_user
 * ask_whatspossible
@@ -144,6 +128,35 @@
     - form{"name": "subscribe_newsletter_form"}
 * deny
     - utter_cantsignup
+    - utter_ask_continue_newsletter
+* affirm
+    - utter_great
+    - subscribe_newsletter_form
+    - form{"name": null}
+    - utter_docu
+    - utter_ask_feedback
+
+## story number 11, don't continue
+* greet
+    - action_greet_user
+* ask_whatspossible
+    - action_chitchat
+* ask_weather
+    - action_chitchat
+* ask_weather
+    - action_chitchat
+* ask_weather
+    - action_chitchat
+* signup_newsletter
+    - utter_can_do
+    - subscribe_newsletter_form
+    - form{"name": "subscribe_newsletter_form"}
+* deny
+    - utter_cantsignup
+    - utter_ask_continue_newsletter
+* deny
+    - utter_thumbsup
+    - action_deactivate_form
     - form{"name": null}
 
 ## story number 12
@@ -160,7 +173,7 @@
     - utter_thumbsup
     - utter_anything_else
 
-## story number 12
+## story number 12, continue
 * greet
     - action_greet_user
 * signup_newsletter
@@ -169,9 +182,31 @@
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
     - utter_out_of_scope
+    - utter_ask_continue_newsletter
+* affirm
+    - utter_great
     - subscribe_newsletter_form
     - form{"name": null}
     - utter_docu
+    - utter_ask_feedback
+* enter_data
+    - utter_thumbsup
+    - utter_anything_else
+
+## story number 12, don't continue
+* greet
+    - action_greet_user
+* signup_newsletter
+    - utter_can_do
+    - subscribe_newsletter_form
+    - form{"name": "subscribe_newsletter_form"}
+* out_of_scope
+    - utter_out_of_scope
+    - utter_ask_continue_newsletter
+* deny
+    - utter_thumbsup
+    - action_deactivate_form
+    - form{"name": null}
     - utter_ask_feedback
 * enter_data
     - utter_thumbsup
@@ -751,7 +786,33 @@
     - form{"name": "sales_form"}
 * react_positive
     - utter_react_positive
+    - utter_ask_continue_sales
+* affirm
+    - utter_great
     - sales_form
+    - form{"name": null}
+
+## Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* greet
+    - action_greet_user
+* ask_howdoing
+    - action_chitchat
+* ask_whatspossible
+    - action_chitchat
+* contact_sales
+    - utter_moreinformation
+    - sales_form
+    - form{"name": "sales_form"}
+* react_positive
+    - utter_react_positive
+    - utter_ask_continue_sales
+* deny
+    - utter_thumbsup
+    - action_deactivate_form
     - form{"name": null}
 
 ## Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
