@@ -95,7 +95,7 @@ slots:
     type: unfeaturized
   job_function:
     type: unfeaturized
-  name:
+  person_name:
     type: unfeaturized
   use_case:
     type: unfeaturized
@@ -147,6 +147,8 @@ slots:
     type: text
   shown_privacy:
     type: unfeaturized
+  name:
+    type: text
   step:
     type: unfeaturized
 

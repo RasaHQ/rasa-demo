@@ -8,7 +8,7 @@
     - utter_bye
 
 ## greet
-* greet
+* greet OR enter_data{"name": "akela"}
     - action_greet_user
 
 ## sales

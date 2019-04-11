@@ -93,7 +93,7 @@ class SalesForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["job_function", "use_case", "budget", "name",
+        return ["job_function", "use_case", "budget", "person_name",
                 "company", "business_email"]
 
     def slot_mappings(self):
@@ -114,8 +114,8 @@ class SalesForm(FormAction):
                 "budget": [self.from_entity(entity="amount-of-money"),
                            self.from_entity(entity="number"),
                            self.from_text(intent="enter_data")],
-                "name": [self.from_entity(entity="name"),
-                         self.from_text(intent="enter_data")],
+                "person_name": [self.from_entity(entity="name"),
+                                self.from_text(intent="enter_data")],
                 "company": [self.from_entity(entity="company"),
                             self.from_text(intent="enter_data")],
                 "business_email": self.from_entity(entity="email")}
@@ -169,12 +169,12 @@ class SalesForm(FormAction):
         company = tracker.get_slot('company')
         email = tracker.get_slot('business_email')
         job_function = tracker.get_slot('job_function')
-        name = tracker.get_slot('name')
+        person_name = tracker.get_slot('person_name')
         use_case = tracker.get_slot('use_case')
         date = datetime.datetime.now().strftime("%d/%m/%Y")
 
-        sales_info = [company, use_case, budget, date, name, job_function,
-                      email]
+        sales_info = [company, use_case, budget, date, person_name,
+                      job_function, email]
 
         gdrive = GDriveService()
         try:
@@ -388,9 +388,12 @@ class ActionGreetUser(Action):
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         if intent == "greet":
-            if shown_privacy:
-                dispatcher.utter_template("utter_greet", tracker)
-                dispatcher.utter_template("utter_ask_goal", tracker)
+            if shown_privacy and name_entity and name_entity.lower() != 'sara':
+                dispatcher.utter_template("utter_greet_name", tracker,
+                                          name=name_entity)
+                return []
+            elif shown_privacy:
+                dispatcher.utter_template("utter_greet_noname", tracker)
                 return []
             else:
                 dispatcher.utter_template("utter_greet", tracker)
