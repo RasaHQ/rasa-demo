@@ -9,6 +9,7 @@ models/dialogue
 *.egg-info
 docker-compose.yml
 failed_stories.txt
+failed_stories.md
 story_confmat.pdf
 demo/index.html
 credentials.yml
