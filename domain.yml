@@ -38,7 +38,7 @@ intents:
   - ask_wherefrom
   - ask_whoami
   - ask_whatismyname
-  - howwereyoubuilt
+  - ask_howbuilt
   - handleinsult
   - nicetomeeyou
   - telljoke
@@ -411,7 +411,7 @@ templates:
     - text: "Why do the French like to eat snails so much? - They can’t stand fast food."
   utter_ask_whatismyname:
     - text: "It's probably the one that your parents chose for you."
-  utter_howwereyoubuilt:
+  utter_ask_howbuilt:
     - text: "I was built with a lot of love and patience."
   utter_ask_python_installed:
     - text: "Do you have Python installed?"
@@ -671,7 +671,7 @@ actions:
   - utter_nicetomeeyou
   - utter_telljoke
   - utter_ask_whatismyname
-  - utter_howwereyoubuilt
+  - utter_ask_howbuilt
   - utter_ask_whatspossible
   - utter_getstarted_new
   - utter_thanks_for_feedback
