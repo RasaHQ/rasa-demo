@@ -2,7 +2,7 @@ intent,button,entities
 enter_data,I want to give you more information,
 enter_data,The language is {language}.,language
 enter_data,{entity},entity
-enter_data,My job is {jobfunction},jobfunction
+enter_data,My job is {job_function},job_function
 enter_data,{number},number
 enter_data,{amount-of-money},amount-of-money
 enter_data,My name is {name},name

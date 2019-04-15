@@ -24,12 +24,13 @@ class GDriveService(object):
                   'https://www.googleapis.com/auth/drive']
 
         # authenticate the service with a json key
-        with tempfile.NamedTemporaryFile(suffix="_credentials.json", mode='w') as f:
+        with tempfile.NamedTemporaryFile(suffix="_credentials.json",
+                                         mode='w') as f:
             f.write(gdrive_credentials_json)
             f.flush()
             self.credentials = ServiceAccountCredentials.from_json_keyfile_name(
-                                                            f.name,
-                                                            scopes=scopes)
+                f.name, scopes=scopes
+            )
 
     def request_sheet(self, sheet_name):
         # fetch a specific sheet
@@ -42,8 +43,8 @@ class GDriveService(object):
             return None
 
     def store_data(self, data):
-        """Adds a single new row to the sheet containing the users
-        infomration"""
+        """Adds a single new row to the sheet containing the user's
+        information"""
         self.append_row(self.SPREADSHEET_NAME, data,
                         self.SHEET_NAME)
 
@@ -55,5 +56,6 @@ class GDriveService(object):
             if worksheet is not None:
                 worksheet.append_row(row_values)
         except Exception as e:
-            logging.error("Failed to write row to gdocs. Sheet %s/%s. Error: %s",
-                          sheet_name, worksheet_name, e, exc_info=True)
+            logging.error("Failed to write row to gdocs. Sheet %s/%s. " +
+                          "Error: %s", sheet_name, worksheet_name, e,
+                          exc_info=True)
