@@ -695,7 +695,6 @@ actions:
   - utter_ask_whatismyname
   - utter_ask_howbuilt
   - utter_ask_whatspossible
-  - utter_howwereyoubuilt
   - utter_getstarted_new
   - utter_thanks_for_feedback
   - utter_restart_with_button
