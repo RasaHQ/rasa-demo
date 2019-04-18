@@ -555,6 +555,18 @@ templates:
           payload: "/get_started_step4"
   utter_no_more_steps:
     - text: "Looks like you've already completed all the steps!"
+  utter_explain_job_function:
+    - text: "TODO"
+  utter_explain_use_case:
+    - text: "TODO"
+  utter_explain_budget:
+    - text: "TODO"
+  utter_explain_person_name:
+    - text: "TODO"
+  utter_explain_company:
+    - text: "TODO"
+  utter_explain_business_email:
+    - text: "TODO"
 
 
 actions:
@@ -708,6 +720,12 @@ actions:
   - utter_faq_voice_more
   - utter_faq_slots_more
   - utter_faq_channels_more
+  - utter_explain_job_function
+  - utter_explain_use_case
+  - utter_explain_budget
+  - utter_explain_person_name
+  - utter_explain_company
+  - utter_explain_business_email
   - action_chitchat
   - action_faqs
   - action_pause
@@ -725,6 +743,7 @@ actions:
   - utter_react_negative
   - action_get_community_events
   - action_next_step
+  - action_explain_sales_form
 
 forms:
   - subscribe_newsletter_form

@@ -188,6 +188,28 @@ class SalesForm(FormAction):
             return []
 
 
+class ActionExplainSalesForm(Action):
+    """Returns the explanation for the sales form questions"""
+
+    def name(self):
+        return "action_explain_sales_form"
+
+    def run(self, dispatcher, tracker, domain):
+        requested_slot = tracker.get_slot('requested_slot')
+
+        print("#"*100)
+        print(requested_slot)
+
+        if requested_slot not in SalesForm.required_slots(tracker):
+            dispatcher.utter_message(
+                "Sorry, I didn't got that. Please rephrase or answer the question "
+                "above. Thanks.")
+            return []
+
+        dispatcher.utter_template('utter_explain_' + requested_slot, tracker)
+        return []
+
+
 class ActionChitchat(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
