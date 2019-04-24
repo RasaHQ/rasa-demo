@@ -197,9 +197,6 @@ class ActionExplainSalesForm(Action):
     def run(self, dispatcher, tracker, domain):
         requested_slot = tracker.get_slot('requested_slot')
 
-        print("#"*100)
-        print(requested_slot)
-
         if requested_slot not in SalesForm.required_slots(tracker):
             dispatcher.utter_message(
                 "Sorry, I didn't got that. Please rephrase or answer the question "

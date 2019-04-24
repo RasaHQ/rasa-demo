@@ -25,41 +25,6 @@
     - utter_great
     - utter_anything_else
 
-## newsletter + ask why email
-
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_can_do
-    - subscribe_newsletter_form
-    - form{"name": "subscribe_newsletter_form"}
-    - form{"name": null}
-* explain
-    - utter_response_why_email
-    - utter_ask_continue_newsletter
-* affirm
-    - utter_great
-    - subscribe_newsletter_form
-    - form{"name": null}
-    - utter_docu
-    - utter_ask_feedback
-
-## newsletter + ask why email
-
-* greet
-    - action_greet_user
-* signup_newsletter
-    - utter_can_do
-    - subscribe_newsletter_form
-    - form{"name": "subscribe_newsletter_form"}
-    - form{"name": null}
-* explain
-    - utter_response_why_email
-    - utter_ask_continue_newsletter
-* deny
-    - utter_thumbsup
-    - utter_anything_else
-
 ## newsletter + feedback
 * greet
     - action_greet_user
@@ -287,6 +252,41 @@
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
     - utter_great
+    - utter_anything_else
+
+## newsletter + ask why email
+
+* greet
+    - action_greet_user
+* signup_newsletter
+    - utter_can_do
+    - subscribe_newsletter_form
+    - form{"name": "subscribe_newsletter_form"}
+    - form{"name": null}
+* explain
+    - utter_response_why_email
+    - utter_ask_continue_newsletter
+* affirm
+    - utter_great
+    - subscribe_newsletter_form
+    - form{"name": null}
+    - utter_docu
+    - utter_ask_feedback
+
+## newsletter + ask why email
+
+* greet
+    - action_greet_user
+* signup_newsletter
+    - utter_can_do
+    - subscribe_newsletter_form
+    - form{"name": "subscribe_newsletter_form"}
+    - form{"name": null}
+* explain
+    - utter_response_why_email
+    - utter_ask_continue_newsletter
+* deny
+    - utter_thumbsup
     - utter_anything_else
 
 ## sales, then newsletter, then confirm
