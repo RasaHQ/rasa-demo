@@ -556,17 +556,17 @@ templates:
   utter_no_more_steps:
     - text: "Looks like you've already completed all the steps!"
   utter_explain_job_function:
-    - text: "TODO"
+    - text: "Your job function helps us in understanding how we can talk to you best."
   utter_explain_use_case:
-    - text: "TODO"
+    - text: "In order to help you best, we need to know what you want to do."
   utter_explain_budget:
-    - text: "TODO"
+    - text: "If you tell us your budget, we can prepare a package that fits you best."
   utter_explain_person_name:
-    - text: "TODO"
+    - text: "To be able to contact you later on, we would like to know your name."
   utter_explain_company:
-    - text: "TODO"
+    - text: "Just for completeness."
   utter_explain_business_email:
-    - text: "TODO"
+    - text: "We need your business email to contact you afterwards. Otherwise, we cannot help you set up Rasa."
 
 
 actions:
