@@ -20,12 +20,13 @@ class GDriveService(object):
     SHEET_NAME = "demobot"
 
     def __init__(self, gdrive_credentials_json=config.gdrive_credentials):
-        scopes = ['https://spreadsheets.google.com/feeds',
-                  'https://www.googleapis.com/auth/drive']
+        scopes = [
+            "https://spreadsheets.google.com/feeds",
+            "https://www.googleapis.com/auth/drive",
+        ]
 
         # authenticate the service with a json key
-        with tempfile.NamedTemporaryFile(suffix="_credentials.json",
-                                         mode='w') as f:
+        with tempfile.NamedTemporaryFile(suffix="_credentials.json", mode="w") as f:
             f.write(gdrive_credentials_json)
             f.flush()
             self.credentials = ServiceAccountCredentials.from_json_keyfile_name(
@@ -38,15 +39,15 @@ class GDriveService(object):
         try:
             return gspread.authorize(self.credentials).open(sheet_name)
         except Exception as e:
-            logging.error("Failed to create google spreadsheet connection. %s",
-                          e, exc_info=True)
+            logging.error(
+                "Failed to create google spreadsheet connection. %s", e, exc_info=True
+            )
             return None
 
     def store_data(self, data):
         """Adds a single new row to the sheet containing the user's
         information"""
-        self.append_row(self.SPREADSHEET_NAME, data,
-                        self.SHEET_NAME)
+        self.append_row(self.SPREADSHEET_NAME, data, self.SHEET_NAME)
 
     def append_row(self, sheet_name, row_values, worksheet_name):
         # add a row to the spreadsheet
@@ -56,6 +57,10 @@ class GDriveService(object):
             if worksheet is not None:
                 worksheet.append_row(row_values)
         except Exception as e:
-            logging.error("Failed to write row to gdocs. Sheet %s/%s. " +
-                          "Error: %s", sheet_name, worksheet_name, e,
-                          exc_info=True)
+            logging.error(
+                "Failed to write row to gdocs. Sheet %s/%s. " + "Error: %s",
+                sheet_name,
+                worksheet_name,
+                e,
+                exc_info=True,
+            )

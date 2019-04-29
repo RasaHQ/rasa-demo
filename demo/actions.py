@@ -7,8 +7,13 @@ import json
 from rasa_core_sdk import Action, Tracker, ActionExecutionRejection
 from rasa_core_sdk.executor import CollectingDispatcher
 from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
-from rasa_core_sdk.events import SlotSet, UserUtteranceReverted, \
-    ConversationPaused, FollowupAction, Form
+from rasa_core_sdk.events import (
+    SlotSet,
+    UserUtteranceReverted,
+    ConversationPaused,
+    FollowupAction,
+    Form,
+)
 
 from demo.api import MailChimpAPI
 from demo import config
@@ -41,47 +46,48 @@ class SubscribeNewsletterForm(FormAction):
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if slot_to_fill:
-            slot_values.update(self.extract_requested_slot(dispatcher,
-                                                           tracker,
-                                                           domain))
+            slot_values.update(self.extract_requested_slot(dispatcher, tracker, domain))
 
             if not slot_values:
 
                 # if no email entity was picked up, but intent was
                 # enter_data, ask again instead of leaving the form
-                intent = tracker.latest_message['intent'].get('name')
+                intent = tracker.latest_message["intent"].get("name")
                 if intent == "enter_data":
-                    dispatcher.utter_template('utter_no_email', tracker)
+                    dispatcher.utter_template("utter_no_email", tracker)
                     return []
 
                 # reject to execute the form action
                 # if some slot was requested but nothing was extracted
                 # it will allow other policies to predict another action
-                raise ActionExecutionRejection(self.name(),
-                                               "Failed to extract slot {0} "
-                                               "with action {1}"
-                                               "".format(slot_to_fill,
-                                                         self.name()))
+                raise ActionExecutionRejection(
+                    self.name(),
+                    "Failed to extract slot {0} "
+                    "with action {1}"
+                    "".format(slot_to_fill, self.name()),
+                )
 
         # validation succeed, set slots to extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
-    def submit(self,
-               dispatcher: CollectingDispatcher,
-               tracker: Tracker,
-               domain: Dict[Text, Any]) -> List[Dict]:
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
         """Once we have an email, attempt to add it to the database"""
 
-        email = tracker.get_slot('email')
+        email = tracker.get_slot("email")
         client = MailChimpAPI(config.mailchimp_api_key)
         # if the email is already subscribed, this returns False
         added_to_list = client.subscribe_user(config.mailchimp_list, email)
 
         # utter submit template
         if added_to_list:
-            dispatcher.utter_template('utter_confirmationemail', tracker)
+            dispatcher.utter_template("utter_confirmationemail", tracker)
         else:
-            dispatcher.utter_template('utter_already_subscribed', tracker)
+            dispatcher.utter_template("utter_already_subscribed", tracker)
         return []
 
 
@@ -93,8 +99,14 @@ class SalesForm(FormAction):
 
     @staticmethod
     def required_slots(tracker):
-        return ["job_function", "use_case", "budget", "person_name",
-                "company", "business_email"]
+        return [
+            "job_function",
+            "use_case",
+            "budget",
+            "person_name",
+            "company",
+            "business_email",
+        ]
 
     def slot_mappings(self):
         # type: () -> Dict[Text: Union[Dict, List[Dict]]]
@@ -108,17 +120,27 @@ class SalesForm(FormAction):
         # the entire user utterance. In future this should be stored in a
         # `<slot>_unconfirmed` slot where the user will then be asked to
         # confirm this is their <slot>.
-        return {"job_function": [self.from_entity(entity="job_function"),
-                                 self.from_text(intent="enter_data")],
-                "use_case": self.from_text(intent="enter_data"),
-                "budget": [self.from_entity(entity="amount-of-money"),
-                           self.from_entity(entity="number"),
-                           self.from_text(intent="enter_data")],
-                "person_name": [self.from_entity(entity="name"),
-                                self.from_text(intent="enter_data")],
-                "company": [self.from_entity(entity="company"),
-                            self.from_text(intent="enter_data")],
-                "business_email": self.from_entity(entity="email")}
+        return {
+            "job_function": [
+                self.from_entity(entity="job_function"),
+                self.from_text(intent="enter_data"),
+            ],
+            "use_case": self.from_text(intent="enter_data"),
+            "budget": [
+                self.from_entity(entity="amount-of-money"),
+                self.from_entity(entity="number"),
+                self.from_text(intent="enter_data"),
+            ],
+            "person_name": [
+                self.from_entity(entity="name"),
+                self.from_text(intent="enter_data"),
+            ],
+            "company": [
+                self.from_entity(entity="company"),
+                self.from_text(intent="enter_data"),
+            ],
+            "business_email": self.from_entity(entity="email"),
+        }
 
     def validate(self, dispatcher, tracker, domain):
         # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
@@ -132,59 +154,62 @@ class SalesForm(FormAction):
         # extract requested slot
         slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
         if slot_to_fill:
-            slot_values.update(self.extract_requested_slot(dispatcher,
-                                                           tracker,
-                                                           domain))
+            slot_values.update(self.extract_requested_slot(dispatcher, tracker, domain))
 
             if not slot_values:
 
                 # if no email entity was picked up, but intent was
                 # enter_data, ask again instead of leaving the form
-                intent = tracker.latest_message['intent'].get('name')
+                intent = tracker.latest_message["intent"].get("name")
                 if slot_to_fill == "business_email" and intent == "enter_data":
-                    dispatcher.utter_template('utter_no_email', tracker)
+                    dispatcher.utter_template("utter_no_email", tracker)
                     return []
 
                 # reject to execute the form action
                 # if some slot was requested but nothing was extracted
                 # it will allow other policies to predict another action
-                raise ActionExecutionRejection(self.name(),
-                                               "Failed to extract slot {0} "
-                                               "with action {1}"
-                                               "".format(slot_to_fill,
-                                                         self.name()))
+                raise ActionExecutionRejection(
+                    self.name(),
+                    "Failed to extract slot {0} "
+                    "with action {1}"
+                    "".format(slot_to_fill, self.name()),
+                )
 
         # validation succeed, set slots to extracted values
         return [SlotSet(slot, value) for slot, value in slot_values.items()]
 
-    def submit(self,
-               dispatcher: CollectingDispatcher,
-               tracker: Tracker,
-               domain: Dict[Text, Any]) -> List[Dict]:
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
         """Once we have all the information, attempt to add it to the
         Google Drive database"""
 
         import datetime
-        budget = tracker.get_slot('budget')
-        company = tracker.get_slot('company')
-        email = tracker.get_slot('business_email')
-        job_function = tracker.get_slot('job_function')
-        person_name = tracker.get_slot('person_name')
-        use_case = tracker.get_slot('use_case')
+
+        budget = tracker.get_slot("budget")
+        company = tracker.get_slot("company")
+        email = tracker.get_slot("business_email")
+        job_function = tracker.get_slot("job_function")
+        person_name = tracker.get_slot("person_name")
+        use_case = tracker.get_slot("use_case")
         date = datetime.datetime.now().strftime("%d/%m/%Y")
 
-        sales_info = [company, use_case, budget, date, person_name,
-                      job_function, email]
+        sales_info = [company, use_case, budget, date, person_name, job_function, email]
 
         gdrive = GDriveService()
         try:
             gdrive.store_data(sales_info)
-            dispatcher.utter_template('utter_confirm_salesrequest', tracker)
+            dispatcher.utter_template("utter_confirm_salesrequest", tracker)
             return []
         except Exception as e:
-            logger.error("Failed to write data to gdocs. Error: {}"
-                         "".format(e.message), exc_info=True)
-            dispatcher.utter_template('utter_salesrequest_failed', tracker)
+            logger.error(
+                "Failed to write data to gdocs. Error: {}" "".format(e.message),
+                exc_info=True,
+            )
+            dispatcher.utter_template("utter_salesrequest_failed", tracker)
             return []
 
 
@@ -195,15 +220,16 @@ class ActionExplainSalesForm(Action):
         return "action_explain_sales_form"
 
     def run(self, dispatcher, tracker, domain):
-        requested_slot = tracker.get_slot('requested_slot')
+        requested_slot = tracker.get_slot("requested_slot")
 
         if requested_slot not in SalesForm.required_slots(tracker):
             dispatcher.utter_message(
                 "Sorry, I didn't get that. Please rephrase or answer the question "
-                "above.")
+                "above."
+            )
             return []
 
-        dispatcher.utter_template('utter_explain_' + requested_slot, tracker)
+        dispatcher.utter_template("utter_explain_" + requested_slot, tracker)
         return []
 
 
@@ -214,16 +240,30 @@ class ActionChitchat(Action):
         return "action_chitchat"
 
     def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_message['intent'].get('name')
+        intent = tracker.latest_message["intent"].get("name")
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_builder', 'ask_weather', 'ask_howdoing',
-                      'ask_whatspossible', 'ask_whatisrasa', 'ask_isbot',
-                      'ask_howold', 'ask_languagesbot', 'ask_restaurant',
-                      'ask_time', 'ask_wherefrom', 'ask_whoami',
-                      'handleinsult', 'nicetomeeyou', 'telljoke',
-                      'ask_whatismyname', 'ask_howbuilt', 'ask_whoisit']:
-            dispatcher.utter_template('utter_' + intent, tracker)
+        if intent in [
+            "ask_builder",
+            "ask_weather",
+            "ask_howdoing",
+            "ask_whatspossible",
+            "ask_whatisrasa",
+            "ask_isbot",
+            "ask_howold",
+            "ask_languagesbot",
+            "ask_restaurant",
+            "ask_time",
+            "ask_wherefrom",
+            "ask_whoami",
+            "handleinsult",
+            "nicetomeeyou",
+            "telljoke",
+            "ask_whatismyname",
+            "ask_howbuilt",
+            "ask_whoisit",
+        ]:
+            dispatcher.utter_template("utter_" + intent, tracker)
         return []
 
 
@@ -234,16 +274,25 @@ class ActionFaqs(Action):
         return "action_faqs"
 
     def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_message['intent'].get('name')
+        intent = tracker.latest_message["intent"].get("name")
 
         # retrieve the correct chitchat utterance dependent on the intent
-        if intent in ['ask_faq_platform', 'ask_faq_languages',
-                      'ask_faq_tutorialcore', 'ask_faq_tutorialnlu',
-                      'ask_faq_opensource', 'ask_faq_voice', 'ask_faq_slots',
-                      'ask_faq_channels', 'ask_faq_differencecorenlu',
-                      'ask_faq_python_version', 'ask_faq_community_size',
-                      'ask_faq_what_is_forum', 'ask_faq_tutorials']:
-            dispatcher.utter_template('utter_' + intent, tracker)
+        if intent in [
+            "ask_faq_platform",
+            "ask_faq_languages",
+            "ask_faq_tutorialcore",
+            "ask_faq_tutorialnlu",
+            "ask_faq_opensource",
+            "ask_faq_voice",
+            "ask_faq_slots",
+            "ask_faq_channels",
+            "ask_faq_differencecorenlu",
+            "ask_faq_python_version",
+            "ask_faq_community_size",
+            "ask_faq_what_is_forum",
+            "ask_faq_tutorials",
+        ]:
+            dispatcher.utter_template("utter_" + intent, tracker)
         return []
 
 
@@ -266,7 +315,7 @@ class ActionStoreUnknownProduct(Action):
     def run(self, dispatcher, tracker, domain):
         # if we dont know the product the user is migrating from,
         # store his last message in a slot.
-        return [SlotSet('unknown_product', tracker.latest_message.get('text'))]
+        return [SlotSet("unknown_product", tracker.latest_message.get("text"))]
 
 
 class ActionStoreUnknownNluPart(Action):
@@ -280,8 +329,7 @@ class ActionStoreUnknownNluPart(Action):
     def run(self, dispatcher, tracker, domain):
         # if we dont know the part of nlu the user wants information on,
         # store his last message in a slot.
-        return [SlotSet('unknown_nlu_part',
-                tracker.latest_message.get('text'))]
+        return [SlotSet("unknown_nlu_part", tracker.latest_message.get("text"))]
 
 
 class ActionStoreBotLanguage(Action):
@@ -291,17 +339,27 @@ class ActionStoreBotLanguage(Action):
         return "action_store_bot_language"
 
     def run(self, dispatcher, tracker, domain):
-        spacy_languages = ['english', 'french', 'german', 'spanish',
-                           'portuguese', 'french', 'italian', 'dutch']
-        language = tracker.get_slot('language')
+        spacy_languages = [
+            "english",
+            "french",
+            "german",
+            "spanish",
+            "portuguese",
+            "french",
+            "italian",
+            "dutch",
+        ]
+        language = tracker.get_slot("language")
         if not language:
-            return [SlotSet('language', 'that language'),
-                    SlotSet('can_use_spacy', False)]
+            return [
+                SlotSet("language", "that language"),
+                SlotSet("can_use_spacy", False),
+            ]
 
         if language in spacy_languages:
-            return [SlotSet('can_use_spacy', True)]
+            return [SlotSet("can_use_spacy", True)]
         else:
-            return [SlotSet('can_use_spacy', False)]
+            return [SlotSet("can_use_spacy", False)]
 
 
 class ActionStoreEntityExtractor(Action):
@@ -313,20 +371,26 @@ class ActionStoreEntityExtractor(Action):
         return "action_store_entity_extractor"
 
     def run(self, dispatcher, tracker, domain):
-        spacy_entities = ['place', 'date', 'name', 'organisation']
-        duckling = ['money', 'duration', 'distance', 'ordinals', 'time',
-                    'amount-of-money', 'numbers']
+        spacy_entities = ["place", "date", "name", "organisation"]
+        duckling = [
+            "money",
+            "duration",
+            "distance",
+            "ordinals",
+            "time",
+            "amount-of-money",
+            "numbers",
+        ]
 
-        entity_to_extract = next(tracker.get_latest_entity_values('entity'),
-                                 None)
+        entity_to_extract = next(tracker.get_latest_entity_values("entity"), None)
 
-        extractor = 'ner_crf'
+        extractor = "ner_crf"
         if entity_to_extract in spacy_entities:
-            extractor = 'ner_spacy'
+            extractor = "ner_spacy"
         elif entity_to_extract in duckling:
-            extractor = 'ner_duckling_http'
+            extractor = "ner_duckling_http"
 
-        return [SlotSet('entity_extractor', extractor)]
+        return [SlotSet("entity_extractor", extractor)]
 
 
 class ActionSetOnboarding(Action):
@@ -337,13 +401,13 @@ class ActionSetOnboarding(Action):
         return "action_set_onboarding"
 
     def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_message['intent'].get('name')
+        intent = tracker.latest_message["intent"].get("name")
         user_type = next(tracker.get_latest_entity_values("user_type"), None)
         is_new_user = intent == "how_to_get_started" and user_type == "new"
-        if intent == 'affirm' or is_new_user:
-            return [SlotSet('onboarding', True)]
-        elif intent == 'deny':
-            return [SlotSet('onboarding', False)]
+        if intent == "affirm" or is_new_user:
+            return [SlotSet("onboarding", True)]
+        elif intent == "deny":
+            return [SlotSet("onboarding", False)]
         return []
 
 
@@ -361,7 +425,7 @@ class SuggestionForm(FormAction):
         return {"suggestion": self.from_text()}
 
     def submit(self, dispatcher, tracker, domain):
-        dispatcher.utter_template('utter_thank_suggestion', tracker)
+        dispatcher.utter_template("utter_thank_suggestion", tracker)
         return []
 
 
@@ -374,12 +438,12 @@ class ActionStackInstallationCommand(Action):
         return "action_select_installation_command"
 
     def run(self, dispatcher, tracker, domain):
-        package_manager = tracker.get_slot('package_manager')
+        package_manager = tracker.get_slot("package_manager")
 
-        if package_manager == 'conda':
-            dispatcher.utter_template('utter_installation_with_conda', tracker)
+        if package_manager == "conda":
+            dispatcher.utter_template("utter_installation_with_conda", tracker)
         else:
-            dispatcher.utter_template('utter_installation_with_pip', tracker)
+            dispatcher.utter_template("utter_installation_with_pip", tracker)
 
         return []
 
@@ -391,9 +455,9 @@ class ActionStoreProblemDescription(Action):
         return "action_store_problem_description"
 
     def run(self, dispatcher, tracker, domain):
-        problem = tracker.latest_message.get('text')
+        problem = tracker.latest_message.get("text")
 
-        return [SlotSet('problem_description', problem)]
+        return [SlotSet("problem_description", problem)]
 
 
 class ActionGreetUser(Action):
@@ -403,13 +467,12 @@ class ActionGreetUser(Action):
         return "action_greet_user"
 
     def run(self, dispatcher, tracker, domain):
-        intent = tracker.latest_message['intent'].get('name')
+        intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         if intent == "greet":
-            if shown_privacy and name_entity and name_entity.lower() != 'sara':
-                dispatcher.utter_template("utter_greet_name", tracker,
-                                          name=name_entity)
+            if shown_privacy and name_entity and name_entity.lower() != "sara":
+                dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
                 return []
             elif shown_privacy:
                 dispatcher.utter_template("utter_greet_noname", tracker)
@@ -418,15 +481,15 @@ class ActionGreetUser(Action):
                 dispatcher.utter_template("utter_greet", tracker)
                 dispatcher.utter_template("utter_inform_privacypolicy", tracker)
                 dispatcher.utter_template("utter_ask_goal", tracker)
-                return [SlotSet('shown_privacy', True)]
-        elif intent[:-1] == 'get_started_step' and not shown_privacy:
+                return [SlotSet("shown_privacy", True)]
+        elif intent[:-1] == "get_started_step" and not shown_privacy:
             dispatcher.utter_template("utter_greet", tracker)
             dispatcher.utter_template("utter_inform_privacypolicy", tracker)
             dispatcher.utter_template("utter_" + intent, tracker)
-            return [SlotSet('shown_privacy', True), SlotSet('step', intent[-1])]
-        elif intent[:-1] == 'get_started_step' and shown_privacy:
+            return [SlotSet("shown_privacy", True), SlotSet("step", intent[-1])]
+        elif intent[:-1] == "get_started_step" and shown_privacy:
             dispatcher.utter_template("utter_" + intent, tracker)
-            return [SlotSet('step', intent[-1])]
+            return [SlotSet("step", intent[-1])]
         return []
 
 
@@ -439,32 +502,37 @@ class ActionDefaultAskAffirmation(Action):
     def __init__(self) -> None:
         import pandas as pd
 
-        self.intent_mappings = pd.read_csv("data/"
-                                           "intent_description_mapping.csv")
+        self.intent_mappings = pd.read_csv("data/" "intent_description_mapping.csv")
         self.intent_mappings.fillna("", inplace=True)
         self.intent_mappings.entities = self.intent_mappings.entities.map(
-            lambda entities: {e.strip() for e in entities.split(',')})
+            lambda entities: {e.strip() for e in entities.split(",")}
+        )
 
-    def run(self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]
-            ) -> List['Event']:
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List["Event"]:
 
-        intent_ranking = tracker.latest_message.get('intent_ranking', [])
+        intent_ranking = tracker.latest_message.get("intent_ranking", [])
         if len(intent_ranking) > 1:
-            diff_intent_confidence = (intent_ranking[0].get("confidence") -
-                                      intent_ranking[1].get("confidence"))
+            diff_intent_confidence = intent_ranking[0].get(
+                "confidence"
+            ) - intent_ranking[1].get("confidence")
             if diff_intent_confidence < 0.2:
                 intent_ranking = intent_ranking[:2]
             else:
                 intent_ranking = intent_ranking[:1]
-        first_intent_names = [intent.get('name', '')
-                              for intent in intent_ranking
-                              if intent.get('name', '') != 'out_of_scope']
+        first_intent_names = [
+            intent.get("name", "")
+            for intent in intent_ranking
+            if intent.get("name", "") != "out_of_scope"
+        ]
 
-        message_title = ("Sorry, I'm not sure I've understood "
-                         "you correctly 🤔 Do you mean...")
+        message_title = (
+            "Sorry, I'm not sure I've understood " "you correctly 🤔 Do you mean..."
+        )
 
         entities = tracker.latest_message.get("entities", [])
         entities = {e["entity"]: e["value"] for e in entities}
@@ -475,60 +543,60 @@ class ActionDefaultAskAffirmation(Action):
         for intent in first_intent_names:
             logger.debug(intent)
             logger.debug(entities)
-            buttons.append({'title': self.get_button_title(intent, entities),
-                            'payload': '/{}{}'.format(intent,
-                                                      entities_json)})
+            buttons.append(
+                {
+                    "title": self.get_button_title(intent, entities),
+                    "payload": "/{}{}".format(intent, entities_json),
+                }
+            )
 
-        buttons.append({'title': 'Something else',
-                        'payload': '/out_of_scope'})
+        buttons.append({"title": "Something else", "payload": "/out_of_scope"})
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
 
         return []
 
-    def get_button_title(self, intent: Text, entities: Dict[Text, Text]
-                         ) -> Text:
+    def get_button_title(self, intent: Text, entities: Dict[Text, Text]) -> Text:
         default_utterance_query = self.intent_mappings.intent == intent
-        utterance_query = (self.intent_mappings.entities == entities.keys() &
-                           default_utterance_query)
+        utterance_query = (
+            self.intent_mappings.entities == entities.keys() & default_utterance_query
+        )
 
         utterances = self.intent_mappings[utterance_query].button.tolist()
 
         if len(utterances) > 0:
             button_title = utterances[0]
         else:
-            utterances = (
-                self.intent_mappings[default_utterance_query]
-                    .button.tolist())
+            utterances = self.intent_mappings[default_utterance_query].button.tolist()
             button_title = utterances[0] if len(utterances) > 0 else intent
 
         return button_title.format(**entities)
 
 
 class ActionDefaultFallback(Action):
-
     def name(self) -> Text:
         return "action_default_fallback"
 
-    def run(self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]
-            ) -> List['Event']:
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List["Event"]:
 
         # Fallback caused by TwoStageFallbackPolicy
-        if (len(tracker.events) >= 4 and
-                tracker.events[-4].get('name') ==
-                'action_default_ask_affirmation'):
+        if (
+            len(tracker.events) >= 4
+            and tracker.events[-4].get("name") == "action_default_ask_affirmation"
+        ):
 
-            dispatcher.utter_template('utter_restart_with_button', tracker)
+            dispatcher.utter_template("utter_restart_with_button", tracker)
 
-            return [SlotSet('feedback_value', 'negative'),
-                    ConversationPaused()]
+            return [SlotSet("feedback_value", "negative"), ConversationPaused()]
 
         # Fallback caused by Core
         else:
-            dispatcher.utter_template('utter_default', tracker)
+            dispatcher.utter_template("utter_default", tracker)
             return [UserUtteranceReverted()]
 
 
@@ -543,9 +611,10 @@ class CommunityEventAction(Action):
     def name(self) -> Text:
         return "action_get_community_events"
 
-    def _get_events(self) -> List['CommunityEvent']:
+    def _get_events(self) -> List["CommunityEvent"]:
         if self.events is None or self._are_events_expired():
             from demo.community_events import get_community_events
+
             logger.debug("Getting events from website.")
             self.last_event_update = datetime.now()
             self.events = get_community_events()
@@ -555,74 +624,75 @@ class CommunityEventAction(Action):
     def _are_events_expired(self) -> bool:
         # events are expired after 1 hour
         return (
-            self.last_event_update is None or
-            (datetime.now() - self.last_event_update).total_seconds() > 3600)
+            self.last_event_update is None
+            or (datetime.now() - self.last_event_update).total_seconds() > 3600
+        )
 
-    def run(self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]
-            ) -> List['Event']:
-        intent = tracker.latest_message['intent'].get('name')
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List["Event"]:
+        intent = tracker.latest_message["intent"].get("name")
         events = self._get_events()
 
         if not events:
             dispatcher.utter_template("utter_no_community_event", tracker)
-        elif intent == 'ask_which_events':
+        elif intent == "ask_which_events":
             self._utter_event_overview(dispatcher)
-        elif intent == 'ask_when_next_event':
+        elif intent == "ask_when_next_event":
             self._utter_next_event(tracker, dispatcher)
 
         return []
 
-    def _utter_event_overview(self,
-                              dispatcher: CollectingDispatcher) -> None:
+    def _utter_event_overview(self, dispatcher: CollectingDispatcher) -> None:
         events = self._get_events()
-        event_items = ["- {} in {}".format(e.name_as_link(), e.city)
-                       for e in events]
+        event_items = ["- {} in {}".format(e.name_as_link(), e.city) for e in events]
         locations = "\n".join(event_items)
-        dispatcher.utter_message("Here are the next Rasa events:\n"
-                                 "" + locations +
-                                 "\nWe hope to see you at them!")
+        dispatcher.utter_message(
+            "Here are the next Rasa events:\n"
+            "" + locations + "\nWe hope to see you at them!"
+        )
 
-    def _utter_next_event(self,
-                          tracker: Tracker,
-                          dispatcher: CollectingDispatcher
-                          ) -> None:
-        location = next(tracker.get_latest_entity_values('location'), None)
+    def _utter_next_event(
+        self, tracker: Tracker, dispatcher: CollectingDispatcher
+    ) -> None:
+        location = next(tracker.get_latest_entity_values("location"), None)
         events = self._get_events()
 
         if location:
-            events_for_location = [e for e in events
-                                   if e.city == location or
-                                   e.country == location]
+            events_for_location = [
+                e for e in events if e.city == location or e.country == location
+            ]
             if not events_for_location and events:
                 next_event = events[0]
                 dispatcher.utter_template(
-                    'utter_no_event_for_location_but_next',
-                    tracker, **next_event.as_kwargs())
+                    "utter_no_event_for_location_but_next",
+                    tracker,
+                    **next_event.as_kwargs(),
+                )
             elif events_for_location:
                 next_event = events_for_location[0]
-                dispatcher.utter_template('utter_next_event_for_location',
-                                          tracker,
-                                          **next_event.as_kwargs())
+                dispatcher.utter_template(
+                    "utter_next_event_for_location", tracker, **next_event.as_kwargs()
+                )
         elif events:
             next_event = events[0]
-            dispatcher.utter_template('utter_next_event', tracker,
-                                      **next_event.as_kwargs())
+            dispatcher.utter_template(
+                "utter_next_event", tracker, **next_event.as_kwargs()
+            )
 
 
 class ActionNextStep(Action):
-
     def name(self):
         return "action_next_step"
 
     def run(self, dispatcher, tracker, domain):
-        step = int(tracker.get_slot('step')) + 1
+        step = int(tracker.get_slot("step")) + 1
 
         if step in [2, 3, 4]:
-            dispatcher.utter_template("utter_continue_step{}".format(step),
-                                      tracker)
+            dispatcher.utter_template("utter_continue_step{}".format(step), tracker)
         else:
             dispatcher.utter_template("utter_no_more_steps", tracker)
 

@@ -30,8 +30,7 @@ access_token = os.environ.get("TELEGRAM_TOKEN", "")
 
 verify = os.environ.get("TELEGRAM_VERIFY", "rasas_bot")
 
-webhook_url = os.environ.get("WEBHOOK_URL",
-                             "https://website-demo.rasa.com/webhook")
+webhook_url = os.environ.get("WEBHOOK_URL", "https://website-demo.rasa.com/webhook")
 
 rasa_platform_token = os.environ.get("RASA_PLATFORM_TOKEN", "")
 
