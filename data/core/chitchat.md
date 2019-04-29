@@ -509,7 +509,6 @@
     - action_chitchat
     - utter_direct_to_step2
 
-
 ## new to rasa/bots, explain nlu and try out stack
 * greet
     - action_greet_user

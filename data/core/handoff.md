@@ -69,3 +69,35 @@
     - utter_thumbsup
     - action_deactivate_form
     - form{"name": null}
+
+
+## just sales, explain, continue
+* greet
+    - action_greet_user
+* contact_sales
+    - utter_moreinformation
+    - sales_form
+    - form{"name": "sales_form"}
+* explain
+    - action_explain_sales_form
+    - utter_ask_continue_sales
+* affirm
+    - utter_great
+    - sales_form
+    - form{"name": null}
+
+
+## just sales, explain, stop
+* greet
+    - action_greet_user
+* contact_sales
+    - utter_moreinformation
+    - sales_form
+    - form{"name": "sales_form"}
+* explain
+    - action_explain_sales_form
+    - utter_ask_continue_sales
+* deny
+    - utter_thumbsup
+    - action_deactivate_form
+    - form{"name": null}

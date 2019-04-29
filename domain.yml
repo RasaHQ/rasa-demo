@@ -83,6 +83,7 @@ intents:
   - ask_faq_community_size
   - ask_faq_what_is_forum
   - next_step
+  - explain
 
 slots:
   budget:
@@ -167,6 +168,9 @@ templates:
     - text: "Cool, let's do it 🚀"
   utter_ask_email:
     - text: "What's your email address?"
+  utter_response_why_email:
+    - text: "I need your email address to sign you up to the newsletter."
+    - text: "I need it so that I can sign you up to the newsletter."
   utter_awesome:
     - text: "Awesome, thanks! 👍"
     - text: "Sweet, thank you! 😄"
@@ -251,6 +255,7 @@ templates:
     - text: "Even a Rasa bot is not completely perfect - it seems like I can't handle that request."
   utter_possibilities:
     - text: "You can either book a sales call or subscribe to our newsletter."
+    - text: "You can book a sales call or subscribe to our newsletter."
   utter_ask_whoisit:
     - text: "I'm the Rasa bot! 🤖"
   utter_change_mind:
@@ -369,7 +374,7 @@ templates:
   utter_explain_nlu:
     - text: 'Rasa NLU performs Natural Language Understanding, which means taking free-form text like "Please send the confirmation to amy@example.com" and turning it into structured data.'
   utter_explain_core:
-    - text: "Rasa Core performs dialogue management, which means keeping track of a conversation and deciding how to proceed."
+    - text: "Rasa Core performs dialog management, which means keeping track of a conversation, and deciding how to proceed."
   utter_also_explain_nlu:
     - text: "Would you also like me to explain Rasa NLU?"
   utter_also_explain_core:
@@ -472,6 +477,16 @@ templates:
     - text: "Our [forum](https://forum.rasa.com) is the place where all the community buzz happens. Join discussions, get the answers to your technical questions and stay up-to-date with what’s happening at Rasa."
   utter_ask_voice:
     - text:  "Yes, that is possible! You can connect Rasa to any channel you like. You can find more information [here](https://rasa.com/docs/core/connectors/)."
+  utter_faq_platform_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/platform/) for more information."
+  utter_faq_language_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/nlu/languages/) for more information."
+  utter_faq_voice_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/core/connectors/) for more information."
+  utter_faq_slots_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/core/slots/) for more information."
+  utter_faq_channels_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/core/connectors/#creating-a-new-channel) for more information."
   utter_getstarted_new:
     - text: "I see you're new, let me ask you a quick question before I help you get started:"
   utter_ask_feedback_message:
@@ -542,6 +557,18 @@ templates:
           payload: "/get_started_step4"
   utter_no_more_steps:
     - text: "Looks like you've already completed all the steps!"
+  utter_explain_job_function:
+    - text: "Your job function helps us in understanding how we can talk to you best."
+  utter_explain_use_case:
+    - text: "In order to help you best, we need to know what you want to do."
+  utter_explain_budget:
+    - text: "If you tell us your budget, we can prepare a package that fits you best."
+  utter_explain_person_name:
+    - text: "To be able to contact you later on, we would like to know your name."
+  utter_explain_company:
+    - text: "Just for completeness."
+  utter_explain_business_email:
+    - text: "We need your business email to contact you afterwards. Otherwise, we cannot help you set up Rasa."
 
 
 actions:
@@ -556,6 +583,7 @@ actions:
   - utter_ask_budget
   - utter_ask_company
   - utter_ask_goal
+  - utter_response_why_email
   - utter_inform_privacypolicy
   - utter_moreinformation
   - utter_confirm_salesrequest
@@ -689,6 +717,17 @@ actions:
   - utter_link_to_forum
   - utter_direct_to_step2
   - utter_direct_step3
+  - utter_faq_platform_more
+  - utter_faq_language_more
+  - utter_faq_voice_more
+  - utter_faq_slots_more
+  - utter_faq_channels_more
+  - utter_explain_job_function
+  - utter_explain_use_case
+  - utter_explain_budget
+  - utter_explain_person_name
+  - utter_explain_company
+  - utter_explain_business_email
   - action_chitchat
   - action_faqs
   - action_pause
@@ -706,6 +745,7 @@ actions:
   - utter_react_negative
   - action_get_community_events
   - action_next_step
+  - action_explain_sales_form
 
 forms:
   - subscribe_newsletter_form

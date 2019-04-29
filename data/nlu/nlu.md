@@ -2489,3 +2489,16 @@
 - I want to go to the next step
 - Please take me to the next step
 - Next step please
+
+## intent:explain
+- tell me more
+- could you please explain that
+- could you tell me more
+- give me more information please
+- could you please give me some more information
+- i want more information
+- what is the difference
+- can you tell me the difference
+- why
+- why is that
+- why do you need it
