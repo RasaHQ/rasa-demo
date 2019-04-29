@@ -22,7 +22,7 @@ To install Sara, please clone the repo and run:
 
 ```
 cd rasa-demo
-pip install -e . --no-use-pep517
+pip install -e .
 ```
 This will install the bot and all of its requirements.
 Note that it was written in Python 3 so might not work with PY2.
