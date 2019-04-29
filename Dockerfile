@@ -33,7 +33,7 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-RUN  pip install -e .
+RUN  pip install -e . --no-use-pep517
 
 EXPOSE 5001
 
