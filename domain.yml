@@ -232,6 +232,8 @@ templates:
     - text: "You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com."
   utter_no_speak:
     - text: "I'm afraid we can't chat then 😢"
+  utter_ask_whatspossible:
+    - text: "You can book a sales call or subscribe to our newsletter."
   utter_ask_weather:
     - text: "I don't know about where you live, but in my world it's always sunny ☀️"
     - text: "Honestly it's a bit too hot these days 😅"
@@ -372,7 +374,7 @@ templates:
   utter_explain_nlu:
     - text: 'Rasa NLU performs Natural Language Understanding, which means taking free-form text like "Please send the confirmation to amy@example.com" and turning it into structured data.'
   utter_explain_core:
-    - text: "Rasa Core performs Dialog Management, which means keeping track of a conversation, and deciding how to proceed."
+    - text: "Rasa Core performs dialog management, which means keeping track of a conversation, and deciding how to proceed."
   utter_also_explain_nlu:
     - text: "Would you also like me to explain Rasa NLU?"
   utter_also_explain_core:

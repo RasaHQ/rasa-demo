@@ -199,8 +199,8 @@ class ActionExplainSalesForm(Action):
 
         if requested_slot not in SalesForm.required_slots(tracker):
             dispatcher.utter_message(
-                "Sorry, I didn't got that. Please rephrase or answer the question "
-                "above. Thanks.")
+                "Sorry, I didn't get that. Please rephrase or answer the question "
+                "above.")
             return []
 
         dispatcher.utter_template('utter_explain_' + requested_slot, tracker)
