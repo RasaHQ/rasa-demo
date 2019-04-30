@@ -5,7 +5,8 @@ services:
 python:
   - '3.6'
 before_install:
-- pip install -e .
+- python -m pip install -U pip
+- pip install -e . --no-use-pep517
 - export DISPLAY=0.0
 - make train-memo
 - "export DISPLAY=:99.0"

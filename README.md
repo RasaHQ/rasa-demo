@@ -62,6 +62,19 @@ your website.
 
 `policy.yml` - the Core config file
 
+### Code Style
+
+To ensure a standardized code style we use the formatter [black](https://github.com/ambv/black).
+
+If you want to automatically format your code on every commit, you can use [pre-commit](https://pre-commit.com/).
+Just install it via `pip install pre-commit` and execute `pre-commit install` in the root folder.
+This will add a hook to the repository, which reformats files on every commit.
+
+If you want to set it up manually, install black via `pip install black`.
+To reformat files execute
+```
+black .
+```
 
 ## :gift: License
 Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies

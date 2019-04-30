@@ -15,9 +15,9 @@ class MailChimpAPI(object):
         # subscribe the user to the newsletter if they're not already
         # subscribed, with the status pending
         try:
-            self.client.lists.members.create(list_id, data={
-                                             'email_address': email,
-                                             'status': 'pending'})
+            self.client.lists.members.create(
+                list_id, data={"email_address": email, "status": "pending"}
+            )
             return True
 
         # if the user is already subscribed, return False
