@@ -718,7 +718,7 @@
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_duckling_http"}
+    - slot{"entity_extractor": "DucklingHTTPExtractor"}
     - utter_duckling
     - utter_anything_else
 
@@ -744,7 +744,7 @@
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_duckling_http"}
+    - slot{"entity_extractor": "DucklingHTTPExtractor"}
     - utter_duckling
     - utter_anything_else
 
@@ -777,7 +777,7 @@
     - utter_faq_platform_more
 
 ## FAQ - tell more about languages
-* ask_faq_language
+* ask_faq_languages
     - action_faqs
 * explain
     - utter_faq_language_more

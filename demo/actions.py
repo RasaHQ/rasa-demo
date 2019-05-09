@@ -32,43 +32,24 @@ class SubscribeNewsletterForm(FormAction):
     def required_slots(tracker):
         return ["email"]
 
-    def validate(self, dispatcher, tracker, domain):
-        # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
-        """Validate extracted value of requested slot
-            else reject execution of the form action
+    def slot_mappings(self):
+        return {
+            "email": [
+                self.from_entity(entity="email"),
+                self.from_text(intent="enter_data"),
+            ]
+        }
 
-            If no extraction, re-ask only if intent is enter_data
-        """
-        # extract other slots that were not requested
-        # but set by corresponding entity or trigger intent mapping
-        slot_values = self.extract_other_slots(dispatcher, tracker, domain)
+    def validate_email(self, value, dispatcher, tracker, domain):
+        """Check to see if an email entity was actually picked up by duckling."""
 
-        # extract requested slot
-        slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
-        if slot_to_fill:
-            slot_values.update(self.extract_requested_slot(dispatcher, tracker, domain))
-
-            if not slot_values:
-
-                # if no email entity was picked up, but intent was
-                # enter_data, ask again instead of leaving the form
-                intent = tracker.latest_message["intent"].get("name")
-                if intent == "enter_data":
-                    dispatcher.utter_template("utter_no_email", tracker)
-                    return []
-
-                # reject to execute the form action
-                # if some slot was requested but nothing was extracted
-                # it will allow other policies to predict another action
-                raise ActionExecutionRejection(
-                    self.name(),
-                    "Failed to extract slot {0} "
-                    "with action {1}"
-                    "".format(slot_to_fill, self.name()),
-                )
-
-        # validation succeed, set slots to extracted values
-        return [SlotSet(slot, value) for slot, value in slot_values.items()]
+        if any(tracker.get_latest_entity_values("email")):
+            # entity was picked up, validate slot
+            return {"email": value}
+        else:
+            # no entity was picked up, we want to ask again
+            dispatcher.utter_template("utter_no_email", tracker)
+            return {"email": None}
 
     def submit(
         self,
@@ -116,10 +97,6 @@ class SalesForm(FormAction):
             - a whole message
             or a list of them, where a first match will be picked"""
 
-        # For each slot other than email, if the entity isn't picked up, store
-        # the entire user utterance. In future this should be stored in a
-        # `<slot>_unconfirmed` slot where the user will then be asked to
-        # confirm this is their <slot>.
         return {
             "job_function": [
                 self.from_entity(entity="job_function"),
@@ -139,44 +116,22 @@ class SalesForm(FormAction):
                 self.from_entity(entity="company"),
                 self.from_text(intent="enter_data"),
             ],
-            "business_email": self.from_entity(entity="email"),
+            "business_email": [
+                self.from_entity(entity="email"),
+                self.from_text(intent="enter_data"),
+            ],
         }
 
-    def validate(self, dispatcher, tracker, domain):
-        # type: (CollectingDispatcher, Tracker, Dict[Text, Any]) -> List[Dict]
-        """Validate extracted input, if no valid email found but intent is
-        enter_data, re-ask for email, otherwise let other policies take over"""
+    def validate_business_email(self, value, dispatcher, tracker, domain):
+        """Check to see if an email entity was actually picked up by duckling."""
 
-        # extract other slots that were not requested
-        # but set by corresponding entity or trigger intent mapping
-        slot_values = self.extract_other_slots(dispatcher, tracker, domain)
-
-        # extract requested slot
-        slot_to_fill = tracker.get_slot(REQUESTED_SLOT)
-        if slot_to_fill:
-            slot_values.update(self.extract_requested_slot(dispatcher, tracker, domain))
-
-            if not slot_values:
-
-                # if no email entity was picked up, but intent was
-                # enter_data, ask again instead of leaving the form
-                intent = tracker.latest_message["intent"].get("name")
-                if slot_to_fill == "business_email" and intent == "enter_data":
-                    dispatcher.utter_template("utter_no_email", tracker)
-                    return []
-
-                # reject to execute the form action
-                # if some slot was requested but nothing was extracted
-                # it will allow other policies to predict another action
-                raise ActionExecutionRejection(
-                    self.name(),
-                    "Failed to extract slot {0} "
-                    "with action {1}"
-                    "".format(slot_to_fill, self.name()),
-                )
-
-        # validation succeed, set slots to extracted values
-        return [SlotSet(slot, value) for slot, value in slot_values.items()]
+        if any(tracker.get_latest_entity_values("email")):
+            # entity was picked up, validate slot
+            return {"business_email": value}
+        else:
+            # no entity was picked up, we want to ask again
+            dispatcher.utter_template("utter_no_email", tracker)
+            return {"business_email": None}
 
     def submit(
         self,
@@ -384,11 +339,11 @@ class ActionStoreEntityExtractor(Action):
 
         entity_to_extract = next(tracker.get_latest_entity_values("entity"), None)
 
-        extractor = "ner_crf"
+        extractor = "CRFEntityExtractor"
         if entity_to_extract in spacy_entities:
-            extractor = "ner_spacy"
+            extractor = "SpacyEntityExtractor"
         elif entity_to_extract in duckling:
-            extractor = "ner_duckling_http"
+            extractor = "DucklingHTTPExtractor"
 
         return [SlotSet("entity_extractor", extractor)]
 

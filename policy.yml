@@ -8,3 +8,4 @@ policies:
     nlu_threshold: 0.8
     core_threshold: 0.3
   - name: FormPolicy
+  - name: MappingPolicy

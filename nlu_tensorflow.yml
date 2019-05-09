@@ -1,16 +1,17 @@
+language: en
+
 pipeline:
-- name: tokenizer_whitespace
-- name: ner_crf
-- name: intent_featurizer_count_vectors
+- name: WhitespaceTokenizer
+- name: CRFEntityExtractor
+- name: CountVectorsFeaturizer
   OOV_token: oov
   token_pattern: (?u)\b\w+\b
-- name: intent_classifier_tensorflow_embedding
+- name: EmbeddingIntentClassifier
   epochs: 50
-- name: ner_duckling_http
+- name: DucklingHTTPExtractor
   url: http://localhost:8000
   dimensions:
   - email
   - number
   - amount-of-money
-- name: ner_synonyms
-language: en
+- name: EntitySynonymMapper

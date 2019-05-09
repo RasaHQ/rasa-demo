@@ -444,7 +444,7 @@
     - utter_ask_entities
 * enter_data{"entity": "name"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_spacy"}
+    - slot{"entity_extractor": "SpacyEntityExtractor"}
     - utter_spacy
     - utter_anything_else
 
@@ -465,11 +465,11 @@
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_duckling_http"}
+    - slot{"entity_extractor": "DucklingHTTPExtractor"}
     - utter_duckling
     - utter_anything_else
 
-## not new to rasa + nlu + entity + pipeline ner_crf
+## not new to rasa + nlu + entity + pipeline CRFEntityExtractor
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -486,7 +486,7 @@
     - utter_ask_entities
 * enter_data{"entity": "some custom entity"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_crf"}
+    - slot{"entity_extractor": "CRFEntityExtractor"}
     - utter_crf
     - utter_anything_else
 

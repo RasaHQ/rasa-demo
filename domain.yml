@@ -133,9 +133,9 @@ slots:
   entity_extractor:
     type: categorical
     values:
-      - ner_crf
-      - ner_spacy
-      - ner_duckling_http
+      - CRFEntityExtractor
+      - SpacyEntityExtractor
+      - DucklingHTTPExtractor
   language:
     type: unfeaturized
   onboarding:
@@ -340,14 +340,14 @@ templates:
   utter_spacy:
     - text: >
         SpaCy has excellent pre-trained named-entity recognizers for this -- check out this [interactive demo](https://demos.explosion.ai/displacy-ent/).
-        I would suggest using the ner_spacy component in your pipeline.
+        I would suggest using the SpacyEntityExtractor component in your pipeline.
   utter_duckling:
     - text: >
         Mhm, for this use case I would suggest the Facebook library Duckling 🐥
-        To do so, use the ner_duckling_http component in your pipeline and spin up a duckling server as described in their [documentation](https://duckling.wit.ai/).
+        To do so, use the DucklingHTTPExtractor component in your pipeline and spin up a duckling server as described in their [documentation](https://duckling.wit.ai/).
   utter_crf:
     - text: >
-        I currently don't know a library that provides pretrained recognisers for that. You'll have to train the extraction by yourself using the ner_crf component.
+        I currently don't know a library that provides pretrained recognisers for that. You'll have to train the extraction by yourself using the CRFEntityExtractor component.
         So use that and annote your NLU data as described [here](https://rasa.com/docs/nlu/dataformat/).
   utter_nlu_tools:
     - text: >
