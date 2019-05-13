@@ -784,7 +784,7 @@
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_duckling_http"}
+    - slot{"entity_extractor": "DucklingHTTPExtractor"}
     - utter_duckling
     - utter_anything_else
 
@@ -810,7 +810,7 @@
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
-    - slot{"entity_extractor": "ner_duckling_http"}
+    - slot{"entity_extractor": "DucklingHTTPExtractor"}
     - utter_duckling
     - utter_anything_else
 
