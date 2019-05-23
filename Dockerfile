@@ -35,6 +35,6 @@ COPY . /app
 
 RUN  pip install -e . --no-use-pep517
 
-EXPOSE 5001
+EXPOSE 5055
 
-CMD ["python" ,"-m", "rasa_core_sdk.endpoint", "--actions", "demo.actions", "-p", "5001"]
+CMD ["python" ,"-m", "rasa_core_sdk.endpoint", "--actions", "demo.actions", "-p", "5055"]
