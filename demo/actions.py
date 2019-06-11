@@ -4,16 +4,10 @@ from datetime import datetime
 from typing import Text, Dict, Any, List
 import json
 
-from rasa_core_sdk import Action, Tracker, ActionExecutionRejection
-from rasa_core_sdk.executor import CollectingDispatcher
-from rasa_core_sdk.forms import FormAction, REQUESTED_SLOT
-from rasa_core_sdk.events import (
-    SlotSet,
-    UserUtteranceReverted,
-    ConversationPaused,
-    FollowupAction,
-    Form,
-)
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.forms import FormAction
+from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused
 
 from demo.api import MailChimpAPI
 from demo import config
