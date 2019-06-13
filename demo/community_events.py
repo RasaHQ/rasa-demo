@@ -81,12 +81,14 @@ def get_community_events() -> List[CommunityEvent]:
 
         soup = BeautifulSoup(community_page, "html.parser")
 
-        events = soup.find_all("div", attrs={"class": "Grid__Column-sc-18qgnlv-1 dYmpGd"})[1].find("ul").find_all("li")
+        events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
+        # [1].find("ul").find_all("li")
+        print(events)
         events = [CommunityEvent.from_html(e) for e in events]
 
         now = datetime.date.today()
         events = [e for e in events if e is not None and e.date >= now]
-
+        print(events)
         return sorted(events, key=lambda e: e.date)
 
     return []
