@@ -59,6 +59,7 @@
 * affirm
     - utter_ask_migration
 * switch{"current_api": "dialogflow"}
+    - slot{"current_api":"dialogflow"}
     - utter_switch_dialogflow
     - utter_anything_else
 
@@ -73,6 +74,7 @@
 * affirm
     - utter_ask_migration
 * switch{"current_api": "luis"}
+    - slot{"current_api":"luis"}
     - utter_switch_luis
     - utter_anything_else
 
@@ -104,6 +106,7 @@
 * affirm
     - utter_ask_which_tool
 * switch{"current_api": "dialogflow"}
+    - slot{"current_api":"dialogflow"}
     - utter_switch_dialogflow
     - utter_anything_else
 
@@ -120,6 +123,7 @@
 * affirm
     - utter_ask_which_tool
 * switch{"current_api": "luis"}
+    - slot{"current_api":"luis"}
     - utter_switch_luis
     - utter_anything_else
 
@@ -521,11 +525,13 @@
 
 ## switch immediately to luis
 * switch{"current_api":"luis"}
+    - slot{"current_api":"luis"}
     - utter_switch_luis
     - utter_anything_else
 
 ## switch immediately to dialogflow
 * switch{"current_api": "dialogflow"}
+    - slot{"current_api":"dialogflow"}
     - utter_switch_dialogflow
     - utter_anything_else
 
