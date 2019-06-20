@@ -719,7 +719,7 @@
 * get_started_step2
     - action_greet_user
     - slot{"step":"2"}
-    - utter_direct_step3
+    - utter_direct_to_step3
 * get_started_step3
     - action_greet_user
     - slot{"step":"3"}

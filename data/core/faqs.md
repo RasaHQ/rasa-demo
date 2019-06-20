@@ -1,7 +1,7 @@
 ## prompt for getting started
 * get_started_step2
     - action_greet_user
-    - utter_direct_step3
+    - utter_direct_to_step3
 
 ## next step prompt
 * next_step
