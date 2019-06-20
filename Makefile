@@ -23,6 +23,10 @@ run-cmdline:
 	make run-actions&
 	rasa shell --debug --endpoints endpoints.yml
 
+run-x:
+	make run-actions&
+	rasa x
+
 visualize:
 	rasa visualize --stories data/core/ --domain domain.yml --out story_graph.png
 
