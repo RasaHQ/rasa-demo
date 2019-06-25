@@ -45,6 +45,7 @@ intents:
 - get_started_step2
 - get_started_step3
 - get_started_step4
+- get_started_step5
 - greet
 - handleinsult
 - how_to_get_started
@@ -463,11 +464,11 @@ templates:
   utter_get_starter_pack:
   - text: Great, you installed Rasa! If you don't want to start from scratch, you
       can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack).
-  utter_direct_to_step4:
+  utter_direct_to_step5:
   - text: The next step is to join our community, click the button below to continue.
     buttons:
     - title: Continue
-      payload: /get_started_step4
+      payload: /get_started_step5
   utter_ask_if_problem:
   - text: Do you have a problem?
   utter_get_started_step1:
@@ -476,6 +477,8 @@ templates:
   utter_get_started_step2:
   - text: I can help you solve common problems with Rasa 🙂
   utter_get_started_step3:
+  - text: You can use Rasa X to learn from real conversations.
+  utter_get_started_step4:
   - text: I can help you to install Rasa Stack.
   utter_ask_faq_tutorials:
   - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
@@ -564,7 +567,7 @@ templates:
       to date on product updates, events, and resources.
   utter_no_community_event:
   - text: Sorry, we currently don't have any planned community events 😞.
-  utter_get_started_step4:
+  utter_get_started_step5:
   - text: As Rasa developer you will be part of a huge community. You can ask me which
       events we have planned, how to contribute, or about our Rasa forum.
   utter_no_event_for_location_but_next:
@@ -588,12 +591,12 @@ templates:
       'take me to the next step' at any point
     buttons:
     - title: Continue
-      payload: /get_started_step3
-  utter_continue_step3:
+      payload: /get_started_step4
+  utter_continue_step4:
   - text: Let's continue, click the button below
     buttons:
     - title: Continue
-      payload: /get_started_step3
+      payload: /get_started_step4
   utter_direct_to_step2:
   - text: You can click the button below to go to the next step and to try out Rasa
       once you're ready.
@@ -605,11 +608,11 @@ templates:
     buttons:
     - title: Continue
       payload: /get_started_step2
-  utter_continue_step4:
+  utter_continue_step5:
   - text: Let's continue, click the button below
     buttons:
     - title: Continue
-      payload: /get_started_step4
+      payload: /get_started_step5
   utter_no_more_steps:
   - text: Looks like you've already completed all the steps!
   utter_explain_job_function:
@@ -711,12 +714,12 @@ actions:
 - utter_contact_email
 - utter_core_tutorial
 - utter_crf
-- utter_describe_step4
+- utter_describe_step5
 - utter_direct_install
 - utter_direct_to_step
 - utter_direct_to_forum_for_help
 - utter_direct_to_step2
-- utter_direct_to_step4
+- utter_direct_to_step5
 - utter_docu
 - utter_dont_know_nlu_part
 - utter_duckling
@@ -743,6 +746,7 @@ actions:
 - utter_get_started_step2
 - utter_get_started_step3
 - utter_get_started_step4
+- utter_get_started_step5
 - utter_get_starter_pack
 - utter_getstarted
 - utter_getstarted_new

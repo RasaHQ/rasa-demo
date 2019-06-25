@@ -10,6 +10,9 @@
 	- All chitchat intents can be handled with a single response independent of state.
 	- If the user chitchats after triggering an intent but before completing it, reply with `action_chitchat`, but also nudge the user to get back to finishing the flow of the incomplete intent.
 
+## Questions to ask Akela
+- I now plan to make Step 2 all about `rasa init` (as in the docs). I will have to scrap the existing "Ask any questions" step to make room for that. Is that okay?
+
 
 ## What baggage does a step in the "Getting Started" flow come with?
 
@@ -46,6 +49,15 @@
 1. Find & Replace `step3` with `step4` in `domain.yml`.
 2. Find & Replace `step3` with `step4` and occurrences of `slot{"step":"3"}` with `slot{"step":"4"}` in all story files.
 3. Rename `step3_install_rasa.md` to `step4_install_rasa.md`.
+4. The Find & Replace step (bullet point 2 above) would have resulted in some stories skipping from step 2 to step 4. Remove these transitions from step 2 to step  and create transitions from step 3.
+
+### Replacing existing dummy step 2 with the `rasa init` step from the updated docs
+
+#### In the domain file
+1. Replace template text of `utter_get_started_step2` with something else instead of "Ask me any questions".
+
+#### In the story files
+
 
 ### Introducing new step 3 for Rasa X
 #### In the domain file
@@ -53,6 +65,7 @@
 2. Create utterance `utter_get_started_step3`.
 3. Create utterance `utter_continue_step3`.
 4. Create utterance `utter_direct_to_step3`.
+5. Include transitions from step 2.
 
 #### In the story files
 1. Create stories mentioned in the "baggage" section above.
