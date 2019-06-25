@@ -836,3 +836,14 @@
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
+
+## chitchat interrupting step 2 flow
+* get_started_step2
+    - action_greet_user
+    - slot{"step": "2"}
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_ask_continue_rasa_init
+* affirm
+    - utter_run_rasa_init
+

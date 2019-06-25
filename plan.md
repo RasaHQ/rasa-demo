@@ -83,7 +83,7 @@ This step is mostly the same as the old docs, just that information on Rasa X ha
 #### Template needing text changes only
 - `utter_get_started_step1`
 - `utter_ask_which_product`
- 
+
 #### Template needing both name and text changes
 - `utter_explain_nlucore` to `utter_explain_nlucorerasax`
 

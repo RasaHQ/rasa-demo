@@ -455,6 +455,12 @@ templates:
   utter_installation_with_conda:
   - text: Ok, install the Rasa Stack by executing 'conda install rasa_core' on your
       command line.
+  utter_run_rasa_init:
+  - text: You can create a new Rasa project by running 'rasa init'. This creates the necessary
+      training and configuration files, and also trains your first model using some example
+      training data.
+  utter_ask_continue_rasa_init:
+  - text: Do you want to go ahead with the steps to create a bot?
   utter_ask_ready_to_build:
   - text: Ready to start building a chatbot?
   utter_ask_describe_problem:
@@ -653,6 +659,7 @@ actions:
 - utter_ask_business_email
 - utter_ask_company
 - utter_ask_continue_newsletter
+- utter_ask_continue_rasa_init
 - utter_ask_continue_sales
 - utter_ask_describe_problem
 - utter_ask_email
@@ -785,6 +792,7 @@ actions:
 - utter_recommend_forum
 - utter_response_why_email
 - utter_restart_with_button
+- utter_run_rasa_init
 - utter_sales_contact
 - utter_search_bar
 - utter_source_code
@@ -801,6 +809,7 @@ actions:
 - utter_thumbsup
 - utter_what_help
 - utter_what_language
+
 forms:
 - sales_form
 - subscribe_newsletter_form
