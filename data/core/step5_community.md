@@ -1,9 +1,9 @@
 ## Step 4 prompt
-* get_started_step4
+* get_started_step5
     - action_greet_user
 
 ## Happy path: Prompt -> Get event locations -> get next event
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_which_events
     - action_get_community_events
@@ -12,7 +12,7 @@
     - utter_recommend_forum
 
 ## Happy path: Prompt -> Get event locations -> get next event for location
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_which_events
     - action_get_community_events
@@ -35,14 +35,14 @@
     - utter_anything_else
 
 ## Prompt -> Get next event
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_when_next_event
     - action_get_community_events
     - utter_recommend_forum
 
 ## Prompt -> Get next event for location
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_when_next_event{"location": "Berlin"}
     - action_get_community_events
@@ -59,7 +59,7 @@
     - utter_anything_else
 
 ## Prompt -> Contribute
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_why_contribute
     - utter_reasons_to_contribute
@@ -73,7 +73,7 @@
     - utter_possibilities_to_contribute
 
 ## Prompt -> How can I contribute
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_how_contribute
     - utter_possibilities_to_contribute
@@ -83,7 +83,7 @@
     - utter_possibilities_to_contribute
 
 ## Prompt -> Get help in forum
-* get_started_step4
+* get_started_step5
     - action_greet_user
 * ask_question_in_forum
     - utter_link_to_forum

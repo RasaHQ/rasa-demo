@@ -864,7 +864,7 @@
     - action_store_problem_description
     - slot{"problem_description":"tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible."}
     - utter_direct_to_forum_for_help
-    - utter_direct_to_step4
+    - utter_direct_to_step5
 * enter_data
     - utter_not_sure
     - utter_possibilities
