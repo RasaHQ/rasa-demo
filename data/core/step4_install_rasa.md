@@ -1,44 +1,6 @@
 ## Get started from website (including privacy clause etc)
-* get_started_step3
+* get_started_step4
     - action_greet_user
-
-## transition from step 2
-* get_started_step2
-    - action_greet_user
-    - slot{"step":"2"}
-    - utter_direct_step3
-* get_started_step3
-    - action_greet_user
-    - slot{"step":"3"}
-* install_rasa OR affirm
-    - utter_ask_python_installed
-
-## transition from step 2
-* get_started_step2
-    - action_greet_user
-    - slot{"step":"2"}
-    - utter_direct_step3
-* get_started_step3
-    - action_greet_user
-    - slot{"step":"3"}
-* install_rasa OR affirm
-    - utter_ask_python_installed
-* affirm
-    - utter_ask_pip_or_conda
-
-## transition from step 2
-* get_started_step2
-    - action_greet_user
-    - slot{"step":"2"}
-    - utter_direct_step3
-* get_started_step3
-    - action_greet_user
-    - slot{"step":"3"}
-* install_rasa OR affirm
-    - utter_ask_python_installed
-* deny
-    - utter_get_python
-    - utter_ask_pip_or_conda
 
 ## Install Rasa: Happy Path
 * install_rasa
@@ -53,9 +15,9 @@
     - utter_direct_to_step5
 
 ## Install Rasa: Happy Path
-* get_started_step3
+* get_started_step4
     - action_greet_user
-    - slot{"step":"3"}
+    - slot{"step":"4"}
 * install_rasa OR affirm
     - utter_ask_python_installed
 * affirm

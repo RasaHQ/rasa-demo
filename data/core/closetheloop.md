@@ -719,10 +719,10 @@
 * get_started_step2
     - action_greet_user
     - slot{"step":"2"}
-    - utter_direct_step3
-* get_started_step3
+    - utter_direct_to_step4
+* get_started_step4
     - action_greet_user
-    - slot{"step":"3"}
+    - slot{"step":"4"}
 * install_rasa
     - utter_ask_python_installed
 
@@ -892,7 +892,7 @@
     - utter_direct_to_step2
 
 ## Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
-* get_started_step3
+* get_started_step4
     - action_greet_user
     - slot{"shown_privacy":true}
 * rasa_cost

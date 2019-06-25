@@ -43,7 +43,7 @@ intents:
 - feedback
 - get_started_step1
 - get_started_step2
-- get_started_step3
+- get_started_step4
 - get_started_step5
 - greet
 - handleinsult
@@ -476,7 +476,7 @@ templates:
       Core and Rasa NLU.
   utter_get_started_step2:
   - text: I can help you solve common problems with Rasa 🙂
-  utter_get_started_step3:
+  utter_get_started_step4:
   - text: I can help you to install Rasa Stack.
   utter_ask_faq_tutorials:
   - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
@@ -583,18 +583,18 @@ templates:
       \ software\n"
   utter_link_to_forum:
   - text: Click [here](https://forum.rasa.com) to get to the forum.
-  utter_direct_step3:
+  utter_direct_to_step4:
   - text: If you have no questions, you can click the button below to go to the next
       step once you're ready. Or when you're finished asking questions, you can say
       'take me to the next step' at any point
     buttons:
     - title: Continue
-      payload: /get_started_step3
-  utter_continue_step3:
+      payload: /get_started_step4
+  utter_continue_step4:
   - text: Let's continue, click the button below
     buttons:
     - title: Continue
-      payload: /get_started_step3
+      payload: /get_started_step4
   utter_direct_to_step2:
   - text: You can click the button below to go to the next step and to try out Rasa
       once you're ready.
@@ -714,7 +714,7 @@ actions:
 - utter_crf
 - utter_describe_step5
 - utter_direct_install
-- utter_direct_step3
+- utter_direct_to_step4
 - utter_direct_to_forum_for_help
 - utter_direct_to_step2
 - utter_direct_to_step5
@@ -742,7 +742,7 @@ actions:
 - utter_get_python
 - utter_get_started_step1
 - utter_get_started_step2
-- utter_get_started_step3
+- utter_get_started_step4
 - utter_get_started_step5
 - utter_get_starter_pack
 - utter_getstarted

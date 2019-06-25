@@ -1,4 +1,4 @@
-## Step 4 prompt
+## Step 5 prompt
 * get_started_step5
     - action_greet_user
 
