@@ -204,9 +204,9 @@ templates:
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_switch_dialogflow:
-  - text: 'We have a guide for migrating from DialogFlow here: http://rasa.com/docs/getting-started/dialogflow/.'
+  - text: 'We have a guide for migrating from DialogFlow here: https://www.rasa.com/docs/rasa/migrate-from/google-dialogflow-to-rasa/.'
   utter_switch_luis:
-  - text: 'We have a guide for migrating from LUIS here: http://rasa.com/docs/getting-started/luis/.'
+  - text: 'We have a guide for migrating from LUIS here: https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/.'
   utter_greet:
   - text: Hey there, welcome to Rasa!
   utter_greet_name:
