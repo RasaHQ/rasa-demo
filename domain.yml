@@ -482,6 +482,8 @@ templates:
       Core and Rasa NLU.
   utter_get_started_step2:
   - text: I can help you solve common problems with Rasa 🙂
+  utter_get_started_step3:
+  - text: I can help you start Rasa X - the tool that helps Rasa learn from real conversations.
   utter_get_started_step4:
   - text: I can help you to install Rasa Stack.
   utter_ask_faq_tutorials:
@@ -493,10 +495,6 @@ templates:
       see what impact it had.
   utter_ask_faq_languages:
   - text: You can use Rasa NLU to build assistants in any language you want!
-  utter_ask_faq_tutorialcore:
-  - text: You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/).
-  utter_ask_faq_tutorialnlu:
-  - text: You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/).
   utter_ask_faq_opensource:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
@@ -672,8 +670,6 @@ actions:
 - utter_ask_faq_platform
 - utter_ask_faq_python_version
 - utter_ask_faq_slots
-- utter_ask_faq_tutorialcore
-- utter_ask_faq_tutorialnlu
 - utter_ask_faq_tutorials
 - utter_ask_faq_voice
 - utter_ask_faq_what_is_forum
@@ -749,6 +745,7 @@ actions:
 - utter_get_python
 - utter_get_started_step1
 - utter_get_started_step2
+- utter_get_started_step3
 - utter_get_started_step4
 - utter_get_started_step5
 - utter_get_starter_pack
