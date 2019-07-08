@@ -6,8 +6,8 @@ intents:
 - ask_faq_differencecorenlu
 - ask_faq_languages
 - ask_faq_opensource
-- ask_faq_platform
 - ask_faq_python_version
+- ask_faq_rasax
 - ask_faq_slots
 - ask_faq_tutorialcore
 - ask_faq_tutorialnlu
@@ -43,6 +43,7 @@ intents:
 - feedback
 - get_started_step1
 - get_started_step2
+- get_started_step3
 - get_started_step4
 - get_started_step5
 - greet
@@ -66,7 +67,6 @@ intents:
 - technical_question
 - telljoke
 - thank
-- what_now
 entities:
 - amount-of-money
 - company
@@ -138,7 +138,9 @@ slots:
     values:
     - core
     - nlu
-    - stack
+    - x
+    - rasa
+    - all
   shown_privacy:
     type: unfeaturized
   step:
@@ -310,6 +312,11 @@ templates:
   utter_no_email:
   - text: Hmm, I'm not sure that's a valid email, please make sure to include the
       full address 😅
+  utter_installation_command:
+  - text: We recommend that you install with pip using the following command - "pip
+      install rasa-x --extra-index-url https://pypi.rasa.com/simple"
+  utter_installation_instructions:
+  - text: You can find complete installation instructions at https://rasa.com/docs/rasa/user-guide/installation/
   utter_have_you_used_rasa_before:
   - text: Have you used Rasa before?
   utter_built_bot_before:
@@ -325,10 +332,14 @@ templates:
   utter_no_guide_for_switch:
   - text: Sorry, but we don't have a guide for this yet.
   utter_ask_which_product:
-  - text: Ok, would you like to know more about Core or NLU?
+  - text: Ok, which product would you like to know more about? Rasa (Core + NLU)
++      or Rasa X?
   utter_core_tutorial:
   - text: 'There was an interesting talk at the PyData conference about it. Maybe
       this will help: https://youtu.be/HV0bJMkzpO4'
+  utter_x_tutorial:
+  - text: [Juste's video intro](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be)
+      is a great place to start off your journey with Rasa X!
   utter_ask_for_nlu_specifics:
   - text: Anything in particular, e.g. intent classification or entity recognition?
   utter_dont_know_nlu_part:
@@ -382,14 +393,14 @@ templates:
   - text: Is this your first time using Rasa?
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
-  utter_explain_stack:
-  - text: Alright, I'll briefly explain the Rasa Stack then.
-  utter_stack_details:
-  - text: The Rasa Stack is a framework to build contextual AI assistants and chatbots.
-      It consists of two open source libraries (Rasa NLU and Rasa Core). Using machine
-      learning, your bots can hold contextual conversations with users.
-  utter_explain_nlucore:
-  - text: Would you like to know more about Rasa Core or Rasa NLU?
+  utter_explain_rasa_components:
+  - text: Alright, I'll briefly explain the components that make up Rasa then.
+  utter_rasa_components_details:
+  - text: Rasa is a framework to build contextual AI assistants and chatbots. It consists
+      of Rasa (Core + NLU) and Rasa X. Using machine learning, your bots can hold
+      contextual conversations with users.
+  utter_explain_nlucorex:
+  - text: What would you like to know more about? Rasa (Core + NLU) or Rasa X?
   utter_explain_nlu:
   - text: Rasa NLU performs Natural Language Understanding, which means taking free-form
       text like "Please send the confirmation to amy@example.com" and turning it into
@@ -397,10 +408,16 @@ templates:
   utter_explain_core:
   - text: Rasa Core performs dialog management, which means keeping track of a conversation,
       and deciding how to proceed.
+  utter_explain_x:
+  - text: Rasa X is a tool that helps you build, improve, and deploy AI Assistants
+      that are powered by the Rasa framework. Rasa X includes a user interface and
+      a REST API.
   utter_also_explain_nlu:
   - text: Would you also like me to explain Rasa NLU?
   utter_also_explain_core:
   - text: Would you also like me to explain Rasa Core?
+  utter_also_explain_nlucore:
+  - text: Would you also like me to explain Rasa NLU and Core?
   utter_direct_install:
   - text: 'Alright, you can directly install it here: (link)'
   utter_ask_which_tool:
@@ -447,18 +464,13 @@ templates:
   utter_get_python:
   - text: Please install Python first. [Here is a guide](https://realpython.com/installing-python/)
       how to do so.
-  utter_ask_pip_or_conda:
-  - text: Do you want to use pip or conda for the installation?
-  utter_installation_with_pip:
-  - text: Ok, install the Rasa Stack by executing 'pip install rasa_core' on your
-      command line.
-  utter_installation_with_conda:
-  - text: Ok, install the Rasa Stack by executing 'conda install rasa_core' on your
-      command line.
   utter_run_rasa_init:
   - text: You can create a new Rasa project by running 'rasa init'. This creates the necessary
       training and configuration files, and also trains your first model using some example
       training data.
+  utter_start_rasax:
+  - text: You may run the cell below to start Rasa X. After a few seconds, you will
+      see a button that will take you to its UI.
   utter_ask_continue_rasa_init:
   - text: Do you want to go ahead with the steps to create a bot?
   utter_ask_ready_to_build:
@@ -467,34 +479,34 @@ templates:
   - text: Can you describe the problem you're having?
   utter_direct_to_forum_for_help:
   - text: I can't help you with that 🙁. Please get help in our [forum](https://forum.rasa.com/).
-  utter_get_starter_pack:
-  - text: Great, you installed Rasa! If you don't want to start from scratch, you
-      can use our [starter pack](https://github.com/RasaHQ/starter-pack-rasa-stack).
   utter_direct_to_step5:
-  - text: The next step is to join our community, click the button below to continue.
+  - text: Whenever you're ready, click the button below to continue.
     buttons:
     - title: Continue
       payload: /get_started_step5
   utter_ask_if_problem:
   - text: Do you have a problem?
   utter_get_started_step1:
-  - text: I can give you more information on the Rasa Stack and its components Rasa
-      Core and Rasa NLU.
+  - text: I can give you more information on Rasa and its components - Core, NLU,
+      and Rasa X.
   utter_get_started_step2:
-  - text: I can help you solve common problems with Rasa 🙂
+  - text: I can show you how to use Rasa to build an AI assistant.
   utter_get_started_step3:
-  - text: I can help you start Rasa X - the tool that helps Rasa learn from real conversations.
+  - text: Now, let's take a look at Rasa X - the tool that helps Rasa learn from real
+      conversations.
   utter_get_started_step4:
-  - text: I can help you to install Rasa Stack.
+  - text: Great! Now that you have had a quick demo of Rasa and Rasa X, are you ready
+      to install it on your computer?
   utter_ask_faq_tutorials:
   - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
       can help you get started and learn more about Rasa.
-  utter_ask_faq_platform:
-  - text: Rasa Platform is our enterprise product. It expands Rasa Stack and empowers
-      business users to iterate faster, change the content of the AI assistant and
-      see what impact it had.
   utter_ask_faq_languages:
   - text: You can use Rasa NLU to build assistants in any language you want!
+  utter_ask_faq_rasax:
+  - text: Rasa X is a tool to learn from real conversations and improve your assistant.
+      To get a better idea of why we built Rasa X, you can check out this blog article
+      [here](https://blog.rasa.com/algorithms-alone-wont-solve-conversational-ai-introducing-rasa-x/).
+      You can also watch an in-depth video of Rasa X [here](https://youtu.be/VXvWdrr2yw8).
   utter_ask_faq_opensource:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
@@ -512,9 +524,6 @@ templates:
   utter_ask_faq_python_version:
   - text: 'The supported Python versions are: 2.7, 3.5, 3.6 🐍 The recommended version
       is 3.6.'
-  utter_ask_faq_differencecorenlu:
-  - text: Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide
-      what should happen next.
   utter_ask_faq_community_size:
   - text: Rasa has more than 3500 community members and over 200 github contributors
       🚀.
@@ -525,9 +534,6 @@ templates:
   utter_ask_voice:
   - text: Yes, that is possible! You can connect Rasa to any channel you like. You
       can find more information [here](https://rasa.com/docs/core/connectors/).
-  utter_faq_platform_more:
-  - text: Please read our [documentation](https://rasa.com/docs/platform/) for more
-      information.
   utter_faq_language_more:
   - text: Please read our [documentation](https://rasa.com/docs/nlu/languages/) for
       more information.
@@ -587,6 +593,11 @@ templates:
       \ software\n"
   utter_link_to_forum:
   - text: Click [here](https://forum.rasa.com) to get to the forum.
+  utter_direct_to_step3:
+  - text: Please click continue to move on to the next step.
+    buttons:
+    - title: Continue
+      payload: /get_started_step3
   utter_direct_to_step4:
   - text: If you have no questions, you can click the button below to go to the next
       step once you're ready. Or when you're finished asking questions, you can say
@@ -650,8 +661,8 @@ actions:
 - utter_already_subscribed
 - utter_also_explain_core
 - utter_also_explain_nlu
+- utter_also_explain_nlucore
 - utter_anything_else
-- utter_are_you_new_to_chatbots
 - utter_ask_budget
 - utter_ask_builder
 - utter_ask_business_email
@@ -664,17 +675,15 @@ actions:
 - utter_ask_entities
 - utter_ask_faq_channels
 - utter_ask_faq_community_size
-- utter_ask_faq_differencecorenlu
 - utter_ask_faq_languages
 - utter_ask_faq_opensource
-- utter_ask_faq_platform
 - utter_ask_faq_python_version
+- utter_ask_faq_rasax
 - utter_ask_faq_slots
 - utter_ask_faq_tutorials
 - utter_ask_faq_voice
 - utter_ask_faq_what_is_forum
 - utter_ask_feedback
-- utter_ask_for_feedback_message
 - utter_ask_for_nlu_specifics
 - utter_ask_goal
 - utter_ask_howbuilt
@@ -686,7 +695,6 @@ actions:
 - utter_ask_languagesbot
 - utter_ask_migration
 - utter_ask_name
-- utter_ask_pip_or_conda
 - utter_ask_python_installed
 - utter_ask_ready_to_build
 - utter_ask_restaurant
@@ -715,11 +723,11 @@ actions:
 - utter_contact_email
 - utter_core_tutorial
 - utter_crf
-- utter_describe_step5
 - utter_direct_install
-- utter_direct_to_step4
 - utter_direct_to_forum_for_help
 - utter_direct_to_step2
+- utter_direct_to_step3
+- utter_direct_to_step4
 - utter_direct_to_step5
 - utter_docu
 - utter_dont_know_nlu_part
@@ -732,13 +740,13 @@ actions:
 - utter_explain_core
 - utter_explain_job_function
 - utter_explain_nlu
-- utter_explain_nlucore
+- utter_explain_nlucorex
 - utter_explain_person_name
-- utter_explain_stack
+- utter_explain_rasa_components
 - utter_explain_use_case
+- utter_explain_x
 - utter_faq_channels_more
 - utter_faq_language_more
-- utter_faq_platform_more
 - utter_faq_slots_more
 - utter_faq_voice_more
 - utter_first_bot_with_rasa
@@ -748,7 +756,6 @@ actions:
 - utter_get_started_step3
 - utter_get_started_step4
 - utter_get_started_step5
-- utter_get_starter_pack
 - utter_getstarted
 - utter_getstarted_new
 - utter_great
@@ -758,8 +765,8 @@ actions:
 - utter_handleinsult
 - utter_have_you_used_rasa_before
 - utter_inform_privacypolicy
-- utter_installation_with_conda
-- utter_installation_with_pip
+- utter_installation_command
+- utter_installation_instructions
 - utter_link_to_forum
 - utter_moreinformation
 - utter_must_accept
@@ -782,6 +789,7 @@ actions:
 - utter_possibilities
 - utter_possibilities_to_contribute
 - utter_quickstart_nlu_only
+- utter_rasa_components_details
 - utter_rasa_cost
 - utter_react_negative
 - utter_react_positive
@@ -795,17 +803,17 @@ actions:
 - utter_source_code
 - utter_spacy
 - utter_spacy_or_tensorflow
-- utter_stack_details
+- utter_start_rasax
 - utter_suggestion
 - utter_switch_dialogflow
 - utter_switch_luis
 - utter_telljoke
 - utter_tensorflow
-- utter_thank_usecase
 - utter_thanks_for_feedback
 - utter_thumbsup
 - utter_what_help
 - utter_what_language
+- utter_x_tutorial
 
 forms:
 - sales_form
