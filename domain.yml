@@ -333,12 +333,12 @@ templates:
   - text: Sorry, but we don't have a guide for this yet.
   utter_ask_which_product:
   - text: Ok, which product would you like to know more about? Rasa (Core + NLU)
-+      or Rasa X?
+      or Rasa X?
   utter_core_tutorial:
   - text: 'There was an interesting talk at the PyData conference about it. Maybe
       this will help: https://youtu.be/HV0bJMkzpO4'
   utter_x_tutorial:
-  - text: [Juste's video intro](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be)
+  - text: \[Juste's video intro](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be)
       is a great place to start off your journey with Rasa X!
   utter_ask_for_nlu_specifics:
   - text: Anything in particular, e.g. intent classification or entity recognition?
