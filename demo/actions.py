@@ -378,25 +378,6 @@ class SuggestionForm(FormAction):
         return []
 
 
-class ActionStackInstallationCommand(Action):
-    """Utters the installation command for rasa depending whether
-       they are using `pip` or `conda`
-    """
-
-    def name(self):
-        return "action_select_installation_command"
-
-    def run(self, dispatcher, tracker, domain):
-        package_manager = tracker.get_slot("package_manager")
-
-        if package_manager == "conda":
-            dispatcher.utter_template("utter_installation_with_conda", tracker)
-        else:
-            dispatcher.utter_template("utter_installation_with_pip", tracker)
-
-        return []
-
-
 class ActionStoreProblemDescription(Action):
     """Stores the problem description in a slot."""
 
