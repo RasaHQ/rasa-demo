@@ -6,6 +6,7 @@ intents:
 - ask_faq_differencecorenlu
 - ask_faq_languages
 - ask_faq_opensource
+- ask_faq_platform
 - ask_faq_python_version
 - ask_faq_rasax
 - ask_faq_slots
@@ -80,7 +81,6 @@ entities:
 - name
 - nlu_part
 - number
-- package_manager
 - product
 - user_type
 - value
@@ -127,8 +127,6 @@ slots:
     - duckling
   onboarding:
     type: bool
-  package_manager:
-    type: text
   person_name:
     type: unfeaturized
   problem_description:
@@ -293,7 +291,7 @@ templates:
     - title: 👎
       payload: /feedback{"feedback_value":"negative"}
   utter_canthelp:
-  - text: I'm sorry I couldn't help you. If you have general questions about the Stack,
+  - text: I'm sorry I couldn't help you. If you have general questions about the Rasa,
       please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com
       for anything else.
   utter_nohelp:
@@ -332,14 +330,14 @@ templates:
   utter_no_guide_for_switch:
   - text: Sorry, but we don't have a guide for this yet.
   utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Rasa (Core + NLU)
-      or Rasa X?
+  - text: Ok, which product would you like to know more about? Rasa (Core + NLU) or
+      Rasa X?
   utter_core_tutorial:
   - text: 'There was an interesting talk at the PyData conference about it. Maybe
       this will help: https://youtu.be/HV0bJMkzpO4'
   utter_x_tutorial:
-  - text: \[Juste's video intro](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be)
-      is a great place to start off your journey with Rasa X!
+  - text: You can find Juste's video intro [here](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be).
+      It's a great place to start off your journey with Rasa X!
   utter_ask_for_nlu_specifics:
   - text: Anything in particular, e.g. intent classification or entity recognition?
   utter_dont_know_nlu_part:
@@ -465,9 +463,9 @@ templates:
   - text: Please install Python first. [Here is a guide](https://realpython.com/installing-python/)
       how to do so.
   utter_run_rasa_init:
-  - text: You can create a new Rasa project by running 'rasa init'. This creates the necessary
-      training and configuration files, and also trains your first model using some example
-      training data.
+  - text: You can create a new Rasa project by running 'rasa init'. This creates the
+      necessary training and configuration files, and also trains your first model
+      using some example training data.
   utter_start_rasax:
   - text: You may run the cell below to start Rasa X. After a few seconds, you will
       see a button that will take you to its UI.
@@ -651,13 +649,13 @@ actions:
 - action_greet_user
 - action_next_step
 - action_pause
-- action_select_installation_command
 - action_set_onboarding
 - action_store_bot_language
 - action_store_entity_extractor
 - action_store_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
+- utter
 - utter_already_subscribed
 - utter_also_explain_core
 - utter_also_explain_nlu
@@ -740,6 +738,7 @@ actions:
 - utter_explain_core
 - utter_explain_job_function
 - utter_explain_nlu
+- utter_explain_nlucore
 - utter_explain_nlucorex
 - utter_explain_person_name
 - utter_explain_rasa_components
@@ -747,6 +746,7 @@ actions:
 - utter_explain_x
 - utter_faq_channels_more
 - utter_faq_language_more
+- utter_faq_platform_more
 - utter_faq_slots_more
 - utter_faq_voice_more
 - utter_first_bot_with_rasa
@@ -756,6 +756,7 @@ actions:
 - utter_get_started_step3
 - utter_get_started_step4
 - utter_get_started_step5
+- utter_get_starter_pack
 - utter_getstarted
 - utter_getstarted_new
 - utter_great
@@ -803,6 +804,7 @@ actions:
 - utter_source_code
 - utter_spacy
 - utter_spacy_or_tensorflow
+- utter_start_rasa_x
 - utter_start_rasax
 - utter_suggestion
 - utter_switch_dialogflow
@@ -814,7 +816,6 @@ actions:
 - utter_what_help
 - utter_what_language
 - utter_x_tutorial
-
 forms:
 - sales_form
 - subscribe_newsletter_form
