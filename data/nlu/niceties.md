@@ -1,13 +1,3 @@
-## intent:ask_how_contribute
-- How to contribute
-
-## intent:ask_whatspossible
-- What can you do?
-
-## intent:enter_data
-- fe
-- /restart
-
 ## intent:greet
 - Hi
 - Hey
