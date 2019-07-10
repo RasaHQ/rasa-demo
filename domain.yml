@@ -655,7 +655,6 @@ actions:
 - action_store_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
-- utter
 - utter_already_subscribed
 - utter_also_explain_core
 - utter_also_explain_nlu
