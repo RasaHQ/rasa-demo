@@ -755,7 +755,6 @@ actions:
 - utter_get_started_step3
 - utter_get_started_step4
 - utter_get_started_step5
-- utter_get_starter_pack
 - utter_getstarted
 - utter_getstarted_new
 - utter_great
