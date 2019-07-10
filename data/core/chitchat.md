@@ -275,7 +275,7 @@
 * affirm OR how_to_get_started{"product":"all"}
     - utter_explain_nlu
     - utter_explain_core
-    - utter
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
@@ -851,6 +851,7 @@
 * affirm OR how_to_get_started{"product":"all"}
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## chitchat interrupting step 2 flow
