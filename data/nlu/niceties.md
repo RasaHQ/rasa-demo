@@ -77,9 +77,6 @@
 - good morning
 - good afternoon
 
-## intent:how_to_get_started
-- How do I get started
-
 ## intent:thank
 - Thanks
 - Thank you
