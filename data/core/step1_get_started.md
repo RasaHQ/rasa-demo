@@ -361,7 +361,6 @@
     - action_set_onboarding
     - slot{"onboarding": false}
     - utter_ask_which_product
-* enter_data{""}
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
 * deny
