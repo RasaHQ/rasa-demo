@@ -312,7 +312,8 @@ templates:
       full address 😅
   utter_installation_command:
   - text: We recommend that you install with pip using the following command - "pip
-      install rasa-x --extra-index-url https://pypi.rasa.com/simple"
+      install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is a
+      dependency for Rasa X, this command will install both of them together.
   utter_installation_instructions:
   - text: You can find complete installation instructions at https://rasa.com/docs/rasa/user-guide/installation/
   utter_have_you_used_rasa_before:
