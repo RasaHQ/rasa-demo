@@ -1610,6 +1610,8 @@
 - nlu
 - x
 - rasa x
+- both
+- all
 
 ## lookup:location
 - San Francisco
