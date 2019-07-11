@@ -619,6 +619,11 @@ templates:
     buttons:
     - title: Continue
       payload: /get_started_step2
+  utter_continue_step3:
+  - text: Let's continue, click the button below
+    buttons:
+    - title: Continue
+      payload: /get_started_step3
   utter_continue_step5:
   - text: Let's continue, click the button below
     buttons:
@@ -718,6 +723,10 @@ actions:
 - utter_confirm_salesrequest
 - utter_confirmationemail
 - utter_contact_email
+- utter_continue_step2
+- utter_continue_step3
+- utter_continue_step4
+- utter_continue_step5
 - utter_core_tutorial
 - utter_crf
 - utter_direct_install
