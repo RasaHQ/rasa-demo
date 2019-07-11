@@ -426,7 +426,7 @@ utter_explain_nlu:
     text like "Please send the confirmation to amy@example.com" and turning it into
     structured data.
 utter_explain_nlucorex:
-- text: What would you like to know more about? Rasa (Core + NLU) or Rasa X?
+- text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
 utter_explain_person_name:
 - text: To be able to contact you later on, we would like to know your name.
 utter_explain_rasa_components:
