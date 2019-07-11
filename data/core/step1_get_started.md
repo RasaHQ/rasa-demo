@@ -348,6 +348,20 @@
     - utter_x_tutorial
     - utter_anything_else
 
+## new to rasa + x
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_explain_nlucorex
+* how_to_get_started{"product":"x"}
+    - utter_explain_x
+    - utter_direct_to_step2
+
 ## skip to info on core
 * how_to_get_started{"product": "core"}
     - utter_core_tutorial
