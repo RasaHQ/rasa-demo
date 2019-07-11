@@ -993,15 +993,6 @@
 - please give me instructions for [pip](package_manager)
 - please [conda](package_manager)
 - [pip](package_manager) please
-- I want to learn about [rasa](product)
-- [Rasa](product:rasa)
-- [Rasa X](product:x)
-- [both](product:all)
-- [all](product)
-- I want to learn about [Rasa X](product:x)
-- Please tell me more about [Rasa](product:rasa)
-- I want to know about [rasa](product)
-- tell me details of [RASA X](product:x)
 
 ## intent:explain
 - tell me more
@@ -1065,6 +1056,11 @@
 - how do i get started with [Rasa X](product:x)
 - Help me with [Core](product:core)
 - Get started
+- Tell me about [both](product:all) Rasa and Rasa X
+- i want to understand [all](product) the products
+- [both](product:all)
+- [all](product) of them
+- [Both](product:all) rasa x and rasa
 - how to get started
 - Help me get started
 - How to get started with [Rasa X](product:x)
@@ -1072,9 +1068,9 @@
 - Help me understand [NLU](product:nlu)
 - How do I use [NLU](product:nlu)
 - Get started with [Rasa](product:rasa)
-- Tell me about all of them
+- Tell me about [all](product) of them
 - [Rasa](product:rasa)
-- [Both](product:both) of them
+- [Both](product:all) of them
 
 ## intent:human_handoff
 - I want to talk to a human
