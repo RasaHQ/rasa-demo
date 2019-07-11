@@ -316,12 +316,12 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "core"}
-    - utter_core_tutorial
+    - utter_explain_core
     - utter_anything_else
 
 ## skip to info on rasa x
 * how_to_get_started{"product": "x"}
-    - utter_x_tutorial
+    - utter_explain_x
     - utter_anything_else
 
 ## skip to info on rasa
@@ -345,7 +345,7 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "x"}
-    - utter_x_tutorial
+    - utter_explain_x
     - utter_anything_else
 
 ## new to rasa + x
@@ -364,7 +364,7 @@
 
 ## skip to info on core
 * how_to_get_started{"product": "core"}
-    - utter_core_tutorial
+    - utter_explain_core
     - utter_anything_else
 
 ## not new to rasa + nlu + nothing special
