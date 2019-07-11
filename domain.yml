@@ -125,6 +125,8 @@ slots:
     - entity recognition
     - intent classification
     - duckling
+  new_to_python:
+    type: bool
   onboarding:
     type: bool
   person_name:
@@ -369,7 +371,7 @@ utter_default:
 utter_direct_install:
 - text: 'Alright, you can directly install it here: (link)'
 utter_direct_to_forum_for_help:
-- text: "I can't help you with that 🙁. Please get help in our [forum](https://forum.rasa.com/)."
+- text: "If you're still stuck, please get help in our [forum](https://forum.rasa.com/)."
 utter_direct_to_step2:
 - buttons:
   - payload: /get_started_step2
@@ -494,9 +496,13 @@ utter_inform_privacypolicy:
 - text: 'By chatting to me you agree to our privacy policy, which you can read here:
     https://rasa.com/privacy-policy/.'
 utter_installation_command:
-- text: We recommend that you install with pip using the following command - "pip
-    install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is
+- text: We recommend that you install with pip using the following command
+    "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is
     a dependency for Rasa X, this command will install both of them together.
+utter_installation_command_followup:
+- text: Once you're done, you can install Rasa with pip using the following command -
+    "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is a
+    dependency for Rasa X, this command will install both of them together.  
 utter_installation_instructions:
 - text: You can find complete installation instructions at https://rasa.com/docs/rasa/user-guide/installation/
 utter_link_to_forum:
@@ -792,6 +798,7 @@ actions:
 - utter_have_you_used_rasa_before
 - utter_inform_privacypolicy
 - utter_installation_command
+- utter_installation_command_followup
 - utter_installation_instructions
 - utter_link_to_forum
 - utter_moreinformation
