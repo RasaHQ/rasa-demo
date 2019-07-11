@@ -1,6 +1,7 @@
 ## Get started from website (including privacy clause etc)
 * get_started_step4
     - action_greet_user
+    - slot{"step": "4"}
 
 ## Install Rasa: Happy Path
 * install_rasa

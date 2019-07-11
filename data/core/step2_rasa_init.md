@@ -1,6 +1,7 @@
 ## Get started from website
 * get_started_step2
     - action_greet_user
+    - slot{"step": "2"}
 
 ## Get started from website
 * get_started_step2
