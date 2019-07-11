@@ -1,4 +1,4 @@
-## story number 1
+<!-- ## story number 1
 * greet
     - action_greet_user
 * out_of_scope
@@ -884,3 +884,4 @@
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
+ -->
