@@ -64,7 +64,7 @@
 > get_started_with_installation
     - utter_ask_python_installed
 * deny
-    - slot{"new_to_python": True}
+    - slot{"new_to_python": true}
     - utter_get_python
     - utter_installation_command_followup
     - utter_ask_ready_to_build
@@ -75,7 +75,7 @@
 > get_started_with_installation
     - utter_ask_python_installed
 * deny
-    - slot{"new_to_python": True}
+    - slot{"new_to_python": true}
     - utter_get_python
     - utter_installation_command_followup
     - utter_ask_ready_to_build
@@ -93,7 +93,7 @@
 > get_started_with_installation
     - utter_ask_python_installed
 * deny
-    - slot{"new_to_python": True}
+    - slot{"new_to_python": true}
     - utter_get_python
     - utter_installation_command_followup
     - utter_ask_ready_to_build
@@ -109,7 +109,7 @@
 > get_started_with_installation
     - utter_ask_python_installed
 * deny
-    - slot{"new_to_python": True}
+    - slot{"new_to_python": true}
     - utter_get_python
     - utter_installation_command_followup
     - utter_ask_ready_to_build
@@ -126,7 +126,7 @@
 > get_started_with_installation
     - utter_ask_python_installed
 * deny
-    - slot{"new_to_python": True}
+    - slot{"new_to_python": true}
     - utter_get_python
     - utter_installation_command_followup
     - utter_ask_ready_to_build
@@ -152,7 +152,7 @@
 > get_started_with_installation
     - utter_ask_python_installed
 * deny
-    - slot{"new_to_python": True}
+    - slot{"new_to_python": true}
     - utter_get_python
     - utter_installation_command_followup
     - utter_ask_ready_to_build
