@@ -1,5 +1,6 @@
 <!-- Checkpoints -->
 ## Get started from website
+* get_started_step4
     - action_greet_user
     - slot{"step": "4"}
 * affirm OR install_rasa
