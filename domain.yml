@@ -668,6 +668,7 @@ utter_what_language:
 utter_x_tutorial:
 - text: You can find Juste's video intro [here](https://www.youtube.com/watch?v=VXvWdrr2yw8&feature=youtu.be).
     It's a great place to start off your journey with Rasa X!
+
 actions:
 - action_chitchat
 - action_default_ask_affirmation
@@ -848,6 +849,7 @@ actions:
 - utter_what_help
 - utter_what_language
 - utter_x_tutorial
+
 forms:
 - sales_form
 - subscribe_newsletter_form
