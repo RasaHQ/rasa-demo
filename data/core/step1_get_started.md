@@ -28,8 +28,13 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"}
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_explain_x
+    - utter_direct_to_step2
 
-## new to rasa + not new to chatbots + not migrating
+## new to rasa + built a bot before
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -46,6 +51,27 @@
 * affirm OR how_to_get_started{"product":"all"}
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
+    - utter_direct_to_step2
+
+## new to rasa + not new to chatbots + migrating from 
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm OR how_to_get_started{"user_type": "new"}
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"}
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + migrating from dialogflow
@@ -155,6 +181,7 @@
 * affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain core
