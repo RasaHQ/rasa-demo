@@ -387,5 +387,5 @@
     - action_faqs
     - utter_ask_continue_rasa_init
 * deny
-    - utter_thumbs_up
+    - utter_thumbsup
     - utter_anything_else
