@@ -425,6 +425,8 @@ templates:
   - text: Rasa NLU performs Natural Language Understanding, which means taking free-form
       text like "Please send the confirmation to amy@example.com" and turning it into
       structured data.
+  utter_explain_nlucore:
+  - text: Would you like to know more about Rasa Core or NLU?
   utter_explain_nlucorex:
   - text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
   utter_explain_person_name:
@@ -443,6 +445,8 @@ templates:
   utter_faq_language_more:
   - text: Please read our [documentation](https://rasa.com/docs/nlu/languages/) for
       more information.
+  utter_faq_platform_more:
+    - text: "Please read our [documentation](https://rasa.com/docs/platform/) for more information."
   utter_faq_slots_more:
   - text: Please read our [documentation](https://rasa.com/docs/core/slots/) for more
       information.
@@ -837,7 +841,6 @@ actions:
 - utter_source_code
 - utter_spacy
 - utter_spacy_or_tensorflow
-- utter_start_rasa_x
 - utter_start_rasax
 - utter_suggestion
 - utter_switch_dialogflow
