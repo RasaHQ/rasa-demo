@@ -289,6 +289,7 @@
     - utter_explain_rasa_components
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain difference between nlu and core
@@ -306,6 +307,7 @@
 * explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa/bots, don't explain
