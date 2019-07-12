@@ -186,6 +186,8 @@ templates:
   - text: What's your email address?
   utter_ask_entities:
   - text: To help you, what kind of entities do you want to extract?
+  utter_explain_nlucorex:
+  - text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
   utter_ask_faq_channels:
   - text: We have a [comprehensive list of connectors](https://rasa.com/docs/core/connectors/),
       but if you don't see the one you're looking for, you can always create a custom
@@ -425,10 +427,6 @@ templates:
   - text: Rasa NLU performs Natural Language Understanding, which means taking free-form
       text like "Please send the confirmation to amy@example.com" and turning it into
       structured data.
-  utter_explain_nlucore:
-  - text: Would you like to know more about Rasa Core or NLU?
-  utter_explain_nlucorex:
-  - text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
   utter_explain_person_name:
   - text: To be able to contact you later on, we would like to know your name.
   utter_explain_rasa_components:
@@ -704,6 +702,7 @@ actions:
 - utter_ask_describe_problem
 - utter_ask_email
 - utter_ask_entities
+- utter_ask_explain_nlucorex
 - utter_ask_faq_channels
 - utter_ask_faq_community_size
 - utter_ask_faq_languages
@@ -775,8 +774,6 @@ actions:
 - utter_explain_core
 - utter_explain_job_function
 - utter_explain_nlu
-- utter_explain_nlucore
-- utter_explain_nlucorex
 - utter_explain_person_name
 - utter_explain_rasa_components
 - utter_explain_use_case
