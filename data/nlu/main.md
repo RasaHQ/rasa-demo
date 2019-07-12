@@ -1062,6 +1062,9 @@
 - [all](product) of them
 - [Both](product:all) rasa x and rasa
 - how to get started
+- tell me about [both](product:all) of them
+- [all](product) the above
+- [both](product:all) of the above
 - Help me get started
 - How to get started with [Rasa X](product:x)
 - how to get started with Rasa [Core](product:core)
