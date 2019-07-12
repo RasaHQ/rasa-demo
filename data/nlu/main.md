@@ -1524,6 +1524,9 @@
 - having some problems with installation
 - does rasa support voice input
 - is there an alexa integration
+- i'm not sure how to run a command
+- yeah, my pip is throwing me some weird error
+- i have an issue with permissions
 
 ## synonym:1
 - one
