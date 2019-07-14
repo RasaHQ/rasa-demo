@@ -4,6 +4,7 @@ intents:
 - ask_faq_channels
 - ask_faq_community_size
 - ask_faq_differencecorenlu
+- ask_faq_differencerasarasax
 - ask_faq_languages
 - ask_faq_opensource
 - ask_faq_platform
@@ -186,7 +187,7 @@ templates:
   - text: What's your email address?
   utter_ask_entities:
   - text: To help you, what kind of entities do you want to extract?
-  utter_explain_nlucorex:
+  utter_ask_explain_nlucorex:
   - text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
   utter_ask_faq_channels:
   - text: We have a [comprehensive list of connectors](https://rasa.com/docs/core/connectors/),
@@ -440,11 +441,18 @@ templates:
   utter_faq_channels_more:
   - text: Please read our [documentation](https://rasa.com/docs/core/connectors/#creating-a-new-channel)
       for more information.
+  utter_ask_faq_differencecorenlu:
+  - text: Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next.
+  ask_faq_differencerasarasax:
+  - text: Rasa (comprising Core and NLU) is a framework you can use to build a bot. Rasa X is a tool
+      built on top of Rasa that comes with a UI that lets the bot learn from real
+      conversations and improve your bot. Using it is completely optional though. If you don’t want to,
+      you can just use Rasa on its own.
   utter_faq_language_more:
   - text: Please read our [documentation](https://rasa.com/docs/nlu/languages/) for
       more information.
   utter_faq_platform_more:
-    - text: "Please read our [documentation](https://rasa.com/docs/platform/) for more information."
+  - text: "Please read our [documentation](https://rasa.com/docs/platform/) for more information."
   utter_faq_slots_more:
   - text: Please read our [documentation](https://rasa.com/docs/core/slots/) for more
       information.

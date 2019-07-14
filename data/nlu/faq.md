@@ -68,6 +68,24 @@
 - rasa [core](product) vs rasa [nlu](product)
 - what's the difference between [core](product) and [nlu](product)?
 
+## intent:ask_faq_differencerasarasax
+- whats the diff between [rasa](product) and [rasa x](product)
+- what's the difference between [rasa](product) and [rasa x](product:x)
+- How is [Rasa X](product:x) different from [Rasa](product:rasa)?
+- Are [Rasa](product) and [Rasa X](product:x) the same thing?
+- What's new in [Rasa X](product:x) compared to [Rasa](product:rasa)?
+- If I use [Rasa](product:rasa), do I also need [Rasa X](product:x)?
+- i am using [rasa](rasa) nlu, why would i need [rasa x](product:x)?
+- please compare [rasa](product) and [rasa x](product:x)
+- tell me the difference between [rasa](product) and [x](product)
+- tell me the difference between [rasa](product) and [rasa x](product:x)
+- show me comparison between [rasa x](product:x) and [[rasa
+- how does [rasa x](product:x) stack up against [rasa](product:rasa)
+- when should i use [rasa](product:rasa) and when should i use [rasa x](product:x)
+- Do I need both [Rasa](product:rasa) and [Rasa X](product:x)?
+- Can i use [rasa](product:rasa) without [rasa x](product:x)?
+- Can I use [Rasa X](product:x) without using [Rasa](product:rasa)?
+
 ## intent:ask_faq_languages
 - does Rasa support other languages like spanish?
 - what language does rasa support?
