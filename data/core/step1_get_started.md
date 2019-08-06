@@ -28,7 +28,7 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* affirm OR how_to_get_started{"product":"all"}
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
     - utter_explain_x
@@ -38,7 +38,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -48,7 +48,7 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* affirm OR how_to_get_started{"product":"all"}
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
     - utter_explain_x
@@ -58,7 +58,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -68,7 +68,7 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* affirm OR how_to_get_started{"product":"all"}
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
     - utter_explain_x
@@ -78,7 +78,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -92,7 +92,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -106,7 +106,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -121,7 +121,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -137,7 +137,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -153,7 +153,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -170,7 +170,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -188,7 +188,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -206,7 +206,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -226,7 +226,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -244,7 +244,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -262,7 +262,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -295,7 +295,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
@@ -313,7 +313,7 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* affirm OR how_to_get_started{"user_type": "new"}
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
