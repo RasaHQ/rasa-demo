@@ -1063,6 +1063,8 @@
 - [Both](product:all) rasa x and rasa
 - how to get started
 - tell me about [both](product:all) of them
+- how to get started with [rasa x](product:x)
+- how do i get started with [rasa x](product:x)
 - [all](product) the above
 - [both](product:all) of the above
 - Help me get started
