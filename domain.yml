@@ -641,9 +641,7 @@ templates:
   utter_spacy:
   - text: 'SpaCy has excellent pre-trained named-entity recognizers for this -- check
       out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would
-      suggest using the SpacyEntityExtractor component in your pipeline.
-
-      '
+      suggest using the SpacyEntityExtractor component in your pipeline.'
   utter_spacy_or_tensorflow:
   - text: Looks like for your {language} bot, you can use either spacy or tensorflow_embedding!
   utter_start_rasax:
