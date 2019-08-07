@@ -518,12 +518,8 @@
     - slot{"onboarding":false}
     - utter_ask_which_product
 * how_to_get_started{"product":"core"}
-    - slot{"product":"core"}
-    - utter_core_tutorial
+    - utter_explain_core
     - utter_anything_else
-* how_to_get_started{"product":"nlu"}
-    - slot{"product":"nlu"}
-    - utter_ask_for_nlu_specifics
 
 ## Story from conversation with 201bb55841154f858f524a485f8816c3 on November 18th 2018
 
@@ -574,6 +570,7 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 * enter_data
     - utter_not_sure
@@ -648,6 +645,7 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 * enter_data
     - utter_not_sure
@@ -719,7 +717,8 @@
 * how_to_get_started{"product":"core"}
     - utter_explain_core
     - utter_also_explain_nlu
-
+* deny
+    - utter_direct_to_step2
 
 ## Story from conversation with 4b7ecc2cab6e42c5b1fedb8ab4056866 on December 29th 2018
 * get_started_step1
@@ -854,6 +853,7 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
@@ -883,4 +883,5 @@
 * affirm
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2

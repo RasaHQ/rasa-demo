@@ -354,7 +354,7 @@
     - utter_direct_to_step2
 
 
-## new to rasa/bots, explain stack and try it out
+## new to rasa/bots, explain NLU and try it out
 * greet
     - action_greet_user
 * how_to_get_started
@@ -371,8 +371,11 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* affirm OR how_to_get_started{"product":"nlu"} OR explain
+* how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
+    - utter_also_explain_core
+* affirm
+    - utter_explain_core
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain rasa x
@@ -689,11 +692,15 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
-    - utter_anything_else
+    - utter_also_explain_nlucore
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
-    - action_chitchat
-
+    - utter_also_explain_nlucore
+* affirm OR explain
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_direct_to_step2
 
 ## not new to rasa + rasa x + nothing special
 * greet
@@ -709,8 +716,11 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
-    - utter_anything_else
+    - utter_also_explain_nlucore
+* deny
+    - utter_direct_to_step2
 
 
 ## new to rasa + rasa x + nothing special
@@ -731,6 +741,7 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
     - utter_also_explain_nlucore
 * deny

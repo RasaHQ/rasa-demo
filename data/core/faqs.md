@@ -601,9 +601,10 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * affirm OR how_to_get_started{"product":"x"}
-    - utter_explain_nlu
-    - utter_explain_core
+    - slot{"product": "x"}
     - utter_explain_x
+    - utter_also_explain_nlucore
+* deny
     - utter_direct_to_step2
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
     - action_faqs
@@ -694,10 +695,11 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
+    - utter_also_explain_nlucore
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
     - action_faqs
-    - utter_direct_to_step2
 
 ## new to rasa/bots, explain core, then nlu and direct to step2
 * greet
@@ -761,7 +763,9 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
+    - utter_also_explain_nlucore
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
     - action_faqs
 * deny

@@ -215,6 +215,7 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
     - utter_also_explain_nlucore
 * affirm
@@ -235,6 +236,7 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
     - utter_also_explain_nlucore
 * deny
@@ -349,8 +351,9 @@
 
 ## skip to info on rasa x
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
-    - utter_anything_else
+    - utter_also_explain_nlucore
 
 ## skip to info on rasa
 * how_to_get_started{"product": "rasa"}
@@ -373,8 +376,9 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
     - utter_explain_x
-    - utter_anything_else
+    - utter_also_explain_nlucore
 
 ## new to rasa + x
 * how_to_get_started
@@ -391,6 +395,7 @@
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product":"x"}
+    - slot{"product": "x"}
     - utter_explain_x
     - utter_also_explain_nlucore
 * affirm
