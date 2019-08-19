@@ -586,7 +586,7 @@
     - utter_explain_x
     - utter_direct_to_step2
 
-## new to rasa/bots, explain stack and try it out
+## new to rasa/bots, explain x and try it out
 * greet
     - action_greet_user
 * how_to_get_started

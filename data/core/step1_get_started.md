@@ -54,7 +54,7 @@
     - utter_explain_x
     - utter_direct_to_step2
 
-## new to rasa + not new to chatbots + migrating from 
+## new to rasa + not new to chatbots + not migrating
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -279,7 +279,7 @@
     - utter_explain_core
     - utter_direct_to_step2
 
-## not new to rasa/bots, explain difference between nlu and core
+## not new to rasa/bots, explain all
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -293,7 +293,7 @@
     - utter_explain_x
     - utter_direct_to_step2
 
-## new to rasa/bots, explain difference between nlu and core
+## new to rasa/bots, explain all
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
