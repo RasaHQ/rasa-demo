@@ -385,6 +385,8 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 * affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
     - utter_explain_rasa_components
