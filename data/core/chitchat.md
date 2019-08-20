@@ -392,11 +392,6 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* affirm OR how_to_get_started{"product":"x"} OR explain
-    - utter_explain_x
-    - utter_also_explain_nlucore
-* deny
-    - utter_direct_to_step2
 
 ## new to rasa/bots, explain stack and try it out
 * greet
