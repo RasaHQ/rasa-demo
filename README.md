@@ -13,7 +13,7 @@ Sara is an alpha version and lives in our docs (temporarily she's unavailable on
 - Requesting a call with Rasa's sales team
 - Handling basic chitchat
 
-You can talk to Sara [here](https://rasa.com/docs/get_started_step1/) (temporarily unavailable) and find planned enhancements for Sara in the
+You can find planned enhancements for Sara in the
 [Project Board](https://github.com/RasaHQ/rasa-demo/projects/1)
 
 ## 🤖 How to install and run Sara
