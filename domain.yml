@@ -47,7 +47,6 @@ intents:
 - get_started_step2
 - get_started_step3
 - get_started_step4
-- get_started_step5
 - greet
 - handleinsult
 - how_to_get_started
@@ -159,11 +158,11 @@ templates:
   - text: "Looks like {email} is already subscribed - good choice! If you haven't received\
       \ a newsletter in a while, maybe check your spam folder 🗑"
   utter_also_explain_core:
-  - text: Would you also like me to explain Rasa Core?
+  - text: Would you also like me to explain Core?
   utter_also_explain_nlu:
-  - text: Would you also like me to explain Rasa NLU?
+  - text: Would you also like me to explain NLU?
   utter_also_explain_nlucore:
-  - text: Would you also like me to explain Rasa NLU and Core?
+  - text: Would you also like me to explain NLU and Core?
   utter_anything_else:
   - text: Is there anything else I can help you with?
   utter_ask_budget:
@@ -197,7 +196,7 @@ templates:
   - text: "Rasa has more than 3500 community members and over 200 github contributors\
       \ 🚀."
   utter_ask_faq_languages:
-  - text: You can use Rasa NLU to build assistants in any language you want!
+  - text: You can use Rasa to build assistants in any language you want!
   utter_ask_faq_opensource:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
@@ -351,11 +350,6 @@ templates:
     - payload: /get_started_step4
       title: Continue
     text: Let's continue, click the button below
-  utter_continue_step5:
-  - buttons:
-    - payload: /get_started_step5
-      title: Continue
-    text: Let's continue, click the button below
   utter_core_tutorial:
   - text: 'There was an interesting talk at the PyData conference about it. Maybe this
       will help: https://youtu.be/HV0bJMkzpO4'
@@ -393,11 +387,6 @@ templates:
     text: If you have no questions, you can click the button below to go to the next
       step once you're ready. Or when you're finished asking questions, you can say
       'take me to the next step' at any point
-  utter_direct_to_step5:
-  - buttons:
-    - payload: /get_started_step5
-      title: Continue
-    text: null
   utter_docu:
   - text: 'If you want some more awesome Rasa content, check out our forum: https://forum.rasa.com/'
   utter_dont_know_nlu_part:
@@ -420,12 +409,12 @@ templates:
   utter_explain_company:
   - text: Just for completeness.
   utter_explain_core:
-  - text: Rasa Core performs dialog management, which means keeping track of a conversation,
+  - text: Core performs dialog management, which means keeping track of a conversation,
       and deciding how to proceed.
   utter_explain_job_function:
   - text: Your job function helps us in understanding how we can talk to you best.
   utter_explain_nlu:
-  - text: Rasa NLU performs Natural Language Understanding, which means taking free-form
+  - text: The NLU component performs Natural Language Understanding, which means taking free-form
       text like "Please send the confirmation to amy@example.com" and turning it into
       structured data.
   utter_explain_person_name:
@@ -442,7 +431,7 @@ templates:
   - text: Please read our [documentation](https://rasa.com/docs/core/connectors/#creating-a-new-channel)
       for more information.
   utter_ask_faq_differencecorenlu:
-  - text: Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next.
+  - text: NLU’s job is to interpret messages, and Core’s job is to decide what should happen next.
   ask_faq_differencerasarasax:
   - text: Rasa (comprising Core and NLU) is a framework you can use to build a bot. Rasa X is a tool
       built on top of Rasa that comes with a UI that lets the bot learn from real
@@ -473,9 +462,6 @@ templates:
   - text: Now, let's take a look at Rasa X - the tool that helps Rasa learn from real
       conversations.
   utter_get_started_step4:
-  - text: Great! Now that you have had a quick demo of Rasa and Rasa X, are you ready
-      to install it on your computer?
-  utter_get_started_step5:
   - text: As Rasa developer you will be part of a huge community. You can ask me which
       events we have planned, how to contribute, or about our Rasa forum.
   utter_getstarted:
@@ -760,7 +746,6 @@ actions:
 - utter_continue_step2
 - utter_continue_step3
 - utter_continue_step4
-- utter_continue_step5
 - utter_core_tutorial
 - utter_crf
 - utter_direct_install
@@ -768,7 +753,6 @@ actions:
 - utter_direct_to_step2
 - utter_direct_to_step3
 - utter_direct_to_step4
-- utter_direct_to_step5
 - utter_docu
 - utter_dont_know_nlu_part
 - utter_duckling
@@ -795,7 +779,6 @@ actions:
 - utter_get_started_step2
 - utter_get_started_step3
 - utter_get_started_step4
-- utter_get_started_step5
 - utter_getstarted
 - utter_getstarted_new
 - utter_great

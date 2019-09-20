@@ -621,7 +621,7 @@ class ActionNextStep(Action):
     def run(self, dispatcher, tracker, domain):
         step = int(tracker.get_slot("step")) + 1
 
-        if step in [2, 3, 4, 5]:
+        if step in [2, 3, 4]:
             dispatcher.utter_template("utter_continue_step{}".format(step), tracker)
         else:
             dispatcher.utter_template("utter_no_more_steps", tracker)
