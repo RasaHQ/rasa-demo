@@ -263,8 +263,6 @@ templates:
   - text: What's your name?
   utter_ask_python_installed:
   - text: Do you have Python installed?
-  utter_ask_ready_to_build:
-  - text: Ready to start building a chatbot?
   utter_ask_restaurant:
   - text: "I'm sorry, I can't recommend you a restaurant as I usually cook at home."
   utter_ask_time:
@@ -492,15 +490,20 @@ templates:
   - text: 'By chatting to me you agree to our privacy policy, which you can read here:
       https://rasa.com/privacy-policy/.'
   utter_installation_command:
-  - text: We recommend that you install with pip using the following command
-      "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is
-      a dependency for Rasa X, this command will install both of them together.
+  - text: You will first need to install Rasa using this installation command
+      "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple".
   utter_installation_command_followup:
   - text: Once you're done, you can install Rasa with pip using the following command -
       "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is a
       dependency for Rasa X, this command will install both of them together.  
+  utter_having_trouble_installing:
+  - text: If you are having any trouble installing, you can look up detailed
+      installation instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
   utter_installation_instructions:
-  - text: You can find complete installation instructions at https://rasa.com/docs/rasa/user-guide/installation/
+  - text: If you haven't already read the detailed instruction guide,
+      you can look it up [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
+  utter_ask_ready_to_build:
+  - text: Ready to start building a chatbot?
   utter_link_to_forum:
   - text: Click [here](https://forum.rasa.com) to get to the forum.
   utter_moreinformation:
@@ -611,9 +614,11 @@ templates:
       title: Restart
     text: Click the button below if you want to start over.
   utter_run_rasa_init:
-  - text: You can create a new Rasa project by running 'rasa init'. This creates the
-      necessary training and configuration files, and also trains your first model using
-      some example training data.
+  - text: 'You can now create a new Rasa assistant and also talk to it by simply running "rasa init".
+
+    This comes with some sample training data and the required configuration files to get you started.
+    You can also talk to the bot after it is done training.
+    '
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
@@ -790,6 +795,7 @@ actions:
 - utter_inform_privacypolicy
 - utter_installation_command
 - utter_installation_command_followup
+- utter_having_trouble_installing
 - utter_installation_instructions
 - utter_link_to_forum
 - utter_moreinformation
