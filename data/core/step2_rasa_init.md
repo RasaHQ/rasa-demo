@@ -15,6 +15,12 @@
 * deny
     - utter_anything_else
 
+## Direct "install Rasa"
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+> installation_instructions_displayed
+
 ## Installation went well
 > installation_instructions_displayed
 * affirm
@@ -31,7 +37,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
-    - utter_direct_to_step5
+    - utter_direct_to_step4
 
 ## Problems installing (cut to the chase)
 > installation_instructions_displayed
@@ -41,7 +47,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
-    - utter_direct_to_step5
+    - utter_direct_to_step4
 
 ## Problems installing (but FAQ)
 > installation_instructions_displayed
