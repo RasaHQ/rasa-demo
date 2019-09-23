@@ -821,17 +821,10 @@
     - slot{"shown_privacy":true}
     - slot{"step":"1"}
 * install_rasa
-    - utter_ask_python_installed
-* affirm
+    - utter_installation_command
+    - utter_having_trouble_installing
     - utter_ask_ready_to_build
-* enter_data
-    - action_store_problem_description
-    - slot{"problem_description":"tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible."}
-    - utter_direct_to_forum_for_help
-    - utter_direct_to_step5
-* enter_data
-    - utter_not_sure
-    - utter_possibilities
+> installation_instructions_displayed
 
 
 ## Story from conversation with 5f3a2ea92d184a9f96df7240e4f7e2d9 on January 21st 2019
