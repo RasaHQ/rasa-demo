@@ -225,6 +225,8 @@ class ActionFaqs(Action):
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message["intent"].get("name")
 
+        logger.debug("Detected FAQ intent: {}".format(intent))
+
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in [
             "ask_faq_platform",
