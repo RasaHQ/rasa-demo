@@ -201,7 +201,7 @@ templates:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
   utter_ask_faq_python_version:
-  - text: "The supported Python versions are: 2.7, 3.5, 3.6 🐍 The recommended\
+  - text: "The supported Python versions are: 3.5, 3.6 🐍 The recommended\
       \ version is 3.6."
   utter_ask_faq_rasax:
   - text: Rasa X is a tool to learn from real conversations and improve your assistant.
@@ -455,7 +455,7 @@ templates:
   - text: I can give you more information on Rasa and its components - Core, NLU, and
       Rasa X.
   utter_get_started_step2:
-  - text: I can show you how to use Rasa to build an AI assistant.
+  - text: I can show you how to use Rasa to build an AI assistant. Are you ready?
   utter_get_started_step3:
   - text: Now, let's take a look at Rasa X - the tool that helps Rasa learn from real
       conversations.
@@ -491,10 +491,10 @@ templates:
       https://rasa.com/privacy-policy/.'
   utter_installation_command:
   - text: You will first need to install Rasa using this installation command
-      "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple".
+      "pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple".
   utter_installation_command_followup:
   - text: Once you're done, you can install Rasa with pip using the following command -
-      "pip install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is a
+      "pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is a
       dependency for Rasa X, this command will install both of them together.  
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed
