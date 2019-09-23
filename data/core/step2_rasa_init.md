@@ -35,9 +35,10 @@
     - utter_ask_describe_problem
 * technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
+    - slot{"problem_description": "I don't know how to customize the pipeline"}
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
-    - utter_direct_to_step4
+    - utter_direct_to_step3
 
 ## Problems installing (cut to the chase)
 > installation_instructions_displayed
@@ -47,7 +48,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
-    - utter_direct_to_step4
+    - utter_direct_to_step3
 
 ## Problems installing (but FAQ)
 > installation_instructions_displayed
