@@ -19,6 +19,7 @@
 * install_rasa
     - utter_installation_command
     - utter_having_trouble_installing
+    - utter_ask_ready_to_build
 > installation_instructions_displayed
 
 ## Installation went well
