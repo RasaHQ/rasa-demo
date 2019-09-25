@@ -197,9 +197,13 @@ templates:
       \ 🚀."
   utter_ask_faq_languages:
   - text: You can use Rasa to build assistants in any language you want!
+  utter_ask_faq_tutorialnlu:
+  - text: "You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_opensource:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
+  utter_ask_faq_platform:
+    - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
   utter_ask_faq_python_version:
   - text: "The supported Python versions are: 3.5, 3.6 🐍 The recommended\
       \ version is 3.6."
@@ -212,6 +216,8 @@ templates:
   - text: Slots act as a key-value store which can be used to store information the
       user provided (e.g their home city) as well as information gathered about the
       outside world (e.g. the result of a database query).
+  utter_ask_faq_tutorialcore:
+  - text: "You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_tutorials:
   - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
       can help you get started and learn more about Rasa.
@@ -430,7 +436,7 @@ templates:
       for more information.
   utter_ask_faq_differencecorenlu:
   - text: NLU’s job is to interpret messages, and Core’s job is to decide what should happen next.
-  ask_faq_differencerasarasax:
+  utter_ask_faq_differencerasarasax:
   - text: Rasa (comprising Core and NLU) is a framework you can use to build a bot. Rasa X is a tool
       built on top of Rasa that comes with a UI that lets the bot learn from real
       conversations and improve your bot. Using it is completely optional though. If you don’t want to,
@@ -702,11 +708,16 @@ actions:
 - utter_ask_explain_nlucorex
 - utter_ask_faq_channels
 - utter_ask_faq_community_size
+- utter_ask_faq_differencecorenlu
+- utter_ask_faq_differencerasarasax
+- utter_ask_faq_tutorialnlu
 - utter_ask_faq_languages
 - utter_ask_faq_opensource
+- utter_ask_faq_platform
 - utter_ask_faq_python_version
 - utter_ask_faq_rasax
 - utter_ask_faq_slots
+- utter_ask_faq_tutorialcore
 - utter_ask_faq_tutorials
 - utter_ask_faq_voice
 - utter_ask_faq_what_is_forum
