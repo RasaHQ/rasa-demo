@@ -378,13 +378,94 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-> installation_instructions_displayed
 
 ## FAQ - Step 2 flow interrupted
-> installation_instructions_displayed
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
     - action_faqs
     - utter_ask_ready_to_build
+
+## FAQ - Step 2 flow interrupted
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
+* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
+    - action_faqs
+    - utter_ask_ready_to_build
+* affirm
+    - utter_run_rasa_init
+    - utter_direct_to_step3
+
+## FAQ - Step 2 flow interrupted
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
+* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
+    - action_faqs
+    - utter_ask_ready_to_build
+* deny
+    - utter_ask_if_problem
+* technical_question OR enter_data OR out_of_scope
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
+    - utter_direct_to_step3
+
+## FAQ - Step 2 flow interrupted
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
+* deny
+    - utter_ask_if_problem
+* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
+    - action_faqs
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
+    - utter_direct_to_step3
+
+## FAQ - Step 2 flow interrupted
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
+* deny
+    - utter_ask_if_problem
+* affirm
+    - utter_ask_describe_problem
+* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
+    - action_faqs
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
+    - utter_direct_to_step3
+
+## FAQ - Step 2 flow interrupted
+* get_started_step2
+    - action_greet_user
+    - slot{"step": "2"}
+* affirm
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
+* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
+    - action_faqs
+    - utter_ask_ready_to_build
+
+## Just don't want to continue
+* install_rasa
+    - utter_installation_command
+    - utter_having_trouble_installing
+    - utter_ask_ready_to_build
+* ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
+    - action_faqs
+    - utter_ask_if_problem
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
