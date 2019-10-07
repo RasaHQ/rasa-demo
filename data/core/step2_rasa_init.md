@@ -119,8 +119,10 @@
 * affirm
     - utter_ask_describe_problem
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
-    - action_store_problem_description
     - action_faqs
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
     - utter_direct_to_step3
 
 ## Problems installing (but FAQ)
@@ -136,8 +138,10 @@
 * affirm
     - utter_ask_describe_problem
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
-    - action_store_problem_description
     - action_faqs
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
     - utter_direct_to_step3
 
 
@@ -152,8 +156,10 @@
 * deny
     - utter_ask_if_problem
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
-    - action_store_problem_description
     - action_faqs
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
     - utter_direct_to_step3
 
 ## Problems installing (but FAQ + cut to the chase)
@@ -164,8 +170,10 @@
 * deny
     - utter_ask_if_problem
 * ask_faq_platform OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
-    - action_store_problem_description
     - action_faqs
+    - action_store_problem_description
+    - utter_installation_instructions
+    - utter_direct_to_forum_for_help
     - utter_direct_to_step3
 
 
