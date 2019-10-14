@@ -187,7 +187,7 @@ templates:
   utter_ask_entities:
   - text: To help you, what kind of entities do you want to extract?
   utter_ask_explain_nlucorex:
-  - text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
+  - text: Would you like to know more about Rasa or Rasa X?
   utter_ask_faq_channels:
   - text: We have a [comprehensive list of connectors](https://rasa.com/docs/core/connectors/),
       but if you don't see the one you're looking for, you can always create a custom
@@ -198,14 +198,14 @@ templates:
   utter_ask_faq_languages:
   - text: You can use Rasa to build assistants in any language you want!
   utter_ask_faq_tutorialnlu:
-  - text: "You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/)."
+  - text: "You can find a preview of NLU [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_opensource:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
   utter_ask_faq_platform:
     - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
   utter_ask_faq_python_version:
-  - text: "The supported Python versions are: 3.5, 3.6 🐍 The recommended\
+  - text: "The supported Python versions are 3.5.4 or higher 🐍. The recommended\
       \ version is 3.6."
   utter_ask_faq_rasax:
   - text: Rasa X is a tool to learn from real conversations and improve your assistant.
@@ -217,7 +217,7 @@ templates:
       user provided (e.g their home city) as well as information gathered about the
       outside world (e.g. the result of a database query).
   utter_ask_faq_tutorialcore:
-  - text: "You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/)."
+  - text: "You can find a preview of Core [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_tutorials:
   - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
       can help you get started and learn more about Rasa.
@@ -254,7 +254,7 @@ templates:
   - text: Old enough to be a bot.
   - text: "Age is just an issue of mind over matter. If you don't mind, it doesn't matter."
   utter_ask_if_problem:
-  - text: Do you have a problem?
+  - text: Did you have any trouble installing?
   utter_ask_isbot:
   - text: Yep, I'm a bot!
   utter_ask_job_function:
@@ -294,7 +294,7 @@ templates:
   - text: I was born in Berlin, but I consider myself a citizen of the world.
   - text: I was born in the coolest city on Earth.
   utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Rasa (Core + NLU) or
+  - text: Ok, which product would you like to know more about? Rasa or
       Rasa X?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
@@ -461,10 +461,10 @@ templates:
   - text: I can give you more information on Rasa and its components - Core, NLU, and
       Rasa X.
   utter_get_started_step2:
-  - text: I can show you how to use Rasa to build an AI assistant. Are you ready?
+  - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
   - text: Now, let's take a look at Rasa X - the tool that helps Rasa learn from real
-      conversations.
+      conversations. Are you ready?
   utter_get_started_step4:
   - text: As Rasa developer you will be part of a huge community. You can ask me which
       events we have planned, how to contribute, or about our Rasa forum.
@@ -496,12 +496,12 @@ templates:
   - text: 'By chatting to me you agree to our privacy policy, which you can read here:
       https://rasa.com/privacy-policy/.'
   utter_installation_command:
-  - text: You will first need to install Rasa using this installation command
-      "pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple".
+  - text: "You will first need to install Rasa using this installation
+      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\"."
   utter_installation_command_followup:
-  - text: Once you're done, you can install Rasa with pip using the following command -
-      "pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple". Since Rasa is a
-      dependency for Rasa X, this command will install both of them together.  
+  - text: "Once you're done, you can install Rasa with pip using the following command.
+      \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\". \n\nSince Rasa is a
+      dependency for Rasa X, this command will install both of them together."
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed
       installation instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
@@ -590,7 +590,7 @@ templates:
       . You don''t have to install anything to try it out.'
   utter_rasa_components_details:
   - text: Rasa is a framework to build contextual AI assistants and chatbots. It consists
-      of Rasa (Core + NLU) and Rasa X. Using machine learning, your bots can hold contextual
+      of Rasa and Rasa X. Using machine learning, your bots can hold contextual
       conversations with users.
   utter_rasa_cost:
   - text: Rasa is free!
@@ -642,7 +642,7 @@ templates:
   utter_spacy_or_tensorflow:
   - text: Looks like for your {language} bot, you can use either spacy or tensorflow_embedding!
   utter_start_rasax:
-  - text: You may run the cell below to start Rasa X. After a few seconds, you will
+  - text: You may run the cell on the left to start Rasa X. After a few seconds, you will
       see a button that will take you to its UI.
   utter_suggestion:
   - text: Pls suggest

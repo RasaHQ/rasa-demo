@@ -414,6 +414,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## FAQ - Step 2 flow interrupted
@@ -428,6 +429,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## FAQ - Step 2 flow interrupted
@@ -444,6 +446,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## FAQ - Step 2 flow interrupted

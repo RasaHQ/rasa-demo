@@ -57,6 +57,7 @@
     - slot{"problem_description": "I don't know how to customize the pipeline"}
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## Problems installing
@@ -76,6 +77,7 @@
     - slot{"problem_description": "I don't know how to customize the pipeline"}
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 
@@ -93,6 +95,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## Problems installing (cut to the chase)
@@ -106,6 +109,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 
@@ -123,6 +127,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## Problems installing (but FAQ)
@@ -142,6 +147,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 
@@ -160,6 +166,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 ## Problems installing (but FAQ + cut to the chase)
@@ -174,6 +181,7 @@
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
+    - utter_run_rasa_init
     - utter_direct_to_step3
 
 
