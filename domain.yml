@@ -198,14 +198,14 @@ templates:
   utter_ask_faq_languages:
   - text: You can use Rasa to build assistants in any language you want!
   utter_ask_faq_tutorialnlu:
-  - text: "You can find a preview of Rasa NLU [here](https://rasa.com/docs/core/quickstart/)."
+  - text: "You can find a preview of NLU [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_opensource:
   - text: Yes. We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
   utter_ask_faq_platform:
     - text: "Rasa Platform is our enterprise product. It expands Rasa Stack and empowers business users to iterate faster, change the content of the AI assistant and see what impact it had."
   utter_ask_faq_python_version:
-  - text: "The supported Python versions are: 3.5, 3.6 🐍 The recommended\
+  - text: "The supported Python versions are 3.5.4 or higher 🐍. The recommended\
       \ version is 3.6."
   utter_ask_faq_rasax:
   - text: Rasa X is a tool to learn from real conversations and improve your assistant.
@@ -217,7 +217,7 @@ templates:
       user provided (e.g their home city) as well as information gathered about the
       outside world (e.g. the result of a database query).
   utter_ask_faq_tutorialcore:
-  - text: "You can find a preview of Rasa Core [here](https://rasa.com/docs/core/quickstart/)."
+  - text: "You can find a preview of Core [here](https://rasa.com/docs/core/quickstart/)."
   utter_ask_faq_tutorials:
   - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
       can help you get started and learn more about Rasa.
@@ -254,7 +254,7 @@ templates:
   - text: Old enough to be a bot.
   - text: "Age is just an issue of mind over matter. If you don't mind, it doesn't matter."
   utter_ask_if_problem:
-  - text: Do you have a problem?
+  - text: Did you have any trouble installing?
   utter_ask_isbot:
   - text: Yep, I'm a bot!
   utter_ask_job_function:
@@ -461,10 +461,10 @@ templates:
   - text: I can give you more information on Rasa and its components - Core, NLU, and
       Rasa X.
   utter_get_started_step2:
-  - text: I can show you how to use Rasa to build an AI assistant. Are you ready?
+  - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
   - text: Now, let's take a look at Rasa X - the tool that helps Rasa learn from real
-      conversations.
+      conversations. Are you ready?
   utter_get_started_step4:
   - text: As Rasa developer you will be part of a huge community. You can ask me which
       events we have planned, how to contribute, or about our Rasa forum.
