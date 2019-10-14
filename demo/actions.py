@@ -148,8 +148,8 @@ class SalesForm(FormAction):
 
         sales_info = [company, use_case, budget, date, person_name, job_function, email]
 
-        gdrive = GDriveService()
         try:
+            gdrive = GDriveService()
             gdrive.store_data(sales_info)
             dispatcher.utter_template("utter_confirm_salesrequest", tracker)
             return []
