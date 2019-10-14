@@ -458,8 +458,7 @@ templates:
   - text: Please install Python first. [Here is a guide](https://realpython.com/installing-python/)
       how to do so.
   utter_get_started_step1:
-  - text: I can give you more information on Rasa and its components - Core, NLU, and
-      Rasa X.
+  - text: I can help you get started with Rasa, would you like to start? 
   utter_get_started_step2:
   - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
@@ -589,9 +588,8 @@ templates:
   - text: 'Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/
       . You don''t have to install anything to try it out.'
   utter_rasa_components_details:
-  - text: Rasa is a framework to build contextual AI assistants and chatbots. It consists
-      of Rasa and Rasa X. Using machine learning, your bots can hold contextual
-      conversations with users.
+  - text: Rasa is an open source machine learning framework for automated text and voice-based conversations.
+      Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa framework.
   utter_rasa_cost:
   - text: Rasa is free!
   utter_react_negative:
