@@ -187,7 +187,7 @@ templates:
   utter_ask_entities:
   - text: To help you, what kind of entities do you want to extract?
   utter_ask_explain_nlucorex:
-  - text: Would you like to know more about Rasa (Core + NLU) or Rasa X?
+  - text: Would you like to know more about Rasa or Rasa X?
   utter_ask_faq_channels:
   - text: We have a [comprehensive list of connectors](https://rasa.com/docs/core/connectors/),
       but if you don't see the one you're looking for, you can always create a custom
@@ -294,7 +294,7 @@ templates:
   - text: I was born in Berlin, but I consider myself a citizen of the world.
   - text: I was born in the coolest city on Earth.
   utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Rasa (Core + NLU) or
+  - text: Ok, which product would you like to know more about? Rasa or
       Rasa X?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
@@ -590,7 +590,7 @@ templates:
       . You don''t have to install anything to try it out.'
   utter_rasa_components_details:
   - text: Rasa is a framework to build contextual AI assistants and chatbots. It consists
-      of Rasa (Core + NLU) and Rasa X. Using machine learning, your bots can hold contextual
+      of Rasa and Rasa X. Using machine learning, your bots can hold contextual
       conversations with users.
   utter_rasa_cost:
   - text: Rasa is free!
