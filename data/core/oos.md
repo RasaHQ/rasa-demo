@@ -1,8 +1,3 @@
-<!-- ## chitchat
-* out_of_scope
-    - utter_out_of_scope
-    - utter_possibilities
- -->
 ## say enter data outside the flows
 * greet
     - action_greet_user
