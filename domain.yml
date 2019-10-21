@@ -508,7 +508,7 @@ templates:
   - text: If you haven't already read the detailed instruction guide,
       you can look it up [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
   utter_ask_ready_to_build:
-  - text: Ready to start building a chatbot?
+  - text: If you got it successfully installed, are ready to start building a chatbot?
   utter_link_to_forum:
   - text: Click [here](https://forum.rasa.com) to get to the forum.
   utter_moreinformation:
