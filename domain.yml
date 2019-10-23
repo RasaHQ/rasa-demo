@@ -643,7 +643,7 @@ templates:
   - text: You may run the cell on the left to start Rasa X. After a few seconds, you will
       see a button that will take you to its UI.
   utter_suggestion:
-  - text: Pls suggest
+  - text: Please suggest
   utter_switch_dialogflow:
   - text: 'We have a guide for migrating from DialogFlow here: https://www.rasa.com/docs/rasa/migrate-from/google-dialogflow-to-rasa/.'
   utter_switch_luis:
