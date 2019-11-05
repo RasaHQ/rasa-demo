@@ -7,7 +7,7 @@ ask_faq_differencecorenlu,What is the difference between Core and NLU?,
 ask_faq_differencerasarasax,What is the difference between Rasa and Rasa X?
 ask_faq_languages,What languages does Rasa support?,
 ask_faq_opensource,Is Rasa open-source?,
-ask_faq_platform,What is the Rasa platform?,
+ask_faq_ee,What is Rasa X Enterprise Edition?,
 ask_faq_python_version,Which Python version is needed?,
 ask_faq_rasax,What is Rasa X?
 ask_faq_slots,What are slots?,

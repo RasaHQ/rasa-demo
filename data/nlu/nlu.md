@@ -147,26 +147,25 @@
 - is rasa like an open source software
 - is this open source license
 
-## intent:ask_faq_platform
-- can someone help me with infos about the rasa platform
-- I want information about the platform
-- we built a bot with rasa but now we're interested in the platform
-- i want to learn more about Rasa Platform
-- what is the platform?
-- what is platform
-- what is the platform
-- what is the rasa platform
-- Can you tell me about the Platform?
-- can you tell me about the platform?
-- Tell me about rasa platform
-- what is platform?
-- tell me about rasa platform
-- platform functionalities
-- tell me more about rasa platform
-- what is rasa platform
-- Tell me about your platform
-- what is rasa platform?
-- tell me what is platform
+## intent:ask_faq_ee
+- can someone help me with infos about the enterprise edition
+- I want information about the enterprise edition
+- we built a bot with rasa x but now we're interested in the enterprise edition
+- i want to learn more about Rasa X EE
+- what is rasa x ee?
+- what is the enterprise edition
+- what's the rasa x enterprise edition
+- what is rasa x enterprise
+- Can you tell me about the enterprise edition?
+- can you tell me about rasa x ee?
+- Tell me about rasa x ee
+- what is EE?
+- tell me about rasa x EE
+- enterprise features
+- tell me more about rasa x EE
+- what is rasa x enterprise
+- Tell me about rasa x ee
+- tell me what is rasa x ee
 
 ## intent:ask_faq_slots
 - how do slots work
@@ -911,7 +910,7 @@
 - I would like to talk to someone from your sales team
 - sales please
 - I want to talk with sales about our project
-- I want an offer for your platform
+- I want an offer for your enterprise product
 - I wanna have a subscription for your product
 - I want to learn more about your pricing
 - I want to talk to someone about your pricing system

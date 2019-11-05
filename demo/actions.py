@@ -229,7 +229,7 @@ class ActionFaqs(Action):
 
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in [
-            "ask_faq_platform",
+            "ask_faq_ee",
             "ask_faq_languages",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",
