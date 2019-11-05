@@ -824,8 +824,6 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-> installation_instructions_displayed
-
 
 ## Story from conversation with 5f3a2ea92d184a9f96df7240e4f7e2d9 on January 21st 2019
 * get_started_step1

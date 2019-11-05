@@ -57,6 +57,8 @@
 - oh cool
 - yes
 - fine
+- totally!
+- totally
 
 ## intent:ask_how_contribute
 - how contribute to Rasa?
