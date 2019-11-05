@@ -203,7 +203,7 @@ templates:
   - text: Rasa is open source! We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
   utter_ask_faq_ee:
-    - text: "Rasa X EE is an enterprise-grade platform for conversational AI at scale."
+    - text: "Rasa X EE is our enterprise product, which comes with more options for increasing security and privacy, as well as expert support."
   utter_ask_faq_python_version:
   - text: "The supported Python versions are 3.6 and higher 🐍. The recommended version is 3.7."
   utter_ask_faq_rasax:
@@ -441,9 +441,6 @@ templates:
       more information.
   utter_first_bot_with_rasa:
   - text: Is this your first time using Rasa?
-  utter_get_python:
-  - text: Please install Python first. [Here is a guide](https://realpython.com/installing-python/)
-      how to do so.
   utter_get_started_step1:
   - text: I can help you get started with Rasa, would you like to start?
   utter_get_started_step2:
@@ -631,9 +628,6 @@ templates:
   - text: For {language}, you can only use the supervised_embeddings pipeline.
   utter_thank_suggestion:
   - text: Thanks for the suggestion!
-  utter_thanks_for_feedback:
-  - text: Thanks! Check out our [forum](https://forum.rasa.com), some of the smart people
-      from our community can answer your questions there.
   utter_thumbsup:
   - text: "👍"
   - text: Okay.
@@ -760,7 +754,6 @@ actions:
 - utter_faq_slots_more
 - utter_faq_voice_more
 - utter_first_bot_with_rasa
-- utter_get_python
 - utter_get_started_step1
 - utter_get_started_step2
 - utter_get_started_step3
@@ -820,7 +813,6 @@ actions:
 - utter_switch_luis
 - utter_telljoke
 - utter_tensorflow
-- utter_thanks_for_feedback
 - utter_thumbsup
 - utter_what_help
 - utter_what_language

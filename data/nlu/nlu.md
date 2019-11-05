@@ -420,7 +420,6 @@
 - What languages can you converse in?
 - What languages do you know how to use?
 - Which languages are you familiar with?
-- What languages can you use?
 - what languages are you familiar with?
 - what languages you know?
 - In what languages are you fluent enough?
@@ -451,7 +450,6 @@
 
 ## intent:ask_restaurant
 - restaurants
-- can i be shown a gluten free restaurant
 - i want a french restaurant
 - i'm looking for a Chinese restaurant
 - I need a new restaurant
@@ -867,7 +865,6 @@
 - I want to know who you are
 - who are y
 - yes but who are you in your heart
-- are you a bot?
 - who is this?
 - hi! what's your name?
 
@@ -1932,7 +1929,6 @@
 - fine
 
 ## intent:out_of_scope
-- I want pizza
 - please help with my ice cream it's dripping
 - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
 - i want a non dripping ice cream
@@ -1942,7 +1938,6 @@
 - neither
 - I want french cuisine
 - i am hungry
-- restaurants
 - restaurant
 - you're a loser lmao
 - can i be shown a gluten free restaurant
@@ -1962,7 +1957,6 @@
 - you already have that
 - this is a really frustrating experience
 - no stop
-- i want a french restaurant
 - shit bot
 - do you want to marry me?
 - give me food
@@ -2256,8 +2250,6 @@
 ## intent:technical_question
 - what is duckling
 - where to train intents in rasa?
-- duckling
-- dicklung
 - what is duckling
 - i need a help to integrate rasa with a messenger
 - what infrastructure is required to run a bot?
@@ -2273,7 +2265,6 @@
 - should I use rasa instead of ibm Watson api
 - Is Rasa better than Dialogflow?
 - db processing
-- how do slots work
 - what components of Rasa are open source
 - how to integrate rasa chatbot with my website
 - how works rasa
