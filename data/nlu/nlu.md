@@ -1202,7 +1202,7 @@
 - philipp@superphilipp.philipp
 - I'm in [business](job_function)
 - 5 mln
-- [Alex](name:alex)
+- [Alex](name)
 - my name is [loretta meier](name)
 - I wanna build a super bot to send me cute animal pictures
 - 10000k
@@ -2569,9 +2569,6 @@
 ## synonym:United Kingdom
 - UK
 - U.K.
-
-## synonym:alex
-- Alex
 
 ## synonym:all
 - both

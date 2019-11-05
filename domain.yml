@@ -189,38 +189,36 @@ templates:
   utter_ask_explain_nlucorex:
   - text: Would you like to know more about Rasa or Rasa X?
   utter_ask_faq_channels:
-  - text: We have a [comprehensive list of connectors](https://rasa.com/docs/core/connectors/),
+  - text: We have a [comprehensive list of supported connectors](https://rasa.com/docs/core/connectors/),
       but if you don't see the one you're looking for, you can always create a custom
       connector by following [this guide](https://rasa.com/docs/core/connectors/#custom-channels).
   utter_ask_faq_community_size:
-  - text: "Rasa has more than 3500 community members and over 200 github contributors\
+  - text: "Rasa has more than 7000 community members and over 300 code and content contributors\
       \ 🚀."
   utter_ask_faq_languages:
   - text: You can use Rasa to build assistants in any language you want!
   utter_ask_faq_tutorialnlu:
-  - text: "You can find a preview of NLU [here](https://rasa.com/docs/core/quickstart/)."
+  - text: "Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k)."
   utter_ask_faq_opensource:
-  - text: Yes. We strive to provide well-maintained and documented open source tools,
+  - text: Rasa is open source! We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
   utter_ask_faq_ee:
     - text: "Rasa X EE is an enterprise-grade platform for conversational AI at scale."
   utter_ask_faq_python_version:
-  - text: "The supported Python versions are 3.5.4 or higher 🐍. The recommended\
-      \ version is 3.6."
+  - text: "The supported Python versions are 3.6 and higher 🐍. The recommended version is 3.7."
   utter_ask_faq_rasax:
   - text: Rasa X is a tool to learn from real conversations and improve your assistant.
       To get a better idea of why we built Rasa X, you can check out this blog article
       [here](https://blog.rasa.com/algorithms-alone-wont-solve-conversational-ai-introducing-rasa-x/).
-      You can also watch an in-depth video of Rasa X [here](https://youtu.be/VXvWdrr2yw8).
   utter_ask_faq_slots:
   - text: Slots act as a key-value store which can be used to store information the
       user provided (e.g their home city) as well as information gathered about the
       outside world (e.g. the result of a database query).
   utter_ask_faq_tutorialcore:
-  - text: "You can find a preview of Core [here](https://rasa.com/docs/core/quickstart/)."
+  - text: "Rasa Masterclass has a great introduction to dialogue management [here](https://www.youtube.com/watch?v=WoTmnN2EMdo)."
   utter_ask_faq_tutorials:
-  - text: Yes, [here](https://blog.rasa.com/tag/tutorials/) are some tutorials that
-      can help you get started and learn more about Rasa.
+  - text: Follow along with the [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA) to build a level 3 assistant from
+      scratch, or check out our [blog](https://blog.rasa.com/tag/tutorials/) for in-depth tutorials on customizing your assistant.
   utter_ask_faq_voice:
   - text: Yes, that is possible! You can connect Rasa to any channel you like. You can
       find more information [here](https://rasa.com/docs/core/connectors/).
@@ -268,16 +266,13 @@ templates:
   utter_ask_name:
   - text: What's your name?
   utter_ask_python_installed:
-  - text: Do you have Python installed?
+  - text: Do you have Python 3.6 or later installed?
   utter_ask_restaurant:
   - text: "I'm sorry, I can't recommend you a restaurant as I usually cook at home."
   utter_ask_time:
   - text: It's the most wonderful time of the year!
   utter_ask_use_case:
   - text: What kind of bot do you want to build with Rasa?
-  utter_ask_voice:
-  - text: Yes, that is possible! You can connect Rasa to any channel you like. You can
-      find more information [here](https://rasa.com/docs/core/connectors/).
   utter_ask_weather:
   - text: "I don't know about where you live, but in my world it's always sunny *"
   - text: "Honestly it's a bit too hot these days 😅"
@@ -286,7 +281,7 @@ templates:
   utter_ask_whatismyname:
   - text: It's probably the one that your parents chose for you.
   utter_ask_whatisrasa:
-  - text: Rasa is a framework to build bots! You can read more about it here in the
+  - text: Rasa is a, open-source framework for building AI assistants! You can read more about it here in the
       docs or on our website (https://rasa.com/).
   utter_ask_whatspossible:
   - text: You can book a sales call or subscribe to our newsletter.
@@ -294,8 +289,7 @@ templates:
   - text: I was born in Berlin, but I consider myself a citizen of the world.
   - text: I was born in the coolest city on Earth.
   utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Rasa or
-      Rasa X?
+  - text: Ok, which product would you like to know more about? Rasa or Rasa X?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
   utter_ask_whoami:
@@ -322,14 +316,14 @@ templates:
   - text: I can't answer that.
   utter_canthelp:
   - text: I'm sorry I couldn't help you. If you have general questions about the Rasa,
-      please head to https://forum.rasa.com/, otherwise contact us at hi@rasa.com for
+      please head to our [forum](https://forum.rasa.com/), otherwise contact us at [hi@rasa.com](mailto:hi@rasa.com) for
       anything else.
   utter_cantsignup:
   - text: "I can't sign you up if you don't provide your email 😉"
   utter_change_mind:
   - text: You can still change your mind below though.
   utter_chatbot_tutorial:
-  - text: "No worries. There's a course on Datacamp that teaches you how to buildyour\
+  - text: "No worries. There's a course on Datacamp that teaches you how to build your\
       \ own chatbots: https://www.datacamp.com/courses/building-chatbots-in-python \
       \ 🤓"
   utter_confirm_salesrequest:
@@ -337,8 +331,7 @@ templates:
   utter_confirmationemail:
   - text: We sent a confirmation email to {email}.
   utter_contact_email:
-  - text: "You can't speak to a human directly in this chat, but you can email\
-      \ us at hi@rasa.com."
+  - text: "You can't speak to a human directly in this chat, but you can email us at [hi@rasa.com](mailto:hi@rasa.com)."
   utter_continue_step2:
   - buttons:
     - payload: /get_started_step2
@@ -354,13 +347,10 @@ templates:
     - payload: /get_started_step4
       title: Continue
     text: Let's continue, click the button below
-  utter_core_tutorial:
-  - text: 'There was an interesting talk at the PyData conference about it. Maybe this
-      will help: https://youtu.be/HV0bJMkzpO4'
   utter_crf:
-  - text: 'I currently don''t know a library that provides pretrained recognisers for
-      that. You''ll have to train the extraction by yourself using the CRFEntityExtractor
-      component. So use that and annote your NLU data as described [here](https://rasa.com/docs/nlu/dataformat/).'
+  - text: "I currently don't know a library that provides pre-trained recognisers for
+      that. You'll have to train the extraction by yourself using the CRFEntityExtractor
+      component and annotate your NLU data as described [here](https://rasa.com/docs/nlu/dataformat/)."
   utter_default:
   - text: "Sorry, I didn't get that 🤷. Could you please rephrase?"
   - text: I didn't understand, could you rephrase that?
@@ -369,10 +359,8 @@ templates:
   - text: I'm afraid I didn't get what you just said. Could you rephrase that?
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
-  utter_direct_install:
-  - text: 'Alright, you can directly install it here: (link)'
   utter_direct_to_forum_for_help:
-  - text: "If you're still stuck, please get help in our [forum](https://forum.rasa.com/)."
+  - text: "If you're still stuck, please ask for help on our [forum](https://forum.rasa.com/)."
   utter_direct_to_step2:
   - buttons:
     - payload: /get_started_step2
@@ -392,7 +380,7 @@ templates:
       step once you're ready. Or when you're finished asking questions, you can say
       'take me to the next step' at any point
   utter_docu:
-  - text: 'If you want some more awesome Rasa content, check out our forum: https://forum.rasa.com/'
+  - text: 'If you want some more awesome Rasa content, check out our [forum](https://forum.rasa.com/)!'
   utter_dont_know_nlu_part:
   - text: Hmm, seems like I haven't learned about that part of NLU yet!
   utter_duckling:
@@ -403,8 +391,7 @@ templates:
   - text: 'Duckling is a rule-based entity recognition library from Facebook. Here is
       the link to its documentation: https://duckling.wit.ai/'
   utter_encourage_building_bot:
-  - text: "Cool, then good luck with building your first \"I'm the Rasa bot 🤖\
-      !"
+  - text: "Cool, then good luck with building your first bot! 🤖"
   utter_explain_budget:
   - text: If you tell us your budget, we can prepare a package that fits you best.
   utter_explain_business_email:
@@ -437,10 +424,10 @@ templates:
   utter_ask_faq_differencecorenlu:
   - text: NLU’s job is to interpret messages, and Core’s job is to decide what should happen next.
   utter_ask_faq_differencerasarasax:
-  - text: Rasa (comprising Core and NLU) is a framework you can use to build a bot. Rasa X is a tool
-      built on top of Rasa that comes with a UI that lets the bot learn from real
-      conversations and improve your bot. Using it is completely optional though. If you don’t want to,
-      you can just use Rasa on its own.
+  - text: Rasa is a framework you can use to build a bot. Rasa X is a tool
+      built on top of Rasa that comes with a UI that helps you learn from real
+      conversations and improve your bot. Using it is completely optional, though. If you'd like,
+      you can use Rasa on its own.
   utter_faq_language_more:
   - text: Please read our [documentation](https://rasa.com/docs/nlu/languages/) for
       more information.
@@ -458,20 +445,20 @@ templates:
   - text: Please install Python first. [Here is a guide](https://realpython.com/installing-python/)
       how to do so.
   utter_get_started_step1:
-  - text: I can help you get started with Rasa, would you like to start? 
+  - text: I can help you get started with Rasa, would you like to start?
   utter_get_started_step2:
   - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
   - text: Now, let's take a look at Rasa X - the tool that helps Rasa learn from real
       conversations. Are you ready?
   utter_get_started_step4:
-  - text: As Rasa developer you will be part of a huge community. You can ask me which
+  - text: As Rasa developer you will be part of a huge community. Feel free to ask me what
       events we have planned, how to contribute, or about our Rasa forum.
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_getstarted_new:
-  - text: 'I see you''re new, let me ask you a quick question before I help you get
-      started:'
+  - text: "I see you're new, let me ask you a quick question before I help you get
+      started:"
   utter_great:
   - text: "Great! 👍"
   - text: "That's great! 🙌"
@@ -496,7 +483,8 @@ templates:
       https://rasa.com/privacy-policy/.'
   utter_installation_command:
   - text: "You will first need to install Rasa using this installation
-      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\"."
+      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\nSince Rasa is a
+      dependency for Rasa X, this command will install both of them together."
   utter_installation_command_followup:
   - text: "Once you're done, you can install Rasa with pip using the following command.
       \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\". \n\nSince Rasa is a
@@ -527,24 +515,17 @@ templates:
   - text: Pleased to meet you too!
   - text: Likewise!
   utter_nlu_entity_tutorial:
-  - text: 'Our community member Bhavani Ravi wrote an excellent blog post on entity
-      extraction: https://hackernoon.com/entity-extraction-demistifying-rasanlu-part-3-13a460451573
-      .'
+  - text: "[Part 2](https://blog.rasa.com/rasa-nlu-in-depth-part-2-entity-recognition/) of the Rasa NLU
+      In Depth series from our software engineer Tobias is a great tutorial about entity recognition."
   utter_nlu_intent_tutorial:
-  - text: 'Our community member Bhavani Ravi wrote an excellent blog post on intent
-      classification: https://hackernoon.com/intent-classification-demystifying-rasanlu-part-4-685fc02f5c1d
-      .'
+  - text: "Check out [part 1](https://blog.rasa.com/rasa-nlu-in-depth-part-1-intent-classification/) of the Rasa NLU
+      In Depth series from our software engineer Tobias to learn more about intent classification."
   utter_nlu_tools:
-  - text: 'A great tool to get more NLU data is [Chatito](https://rodrigopivi.github.io/Chatito/).
-      If you find annotating your data cumbersome, our [NLU trainer](https://rasahq.github.io/rasa-nlu-trainer/)
-      might be help you ease things.
-
-      '
+  - text: "We recommend using Rasa X to easily create and classify NLU data from within a UI."
   utter_no_community_event:
   - text: "Sorry, we currently don't have any planned community events 😞."
   utter_no_email:
-  - text: "Hmm, I'm not sure that's a valid email, please make sure to include the full\
-      \ address 😅"
+  - text: "Hmm, I'm not sure that's a valid email, please make sure to include the full address 😅"
   utter_no_event_for_location_but_next:
   - text: Sorry, there are currently no events at your location. However, the next event
       is the {event_name} in {event_location} on {event_date}.
@@ -575,18 +556,12 @@ templates:
   - text: You can either book a sales call or subscribe to our newsletter.
   - text: You can book a sales call or subscribe to our newsletter.
   utter_possibilities_to_contribute:
-  - text: 'You could, for example:
-
-      - work on [small issues](https://github.com/RasaHQ/rasa_nlu/labels/good%20first%20issue),
-
-      - improve our documentation, or
-
-      - help others by answering questions on the [forum](https://forum.rasa.com).
-
-      '
+  - text: Check out the [Contribute to Rasa](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how
+      to contribute code or content. You can also help by answering other members' questions on the
+      [forum](http://forum.rasa.com).
   utter_quickstart_nlu_only:
-  - text: 'Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/
-      . You don''t have to install anything to try it out.'
+  - text: "Here is a quickstart for people who only need NLU for now here: https://rasa.com/docs/nlu/quickstart/.
+      You don't have to install anything to try it out."
   utter_rasa_components_details:
   - text: Rasa is an open source machine learning framework for automated text and voice-based conversations.
       Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa framework.
@@ -601,9 +576,9 @@ templates:
 
       - Explore the source code in depth
 
-      - Check out issues and help solve them
-
       - Contribute to open source software
+
+      - Earn [Rasa swag])(https://rasa.com/community/contribute/)!
 
       '
   utter_recommend_forum:
@@ -627,8 +602,7 @@ templates:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
   - text: "Unfortunately we weren't able to store your information. Sorry about that!\
-      \ You can still contact sales via our [website](https://rasa.com/contact-sales/)\
-      \ 🙂"
+      \ You can still contact sales via our [website](https://rasa.com/contact-sales/) 🙂"
   utter_search_bar:
   - text: Try using the search bar above for now.
   utter_source_code:
@@ -638,7 +612,7 @@ templates:
       out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would
       suggest using the SpacyEntityExtractor component in your pipeline.'
   utter_spacy_or_tensorflow:
-  - text: Looks like for your {language} bot, you can use either spacy or tensorflow_embedding!
+  - text: Looks like for your {language} bot, you can use either spacy or our supervised_embeddings pipeline!
   utter_start_rasax:
   - text: You may run the cell on the left to start Rasa X. After a few seconds, you will
       see a button that will take you to its UI.
@@ -650,11 +624,11 @@ templates:
   - text: 'We have a guide for migrating from LUIS here: https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/.'
   utter_telljoke:
   - text: Why are eggs not very much into jokes? - Because they could crack up.
-  - text: "Do you know a tree's favorite drink? - Root beer!"
+  - text: "What's a tree's favorite drink? - Root beer!"
   - text: "Why do the French like to eat snails so much? - They can't stand fast\
       \ food."
   utter_tensorflow:
-  - text: For {language}, you can only use the tensorflow_embedding pipeline.
+  - text: For {language}, you can only use the supervised_embeddings pipeline.
   utter_thank_suggestion:
   - text: Thanks for the suggestion!
   utter_thanks_for_feedback:
@@ -760,9 +734,7 @@ actions:
 - utter_continue_step2
 - utter_continue_step3
 - utter_continue_step4
-- utter_core_tutorial
 - utter_crf
-- utter_direct_install
 - utter_direct_to_forum_for_help
 - utter_direct_to_step2
 - utter_direct_to_step3
