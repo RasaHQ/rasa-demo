@@ -217,12 +217,13 @@
 * affirm
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 
@@ -242,12 +243,13 @@
 * affirm
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 
@@ -267,12 +269,13 @@
 * affirm
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
@@ -291,12 +294,13 @@
     - action_chitchat
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
@@ -312,15 +316,16 @@
 * affirm
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa + not new to chatbots + not migrating
@@ -336,17 +341,57 @@
 * affirm
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
     - utter_direct_to_step2
 
+
+## new to rasa/bots, explain NLU and try it out
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* how_to_get_started{"product": "nlu"}
+    - utter_explain_nlu
+    - utter_also_explain_core
+* affirm
+    - utter_explain_core
+    - utter_direct_to_step2
+
+## new to rasa/bots, explain rasa x only
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 
 ## new to rasa/bots, explain stack and try it out
 * greet
@@ -358,16 +403,17 @@
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain stack and try it out
@@ -381,34 +427,13 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
-    - action_chitchat
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
-    - utter_direct_to_step2
-
-## new to rasa/bots, explain stack and try it out
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* affirm
-    - action_set_onboarding
-    - slot{"onboarding": true}
-    - utter_built_bot_before
-* deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
-    - utter_explain_nlu
-    - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
@@ -425,9 +450,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
@@ -448,9 +473,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
@@ -472,9 +497,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
@@ -496,9 +521,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
@@ -520,9 +545,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
     - utter_also_explain_core
@@ -543,9 +568,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
     - utter_also_explain_core
@@ -566,12 +591,12 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
-    - utter_explain_nlucore
+    - utter_ask_explain_nlucorex
 * deny
     - utter_direct_to_step2
 
@@ -586,9 +611,9 @@
     - slot{"onboarding": true}
     - utter_built_bot_before
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
 * deny
     - utter_direct_to_step2
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
@@ -662,6 +687,76 @@
 * deny
     - utter_quickstart_nlu_only
     - utter_anything_else
+
+
+## not new to rasa + rasa x + nothing special
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
+    - utter_explain_x
+    - utter_also_explain_nlucore
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - utter_also_explain_nlucore
+* affirm OR explain
+    - utter_explain_nlu
+    - utter_explain_core
+    - utter_direct_to_step2
+
+## not new to rasa + rasa x + nothing special
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
+    - utter_explain_x
+    - utter_also_explain_nlucore
+* deny
+    - utter_direct_to_step2
+
+
+## new to rasa + rasa x + nothing special
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* how_to_get_started{"product": "x"}
+    - slot{"product": "x"}
+    - utter_explain_x
+    - utter_also_explain_nlucore
+* deny
+    - utter_direct_to_step2
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_direct_to_step2
 
 
 ## not new to rasa + nlu + unknown topic
@@ -829,10 +924,34 @@
 * affirm
     - utter_ask_migration
 * deny
-    - utter_explain_stack
-    - utter_stack_details
-    - utter_explain_nlucore
-* affirm OR how_to_get_started{"product":"stack"}
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_x
     - utter_direct_to_step2
+
+## chitchat interrupting step 2 flow
+* get_started_step2
+    - action_greet_user
+    - slot{"step": "2"}
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_ask_continue_rasa_init
+* affirm
+    - utter_run_rasa_init
+
+
+## chitchat interrupting and stopping step 2 flow
+* get_started_step2
+    - action_greet_user
+    - slot{"step": "2"}
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_ask_continue_rasa_init
+* deny
+    - utter_thumbsup
+    - utter_anything_else
+

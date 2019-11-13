@@ -148,8 +148,8 @@ class SalesForm(FormAction):
 
         sales_info = [company, use_case, budget, date, person_name, job_function, email]
 
-        gdrive = GDriveService()
         try:
+            gdrive = GDriveService()
             gdrive.store_data(sales_info)
             dispatcher.utter_template("utter_confirm_salesrequest", tracker)
             return []
@@ -225,9 +225,11 @@ class ActionFaqs(Action):
     def run(self, dispatcher, tracker, domain):
         intent = tracker.latest_message["intent"].get("name")
 
+        logger.debug("Detected FAQ intent: {}".format(intent))
+
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in [
-            "ask_faq_platform",
+            "ask_faq_ee",
             "ask_faq_languages",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",
@@ -375,25 +377,6 @@ class SuggestionForm(FormAction):
 
     def submit(self, dispatcher, tracker, domain):
         dispatcher.utter_template("utter_thank_suggestion", tracker)
-        return []
-
-
-class ActionStackInstallationCommand(Action):
-    """Utters the installation command for rasa depending whether
-       they are using `pip` or `conda`
-    """
-
-    def name(self):
-        return "action_select_installation_command"
-
-    def run(self, dispatcher, tracker, domain):
-        package_manager = tracker.get_slot("package_manager")
-
-        if package_manager == "conda":
-            dispatcher.utter_template("utter_installation_with_conda", tracker)
-        else:
-            dispatcher.utter_template("utter_installation_with_pip", tracker)
-
         return []
 
 

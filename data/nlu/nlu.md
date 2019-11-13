@@ -86,6 +86,24 @@
 - rasa [core](product) vs rasa [nlu](product)
 - what's the difference between [core](product) and [nlu](product)?
 
+## intent:ask_faq_differencerasarasax
+- whats the diff between [rasa](product) and [rasa x](product)
+- what's the difference between [rasa](product) and [rasa x](product:x)
+- How is [Rasa X](product:x) different from [Rasa](product:rasa)?
+- Are [Rasa](product) and [Rasa X](product:x) the same thing?
+- What's new in [Rasa X](product:x) compared to [Rasa](product:rasa)?
+- If I use [Rasa](product:rasa), do I also need [Rasa X](product:x)?
+- i am using [rasa](rasa) nlu, why would i need [rasa x](product:x)?
+- please compare [rasa](product) and [rasa x](product:x)
+- tell me the difference between [rasa](product) and [x](product)
+- tell me the difference between [rasa](product) and [rasa x](product:x)
+- show me comparison between [rasa x](product:x) and [[rasa
+- how does [rasa x](product:x) stack up against [rasa](product:rasa)
+- when should i use [rasa](product:rasa) and when should i use [rasa x](product:x)
+- Do I need both [Rasa](product:rasa) and [Rasa X](product:x)?
+- Can i use [rasa](product:rasa) without [rasa x](product:x)?
+- Can I use [Rasa X](product:x) without using [Rasa](product:rasa)?
+
 ## intent:ask_faq_languages
 - does Rasa support other languages like spanish?
 - what language does rasa support?
@@ -147,26 +165,25 @@
 - is rasa like an open source software
 - is this open source license
 
-## intent:ask_faq_platform
-- can someone help me with infos about the rasa platform
-- I want information about the platform
-- we built a bot with rasa but now we're interested in the platform
-- i want to learn more about Rasa Platform
-- what is the platform?
-- what is platform
-- what is the platform
-- what is the rasa platform
-- Can you tell me about the Platform?
-- can you tell me about the platform?
-- Tell me about rasa platform
-- what is platform?
-- tell me about rasa platform
-- platform functionalities
-- tell me more about rasa platform
-- what is rasa platform
-- Tell me about your platform
-- what is rasa platform?
-- tell me what is platform
+## intent:ask_faq_ee
+- can someone help me with infos about the enterprise edition
+- I want information about the enterprise edition
+- we built a bot with rasa x but now we're interested in the enterprise edition
+- i want to learn more about Rasa X EE
+- what is rasa x ee?
+- what is the enterprise edition
+- what's the rasa x enterprise edition
+- what is rasa x enterprise
+- Can you tell me about the enterprise edition?
+- can you tell me about rasa x ee?
+- Tell me about rasa x ee
+- what is EE?
+- tell me about rasa x EE
+- enterprise features
+- tell me more about rasa x EE
+- what is rasa x enterprise
+- Tell me about rasa x ee
+- tell me what is rasa x ee
 
 ## intent:ask_faq_slots
 - how do slots work
@@ -403,7 +420,6 @@
 - What languages can you converse in?
 - What languages do you know how to use?
 - Which languages are you familiar with?
-- What languages can you use?
 - what languages are you familiar with?
 - what languages you know?
 - In what languages are you fluent enough?
@@ -434,7 +450,6 @@
 
 ## intent:ask_restaurant
 - restaurants
-- can i be shown a gluten free restaurant
 - i want a french restaurant
 - i'm looking for a Chinese restaurant
 - I need a new restaurant
@@ -850,7 +865,6 @@
 - I want to know who you are
 - who are y
 - yes but who are you in your heart
-- are you a bot?
 - who is this?
 - hi! what's your name?
 
@@ -911,7 +925,7 @@
 - I would like to talk to someone from your sales team
 - sales please
 - I want to talk with sales about our project
-- I want an offer for your platform
+- I want an offer for your enterprise product
 - I wanna have a subscription for your product
 - I want to learn more about your pricing
 - I want to talk to someone about your pricing system
@@ -1185,7 +1199,7 @@
 - philipp@superphilipp.philipp
 - I'm in [business](job_function)
 - 5 mln
-- [Alex](name:alex)
+- [Alex](name)
 - my name is [loretta meier](name)
 - I wanna build a super bot to send me cute animal pictures
 - 10000k
@@ -1855,6 +1869,9 @@
 - i want to speak to a manager
 - I want to talk to the founders
 - i want to talk to a human
+- i'm not sure how to run a command
+- yeah, my pip is throwing me some weird error
+- i have an issue with permissions
 
 ## intent:affirm
 - yes
@@ -1912,7 +1929,6 @@
 - fine
 
 ## intent:out_of_scope
-- I want pizza
 - please help with my ice cream it's dripping
 - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
 - i want a non dripping ice cream
@@ -1922,7 +1938,6 @@
 - neither
 - I want french cuisine
 - i am hungry
-- restaurants
 - restaurant
 - you're a loser lmao
 - can i be shown a gluten free restaurant
@@ -1942,7 +1957,6 @@
 - you already have that
 - this is a really frustrating experience
 - no stop
-- i want a french restaurant
 - shit bot
 - do you want to marry me?
 - give me food
@@ -2164,7 +2178,7 @@
 - thanks!
 
 ## intent:how_to_get_started
-- how do I get started with Rasa
+- how do I get started with [Rasa](product:rasa)
 - how do I use rasa
 - what is the difference between rasa [nlu](product) and rasa [core](product)
 - how to start with rasa
@@ -2187,24 +2201,55 @@
 - what is [nlu](product)
 - I want to learn about rasa [core](product)
 - i want to use [nlu](product)
-- [core](product)
-- [nlu](product)
-- rasa [stack](product:core)
-- how to learn rasa [stack](product:core)
-- I want to learn about rasa [nlu](product:nlu)
-- i want to learn about rasa [core](product:core)
+- Get started
+- How to get started with [NLU](product:nlu)
+- How to get started with Rasa [NLU](product:nlu)
+- How to get started with [Core](product:core)
+- get started with [rasa](product)
+- get started with [rasa x](product:x)
+- Get started with [Rasa X](product:x)
+- Help me use [Rasa X](product)
+- How do I get started with [Rasa X](product:x)
+- how to learn rasa [core](product)
+- I want to learn about rasa [nlu](product)
+- i want to learn about rasa [core](product)
 - how to get started with [nlu](product)
-- give me some information on [nlu](product)
+- how do I get started with Rasa [Core](product:core)
+- How do I get started with Rasa [NLU](product:nlu)
+- give me some information on [NLU](product:nlu)
 - tell me how to get started with [core](product)
-- how about [nlu](product)
-- tell me about [core](product) please
+- how about [NLU](product:nlu)
+- tell me about [core](product) Please
 - what is this [nlu](product) thing?
+- what is [rasa x](product)
+- how do i use [core](product)
+- how do i get started with [Rasa X](product:x)
+- Help me with [Core](product:core)
+- Get started
+- Tell me about [both](product:all) Rasa and Rasa X
+- i want to understand [all](product) the products
+- [both](product:all)
+- [all](product) of them
+- [Both](product:all) rasa x and rasa
+- how to get started
+- tell me about [both](product:all) of them
+- how to get started with [rasa x](product:x)
+- how do i get started with [rasa x](product:x)
+- [all](product) the above
+- [both](product:all) of the above
+- Help me get started
+- How to get started with [Rasa X](product:x)
+- how to get started with Rasa [Core](product:core)
+- Help me understand [NLU](product:nlu)
+- How do I use [NLU](product:nlu)
+- Get started with [Rasa](product:rasa)
+- Tell me about [all](product) of them
+- [Rasa](product:rasa)
+- [Both](product:all) of them
 
 ## intent:technical_question
 - what is duckling
 - where to train intents in rasa?
-- duckling
-- dicklung
 - what is duckling
 - i need a help to integrate rasa with a messenger
 - what infrastructure is required to run a bot?
@@ -2220,7 +2265,6 @@
 - should I use rasa instead of ibm Watson api
 - Is Rasa better than Dialogflow?
 - db processing
-- how do slots work
 - what components of Rasa are open source
 - how to integrate rasa chatbot with my website
 - how works rasa
@@ -2502,3 +2546,135 @@
 - why
 - why is that
 - why do you need it
+
+## synonym:1
+- one
+
+## synonym:USA
+- US
+- U.S.
+- USA
+- usa
+- United States
+
+## synonym:United Kingdom
+- UK
+- U.K.
+
+## synonym:all
+- both
+
+## synonym:conda
+- anaconda
+
+## synonym:core
+- Core
+- CORE
+
+## synonym:date
+- dates
+
+## synonym:developer
+- Developer
+
+## synonym:dialogflow
+- dialog flow
+- DialogFlow
+
+## synonym:distance
+- distances
+
+## synonym:duration
+- how long
+- durations
+
+## synonym:entity recognition
+- entity extraction
+
+## synonym:intent classification
+- intents
+- intent
+
+## synonym:luis
+- LUIS
+- LUIS.ai
+- luis.ai
+
+## synonym:money
+- amounts
+
+## synonym:name
+- names
+
+## synonym:nlu
+- NLU
+- Natural Language Understanding
+
+## synonym:organisation
+- companies
+
+## synonym:place
+- places
+
+## synonym:rasa
+- Rasa
+
+## synonym:x
+- Rasa X
+- RASA X
+- X
+
+## lookup:product
+- core
+- nlu
+- x
+- rasa x
+- both
+- all
+
+## lookup:location
+- San Francisco
+- Montreal
+- New York
+- Washington
+- Berlin
+- Zurich
+- Hamburg
+- Frankfurt
+- Munich
+- Madrid
+- Cologne
+- Düsseldorf
+- Barcelona
+- Vienna
+- Warsaw
+- Paris
+- Rome
+- London
+- Prague
+- Sidney
+- Delhi
+- Mumbai
+- Tokyo
+- Rio de Janeiro
+- Beijing
+- Guangzhou
+- Shanghai
+- Chongqing
+- Hong Kong
+- China
+- India
+- US
+- USA
+- Germany
+- United States
+- UK
+- England
+- Brazil
+- France
+- Poland
+- Italy
+- Spain
+- Europe
+- Canada
+- Ukraine

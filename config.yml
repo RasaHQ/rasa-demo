@@ -5,8 +5,13 @@ pipeline:
 - name: CountVectorsFeaturizer
   OOV_token: oov
   token_pattern: (?u)\b\w+\b
+- name: CountVectorsFeaturizer
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
 - name: EmbeddingIntentClassifier
   epochs: 50
+  loss_type: margin
 - name: DucklingHTTPExtractor
   url: http://localhost:8000
   dimensions:
