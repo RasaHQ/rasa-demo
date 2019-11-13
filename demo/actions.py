@@ -242,6 +242,8 @@ class ActionFaqs(Action):
             "ask_faq_community_size",
             "ask_faq_what_is_forum",
             "ask_faq_tutorials",
+            "ask_faq_differencerasarasax",
+            "ask_faq_rasax",
         ]:
             dispatcher.utter_template("utter_" + intent, tracker)
         return []
