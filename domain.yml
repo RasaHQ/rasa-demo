@@ -158,9 +158,9 @@ templates:
   - text: "Looks like {email} is already subscribed - good choice! If you haven't received\
       \ a newsletter in a while, maybe check your spam folder 🗑"
   utter_also_explain_core:
-  - text: Would you also like me to explain Rasa Core?
+  - text: Would you also like me to explain Core?
   utter_also_explain_nlu:
-  - text: Would you also like me to explain Rasa NLU?
+  - text: Would you also like me to explain NLU?
   utter_also_explain_nlucore:
   - text: Would you also like me to explain NLU and Core?
   utter_anything_else:
@@ -225,7 +225,7 @@ templates:
   utter_ask_faq_what_is_forum:
   - text: >-
       [Rasa Forum](https://forum.rasa.com) is the place where all the
-      community buzz happens. It's a place to get the answer to your technical
+      community buzz happens. It's a place to join discussions, get the answers to your technical
       questions and get the latest updates on what's happening at Rasa.
   utter_ask_feedback:
   - buttons:
@@ -237,7 +237,7 @@ templates:
   utter_ask_feedback_message:
   - text: "I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve."
   utter_ask_for_nlu_specifics:
-  - text: Anything in particular you'd like to know about, e.g. intent classification 
+  - text: Anything in particular you'd like to know about, e.g. intent classification
       or entity recognition?'
   utter_ask_goal:
   - text: "If you're new to Rasa, I can help you get started! If you've already started building a bot you can also ask me about the different parts of Rasa 🐦"
@@ -319,9 +319,9 @@ templates:
   utter_ask_whatspossible:
   - text: |
       You can ask me about:
-      - how to get started with Rasa 
-      - the components of Rasa
-      - subscribing to our newsletter 
+      - how to get started with Rasa
+      - Rasa and Rasa X
+      - subscribing to our newsletter
       - booking a sales call
   utter_ask_wherefrom:
   - text: I was born in Berlin, but I consider myself a citizen of the world.
@@ -388,7 +388,7 @@ templates:
        Let's continue, please click
         [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step2%2F%22%3B)
   - text: Let's continue, please click the button
-    buttons: 
+    buttons:
       - title: Next step
         payload: /get_started_step2
   utter_continue_step3:
@@ -397,7 +397,7 @@ templates:
        Let's continue, please click
         [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step3%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step3%2F%22%3B)
   - text: Let's continue, please click the button
-    buttons: 
+    buttons:
       - title: Next step
         payload: /get_started_step3
   utter_continue_step4:
@@ -406,7 +406,7 @@ templates:
        Let's continue, please click
         [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step4%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step4%2F%22%3B)
   - text: Let's continue, please click the button
-    buttons: 
+    buttons:
       - title: Next step
         payload: /get_started_step4
   utter_crf:
@@ -431,7 +431,7 @@ templates:
        [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step2%2F%22%3B)
        if you want to go to the next step to try out Rasa.
   - text: You can click the button if you want to go to the next step to try out Rasa.
-    buttons: 
+    buttons:
       - title: Next step
         payload: /get_started_step2
   utter_direct_to_step3:
@@ -441,10 +441,10 @@ templates:
         [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step3%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step3%2F%22%3B)
         to go to the next step (installing Rasa) when you're ready. Or at any
         point after you're done asking questions, say 'take me to the next step'.
-  - text: If you have no questions, click the button to go to the next step 
-        (installing Rasa) when you're ready. Or at any point after you're done asking questions, 
+  - text: If you have no questions, click the button to go to the next step
+        (installing Rasa) when you're ready. Or at any point after you're done asking questions,
         say 'take me to the next step'.
-    buttons: 
+    buttons:
       - title: Next step
         payload: /get_started_step3
   utter_direct_to_step4:
@@ -455,7 +455,7 @@ templates:
         [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step4%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step4%2F%22%3B).
   - text: The final step is to join the community. Click the button to find more information about our
         community
-    buttons: 
+    buttons:
       - title: Next step
         payload: /get_started_step4
   utter_docu:
@@ -483,7 +483,7 @@ templates:
   - text: >-
       Core decides what happens next in this conversation. Its machine
       learning-based dialogue management predicts the next best action based
-      on the input from NLU, the conversation history and your training data. 
+      on the input from NLU, the conversation history and your training data.
 
       (Example: Core has a confidence of 87% that ask_primary_change is the
       next best action to confirm with the user if they want to change their
@@ -513,7 +513,7 @@ templates:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/)
       for more information.
   utter_ask_faq_differencecorenlu:
-  - text: Rasa NLU’s job is to interpret messages, and Rasa Core’s job is to decide what should happen next.
+  - text: NLU’s job is to interpret messages, and Core’s job is to decide what should happen next.
   utter_ask_faq_differencerasarasax:
   - text: Rasa is a framework you can use to build a bot. Rasa X is a tool
       built on top of Rasa that comes with a UI that helps you learn from real
@@ -533,14 +533,15 @@ templates:
   utter_first_bot_with_rasa:
   - text: Let's go. Are you new to Rasa?
   utter_get_started_step1:
-  - text: If you're new to Rasa, I can help you get started!
+  - text: If you're new to Rasa, I can help you get started! Shall we?
   utter_get_started_step2:
-  - text: You can try out the Rasa Stack directly here on this page or on 
-      our local machine. I'm here to help if you have any questions. 
+  - text: You can try out the Rasa Stack directly here on this page or on
+      our local machine. I'm here to help if you have any questions.
       \n I'm still learning though, so I may not have all the answers.
   utter_get_started_step3:
-  - text: Now it is time to start building the first bot yourself. I can help 
-      you with the installation.
+  - text: Now, let's take a look at Rasa X, which provides you with a user interface
+      where you can view and annotate real conversations, get feedback from testers,
+      version and manage models and [much more](https://rasa.com/docs/rasa-x/). Are you ready?
   utter_get_started_step4:
   - text: As a Rasa developer you will be part of a huge community. You can
       ask me about the upcoming Rasa events, ways to contribute or about
@@ -592,7 +593,7 @@ templates:
   - text: If you haven't already read the detailed instruction guide,
       you can look it up [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
   utter_ask_ready_to_build:
-  - text: Did that work?
+  - text: If you got it successfully installed, are ready to start building a chatbot?
   utter_link_to_forum:
   - text: "Here's the link to the forum: [https://forum.rasa.com](https://forum.rasa.com)"
   utter_moreinformation:
@@ -655,28 +656,35 @@ templates:
       that request.
   utter_possibilities:
   - text: |
-      You can ask me about: 
+      You can ask me about:
       - how to get started with Rasa
-      - the components of Rasa, 
-      - booking a sales call 
+      - the components of Rasa,
+      - booking a sales call
       - subscribing to our newsletter
   utter_possibilities_to_contribute:
   - text: Check out the [Contribute to Rasa](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how
       to contribute code or content. You can also help by answering other members' questions on the
       [forum](http://forum.rasa.com).
   utter_quickstart_nlu_only:
-  - text: "Here's a [quickstart tutorial](https://rasa.com/docs/nlu/quickstart/) using Rasa NLU only.
+  - text: "Here's a [quickstart tutorial](https://rasa.com/docs/nlu/quickstart/).
       You don't have to install anything to try it out."
   utter_rasa_components_details:
   - text: Rasa is an open source machine learning framework for automated text and voice-based conversations.
       Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa framework.
   utter_rasa_cost:
   - text: >-
-      The Rasa Stack is open source and completely free to use. You can get
-      started [here](https://rasa.com/docs/get_started_step1/). 
-      
-      Rasa Platform is our enterprise product, find out more
-      [here](https://rasa.com/products/rasa-platform/).
+      The Rasa machine learning framework is open source!
+
+      In addition to that, we offer a toolset [Rasa X](https://rasa.com/docs/rasa-x/),
+      which comes in two editions:
+
+      - Rasa X Community Edition (Free)
+
+      - Rasa X Enterprise Edition (Paid Subscription)
+
+
+      You can find out more [here](https://rasa.com/product/pricing/) about the
+      differences between the Rasa X editions.
   utter_react_negative:
   - text: "😕"
   - text: "😞"
@@ -802,7 +810,6 @@ actions:
 - utter_ask_faq_community_size
 - utter_ask_faq_differencecorenlu
 - utter_ask_faq_differencerasarasax
-- utter_ask_faq_tutorialnlu
 - utter_ask_faq_languages
 - utter_ask_faq_opensource
 - utter_ask_faq_ee
@@ -810,6 +817,7 @@ actions:
 - utter_ask_faq_rasax
 - utter_ask_faq_slots
 - utter_ask_faq_tutorialcore
+- utter_ask_faq_tutorialnlu
 - utter_ask_faq_tutorials
 - utter_ask_faq_voice
 - utter_ask_faq_what_is_forum

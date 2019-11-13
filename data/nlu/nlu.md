@@ -11,6 +11,39 @@
 - i need a rasa tutorial
 - please show me a tutorial
 
+## intent:ask_faq_tutorialcore
+- are there some core tutorials i could look at
+- do you have tutorials about core
+- i need a tutorial on how to use rasa core
+- rasa core tutorial
+- core tutorial
+- can you show me a core tutorial
+- i would like to follow a core tutorial
+- do you have a core tutorial i can follow
+- i am looking for a core tutorial
+- i want a tutorial on rasa core
+- i want a tutorial on core
+- i need a rasa core tutorial
+- i need a core tutorial
+- please show me a core tutorial
+
+
+## intent:ask_faq_tutorialnlu
+- are there some nlu tutorials i could look at
+- do you have tutorials about nlu
+- i need a tutorial on how to use rasa nlu
+- rasa nlu tutorial
+- nlu tutorial
+- can you show me a nlu tutorial
+- i would like to follow a nlu tutorial
+- do you have a nlu tutorial i can follow
+- i am looking for a nlu tutorial
+- i want a tutorial on rasa nlu
+- i want a tutorial on nlu
+- i need a rasa nlu tutorial
+- i need a nlu tutorial
+- please show me a nlu tutorial
+
 ## intent:ask_faq_python_version
 - which python version should i install
 - what version of python
@@ -184,6 +217,16 @@
 - what is rasa x enterprise
 - Tell me about rasa x ee
 - tell me what is rasa x ee
+
+## intent:ask_faq_rasax
+- can someone help me with infos about rasa x
+- I want information about rasa x
+- i want to learn more about Rasa X
+- what is rasa x?
+- Can you tell me about rasa x?
+- Tell me about rasa x
+- Rasa X features
+- tell me what is rasa x
 
 ## intent:ask_faq_slots
 - how do slots work
@@ -1939,7 +1982,6 @@
 - I want french cuisine
 - i am hungry
 - restaurant
-- you're a loser lmao
 - can i be shown a gluten free restaurant
 - i don't care!!!!
 - i do not care how are you
@@ -1957,7 +1999,6 @@
 - you already have that
 - this is a really frustrating experience
 - no stop
-- shit bot
 - do you want to marry me?
 - give me food
 - i want food
@@ -1969,8 +2010,6 @@
 - i want pizza!!
 - silly bot
 - i want to eat
-- you are a stupid bot
-- i hate you
 - Can I ask you questions first?
 - is it a wasteland full of broken robot parts?
 - i can't deal with _your_ request
@@ -1985,7 +2024,6 @@
 - you're rather dull
 - personal or work?
 - are you using Rasa Core and NLU ?
-- tell me a joke
 - what else?
 - I already told you! I'm a shitmuncher
 - I'm a shitmuncher
@@ -2005,8 +2043,6 @@
 - i told you already
 - better than you
 - oh my god, not again!
-- you are a badass bot!
-- lol
 - why do you need that?
 - is that any of your business
 - can you help me with your docs?
@@ -2025,16 +2061,95 @@
 - it's a pity
 - i want more of you in my life!
 - the one that is better than you
-- you suck
 - bots are bad
 - i dont like bots
- - do you have a phone number?
+- do you have a phone number?
 - where do you live?
 - how are akela's cats doing?
 - but I just told you that :(
 - Why don’t you answer?
 - But you're an english site :(
 - can you help me to build a bot
+
+## intent:react_negative
+- i am sad
+- bad
+- super sad
+- i am very sad
+- documentation of rasa is very bad
+- i sad
+- i am sad about that
+- bad boy
+- i am feel sad
+- I'm super sad
+- i feel sad
+- sad
+- i'm sad
+- I am super sad
+- you are bad
+- so sad :(
+- I'm sad
+- you make me sad
+- Now I'm sad
+- crappy joke
+- rasa is bad
+- u broke my heart
+- so sad
+- I am sad
+-  I am feeling bad
+- very very sad
+- i am angry over you
+- you are bad bot
+- This is bad
+- You are quite bad
+
+## intent:react_positive
+- you are funny
+- thats funny
+- you are cool man
+- you are doin great
+- you are a badass bot!
+- happy
+- that was a great interaction
+- i am happy
+- i am happy today
+- :)
+- Wow
+- You're really cool
+- you seem pretty cool :D
+- Lol
+- hAHAHA
+- today was a nice day
+- lol
+- you are awesome
+- I am happy
+- rasa is awesome
+- You're nice.
+- You're cute.
+- wow
+- haha
+- WOW
+- lol
+- wow
+- such a great demo
+- ha ha
+- HAHA
+- i am feeling happy
+- i am very happy with your response
+- You are great
+- i love you
+- LOL
+- you are cool
+- that is funny
+- love you
+- hahaha
+- hahah
+- you are great
+- it's pretty cool
+- okay Rasabot, you're cool
+- Lol thats funny
+- :D
+- you are my new bestfriend
 
 ## intent:signup_newsletter
 - I wanna sign up for the newsletter.
@@ -2149,6 +2264,48 @@
 - i want on that dope newsletter
 - Subscribe
 
+## intent:telljoke
+- Tell me something that you think will make me laugh.
+- Entertain me with a joke.
+- What's a good joke?
+- Come up with a joke you think I'll find funny.
+- Tell joke.
+- Give me a funny joke.
+- tell me something funny, like a joke
+- Do you have any jokes?
+- Could you tell me a joke.
+- Would you tell me a joke
+- say a funny joke
+- Tell me something humorous!
+- say a joke that's so bad it's funny
+- Please tell me a joke.
+- Give me a joke.
+- I want to hear something funny.
+- Tell me something funny.
+- say a joke that's funny
+- Let's hear a joke from you.
+- Will you tell me a joke.
+- make me laugh with a bad joke
+- Would you share a joke with me.
+- Can you tell a joke?
+- give me a good joke
+- make me laugh with a joke
+- tell me a joke
+- Can you tell me a joke.
+- say a joke
+- Know any jokes?
+- I need a good joke.
+- Make me laugh.
+- you can say a joke
+- Share a joke with me!
+- Do you know any jokes?
+- Tell me the best joke you know.
+- tell me a short joke
+- Give me some comic relief.
+- tell me a story joke
+- Say something funny.
+- Could you please share a joke with me.
+
 ## intent:thank
 - Thanks
 - Thank you
@@ -2176,6 +2333,107 @@
 - cool thanks
 - thanks for forum link, I'll check it out
 - thanks!
+
+## intent:handleinsult
+- you are an idiot
+- You lack understanding.
+- you son of a bitch
+- Fuck Off
+- you idiot
+- You have no intelligence.
+- but you are idiot
+- you are useless bot
+- fuck you
+- bitch
+- you're the most moronic person I know
+- you're an idiot
+- fuck rasa
+- fucking stupid
+- You're a dolt.
+- you are stupid
+- what fuck
+- Fuck you
+- are u dump?
+- shut up asshole
+- I can't believe how dumb you are
+- sara you look like a burnt sparrow
+- Fuck u
+- You are unintelligent.
+- idiot
+- you are fucking stupid guy！
+- Your mindset is naive.
+- you're a loser lmao
+- so dumb
+- You lack intelligence.
+- asshole
+- insult you
+- You're an idiot.
+- fuck you sara
+- you idiot bot
+- Loser
+- you are so ignorant
+- go fuck yourself
+- you are idiot
+- so fucking dumb
+- bloody dunce
+- you are dumb
+- you are unintelligent
+- get lost
+- fuck you!
+- You brain is dull.
+- sucker
+- you're so dumb
+- Your intelligence is laughable.
+- thta was a terrible fucking joke
+- you asshole
+- fuck you
+- that wasn't very funny
+- FUCK
+- Fuck
+- how can you be such an idiot?
+- u r a piece of junk
+- You are shortsighted.
+- You know nothing.
+- f*ck
+- fuck off
+- ok shut up
+- Fuck off
+- you suck
+- a baby knows more than you
+- you are idiotic
+- You have no sense.
+- you are fucking stupid
+- You are a fool.
+- go away
+- You have no brains.
+- you are a stupid bot
+- ur a pussy
+- yep but you are idiot
+- Stupid
+- You are unknowing.
+- God you're a moron
+- shit
+- you're dumb
+- You are dumb.
+- I hate you
+- you are a moron
+- shit bot
+- i hate you
+- fuck you machine learning bot
+- i hate your dumb face
+- are you brain dead?
+- deal with my ass, you bitch
+- i think that you're a bullshit
+- you're not smart
+- fucking work
+- You are an idiot.
+- You're a dunce.
+- fuck u
+- ok fuck you
+- Fuck off
+- fuck
+- go to hell
+- You're foolish.
 
 ## intent:how_to_get_started
 - how do I get started with [Rasa](product:rasa)
@@ -2244,7 +2502,6 @@
 - How do I use [NLU](product:nlu)
 - Get started with [Rasa](product:rasa)
 - Tell me about [all](product) of them
-- [Rasa](product:rasa)
 - [Both](product:all) of them
 
 ## intent:technical_question
@@ -2275,6 +2532,37 @@
 - having some problems with installation
 - does rasa support voice input
 - is there an alexa integration
+
+## intent:source_code
+- how it works?
+- where can i find this code
+- Where can I find your source code?
+- how do u work?
+- where is the source code?
+- how can i get the code for the demo bot?
+- i need the source code to this bot
+- i want to use your source code
+- demo bot source code
+- can i look at your source code
+- where can I download the source code?
+- do u give me the code
+- where can I find the rasa source code?
+- your code
+- we want to have full code of rasa chatbot
+- Where can i find the source code
+- hey can you provide me the code of yours
+- what is your source code
+- can i see your code
+- can i know your source code ?
+- i need source code
+- source code
+- yes with your source code
+- where is your source code
+- your code please
+- how to get the source code
+- Can u tell where is ur code
+- what's your source code?
+- is your code available?
 
 ## intent:switch
 - I currently use [dialog flow](current_api:dialogflow)
@@ -2358,6 +2646,97 @@
 - recommend pipeline
 - pipeline recommendation
 - give me a recommendation
+
+## intent:rasa_cost
+- is rasa free
+- are you really free
+- Whats the cost?
+- can you give me prices ?
+- is it for free?
+- is rasa stack free
+- how much is it
+- what is the enterprise pricing schedule?
+- Subscription cost?
+- what is the price of rasa
+- how much does it cost
+- What is the cost of RASA?
+- what is rasa cost ?
+- how much does rasa cost
+- How much do you cost?
+- how much costs the rasa platform
+- Can you tell me whats the price for rasa platform?
+- can you tell me prices
+- your cost?
+- this is free?
+- how mush does rasa cost
+- cost
+- is rasa [core](product) paid?
+- what is the price?
+- are you free ?
+- how much does it cost normally?
+- whats the cost of rasa
+- is it free?
+- I would like to know the cost first.
+- are you really free?
+- is it free
+- What is the price ?
+- cost?
+- price?
+- give me the pricing
+- What does Rasa cost?
+- how much does Rasa cost ?
+- is rasa free of cost
+- what is pricing of rasa
+- I want to learn more about the pricing
+
+## intent:nicetomeeyou
+- It’s great connecting with you.
+- Hi, nice to meet you!
+- Glad to meet you!
+- Glad we've met.
+- Lovely to meet you.
+- Glad to meet you.
+- It's nice to finally meet you.
+- I am glad I met you.
+- Hi Sara, just wanted to test you
+- I am glad he introduced us.
+- Glad to make your acquaintance.
+- Great to meet you!
+- I'm pleased to meet you!
+- I'm happy that we have met!
+- nice to meet you
+- It's great to get to know you!
+- I had a great meeting with you
+- Pleased to meet you!
+- Hi, glad to meet you.
+- It’s a pleasure to meet you
+- It's wonderful to meet you!
+- Thank you for this meeting. It was great to see you.
+- Feels great to see you!
+- It's a pleasure to meet you!
+- It is indeed a pleasure to be able to meet you.
+- Great seeing you
+- It's a pleasure to make your acquaintance!
+- Glad to meet you
+- See you around. It was a pleasure meeting you.
+- Good to see you!
+- Pleased to make your acquaintance!
+- I'm glad to have met you!
+- It's good that I could meet you. It was a pleasure.
+- It was nice to have met you
+- Good to meet you!
+- I'm thrilled to meet you!
+- Happy to get to see you.
+- I'm so happy that I could meet you.
+- Pleased to meet you.
+- It's great to make your acquaintance!
+- Glad to finally meet you!
+- Great interacting with you
+- It was a pleasure to have your company.
+- Delighted to make your acquaintance.
+- I'm glad to meet you!
+- Great to meet you.
+- Nice to have met you.
 
 ## intent:nlu_generation_tool_recommendation
 - which tools can I use to create nlu data
