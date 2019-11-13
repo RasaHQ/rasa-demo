@@ -253,7 +253,7 @@ templates:
   - text: A little bit too warm, otherwise fine.
   - text: A little bit cold, otherwise fine.
   utter_ask_howold:
-  - text: Old enough to be a bot
+  - text: Old enough to be a bot!
   - text: '42'
   - text: >-
         Age is just an issue of mind over matter. If you don’t mind, it doesn’t
@@ -263,10 +263,10 @@ templates:
   - text: Why do you ask? Are my wrinkles showing?
   - text: I've hit the age where I actively try to forget how old I am.
   utter_ask_if_problem:
-  - text: Did you encounter a problem during installation?
+  - text: Did you encounter any problems during installation?
   utter_ask_isbot:
   - text: Yep, I'm a bot!
-  - text: Yes, I'm a bot
+  - text: Yes, I'm a bot.
   - text: Yep, you guessed it, I'm a bot!
   - text: "I am indeed a bot 🤖"
   utter_ask_job_function:
@@ -300,7 +300,7 @@ templates:
   utter_ask_use_case:
   - text: What kind of bot do you want to build with Rasa?
   utter_ask_weather:
-    - text: 'I don''t know about where you live, but in my world it''s always sunny ☀️'
+    - text: "I don't know about where you live, but in my world it's always sunny *"
     - text: It's sunny where I live!
     - text: 'The flowers are starting to blossom, so it must be spring!'
     - text: "Spring is here 💐"
@@ -373,7 +373,7 @@ templates:
   - text: >-
       No problem, here's a [course on
       Datacamp](https://www.datacamp.com/courses/building-chatbots-in-python)
-      that teaches you about building your own chatbot.🤓
+      that teaches you about building your own chatbot 🤓
   utter_confirm_salesrequest:
   - text: "Thanks a bunch, we'll be in touch soon! ✉️"
   utter_confirmationemail:
@@ -411,8 +411,8 @@ templates:
         payload: /get_started_step4
   utter_crf:
   - text: >-
-      For custom entities like that, I would suggest the ner_crf pipeline,
-      read more about how to annotate entities in your data
+      For custom entities like that, I would suggest using the CRFEntityExtractor component.
+      Read more about how to annotate entities in your data
       [here](https://rasa.com/docs/nlu/dataformat/).
   utter_default:
   - text: "Sorry, I didn't get that 🤷. Could you please rephrase?"
@@ -465,7 +465,7 @@ templates:
   utter_dont_know_nlu_part:
   - text: Hmm, seems like I haven't learned about that part of NLU yet!
   utter_duckling:
-  - text: "For this entity I'd suggest using the rule based ner_duckling_http component 🐥"
+  - text: "For that entity I'd suggest using the rule-based DucklingHTTPExtractor component 🐥"
   utter_duckling_info:
   - text: >-
       Duckling is a rule-based entity recognition library from Facebook.
@@ -622,7 +622,7 @@ templates:
   utter_nlu_tools:
   - text: "We recommend using Rasa X to easily create and classify NLU data from within a UI."
   utter_no_community_event:
-  - text: Looks like we don't have any Rasa events planned for now
+  - text: Looks like we don't have currently have any Rasa events planned.
   utter_no_email:
   - text: "Hmm, I'm not sure that's a valid email, please make sure to include the full address 😅"
   utter_no_event_for_location_but_next:
@@ -630,8 +630,8 @@ templates:
       is the {event_name} in {event_location} on {event_date}.
   utter_no_guide_for_switch:
   - text: >-
-      Sorry, but we don't have a guide for this yet. Please follow the
-      [Rasa Tutorial](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/).
+      Sorry, but we don't have a migration guide for that tool yet. You can still follow the
+      [tutorial](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/) to build a Rasa bot based on your existing one, though!
   utter_no_more_steps:
   - text: Looks like you've already gone through all the steps!
   utter_no_speak:
@@ -646,11 +646,11 @@ templates:
   - text: You're welcome!
   - text: I'm happy to help.
   utter_offer_recommendation:
-  - text: Would you like me to try and recommend a pipeline?
+  - text: Would you like me to try to recommend a pipeline?
   utter_out_of_scope:
-  - text: 'I can''t help you with that, I''m sorry.'
+  - text: "I can't help you with that, I'm sorry."
   - text: 'Sorry, I can’t deal with that request.'
-  - text: 'I''m sorry, I can''t handle that request.'
+  - text: "I'm sorry, I can''t handle that request."
   - text: >-
       Even a Rasa bot is not completely perfect - it seems like I can't handle
       that request.
@@ -707,7 +707,7 @@ templates:
       '
   utter_recommend_forum:
   - text: >-
-        You should join the [Rasa Community forum](https://forum.rasa.com) where
+        You should join the [Rasa Community forum](https://forum.rasa.com), where
         you can ask questions about the Rasa Stack, find resources and stay
         up-to-date with what's happening at Rasa.
   utter_response_why_email:
@@ -732,11 +732,11 @@ templates:
   utter_search_bar:
   - text: Try using the search bar above for now.
   utter_source_code:
-  - text: "Like the Rasa Stack, my code is completely open source and you can find it [here](https://github.com/RasaHQ/rasa-demo) 👻"
+  - text: "Like Rasa, my code is completely open source and you can find it [here](https://github.com/RasaHQ/rasa-demo) 👻"
   utter_spacy:
   - text: 'SpaCy has excellent pre-trained named-entity recognizers for this -- check
       out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would
-      suggest using the ner_spacy component in your pipeline.'
+      suggest using the SpacyEntityExtractor component in your pipeline.'
   utter_spacy_or_tensorflow:
   - text: Looks like for your {language} bot, you can use either spacy or our supervised_embeddings pipeline!
   utter_start_rasax:
