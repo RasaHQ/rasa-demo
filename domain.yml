@@ -301,9 +301,9 @@ templates:
   - text: What kind of bot do you want to build with Rasa?
   utter_ask_weather:
     - text: "I don't know about where you live, but in my world it's always sunny *"
-    - text: It's sunny where I live!
-    - text: 'The flowers are starting to blossom, so it must be spring!'
-    - text: "Spring is here 💐"
+    - text: It's getting pretty chilly!
+    - text: "Where I'm from, it's almost never-leaving-the-house weather."
+    - text: "Winter is coming ⚔️"
   utter_ask_whatismyname:
   - text: It's probably the one that your parents chose for you.
   - text: I'd tell you, but there's restricted access to that chunk of memory.
@@ -713,6 +713,9 @@ templates:
   utter_response_why_email:
   - text: I need your email address to sign you up to the newsletter.
   - text: I need it so that I can sign you up to the newsletter.
+  utter_restart:
+    - text: "Loading... And I've been restarted! 🤯"
+    - text: "Congrats you've restarted me! 😉"
   utter_restart_with_button:
   - buttons:
     - payload: /restart
