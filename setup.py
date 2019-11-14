@@ -3,7 +3,7 @@ import io
 import os
 
 install_requires = [
-    "rasa==1.0.9",
+    "rasa==1.4.3",
     "mailchimp3~=3.0.2",
     "oauth2client~=4.1.2",
     "gspread~=3.0.0",
@@ -26,8 +26,8 @@ setup(
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         # supported python versions
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
     ],
     packages=find_packages(),
     version="1.1",
