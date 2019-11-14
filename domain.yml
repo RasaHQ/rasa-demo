@@ -442,7 +442,7 @@ templates:
         to go to the next step (installing Rasa) when you're ready. Or at any
         point after you're done asking questions, say 'take me to the next step'.
   - text: If you have no questions, click the button to go to the next step
-        (installing Rasa) when you're ready. Or at any point after you're done asking questions,
+        when you're ready. Or at any point after you're done asking questions,
         say 'take me to the next step'.
     buttons:
       - title: Next step
@@ -535,13 +535,10 @@ templates:
   utter_get_started_step1:
   - text: If you're new to Rasa, I can help you get started! Shall we?
   utter_get_started_step2:
-  - text: You can try out the Rasa Stack directly here on this page or on
-      our local machine. I'm here to help if you have any questions.
-      \n I'm still learning though, so I may not have all the answers.
+  - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
   - text: Now, let's take a look at Rasa X, which provides you with a user interface
-      where you can view and annotate real conversations, get feedback from testers,
-      version and manage models and [much more](https://rasa.com/docs/rasa-x/). Are you ready?
+      where you can view and annotate real conversations to improve your assistant. Sound good?
   utter_get_started_step4:
   - text: As a Rasa developer you will be part of a huge community. You can
       ask me about the upcoming Rasa events, ways to contribute or about

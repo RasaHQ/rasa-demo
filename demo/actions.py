@@ -585,8 +585,8 @@ class CommunityEventAction(Action):
         event_items = ["- {} in {}".format(e.name_as_link(), e.city) for e in events]
         locations = "\n".join(event_items)
         dispatcher.utter_message(
-            "Here are the next Rasa events:\n"
-            "" + locations + "\nWe hope to see you at them!"
+            "Here are the next Rasa events:\n\n"
+            + locations + "\n\nWe hope to see you at them!"
         )
 
     def _utter_next_event(
