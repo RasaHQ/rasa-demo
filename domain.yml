@@ -428,7 +428,7 @@ templates:
   - channel: socketio
     text: >-
        You can click
-       [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step2%2F%22%3B)
+       [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22http%3A%2F%2F127.0.0.1%3A8000%2Fgetting-started.html%23try-rasa%22%3B%0A)
        if you want to go to the next step to try out Rasa.
   - text: You can click the button if you want to go to the next step to try out Rasa.
     buttons:
@@ -438,8 +438,8 @@ templates:
   - channel: socketio
     text: >-
        If you have no questions, click
-        [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step3%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step3%2F%22%3B)
-        to go to the next step (installing Rasa) when you're ready. Or at any
+        [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step3%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22http%3A%2F%2F127.0.0.1%3A8000%2Fgetting-started.html%23improve-assistants-faster-with-rasa-x%22%3B%0A)
+        when you're ready to go to the next step. Or, at any
         point after you're done asking questions, say 'take me to the next step'.
   - text: If you have no questions, click the button to go to the next step
         when you're ready. Or at any point after you're done asking questions,
@@ -452,7 +452,7 @@ templates:
     text: >-
        The final step is to join the community, find more information about our
         community
-        [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step4%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fget_started_step4%2F%22%3B).
+        [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step4%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22http%3A%2F%2F127.0.0.1%3A8000%2Fgetting-started.html%23join-the-community%22%3B%0A).
   - text: The final step is to join the community. Click the button to find more information about our
         community
     buttons:
