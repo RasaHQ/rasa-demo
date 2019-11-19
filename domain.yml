@@ -187,7 +187,7 @@ templates:
   utter_ask_entities:
   - text: What kind of entities do you want to extract?
   utter_ask_explain_nlucorex:
-  - text: Would you like to know more about Rasa or Rasa X?
+  - text: Would you like to know more about Rasa Open Source or Rasa X?
   utter_ask_faq_channels:
   - text: We have a [comprehensive list of supported connectors](https://rasa.com/docs/core/connectors/),
       but if you don't see the one you're looking for, you can always create a custom
@@ -330,7 +330,7 @@ templates:
   - text: I was taught not to give out my address on the internet.
   - text: My address starts with github.com.
   utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Rasa or Rasa X?
+  - text: Ok, which product would you like to know more about? Rasa Open Source or Rasa X?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
   utter_ask_whoami:
@@ -429,8 +429,8 @@ templates:
     text: >-
        You can click
        [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started.html%23build-an-assistant-with-rasa-open-source%22%3B)
-       if you want to go to the next step to try out Rasa.
-  - text: You can click the button if you want to go to the next step to try out Rasa.
+       if you want to go to the next step to try out Rasa Open Source.
+  - text: You can click the button if you want to go to the next step to try out Rasa Open Source.
     buttons:
       - title: Next step
         payload: /get_started_step2
@@ -507,7 +507,7 @@ templates:
   - text: In order to help you best, we need to know what you want to do with Rasa.
   utter_explain_x:
   - text: Rasa X is a tool that helps you build, improve, and deploy AI Assistants that
-      are powered by the Rasa framework. Rasa X includes a user interface and a REST
+      are powered by the Rasa Open Source framework. Rasa X includes a user interface and a REST
       API.
   utter_faq_channels_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/)
@@ -515,10 +515,10 @@ templates:
   utter_ask_faq_differencecorenlu:
   - text: NLU’s job is to interpret messages, and Core’s job is to decide what should happen next.
   utter_ask_faq_differencerasarasax:
-  - text: Rasa is a framework you can use to build a bot. Rasa X is a tool
-      built on top of Rasa that comes with a UI that helps you learn from real
+  - text: Rasa Open Source is a framework you can use to build a bot. Rasa X is a tool
+      built on top of Rasa Open Source that comes with a UI that helps you learn from real
       conversations and improve your bot. Using it is completely optional, though. If you'd like,
-      you can use Rasa on its own.
+      you can use Rasa Open Source on its own.
   utter_faq_language_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/nlu/language-support/) for
       more information.
@@ -577,11 +577,11 @@ templates:
         policy](https://rasa.com/privacy-policy/).
   utter_installation_command:
   - text: "You will first need to install Rasa using this installation
-      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\nSince Rasa is a
+      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\nSince Rasa Open Source is a
       dependency for Rasa X, this command will install both of them together."
   utter_installation_command_followup:
   - text: "Once you're done, you can install Rasa with pip using the following command.
-      \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\". \n\nSince Rasa is a
+      \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\". \n\nSince Rasa Open Source is a
       dependency for Rasa X, this command will install both of them together."
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed
@@ -666,8 +666,8 @@ templates:
   - text: "Here's a [quickstart tutorial](https://rasa.com/docs/nlu/quickstart/).
       You don't have to install anything to try it out."
   utter_rasa_components_details:
-  - text: Rasa is an open source machine learning framework for automated text and voice-based conversations.
-      Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa framework.
+  - text: Rasa Open Source is a machine learning framework for automated text and voice-based conversations.
+      Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa Open Source framework.
   utter_rasa_cost:
   - text: >-
       The Rasa machine learning framework is open source!
@@ -705,7 +705,7 @@ templates:
   utter_recommend_forum:
   - text: >-
         You should join the [Rasa Community forum](https://forum.rasa.com), where
-        you can ask questions about the Rasa Stack, find resources and stay
+        you can ask questions about Rasa Open Source and Rasa X, find resources, and stay
         up-to-date with what's happening at Rasa.
   utter_response_why_email:
   - text: I need your email address to sign you up to the newsletter.
@@ -732,7 +732,7 @@ templates:
   utter_search_bar:
   - text: Try using the search bar above for now.
   utter_source_code:
-  - text: "Like Rasa, my code is completely open source and you can find it [here](https://github.com/RasaHQ/rasa-demo) 👻"
+  - text: "Like Rasa Open Source, my code is freely available on GitHub! You can find it [here](https://github.com/RasaHQ/rasa-demo) 👻"
   utter_spacy:
   - text: 'SpaCy has excellent pre-trained named-entity recognizers for this -- check
       out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would
