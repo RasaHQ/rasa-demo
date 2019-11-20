@@ -1796,13 +1796,6 @@
 - [distances](entity:distance)
 - the [distance](entity) between places
 - the [distance](entity) from one place to an other
-- I want to use [pip](package_manager)
-- [pip](package_manager)
-- [conda](package_manager)
-- i use [anaconda](package_manager)
-- please give me instructions for [pip](package_manager)
-- please [conda](package_manager)
-- [pip](package_manager) please
 
 ## intent:greet
 - Hi

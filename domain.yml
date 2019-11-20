@@ -83,7 +83,6 @@ entities:
 - number
 - product
 - user_type
-- value
 slots:
   budget:
     type: unfeaturized
@@ -125,8 +124,6 @@ slots:
     - entity recognition
     - intent classification
     - duckling
-  new_to_python:
-    type: bool
   onboarding:
     type: bool
   person_name:
@@ -822,6 +819,7 @@ actions:
 - utter_ask_faq_voice
 - utter_ask_faq_what_is_forum
 - utter_ask_feedback
+- utter_ask_feedback_message
 - utter_ask_for_nlu_specifics
 - utter_ask_goal
 - utter_ask_howbuilt
@@ -863,6 +861,7 @@ actions:
 - utter_continue_step3
 - utter_continue_step4
 - utter_crf
+- utter_default
 - utter_direct_to_forum_for_help
 - utter_direct_to_step2
 - utter_direct_to_step3
@@ -918,6 +917,7 @@ actions:
 - utter_no_email
 - utter_no_event_for_location_but_next
 - utter_no_guide_for_switch
+- utter_no_more_steps
 - utter_no_speak
 - utter_nohelp
 - utter_not_sure
@@ -934,9 +934,11 @@ actions:
 - utter_reasons_to_contribute
 - utter_recommend_forum
 - utter_response_why_email
+- utter_restart
 - utter_restart_with_button
 - utter_run_rasa_init
 - utter_sales_contact
+- utter_salesrequest_failed
 - utter_search_bar
 - utter_source_code
 - utter_spacy
@@ -947,6 +949,7 @@ actions:
 - utter_switch_luis
 - utter_telljoke
 - utter_tensorflow
+- utter_thank_suggestion
 - utter_thumbsup
 - utter_what_help
 - utter_what_language
