@@ -203,7 +203,7 @@ templates:
   - text: Rasa is open source! We strive to provide well-maintained and documented open source tools,
       allowing all makers to build the best AI assistants without friction.
   utter_ask_faq_ee:
-    - text: "Rasa X EE is our enterprise product, which comes with more options for increasing security and privacy, as well as expert support."
+    - text: "Rasa Enterprise is our enterprise product, which comes with more options for increasing security and privacy, as well as expert support."
   utter_ask_faq_python_version:
   - text: "The supported Python versions are 3.6 and higher 🐍. The recommended version is 3.7."
   utter_ask_faq_rasax:
@@ -556,7 +556,7 @@ templates:
   utter_greet:
   - text: Hey there, my name is Sara.
   - text: Hi, I'm Sara!
-  - text: Hello hello
+  - text: Hi! My name's Sara.
   utter_greet_name:
   - text: Hi, {name}!
   - text: Hello, {name}!
@@ -577,7 +577,7 @@ templates:
         policy](https://rasa.com/privacy-policy/).
   utter_installation_command:
   - text: "You will first need to install Rasa using this installation
-      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\nSince Rasa Open Source is a
+      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\n Since Rasa Open Source is a
       dependency for Rasa X, this command will install both of them together."
   utter_installation_command_followup:
   - text: "Once you're done, you can install Rasa with pip using the following command.
