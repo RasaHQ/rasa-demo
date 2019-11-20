@@ -2823,64 +2823,6 @@
 - when is the next usergroup
 - do you have an event in [Berlin](location)
 
-## lookup:location
-- San Francisco
-- Montreal
-- New York
-- Washington
-- Berlin
-- Zurich
-- Hamburg
-- Frankfurt
-- Munich
-- Madrid
-- Cologne
-- Düsseldorf
-- Barcelona
-- Vienna
-- Warsaw
-- Paris
-- Rome
-- London
-- Prague
-- Sidney
-- Delhi
-- Mumbai
-- Tokyo
-- Rio de Janeiro
-- Beijing
-- Guangzhou
-- Shanghai
-- Chongqing
-- Hong Kong
-- China
-- India
-- US
-- USA
-- Germany
-- United States
-- UK
-- England
-- Brazil
-- France
-- Poland
-- Italy
-- Spain
-- Europe
-- Canada
-- Ukraine
-
-## synonym:USA
-- US
-- U.S.
-- USA
-- usa
-- United States
-
-## synonym:United Kingdom
-- UK
-- U.K.
-
 ## intent:ask_question_in_forum
 - Hey, i want to ask a question in the forum
 - i want to get help in the forum
@@ -2929,17 +2871,6 @@
 ## synonym:1
 - one
 
-## synonym:USA
-- US
-- U.S.
-- USA
-- usa
-- United States
-
-## synonym:United Kingdom
-- UK
-- U.K.
-
 ## synonym:all
 - both
 
@@ -2967,13 +2898,6 @@
 - how long
 - durations
 
-## synonym:entity recognition
-- entity extraction
-
-## synonym:intent classification
-- intents
-- intent
-
 ## synonym:luis
 - LUIS
 - LUIS.ai
@@ -2998,62 +2922,23 @@
 ## synonym:rasa
 - Rasa
 
+## synonym:USA
+- US
+- U.S.
+- usa
+- United States
+
+## synonym:United Kingdom
+- UK
+- U.K.
+
 ## synonym:x
 - Rasa X
 - RASA X
 - X
 
-## lookup:product
-- core
-- nlu
-- x
-- rasa x
-- both
-- all
-
 ## lookup:location
-- San Francisco
-- Montreal
-- New York
-- Washington
-- Berlin
-- Zurich
-- Hamburg
-- Frankfurt
-- Munich
-- Madrid
-- Cologne
-- Düsseldorf
-- Barcelona
-- Vienna
-- Warsaw
-- Paris
-- Rome
-- London
-- Prague
-- Sidney
-- Delhi
-- Mumbai
-- Tokyo
-- Rio de Janeiro
-- Beijing
-- Guangzhou
-- Shanghai
-- Chongqing
-- Hong Kong
-- China
-- India
-- US
-- USA
-- Germany
-- United States
-- UK
-- England
-- Brazil
-- France
-- Poland
-- Italy
-- Spain
-- Europe
-- Canada
-- Ukraine
+data/nlu/lookups/location.txt
+
+## lookup:product
+data/nlu/lookups/products.txt
