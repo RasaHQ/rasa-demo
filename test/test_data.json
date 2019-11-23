@@ -1,0 +1,3374 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 36,
+            "end": 40,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 45,
+            "end": 48,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "what is the main difference between core and nlu?"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 9,
+            "end": 13,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 25,
+            "end": 28,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "How does core compare to nlu?"
+      },
+      {
+        "intent": "ask_faq_differencerasarasax",
+        "entities": [
+          {
+            "start": 31,
+            "end": 35,
+            "value": "rasa",
+            "entity": "product"
+          },
+          {
+            "start": 40,
+            "end": 46,
+            "value": "x",
+            "entity": "product"
+          }
+        ],
+        "text": "tell me the difference between rasa and rasa x"
+      },
+      {
+        "intent": "ask_faq_what_is_forum",
+        "text": "whats in the forum"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 29,
+            "end": 32,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "What facts diverge core from nlu?"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 11,
+            "end": 15,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 31,
+            "end": 34,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "What makes core different from nlu?"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 9,
+            "end": 12,
+            "value": "nlu",
+            "entity": "product"
+          },
+          {
+            "start": 25,
+            "end": 29,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "How does nlu contrast to core?"
+      },
+      {
+        "intent": "ask_faq_opensource",
+        "text": "is rasa a type of open source software?"
+      },
+      {
+        "intent": "ask_faq_differencerasarasax",
+        "entities": [
+          {
+            "start": 4,
+            "end": 8,
+            "value": "Rasa",
+            "entity": "product"
+          },
+          {
+            "start": 13,
+            "end": 19,
+            "value": "x",
+            "entity": "product"
+          }
+        ],
+        "text": "Are Rasa and Rasa X the same thing?"
+      },
+      {
+        "intent": "ask_faq_community_size",
+        "text": "how many people are using Rasa"
+      },
+      {
+        "intent": "ask_faq_differencerasarasax",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "x",
+            "entity": "product"
+          },
+          {
+            "start": 33,
+            "end": 37,
+            "value": "rasa",
+            "entity": "product"
+          }
+        ],
+        "text": "What's new in Rasa X compared to Rasa?"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 10,
+            "end": 14,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 26,
+            "end": 29,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "What does core offer that nlu does not?"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 35,
+            "end": 39,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 44,
+            "end": 47,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "Do you know the difference between core and nlu?"
+      },
+      {
+        "intent": "ask_faq_opensource",
+        "text": "is rasa open source?"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 37,
+            "end": 40,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "diffrence between rasa core and rasa nlu"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 49,
+            "end": 53,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 58,
+            "end": 61,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "what are the primary areas of difference between core and nlu?"
+      },
+      {
+        "intent": "ask_faq_tutorials",
+        "text": "can you show me a tutorial"
+      },
+      {
+        "intent": "ask_faq_python_version",
+        "text": "what version of python"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 24,
+            "end": 28,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 41,
+            "end": 44,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "what is different about core compared to nlu?"
+      },
+      {
+        "intent": "ask_faq_tutorials",
+        "text": "i want a tutorial on rasa"
+      },
+      {
+        "intent": "ask_faq_differencecorenlu",
+        "entities": [
+          {
+            "start": 11,
+            "end": 15,
+            "value": "core",
+            "entity": "product"
+          },
+          {
+            "start": 28,
+            "end": 31,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "What makes core distinct to nlu?"
+      },
+      {
+        "intent": "ask_faq_tutorials",
+        "text": "do you have tutorials"
+      },
+      {
+        "intent": "ask_faq_channels",
+        "text": "which messaging channels are supported by rasa?"
+      },
+      {
+        "intent": "ask_faq_channels",
+        "text": "which messaging channels are compatible with rasa?"
+      },
+      {
+        "intent": "ask_faq_channels",
+        "text": "Do you know which messaging channels rasa supports?"
+      },
+      {
+        "intent": "ask_faq_channels",
+        "text": "rasa supports which messaging channels?"
+      },
+      {
+        "intent": "ask_faq_channels",
+        "text": "DOES RASA SUPPORT MESSENGER?"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "what about languages supported in rasa?"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "entities": [
+          {
+            "start": 12,
+            "end": 22,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "need to use portuguese"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "What language u support?"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "does Rasa support other languages like spanish?"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "languages"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "which languages supports rasa"
+      },
+      {
+        "intent": "ask_faq_languages",
+        "text": "How can I change the language"
+      },
+      {
+        "intent": "ask_faq_ee",
+        "text": "Tell me about rasa x ee"
+      },
+      {
+        "intent": "ask_faq_ee",
+        "text": "Tell me about rasa x ee"
+      },
+      {
+        "intent": "ask_faq_ee",
+        "text": "what is rasa x ee?"
+      },
+      {
+        "intent": "ask_faq_ee",
+        "text": "what is the enterprise edition"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "where slots getting values"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "do you know what slots are?"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "what about slots"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "slots"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "What's the slots?"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "what are slots"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "what slots are there?"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "tell me about slots"
+      },
+      {
+        "intent": "ask_faq_slots",
+        "text": "could you inform me of the meaning of slots?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "How can I use to rasa to build a voice bot?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "Building a voice bot using rasa."
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "Do you know how to build a voice bot with rasa?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "I can build a voice bot with rasa, right?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "Is it possible to build a voice bot with rasa?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "what is the chance of building a rasa voice bot?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "How could I construct a voice bot with rasa?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "How can I build my voice bot using rasa?"
+      },
+      {
+        "intent": "ask_faq_voice",
+        "text": "I can build a voice bot with rasa?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "Who's your builder?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "whats ur name"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "What is your age?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "What's up man"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "Where do you consider home?"
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "I'd like to know what my name is"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "How did they build you?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "how's your day going"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "where are your parents from?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "How are you?"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "What year were you born?"
+      },
+      {
+        "intent": "ask_time",
+        "text": "What is the time?"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "Give me more information about Rasa"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "I want to learn what rasa does"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "Who fabricated you?"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "what year were you born?"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "how is the weather in berlin?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you sure that you're a bot?"
+      },
+      {
+        "intent": "ask_languagesbot",
+        "text": "Do you know any other languages?"
+      },
+      {
+        "intent": "ask_whoami",
+        "text": "WHo am I"
+      },
+      {
+        "intent": "ask_time",
+        "text": "Hi, I need the time."
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "How were you constructed?"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "Where did you originate?"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "Will the skies be clear today?"
+      },
+      {
+        "intent": "ask_languagesbot",
+        "text": "What do you speak?"
+      },
+      {
+        "intent": "ask_restaurant",
+        "text": "Could you find me a restaurant to eat at?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "are you having a good day"
+      },
+      {
+        "intent": "ask_time",
+        "text": "Can you tell me what time it is?"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "How were you devised?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "How's life treating you friend?"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "Is it humid out there today?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "so now what"
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "Please let me know what my name is"
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "What is my name?"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "what can i build with rasa core?"
+      },
+      {
+        "intent": "ask_whoami",
+        "text": "who am i"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a robot"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "who is your boss tell me"
+      },
+      {
+        "intent": "ask_time",
+        "text": "Give me the time."
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "what's my name?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "how are u"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "what's the weather like where you are?"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "what does rasa do?"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "what\"s the weather"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "in what way were you made?"
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "What exactly is my name?"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "Where were you at before you were here?"
+      },
+      {
+        "intent": "ask_time",
+        "text": "What's the time right now?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "Do you feel good?"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "Nice day out today?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "who had the idea to build you?"
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "What does everyone call me?"
+      },
+      {
+        "intent": "ask_time",
+        "text": "what time it is"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "um what now"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "What will be your age on your next birthday?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "hm that doesnt quite help me is there anything else you can do?"
+      },
+      {
+        "intent": "ask_question_in_forum",
+        "text": "Can you help me to solve a problem?"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "How did you come to be?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "how are you feeling"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "I want to know who you are"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "is it sunny"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "Can you explain me in one sentence what you are doing?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "who do you work for?"
+      },
+      {
+        "intent": "ask_whoami",
+        "text": "can you tell me who I am?"
+      },
+      {
+        "intent": "ask_time",
+        "text": "Time?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "help please"
+      },
+      {
+        "intent": "ask_time",
+        "text": "What is the hour and minute right now?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you ai"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "Where are your origins?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "which company invented you?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "how have you been"
+      },
+      {
+        "intent": "ask_restaurant",
+        "text": "Show me how to find a restaurant"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "when is your birthday?"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "what age are you"
+      },
+      {
+        "intent": "ask_weather",
+        "text": "how's the weather?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you real"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "Who owns you?"
+      },
+      {
+        "intent": "ask_how_contribute",
+        "text": "how contribute to Rasa?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "cuz you are a bot"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "Can you explain how you were created?"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "Where from?"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "Tell me your day, month and year of birth."
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "Where did you grow up?"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "are you alright"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a bot ?"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "By what means were you made?"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "tell me more about rasa"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "How've you been?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "Are you the bot?"
+      },
+      {
+        "intent": "ask_how_contribute",
+        "text": "I want to make Rasa better"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "what are you good at?"
+      },
+      {
+        "intent": "ask_how_contribute",
+        "text": "how can I support the community"
+      },
+      {
+        "intent": "ask_howdoing",
+        "text": "Is everything ok?"
+      },
+      {
+        "intent": "ask_time",
+        "text": "Pardon me, but do you know the time?"
+      },
+      {
+        "intent": "ask_restaurant",
+        "text": "What's the closest restaurant open near me"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "Do you know how you were made?"
+      },
+      {
+        "intent": "ask_time",
+        "text": "What is the time?"
+      },
+      {
+        "intent": "ask_whoisit",
+        "text": "what are you called?"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "What process was used to build you?"
+      },
+      {
+        "intent": "ask_wherefrom",
+        "text": "What is your heritage?"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "Can you tell me what Rasa does?"
+      },
+      {
+        "intent": "ask_whatismyname",
+        "text": "Do you know what my name is?"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "How did you come into being?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "who built you?"
+      },
+      {
+        "intent": "ask_languagesbot",
+        "text": "what languages do you know?"
+      },
+      {
+        "intent": "ask_howold",
+        "text": "how old?"
+      },
+      {
+        "intent": "ask_isbot",
+        "text": "are you a Skynet ?"
+      },
+      {
+        "intent": "ask_howbuilt",
+        "text": "How were you made?"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "options"
+      },
+      {
+        "intent": "ask_languagesbot",
+        "text": "What are the languages you can speak?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "please tell me the company who created you"
+      },
+      {
+        "intent": "ask_whatspossible",
+        "text": "cool! can I do something else here?"
+      },
+      {
+        "intent": "ask_builder",
+        "text": "Who is your programmer?"
+      },
+      {
+        "intent": "ask_languagesbot",
+        "text": "What languages can you communicate in?"
+      },
+      {
+        "intent": "ask_whatisrasa",
+        "text": "what is rasa?"
+      },
+      {
+        "intent": "bye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "bye",
+        "text": "ciao"
+      },
+      {
+        "intent": "bye",
+        "text": "gotta go"
+      },
+      {
+        "intent": "bye",
+        "text": "bye udo"
+      },
+      {
+        "intent": "bye",
+        "text": "goodnight"
+      },
+      {
+        "intent": "canthelp",
+        "text": "nothing else?"
+      },
+      {
+        "intent": "canthelp",
+        "text": "ok, but that doesnt help me"
+      },
+      {
+        "intent": "canthelp",
+        "text": "hm i don't think you can do what i want"
+      },
+      {
+        "intent": "canthelp",
+        "text": "stop"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "i'd like to talk to a sales person"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "i need a call from sales"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "give me someone who can explain your business model"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "I want to talk to your sales guys"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "sales contact"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "we started working with rasa but now we need support"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "just gimme a call"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "sales pl"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "next the sales contact"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "connect me to your sales department"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "call"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "I wanna talk to your sales people."
+      },
+      {
+        "intent": "contact_sales",
+        "text": "i want to call"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "i want to be connected to your sales team"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "sales team connection"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "sales sales sales"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "can someone help me with infos about the rasa platform"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "let me talk to your sales people"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "I want to talk to your sales people"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "let' contact sales now"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "I would like to talk to someone from your sales team"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "have a call with the sales team"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "contact call with sales"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "obviously talk to your awesome sales team"
+      },
+      {
+        "intent": "contact_sales",
+        "text": "I want an offer for your enterprise product"
+      },
+      {
+        "intent": "deny",
+        "text": "no I haven't decided yet if I want to sign up"
+      },
+      {
+        "intent": "deny",
+        "text": "i decline"
+      },
+      {
+        "intent": "deny",
+        "text": "nah thanks"
+      },
+      {
+        "intent": "deny",
+        "text": "no!!!!"
+      },
+      {
+        "intent": "deny",
+        "text": "i guess it means - no"
+      },
+      {
+        "intent": "deny",
+        "text": "nevermind"
+      },
+      {
+        "intent": "deny",
+        "text": "nah"
+      },
+      {
+        "intent": "deny",
+        "text": "i don't want to"
+      },
+      {
+        "intent": "enter_data",
+        "text": "ulrikovitch eisenkleber"
+      },
+      {
+        "intent": "enter_data",
+        "text": "I work for oov"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "No company",
+            "entity": "company"
+          }
+        ],
+        "text": "No company!!"
+      },
+      {
+        "intent": "enter_data",
+        "text": "juste@juste.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "akela",
+            "entity": "name"
+          }
+        ],
+        "text": "akela"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 26,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "I wrote it in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "spanish"
+      },
+      {
+        "intent": "enter_data",
+        "text": "adele@gmx.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "Daimler",
+            "entity": "company"
+          }
+        ],
+        "text": "The name of the company is Daimler"
+      },
+      {
+        "intent": "enter_data",
+        "text": "Rasa bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 25,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "text": "My email is linda@linda.linda"
+      },
+      {
+        "intent": "enter_data",
+        "text": "A wolf bot"
+      },
+      {
+        "intent": "enter_data",
+        "text": "300k number"
+      },
+      {
+        "intent": "enter_data",
+        "text": "i'd like to build sentient glibber or glitter"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 22,
+            "end": 30,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "so far it only speaks mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 40,
+            "value": "Mikhail Sergeyevich Gorbachev",
+            "entity": "name"
+          }
+        ],
+        "text": "my name is Mikhail Sergeyevich Gorbachev"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 16,
+            "value": "linda",
+            "entity": "name"
+          }
+        ],
+        "text": "my name is linda"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 39,
+            "value": "Bolschewistische Kurkapelle Schwarz-Rot",
+            "entity": "company"
+          }
+        ],
+        "text": "Bolschewistische Kurkapelle Schwarz-Rot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 12,
+            "end": 27,
+            "value": "project manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "I work as a project manager"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Ralph White",
+            "entity": "name"
+          }
+        ],
+        "text": "Ralph White"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "sam",
+            "entity": "name"
+          }
+        ],
+        "text": "sam"
+      },
+      {
+        "intent": "enter_data",
+        "text": "We plan to build a sales bot to increase our sales by 500%."
+      },
+      {
+        "intent": "enter_data",
+        "text": "10000k"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 4,
+            "end": 19,
+            "value": "project manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "I'm project manager"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Freya",
+            "entity": "name"
+          }
+        ],
+        "text": "Freya"
+      },
+      {
+        "intent": "enter_data",
+        "text": "10000000"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Al Capone",
+            "entity": "name"
+          }
+        ],
+        "text": "Al Capone"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "Product Manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "Product Manager"
+      },
+      {
+        "intent": "enter_data",
+        "text": "2000k"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 39,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in french"
+      },
+      {
+        "intent": "enter_data",
+        "text": "don't have one"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 21,
+            "value": "oli miller",
+            "entity": "name"
+          }
+        ],
+        "text": "my name is oli miller"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "Linda",
+            "entity": "name"
+          }
+        ],
+        "text": "Linda"
+      },
+      {
+        "intent": "enter_data",
+        "text": "about 10 k"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in italian but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 44,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "text": "schlabberjimmy@glibberglitter.edu"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Max Meier",
+            "entity": "name"
+          }
+        ],
+        "text": "Max Meier"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 20,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks portuguese"
+      },
+      {
+        "intent": "enter_data",
+        "text": "a bot which sends cute shiba pictures"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 6,
+            "end": 20,
+            "value": "business woman",
+            "entity": "job_function"
+          }
+        ],
+        "text": "I'm a business woman"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 24,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 21,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "text": "have no idea"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Alex Karev",
+            "entity": "name"
+          }
+        ],
+        "text": "Alex Karev"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 15,
+            "value": "project manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "project manager"
+      },
+      {
+        "intent": "enter_data",
+        "text": "500 million"
+      },
+      {
+        "intent": "enter_data",
+        "text": "I do not know yet"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "language: spanish"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 25,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in chinese"
+      },
+      {
+        "intent": "enter_data",
+        "text": "a big ol transformer"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks dutch"
+      },
+      {
+        "intent": "enter_data",
+        "text": "100k"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 31,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 20,
+            "value": "Max Meier",
+            "entity": "name"
+          }
+        ],
+        "text": "My name is Max Meier"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 11,
+            "end": 17,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "language = french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 14,
+            "value": "growth manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "growth manager"
+      },
+      {
+        "intent": "enter_data",
+        "text": "we think 4 million INR/ year"
+      },
+      {
+        "intent": "enter_data",
+        "text": "sislawawa@india.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 6,
+            "end": 14,
+            "value": "anaconda",
+            "entity": "package_manager"
+          }
+        ],
+        "text": "i use anaconda"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 26,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained only in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "text": "on that will get me promoted"
+      },
+      {
+        "intent": "enter_data",
+        "text": "a turtle"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 29,
+            "value": "new york times",
+            "entity": "company"
+          }
+        ],
+        "text": "I work for the new york times"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 4,
+            "end": 14,
+            "value": "Tom Miller",
+            "entity": "name"
+          }
+        ],
+        "text": "I'm Tom Miller"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 9,
+            "end": 14,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it is in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 19,
+            "value": "project mgmt",
+            "entity": "job_function"
+          }
+        ],
+        "text": "I'm in project mgmt"
+      },
+      {
+        "intent": "enter_data",
+        "text": "20k"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in german but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 30,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Mr. Mop",
+            "entity": "name"
+          }
+        ],
+        "text": "Mr. Mop"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 15,
+            "end": 21,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the bot speaks french"
+      },
+      {
+        "intent": "enter_data",
+        "text": "Herbert"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 17,
+            "end": 23,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the people speak german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 29,
+            "end": 34,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "all the training data was in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 15,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "its an mandarin bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "designer",
+            "entity": "job_function"
+          }
+        ],
+        "text": "designer"
+      },
+      {
+        "intent": "enter_data",
+        "text": "lead generation"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 23,
+            "end": 29,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "until now it’s only in french"
+      },
+      {
+        "intent": "enter_data",
+        "text": "hi@rasa.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 15,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an english bot"
+      },
+      {
+        "intent": "enter_data",
+        "text": "maxmeier@firma.de"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 21,
+            "end": 29,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant speaks mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s available in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "text": "it's foo@bar.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 10,
+            "value": "Jacqueline",
+            "entity": "name"
+          }
+        ],
+        "text": "Jacqueline"
+      },
+      {
+        "intent": "enter_data",
+        "text": "problem solving"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 16,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an mandarin bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 37,
+            "end": 43,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "user can communicate with the bot in french"
+      },
+      {
+        "intent": "enter_data",
+        "text": "half a million"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 21,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "spanish",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in spanish"
+      },
+      {
+        "intent": "enter_data",
+        "text": "shiba@shiba.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s an german bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "Udo.AI",
+            "entity": "company"
+          }
+        ],
+        "text": "Udo.AI"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "it speaks italian"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 36,
+            "end": 43,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "the language of the ai assistant is chinese"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "text": "conversational"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "CSI",
+            "entity": "company"
+          }
+        ],
+        "text": "CSI"
+      },
+      {
+        "intent": "enter_data",
+        "text": "test@test.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 5,
+            "end": 14,
+            "value": "developer",
+            "entity": "job_function"
+          }
+        ],
+        "text": "im a developer"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "IBM",
+            "entity": "company"
+          }
+        ],
+        "text": "IBM"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "marketing",
+            "entity": "job_function"
+          }
+        ],
+        "text": "marketing"
+      },
+      {
+        "intent": "enter_data",
+        "text": "my emayl is yolo at yolo.de"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "CTO",
+            "entity": "job_function"
+          }
+        ],
+        "text": "CTO"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Alan",
+            "entity": "name"
+          }
+        ],
+        "text": "Alan"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Denise Perry",
+            "entity": "name"
+          }
+        ],
+        "text": "Denise Perry"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in english"
+      },
+      {
+        "intent": "enter_data",
+        "text": "an akela bot that I can talk to akela all the time"
+      },
+      {
+        "intent": "enter_data",
+        "text": "my email is kevin@yoloooz.de"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 23,
+            "value": "projject manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "i am a projject manager"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 11,
+            "value": "Bob Geldorf",
+            "entity": "name"
+          }
+        ],
+        "text": "Bob Geldorf"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "mandarin",
+            "entity": "language"
+          }
+        ],
+        "text": "user can talk to my bot in mandarin"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "chinese",
+            "entity": "language"
+          }
+        ],
+        "text": "chinese is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "german is the only language but I want to add more"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 23,
+            "value": "portuguese",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in portuguese but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "german",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is german"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 5,
+            "end": 25,
+            "value": "full stack developer",
+            "entity": "job_function"
+          }
+        ],
+        "text": "Im a full stack developer"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 7,
+            "end": 12,
+            "value": "conda",
+            "entity": "package_manager"
+          }
+        ],
+        "text": "please conda"
+      },
+      {
+        "intent": "enter_data",
+        "text": "a bot"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 18,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "my bot is in dutch"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 23,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s trained in english"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Foudner",
+            "entity": "job_function"
+          }
+        ],
+        "text": "Foudner"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 13,
+            "end": 20,
+            "value": "english",
+            "entity": "language"
+          }
+        ],
+        "text": "it’s only in english but I plan to train it in other languages"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 6,
+            "end": 21,
+            "value": "product manager",
+            "entity": "job_function"
+          }
+        ],
+        "text": "i'm a product manager"
+      },
+      {
+        "intent": "enter_data",
+        "text": "moabit@yoga.com"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 16,
+            "end": 22,
+            "value": "french",
+            "entity": "language"
+          }
+        ],
+        "text": "the language is french"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "italian",
+            "entity": "language"
+          }
+        ],
+        "text": "the assistant is in italian"
+      },
+      {
+        "intent": "enter_data",
+        "text": "health care"
+      },
+      {
+        "intent": "enter_data",
+        "entities": [
+          {
+            "start": 10,
+            "end": 15,
+            "value": "dutch",
+            "entity": "language"
+          }
+        ],
+        "text": "language: dutch"
+      },
+      {
+        "intent": "greet",
+        "text": "heyo"
+      },
+      {
+        "intent": "greet",
+        "text": "hey bot"
+      },
+      {
+        "intent": "greet",
+        "text": "hii"
+      },
+      {
+        "intent": "greet",
+        "text": "hi?"
+      },
+      {
+        "intent": "greet",
+        "text": "hello everybody"
+      },
+      {
+        "intent": "greet",
+        "text": "hello there"
+      },
+      {
+        "intent": "greet",
+        "text": "hellooo"
+      },
+      {
+        "intent": "greet",
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "text": "heyho"
+      },
+      {
+        "intent": "greet",
+        "text": "hello sweet boy"
+      },
+      {
+        "intent": "greet",
+        "text": "ayyyy whaddup"
+      },
+      {
+        "intent": "greet",
+        "text": "hey hey"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "let me talk to a human"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "are there also humans working for your company?"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "gimme a proper human"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "service agent"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "i have an issue with permissions"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "wrong i want to speak to a human"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "i want to speak to customer service"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "i'd rather speak with a real rasa employee"
+      },
+      {
+        "intent": "human_handoff",
+        "text": "give me a human"
+      },
+      {
+        "intent": "affirm",
+        "text": "yay"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes accept please"
+      },
+      {
+        "intent": "affirm",
+        "text": "yeah"
+      },
+      {
+        "intent": "affirm",
+        "text": "oh cool"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes please!"
+      },
+      {
+        "intent": "affirm",
+        "text": "Oh, ok"
+      },
+      {
+        "intent": "affirm",
+        "text": "of course"
+      },
+      {
+        "intent": "affirm",
+        "text": "yas"
+      },
+      {
+        "intent": "affirm",
+        "text": "sure!"
+      },
+      {
+        "intent": "affirm",
+        "text": "yop"
+      },
+      {
+        "intent": "affirm",
+        "text": "ja"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "who is your favourite robot?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "can you tell me how to build a bot?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "kannst du auch deutsch?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "isn't the newsletter just spam?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "i want to buy a roomba for my grandson"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Can I ask you questions first?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "lol"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Do I have to accept?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "but I just told you that :("
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "please hurry, i have deadline in two weeks to deliver the bot it is for very big company"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "sorry, i cannot rephrase"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "you suck"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "hang on let me find it"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "did i break you"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "i told you already"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "Is Rasa really smart?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "give me food"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "you are a stupid bot"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "how are akela's cats doing?"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "i am hungry"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "shit bot"
+      },
+      {
+        "intent": "out_of_scope",
+        "text": "the one that is better than you"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "can you add alan@mail.com to the newsletter list?"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "I'd like to subscribe"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "can you sign me up for the newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "i need to be on the newsletter list"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "add me to the subscription list"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "i would love to get the newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "newsletter - my email is lol@rasa.com"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "i want to subscribe to your newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "subscribe to newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "i also want to sign up for the newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "send me the newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "please subscribe me to the newsletter alex@example.cz"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "add me to the newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "Sign up."
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "get newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "newsletter pls"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "Subscribe to Rasa newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "do the newsletter then"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "lets do the newsletter signup"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "i want to receive the newsletter from now on"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "I want the newsletter"
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "Newsletter please."
+      },
+      {
+        "intent": "signup_newsletter",
+        "text": "oh actually i want to get the newsletter"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks this is great news"
+      },
+      {
+        "intent": "thank",
+        "text": "thanks a bunch for everything"
+      },
+      {
+        "intent": "thank",
+        "text": "ok thanks!"
+      },
+      {
+        "intent": "thank",
+        "text": "cool, thanks"
+      },
+      {
+        "intent": "thank",
+        "text": "Thanks bot"
+      },
+      {
+        "intent": "thank",
+        "text": "Cool. Thanks"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "where to start the development of rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 17,
+            "end": 21,
+            "value": "rasa",
+            "entity": "product"
+          }
+        ],
+        "text": "Get started with Rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "Get started"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 13,
+            "end": 16,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "How do I use NLU"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "x",
+            "entity": "product"
+          }
+        ],
+        "text": "How do I get started with Rasa X"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "WHAT IS RASA"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 31,
+            "end": 34,
+            "value": "nlu",
+            "entity": "product"
+          }
+        ],
+        "text": "How do I get started with Rasa NLU"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "all",
+            "entity": "product"
+          }
+        ],
+        "text": "Both of them"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 13,
+            "end": 17,
+            "value": "core",
+            "entity": "product"
+          }
+        ],
+        "text": "how do i use core"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "how to start with rasa"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "Rasa X",
+            "entity": "product"
+          }
+        ],
+        "text": "Help me use Rasa X"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 26,
+            "end": 32,
+            "value": "x",
+            "entity": "product"
+          }
+        ],
+        "text": "how do i get started with Rasa X"
+      },
+      {
+        "intent": "how_to_get_started",
+        "entities": [
+          {
+            "start": 21,
+            "end": 24,
+            "value": "all",
+            "entity": "product"
+          }
+        ],
+        "text": "i want to understand all the products"
+      },
+      {
+        "intent": "how_to_get_started",
+        "text": "Help me get started"
+      },
+      {
+        "intent": "technical_question",
+        "text": "does rasa support voice input"
+      },
+      {
+        "intent": "technical_question",
+        "text": "technical side of things?"
+      },
+      {
+        "intent": "technical_question",
+        "entities": [
+          {
+            "start": 20,
+            "end": 30,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "is rasa better than dialogflow"
+      },
+      {
+        "intent": "technical_question",
+        "text": "having some problems with installation"
+      },
+      {
+        "intent": "technical_question",
+        "text": "i am having trouble setting this up"
+      },
+      {
+        "intent": "technical_question",
+        "text": "where to train intents in rasa?"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 16,
+            "end": 27,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I currently use dialog flow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 6,
+            "end": 16,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I use DialogFlow"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 20,
+            "end": 27,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I want to move from LUIS.ai to Rasa"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 22,
+            "end": 33,
+            "value": "dialogflow",
+            "entity": "current_api"
+          }
+        ],
+        "text": "I want to switch from dialog flow to rasa"
+      },
+      {
+        "intent": "switch",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "luis",
+            "entity": "current_api"
+          }
+        ],
+        "text": "LUIS"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "intents",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "intents"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 34,
+            "end": 52,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I don’t understand how you handle entity recognition at Rasa"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 11,
+            "end": 19,
+            "value": "duckling",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "do you use duckling"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 0,
+            "end": 21,
+            "value": "intent classification",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "intent classification"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 22,
+            "end": 40,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I want to learn about entity recognition"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 8,
+            "end": 26,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "what is entity recognition?"
+      },
+      {
+        "intent": "nlu_info",
+        "entities": [
+          {
+            "start": 19,
+            "end": 37,
+            "value": "entity recognition",
+            "entity": "nlu_part"
+          }
+        ],
+        "text": "I don’t understand entity recognition"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline should I start with?"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "give me a recommendation"
+      },
+      {
+        "intent": "pipeline_recommendation",
+        "text": "what pipeline should i use?"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "which tools can I use to create nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "are there simpler ways to create nlu data"
+      },
+      {
+        "intent": "nlu_generation_tool_recommendation",
+        "text": "how can I get nlu data"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "install Rasa on Linux"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "How to install Rasa Stack"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "I have decided on Rasa Stack"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "How to install Rasa?"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "I have chosen Rasa Stack"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "I require Rasa Stack?"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "I'm going to install Rasa Stack"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "I need assistance in getting Rasa Stack."
+      },
+      {
+        "intent": "install_rasa",
+        "text": "I want to use Rasa Stack"
+      },
+      {
+        "intent": "install_rasa",
+        "text": "Help me get Rasa Core."
+      },
+      {
+        "intent": "ask_which_events",
+        "text": "Which community events do you have"
+      },
+      {
+        "intent": "ask_which_events",
+        "text": "i want to meet Rasa"
+      },
+      {
+        "intent": "ask_when_next_event",
+        "text": "what's the next rasa event"
+      },
+      {
+        "intent": "ask_when_next_event",
+        "entities": [
+          {
+            "start": 25,
+            "end": 38,
+            "value": "San Francisco",
+            "entity": "location"
+          }
+        ],
+        "text": "is there a Rasa event in San Francisco"
+      },
+      {
+        "intent": "next_step",
+        "text": "Next step please"
+      },
+      {
+        "intent": "explain",
+        "text": "what is the difference"
+      },
+      {
+        "intent": "explain",
+        "text": "give me more information please"
+      },
+      {
+        "intent": "explain",
+        "text": "why is that"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [
+      {
+        "name": "location",
+        "elements": [
+          "San Francisco",
+          "Montreal",
+          "New York",
+          "Washington",
+          "Berlin",
+          "Zurich",
+          "Hamburg",
+          "Frankfurt",
+          "Munich",
+          "Madrid",
+          "Cologne",
+          "Düsseldorf",
+          "Barcelona",
+          "Vienna",
+          "Warsaw",
+          "Paris",
+          "Rome",
+          "London",
+          "Prague",
+          "Sidney",
+          "Delhi",
+          "Mumbai",
+          "Tokyo",
+          "Rio de Janeiro",
+          "Beijing",
+          "Guangzhou",
+          "Shanghai",
+          "Chongqing",
+          "Hong Kong",
+          "China",
+          "India",
+          "US",
+          "USA",
+          "Germany",
+          "United States",
+          "UK",
+          "England",
+          "Brazil",
+          "France",
+          "Poland",
+          "Italy",
+          "Spain",
+          "Europe",
+          "Canada",
+          "Ukraine",
+          "San Francisco",
+          "Montreal",
+          "New York",
+          "Washington",
+          "Berlin",
+          "Zurich",
+          "Hamburg",
+          "Frankfurt",
+          "Munich",
+          "Madrid",
+          "Cologne",
+          "Düsseldorf",
+          "Barcelona",
+          "Vienna",
+          "Warsaw",
+          "Paris",
+          "Rome",
+          "London",
+          "Prague",
+          "Sidney",
+          "Delhi",
+          "Mumbai",
+          "Tokyo",
+          "Rio de Janeiro",
+          "Beijing",
+          "Guangzhou",
+          "Shanghai",
+          "Chongqing",
+          "Hong Kong",
+          "China",
+          "India",
+          "US",
+          "USA",
+          "Germany",
+          "United States",
+          "UK",
+          "England",
+          "Brazil",
+          "France",
+          "Poland",
+          "Italy",
+          "Spain",
+          "Europe",
+          "Canada",
+          "Ukraine"
+        ]
+      },
+      {
+        "name": "product",
+        "elements": [
+          "core",
+          "nlu",
+          "x",
+          "rasa x",
+          "both",
+          "all"
+        ]
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "x",
+        "synonyms": [
+          "rasa x",
+          "Rasa X",
+          "RASA X",
+          "X"
+        ]
+      },
+      {
+        "value": "rasa",
+        "synonyms": [
+          "Rasa"
+        ]
+      },
+      {
+        "value": "1",
+        "synonyms": [
+          "one"
+        ]
+      },
+      {
+        "value": "developer",
+        "synonyms": [
+          "Developer"
+        ]
+      },
+      {
+        "value": "name",
+        "synonyms": [
+          "names"
+        ]
+      },
+      {
+        "value": "place",
+        "synonyms": [
+          "places"
+        ]
+      },
+      {
+        "value": "organisation",
+        "synonyms": [
+          "companies"
+        ]
+      },
+      {
+        "value": "date",
+        "synonyms": [
+          "dates"
+        ]
+      },
+      {
+        "value": "money",
+        "synonyms": [
+          "amounts"
+        ]
+      },
+      {
+        "value": "duration",
+        "synonyms": [
+          "how long",
+          "durations"
+        ]
+      },
+      {
+        "value": "distance",
+        "synonyms": [
+          "distances"
+        ]
+      },
+      {
+        "value": "nlu",
+        "synonyms": [
+          "NLU",
+          "Natural Language Understanding"
+        ]
+      },
+      {
+        "value": "core",
+        "synonyms": [
+          "Core",
+          "CORE"
+        ]
+      },
+      {
+        "value": "all",
+        "synonyms": [
+          "both",
+          "Both"
+        ]
+      },
+      {
+        "value": "dialogflow",
+        "synonyms": [
+          "dialog flow",
+          "DialogFlow"
+        ]
+      },
+      {
+        "value": "luis",
+        "synonyms": [
+          "LUIS",
+          "LUIS.ai",
+          "luis.ai"
+        ]
+      },
+      {
+        "value": "intent classification",
+        "synonyms": [
+          "intents",
+          "intent"
+        ]
+      },
+      {
+        "value": "entity recognition",
+        "synonyms": [
+          "entity extraction"
+        ]
+      },
+      {
+        "value": "conda",
+        "synonyms": [
+          "anaconda"
+        ]
+      },
+      {
+        "value": "USA",
+        "synonyms": [
+          "US",
+          "U.S.",
+          "usa",
+          "United States"
+        ]
+      },
+      {
+        "value": "United Kingdom",
+        "synonyms": [
+          "UK",
+          "U.K."
+        ]
+      }
+    ]
+  }
+}

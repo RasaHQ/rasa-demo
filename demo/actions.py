@@ -238,6 +238,7 @@ class ActionFaqs(Action):
             "ask_faq_slots",
             "ask_faq_channels",
             "ask_faq_differencecorenlu",
+            "ask_faq_differencerasarasax",
             "ask_faq_python_version",
             "ask_faq_community_size",
             "ask_faq_what_is_forum",
