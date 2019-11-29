@@ -1,40 +1,14 @@
-FROM python:3.6-slim
-
-SHELL ["/bin/bash", "-c"]
-
-# Default to UTF-8 file.encoding
-ENV LANG C.UTF-8
-
-ARG GITHUB_TOKEN
-
-RUN apt-get update -qq && \
-  apt-get install -y --no-install-recommends \
-  build-essential \
-  wget \
-  openssh-client \
-  graphviz-dev \
-  pkg-config \
-  git-core \
-  openssl \
-  libssl-dev \
-  libffi6 \
-  libffi-dev \
-  libpng-dev \
-  curl && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
-  mkdir /app
+FROM rasa/rasa-sdk:1.5.1
 
 WORKDIR /app
 
-COPY requirements.txt ./
+COPY demo/requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-COPY . /app
+COPY ./demo /app/demo
+COPY setup.py /app
 
-RUN  pip install -e . --no-use-pep517
+RUN  pip install -e . --no-cache-dir
 
-EXPOSE 5055
-
-CMD ["python" ,"-m", "rasa_sdk", "--actions", "demo.actions", "-p", "5055"]
+CMD ["start", "--actions", "demo.actions"]
