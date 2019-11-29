@@ -1,0 +1,18 @@
+# This docker-compose file is setup to run the rasa-demo locally
+# docker-compose up -d
+# docker run -it --rm --network=rasa-demo_default -v $(pwd):/app rasa/rasa:1.5.1-full shell --model /app/models/$(ls models) --endpoints endpoints_local.yml
+version: "3.4"
+
+services:
+  duckling:
+    restart: always
+    image: "rasa/duckling:latest"
+    ports:
+      - "8000:8000"
+    command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "5055:5055"
