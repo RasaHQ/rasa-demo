@@ -63,7 +63,7 @@ your website.
 After doing a `rasa train`, run the command:
 
 ```bash
-rasa test nlu -u test/test_data.json --model models/$(ls models)
+rasa test nlu -u test/test_data.json --model models
 rasa test core --stories test/test_stories.md
 ```
 
