@@ -1,12 +1,7 @@
-## feedback2
-    - utter_ask_feedback
-* enter_data
-    - utter_thumbsup
-    - utter_anything_else
+## prompt for getting started + confirm
+* get_started_step1
+    - action_greet_user
+* affirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
 
-## akela test
-* enter_data@0.7{"name":"Akela"}
-    - action_store_entity_extractor
-    - slot{"entity_extractor": "SpacyEntityExtractor"}
-    - utter_spacy
-    - utter_anything_else
