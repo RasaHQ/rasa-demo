@@ -491,17 +491,14 @@ class ActionDefaultAskAffirmation(Action):
         return []
 
     def get_button_title(self, intent: Text, entities: Dict[Text, Text]) -> Text:
-        default_utterance_query = self.intent_mappings.intent == intent
-        utterance_query = (
-            self.intent_mappings.entities == entities.keys() & default_utterance_query
-        )
-
-        utterances = self.intent_mappings[utterance_query].button.tolist()
+        mask_intent = self.intent_mappings.intent == intent
+        mask_entity = self.intent_mappings.entities == entities.keys()
+        utterances = self.intent_mappings[mask_intent][mask_entity].button.tolist()
 
         if len(utterances) > 0:
             button_title = utterances[0]
         else:
-            utterances = self.intent_mappings[default_utterance_query].button.tolist()
+            utterances = self.intent_mappings[mask_intent].button.tolist()
             button_title = utterances[0] if len(utterances) > 0 else intent
 
         return button_title.format(**entities)
@@ -586,7 +583,8 @@ class CommunityEventAction(Action):
         locations = "\n".join(event_items)
         dispatcher.utter_message(
             "Here are the next Rasa events:\n\n"
-            + locations + "\n\nWe hope to see you at them!"
+            + locations
+            + "\n\nWe hope to see you at them!"
         )
 
     def _utter_next_event(
