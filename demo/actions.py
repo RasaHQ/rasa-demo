@@ -437,7 +437,7 @@ class ActionDefaultAskAffirmation(Action):
     def __init__(self) -> None:
         import pandas as pd
 
-        self.intent_mappings = pd.read_csv("data/" "intent_description_mapping.csv")
+        self.intent_mappings = pd.read_csv("demo/intent_description_mapping.csv")
         self.intent_mappings.fillna("", inplace=True)
         self.intent_mappings.entities = self.intent_mappings.entities.map(
             lambda entities: {e.strip() for e in entities.split(",")}
