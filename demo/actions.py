@@ -10,6 +10,7 @@ from rasa_sdk.forms import FormAction
 from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused
 
 from demo.api import MailChimpAPI
+from demo.algolia import AlgoliaAPI
 from demo import config
 from demo.gdrive_service import GDriveService
 
@@ -442,6 +443,8 @@ class ActionDefaultAskAffirmation(Action):
         self.intent_mappings.entities = self.intent_mappings.entities.map(
             lambda entities: {e.strip() for e in entities.split(",")}
         )
+        self.algolia = AlgoliaAPI('BH4D9OD16A', '1f9e0efb89e98543f6613a60f847b176', 'rasa')
+
 
     def run(
         self,
@@ -484,6 +487,13 @@ class ActionDefaultAskAffirmation(Action):
                     "payload": "/{}{}".format(intent, entities_json),
                 }
             )
+
+        logger.error(tracker)
+        logger.error(domain)
+        res = self.algolia.search("python")
+        docs_link = '[{}/{}/{}]({})'.format(res['hits'][0]['hierarchy']['lvl0'], res['hits'][0]['hierarchy']['lvl1'].strip(), res['hits'][0]['hierarchy']['lvl2'].strip(), res['hits'][0]['url'])
+        logger.error(docs_link)
+        buttons.append({"title": docs_link, "payload": "/out_of_scope"})
 
         buttons.append({"title": "Something else", "payload": "/out_of_scope"})
 

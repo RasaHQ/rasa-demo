@@ -10,6 +10,7 @@ install_requires = [
     "requests~=2.21.0",
     "geopy~=1.18.1",
     "pandas~=0.24.1",
+    "algoliasearch>=2.0,<3.0",
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
