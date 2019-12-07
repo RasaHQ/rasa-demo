@@ -65,6 +65,7 @@ To run Sara locally under docker, do the following:
 ```
 export RASA_VERS=1.5.1
 docker run -v $(pwd):/app rasa/rasa:${RASA_VERS}-full train --augmentation 0 --config config_local.yml
+docker-compose -f docker-compose-local.yml build
 docker-compose -f docker-compose-local.yml up -d
 docker run -it --rm --network=$(basename `pwd`)_default -v $(pwd):/app rasa/rasa:${RASA_VERS}-full shell --model /app/models/$(ls models) --endpoints endpoints_local.yml
 ```
