@@ -25,8 +25,8 @@ policies:
   max_history: 10
   epochs: 20
   batch_size: [32,64]
-- max_history: 6
-  name: AugmentedMemoizationPolicy
+- name: AugmentedMemoizationPolicy
+  max_history: 6
 - core_threshold: 0.3
   name: TwoStageFallbackPolicy
   nlu_threshold: 0.8
