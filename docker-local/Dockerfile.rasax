@@ -1,8 +1,7 @@
 # This file is for local testing of Rasa X (not server deployment)
-# . .env
 # docker build --build-arg RASA_X_VERSION=${RASA_X_VERSION} -t rasax:${RASA_X_VERSION} .
-# docker build --build-arg RASA_X_VERSION=0.22.1 -t rasax:0.22.1 .
-# docker build --no-cache --build-arg RASA_X_VERSION=0.21.5 -t rasax:0.21.5 .
+# docker build --build-arg RASA_X_VERSION=0.23.3 -t rasax:0.23.3 .
+# docker build --no-cache --build-arg RASA_X_VERSION=0.23.3 -t rasax:0.23.3 .
 # docker build --no-cache --build-arg RASA_X_VERSION=${RASA_X_VERSION} -t rasax:${RASA_X_VERSION} .
 # docker-compose -f docker-compose-local.yml up
 FROM python:3.6
@@ -33,7 +32,8 @@ RUN pip3 list | grep rasa
 VOLUME ["/app"]
 WORKDIR /app
 
-#COPY ./.env .
+COPY ./docker-local/endpoints.yml .
+COPY ./docker-local/config.yml .
 
 # expose port for rasa server
 EXPOSE 5005
@@ -49,9 +49,4 @@ EXPOSE 22
 COPY ./docker-local/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-#RUN ls -l /
-#RUN ls -l
-#CMD jupyter notebook --ip 0.0.0.0 --allow-root --port 8888 --no-browser
-#CMD ["/usr/sbin/sshd", "-D"]
-#CMD ["rasa", "x", "--no-prompt", "--endpoints", "endpoints.yml", "--data", "data", "--credentials", "credentials.yml"]
 ENTRYPOINT ["/entrypoint.sh"]

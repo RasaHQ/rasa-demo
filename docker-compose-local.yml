@@ -19,7 +19,8 @@ services:
       - "5002:5002"
     volumes:
       - ./:/app
-    command: rasa x --no-prompt --endpoints docker-local/endpoints.yml --credentials docker-local/credentials.yml  --port 5005 --cors "*" --debug
+    command: rasa x --no-prompt  --port 5005 --cors "*" --debug
+    #command: rasa x --no-prompt --endpoints /app/docker-local/endpoints.yml --credentials /app/docker-local/credentials.yml  --port 5005 --cors "*" --debug
   duckling:
     restart: always
     image: "rasa/duckling:latest"
