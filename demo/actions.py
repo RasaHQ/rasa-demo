@@ -11,6 +11,7 @@ from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused
 
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
+from demo.discourse import DiscourseAPI
 from demo import config
 from demo.gdrive_service import GDriveService
 
@@ -444,7 +445,7 @@ class ActionDefaultAskAffirmation(Action):
             lambda entities: {e.strip() for e in entities.split(",")}
         )
         self.algolia = AlgoliaAPI('BH4D9OD16A', '1f9e0efb89e98543f6613a60f847b176', 'rasa')
-
+        self.discourse = DiscourseAPI('https://forum.rasa.com/search')
 
     def run(
         self,
@@ -488,16 +489,28 @@ class ActionDefaultAskAffirmation(Action):
                 }
             )
 
-        logger.error(tracker)
-        logger.error(domain)
-        res = self.algolia.search("python")
-        docs_link = '[{}/{}/{}]({})'.format(res['hits'][0]['hierarchy']['lvl0'], res['hits'][0]['hierarchy']['lvl1'].strip(), res['hits'][0]['hierarchy']['lvl2'].strip(), res['hits'][0]['url'])
-        logger.error(docs_link)
-        buttons.append({"title": docs_link, "payload": "/out_of_scope"})
+        # Add search of docs pages
+        res = self.algolia.search(tracker.latest_message['text'])
+        docs_link = '{}/{}/{}'.format(res['hits'][0]['hierarchy']['lvl0'], res['hits'][0]['hierarchy']['lvl1'].strip(), res['hits'][0]['hierarchy']['lvl2'].strip())
+        buttons.append({"title": docs_link, "url": res['hits'][0]['url'], "payload": "/thank"})
+        #buttons.append({"title": docs_link, "type": "web_url", "url": res['hits'][0]['url']})
+
+        # Add search of forum
+        res = self.discourse.query(tracker.latest_message['text'])
+        r = res.json()
+
+        # https://forum.rasa.com/t/connection-refused/10376/8
+        post_url = '{}'.format("https://forum.rasa.com/t/" + r['topics'][0]['slug'] + "/" + str(r['topics'][0]['id']))
+        buttons.append({"title": r['topics'][0]['title'], "payload": "/thank", "url": post_url})
 
         buttons.append({"title": "Something else", "payload": "/out_of_scope"})
+        logger.error(buttons)
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
+
+        elements = []
+        elements.append({ "title": r['topics'][0]['title'], "buttons": [{ "title":"Forum", "url": post_url }] })
+        dispatcher.utter_elements(elements)
 
         return []
 
