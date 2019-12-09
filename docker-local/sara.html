@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mr.Bot - Web Chat</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<script src="index.js" type="text/javascript"></script>
+<div id="webchat"></div>
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/greet",
+    socketUrl: "http://localhost:5005/",
+    socketPath: "/socket.io/",
+    title: "Sara",
+    subtitle: "I'm still in development",
+    profileAvatar: "https://rasa.com/assets/img/demo/sara_avatar.png",
+    linksOpenTab: false,
+    docViewer: false,
+    customMessageDelay: (message) => {
+      return 900 + message.length;
+    },
+    inputTextFieldHint: "Type a message...",
+    connectingText: "Waiting for server...",
+    hideWhenNotConnected: false,
+    onSocketEvent: {
+      'bot_uttered': () => console.log('bot uttered'),
+    },
+    params: {
+      images: {
+        dims: {
+          width: 300,
+          height: 200
+        }
+      },
+      storage: "local"
+    }
+  })
+</script>
+</body>
+
+</html>

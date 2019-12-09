@@ -1,0 +1,43 @@
+# This file is for local testing of Rasa X (not server deployment)
+FROM node:12-buster
+
+ARG REPO=https://github.com/botfront/rasa-webchat.git
+ARG BRANCH
+
+RUN echo "REPO: $REPO"
+RUN echo "BRANCH: $BRANCH"
+
+#RUN apt-get update -qq && \
+#    apt-get install -y --no-install-recommends \
+#      git
+
+WORKDIR /app
+
+RUN if [ "x$BRANCH" = "x" ]; \
+    then echo git clone $REPO; \
+         git clone $REPO; \
+    else echo git clone --single-branch --branch $BRANCH $REPO; \
+         git clone --single-branch --branch $BRANCH $REPO; \
+    fi
+
+#RUN echo git clone https://github.com/botfront/rasa-webchat.git
+#RUN git clone https://github.com/botfront/rasa-webchat.git
+RUN pwd
+RUN ls -l
+RUN ls -l rasa-webchat
+
+WORKDIR /app/rasa-webchat
+
+COPY ./docker-local/webpack.sara.js .
+COPY ./docker-local/sara.html .
+RUN rm package-lock.json
+
+EXPOSE 8080
+
+RUN pwd
+RUN ls -l
+
+RUN yarn
+
+CMD yarn run webpack-dev-server --config webpack.sara.js --host 0.0.0.0 --port 8080
+#ENTRYPOINT ["/entrypoint.sh"]

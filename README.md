@@ -63,11 +63,18 @@ your website.
 To run Sara locally under docker, do the following:
 
 ```
-export RASA_VERS=1.5.1
-docker run -v $(pwd):/app rasa/rasa:${RASA_VERS}-full train --augmentation 0 --config config_local.yml
-docker-compose -f docker-compose-local.yml build
+rasa train 
+docker run -v $(pwd):/app rasa/rasa:1.5.1-full train --augmentation 0 --config docker-compose/config.yml
+docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3
 docker-compose -f docker-compose-local.yml up -d
-docker run -it --rm --network=$(basename `pwd`)_default -v $(pwd):/app rasa/rasa:${RASA_VERS}-full shell --model /app/models/$(ls models) --endpoints endpoints_local.yml
+docker-compose -f docker-compose-local.yml logs | grep password  # to get the Rasa X password
+# browse to http://localhost:5002 or http://localhost:8080
+```
+
+To get around the Mr. Bot links opening tab issue, build Mr. Bot with this command:
+
+```
+docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3 --build-arg REPO=https://github.com/rgstephens/rasa-webchat --build-arg BRANCH=links-open-tab
 ```
 
 ## 👩‍💻 Overview of the files
