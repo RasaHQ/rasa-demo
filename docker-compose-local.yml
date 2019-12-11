@@ -1,0 +1,40 @@
+# rasa train 
+# docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3
+# docker-compose -f docker-compose-local.yml build --no-cache --build-arg RASA_X_VERSION=0.23.3 --build-arg REPO=https://github.com/rgstephens/rasa-webchat --build-arg BRANCH=links-open-tab
+# docker-compose -f docker-compose-local.yml up -d
+# docker-compose -f docker-compose-local.yml logs | grep password
+# browse to http://localhost:5002 or http://localhost:8080
+version: "3.4"
+
+services:
+  rasa:
+    build:
+      context: ./
+      dockerfile: docker-local/Dockerfile.rasax
+    ports:
+      - "5005:5005"
+      - "5002:5002"
+    volumes:
+      - ./:/app
+    command: rasa x --no-prompt --endpoints /app/docker-local/endpoints.yml --port 5005 --cors "*" --debug
+    #command: rasa x --no-prompt  --port 5005 --cors "*" --debug
+    #command: rasa x --no-prompt --endpoints /app/docker-local/endpoints.yml --credentials /app/docker-local/credentials.yml  --port 5005 --cors "*" --debug
+  duckling:
+    restart: always
+    image: "rasa/duckling:latest"
+    ports:
+      - "8000:8000"
+    command: ["duckling-example-exe", "--no-access-log", "--no-error-log"]
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "5055:5055"
+  mrbot:
+    build:
+      context: ./
+      dockerfile: docker-local/Dockerfile.mrbot
+    ports:
+      - "8080:8080"
+    command: yarn run webpack-dev-server --config webpack.sara.js --host 0.0.0.0

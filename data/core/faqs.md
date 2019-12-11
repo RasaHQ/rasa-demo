@@ -410,12 +410,14 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* technical_question OR enter_data OR out_of_scope
+* enter_data OR out_of_scope
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## FAQ - Step 2 flow interrupted
 * install_rasa
@@ -431,6 +433,8 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## FAQ - Step 2 flow interrupted
 * install_rasa
@@ -448,6 +452,8 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## FAQ - Step 2 flow interrupted
 * get_started_step2
