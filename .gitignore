@@ -19,3 +19,4 @@ results
 rasa.*
 events.*
 terms
+docker-local

@@ -52,13 +52,15 @@
     - utter_ask_if_problem
 * affirm
     - utter_ask_describe_problem
-* technical_question OR enter_data OR out_of_scope
+* enter_data OR out_of_scope
     - action_store_problem_description
     - slot{"problem_description": "I don't know how to customize the pipeline"}
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## Problems installing
 * get_started_step2
@@ -72,14 +74,15 @@
     - utter_ask_if_problem
 * affirm
     - utter_ask_describe_problem
-* technical_question OR enter_data OR out_of_scope
+* enter_data OR out_of_scope
     - action_store_problem_description
     - slot{"problem_description": "I don't know how to customize the pipeline"}
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-
+* technical_question
+    - action_docs_forum_search
 
 ## Problems installing (cut to the chase)
 * get_started_step2
@@ -91,12 +94,14 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* technical_question OR enter_data OR out_of_scope
+* enter_data OR out_of_scope
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## Problems installing (cut to the chase)
 * install_rasa
@@ -105,13 +110,14 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* technical_question OR enter_data OR out_of_scope
+* enter_data OR out_of_scope
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-
+* technical_question
+    - action_docs_forum_search
 
 ## Problems installing (but FAQ)
 * install_rasa
@@ -129,6 +135,8 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## Problems installing (but FAQ)
 * get_started_step2
@@ -149,6 +157,8 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 
 ## Problems installing (but FAQ + cut to the chase)
@@ -168,6 +178,8 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 ## Problems installing (but FAQ + cut to the chase)
 * install_rasa
@@ -183,6 +195,8 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
+* technical_question
+    - action_docs_forum_search
 
 
 ## Just don't want to continue

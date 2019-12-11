@@ -7,7 +7,7 @@ import json
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused
+from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused, UserUttered
 
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
@@ -444,8 +444,6 @@ class ActionDefaultAskAffirmation(Action):
         self.intent_mappings.entities = self.intent_mappings.entities.map(
             lambda entities: {e.strip() for e in entities.split(",")}
         )
-        self.algolia = AlgoliaAPI('BH4D9OD16A', '1f9e0efb89e98543f6613a60f847b176', 'rasa')
-        self.discourse = DiscourseAPI('https://forum.rasa.com/search')
 
     def run(
         self,
@@ -489,28 +487,9 @@ class ActionDefaultAskAffirmation(Action):
                 }
             )
 
-        # Add search of docs pages
-        res = self.algolia.search(tracker.latest_message['text'])
-        docs_link = '{}/{}/{}'.format(res['hits'][0]['hierarchy']['lvl0'], res['hits'][0]['hierarchy']['lvl1'].strip(), res['hits'][0]['hierarchy']['lvl2'].strip())
-        buttons.append({"title": docs_link, "url": res['hits'][0]['url'], "payload": "/thank"})
-        #buttons.append({"title": docs_link, "type": "web_url", "url": res['hits'][0]['url']})
-
-        # Add search of forum
-        res = self.discourse.query(tracker.latest_message['text'])
-        r = res.json()
-
-        # https://forum.rasa.com/t/connection-refused/10376/8
-        post_url = '{}'.format("https://forum.rasa.com/t/" + r['topics'][0]['slug'] + "/" + str(r['topics'][0]['id']))
-        buttons.append({"title": r['topics'][0]['title'], "payload": "/thank", "url": post_url})
-
         buttons.append({"title": "Something else", "payload": "/out_of_scope"})
-        logger.error(buttons)
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
-
-        elements = []
-        elements.append({ "title": r['topics'][0]['title'], "buttons": [{ "title":"Forum", "url": post_url }] })
-        dispatcher.utter_elements(elements)
 
         return []
 
@@ -654,5 +633,63 @@ class ActionNextStep(Action):
             dispatcher.utter_template("utter_continue_step{}".format(step), tracker)
         else:
             dispatcher.utter_template("utter_no_more_steps", tracker)
+
+        return []
+
+
+class ActionDocsForumSearch(Action):
+    def name(self):
+        return "action_docs_forum_search"
+
+    def __init__(self) -> None:
+        self.algolia = AlgoliaAPI('BH4D9OD16A', '1f9e0efb89e98543f6613a60f847b176', 'rasa')
+        self.discourse = DiscourseAPI('https://forum.rasa.com/search')
+
+    def run(self, dispatcher, tracker, domain):
+        search_text = tracker.latest_message['text']
+        if (search_text == "/technical_question{}"):
+            last_user_event = tracker.get_last_event_for(UserUttered)
+            last_user_event = copy.deepcopy(last_user_event)
+            #prev_user_event = get_last_event_for(tracker, 'user', skip=1)
+            logger.error("last_user_event.parse_data: {}".format(last_user_event.parse_data))
+            search_text = last_user_event.parse_data["text"]
+
+        logger.error("search_text: {}".format(search_text))
+        msg = "I can't answer your question directly, but I found this from the docs:\n"
+
+        # Add search of docs pages
+        #logger.error('tracker: {}'.format(tracker))
+        #logger.error('tracker.latest_message: {}'.format(tracker.latest_message))
+        #logger.error('searching: {}'.format(tracker.latest_message['text']))
+        alg_res = self.algolia.search(search_text)
+        logger.error('alg_res[hits][0][hierarchy]: {}'.format(alg_res['hits'][0]['hierarchy']))
+        doc_title = "- [" + alg_res['hits'][0]['hierarchy']['lvl0']
+        if (alg_res['hits'][0]['hierarchy']['lvl1']):
+            doc_title += "/" + alg_res['hits'][0]['hierarchy']['lvl1'].strip()
+            if (alg_res['hits'][0]['hierarchy']['lvl2']):
+                doc_title += "/" + alg_res['hits'][0]['hierarchy']['lvl2'].strip()
+
+        doc_title += "](" + alg_res['hits'][0]['url'] + ")"
+        logger.error("doc_title: {}".format(doc_title))
+        #docs = "- [{}/{}/{}]({})\n".format(alg_res['hits'][0]['hierarchy']['lvl0'], alg_res['hits'][0]['hierarchy']['lvl1'].strip(), alg_res['hits'][0]['hierarchy']['lvl2'].strip(), alg_res['hits'][0]['url'])
+
+        # Add search of forum
+        disc_res = self.discourse.query(search_text)
+        disc_r = disc_res.json()
+        #logger.error("ActionDocsForumSearch, disc_r: {}".format(disc_r))
+        doc_url = "https://forum.rasa.com/t/" + disc_r['topics'][0]['slug'] + "/" + str(disc_r['topics'][0]['id'])
+        logger.error("ActionDocsForumSearch, doc_url: {}".format(doc_url))
+        forum = "I found this from the forum:\n- [" + disc_r['topics'][0]['title'] + "](" + doc_url + ")"
+        #msg += "- [{}]({})".format(disc_r['topics'][0]['title'], "https://forum.rasa.com/t/" + disc_r['topics'][0]['slug'] + "/" + str(disc_r['topics'][0]['id']))
+
+        # https://forum.rasa.com/t/connection-refused/10376/8
+        #post_url = '{}'.format("https://forum.rasa.com/t/" + r['topics'][0]['slug'] + "/" + str(r['topics'][0]['id']))
+        #buttons.append({"title": r['topics'][0]['title'], "payload": "/thank", "url": post_url})
+
+        logger.error("ActionDocsForumSearch, docs: {}, forum: {}".format(doc_title, forum))
+        dispatcher.utter_message(
+            "I can't answer your question directly, but I found the following from the docs and our forum:\n" + doc_title +
+            "\n" + forum
+        )
 
         return []
