@@ -59,8 +59,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 ## Problems installing
 * get_started_step2
@@ -81,8 +79,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 ## Problems installing (cut to the chase)
 * get_started_step2
@@ -100,8 +96,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 ## Problems installing (cut to the chase)
 * install_rasa
@@ -116,8 +110,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 ## Problems installing (but FAQ)
 * install_rasa
@@ -135,8 +127,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 ## Problems installing (but FAQ)
 * get_started_step2
@@ -157,8 +147,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 
 ## Problems installing (but FAQ + cut to the chase)
@@ -178,8 +166,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 ## Problems installing (but FAQ + cut to the chase)
 * install_rasa
@@ -195,8 +181,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-* technical_question
-    - action_docs_forum_search
 
 
 ## Just don't want to continue
