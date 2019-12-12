@@ -31,6 +31,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5055:5055"
+#    volumes:
+#      - "./demo:/app/actions"
   mrbot:
     build:
       context: ./

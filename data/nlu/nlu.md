@@ -2514,9 +2514,7 @@
 - [Both](product:all) of them
 
 ## intent:technical_question
-- what is duckling
 - where to train intents in rasa?
-- what is duckling
 - i need a help to integrate rasa with a messenger
 - what infrastructure is required to run a bot?
 - can you help me with this problem

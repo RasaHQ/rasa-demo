@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 from datetime import datetime
-from typing import Text, Dict, Any, List
+from typing import Text, Dict, Any, List, Optional
 import json
 
 from rasa_sdk import Action, Tracker
@@ -636,59 +636,120 @@ class ActionNextStep(Action):
         return []
 
 
-class ActionDocsForumSearch(Action):
+def get_last_event_for(tracker, event_type: Text, action_names_to_exclude: List[Text] = None, skip: int = 0) -> Optional[Any]:
+    """Gets the last event of a given type which was actually applied.
+
+    Args:
+        event_type: The type of event you want to find.
+        action_names_to_exclude: Events of type `ActionExecuted` which
+            should be excluded from the results. Can be used to skip
+            `action_listen` events.
+        skip: Skips n possible results before return an event.
+
+    Returns:
+        event which matched the query or `None` if no event matched.
+    """
+    #import copy
+    #to_exclude = action_names_to_exclude or []
+
+    def filter_function(e):
+        #logger.debug("e: {}".format(e))
+        #logger.debug("e.event: {}".format(e["event"]))
+        has_instance = e
+        if e["event"] == event_type:
+            has_instance = e
+            #logger.debug("  filtering event, intent name: {}".format(has_instance["parse_data"]["intent"]["name"]))
+        #excluded = (isinstance(e, ActionExecuted) and e.action_name in to_exclude)
+        excluded = (e["event"] != event_type or ((e["event"] == event_type and ((e["parse_data"]["intent"]["name"] == "domicile") or (e["parse_data"]["intent"]["name"] == "customertype")))))
+
+        return has_instance and not excluded
+
+    filtered = filter(filter_function, reversed(tracker.events))
+    for i in range(skip):
+        next(filtered, None)
+
+    logger.error("filtered returning: {}".format(filtered))
+    return next(filtered, None)
+
+
+def GetAlgoliaLink(hits, index: int):
+    doc_link = "- [" + hits[index]['hierarchy']['lvl0']
+    if (hits[index]['hierarchy']['lvl1']):
+        doc_link += "/" + hits[index]['hierarchy']['lvl1'].strip()
+        if (hits[index]['hierarchy']['lvl2']):
+            doc_link += "/" + hits[index]['hierarchy']['lvl2'].strip()
+    doc_link += "](" + hits[index]['url'] + ")"
+    return doc_link
+
+
+class ActionDocsSearch(Action):
     def name(self):
-        return "action_docs_forum_search"
+        return "action_docs_search"
 
     def __init__(self) -> None:
         self.algolia = AlgoliaAPI('BH4D9OD16A', '1f9e0efb89e98543f6613a60f847b176', 'rasa')
+
+    def run(self, dispatcher, tracker, domain):
+        search_text = tracker.latest_message['text']
+        logger.error("Doing doc search on test: {}".format(search_text))
+        if (search_text == "/technical_question{}"):
+            last_user_event = get_last_event_for(tracker, 'user', skip=2)
+            logger.error("last_user_event: {}".format(last_user_event))
+            search_text = last_user_event["text"]
+        logger.error("search_text: {}".format(search_text))
+
+        # Search of docs pages
+        alg_res = self.algolia.search(search_text)
+        logger.error('alg_res[hits][0][hierarchy]: {}'.format(alg_res['hits'][0]['hierarchy']))
+
+        doc_list = GetAlgoliaLink(alg_res['hits'], 0)
+        doc_list += "\n" + GetAlgoliaLink(alg_res['hits'], 1)
+
+        logger.error("ActionDocsSearch, docs: {}".format(doc_list))
+        dispatcher.utter_message(
+            "I can't answer your question directly, but I found the following from the docs:\n" + doc_list
+        )
+
+        return []
+
+
+def GetDiscourseLinks(topics, index: int):
+    doc_url = "https://forum.rasa.com/t/" + topics[index]['slug'] + "/" + str(topics[index]['id'])
+    logger.error("ActionDocsForumSearch, doc_url: {}".format(doc_url))
+    forum = "- [" + topics[index]['title'] + "](" + doc_url + ")"
+    return forum
+
+
+class ActionForumSearch(Action):
+    def name(self):
+        return "action_forum_search"
+
+    def __init__(self) -> None:
         self.discourse = DiscourseAPI('https://forum.rasa.com/search')
 
     def run(self, dispatcher, tracker, domain):
         search_text = tracker.latest_message['text']
         if (search_text == "/technical_question{}"):
-            last_user_event = tracker.get_last_event_for(UserUttered)
-            last_user_event = copy.deepcopy(last_user_event)
-            #prev_user_event = get_last_event_for(tracker, 'user', skip=1)
-            logger.error("last_user_event.parse_data: {}".format(last_user_event.parse_data))
-            search_text = last_user_event.parse_data["text"]
-
+            last_user_event = get_last_event_for(tracker, 'user', skip=2)
+            logger.error("last_user_event: {}".format(last_user_event))
+            search_text = last_user_event["text"]
         logger.error("search_text: {}".format(search_text))
-        msg = "I can't answer your question directly, but I found this from the docs:\n"
 
-        # Add search of docs pages
-        #logger.error('tracker: {}'.format(tracker))
-        #logger.error('tracker.latest_message: {}'.format(tracker.latest_message))
-        #logger.error('searching: {}'.format(tracker.latest_message['text']))
-        alg_res = self.algolia.search(search_text)
-        logger.error('alg_res[hits][0][hierarchy]: {}'.format(alg_res['hits'][0]['hierarchy']))
-        doc_title = "- [" + alg_res['hits'][0]['hierarchy']['lvl0']
-        if (alg_res['hits'][0]['hierarchy']['lvl1']):
-            doc_title += "/" + alg_res['hits'][0]['hierarchy']['lvl1'].strip()
-            if (alg_res['hits'][0]['hierarchy']['lvl2']):
-                doc_title += "/" + alg_res['hits'][0]['hierarchy']['lvl2'].strip()
+        # Search forum
+        disc_r = self.discourse.query(search_text)
+        disc_r = disc_r.json()
 
-        doc_title += "](" + alg_res['hits'][0]['url'] + ")"
-        logger.error("doc_title: {}".format(doc_title))
-        #docs = "- [{}/{}/{}]({})\n".format(alg_res['hits'][0]['hierarchy']['lvl0'], alg_res['hits'][0]['hierarchy']['lvl1'].strip(), alg_res['hits'][0]['hierarchy']['lvl2'].strip(), alg_res['hits'][0]['url'])
-
-        # Add search of forum
-        disc_res = self.discourse.query(search_text)
-        disc_r = disc_res.json()
         #logger.error("ActionDocsForumSearch, disc_r: {}".format(disc_r))
-        doc_url = "https://forum.rasa.com/t/" + disc_r['topics'][0]['slug'] + "/" + str(disc_r['topics'][0]['id'])
-        logger.error("ActionDocsForumSearch, doc_url: {}".format(doc_url))
-        forum = "I found this from the forum:\n- [" + disc_r['topics'][0]['title'] + "](" + doc_url + ")"
-        #msg += "- [{}]({})".format(disc_r['topics'][0]['title'], "https://forum.rasa.com/t/" + disc_r['topics'][0]['slug'] + "/" + str(disc_r['topics'][0]['id']))
+        forum = GetDiscourseLinks(disc_r['topics'], 0)
+        forum += "\n" + GetDiscourseLinks(disc_r['topics'], 1)
 
         # https://forum.rasa.com/t/connection-refused/10376/8
         #post_url = '{}'.format("https://forum.rasa.com/t/" + r['topics'][0]['slug'] + "/" + str(r['topics'][0]['id']))
         #buttons.append({"title": r['topics'][0]['title'], "payload": "/thank", "url": post_url})
 
-        logger.error("ActionDocsForumSearch, docs: {}, forum: {}".format(doc_title, forum))
+        logger.error("ActionForumSearch, forum: {}".format(forum))
         dispatcher.utter_message(
-            "I can't answer your question directly, but I found the following from the docs and our forum:\n" + doc_title +
-            "\n" + forum
+            "I found the following from our forum:\n" + forum
         )
 
         return []
