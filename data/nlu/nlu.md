@@ -484,7 +484,7 @@
 - If I use [Rasa](product:rasa), do I also need [Rasa X](product:x)?
 - What's new in [Rasa X](product:x) compared to [Rasa](product:rasa)?
 - how does [rasa x](product:x) stack up against [rasa](product:rasa)
-- i am using [rasa](rasa) nlu, why would i need [rasa x](product:x)?
+- i am using [rasa](product), why would i need [rasa x](product:x)?
 - please compare [rasa](product) and [rasa x](product:x)
 - show me comparison between [rasa x](product:x) and [[rasa
 - tell me the difference between [rasa](product) and [rasa x](product:x)
