@@ -4985,12 +4985,6 @@ data/products.txt
 ## synonym:organisation
 - companies
 
-## synonym:philipp
-- Philipp
-
-## synonym:philipp wolf
-- Philipp Wolf
-
 ## synonym:place
 - places
 
