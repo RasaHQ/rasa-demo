@@ -2424,7 +2424,7 @@
 - I'm the [developer](job_function)
 - I'm the [lead engineer](job_function)
 - Im a [full stack developer](job_function)
-- It is [Drew@Mccarthy.com](email)
+- It is [drew@Mccarthy.com](email)
 - I’ve trained it in [chinese](language)
 - I’ve trained it in [dutch](language)
 - I’ve trained it in [english](language)
@@ -2435,17 +2435,17 @@
 - I’ve trained it in [portuguese](language)
 - I’ve trained it in [spanish](language)
 - My budget is oov
-- My email is [Richard@Simmons.com](email)
+- My email is [Richard@simmons.com](email)
 - My name is [Ashleigh Mees](name)
-- My name is [Chelsea Parker](name)
-- My name is [Jessie Maglione](name)
+- My name is [chelsea Parker](name)
+- My name is [jessie maglione](name)
 - My name is [Kenneth Sherman](name)
 - My name is [Lee George](name)
 - My name is [Louise Caudill](name)
-- My name is [Richard Smith](name)
+- My name is [Richard smith](name)
 - My name is [Shane Goodyear](name)
 - My name is [Sondra Boyd](name)
-- My name si [Tom Harbin](name)
+- My name si [tom Harbin](name)
 - No job
 - None
 - Rasa bot
@@ -2510,7 +2510,7 @@
 - [COO](job_function)
 - [CSI](company)
 - [CTO](job_function)
-- [Carolyn.Eisenhauer@Watkins.com](email)
+- [carolyn.eisenhauer@watkins.com](email)
 - [Club Mate](company)
 - [David Carter](name)
 - [Denise Armstrong's company](company)
@@ -2533,7 +2533,7 @@
 - [K_Claytor@yahoo.com](email)
 - [K_Rainey@Yochum.net](email)
 - [Keith Donnell](name) PhD
-- [Kristin@yahoo.com](email)
+- [kristin@yahoo.com](email)
 - [Linda Mchone](name)
 - [Lithuanian](language:lithuanian)
 - [McKinsey Germany](company)
@@ -2546,7 +2546,7 @@
 - [Owner](job_function)
 - [Product Manager](job_function)
 - [Rasa](company)
-- [Robert.Sparks@gmail.com](email)
+- [Robert.sparks@gmail.com](email)
 - [SAP](company)
 - [Scalable Minds](company)
 - [Software engineer](job_function).
@@ -2873,9 +2873,9 @@
 - my bot is in [portuguese](language)
 - my bot is in [spanish](language)
 - my business mail is [S_Dibenedetto@Simpson.net](email)
-- my email is [Carole@Hart.com](email)
+- my email is [carole@hart.com](email)
 - my email is [Elinor_Stock@Higgenbotham.com](email)
-- my email is [K_Spivey@yahoo.com](email)
+- my email is [k_spivey@yahoo.com](email)
 - my email is [Kelly@Coulter.net](email)
 - my email is [M_Jones@Luna.com](email)
 - my email is [Mia_Gainey@gmail.com](email)
@@ -2885,21 +2885,21 @@
 - my function is [to serve butter](job_function)
 - my job function is [developer](job_function)
 - my name is [Alexander Kohn](name)
-- my name is [Betty Mclendon](name)
+- my name is [betty mclendon](name)
 - my name is [Brian Leung](name)
 - my name is [Claude Ake](name)
 - my name is [Earl Ring](name)
 - my name is [Felicia Cosby](name)
 - my name is [Frances Kunkle](name)
 - my name is [Greg King](name)
-- my name is [James Culpit](name)
+- my name is [james culpit](name)
 - my name is [Jermaine Mccleery](name)
 - my name is [John Evers](name)
 - my name is [Joseph Parson](name)
 - my name is [Monica Ser](name)
 - my name is [Nigel Partida](name)
 - my name is [Staci Simpson](name)
-- my name is [Susan Crandall](name)
+- my name is [susan crandall](name)
 - my name is [Tabitha Schoenthal](name)
 - my name's [Michael Peppers](name)
 - my own
@@ -4530,7 +4530,7 @@
 - please send me the newsletter
 - please send newsletter to [Robert@yahoo.com](email)
 - please sign me up for the newsletter
-- please subscribe me to the newsletter [Gregory_Lilley@yahoo.com](email)
+- please subscribe me to the newsletter [gregory_lilley@yahoo.com](email)
 - please subscribe me to your newsletter
 - register me for the newsletter
 - send me the newsletter
@@ -4544,7 +4544,7 @@
 - sign up to the newsletter
 - subcribe
 - subscribe
-- subscribe [Bruce_Harryman@Olsen.com](email) to the newsletter
+- subscribe [Bruce_harryman@Olsen.com](email) to the newsletter
 - subscribe [Denise@gmail.com](email) to the newsletter
 - subscribe me to newsletter
 - subscribe me to the newsletter
