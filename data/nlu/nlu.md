@@ -459,7 +459,7 @@
 - what is the difference between [nlu](product) and rasa [core](product)
 - what is the difference between rasa [nlu](product) and rasa [core](product)
 - what is the difference between rasa [nlu](product) and rasa [core](product)?
-- what is the difference between the [two](number:2)?
+- what is the difference between the [two](number)?
 - what is the difference?
 - what is the different
 - what is the main difference between [core](product) and [nlu](product)?
@@ -1202,7 +1202,7 @@
 - Are you a chat bot?
 - Are you the bot?
 - Hi there, are you the bot?
-- So I'm here Today to ask [one](number:1) very simple question, what are you ?
+- So I'm here Today to ask [one](number) very simple question, what are you ?
 - are you a BOT
 - are you a Skynet ?
 - are you a bot
@@ -1522,7 +1522,7 @@
 - whats the temperature
 - whats the temperature in [delhi](location)?
 - whats the weather in [berlin](location)?
-- whats the weather like [tomorrow](DATE)?
+- whats the weather like tomorrow?
 - wheather at you location?
 - wheather be like at your place?
 
@@ -2158,7 +2158,7 @@
 - i need to talk to sales
 - i need your data source
 - i think I want to talk to your sales folks
-- i want [one](number:1) platform please
+- i want [one](number) platform please
 - i want a sales call
 - i want someone to call me
 - i want ti booking about booking sales
@@ -2456,42 +2456,42 @@
 - This is [Norma Taylor](name)
 - We plan to build a sales bot to increase our sales by 500%.
 - Whatever it costs
-- [$0.00](amount-of-money:0)
-- [$1000](amount-of-money:1000)
+- [$0.00](amount-of-money)
+- [$1000](amount-of-money)
 - [0](number)
-- [1 million](number:1000000)
-- [1 million](number:1000000) big ones
-- [10 m](number:10000000)
+- [1 million](number)
+- [1 million](number) big ones
+- [10 m](number)
 - [1000000](number)
 - [100000](number)
 - [1000](number)
 - [100](number)
 - [10](number)
-- [10k](number:10000)
+- [10k](number)
 - [120000](number)
 - [1231](number)
 - [12](number)
-- [2 million](number:2000000)
-- [200 bucks](amount-of-money:200)
+- [2 million](number)
+- [200 bucks](amount-of-money)
 - [200000000](number)
 - [20000](number)
-- [20000k](number:20000000)
-- [2000k](number:2000000)
-- [200k](number:200000)
-- [25,000](number:25000)
-- [300 rupees](amount-of-money:300)
+- [20000k](number)
+- [2000k](number)
+- [200k](number)
+- [25,000](number)
+- [300 rupees](amount-of-money)
 - [300000](number)
-- [300k](number:300000)
+- [300k](number)
 - [3](number)
-- [500 million](number:500000000)
+- [500 million](number)
 - [500000](number)
 - [5000](number)
-- [500k](number:500000)
+- [500k](number)
 - [50](number) p
 - [5](number) quid
 - [6000000](number)
-- [900 dollars](amount-of-money:900)
-- [90k](number:90000)
+- [900 dollars](amount-of-money)
+- [90k](number)
 - [99](number)
 - [ACME Mops](company:acme mops)
 - [AI engieer](job_function)
@@ -2500,7 +2500,7 @@
 - [Allianz](company)
 - [Angel Robinson company](company)
 - [BBC](company:bbc)
-- [BCBSM](company:bcbsm)[BCBSM](ORG)
+- [BCBSM](company:bcbsm)
 - [BCG brazil](company)
 - [BCG digital ventures](company)
 - [BigBotsInc](company)
@@ -2521,7 +2521,7 @@
 - [Founder](job_function)
 - [Full Stack](job_function)
 - [Full stack](job_function).
-- [Helvetia](company:helvetia)[Helvetia](GPE)
+- [Helvetia](company:helvetia)
 - [I am a freelancer ](company)
 - [IBM](company)
 - [IT manager](job_function)
@@ -2541,8 +2541,8 @@
 - [Michelle Garcia](name)
 - [Michelle Vinion](name)
 - [Mr. Sweney](name)
-- [N26](ORG)
-- [None](number:0)?
+- [N26](company)
+- [None](number)?
 - [Owner](job_function)
 - [Product Manager](job_function)
 - [Rasa](company)
@@ -2551,7 +2551,7 @@
 - [Scalable Minds](company)
 - [Software engineer](job_function).
 - [Steven Carter](name)'s company
-- [Ten](number:10)
+- [Ten](number)
 - [Terri Cline](name)
 - [William Zelkind](name)
 - [Willie@gmail.com](email)
@@ -2614,14 +2614,14 @@
 - [microsoft](company)
 - [ml researcher](job_function)
 - [no job](job_function)
-- [none](number:0)
-- [none](number:0) i will build it from scraps
+- [none](number)
+- [none](number) i will build it from scraps
 - [numbers](entity)
-- [one billion](number:1000000000)
-- [one](number:1) like this [one](number:1)
-- [one](number:1) that flatters me every morning
-- [one](number:1) that will get me promoted
-- [one](number:1) which asks me loads about myself
+- [one billion](number)
+- [one](number)
+- [one](number) that flatters me every morning
+- [one](number) that will get me promoted
+- [one](number) which asks me loads about myself
 - [portuguese](language)
 - [portuguese](language) is the language of my bot
 - [portuguese](language) is the only language but I want to add more
@@ -2653,8 +2653,8 @@
 - a cool bot
 - a cool boy
 - a customer service support system
-- a good [one](number:1)?
-- a great [one](number:1)
+- a good [one](number)?
+- a great [one](number)
 - a health bot
 - a insurance tool that consults potential customers on the best life insurance to choose.
 - a killer bot
@@ -2693,7 +2693,7 @@
 - customer service
 - customer service automation
 - customer service automation bot
-- don't have [one](CARDINAL)[one](number:1)
+- don't have [one](number)
 - driver
 - eisenkleber limited co kg
 - email = [Patti.Salazar@gmail.com](email)
@@ -2702,7 +2702,7 @@
 - funny bot
 - get [dates](entity:date) from messages
 - got it
-- half a [million](number:1000000)
+- half a [million](number)
 - have no idea
 - head of biz deve
 - health care
@@ -2710,10 +2710,10 @@
 - i am [self emplayed](job_function)
 - i am a [projject manager](job_function)
 - i am interested in [ordinals](entity)
-- i don't have [one](number:1)
+- i don't have [one](number)
 - i don't have it
 - i don't know
-- i have [none](number:0)
+- i have [none](number)
 - i have about 200 bucks in my savings account
 - i need a bot for customer service automation
 - i sell turtles
@@ -2997,7 +2997,7 @@
 - the people speak [mandarin](language)
 - the people speak [portuguese](language)
 - the people speak [spanish](language)
-- there is [no budget](number:0)
+- there is [no budget](number)
 - until now it’s only in [chinese](language)
 - until now it’s only in [dutch](language)
 - until now it’s only in [english](language)
@@ -3026,7 +3026,7 @@
 - user can talk to my bot in [portuguese](language)
 - user can talk to my bot in [spanish](language)
 - we are a covert government organisation
-- we don't have [one](number:1)
+- we don't have [one](number)
 - we plan to build a sales bot to increase our revenue by 100%.
 - we plan with 250.000 euro for one year
 - we think 4 million INR/ year
@@ -3964,7 +3964,7 @@
 - [Kristin](name), I want to marry you
 - [german](language)?
 - a tamed mouse will arrive at your doorstep in the next couple of days
-- aRE YOU [SINGLE](number:1)?
+- aRE YOU [SINGLE](number)?
 - again?
 - alexa, order [5](number) tons of natrium chloride
 - and make chicken noises into the phone
@@ -3972,7 +3972,7 @@
 - are the newsletter worth the subscription?
 - are u facebook
 - are u, facebook?
-- are you [single](number:1)?
+- are you [single](number)?
 - are you dev?
 - are you human ?
 - are you russian?
@@ -3984,7 +3984,7 @@
 - bots are bad
 - but I just told you that :(
 - but if rasa is open source why do you have a sales team
-- buy [one](CARDINAL)[one](number:1) [Evelyn Jackson](name) please
+- buy [one](number) please
 - buy groceries
 - call me father
 - can I install this on a mac?
@@ -4133,7 +4133,7 @@
 - offer me lunch
 - oh my god, not again!
 - oh wait i gave you my work email address can i change it?
-- ok [one](CARDINAL)[one](number:1) [Gloria Haigh](name) then
+- ok [one](number) then
 - on wiche nlp based system are you build?
 - only that?
 - order good
@@ -4170,7 +4170,7 @@
 - tell me more about next best action
 - that doesn't sound like a joke
 - that link doesn't work!
-- the [one](number:1) that is better than you
+- the [one](number) that is better than you
 - this is a really frustrating experience
 - tricked  ya
 - tu parles francais?
@@ -4265,7 +4265,7 @@
 - you have job opening
 - you lock sweety
 - you should learn to count
-- you will know it from the [single](number:1) red rose it carries between its teeth
+- you will know it from the [single](number) red rose it carries between its teeth
 - you're a woman
 - you're rather dull
 - your mom gay
@@ -4804,73 +4804,6 @@ data/products.txt
 ## regex:zipcode
 - [0-9]{5}
 
-## synonym:0
-- $0.00
-- None
-- no budget
-- none
-
-## synonym:1
-- SINGLE
-- one
-- single
-
-## synonym:10
-- Ten
-
-## synonym:1000
-- $1000
-
-## synonym:10000
-- 10k
-
-## synonym:1000000
-- 1 million
-- million
-
-## synonym:10000000
-- 10 m
-
-## synonym:1000000000
-- one billion
-
-## synonym:2
-- two
-
-## synonym:200
-- 200 bucks
-
-## synonym:200000
-- 200k
-
-## synonym:2000000
-- 2 million
-- 2000k
-
-## synonym:20000000
-- 20000k
-
-## synonym:2018-06-07T00:00:00.000-07:00
-- tomorrow
-
-## synonym:25000
-- 25,000
-
-## synonym:300
-- 300 rupees
-
-## synonym:300000
-- 300k
-
-## synonym:500000
-- 500k
-
-## synonym:500000000
-- 500 million
-
-## synonym:90000
-- 90k
-
 ## synonym:USA
 - U.S.
 - US
@@ -4906,9 +4839,6 @@ data/products.txt
 - CORE
 - Core
 
-## synonym:date
-- dates
-
 ## synonym:developer
 - Developer
 
@@ -4918,15 +4848,8 @@ data/products.txt
 - dialog flow
 - google
 
-## synonym:distance
-- distances
-
 ## synonym:donezo
 -  donez
-
-## synonym:duration
-- durations
-- how long
 
 ## synonym:entity recognition
 - entity extraction
@@ -4970,9 +4893,6 @@ data/products.txt
 - Luis
 - luis.ai
 
-## synonym:money
-- amounts
-
 ## synonym:name
 - names
 
@@ -4990,9 +4910,6 @@ data/products.txt
 
 ## synonym:philipp wolf
 - Philipp Wolf
-
-## synonym:place
-- places
 
 ## synonym:rasa
 - Rasa
@@ -5018,4 +4935,3 @@ data/products.txt
 
 ## synonym:yolo@yolo.de
 - yolo at yolo.de
-
