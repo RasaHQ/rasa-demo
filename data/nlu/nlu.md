@@ -2693,7 +2693,7 @@
 - customer service
 - customer service automation
 - customer service automation bot
-- don't have [one](CARDINAL)[one](number:1)
+- don't have [one](number:1)
 - driver
 - eisenkleber limited co kg
 - email = [Patti.Salazar@gmail.com](email)
@@ -3984,7 +3984,7 @@
 - bots are bad
 - but I just told you that :(
 - but if rasa is open source why do you have a sales team
-- buy [one](CARDINAL)[one](number:1) [Evelyn Jackson](name) please
+- buy [one](number:1) [Evelyn Jackson](name) please
 - buy groceries
 - call me father
 - can I install this on a mac?
@@ -4133,7 +4133,7 @@
 - offer me lunch
 - oh my god, not again!
 - oh wait i gave you my work email address can i change it?
-- ok [one](CARDINAL)[one](number:1) [Gloria Haigh](name) then
+- ok [one](number:1) [Gloria Haigh](name) then
 - on wiche nlp based system are you build?
 - only that?
 - order good
