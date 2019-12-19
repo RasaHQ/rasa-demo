@@ -492,22 +492,22 @@
 - whats the difference between [core](product) and [nlu](product)
 
 ## intent:ask_faq_differencerasarasax
-- Are [Rasa](product) and [Rasa X](product:x) the same thing?
-- Can I use [Rasa X](product:x) without using [Rasa](product:rasa)?
-- Can i use [rasa](product:rasa) without [rasa x](product:x)?
-- Do I need both [Rasa](product:rasa) and [Rasa X](product:x)?
-- How is [Rasa X](product:x) different from [Rasa](product:rasa)?
-- If I use [Rasa](product:rasa), do I also need [Rasa X](product:x)?
-- What's new in [Rasa X](product:x) compared to [Rasa](product:rasa)?
-- how does [rasa x](product:x) stack up against [rasa](product:rasa)
-- i am using [rasa](product), why would i need [rasa x](product:x)?
-- please compare [rasa](product) and [rasa x](product:x)
-- show me comparison between [rasa x](product:x) and [[rasa
-- tell me the difference between [rasa](product) and [rasa x](product:x)
+- Are [Rasa](product) and [Rasa X](product) the same thing?
+- Can I use [Rasa X](product) without using [Rasa](product:rasa)?
+- Can i use [rasa](product:rasa) without [rasa x](product)?
+- Do I need both [Rasa](product:rasa) and [Rasa X](product)?
+- How is [Rasa X](product) different from [Rasa](product:rasa)?
+- If I use [Rasa](product:rasa), do I also need [Rasa X](product)?
+- What's new in [Rasa X](product) compared to [Rasa](product:rasa)?
+- how does [rasa x](product) stack up against [rasa](product:rasa)
+- i am using [rasa](product), why would i need [rasa x](product)?
+- please compare [rasa](product) and [rasa x](product)
+- show me comparison between [rasa x](product) and [[rasa
+- tell me the difference between [rasa](product) and [rasa x](product)
 - tell me the difference between [rasa](product) and [x](product)
-- what's the difference between [rasa](product) and [rasa x](product:x)
+- what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
-- when should i use [rasa](product:rasa) and when should i use [rasa x](product:x)
+- when should i use [rasa](product:rasa) and when should i use [rasa x](product)
 
 ## intent:ask_faq_ee
 - Can you tell me about the enterprise edition?
@@ -3315,7 +3315,7 @@
 - Get started
 - HOW CAN i connect to rasa
 - Help me get started
-- Hi, how can i get started with [rasa x](product:x)
+- Hi, how can i get started with [rasa x](product)
 - Hot to get started with rasa
 - How can I develop a bot?
 - How can I get started with Rasa
@@ -4658,7 +4658,7 @@
 - Can I use Rasa for E-Mail
 - Can you send messages based on events?
 - How did rasa works?
-- How do I use ngrok with [rasa x](product:x)?
+- How do I use ngrok with [rasa x](product)?
 - I am getting some error
 - I have a problem
 - I need help with a problem
