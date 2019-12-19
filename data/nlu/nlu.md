@@ -459,7 +459,7 @@
 - what is the difference between [nlu](product) and rasa [core](product)
 - what is the difference between rasa [nlu](product) and rasa [core](product)
 - what is the difference between rasa [nlu](product) and rasa [core](product)?
-- what is the difference between the [two](number)?
+- what is the difference between the two?
 - what is the difference?
 - what is the different
 - what is the main difference between [core](product) and [nlu](product)?
@@ -1202,7 +1202,7 @@
 - Are you a chat bot?
 - Are you the bot?
 - Hi there, are you the bot?
-- So I'm here Today to ask [one](number) very simple question, what are you ?
+- So I'm here Today to ask one very simple question, what are you ?
 - are you a BOT
 - are you a Skynet ?
 - are you a bot
@@ -2158,7 +2158,7 @@
 - i need to talk to sales
 - i need your data source
 - i think I want to talk to your sales folks
-- i want [one](number) platform please
+- i want one platform please
 - i want a sales call
 - i want someone to call me
 - i want ti booking about booking sales
@@ -2220,7 +2220,7 @@
 - sales sales sales
 - sales team
 - sales team connection
-- sign me up, my email is [Elizabeth@yahoo.com](email)
+- sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
 
@@ -2342,7 +2342,6 @@
 - 50k
 - 60 million INR
 - 75000-150000 euro
-- ;[0](number)
 - A customer service bot
 - A wolf bot
 - ACME bank
@@ -2424,7 +2423,7 @@
 - I'm the [developer](job_function)
 - I'm the [lead engineer](job_function)
 - Im a [full stack developer](job_function)
-- It is [Drew@Mccarthy.com](email)
+- It is Drew@Mccarthy.com
 - I’ve trained it in [chinese](language)
 - I’ve trained it in [dutch](language)
 - I’ve trained it in [english](language)
@@ -2435,7 +2434,7 @@
 - I’ve trained it in [portuguese](language)
 - I’ve trained it in [spanish](language)
 - My budget is oov
-- My email is [Richard@Simmons.com](email)
+- My email is Richard@Simmons.com
 - My name is [Ashleigh Mees](name)
 - My name is [Chelsea Parker](name)
 - My name is [Jessie Maglione](name)
@@ -2456,43 +2455,43 @@
 - This is [Norma Taylor](name)
 - We plan to build a sales bot to increase our sales by 500%.
 - Whatever it costs
-- [$0.00](amount-of-money)
-- [$1000](amount-of-money)
-- [0](number)
-- [1 million](number)
-- [1 million](number) big ones
-- [10 m](number)
-- [1000000](number)
-- [100000](number)
-- [1000](number)
-- [100](number)
-- [10](number)
-- [10k](number)
-- [120000](number)
-- [1231](number)
-- [12](number)
-- [2 million](number)
-- [200 bucks](amount-of-money)
-- [200000000](number)
-- [20000](number)
-- [20000k](number)
-- [2000k](number)
-- [200k](number)
-- [25,000](number)
-- [300 rupees](amount-of-money)
-- [300000](number)
-- [300k](number)
-- [3](number)
-- [500 million](number)
-- [500000](number)
-- [5000](number)
-- [500k](number)
-- [50](number) p
-- [5](number) quid
-- [6000000](number)
-- [900 dollars](amount-of-money)
-- [90k](number)
-- [99](number)
+- $0.00
+- $1000
+- 0
+- 1 million
+- 1 million big ones
+- 10 m
+- 1000000
+- 100000
+- 1000
+- 100
+- 10
+- 10k
+- 120000
+- 1231
+- 12
+- 2 million
+- 200 bucks
+- 200000000
+- 20000
+- 20000k
+- 2000k
+- 200k
+- 25,000
+- 300 rupees
+- 300000
+- 300k
+- 3
+- 500 million
+- 500000
+- 5000
+- 500k
+- 50 p
+- 5 quid
+- 6000000
+- 900 dollars
+- 90k
+- 99
 - [ACME Mops](company:acme mops)
 - [AI engieer](job_function)
 - [AI researcher](job_function)
@@ -2510,13 +2509,13 @@
 - [COO](job_function)
 - [CSI](company)
 - [CTO](job_function)
-- [Carolyn.Eisenhauer@Watkins.com](email)
+- [Carolyn.Eisenhauer@Watkins.com
 - [Club Mate](company)
 - [David Carter](name)
 - [Denise Armstrong's company](company)
 - [Developer Advocate](job_function)
 - [Developer](job_function:developer)
-- [Ebony@gmail.com](email)
+- Ebony@gmail.com
 - [Elise](name)
 - [Founder](job_function)
 - [Full Stack](job_function)
@@ -2526,14 +2525,14 @@
 - [IBM](company)
 - [IT manager](job_function)
 - [Im Phyllis Howard](name)
-- [J_Herrera@gmail.com](email)
+- J_Herrera@gmail.com
 - [Jamie Moore](name)
 - [Jane Baines](name)
 - [John Strickland](name)
-- [K_Claytor@yahoo.com](email)
-- [K_Rainey@Yochum.net](email)
+- K_Claytor@yahoo.com
+- K_Rainey@Yochum.net
 - [Keith Donnell](name) PhD
-- [Kristin@yahoo.com](email)
+- Kristin@yahoo.com
 - [Linda Mchone](name)
 - [Lithuanian](language:lithuanian)
 - [McKinsey Germany](company)
@@ -2542,22 +2541,22 @@
 - [Michelle Vinion](name)
 - [Mr. Sweney](name)
 - [N26](company)
-- [None](number)?
+- None?
 - [Owner](job_function)
 - [Product Manager](job_function)
 - [Rasa](company)
-- [Robert.Sparks@gmail.com](email)
+- Robert.Sparks@gmail.com
 - [SAP](company)
 - [Scalable Minds](company)
 - [Software engineer](job_function).
 - [Steven Carter](name)'s company
-- [Ten](number)
+- Ten
 - [Terri Cline](name)
 - [William Zelkind](name)
-- [Willie@gmail.com](email)
+- Willie@gmail.com
 - [Zendesk](company)
-- [a@b.com](email)
-- [abhbose3k@gmail.com](email)
+- a@b.com
+- abhbose3k@gmail.com
 - [accenture](company)
 - [allianz](company)
 - [amounts](entity:money)
@@ -2614,14 +2613,14 @@
 - [microsoft](company)
 - [ml researcher](job_function)
 - [no job](job_function)
-- [none](number)
-- [none](number) i will build it from scraps
+- none
+- none i will build it from scraps
 - [numbers](entity)
-- [one billion](number)
-- [one](number)
-- [one](number) that flatters me every morning
-- [one](number) that will get me promoted
-- [one](number) which asks me loads about myself
+- one billion
+- one
+- one that flatters me every morning
+- one that will get me promoted
+- one which asks me loads about myself
 - [portuguese](language)
 - [portuguese](language) is the language of my bot
 - [portuguese](language) is the only language but I want to add more
@@ -2653,8 +2652,8 @@
 - a cool bot
 - a cool boy
 - a customer service support system
-- a good [one](number)?
-- a great [one](number)
+- a good one?
+- a great one
 - a health bot
 - a insurance tool that consults potential customers on the best life insurance to choose.
 - a killer bot
@@ -2684,7 +2683,7 @@
 - big old bot
 - boo
 - bout 4,000,000 INR
-- can you try [E_Conder@gmail.com](email) instead?
+- can you try E_Conder@gmail.com instead?
 - chatbot
 - chief lemonade officer
 - chief nerd at rasa technologies
@@ -2693,16 +2692,16 @@
 - customer service
 - customer service automation
 - customer service automation bot
-- don't have [one](number)
+- don't have one
 - driver
 - eisenkleber limited co kg
-- email = [Patti.Salazar@gmail.com](email)
+- email = Patti.Salazar@gmail.com
 - extracting [durations](entity:duration)
 - faq
 - funny bot
 - get [dates](entity:date) from messages
 - got it
-- half a [million](number)
+- half a million
 - have no idea
 - head of biz deve
 - health care
@@ -2710,10 +2709,10 @@
 - i am [self emplayed](job_function)
 - i am a [projject manager](job_function)
 - i am interested in [ordinals](entity)
-- i don't have [one](number)
+- i don't have one
 - i don't have it
 - i don't know
-- i have [none](number)
+- i have none
 - i have about 200 bucks in my savings account
 - i need a bot for customer service automation
 - i sell turtles
@@ -2769,11 +2768,11 @@
 - it speaks [mandarin](language)
 - it speaks [portuguese](language)
 - it speaks [spanish](language)
-- it's [500000000](number)
+- it's 500000000
 - it's [Katie Betz](name)
-- it's [R_Iuliucci@yahoo.com](email)
+- it's R_Iuliucci@yahoo.com
 - it's [Robert Weir](name)
-- it's [Shannon.Adelman@Hurt.com](email)
+- it's Shannon.Adelman@Hurt.com
 - it's a small company from the US, the name is [Microsoft](company)
 - it's a tech company, [apple](company)
 - it's the [moabit yoga studio](company)
@@ -2859,9 +2858,9 @@
 - language: [portuguese](language)
 - language: [spanish](language)
 - lead generation
-- like [60](number) quid
-- mail: [Geneva.Favors@yahoo.com](email)
-- maybe then instead [James@Anast.com](email)
+- like 60 quid
+- mail: Geneva.Favors@yahoo.com
+- maybe then instead James@Anast.com
 - mi name is [Kathy Wright](name)
 - my bot is in [chinese](language)
 - my bot is in [dutch](language)
@@ -2872,16 +2871,16 @@
 - my bot is in [mandarin](language)
 - my bot is in [portuguese](language)
 - my bot is in [spanish](language)
-- my business mail is [S_Dibenedetto@Simpson.net](email)
-- my email is [Carole@Hart.com](email)
-- my email is [Elinor_Stock@Higgenbotham.com](email)
-- my email is [K_Spivey@yahoo.com](email)
-- my email is [Kelly@Coulter.net](email)
-- my email is [M_Jones@Luna.com](email)
-- my email is [Mia_Gainey@gmail.com](email)
-- my email is [S_Calderon@Cofield.com](email)
-- my email is [Virginia@Brown.com](email)
-- my emayl is [V_Comley@Nelson.com](email)
+- my business mail is s_Dibenedetto@Simpson.net
+- my email is Carole@Hart.com
+- my email is Elinor_Stock@Higgenbotham.com
+- my email is K_Spivey@yahoo.com
+- my email is Kelly@Coulter.net
+- my email is M_Jones@Luna.com
+- my email is Mia_Gainey@gmail.com
+- my email is S_Calderon@Cofield.com
+- my email is Virginia@Brown.com
+- my emayl is V_Comley@Nelson.com
 - my function is [to serve butter](job_function)
 - my job function is [developer](job_function)
 - my name is [Alexander Kohn](name)
@@ -2909,8 +2908,8 @@
 - not sure yet, we plan with 50 thousand euro at the moment
 - nothing
 - ok I'm actually an [engineer](job_function)
-- ok it's[ Hee@yahoo.com](email)
-- ok its [P_Simpkins@Suehs.com](email)
+- ok it's Hee@yahoo.com
+- ok its P_Simpkins@Suehs.com
 - on that will get me promoted
 - one bot
 - one trillion dollar
@@ -2997,7 +2996,7 @@
 - the people speak [mandarin](language)
 - the people speak [portuguese](language)
 - the people speak [spanish](language)
-- there is [no budget](number)
+- there is no budget
 - until now it’s only in [chinese](language)
 - until now it’s only in [dutch](language)
 - until now it’s only in [english](language)
@@ -3026,7 +3025,7 @@
 - user can talk to my bot in [portuguese](language)
 - user can talk to my bot in [spanish](language)
 - we are a covert government organisation
-- we don't have [one](number)
+- we don't have one
 - we plan to build a sales bot to increase our revenue by 100%.
 - we plan with 250.000 euro for one year
 - we think 4 million INR/ year
@@ -3948,7 +3947,7 @@
 - What is todays date
 - What is your hobbies?
 - What makes you better than a human?
-- What's [1](number) + [1](number)?
+- What's 1 + 1?
 - What's do YouTube do
 - What's your backend system?
 - Where am I right now?
@@ -3964,15 +3963,15 @@
 - [Kristin](name), I want to marry you
 - [german](language)?
 - a tamed mouse will arrive at your doorstep in the next couple of days
-- aRE YOU [SINGLE](number)?
+- aRE YOU SINGLE
 - again?
-- alexa, order [5](number) tons of natrium chloride
+- alexa, order 5 tons of natrium chloride
 - and make chicken noises into the phone
 - and your REST API doesn't work
 - are the newsletter worth the subscription?
 - are u facebook
 - are u, facebook?
-- are you [single](number)?
+- are you single?
 - are you dev?
 - are you human ?
 - are you russian?
@@ -3984,7 +3983,7 @@
 - bots are bad
 - but I just told you that :(
 - but if rasa is open source why do you have a sales team
-- buy [one](number) please
+- buy one please
 - buy groceries
 - call me father
 - can I install this on a mac?
@@ -4065,9 +4064,8 @@
 - how long will the next version will launch?
 - how many lines of codes
 - how many words can you handle?
-- how much is [10](number) + [89](number) ?
-- how much is [10](number) +[89](number)
-- how to climb the tree?
+- how much is 10 + 89 ?
+- how much is 10 + 89
 - how to extract relationship
 - how to get rasa studio
 - how to go to newyork ?
@@ -4133,7 +4131,7 @@
 - offer me lunch
 - oh my god, not again!
 - oh wait i gave you my work email address can i change it?
-- ok [one](number) then
+- ok one then
 - on wiche nlp based system are you build?
 - only that?
 - order good
@@ -4170,7 +4168,7 @@
 - tell me more about next best action
 - that doesn't sound like a joke
 - that link doesn't work!
-- the [one](number) that is better than you
+- the one that is better than you
 - this is a really frustrating experience
 - tricked  ya
 - tu parles francais?
@@ -4217,7 +4215,7 @@
 - what lnu mean?
 - what the latest news ?
 - what you ate today?
-- what's [5](number) + [5](number)
+- what's 5 + 5
 - what's a newsletter?
 - what's gingerale
 - what's your wife doing this weekend
@@ -4265,7 +4263,7 @@
 - you have job opening
 - you lock sweety
 - you should learn to count
-- you will know it from the [single](number) red rose it carries between its teeth
+- you will know it from the single red rose it carries between its teeth
 - you're a woman
 - you're rather dull
 - your mom gay
@@ -4451,7 +4449,7 @@
 - can i get emails from you
 - can i sign up to the newsletter too?
 - can i subscribe to news letter
-- can you add [Edward@Paul.com](email) to the newsletter list?
+- can you add Edward@Paul.com to the newsletter list?
 - can you pelase subscribe me to the newsletter
 - can you sign me up for the newsletter
 - can you subscribe me to the newsletter
@@ -4476,7 +4474,7 @@
 - i prefer to get the newsletter
 - i want newsletter
 - i want on that dope newsletter
-- i want on this dope newsletter - my email is [R_Grove@gmail.com](email)
+- i want on this dope newsletter - my email is R_Grove@gmail.com
 - i want subscribe
 - i want the newsletter
 - i want to  suscribe
@@ -4493,7 +4491,7 @@
 - i want to signup for the nl
 - i want to signup for your newsletter
 - i want to subscribe
-- i want to subscribe to the newsletter with [Joseph_Pyles@yahoo.com](email)
+- i want to subscribe to the newsletter with Joseph_Pyles@yahoo.com
 - i want to subscribe to your newsletter
 - i want to subsribe to the newsletter
 - i would like to join the newsletter
@@ -4514,28 +4512,28 @@
 - newletter
 - news
 - newsletter
-- newsletter - my email is [Mabel@Brown.com](email)
+- newsletter - my email is Mabel@Brown.com
 - newsletter it is
 - newsletter please
-- newsletter please my email is [M_Moore@yahoo.com](email)
+- newsletter please my email is M_Moore@yahoo.com
 - newsletter pls
 - newsletter registration
 - newsletter registration first
 - newsletter subscription
-- newsletter, here is my email: [Marcus.Miller@yahoo.com](email)
+- newsletter, here is my email: Marcus.Miller@yahoo.com
 - newslettwr
 - nl
 - now i want to signup for the newsletter
 - oh actually i want to get the newsletter
 - please send me the newsletter
-- please send newsletter to [Robert@yahoo.com](email)
+- please send newsletter to Robert@yahoo.com
 - please sign me up for the newsletter
-- please subscribe me to the newsletter [Gregory_Lilley@yahoo.com](email)
+- please subscribe me to the newsletter Gregory_Lilley@yahoo.com
 - please subscribe me to your newsletter
 - register me for the newsletter
 - send me the newsletter
 - sign me up for that newsletter
-- sign me up for the newsletter - my email is [Carolyn_Caskey@yahoo.com](email)
+- sign me up for the newsletter - my email is Carolyn_Caskey@yahoo.com
 - sign me up for the rasa newsletter
 - sign up
 - sign up for newsletter
@@ -4544,11 +4542,11 @@
 - sign up to the newsletter
 - subcribe
 - subscribe
-- subscribe [Bruce_Harryman@Olsen.com](email) to the newsletter
-- subscribe [Denise@gmail.com](email) to the newsletter
+- subscribe Bruce_Harryman@Olsen.comto the newsletter
+- subscribe Denise@gmail.com to the newsletter
 - subscribe me to newsletter
 - subscribe me to the newsletter
-- subscribe my email [Evan@Palmer.net](email) to the newsletter
+- subscribe my email Evan@Palmer.net to the newsletter
 - subscribe to newsletter
 - subscribe to our newsletter
 - subscribe to the newsletter
