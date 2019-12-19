@@ -374,7 +374,7 @@
 - i need a help to integrate rasa with a messenger
 - rasa can use which different messaging channels?
 - rasa supports which messaging channels?
-- what are the channels Rasa [NLU](product:nlu) supports
+- what are the channels Rasa [NLU](product) supports
 - what are the messaging channels supported by rasa?
 - what are the messaging channels that can be used with rasa?
 - what channels do you support?
@@ -431,7 +431,7 @@
 - how many people are using Rasa
 
 ## intent:ask_faq_differencecorenlu
-- DIFFERENCES BETWEEN [CORE](product:core) AND [NLU](product:nlu)
+- DIFFERENCES BETWEEN [CORE](product:core) AND [NLU](product)
 - Do you know the difference between [core](product) and [nlu](product)?
 - How do [core](product) and [nlu](product) conflict?
 - How do [core](product) and [nlu](product) differ?
@@ -439,7 +439,7 @@
 - How does [core](product) differ to [nlu](product)?
 - How does [nlu](product) contrast to [core](product)?
 - In what ways are [core](product) and [nlu](product) unalike?
-- Is [Core](product:core) different than [NLU](product:nlu)?
+- Is [Core](product:core) different than [NLU](product)?
 - Is [nlu](product) different to [core](product) and, if so, how?
 - List the dissimilar qualities of [core](product) and [nlu](product)
 - What are some ways that [nlu](product) is different from [core](product)?
@@ -448,7 +448,7 @@
 - What does [core](product) offer that [nlu](product) does not?
 - What facts diverge [core](product) from [nlu](product)?
 - What is the Similarities between [core](product) and [nlu](product)?
-- What is the difference between [NLU](product:nlu) and [Core](product:core)?
+- What is the difference between [NLU](product) and [Core](product:core)?
 - What is the difference between rasa [nlu](product) and rasa [core](product)?
 - What makes [core](product) and [nlu](product) different?
 - What makes [core](product) and [nlu](product) incompatible?
@@ -460,7 +460,7 @@
 - diffrence between rasa [core](product) and rasa [nlu](product)
 - i dont know the difference
 - rasa [core](product) vs rasa [nlu](product)
-- what are the difference between [NLU](product:nlu) and [core](product)?
+- what are the difference between [NLU](product) and [core](product)?
 - what are the difference?
 - what are the differences?
 - what are the primary areas of difference between [core](product) and [nlu](product)?
@@ -485,7 +485,7 @@
 - what the different with rasa [nlu](product) and rasa [core](product)?
 - what would you say the difference is between [core](product) and [nlu](product)?
 - what's the  difference between rasa [nlu](product) and rasa [core](product)
-- what's the difference between [NLU](product:nlu) and [Core](product:core)?
+- what's the difference between [NLU](product) and [Core](product:core)?
 - what's the difference between [core](product) and [nlu](product)?
 - what's the difference?
 - whats the diference
@@ -539,7 +539,7 @@
 - How can I change the language
 - I want [Vietnamese](language) language processing
 - I want to add [Romanian](language) language support
-- Is RASA [NLU](product:nlu) avaiable for [German](language)?
+- Is RASA [NLU](product) avaiable for [German](language)?
 - What all languages does rasa support for us?
 - What are the languages that rasa supports?
 - What are the specific languages that rasa is intended to work with?
@@ -619,7 +619,7 @@
 - which languages do you support
 - which languages does rasa support
 - which languages supports rasa
-- your [NLU](product:nlu) understand [spanish](language)?
+- your [NLU](product) understand [spanish](language)?
 
 ## intent:ask_faq_opensource
 - Are you open-source?
@@ -3311,7 +3311,7 @@
 - About [Core](product:core)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
-- Can you tell me more about [NLU](product:nlu)?
+- Can you tell me more about [NLU](product)?
 - Get started
 - HOW CAN i connect to rasa
 - Help me get started
@@ -3355,24 +3355,24 @@
 - I want to create chatbot using Rasa
 - I want to implement rasa
 - I want to know how to get started with rasa
-- I want to know more about [NLU](product:nlu)
+- I want to know more about [NLU](product)
 - I want to know more about [core](product)
 - I want to learn more about rasa
-- I would like to know more about RASA [NLU](product:nlu)
+- I would like to know more about RASA [NLU](product)
 - I'm [new](user_type)
 - I'm [new](user_type) in Rasa, help me!
 - I'm [new](user_type) to Rasa
 - I'm [new](user_type) to rasa
 - Im [new](user_type)
 - Lets start with the basics
-- More about [NLU](product:nlu)
-- Only [NLU](product:nlu)
+- More about [NLU](product)
+- Only [NLU](product)
 - Please tell me how I can start?
 - Please tell me how to get started
 - Please tell me how to get started with rasa
-- RASA [NLU](product:nlu)
+- RASA [NLU](product)
 - Rasa [Core](product:core)
-- Rasa [NLU](product:nlu)
+- Rasa [NLU](product)
 - Rasa [core](product)
 - Show me learning resources about Rasa
 - Sure, give me the basics
@@ -3388,10 +3388,10 @@
 - Wie fange ich mit Rasa an?
 - Yeah please help me out
 - Yes I am [new](user_type)
-- Yes, I want to know more about [NLU](product:nlu)
+- Yes, I want to know more about [NLU](product)
 - [Core](product:core)
-- [NLU](product:nlu)
-- [NLU](product:nlu) and [Core](product:core)
+- [NLU](product)
+- [NLU](product) and [Core](product:core)
 - [both](product:all)
 - [both](product:all) please
 - [core](product)
@@ -3462,7 +3462,7 @@
 - how do i get rasa [nlu](product)
 - how do i get startd?
 - how do i get started
-- how do i get started with [NLU](product:nlu)
+- how do i get started with [NLU](product)
 - how do i get started with [nlu](product)
 - how do i get started with rasa
 - how do i get started with rasa [nlu](product)
@@ -3525,11 +3525,11 @@
 - i want to develop a chatbot
 - i want to get started
 - i want to get started with rasa
-- i want to know about RASA [Nlu](product:nlu)
+- i want to know about RASA [Nlu](product)
 - i want to know about the parts of rasa
 - i want to know how can buld my own bot
 - i want to know how to start with Rasa
-- i want to know more about [NLU](product:nlu)
+- i want to know more about [NLU](product)
 - i want to learn about [nlu](product)
 - i want to learn about rasa [core](product)
 - i want to learn about rasa [nlu](product)
@@ -3543,13 +3543,13 @@
 - i'm [new](user_type) to rasa
 - im a [new](user_type) to rasa
 - information about rasa
-- just Rasa [NLU](product:nlu)
-- just [NLU](product:nlu)
+- just Rasa [NLU](product)
+- just [NLU](product)
 - just rasa [nlu](product)
 - let's start
 - lets get started
-- more about [NLU](product:nlu)
-- more about [NLU](product:nlu) please
+- more about [NLU](product)
+- more about [NLU](product) please
 - more about [nlu](product)
 - more info on components
 - more info on components of rasa pls
@@ -3567,7 +3567,7 @@
 - so, how do I use rasa?
 - start rasa
 - tell me about Rasa [Core](product:core)
-- tell me about Rasa [NLU](product:nlu)
+- tell me about Rasa [NLU](product)
 - tell me about [core](product)
 - tell me about [core](product) please
 - tell me about [nlu](product)
@@ -3576,7 +3576,7 @@
 - tell me how i can get started with rasa
 - tell me how to get started with [core](product)
 - tell me how to start
-- tell me more about [NLU](product:nlu)
+- tell me more about [NLU](product)
 - tell me more about how to use rasa
 - tell me more about rasa [nlu](product)
 - tell me something about [core](product)
@@ -3584,7 +3584,7 @@
 - the components of rasa
 - want to build a chatbot
 - whar are the components of rasa?
-- what [rasa_nlu](product:nlu)
+- what [rasa_nlu](product)
 - what about [nlu](product)?
 - what are Rasa's components
 - what are the components of RASA
@@ -3674,7 +3674,7 @@
 - I need to get Rasa Stack up and running.
 - I need to install Rasa
 - I need to install Rasa [Core](product:core).
-- I need to install Rasa [NLU](product:nlu).
+- I need to install Rasa [NLU](product).
 - I require Rasa Stack?
 - I think I want to install Rasa Stack
 - I want info on installing Rasa
@@ -3684,7 +3684,7 @@
 - I want to install rasa
 - I want to use Rasa Stack
 - I'd like to install Rasa [Core](product:core)
-- I'd like to install Rasa [NLU](product:nlu)
+- I'd like to install Rasa [NLU](product)
 - I'd like to perform an installation of Rasa Stack
 - I'm getting Rasa Stack
 - I'm going to install Rasa Stack
@@ -3699,7 +3699,7 @@
 - Please install Rasa Stack
 - Please, I need Rasa [Core](product:core).
 - Rasa Stack is what I will be installing
-- Thank you in advance for suggesting I install Rasa [NLU](product:nlu).
+- Thank you in advance for suggesting I install Rasa [NLU](product).
 - Where to get Rasa Stack?
 - Yes, I do need Rasa Stack.
 - am struck with installation
@@ -3738,7 +3738,7 @@
 - i want to install rasa
 - i want to use pip to install sara
 - install
-- install Rasa [NLU](product:nlu)
+- install Rasa [NLU](product)
 - install Rasa on Linux
 - install Rasa on Mac
 - install rasa stack
@@ -3992,7 +3992,7 @@
 - are you human ?
 - are you russian?
 - are you sick
-- are you using Rasa [Core](product:core) and [NLU](product:nlu) ?
+- are you using Rasa [Core](product:core) and [NLU](product) ?
 - are you vegan
 - better than you
 - book a ticket
