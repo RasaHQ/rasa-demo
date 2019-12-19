@@ -493,13 +493,13 @@
 
 ## intent:ask_faq_differencerasarasax
 - Are [Rasa](product) and [Rasa X](product) the same thing?
-- Can I use [Rasa X](product) without using [Rasa](product:rasa)?
-- Can i use [rasa](product:rasa) without [rasa x](product)?
-- Do I need both [Rasa](product:rasa) and [Rasa X](product)?
-- How is [Rasa X](product) different from [Rasa](product:rasa)?
-- If I use [Rasa](product:rasa), do I also need [Rasa X](product)?
-- What's new in [Rasa X](product) compared to [Rasa](product:rasa)?
-- how does [rasa x](product) stack up against [rasa](product:rasa)
+- Can I use [Rasa X](product) without using [Rasa](product)?
+- Can i use [rasa](product) without [rasa x](product)?
+- Do I need both [Rasa](product) and [Rasa X](product)?
+- How is [Rasa X](product) different from [Rasa](product)?
+- If I use [Rasa](product), do I also need [Rasa X](product)?
+- What's new in [Rasa X](product) compared to [Rasa](product)?
+- how does [rasa x](product) stack up against [rasa](product)
 - i am using [rasa](product), why would i need [rasa x](product)?
 - please compare [rasa](product) and [rasa x](product)
 - show me comparison between [rasa x](product) and [[rasa
@@ -507,7 +507,7 @@
 - tell me the difference between [rasa](product) and [x](product)
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
-- when should i use [rasa](product:rasa) and when should i use [rasa x](product)
+- when should i use [rasa](product) and when should i use [rasa x](product)
 
 ## intent:ask_faq_ee
 - Can you tell me about the enterprise edition?
