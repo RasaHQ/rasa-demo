@@ -4792,10 +4792,10 @@
 - thx
 - yes thanks
 
-## lookup:location.txt
+## lookup:location
 data/location.txt
 
-## lookup:products.txt
+## lookup:product
 data/products.txt
 
 ## regex:greet
