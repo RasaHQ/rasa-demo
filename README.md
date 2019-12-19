@@ -58,6 +58,15 @@ If you would like to run Sara on your website, follow the instructions
 [here](https://github.com/mrbot-ai/rasa-webchat) to place the chat widget on
 your website.
 
+## To test Sara:
+
+After doing a `rasa train`, run the command:
+
+```bash
+rasa test nlu -u test/test_data.json --model models
+rasa test core --stories test/test_stories.md
+```
+
 ## 👩‍💻 Overview of the files
 
 `data/core/` - contains stories 
