@@ -332,6 +332,22 @@
 - you are made by who?
 - you are working for which company?
 
+## intent:ask_faq_rasax
+- what is Rasa X?
+- how does Rasa X work?
+- what is X?
+- can you explain rasa x to me
+- could you elaborate more about rasa x
+- tell me about Rasa X please
+- what is this rasa x thing. could you tell me more?
+- what's the purpose of Rasa X
+- whats rasax
+- is Rasa X separate from Rasa?
+- how does rasa x relate to rasa core
+- I need to know about Rasa X
+- please tell me more about rasa x
+- elaborate on rasa x
+
 ## intent:ask_faq_channels
 - Can you tell which messaging channels does rasa support?
 - Channels
