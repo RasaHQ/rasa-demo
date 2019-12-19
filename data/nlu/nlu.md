@@ -4558,7 +4558,7 @@
 - sign up to the newsletter
 - subcribe
 - subscribe
-- subscribe Bruce_harryman@Olsen.comto the newsletter
+- subscribe Bruce_harryman@Olsen.com to the newsletter
 - subscribe Denise@gmail.com to the newsletter
 - subscribe me to newsletter
 - subscribe me to the newsletter
