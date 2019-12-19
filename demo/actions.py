@@ -699,7 +699,7 @@ class ActionDocsSearch(Action):
 
     def __init__(self) -> None:
         self.algolia = AlgoliaAPI(
-            "BH4D9OD16A", "1f9e0efb89e98543f6613a60f847b176", "rasa"
+            config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
         )
 
     def run(self, dispatcher, tracker, domain):
