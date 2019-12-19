@@ -2367,7 +2367,7 @@
 - Country names
 - Evaluate Rasa :-)
 - Flexible, but looking for low-cost alternative to proof of concept
-- How to migrate from [DialogFlwo](current_api:dialogflow)
+- How to migrate from [DialogFlwo](current_api)
 - I am [Christina Sullivan](name)
 - I am [Hattie Rice](name)
 - I am [Robert Starks](name)
@@ -2508,19 +2508,19 @@
 - 900 dollars
 - 90k
 - 99
-- [ACME Mops](company:acme mops)
+- [ACME Mops](company)
 - [AI engieer](job_function)
 - [AI researcher](job_function)
 - [Al Capone](name)
 - [Allianz](company)
 - [Angel Robinson company](company)
-- [BBC](company:bbc)
-- [BCBSM](company:bcbsm)
+- [BBC](company)
+- [BCBSM](company)
 - [BCG brazil](company)
 - [BCG digital ventures](company)
 - [BigBotsInc](company)
 - [BigBots](company)
-- [Bosch](company:bosch)
+- [Bosch](company)
 - [CEO](job_function)
 - [COO](job_function)
 - [CSI](company)
@@ -2530,13 +2530,13 @@
 - [David Carter](name)
 - [Denise Armstrong's company](company)
 - [Developer Advocate](job_function)
-- [Developer](job_function:developer)
+- [Developer](job_function)
 - Ebony@gmail.com
 - [Elise](name)
 - [Founder](job_function)
 - [Full Stack](job_function)
 - [Full stack](job_function).
-- [Helvetia](company:helvetia)
+- [Helvetia](company)
 - [I am a freelancer ](company)
 - [IBM](company)
 - [IT manager](job_function)
@@ -2550,7 +2550,7 @@
 - [Keith Donnell](name) PhD
 - Kristin@yahoo.com
 - [Linda Mchone](name)
-- [Lithuanian](language:lithuanian)
+- [Lithuanian](language)
 - [McKinsey Germany](company)
 - [Michele Perry](name)
 - [Michelle Garcia](name)
@@ -2575,7 +2575,7 @@
 - abhbose3k@gmail.com
 - [accenture](company)
 - [allianz](company)
-- [amounts](entity:money)
+- [amounts](entity)
 - [arabic](language)
 - [assistant to the CEO](job_function)
 - [bayer](company)
@@ -2586,7 +2586,7 @@
 - [chinese](language) is the language of my bot
 - [chinese](language) is the only language but I want to add more
 - [clue](company)
-- [companies](entity:organisation)
+- [companies](entity)
 - [custom entity](entity)
 - [data analyst](job_function)
 - [data science engineer](job_function)
@@ -2595,7 +2595,7 @@
 - [dev](job_function)
 - [developer advocate](job_function)
 - [developer](job_function)
-- [distances](entity:distance)
+- [distances](entity)
 - [dutch](language)
 - [dutch](language) is the language of my bot
 - [dutch](language) is the only language but I want to add more
@@ -2614,12 +2614,12 @@
 - [google enginer](job_function)
 - [growth manager](job_function)
 - [hindi](language)
-- [how long](entity:duration)
+- [how long](entity)
 - [intel](company)
 - [italian](language)
 - [italian](language) is the language of my bot
 - [italian](language) is the only language but I want to add more
-- [italina](language:italian)
+- [italina](language)
 - [klara health](company)
 - [manager](job_function)
 - [mandarin](language)
@@ -2712,10 +2712,10 @@
 - driver
 - eisenkleber limited co kg
 - email = Patti.Salazar@gmail.com
-- extracting [durations](entity:duration)
+- extracting [durations](entity)
 - faq
 - funny bot
-- get [dates](entity:date) from messages
+- get [dates](entity) from messages
 - got it
 - half a million
 - have no idea
@@ -2744,7 +2744,7 @@
 - i want to build an insurance bot
 - i want to build bots
 - i want to built a [Eric Jones](name) bot
-- i want to extract [names](entity:name)
+- i want to extract [names](entity)
 - i work in [biz dev](job_function)
 - i'd like to build a transformer
 - i'd like to build sentient glibber or glitter
@@ -3392,14 +3392,14 @@
 - [Core](product)
 - [NLU](product)
 - [NLU](product) and [Core](product)
-- [both](product:all)
-- [both](product:all) please
+- [both](product)
+- [both](product) please
 - [core](product)
 - [core](product) please
 - [new](user_type)
 - [nlu](product)
 - [nlu](product) part
-- about [both](product:all)
+- about [both](product)
 - and rasa [nlu](product)?
 - can give tell me about components of Rosa
 - can i just test features without having to deal with your predefined conversation
@@ -3837,32 +3837,32 @@
 - I want to know if rasa works with [duckling](nlu_part)
 - I want to learn about [entity recognition](nlu_part)
 - I want to learn about [intent classification](nlu_part)
-- I was looking for [Duckling](nlu_part:duckling) integration
+- I was looking for [Duckling](nlu_part) integration
 - Rasa NLu
-- Tell me about the [entity extraction](nlu_part:entity recognition)
+- Tell me about the [entity extraction](nlu_part)
 - Tell me about the [entity recognition](nlu_part)
-- [Entity recognition](nlu_part:entity recognition)
-- [NER](nlu_part:entity recognition)
+- [Entity recognition](nlu_part)
+- [NER](nlu_part)
 - [duckling](nlu_part)
 - [entity recognition](nlu_part)
 - [entity recognition](nlu_part) - what is that?
 - [intent classification](nlu_part)
 - [intent classification](nlu_part) - what is that?
-- [intent classificaton](nlu_part:intent classification)
-- [intent recognition](nlu_part:intent classification)
-- [intent](nlu_part:intent classification)
-- [intent](nlu_part:intent classification) please
-- [intents](nlu_part:intent classification)
-- [recognition](nlu_part:entity recognition)
+- [intent classificaton](nlu_part)
+- [intent recognition](nlu_part)
+- [intent](nlu_part)
+- [intent](nlu_part) please
+- [intents](nlu_part)
+- [recognition](nlu_part)
 - an explanation of how [entity recognition](nlu_part) work would help
 - an explanation of how [intent classification](nlu_part) work would help
-- can you explain me what [intents](nlu_part:intent classification) are ?
+- can you explain me what [intents](nlu_part) are ?
 - can you explain to me how [entity recognition](nlu_part) works?
 - can you explain to me how [intent classification](nlu_part) works?
-- custom [ner](nlu_part:entity recognition)
+- custom [ner](nlu_part)
 - do you use [duckling](nlu_part)
 - does rasa work with [duckling](nlu_part)?
-- hm [intents](nlu_part:intent classification)?
+- hm [intents](nlu_part)?
 - how do you integrate [duckling](nlu_part)
 - how does [entity recognition](nlu_part) work?
 - how does [intent classification](nlu_part) work?
@@ -3871,21 +3871,21 @@
 - is [duckling](nlu_part) part of rasa?
 - it would be helpful to learn more about [entity recognition](nlu_part)
 - it would be helpful to learn more about [intent classification](nlu_part)
-- sorry its [ner](nlu_part:entity recognition)
+- sorry its [ner](nlu_part)
 - tell me about [entity recognition](nlu_part)
 - tell me about [intent classification](nlu_part)
-- the [intent](nlu_part:intent classification)
-- what are [intents](nlu_part:intent classification) ?
-- what are [intents](nlu_part:intent classification)?
+- the [intent](nlu_part)
+- what are [intents](nlu_part) ?
+- what are [intents](nlu_part)?
 - what does [nlu](product) stands for
 - what is [duckling](nlu_part)
 - what is [duckling](nlu_part)?
 - what is [entity recognition](nlu_part)?
 - what is [intent classification](nlu_part)?
-- what is [intent recognition](nlu_part:intent classification)?
-- what is a [intent](nlu_part:intent classification)?
-- where to [intents](nlu_part:intent classification)?
-- where to train [intents](nlu_part:intent classification) in rasa?
+- what is [intent recognition](nlu_part)?
+- what is a [intent](nlu_part)?
+- where to [intents](nlu_part)?
+- where to train [intents](nlu_part) in rasa?
 
 ## intent:out_of_scope
 - 4 + 2 = ?
@@ -4076,8 +4076,8 @@
 - how do you retrieve previous messages
 - how good is Rasa
 - how it compares to alexa
-- how long have you been online?
-- how long will the next version will launch?
+- [how long](entity) have you been online?
+- [how long](entity) will the next version will launch?
 - how many lines of codes
 - how many words can you handle?
 - how much is 10 + 89 ?
@@ -4612,32 +4612,32 @@
 
 ## intent:switch
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
-- How to migrate a bot from [DialogFlow](current_api:dialogflow) to Rasa?
-- How to migrate from [DialogFlow](current_api:dialogflow) to Rasa?
-- How to migrate from [DialogFlow](current_api:dialogflow)?
-- How to migrate from [Luis](current_api:luis)?
-- How to migrate to [DialogFlow](current_api:dialogflow)?
+- How to migrate a bot from [DialogFlow](current_api) to Rasa?
+- How to migrate from [DialogFlow](current_api) to Rasa?
+- How to migrate from [DialogFlow](current_api)?
+- How to migrate from [Luis](current_api)?
+- How to migrate to [DialogFlow](current_api)?
 - I am using [dialogflow](current_api) - how can I migrate
-- I currently use [LUIS](current_api:luis)
-- I currently use [dialog flow](current_api:dialogflow)
-- I use [DialogFlow](current_api:dialogflow)
+- I currently use [LUIS](current_api)
+- I currently use [dialog flow](current_api)
+- I use [DialogFlow](current_api)
 - I use [luis](current_api)
 - I use [wit.ai](current_api)
 - I want to change from [dialogflow](current_api) to rasa
-- I want to convert my [dialog flow](current_api:dialogflow) bot to rasa
-- I want to move from [LUIS.ai](current_api:luis) to Rasa
-- I want to switch from [dialog flow](current_api:dialogflow)
+- I want to convert my [dialog flow](current_api) bot to rasa
+- I want to move from [LUIS.ai](current_api) to Rasa
+- I want to switch from [dialog flow](current_api)
 - I want to switch from [dialogflow](current_api) to rasa
 - Migration please
-- Yes I want to switch from [LUIS](current_api:luis) to rasa
-- [DialogFlow](current_api:dialogflow)
-- [LUIS](current_api:luis)
+- Yes I want to switch from [LUIS](current_api) to rasa
+- [DialogFlow](current_api)
+- [LUIS](current_api)
 - [bot framework](current_api)
 - [chatfuel](current_api)
-- [luis.ai](current_api:luis)
+- [luis.ai](current_api)
 - [luis](current_api)
 - [luis](current_api) bot can migrate to raza bot ?
-- [wit](current_api:wit.ai)
+- [wit](current_api)
 - can i migrate my [luis](current_api) bot to raza
 - can i switch from [luis](current_api) to rasa?
 - how can i migrate from [dialogflow](current_api)?
@@ -4646,13 +4646,13 @@
 - i am switching from [luis](current_api)
 - i can migrate microsoft [luis](current_api) bot to raza?
 - i want to switch from [luis](current_api) to rasa
-- i'm migrating from [LUIS](current_api:luis)
+- i'm migrating from [LUIS](current_api)
 - im migrating from [dialogflow](current_api)
 - im moving [luis](current_api)
-- migration from [LUIS](current_api:luis)
+- migration from [LUIS](current_api)
 - migration from [dialogflow](current_api)
 - switching
-- switching from [DialogFlow](current_api:dialogflow)
+- switching from [DialogFlow](current_api)
 
 ## intent:technical_question
 - Can I use Rasa for E-Mail
@@ -4837,14 +4837,14 @@ data/products.txt
 ## synonym:all
 - both
 
+## synonym:bbc
+- BBC
+
 ## synonym:bcbsm
 - BCBSM
 
 ## synonym:bosch
 - Bosch
-
-## synonym:chief shitmuncher
-- Chief Shitmuncher
 
 ## synonym:conda
 - anaconda
@@ -4852,6 +4852,12 @@ data/products.txt
 ## synonym:core
 - CORE
 - Core
+
+## synonym:date
+- dates
+
+## synonym:duckling
+- Duckling
 
 ## synonym:developer
 - Developer
@@ -4862,15 +4868,25 @@ data/products.txt
 - dialog flow
 - google
 
+## synonym:distance
+- distances
+
 ## synonym:donezo
--  donez
+- donez
+
+## synonym: duration
+- how long
+- durations
 
 ## synonym:entity recognition
 - entity extraction
 - recognition
+- Entity recognition
+- NER
+- ner
 
 ## synonym:full stack developer
--  full stack develope
+- full stack develope
 
 ## synonym:helvetia
 - Helvetia
@@ -4879,6 +4895,7 @@ data/products.txt
 - intent
 - intent recognition
 - intents
+- intent classificaton
 
 ## synonym:italian
 - italina
@@ -4891,6 +4908,9 @@ data/products.txt
 - LUIS.ai
 - Luis
 - luis.ai
+
+## synonym:money
+- amounts
 
 ## synonym:name
 - names
@@ -4907,9 +4927,6 @@ data/products.txt
 ## synonym:rasa
 - Rasa
 
-## synonym:sam@gaus.co.uk
--  sam@gaus.co.u
-
 ## synonym:stack
 - Full
 - Full Stack
@@ -4919,6 +4936,9 @@ data/products.txt
 - full stack
 - full staclk
 - fullstack
+
+## synonym:wit.ai
+- wit
 
 ## synonym:x
 - RASA X
