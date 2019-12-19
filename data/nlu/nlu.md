@@ -431,7 +431,7 @@
 - how many people are using Rasa
 
 ## intent:ask_faq_differencecorenlu
-- DIFFERENCES BETWEEN [CORE](product:core) AND [NLU](product)
+- DIFFERENCES BETWEEN [CORE](product) AND [NLU](product)
 - Do you know the difference between [core](product) and [nlu](product)?
 - How do [core](product) and [nlu](product) conflict?
 - How do [core](product) and [nlu](product) differ?
@@ -439,7 +439,7 @@
 - How does [core](product) differ to [nlu](product)?
 - How does [nlu](product) contrast to [core](product)?
 - In what ways are [core](product) and [nlu](product) unalike?
-- Is [Core](product:core) different than [NLU](product)?
+- Is [Core](product) different than [NLU](product)?
 - Is [nlu](product) different to [core](product) and, if so, how?
 - List the dissimilar qualities of [core](product) and [nlu](product)
 - What are some ways that [nlu](product) is different from [core](product)?
@@ -448,7 +448,7 @@
 - What does [core](product) offer that [nlu](product) does not?
 - What facts diverge [core](product) from [nlu](product)?
 - What is the Similarities between [core](product) and [nlu](product)?
-- What is the difference between [NLU](product) and [Core](product:core)?
+- What is the difference between [NLU](product) and [Core](product)?
 - What is the difference between rasa [nlu](product) and rasa [core](product)?
 - What makes [core](product) and [nlu](product) different?
 - What makes [core](product) and [nlu](product) incompatible?
@@ -485,7 +485,7 @@
 - what the different with rasa [nlu](product) and rasa [core](product)?
 - what would you say the difference is between [core](product) and [nlu](product)?
 - what's the  difference between rasa [nlu](product) and rasa [core](product)
-- what's the difference between [NLU](product) and [Core](product:core)?
+- what's the difference between [NLU](product) and [Core](product)?
 - what's the difference between [core](product) and [nlu](product)?
 - what's the difference?
 - whats the diference
@@ -849,7 +849,7 @@
 - How can I build a voice bot with rasa?
 - How can I build my voice bot using rasa?
 - How can I use to rasa to build a voice bot?
-- How can i integrate voice in RASA [CORE](product:core)
+- How can i integrate voice in RASA [CORE](product)
 - How could I construct a voice bot with rasa?
 - How to build a voice bot using rasa?
 - How to build a voice bot with rasa?
@@ -3308,7 +3308,7 @@
 - you're the most moronic person I know
 
 ## intent:how_to_get_started
-- About [Core](product:core)
+- About [Core](product)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
 - Can you tell me more about [NLU](product)?
@@ -3349,7 +3349,7 @@
 - I am [new](user_type) to Rasa
 - I like to build a bot
 - I need to know if I can use Rasa to build an application?
-- I want know about Rasa [Core](product:core)
+- I want know about Rasa [Core](product)
 - I want to build a bot
 - I want to build a chatbot
 - I want to create chatbot using Rasa
@@ -3371,7 +3371,7 @@
 - Please tell me how to get started
 - Please tell me how to get started with rasa
 - RASA [NLU](product)
-- Rasa [Core](product:core)
+- Rasa [Core](product)
 - Rasa [NLU](product)
 - Rasa [core](product)
 - Show me learning resources about Rasa
@@ -3389,9 +3389,9 @@
 - Yeah please help me out
 - Yes I am [new](user_type)
 - Yes, I want to know more about [NLU](product)
-- [Core](product:core)
+- [Core](product)
 - [NLU](product)
-- [NLU](product) and [Core](product:core)
+- [NLU](product) and [Core](product)
 - [both](product:all)
 - [both](product:all) please
 - [core](product)
@@ -3536,7 +3536,7 @@
 - i want to make intelligence chatbot
 - i want to use [nlu](product)
 - i want to use rasa to build my chatbot
-- i would like more explanation on RASA [Core](product:core)
+- i would like more explanation on RASA [Core](product)
 - i would like to know how to get started with Rasa
 - i'd like to get started with rasa
 - i'm [new](user_type)
@@ -3566,7 +3566,7 @@
 - rasa [nlu](product)
 - so, how do I use rasa?
 - start rasa
-- tell me about Rasa [Core](product:core)
+- tell me about Rasa [Core](product)
 - tell me about Rasa [NLU](product)
 - tell me about [core](product)
 - tell me about [core](product) please
@@ -3653,16 +3653,16 @@
 - wrong i want to speak to a human
 
 ## intent:install_rasa
-- Can you get me Rasa [Core](product:core)?
+- Can you get me Rasa [Core](product)?
 - Can you help me to install Rasa?
 - Do you mind helping me install Rasa?
-- Help me get Rasa [Core](product:core).
+- Help me get Rasa [Core](product).
 - Help me install Rasa
 - How do I install Rasa Stack?
 - How i install
 - How to install Rasa
 - How to install Rasa Stack
-- How to install Rasa [Core](product:core)?
+- How to install Rasa [Core](product)?
 - How to install Rasa?
 - How to install rasa
 - How to install rasa stack
@@ -3673,17 +3673,17 @@
 - I need assistance in getting Rasa Stack.
 - I need to get Rasa Stack up and running.
 - I need to install Rasa
-- I need to install Rasa [Core](product:core).
+- I need to install Rasa [Core](product).
 - I need to install Rasa [NLU](product).
 - I require Rasa Stack?
 - I think I want to install Rasa Stack
 - I want info on installing Rasa
 - I want to do a Rasa Stack installation
 - I want to install Rasa Stack
-- I want to install Rasa [Core](product:core)
+- I want to install Rasa [Core](product)
 - I want to install rasa
 - I want to use Rasa Stack
-- I'd like to install Rasa [Core](product:core)
+- I'd like to install Rasa [Core](product)
 - I'd like to install Rasa [NLU](product)
 - I'd like to perform an installation of Rasa Stack
 - I'm getting Rasa Stack
@@ -3697,7 +3697,7 @@
 - Please assist me with installing Rasa Stack.
 - Please help me install Rasa Stack
 - Please install Rasa Stack
-- Please, I need Rasa [Core](product:core).
+- Please, I need Rasa [Core](product).
 - Rasa Stack is what I will be installing
 - Thank you in advance for suggesting I install Rasa [NLU](product).
 - Where to get Rasa Stack?
@@ -3992,7 +3992,7 @@
 - are you human ?
 - are you russian?
 - are you sick
-- are you using Rasa [Core](product:core) and [NLU](product) ?
+- are you using Rasa [Core](product) and [NLU](product) ?
 - are you vegan
 - better than you
 - book a ticket
