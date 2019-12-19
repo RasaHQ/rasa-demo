@@ -407,7 +407,7 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if intent == "greet":
+        if intent == "greet" or (intent == "enter_data" and name_entity):
             if shown_privacy and name_entity and name_entity.lower() != "sara":
                 dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
                 return []
@@ -495,8 +495,8 @@ class ActionDefaultAskAffirmation(Action):
 
     def get_button_title(self, intent: Text, entities: Dict[Text, Text]) -> Text:
         default_utterance_query = self.intent_mappings.intent == intent
-        utterance_query = (
-            self.intent_mappings.entities == entities.keys() & default_utterance_query
+        utterance_query = (self.intent_mappings.entities == entities.keys()) & (
+            default_utterance_query
         )
 
         utterances = self.intent_mappings[utterance_query].button.tolist()
