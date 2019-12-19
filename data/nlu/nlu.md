@@ -4883,21 +4883,6 @@ data/products.txt
 ## synonym:italian
 - italina
 
-## synonym:jenny
-- Jenny
-
-## synonym:jim
-- Jim
-
-## synonym:jim halpert
-- Jim Halpert
-
-## synonym:john smith
-- John Smith
-
-## synonym:linda@rasa.com
-- linda at rasa.com
-
 ## synonym:lithuanian
 - Lithuanian
 
