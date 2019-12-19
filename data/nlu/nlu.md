@@ -484,7 +484,7 @@
 - If I use [Rasa](product:rasa), do I also need [Rasa X](product:x)?
 - What's new in [Rasa X](product:x) compared to [Rasa](product:rasa)?
 - how does [rasa x](product:x) stack up against [rasa](product:rasa)
-- i am using [rasa](rasa) nlu, why would i need [rasa x](product:x)?
+- i am using [rasa](product), why would i need [rasa x](product:x)?
 - please compare [rasa](product) and [rasa x](product:x)
 - show me comparison between [rasa x](product:x) and [[rasa
 - tell me the difference between [rasa](product) and [rasa x](product:x)
@@ -2436,15 +2436,15 @@
 - My budget is oov
 - My email is Richard@Simmons.com
 - My name is [Ashleigh Mees](name)
-- My name is [Chelsea Parker](name)
-- My name is [Jessie Maglione](name)
+- My name is [chelsea Parker](name)
+- My name is [jessie maglione](name)
 - My name is [Kenneth Sherman](name)
 - My name is [Lee George](name)
 - My name is [Louise Caudill](name)
-- My name is [Richard Smith](name)
+- My name is [Richard smith](name)
 - My name is [Shane Goodyear](name)
 - My name is [Sondra Boyd](name)
-- My name si [Tom Harbin](name)
+- My name si [tom Harbin](name)
 - No job
 - None
 - Rasa bot
@@ -2509,7 +2509,7 @@
 - [COO](job_function)
 - [CSI](company)
 - [CTO](job_function)
-- [Carolyn.Eisenhauer@Watkins.com
+- Carolyn.Eisenhauer@Watkins.com
 - [Club Mate](company)
 - [David Carter](name)
 - [Denise Armstrong's company](company)
@@ -2884,21 +2884,21 @@
 - my function is [to serve butter](job_function)
 - my job function is [developer](job_function)
 - my name is [Alexander Kohn](name)
-- my name is [Betty Mclendon](name)
+- my name is [betty mclendon](name)
 - my name is [Brian Leung](name)
 - my name is [Claude Ake](name)
 - my name is [Earl Ring](name)
 - my name is [Felicia Cosby](name)
 - my name is [Frances Kunkle](name)
 - my name is [Greg King](name)
-- my name is [James Culpit](name)
+- my name is [james culpit](name)
 - my name is [Jermaine Mccleery](name)
 - my name is [John Evers](name)
 - my name is [Joseph Parson](name)
 - my name is [Monica Ser](name)
 - my name is [Nigel Partida](name)
 - my name is [Staci Simpson](name)
-- my name is [Susan Crandall](name)
+- my name is [susan crandall](name)
 - my name is [Tabitha Schoenthal](name)
 - my name's [Michael Peppers](name)
 - my own
@@ -4528,7 +4528,7 @@
 - please send me the newsletter
 - please send newsletter to Robert@yahoo.com
 - please sign me up for the newsletter
-- please subscribe me to the newsletter Gregory_Lilley@yahoo.com
+- please subscribe me to the newsletter gregory_lilley@yahoo.com
 - please subscribe me to your newsletter
 - register me for the newsletter
 - send me the newsletter
@@ -4542,7 +4542,7 @@
 - sign up to the newsletter
 - subcribe
 - subscribe
-- subscribe Bruce_Harryman@Olsen.comto the newsletter
+- subscribe Bruce_harryman@Olsen.comto the newsletter
 - subscribe Denise@gmail.com to the newsletter
 - subscribe me to newsletter
 - subscribe me to the newsletter
@@ -4790,10 +4790,10 @@
 - thx
 - yes thanks
 
-## lookup:location.txt
+## lookup:location
 data/location.txt
 
-## lookup:products.txt
+## lookup:product
 data/products.txt
 
 ## regex:greet
@@ -4902,12 +4902,6 @@ data/products.txt
 
 ## synonym:organisation
 - companies
-
-## synonym:philipp
-- Philipp
-
-## synonym:philipp wolf
-- Philipp Wolf
 
 ## synonym:rasa
 - Rasa
