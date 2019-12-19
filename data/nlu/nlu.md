@@ -4828,26 +4828,8 @@ data/products.txt
 - U.K.
 - UK
 
-## synonym:acme mops
-- ACME Mops
-
-## synonym:alex
-- Alex
-
 ## synonym:all
 - both
-
-## synonym:bbc
-- BBC
-
-## synonym:bcbsm
-- BCBSM
-
-## synonym:bosch
-- Bosch
-
-## synonym:conda
-- anaconda
 
 ## synonym:core
 - CORE
@@ -4855,12 +4837,6 @@ data/products.txt
 
 ## synonym:date
 - dates
-
-## synonym:duckling
-- Duckling
-
-## synonym:developer
-- Developer
 
 ## synonym:dialogflow
 - DialogFlow
@@ -4870,9 +4846,6 @@ data/products.txt
 
 ## synonym:distance
 - distances
-
-## synonym:donezo
-- donez
 
 ## synonym: duration
 - how long
@@ -4899,9 +4872,6 @@ data/products.txt
 
 ## synonym:italian
 - italina
-
-## synonym:lithuanian
-- Lithuanian
 
 ## synonym:luis
 - LUIS
@@ -4945,6 +4915,3 @@ data/products.txt
 - Rasa X
 - X
 - rasa x
-
-## synonym:yolo@yolo.de
-- yolo at yolo.de
