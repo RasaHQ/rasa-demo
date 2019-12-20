@@ -4922,6 +4922,9 @@
 - X
 - RASA X
 - rasa x
+- rasax
+- RASAX
+- Rasax
 
 ## regex:greet
 - hey[^\s]*
