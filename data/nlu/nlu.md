@@ -347,6 +347,15 @@
 - I need to know about Rasa X
 - please tell me more about rasa x
 - elaborate on rasa x
+- Can you tell me about rasa x?
+- I want information about rasa x
+- Rasa X
+- Rasa X features
+- Tell me about rasa x
+- can someone help me with infos about rasa x
+- i want to learn more about Rasa X
+- tell me what is rasa x
+- what is rasa x?
 
 ## intent:ask_faq_channels
 - Can you tell which messaging channels does rasa support?
@@ -687,17 +696,6 @@
 - which python version
 - which python version should i install
 - which version of python do i need
-
-## intent:ask_faq_rasax
-- Can you tell me about rasa x?
-- I want information about rasa x
-- Rasa X
-- Rasa X features
-- Tell me about rasa x
-- can someone help me with infos about rasa x
-- i want to learn more about Rasa X
-- tell me what is rasa x
-- what is rasa x?
 
 ## intent:ask_faq_slots
 - Definition of slots please.
@@ -4724,6 +4722,27 @@
 - which technology is used to create you
 - yes what if i have to code open end responses into some categories
 - your specifications
+- best policies to be used
+- Deploy to a Server
+- Hello, Sara. How can I configure etnity extraction for russian lnguage?
+- Is there API for any other programming languages?
+- can I use Rasa with my Raspberry Pi
+- how to setup rasax on slack
+- Can I run Rasa on a raspberry pi ?
+- can I run rasa on a raspberry pi
+- Can I run rasa on a raspberry pi ?
+- Is it possible to integrate Rasa with Android to run on mobile devices
+- What is the min requirements to run rasa
+- TypeError: 'module' object is not callable
+- deploy rasa chat bot in flask
+- How can i automate retraining of my rasa models
+- can i user rasa for my text classification problem?
+- in what programming language is your api
+- i want to integrate my rasa bot to webex  may i know how
+- how to initialize a new project?
+- Does it have a java library
+- how to train model
+- what are the policy available
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4806,57 +4825,45 @@
 - thx
 - yes thanks
 
-## lookup:location
-data/location.txt
-
-## lookup:product
-data/products.txt
-
-## regex:greet
-- hey[^\s]*
-
-## regex:zipcode
-- [0-9]{5}
+## synonym: duration
+- durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
+- U.S.
 - United States
 - usa
 
 ## synonym:United Kingdom
-- U.K.
 - UK
+- U.K.
 
 ## synonym:all
 - both
 
 ## synonym:core
-- CORE
 - Core
+- CORE
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
 - DialogFlwo
-- dialog flow
 - google
+- dialog flow
+- DialogFlow
 
 ## synonym:distance
 - distances
 
-## synonym: duration
-- how long
-- durations
-
 ## synonym:entity recognition
-- entity extraction
+- ner
+- NER
 - recognition
 - Entity recognition
-- NER
-- ner
+- entity extraction
 
 ## synonym:full stack developer
 - full stack develope
@@ -4865,18 +4872,18 @@ data/products.txt
 - Helvetia
 
 ## synonym:intent classification
-- intent
 - intent recognition
-- intents
 - intent classificaton
+- intent
+- intents
 
 ## synonym:italian
 - italina
 
 ## synonym:luis
-- LUIS
-- LUIS.ai
 - Luis
+- LUIS.ai
+- LUIS
 - luis.ai
 
 ## synonym:money
@@ -4886,9 +4893,9 @@ data/products.txt
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
+- NLU
 - rasa_nlu
 
 ## synonym:organisation
@@ -4898,20 +4905,29 @@ data/products.txt
 - Rasa
 
 ## synonym:stack
-- Full
-- Full Stack
 - Full stack
-- full
-- full framework
+- Full Stack
+- fullstack
 - full stack
 - full staclk
-- fullstack
+- Full
+- full framework
+- full
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- RASA X
 - Rasa X
 - X
+- RASA X
 - rasa x
+- rasax
+- RASAX
+- Rasax
+
+## regex:greet
+- hey[^\s]*
+
+## regex:zipcode
+- [0-9]{5}
