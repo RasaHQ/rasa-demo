@@ -9,6 +9,16 @@ class AlgoliaAPI(object):
         self.client = SearchClient.create(app_id, search_key)
         self.index = self.client.init_index(index)
 
+
+    def get_algolia_link(hits, index: int):
+        doc_link = "- [" + hits[index]["hierarchy"]["lvl0"]
+        if hits[index]["hierarchy"]["lvl1"]:
+            doc_link += "/" + hits[index]["hierarchy"]["lvl1"].strip()
+            if hits[index]["hierarchy"]["lvl2"]:
+                doc_link += "/" + hits[index]["hierarchy"]["lvl2"].strip()
+        doc_link += "](" + hits[index]["url"] + ")"
+        return doc_link
+
     def search(self, search_string):
         res = self.index.search(search_string)
         return res
