@@ -9,7 +9,7 @@ class DiscourseAPI(object):
     def __init__(self, url):
         self.url = url
 
-    def get_discourse_links(topics, index: int):
+    def get_discourse_links(self, stopics, index: int):
         doc_url = f"https://forum.rasa.com/t/{topics[index]['slug']}/{str(topics[index]['id'])}"
         forum = f"- [{topics[index]['title']}]({doc_url})"
         return forum

@@ -10,7 +10,7 @@ class AlgoliaAPI(object):
         self.index = self.client.init_index(index)
 
 
-    def get_algolia_link(hits, index: int):
+    def get_algolia_link(self, hits, index: int):
         doc_link = "- [" + hits[index]["hierarchy"]["lvl0"]
         if hits[index]["hierarchy"]["lvl1"]:
             doc_link += "/" + hits[index]["hierarchy"]["lvl1"].strip()
