@@ -648,12 +648,9 @@ class ActionDocsSearch(Action):
 
     def run(self, dispatcher, tracker, domain):
         search_text = tracker.latest_message["text"]
-        logger.error("Doing doc search on test: {}".format(search_text))
         if search_text == "/technical_question{}":
             last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
-            logger.error("last_user_event: {}".format(last_user_event))
             search_text = last_user_event["text"]
-        logger.error("search_text: {}".format(search_text))
 
         # Search of docs pages
         alg_res = self.algolia.search(search_text)
@@ -680,9 +677,7 @@ class ActionForumSearch(Action):
         search_text = tracker.latest_message["text"]
         if search_text == "/technical_question{}":
             last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
-            logger.error("last_user_event: {}".format(last_user_event))
             search_text = last_user_event["text"]
-        logger.error("search_text: {}".format(search_text))
 
         # Search forum
         disc_r = self.discourse.query(search_text)
@@ -691,8 +686,6 @@ class ActionForumSearch(Action):
         forum = self.discourse.get_discourse_links(disc_r["topics"], 0)
         forum += "\n" + self.discourse.get_discourse_links(disc_r["topics"], 1)
 
-        logger.error("ActionForumSearch, forum: {}".format(forum))
         dispatcher.utter_message("I found the following from our forum:\n" + forum)
-
         return []
 
