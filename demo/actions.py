@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 from datetime import datetime
-from typing import Text, Dict, Any, List
+from typing import Any, Dict, List, Text, Union
 import json
 
 from rasa_sdk import Action, Tracker

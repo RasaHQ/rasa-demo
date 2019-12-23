@@ -1,4 +1,5 @@
 import ssl
+from datetime import datetime
 from typing import List, Optional, Text
 import logging
 
@@ -57,7 +58,6 @@ class CommunityEvent(object):
 
 
 def parse_community_date(date_string: Text) -> "datetime":
-    from datetime import datetime
 
     dates = date_string.split("-")
 
