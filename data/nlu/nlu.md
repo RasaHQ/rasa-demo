@@ -3045,6 +3045,8 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
+- wordpress
+- slack
 
 ## intent:explain
 - can you elaborate
@@ -4894,8 +4896,8 @@
 
 ## synonym:nlu
 - Natural Language Understanding
-- Nlu
 - NLU
+- Nlu
 - rasa_nlu
 
 ## synonym:organisation
@@ -4909,21 +4911,21 @@
 - Full Stack
 - fullstack
 - full stack
-- full staclk
+- full
 - Full
 - full framework
-- full
+- full staclk
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- Rasa X
 - X
 - RASA X
+- RASAX
+- Rasa X
 - rasa x
 - rasax
-- RASAX
 - Rasax
 
 ## regex:greet
