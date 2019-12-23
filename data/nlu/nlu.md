@@ -1410,7 +1410,6 @@
 - I want to find some restauant nearby
 - show me restaurents
 
-
 ## intent:ask_time
 - Can you give me the time?
 - Can you tell me the time?
@@ -2341,8 +2340,6 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
-
-
 
 ## intent:enter_data
 - $1
