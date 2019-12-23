@@ -563,12 +563,10 @@ templates:
         policy](https://rasa.com/privacy-policy/).
   utter_installation_command:
   - text: "You will first need to install Rasa using this installation
-      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\n Since Rasa Open Source is a
-      dependency for Rasa X, this command will install both of them together."
+      command. \n\n\"pip install rasa\""
   utter_installation_command_followup:
   - text: "Once you're done, you can install Rasa with pip using the following command.
-      \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\". \n\nSince Rasa Open Source is a
-      dependency for Rasa X, this command will install both of them together."
+      \n\n\"pip install rasa\""
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed
       installation instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
