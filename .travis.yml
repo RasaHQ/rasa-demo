@@ -13,22 +13,23 @@ jobs:
   include:
   - stage: test
     name: "Code Formatting"
-    python: 3.6
     script:
     - make lint
   - stage: test
     name: "Type Check"
-    python: 3.6
     script:
     - make types
   - stage: test
-    name: "Test Stories"
-    python: 3.6
+    name: "Test Training Stories"
     script:
       - export DISPLAY=0.0
       - rasa train core --config augmentedmemo-only.yml --augmentation 0 --quiet
       - export DISPLAY=:99.0
       - rasa test core --fail-on-prediction-errors --quiet
+  - stage: test
+    name: "Test End-To-End Stories"
+    script:
+      - rasa test --e2e --stories test/test_stories_e2e.md --fail-on-prediction-errors
   - stage: deploy
     name: "Deploy App Image"
     python: 3.6
