@@ -22,9 +22,7 @@ jobs:
   - stage: test
     name: "Test Training Stories"
     script:
-      - export DISPLAY=0.0
       - rasa train core --config augmentedmemo-only.yml --augmentation 0 --quiet
-      - export DISPLAY=:99.0
       - rasa test core --fail-on-prediction-errors --quiet
   - stage: deploy
     name: "Deploy App Image"
