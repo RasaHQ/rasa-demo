@@ -23,13 +23,13 @@ class CommunityEvent(object):
         )
 
     @classmethod
-    def from_html(cls, html) -> Optional["CommunityEvent"]:
+    def from_html(cls, html):
         link = html.a.get("href")
 
         event_properties = html.get_text().split(",")
 
         if len(event_properties) != 3:
-            logger.warning("Error when trying to parse event " "details from html.")
+            logger.warning("Error when trying to parse event details from html.")
             return None
 
         city, name, date_as_string = html.get_text().split(",")

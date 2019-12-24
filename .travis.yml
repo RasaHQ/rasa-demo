@@ -30,7 +30,7 @@ jobs:
       - export DISPLAY=:99.0
       - rasa test core --fail-on-prediction-errors --quiet
   - stage: deploy
-    name: "Deploy"
+    name: "Deploy App Image"
     python: 3.6
     script:
       - openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv
