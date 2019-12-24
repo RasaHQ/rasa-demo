@@ -3607,7 +3607,6 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 
-<<<<<<< HEAD
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
 - Could I talk to [Tyrone King](name)?
@@ -3708,31 +3707,6 @@
 - can you help me with installation of rasa [nlu](product) and train my first bot
 - download
 - dude, i want install rasa
-=======
-## intent:technical_question
-- where to train intents in rasa?
-- i need a help to integrate rasa with a messenger
-- what infrastructure is required to run a bot?
-- can you help me with this problem
-- help me wih the installation
-- having trouble with rasa installation
-- i am having trouble setting this up
-- how about interactive learning
-- interactive learning?
-- technical side of things?
-- does rasa have all the same features as [luis](current_api)
-- is rasa better than [dialogflow](current_api)
-- should I use rasa instead of ibm Watson api
-- Is Rasa better than Dialogflow?
-- db processing
-- what components of Rasa are open source
-- how to integrate rasa chatbot with my website
-- how works rasa
-- with exceptions
-- which language is rasa programmed in
-- what technologies did u use to create more mature chatbot?
-- which technology is used to create you
->>>>>>> Basic functionality working
 - having some problems with installation
 - help me wih the installation
 - hi i am not able install rasa demo in my machine

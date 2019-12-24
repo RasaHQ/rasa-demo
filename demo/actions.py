@@ -647,16 +647,16 @@ class ActionDocsSearch(Action):
         )
 
     def run(self, dispatcher, tracker, domain):
-        search_text = tracker.latest_message["text"]
+        search_text = tracker.latest_message['text']
         if search_text == "/technical_question{}":
             last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
-            search_text = last_user_event["text"]
+            search_text = last_user_event['text']
 
         # Search of docs pages
         alg_res = self.algolia.search(search_text)
 
-        doc_list = self.algolia.get_algolia_link(alg_res["hits"], 0)
-        doc_list += "\n" + self.algolia.get_algolia_link(alg_res["hits"], 1)
+        doc_list = self.algolia.get_algolia_link(alg_res['hits'], 0)
+        doc_list += "\n" + self.algolia.get_algolia_link(alg_res['hits'], 1)
 
         dispatcher.utter_message(
             "I can't answer your question directly, but I found the following from the docs:\n"

@@ -5,3 +5,19 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 
+## tech question, deny
+* technical_question
+  - action_docs_search
+  - utter_ask_docs_help
+  - action_listen
+* deny
+  - action_forum_search
+
+## tech question, affirm
+* technical_question
+  - action_docs_search
+  - utter_ask_docs_help
+  - action_listen
+* affirm
+  - utter_great
+  - action_listen
