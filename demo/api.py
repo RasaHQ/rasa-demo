@@ -2,16 +2,17 @@
 
 from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
+from typing import Text
 
 
-class MailChimpAPI(object):
+class MailChimpAPI:
     """Class to connect to the MailChimp API"""
 
-    def __init__(self, api_key):
+    def __init__(self, api_key: Text) -> None:
 
         self.client = MailChimp(mc_api=api_key)
 
-    def subscribe_user(self, list_id, email):
+    def subscribe_user(self, list_id: Text, email: Text) -> bool:
         # subscribe the user to the newsletter if they're not already
         # subscribed, with the status pending
         try:

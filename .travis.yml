@@ -26,10 +26,6 @@ jobs:
       - rasa train core --config augmentedmemo-only.yml --augmentation 0 --quiet
       - export DISPLAY=:99.0
       - rasa test core --fail-on-prediction-errors --quiet
-  - stage: test
-    name: "Test End-To-End Stories"
-    script:
-      - rasa test --e2e --stories test/test_stories_e2e.md --fail-on-prediction-errors
   - stage: deploy
     name: "Deploy App Image"
     python: 3.6

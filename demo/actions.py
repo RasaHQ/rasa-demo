@@ -25,14 +25,14 @@ logger = logging.getLogger(__name__)
 class SubscribeNewsletterForm(FormAction):
     """Asks for the user's email, call the newsletter API and sign up user"""
 
-    def name(self):
+    def name(self) -> Text:
         return "subscribe_newsletter_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker) -> List[Text]:
         return ["email"]
 
-    def slot_mappings(self):
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
             "email": [
                 self.from_entity(entity="email"),
@@ -74,11 +74,11 @@ class SubscribeNewsletterForm(FormAction):
 class SalesForm(FormAction):
     """Collects sales information and adds it to the spreadsheet"""
 
-    def name(self):
+    def name(self) -> Text:
         return "sales_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker) -> List[Text]:
         return [
             "job_function",
             "use_case",
@@ -171,7 +171,7 @@ class SalesForm(FormAction):
 class ActionExplainSalesForm(Action):
     """Returns the explanation for the sales form questions"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_explain_sales_form"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -191,7 +191,7 @@ class ActionExplainSalesForm(Action):
 class ActionChitchat(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_chitchat"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -225,7 +225,7 @@ class ActionChitchat(Action):
 class ActionFaqs(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_faqs"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -259,7 +259,7 @@ class ActionFaqs(Action):
 class ActionPause(Action):
     """Pause the conversation"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_pause"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -269,7 +269,7 @@ class ActionPause(Action):
 class ActionStoreUnknownProduct(Action):
     """Stores unknown tools people are migrating from in a slot"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_unknown_product"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -283,7 +283,7 @@ class ActionStoreUnknownNluPart(Action):
        in slot.
     """
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_unknown_nlu_part"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -295,7 +295,7 @@ class ActionStoreUnknownNluPart(Action):
 class ActionStoreBotLanguage(Action):
     """Takes the bot language and checks what pipelines can be used"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_bot_language"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -327,7 +327,7 @@ class ActionStoreEntityExtractor(Action):
         what pipelines can be used.
     """
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_entity_extractor"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -357,7 +357,7 @@ class ActionSetOnboarding(Action):
     """Sets the slot 'onboarding' to true/false dependent on whether the user
     has built a bot with rasa before"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_set_onboarding"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -374,14 +374,14 @@ class ActionSetOnboarding(Action):
 class SuggestionForm(FormAction):
     """Accept free text input from the user for suggestions"""
 
-    def name(self):
+    def name(self) -> Text:
         return "suggestion_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker) -> List[Text]:
         return ["suggestion"]
 
-    def slot_mappings(self):
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {"suggestion": self.from_text()}
 
     def submit(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -392,7 +392,7 @@ class SuggestionForm(FormAction):
 class ActionStoreProblemDescription(Action):
     """Stores the problem description in a slot."""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_problem_description"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -404,7 +404,7 @@ class ActionStoreProblemDescription(Action):
 class ActionGreetUser(Action):
     """Greets the user with/without privacy policy"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_greet_user"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
@@ -544,7 +544,7 @@ class ActionDefaultFallback(Action):
 class CommunityEventAction(Action):
     """Utters Rasa community events."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.last_event_update = None
         self.events = None
         self.events = self._get_events()
@@ -627,7 +627,7 @@ class CommunityEventAction(Action):
 
 
 class ActionNextStep(Action):
-    def name(self):
+    def name(self) -> Text:
         return "action_next_step"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
