@@ -105,7 +105,7 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* enter_data OR out_of_scope
+* technical_question OR enter_data OR out_of_scope
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help

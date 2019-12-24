@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 from datetime import datetime
-from typing import Text, Dict, Any, List, Optional
+from typing import Text, Dict, Any, List
 import json
 
 from rasa_sdk import Action, Tracker
@@ -641,11 +641,6 @@ class ActionDocsSearch(Action):
     def name(self):
         return "action_docs_search"
 
-    def __init__(self) -> None:
-        self.algolia = AlgoliaAPI(
-            config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
-        )
-
     def run(self, dispatcher, tracker, domain):
         search_text = tracker.latest_message['text']
         if search_text == "/technical_question{}":
@@ -653,11 +648,11 @@ class ActionDocsSearch(Action):
             search_text = last_user_event['text']
 
         # Search of docs pages
-        alg_res = self.algolia.search(search_text)
-        logger.error(f"alogloia results {alg_res}")
+        algolia = AlgoliaAPI(config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index)
+        alg_res = algolia.search(search_text)
 
-        doc_list = self.algolia.get_algolia_link(alg_res['hits'], 0)
-        doc_list += "\n" + self.algolia.get_algolia_link(alg_res['hits'], 1) if len(alg_res['hits']) > 1 else ""
+        doc_list = algolia.get_algolia_link(alg_res['hits'], 0)
+        doc_list += "\n" + algolia.get_algolia_link(alg_res['hits'], 1) if len(alg_res['hits']) > 1 else ""
 
         dispatcher.utter_message(
             "I can't answer your question directly, but I found the following from the docs:\n"
@@ -671,9 +666,6 @@ class ActionForumSearch(Action):
     def name(self):
         return "action_forum_search"
 
-    def __init__(self) -> None:
-        self.discourse = DiscourseAPI("https://forum.rasa.com/search")
-
     def run(self, dispatcher, tracker, domain):
         search_text = tracker.latest_message["text"]
         if search_text == "/technical_question{}":
@@ -681,11 +673,12 @@ class ActionForumSearch(Action):
             search_text = last_user_event["text"]
 
         # Search forum
-        disc_r = self.discourse.query(search_text)
+        discourse = DiscourseAPI("https://forum.rasa.com/search")
+        disc_r = discourse.query(search_text)
         disc_r = disc_r.json()
 
-        forum = self.discourse.get_discourse_links(disc_r["topics"], 0)
-        forum += "\n" + self.discourse.get_discourse_links(disc_r["topics"], 1)
+        forum = discourse.get_discourse_links(disc_r["topics"], 0)
+        forum += "\n" + discourse.get_discourse_links(disc_r["topics"], 1)
 
         dispatcher.utter_message("I found the following from our forum:\n" + forum)
         return []
