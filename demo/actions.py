@@ -654,9 +654,10 @@ class ActionDocsSearch(Action):
 
         # Search of docs pages
         alg_res = self.algolia.search(search_text)
+        logger.error(f"alogloia results {alg_res}")
 
         doc_list = self.algolia.get_algolia_link(alg_res['hits'], 0)
-        doc_list += "\n" + self.algolia.get_algolia_link(alg_res['hits'], 1)
+        doc_list += "\n" + self.algolia.get_algolia_link(alg_res['hits'], 1) if len(alg_res['hits']) > 1 else ""
 
         dispatcher.utter_message(
             "I can't answer your question directly, but I found the following from the docs:\n"
