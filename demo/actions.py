@@ -7,7 +7,12 @@ import json
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused, EventType
+from rasa_sdk.events import (
+    SlotSet,
+    UserUtteranceReverted,
+    ConversationPaused,
+    EventType,
+)
 
 from demo import config
 from demo.api import MailChimpAPI
@@ -115,7 +120,9 @@ class SalesForm(FormAction):
             ],
         }
 
-    def validate_business_email(self, value, dispatcher, tracker, domain) -> Dict[Text, Any]:
+    def validate_business_email(
+        self, value, dispatcher, tracker, domain
+    ) -> Dict[Text, Any]:
         """Check to see if an email entity was actually picked up by duckling."""
 
         if any(tracker.get_latest_entity_values("email")):
