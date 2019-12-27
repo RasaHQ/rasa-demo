@@ -562,7 +562,7 @@ templates:
         By chatting to me you agree to our [privacy
         policy](https://rasa.com/privacy-policy/).
   utter_installation_command:
-  - text: "You will first need to install Rasa using this installation
+   - text: "You will first need to install Rasa Open Source using this installation
       command. \n\n\"pip install rasa\""
   utter_installation_command_followup:
    - text: "Once you're done, you can install Rasa Open Source with pip using the following command.
