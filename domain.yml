@@ -523,8 +523,7 @@ templates:
   utter_get_started_step2:
   - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
-  - text: Now, let's take a look at Rasa X, which provides you with a user interface
-      where you can view and annotate real conversations to improve your assistant. Sound good?
+  - text: Now, let's take a look at Rasa X, to improve your assistant. Sound good?
   utter_get_started_step4:
   - text: As a Rasa developer you will be part of a huge community. You can
       ask me about the upcoming Rasa events, ways to contribute or about
