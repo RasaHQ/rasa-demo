@@ -565,7 +565,7 @@ templates:
   - text: "You will first need to install Rasa using this installation
       command. \n\n\"pip install rasa\""
   utter_installation_command_followup:
-  - text: "Once you're done, you can install Rasa with pip using the following command.
+   - text: "Once you're done, you can install Rasa Open Source with pip using the following command.
       \n\n\"pip install rasa\""
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed
