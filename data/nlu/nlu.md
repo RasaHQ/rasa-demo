@@ -4859,6 +4859,11 @@
 - Core
 - CORE
 
+## synonym:custom actions
+- actions
+- Custom actions
+- Actions
+
 ## synonym:date
 - dates
 
