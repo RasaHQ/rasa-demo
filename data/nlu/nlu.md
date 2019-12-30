@@ -1991,6 +1991,7 @@
 - who talks?
 - whom i talking to
 - yes but who are you in your heart
+- may i know your name
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -3045,6 +3046,7 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
+- botonic
 
 ## intent:explain
 - can you elaborate
@@ -4743,6 +4745,17 @@
 - Does it have a java library
 - how to train model
 - what are the policy available
+- i need help with policies
+- how to connect mongodb
+- what is fallback policy in rasa
+- what is a webhook
+- how to handle sending scheduled message to custom webhooks
+- actions
+- actions on rasa
+- why do I get errors using rasa?
+- there are some python incompatibilities
+- how to add dropdowns?
+- replace default nlu with custom component
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4894,8 +4907,8 @@
 
 ## synonym:nlu
 - Natural Language Understanding
-- Nlu
 - NLU
+- Nlu
 - rasa_nlu
 
 ## synonym:organisation
@@ -4909,21 +4922,21 @@
 - Full Stack
 - fullstack
 - full stack
-- full staclk
+- full
 - Full
 - full framework
-- full
+- full staclk
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- Rasa X
 - X
 - RASA X
+- RASAX
+- Rasa X
 - rasa x
 - rasax
-- RASAX
 - Rasax
 
 ## regex:greet
