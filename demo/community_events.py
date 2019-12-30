@@ -1,5 +1,6 @@
 import ssl
-from typing import List, Optional, Text
+from datetime import datetime
+from typing import Dict, List, Optional, Text
 import logging
 
 logger = logging.getLogger(__name__)
@@ -7,8 +8,8 @@ logger = logging.getLogger(__name__)
 DATE_FORMAT = "%d %B %Y"
 
 
-class CommunityEvent(object):
-    def __init__(self, name, city, country, formatted_date, date, link):
+class CommunityEvent:
+    def __init__(self, name, city, country, formatted_date, date, link) -> None:
         self.name = name
         self.city = city
         self.country = country
@@ -16,7 +17,7 @@ class CommunityEvent(object):
         self.date = date
         self.link = link
 
-    def __repr__(self):
+    def __repr__(self) -> Text:
         return "{} ({}): {} ({})".format(
             self.name, self.city, self.formatted_date, self.date
         )
@@ -28,7 +29,7 @@ class CommunityEvent(object):
         event_properties = html.get_text().split(",")
 
         if len(event_properties) != 3:
-            logger.warning("Error when trying to parse event " "details from html.")
+            logger.warning("Error when trying to parse event details from html.")
             return None
 
         city, name, date_as_string = html.get_text().split(",")
@@ -45,10 +46,10 @@ class CommunityEvent(object):
             link.strip(),
         )
 
-    def name_as_link(self):
+    def name_as_link(self) -> Text:
         return "[{}]({})".format(self.name, self.link)
 
-    def as_kwargs(self):
+    def as_kwargs(self) -> Dict[Text, Text]:
         return {
             "event_name": self.name_as_link(),
             "event_location": self.city,
@@ -56,8 +57,7 @@ class CommunityEvent(object):
         }
 
 
-def parse_community_date(date_string: Text) -> "datetime":
-    from datetime import datetime
+def parse_community_date(date_string: Text) -> datetime:
 
     dates = date_string.split("-")
 
