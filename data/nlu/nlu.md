@@ -1991,6 +1991,7 @@
 - who talks?
 - whom i talking to
 - yes but who are you in your heart
+- may i know your name
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -3045,6 +3046,7 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
+- botonic
 - wordpress
 - slack
 
@@ -4745,6 +4747,17 @@
 - Does it have a java library
 - how to train model
 - what are the policy available
+- i need help with policies
+- how to connect mongodb
+- what is fallback policy in rasa
+- what is a webhook
+- how to handle sending scheduled message to custom webhooks
+- actions
+- actions on rasa
+- why do I get errors using rasa?
+- there are some python incompatibilities
+- how to add dropdowns?
+- replace default nlu with custom component
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4847,6 +4860,11 @@
 ## synonym:core
 - Core
 - CORE
+
+## synonym:custom actions
+- actions
+- Custom actions
+- Actions
 
 ## synonym:date
 - dates
