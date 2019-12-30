@@ -523,8 +523,7 @@ templates:
   utter_get_started_step2:
   - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
   utter_get_started_step3:
-  - text: Now, let's take a look at Rasa X, which provides you with a user interface
-      where you can view and annotate real conversations to improve your assistant. Sound good?
+  - text: Now, let's take a look at Rasa X, to improve your assistant. Sound good?
   utter_get_started_step4:
   - text: As a Rasa developer you will be part of a huge community. You can
       ask me about the upcoming Rasa events, ways to contribute or about
@@ -562,13 +561,11 @@ templates:
         By chatting to me you agree to our [privacy
         policy](https://rasa.com/privacy-policy/).
   utter_installation_command:
-  - text: "You will first need to install Rasa using this installation
-      command. \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\".\n\n Since Rasa Open Source is a
-      dependency for Rasa X, this command will install both of them together."
+   - text: "You will first need to install Rasa Open Source using this installation
+      command. \n\n\"pip install rasa\""
   utter_installation_command_followup:
-  - text: "Once you're done, you can install Rasa with pip using the following command.
-      \n\n\"pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple\". \n\nSince Rasa Open Source is a
-      dependency for Rasa X, this command will install both of them together."
+   - text: "Once you're done, you can install Rasa Open Source with pip using the following command.
+      \n\n\"pip install rasa\""
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed
       installation instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
@@ -725,9 +722,15 @@ templates:
       suggest using the SpacyEntityExtractor component in your pipeline.'
   utter_spacy_or_tensorflow:
   - text: Looks like for your {language} bot, you can use either spacy or our supervised_embeddings pipeline!
-  utter_start_rasax:
-  - text: You may run the cell on the left to start Rasa X. After a few seconds, you will
-      see a button that will take you to its UI.
+  utter_describe_rasax:
+  - text: "[Rasa X](https://rasa.com/docs/rasa-x) is a toolset that layers on top of
+      Rasa Open Source, making it easier to review conversations, identify next steps in
+      development, and improve your assistant.
+
+      Once you have built an assistant that can handle the most important happy path
+      stories, you deploy Rasa X to a server and use it to improve your assistant.
+
+      Learn how to deploy Rasa X to a server in the [Rasa X Docs](https://rasa.com/docs/rasa-x)."
   utter_suggestion:
   - text: >-
       I don't have a skill to help you with this stage yet, but please ask any
@@ -932,7 +935,7 @@ actions:
 - utter_source_code
 - utter_spacy
 - utter_spacy_or_tensorflow
-- utter_start_rasax
+- utter_describe_rasax
 - utter_suggestion
 - utter_switch_dialogflow
 - utter_switch_luis

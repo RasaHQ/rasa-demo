@@ -4,4 +4,3 @@
 * affirm
     - utter_getstarted
     - utter_first_bot_with_rasa
-

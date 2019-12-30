@@ -3047,6 +3047,8 @@
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
 - botonic
+- wordpress
+- slack
 
 ## intent:explain
 - can you elaborate

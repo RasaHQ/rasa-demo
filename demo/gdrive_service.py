@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import tempfile
+from oauth2client.service_account import ServiceAccountCredentials
+from gspread.models import Spreadsheet
+from typing import List, Text, Optional
 
 from demo import config
 
 logger = logging.getLogger(__name__)
 
 
-class GDriveService(object):
+class GDriveService:
     """Service to write to a spread sheet in google drive."""
 
     # Name of the spreadsheet
@@ -19,7 +21,7 @@ class GDriveService(object):
     # Sheet where the new address change entries should be stored in
     SHEET_NAME = "demobot"
 
-    def __init__(self, gdrive_credentials_json=config.gdrive_credentials):
+    def __init__(self, gdrive_credentials_json: Text = config.gdrive_credentials):
         scopes = [
             "https://spreadsheets.google.com/feeds",
             "https://www.googleapis.com/auth/drive",
@@ -33,7 +35,7 @@ class GDriveService(object):
                 f.name, scopes=scopes
             )
 
-    def request_sheet(self, sheet_name):
+    def request_sheet(self, sheet_name: Text) -> Optional[Spreadsheet]:
         # fetch a specific sheet
         logging.debug("Refreshing auth")
         try:
@@ -44,23 +46,24 @@ class GDriveService(object):
             )
             return None
 
-    def store_data(self, data):
+    def store_data(self, data: List[Text]) -> None:
         """Adds a single new row to the sheet containing the user's
         information"""
         self.append_row(self.SPREADSHEET_NAME, data, self.SHEET_NAME)
 
-    def append_row(self, sheet_name, row_values, worksheet_name):
+    def append_row(
+        self, sheet_name: Text, row_values: List[Text], worksheet_name: Text
+    ) -> None:
         # add a row to the spreadsheet
         sheet = self.request_sheet(sheet_name)
-        try:
-            worksheet = sheet.worksheet(worksheet_name)
-            if worksheet is not None:
-                worksheet.append_row(row_values)
-        except Exception as e:
-            logging.error(
-                "Failed to write row to gdocs. Sheet %s/%s. " + "Error: %s",
-                sheet_name,
-                worksheet_name,
-                e,
-                exc_info=True,
-            )
+        if sheet:
+            try:
+                worksheet = sheet.worksheet(worksheet_name)
+                if worksheet:
+                    worksheet.append_row(row_values)
+            except Exception as e:
+                logging.error(
+                    f"Failed to write row to gdocs. Sheet {sheet_name}/{worksheet_name}. "
+                    f"Error: {e}",
+                    exc_info=True,
+                )
