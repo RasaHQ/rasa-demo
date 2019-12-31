@@ -12,7 +12,6 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
-    UserUttered,
 )
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
@@ -644,8 +643,7 @@ class ActionNextStep(Action):
         return []
 
 
-
-def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[Any]:
+def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
     skipped = 0
     for e in reversed(tracker.events):
         if e.get("event") == event_type:
@@ -653,6 +651,7 @@ def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[Any
             if skipped > skip:
                 return e
     return None
+
 
 class ActionDocsSearch(Action):
     def name(self):
@@ -663,7 +662,8 @@ class ActionDocsSearch(Action):
         # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
         if search_text == "/technical_question{}":
             last_user_event = get_last_event_for(tracker, "user", skip=2)
-            search_text = last_user_event.get('text')
+            if last_user_event:
+                search_text = last_user_event.get("text")
 
         # Search of docs pages
         algolia = AlgoliaAPI(
@@ -695,7 +695,7 @@ class ActionForumSearch(Action):
         # If we're in a TwoStageFallback we need to look back two more user utterance to get the actual text
         if search_text == "/technical_question{}" or search_text == "/deny":
             last_user_event = get_last_event_for(tracker, "user", skip=3)
-            search_text = last_user_event.get('text')
+            search_text = last_user_event.get("text")
 
         # Search forum
         discourse = DiscourseAPI("https://forum.rasa.com/search")
