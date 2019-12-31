@@ -642,7 +642,8 @@ class ActionDocsSearch(Action):
         return "action_docs_search"
 
     def run(self, dispatcher, tracker, domain):
-        search_text = tracker.latest_message['text']
+        search_text = tracker.latest_message.get("text")
+        # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
         if search_text == "/technical_question{}":
             last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
             search_text = last_user_event['text']
@@ -651,8 +652,8 @@ class ActionDocsSearch(Action):
         algolia = AlgoliaAPI(config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index)
         alg_res = algolia.search(search_text)
 
-        doc_list = algolia.get_algolia_link(alg_res['hits'], 0)
-        doc_list += "\n" + algolia.get_algolia_link(alg_res['hits'], 1) if len(alg_res['hits']) > 1 else ""
+        doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+        doc_list += "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1) if len(alg_res.get("hits")) > 1 else ""
 
         dispatcher.utter_message(
             "I can't answer your question directly, but I found the following from the docs:\n"
@@ -667,18 +668,19 @@ class ActionForumSearch(Action):
         return "action_forum_search"
 
     def run(self, dispatcher, tracker, domain):
-        search_text = tracker.latest_message["text"]
+        search_text = tracker.latest_message.get("text")
+        # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
         if search_text == "/technical_question{}":
             last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
             search_text = last_user_event["text"]
 
         # Search forum
         discourse = DiscourseAPI("https://forum.rasa.com/search")
-        disc_r = discourse.query(search_text)
-        disc_r = disc_r.json()
+        doc_list = discourse.query(search_text)
+        doc_list = doc_list.json()
 
-        forum = discourse.get_discourse_links(disc_r["topics"], 0)
-        forum += "\n" + discourse.get_discourse_links(disc_r["topics"], 1)
+        forum = discourse.get_discourse_links(doc_list["topics"], 0)
+        forum += "\n" + discourse.get_discourse_links(doc_list["topics"], 1)
 
         dispatcher.utter_message("I found the following from our forum:\n" + forum)
         return []

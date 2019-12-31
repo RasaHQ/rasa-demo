@@ -9,7 +9,6 @@
 * technical_question
   - action_docs_search
   - utter_ask_docs_help
-  - action_listen
 * deny
   - action_forum_search
 
@@ -17,7 +16,5 @@
 * technical_question
   - action_docs_search
   - utter_ask_docs_help
-  - action_listen
 * affirm
   - utter_great
-  - action_listen
