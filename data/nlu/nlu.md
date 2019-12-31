@@ -680,6 +680,7 @@
 - would rasa fall into the category of open source software?
 - would you call rasa open source software?
 - would you consider rasa open source software?
+- How is it opensource
 
 ## intent:ask_faq_python_version
 - What Python version should I use?
@@ -1406,6 +1407,8 @@
 - i'm looking for a Chinese restaurant
 - restaurants
 - will you see any restaurant for me?
+- I want to find some restauant nearby
+- show me restaurents
 
 ## intent:ask_time
 - Can you give me the time?
@@ -1991,6 +1994,7 @@
 - who talks?
 - whom i talking to
 - yes but who are you in your heart
+- may i know your name
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2333,6 +2337,10 @@
 - thanks but no thanks
 - this sucks
 - very bad
+- I do not need help installing
+- I don't wanna tell the name of my company
+- no stop
+- stop it, i do not care!!!
 
 ## intent:enter_data
 - $1
@@ -3045,6 +3053,9 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
+- botonic
+- wordpress
+- slack
 
 ## intent:explain
 - can you elaborate
@@ -3058,6 +3069,7 @@
 - please explain
 - why do you need to know that
 - why is that necessary
+- give me more details
 
 ## intent:greet
 - Bom dia
@@ -3304,8 +3316,13 @@
 - you're not smart
 - you're so dumb
 - you're the most moronic person I know
+- your mom gay
+- you are annoying
 
 ## intent:how_to_get_started
+- can you help me to build a bot
+- can you tell me how to build a bot?
+- como inicio en rasa
 - About [Core](product)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
@@ -3893,24 +3910,18 @@
 - Can I ask you questions first?
 - Can I die
 - Can I get a hamburger?
-- Can I use the rasa code for my own website?
-- Can I use your open source code on my website?
 - Can YouTube talk?
 - Can you call me back ?
 - Can you give me your datacenter's password
 - Can you give me your datacenter's password?
 - Can you make sandwiches?
 - Can you please send me an uber
-- Create ecommerce bot
 - Do I have to accept?
 - Do you know [Kevin Pelton](name)
 - Find nearest [pizzahut](company)
 - Have we met before?
 - HomeBase is advertised as a community. Is there a way to interact with other members of the community?
-- How can I visualise conversation flow?
-- How is it opensource
 - How long does it take to set up a Rasa bot?
-- How many languages does Spacy support?
 - I already told you! I'm a shitmuncher
 - I am User
 - I am an opioid addic
@@ -3919,11 +3930,7 @@
 - I am trying to build one, and did some research before, but I have not do hand-on work yet
 - I can barely see this white text on light gray background ...
 - I changed my mind
-- I do not need help installing
-- I don't wanna tell the name of my company
 - I have installed it
-- I like you
-- I love you
 - I ned a GP in 94301
 - I need a GP in 94301
 - I need a girl friend!
@@ -3935,7 +3942,6 @@
 - I want french cuisine
 - I want pizza
 - I want to die
-- I want to find some restauant nearby
 - I want to order pizza
 - I want to use pipe
 - I will check
@@ -3971,8 +3977,6 @@
 - Why don’t you answer?
 - Why is my TRUST score set to 50 after I completed the registration process?
 - Won't you ask me how I am?
-- You are mad
-- You are rude
 - You'r blue.
 - [Kristin](name), I want to marry you
 - [german](language)?
@@ -3981,7 +3985,6 @@
 - again?
 - alexa, order 5 tons of natrium chloride
 - and make chicken noises into the phone
-- and your REST API doesn't work
 - are the newsletter worth the subscription?
 - are u facebook
 - are u, facebook?
@@ -3994,38 +3997,30 @@
 - are you vegan
 - better than you
 - book a ticket
-- bots are bad
 - but I just told you that :(
 - but if rasa is open source why do you have a sales team
 - buy one please
 - buy groceries
 - call me father
-- can I install this on a mac?
-- can i makae rest calls
 - can we keep chatting?
-- can we use regex is rasa code
 - can you book dinner
 - can you cheer me up
 - can you cook dinner
 - can you give me a cup of coffee
-- can you help me to build a bot
 - can you help me with the docs?
 - can you help me with your docs
 - can you help me with your docs?
 - can you learn from our conversation?
 - can you speak about politic ?
-- can you tell me how to build a bot?
 - can you understand ?
 - cannot see
 - chgfhgh
 - chinese ok?
 - colder
 - common, just try
-- como inicio en rasa
 - connect to alexa
 - cr
 - custom service
-- database rasa is using
 - de donde eres
 - de que lugar eres?
 - did i break you
@@ -4042,7 +4037,6 @@
 - do you want to marry me?
 - docs
 - doctor
-- does it support AI
 - epdi iruka
 - eres humana
 - everything
@@ -4052,7 +4046,6 @@
 - github link?
 - give me a girl friend
 - give me food
-- give me more details
 - go back
 - google?
 - great, I'd like to buy a house
@@ -4071,29 +4064,22 @@
 - how come you say ok ?
 - how come?
 - how do you learn
-- how do you retrieve previous messages
 - how good is Rasa
 - how it compares to alexa
-- [how long](entity) have you been online?
-- [how long](entity) will the next version will launch?
+- how long have you been online?
+- how long will the next version will launch?
 - how many lines of codes
-- how many words can you handle?
 - how much is 10 + 89 ?
 - how much is 10 + 89
 - how to extract relationship
 - how to get rasa studio
 - how to go to newyork ?
-- how to use flask?
-- how to use rasa in salesforce
-- how to visualise dialogue flow
 - i am hungry
 - i am hungry, what should i do?
 - i am not a developer but need this for business
 - i am qq
 - i can't deal with _your_ request
 - i do not care how are you
-- i don't care!!!!
-- i dont like bots
 - i hope you will be better
 - i immediately need help with implementing the coolest bot you can imagine
 - i m looking for job
@@ -4123,7 +4109,6 @@
 - is rasa a studio?
 - is rasa any good
 - is that any of your business
-- is this test compatible with linux?
 - isn't the newsletter just spam?
 - it's a pity
 - i´m hungry
@@ -4140,7 +4125,6 @@
 - more
 - mountain
 - my name k
-- no stop
 - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
 - offer me lunch
 - oh my god, not again!
@@ -4159,9 +4143,7 @@
 - please play music
 - privacy policy
 - que puedes hacer?
-- rasa php
 - rasa topics
-- rasa-core error
 - really? you're so touchy?
 - refresh
 - region with no. of records
@@ -4169,21 +4151,18 @@
 - search wikipedia
 - shitmuncher
 - show me a picture of a chicken
-- show me restaurents
 - silly bot
 - sing me a song
 - so, I'm helping right now to training you?
 - some thing else
 - someone call the police i think the bot died
 - sorry, i cannot rephrase
-- stop it, i do not care!!!
 - sudo make me a sandwich
 - tell me about yourself
 - tell me more about next best action
 - that doesn't sound like a joke
 - that link doesn't work!
 - the one that is better than you
-- this is a really frustrating experience
 - tricked  ya
 - tu parles francais?
 - tudo bom
@@ -4194,7 +4173,6 @@
 - what are contextual AI assistants and how different are they from chatbots?
 - what are you doing now?
 - what are your uses for universities
-- what database rasa use
 - what did you eat for lunch?
 - what do oyu think about siri?
 - what do you think abou siri?
@@ -4214,14 +4192,10 @@
 - what is machine learning
 - what is nice?
 - what is rasa mascot
-- what is significance of domain.yml file
 - what is the capital of delhi
 - what is the capital of india
 - what is the current petrol price
 - what is the day ?
-- what is the difference between you and LUIS
-- what is the latest version of rasa?
-- what is the policy
 - what is the real use case where we can use this one
 - what is your address?
 - what is your github link
@@ -4261,17 +4235,13 @@
 - why
 - why do you need that?
 - why its called rasa ?
-- will this work on windows server
 - will u kill me
 - will u kill me?
 - winter is already leaving
 - with you recommend me?
-- work with buttons?
 - would you like some water
 - yeah, my dog was drinking a couple of litres of water per day and tried drinking the swimming pool
 - you already have that
-- you are annoying
-- you are realy intelligent
 - you can learn how to make a coffe
 - you have children?
 - you have job opening
@@ -4279,8 +4249,6 @@
 - you should learn to count
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
-- you're rather dull
-- your mom gay
 - ı am learning python
 
 ## intent:pipeline_recommendation
@@ -4386,6 +4354,13 @@
 - you are bad
 - you are bad bot
 - you make me sad
+- You are mad
+- You are rude
+- bots are bad
+- i don't care!!!!
+- i dont like bots
+- this is a really frustrating experience
+- you're rather dull
 
 ## intent:react_positive
 - :)
@@ -4433,6 +4408,9 @@
 - you are great
 - you are my new bestfriend
 - you seem pretty cool :D
+- I like you
+- I love you
+- you are realy intelligent
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4653,6 +4631,32 @@
 - switching from [DialogFlow](current_api)
 
 ## intent:technical_question
+- Can I use the rasa code for my own website?
+- Can I use your open source code on my website?
+- Create ecommerce bot
+- How can I visualise conversation flow?
+- How many languages does Spacy support?
+- and your REST API doesn't work
+- can i makae rest calls
+- can we use regex is rasa code
+- does it support AI
+- how do you retrieve previous messages
+- how many words can you handle?
+- how to use flask?
+- how to use rasa in salesforce
+- how to visualise dialogue flow
+- is this test compatible with linux?
+- rasa php
+- rasa-core error
+- what database rasa use
+- what is significance of domain.yml file
+- what is the policy
+- will this work on windows server
+- work with buttons?
+- can I install this on a mac?
+- database rasa is using
+- what is the difference between you and LUIS
+- what is the latest version of rasa?
 - Can I use Rasa for E-Mail
 - Can you send messages based on events?
 - How did rasa works?
@@ -4743,6 +4747,17 @@
 - Does it have a java library
 - how to train model
 - what are the policy available
+- i need help with policies
+- how to connect mongodb
+- what is fallback policy in rasa
+- what is a webhook
+- how to handle sending scheduled message to custom webhooks
+- actions
+- actions on rasa
+- why do I get errors using rasa?
+- there are some python incompatibilities
+- how to add dropdowns?
+- replace default nlu with custom component
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4846,6 +4861,11 @@
 - Core
 - CORE
 
+## synonym:custom actions
+- actions
+- Custom actions
+- Actions
+
 ## synonym:date
 - dates
 
@@ -4894,8 +4914,8 @@
 
 ## synonym:nlu
 - Natural Language Understanding
-- Nlu
 - NLU
+- Nlu
 - rasa_nlu
 
 ## synonym:organisation
@@ -4909,21 +4929,21 @@
 - Full Stack
 - fullstack
 - full stack
-- full staclk
+- full
 - Full
 - full framework
-- full
+- full staclk
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- Rasa X
 - X
 - RASA X
+- RASAX
+- Rasa X
 - rasa x
 - rasax
-- RASAX
 - Rasax
 
 ## regex:greet

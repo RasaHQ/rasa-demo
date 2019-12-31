@@ -20,3 +20,4 @@ rasa.*
 events.*
 terms
 docker-local
+.pytype/
