@@ -4143,7 +4143,6 @@
 - please hjave lunchj
 - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
 - please play music
-- privacy policy
 - que puedes hacer?
 - rasa topics
 - really? you're so touchy?
