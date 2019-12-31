@@ -35,7 +35,7 @@ Use `rasa train` to train a model (this will take a significant amount of memory
 if you want to train it faster, try the training command with
 `--augmentation 0`).
 
-Then, to run, first set up your action server in one terminal window:
+Then, to run, first set up your action server in one terminal window. To run the MailChimp and Alogolia docs search, you must first set the associated environment variables for those API's. These settings can be found in the `docker-compose.override.yml` file on the production server.
 ```bash
 rasa run actions --actions demo.actions
 ```
@@ -63,7 +63,7 @@ your website.
 After doing a `rasa train`, run the command:
 
 ```bash
-rasa test nlu -u test/test_data.json --model models
+rasa test nlu -u test/test_nlu.md --model models
 rasa test core --stories test/test_stories.md
 ```
 
@@ -78,6 +78,12 @@ rasa test core --stories test/test_stories.md
 `domain.yml` - the domain file, including bot response templates
 
 `config.yml` - training configurations for the NLU pipeline and policy ensemble
+
+## Action Server
+
+The action server image is built with `Dockerfile`. The build is run by travis which pushes the successfully built image to the Google Container Registry at `gcr.io/replicated-test/rasa-demo:v$TRAVIS_BUILD_NUMBER`.
+
+The `docker-compose.override.yml` file brings up the action server in production. This file also contains a series of keys that are used by the action server for the MailChimp and Algolia API's.
 
 ## ⚫️ Code Style
 
