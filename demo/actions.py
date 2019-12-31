@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 from datetime import datetime
-from typing import Any, Dict, List, Text, Union
+from typing import Any, Dict, List, Text, Union, Optional
 import json
 
 from rasa_sdk import Action, Tracker
@@ -12,7 +12,7 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
-    UserUttered
+    UserUttered,
 )
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
@@ -644,6 +644,16 @@ class ActionNextStep(Action):
         return []
 
 
+
+def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[Any]:
+    skipped = 0
+    for e in reversed(tracker.events):
+        if e.get("event") == event_type:
+            skipped += 1
+            if skipped > skip:
+                return e
+    return None
+
 class ActionDocsSearch(Action):
     def name(self):
         return "action_docs_search"
@@ -652,15 +662,21 @@ class ActionDocsSearch(Action):
         search_text = tracker.latest_message.get("text")
         # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
         if search_text == "/technical_question{}":
-            last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
-            search_text = last_user_event['text']
+            last_user_event = get_last_event_for(tracker, "user", skip=2)
+            search_text = last_user_event.get('text')
 
         # Search of docs pages
-        algolia = AlgoliaAPI(config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index)
+        algolia = AlgoliaAPI(
+            config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
+        )
         alg_res = algolia.search(search_text)
 
         doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
-        doc_list += "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1) if len(alg_res.get("hits")) > 1 else ""
+        doc_list += (
+            "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
+            if len(alg_res.get("hits")) > 1
+            else ""
+        )
 
         dispatcher.utter_message(
             "I can't answer your question directly, but I found the following from the docs:\n"
@@ -676,18 +692,18 @@ class ActionForumSearch(Action):
 
     def run(self, dispatcher, tracker, domain):
         search_text = tracker.latest_message.get("text")
-        # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
-        if search_text == "/technical_question{}":
-            last_user_event = dispatcher.get_last_event_for(UserUttered, action_names_to_exclude=None, skip=2)
-            search_text = last_user_event["text"]
+        # If we're in a TwoStageFallback we need to look back two more user utterance to get the actual text
+        if search_text == "/technical_question{}" or search_text == "/deny":
+            last_user_event = get_last_event_for(tracker, "user", skip=3)
+            search_text = last_user_event.get('text')
 
         # Search forum
         discourse = DiscourseAPI("https://forum.rasa.com/search")
         doc_list = discourse.query(search_text)
         doc_list = doc_list.json()
 
-        forum = discourse.get_discourse_links(doc_list["topics"], 0)
-        forum += "\n" + discourse.get_discourse_links(doc_list["topics"], 1)
+        forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
+        forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
 
         dispatcher.utter_message("I found the following from our forum:\n" + forum)
         return []
