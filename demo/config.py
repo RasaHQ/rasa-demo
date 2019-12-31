@@ -35,3 +35,9 @@ webhook_url = os.environ.get("WEBHOOK_URL", "https://website-demo.rasa.com/webho
 rasa_platform_token = os.environ.get("RASA_PLATFORM_TOKEN", "")
 
 rasa_nlg_endpoint = os.environ.get("RASA_NLG_ENDPOINT_URL", "")
+
+algolia_app_id = os.environ.get("ALGOLIA_APP_ID", "")
+
+algolia_search_key = os.environ.get("ALGOLIA_SEARCH_KEY", "")
+
+algolia_docs_index = os.environ.get("ALGOLIA_DOCS_INDEX", "")

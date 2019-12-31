@@ -417,6 +417,20 @@
     - utter_run_rasa_init
     - utter_direct_to_step3
 
+## technical_question - deny
+* technical_question
+    - action_docs_search
+    - utter_ask_docs_help
+* deny
+    - action_forum_search
+
+## technical_question - affirm
+* technical_question
+    - action_docs_search
+    - utter_ask_docs_help
+* affirm
+    - utter_great
+
 ## FAQ - Step 2 flow interrupted
 * install_rasa
     - utter_installation_command

@@ -112,7 +112,6 @@
     - utter_run_rasa_init
     - utter_direct_to_step3
 
-
 ## Problems installing (but FAQ)
 * install_rasa
     - utter_installation_command

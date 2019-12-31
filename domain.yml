@@ -179,6 +179,13 @@ templates:
   - text: Do you still want to talk to sales?
   utter_ask_describe_problem:
   - text: Can you describe the problem you're having?
+  utter_ask_docs_help:
+  - buttons:
+    - payload: /affirm
+      title: 👍
+    - payload: /deny
+      title: 👎
+    text: Did that help?
   utter_ask_email:
   - text: What's your email address?
   utter_ask_entities:
@@ -767,8 +774,10 @@ actions:
 - action_chitchat
 - action_default_ask_affirmation
 - action_default_fallback
+- action_docs_search
 - action_explain_sales_form
 - action_faqs
+- action_forum_search
 - action_get_community_events
 - action_greet_user
 - action_next_step
@@ -792,6 +801,7 @@ actions:
 - utter_ask_continue_rasa_init
 - utter_ask_continue_sales
 - utter_ask_describe_problem
+- utter_ask_docs_help
 - utter_ask_email
 - utter_ask_entities
 - utter_ask_explain_nlucorex

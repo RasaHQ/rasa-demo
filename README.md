@@ -55,7 +55,7 @@ Note that `--debug` mode will produce a lot of output meant to help you understa
 under the hood. To simply talk to the bot, you can remove this flag.
 
 If you would like to run Sara on your website, follow the instructions
-[here](https://github.com/mrbot-ai/rasa-webchat) to place the chat widget on
+[here](https://github.com/botfront/rasa-webchat) to place the chat widget on
 your website.
 
 ## To test Sara:

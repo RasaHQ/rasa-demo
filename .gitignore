@@ -18,4 +18,6 @@ results
 .history
 rasa.*
 events.*
+terms
+docker-local
 .pytype/
