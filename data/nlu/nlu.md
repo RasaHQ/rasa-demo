@@ -3056,6 +3056,7 @@
 - botonic
 - wordpress
 - slack
+- e commerce bot
 
 ## intent:explain
 - can you elaborate
@@ -3623,6 +3624,7 @@
 - where to start the development of rasa
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
+- I am trying to build a bot using rasa
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4914,8 +4916,8 @@
 
 ## synonym:nlu
 - Natural Language Understanding
-- NLU
 - Nlu
+- NLU
 - rasa_nlu
 
 ## synonym:organisation
@@ -4929,10 +4931,10 @@
 - Full Stack
 - fullstack
 - full stack
-- full
+- full staclk
 - Full
 - full framework
-- full staclk
+- full
 
 ## synonym:wit.ai
 - wit
