@@ -4,12 +4,13 @@
 ## :surfer: Introduction
 The purpose of this repo is to showcase a contextual AI assistant built with the open source Rasa framework.
 
-Sara is an alpha version and lives in our docs (temporarily she's unavailable on the docs due to maintenance), 
+Sara is an alpha version and lives in our docs, 
 helping developers getting started with our open source tools. It supports the following user goals:
 
 - Understanding the Rasa framework
 - Getting started with Rasa
 - Answering some FAQs around Rasa
+- Directing technical questions to specific documentation
 - Subscribing to the Rasa newsletter
 - Requesting a call with Rasa's sales team
 - Handling basic chitchat
