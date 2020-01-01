@@ -102,7 +102,7 @@
     - utter_switch_luis
     - utter_anything_else
 
-## new to rasa + not new to chatbots + migrating from another platform
+## new to rasa + not new to chatbots + migrating from something else
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
