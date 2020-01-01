@@ -4840,7 +4840,6 @@
 - thnks
 - thx
 - yes thanks
-- thank ya
 
 ## synonym: duration
 - how long
