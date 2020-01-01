@@ -4840,16 +4840,17 @@
 - thnks
 - thx
 - yes thanks
+- thank ya
 
 ## synonym: duration
-- durations
 - how long
+- durations
 
 ## synonym:USA
-- US
 - U.S.
-- United States
+- US
 - usa
+- United States
 
 ## synonym:United Kingdom
 - UK
@@ -4864,27 +4865,27 @@
 
 ## synonym:custom actions
 - actions
-- Custom actions
 - Actions
+- Custom actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlwo
-- google
-- dialog flow
 - DialogFlow
+- DialogFlwo
+- dialog flow
+- google
 
 ## synonym:distance
 - distances
 
 ## synonym:entity recognition
 - ner
+- entity extraction
+- Entity recognition
 - NER
 - recognition
-- Entity recognition
-- entity extraction
 
 ## synonym:full stack developer
 - full stack develope
@@ -4893,8 +4894,8 @@
 - Helvetia
 
 ## synonym:intent classification
-- intent recognition
 - intent classificaton
+- intent recognition
 - intent
 - intents
 
@@ -4902,9 +4903,9 @@
 - italina
 
 ## synonym:luis
+- LUIS
 - Luis
 - LUIS.ai
-- LUIS
 - luis.ai
 
 ## synonym:money
@@ -4914,9 +4915,9 @@
 - names
 
 ## synonym:nlu
+- NLU
 - Natural Language Understanding
 - Nlu
-- NLU
 - rasa_nlu
 
 ## synonym:organisation
@@ -4926,26 +4927,26 @@
 - Rasa
 
 ## synonym:stack
-- Full stack
-- Full Stack
 - fullstack
+- Full Stack
 - full stack
 - full staclk
 - Full
-- full framework
+- Full stack
 - full
+- full framework
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- X
-- RASA X
-- RASAX
-- Rasa X
 - rasa x
-- rasax
+- Rasa X
+- RASA X
 - Rasax
+- rasax
+- RASAX
+- X
 
 ## regex:greet
 - hey[^\s]*

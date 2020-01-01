@@ -283,8 +283,7 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 
-
-# story from linda
+## story from linda
 * greet
     - action_greet_user
 * enter_data
@@ -302,7 +301,6 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-
 
 ## Story from conversation with alan on November 16th 2018
 * nlu_info{"nlu_part":"duckling"}
@@ -328,7 +326,6 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-
 
 ## Story from conversation with linda on November 15th 2018
 * greet
@@ -377,7 +374,6 @@
 * how_to_get_started{"product":"core"}
     - slot{"product":"core"}
     - utter_direct_to_step2
-
 
 ## Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
 * greet
@@ -813,7 +809,6 @@
 * how_to_get_started{"product":"core"}
     - utter_explain_core
     - utter_also_explain_nlu
-
 
 ## Story from conversation with 4a4e903fc43940db9ccdb9153dfdadcb on January 21st 2019
 * get_started_step1
