@@ -4845,7 +4845,7 @@
 - thx
 - yes thanks
 
-## intent:ask_is_programming_required
+## intent:ask_faq_is_programming_required
 - Does rasa require programming knowledge
 - Do I need programming skills to develop a chatbot in rasa
 - do I need programming experience to use rasa

@@ -6,6 +6,7 @@ intents:
 - ask_faq_differencecorenlu
 - ask_faq_differencerasarasax
 - ask_faq_languages
+- ask_faq_is_programming_required
 - ask_faq_opensource
 - ask_faq_ee
 - ask_faq_python_version
@@ -201,6 +202,15 @@ templates:
       contributors 🚀.
   utter_ask_faq_languages:
   - text: You can use Rasa to build assistants in any language you want!
+  utter_ask_faq_is_programming_required:
+  - text: "Rasa is written in python, but programming is not required to develop an assistant. \n
+      To learn how to create an assistant, check out the [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA). \n\n
+      There is one place where programming skills come in handy, and that is with
+      [Custom Actions](https://rasa.com/docs/rasa/core/actions/#custom-actions). \n\n
+      You can create an action server in node.js, .NET, java, or any other language and
+      define your actions there - but we provide a small python SDK to make development there even easier. \n
+      For custom actions written in python see the [Rasa SDK](https://rasa.com/docs/rasa/api/rasa-sdk/#rasa-sdk)
+      which starts this action server for you."
   utter_ask_faq_tutorialnlu:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_ask_faq_opensource:
@@ -774,6 +784,7 @@ actions:
 - utter_ask_faq_differencecorenlu
 - utter_ask_faq_differencerasarasax
 - utter_ask_faq_languages
+- utter_ask_faq_is_programming_required
 - utter_ask_faq_opensource
 - utter_ask_faq_ee
 - utter_ask_faq_python_version

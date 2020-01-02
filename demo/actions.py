@@ -239,6 +239,7 @@ class ActionFaqs(Action):
         if intent in [
             "ask_faq_ee",
             "ask_faq_languages",
+            "ask_faq_is_programming_required",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",
             "ask_faq_opensource",
