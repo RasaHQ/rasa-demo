@@ -203,12 +203,12 @@ templates:
   utter_ask_faq_languages:
   - text: You can use Rasa to build assistants in any language you want!
   utter_ask_faq_is_programming_required:
-  - text: "Rasa is written in python, but programming is not required to develop an assistant. \n
+  - text: "Rasa is written in Python, but programming is not required to develop an assistant. \n
       To learn how to create an assistant, check out the [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA). \n\n
       There is one place where programming skills come in handy, and that is when implementing
       [custom actions](https://rasa.com/docs/rasa/core/actions/#custom-actions). \n\n
-      You can create an action server in node.js, .NET, java, or any other language and
-      define your actions there. For custom actions written in python, we provide a small [python SDK](link) to make development even easier"
+      You can create an action server in Node.js, .NET, Java, or any other language and
+      define your actions there. For custom actions written in Python, we provide a small [Python SDK](link) to make development even easier"
   utter_ask_faq_tutorialnlu:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_ask_faq_opensource:
@@ -292,7 +292,7 @@ templates:
       I can answer you in.
   - text: I am in the process of learning, but at the moment I can only speak English.
   - text: Binary code and the language of love. And English.
-  - text: I was written in python, but for your convenience I'll translate to English.
+  - text: I was written in Python, but for your convenience I'll translate to English.
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:

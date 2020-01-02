@@ -4674,7 +4674,6 @@
 - What is the difference between entities and slots?
 - Where can I get the source code of Rasa?
 - Which  other tools can be used to  create chatbots?
-- Which programming language is rasa written in?
 - an I use Rasa for e-mail applications
 - any open source GUI rasa have?
 - any other tools to create chatbots?
@@ -4726,14 +4725,12 @@
 - what technologies did u use to create more mature chatbot?
 - what's pip
 - where is formal documentation
-- which language is rasa programmed in
 - which technology is used to create you
 - yes what if i have to code open end responses into some categories
 - your specifications
 - best policies to be used
 - Deploy to a Server
 - Hello, Sara. How can I configure etnity extraction for russian lnguage?
-- Is there API for any other programming languages?
 - can I use Rasa with my Raspberry Pi
 - how to setup rasax on slack
 - Can I run Rasa on a raspberry pi ?
@@ -4745,7 +4742,6 @@
 - deploy rasa chat bot in flask
 - How can i automate retraining of my rasa models
 - can i user rasa for my text classification problem?
-- in what programming language is your api
 - i want to integrate my rasa bot to webex  may i know how
 - how to initialize a new project?
 - Does it have a java library
@@ -4887,6 +4883,10 @@
 - what is the your programming language
 - which programming language are you written in?
 - which programming language uses rasa?
+- in what programming language is your api
+- Is there API for any other programming languages?
+- which language is rasa programmed in
+- Which programming language is rasa written in?
 
 ## synonym: duration
 - how long

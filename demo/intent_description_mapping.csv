@@ -6,7 +6,7 @@ ask_faq_community_size,How big is the Rasa community?,
 ask_faq_differencecorenlu,What is the difference between Core and NLU?,
 ask_faq_differencerasarasax,What is the difference between Rasa and Rasa X?
 ask_faq_languages,What languages does Rasa support?,
-ask_faq_is_programming_required,Is programming required or useful in building an assistant?
+ask_faq_is_programming_required,Is programming required?
 ask_faq_opensource,Is Rasa open-source?,
 ask_faq_ee,What is Rasa X Enterprise Edition?,
 ask_faq_python_version,Which Python version is needed?,
