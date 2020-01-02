@@ -205,8 +205,8 @@ templates:
   utter_ask_faq_is_programming_required:
   - text: "Rasa is written in python, but programming is not required to develop an assistant. \n
       To learn how to create an assistant, check out the [Rasa Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA). \n\n
-      There is one place where programming skills come in handy, and that is with
-      [Custom Actions](https://rasa.com/docs/rasa/core/actions/#custom-actions). \n\n
+      There is one place where programming skills come in handy, and that is when implementing
+      [custom actions](https://rasa.com/docs/rasa/core/actions/#custom-actions). \n\n
       You can create an action server in node.js, .NET, java, or any other language and
       define your actions there. For custom actions written in python, we provide a small [python SDK](link) to make development even easier"
   utter_ask_faq_tutorialnlu:
