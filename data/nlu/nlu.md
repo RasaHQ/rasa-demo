@@ -630,6 +630,7 @@
 - which languages does rasa support
 - which languages supports rasa
 - your [NLU](product) understand [spanish](language)?
+- could I program spanish speaking bots?
 
 ## intent:ask_faq_opensource
 - Are you open-source?
@@ -4761,6 +4762,7 @@
 - there are some python incompatibilities
 - how to add dropdowns?
 - replace default nlu with custom component
+- can i programm a vocal assistant
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4843,6 +4845,49 @@
 - thx
 - yes thanks
 
+## intent:ask_is_programming_required
+- Does rasa require programming knowledge
+- Do I need programming skills to develop a chatbot in rasa
+- do I need programming experience to use rasa
+- how to programe rasa
+- Rasa can be programmed in python
+- programming language use
+- what programming languge do i use
+- How do I do the programming?
+- i have never programed before
+- what language do I need to program?
+- do i need to be able to program to use rasa?
+- what programming language do i need?
+- shall i use Nodejs as a programming language
+- Can i use python to program my bot?
+- must i have to be a good programmer to use RasA
+- must i have to be a good programmer
+- you have to be a good programmer
+- what do i need for programming?
+- what programming language is used by rasa
+- which programming language used for RASA.
+- what programming language is rasa written in?
+- what programming languages does Rasa support?
+- which programming languages
+- which programming languages do you support?
+- which programming languages does rasa supports?
+- Do I have to be a programmer to use rasa?
+- what's your programming language
+- what programming language do you recommend
+- programming language
+- what programming language does rasa use
+- But what kind of programming language is the code written in?
+- what programming language?
+- I would like to know about using Java as a programming language with Rasa
+- how i program the bot?
+- which programming language can I use?
+- what programming languages do you support
+- do i need to know how to program to create a bot?
+- what programming knowledge do I need to learn?
+- what is the your programming language
+- which programming language are you written in?
+- which programming language uses rasa?
+
 ## synonym: duration
 - how long
 - durations
@@ -4918,7 +4963,6 @@
 ## synonym:nlu
 - NLU
 - Natural Language Understanding
-- NLU
 - Nlu
 - rasa_nlu
 
@@ -4931,13 +4975,12 @@
 ## synonym:stack
 - fullstack
 - Full Stack
-- full stack
-- full
 - Full
+- full stack
+- full staclk
 - Full stack
 - full
 - full framework
-- full staclk
 
 ## synonym:wit.ai
 - wit
@@ -4945,11 +4988,11 @@
 ## synonym:x
 - rasa x
 - Rasa X
-- RASA X
+- X
 - Rasax
 - rasax
 - RASAX
-- X
+- RASA X
 
 ## regex:greet
 - hey[^\s]*
