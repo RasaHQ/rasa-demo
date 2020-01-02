@@ -396,6 +396,7 @@
 - which messaging channels can be used with rasa?
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
+- what chat services do you support
 
 ## intent:ask_faq_community_size
 - Did you know the size of rasa community?
@@ -832,6 +833,7 @@
 - where can i find some tutorials?
 - where can i get a tutorial on rasa
 - yes, where I can find some hand-on tutorials to use RASA products?
+- I need to study RASA step by step, which is the best site to study?
 
 ## intent:ask_faq_voice
 - Building a rasa voice bot?
@@ -4916,6 +4918,7 @@
 ## synonym:nlu
 - NLU
 - Natural Language Understanding
+- NLU
 - Nlu
 - rasa_nlu
 
@@ -4929,11 +4932,12 @@
 - fullstack
 - Full Stack
 - full stack
-- full staclk
+- full
 - Full
 - Full stack
 - full
 - full framework
+- full staclk
 
 ## synonym:wit.ai
 - wit
