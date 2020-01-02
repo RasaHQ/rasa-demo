@@ -5,7 +5,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-DATE_FORMAT = "%d %B %Y"
+DATE_FORMAT = "%d %B, %Y"
 
 
 class CommunityEvent:
@@ -24,18 +24,16 @@ class CommunityEvent:
 
     @classmethod
     def from_html(cls, html) -> Optional["CommunityEvent"]:
-        link = html.a.get("href")
-
-        event_properties = html.get_text().split(",")
-
-        if len(event_properties) != 3:
-            logger.warning("Error when trying to parse event details from html.")
+        try:
+            city = html.contents[0]
+            link = html.contents[3].get("href")
+            name = html.contents[3].contents[0]
+            date_as_string = html.contents[8]
+            country = get_country_for(city)
+            date = parse_community_date(date_as_string).date()
+        except Exception as e:
+            logger.warning(f"Error when trying to parse event details from html.\n{e}")
             return None
-
-        city, name, date_as_string = html.get_text().split(",")
-        country = get_country_for(city)
-
-        date = parse_community_date(date_as_string).date()
 
         return cls(
             name.strip(),
