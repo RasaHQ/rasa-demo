@@ -114,7 +114,6 @@
     - utter_great
     - utter_anything_else
 
-
 ## newsletter, don't continue, then contact sales
 * greet
     - action_greet_user

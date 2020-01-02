@@ -864,8 +864,6 @@
 * deny
     - utter_direct_to_step2
 
-
-
 ## new to rasa/bots, explain nlu and direct to step2
 * greet
     - action_greet_user

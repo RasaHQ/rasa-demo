@@ -20,7 +20,6 @@
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
 
-
 ## Installation went well
 * install_rasa
     - utter_installation_command
@@ -41,7 +40,6 @@
 * affirm
     - utter_run_rasa_init
     - utter_direct_to_step3
-
 
 ## Problems installing
 * install_rasa
@@ -79,7 +77,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-
 
 ## Problems installing (cut to the chase)
 * get_started_step2
@@ -149,7 +146,6 @@
     - utter_run_rasa_init
     - utter_direct_to_step3
 
-
 ## Problems installing (but FAQ + cut to the chase)
 * get_started_step2
     - action_greet_user
@@ -182,7 +178,6 @@
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-
 
 ## Just don't want to continue
 * install_rasa

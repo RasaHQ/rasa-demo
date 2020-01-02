@@ -70,7 +70,6 @@
     - action_deactivate_form
     - form{"name": null}
 
-
 ## just sales, explain, continue
 * greet
     - action_greet_user
@@ -85,7 +84,6 @@
     - utter_great
     - sales_form
     - form{"name": null}
-
 
 ## just sales, explain, stop
 * greet
