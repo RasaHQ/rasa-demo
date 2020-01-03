@@ -4,12 +4,13 @@
 ## :surfer: Introduction
 The purpose of this repo is to showcase a contextual AI assistant built with the open source Rasa framework.
 
-Sara is an alpha version and lives in our docs (temporarily she's unavailable on the docs due to maintenance), 
+Sara is an alpha version and lives in our docs, 
 helping developers getting started with our open source tools. It supports the following user goals:
 
 - Understanding the Rasa framework
 - Getting started with Rasa
 - Answering some FAQs around Rasa
+- Directing technical questions to specific documentation
 - Subscribing to the Rasa newsletter
 - Requesting a call with Rasa's sales team
 - Handling basic chitchat
@@ -55,8 +56,17 @@ Note that `--debug` mode will produce a lot of output meant to help you understa
 under the hood. To simply talk to the bot, you can remove this flag.
 
 If you would like to run Sara on your website, follow the instructions
-[here](https://github.com/mrbot-ai/rasa-webchat) to place the chat widget on
+[here](https://github.com/botfront/rasa-webchat) to place the chat widget on
 your website.
+
+## To test Sara:
+
+After doing a `rasa train`, run the command:
+
+```bash
+rasa test nlu -u test/test_data.json --model models
+rasa test core --stories test/test_stories.md
+```
 
 ## 👩‍💻 Overview of the files
 

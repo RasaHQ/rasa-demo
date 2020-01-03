@@ -1,16 +1,24 @@
 # -*- coding: utf-8 -*-
 import logging
 from datetime import datetime
-from typing import Text, Dict, Any, List
+from typing import Any, Dict, List, Text, Union, Optional
 import json
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused
-
+from rasa_sdk.events import (
+    SlotSet,
+    UserUtteranceReverted,
+    ConversationPaused,
+    EventType,
+)
 from demo.api import MailChimpAPI
+from demo.algolia import AlgoliaAPI
+from demo.discourse import DiscourseAPI
 from demo import config
+from demo.api import MailChimpAPI
+from demo.community_events import CommunityEvent
 from demo.gdrive_service import GDriveService
 
 logger = logging.getLogger(__name__)
@@ -19,14 +27,14 @@ logger = logging.getLogger(__name__)
 class SubscribeNewsletterForm(FormAction):
     """Asks for the user's email, call the newsletter API and sign up user"""
 
-    def name(self):
+    def name(self) -> Text:
         return "subscribe_newsletter_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker) -> List[Text]:
         return ["email"]
 
-    def slot_mappings(self):
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {
             "email": [
                 self.from_entity(entity="email"),
@@ -36,7 +44,6 @@ class SubscribeNewsletterForm(FormAction):
 
     def validate_email(self, value, dispatcher, tracker, domain):
         """Check to see if an email entity was actually picked up by duckling."""
-
         if any(tracker.get_latest_entity_values("email")):
             # entity was picked up, validate slot
             return {"email": value}
@@ -50,7 +57,7 @@ class SubscribeNewsletterForm(FormAction):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List[Dict]:
+    ) -> List[EventType]:
         """Once we have an email, attempt to add it to the database"""
 
         email = tracker.get_slot("email")
@@ -69,11 +76,11 @@ class SubscribeNewsletterForm(FormAction):
 class SalesForm(FormAction):
     """Collects sales information and adds it to the spreadsheet"""
 
-    def name(self):
+    def name(self) -> Text:
         return "sales_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker) -> List[Text]:
         return [
             "job_function",
             "use_case",
@@ -83,8 +90,7 @@ class SalesForm(FormAction):
             "business_email",
         ]
 
-    def slot_mappings(self):
-        # type: () -> Dict[Text: Union[Dict, List[Dict]]]
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         """A dictionary to map required slots to
             - an extracted entity
             - intent: value pairs
@@ -116,7 +122,9 @@ class SalesForm(FormAction):
             ],
         }
 
-    def validate_business_email(self, value, dispatcher, tracker, domain):
+    def validate_business_email(
+        self, value, dispatcher, tracker, domain
+    ) -> Dict[Text, Any]:
         """Check to see if an email entity was actually picked up by duckling."""
 
         if any(tracker.get_latest_entity_values("email")):
@@ -132,7 +140,7 @@ class SalesForm(FormAction):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List[Dict]:
+    ) -> List[EventType]:
         """Once we have all the information, attempt to add it to the
         Google Drive database"""
 
@@ -165,10 +173,10 @@ class SalesForm(FormAction):
 class ActionExplainSalesForm(Action):
     """Returns the explanation for the sales form questions"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_explain_sales_form"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         requested_slot = tracker.get_slot("requested_slot")
 
         if requested_slot not in SalesForm.required_slots(tracker):
@@ -185,10 +193,10 @@ class ActionExplainSalesForm(Action):
 class ActionChitchat(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_chitchat"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
 
         # retrieve the correct chitchat utterance dependent on the intent
@@ -219,10 +227,10 @@ class ActionChitchat(Action):
 class ActionFaqs(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_faqs"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
 
         logger.debug("Detected FAQ intent: {}".format(intent))
@@ -231,6 +239,7 @@ class ActionFaqs(Action):
         if intent in [
             "ask_faq_ee",
             "ask_faq_languages",
+            "ask_faq_is_programming_required",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",
             "ask_faq_opensource",
@@ -238,6 +247,7 @@ class ActionFaqs(Action):
             "ask_faq_slots",
             "ask_faq_channels",
             "ask_faq_differencecorenlu",
+            "ask_faq_differencerasarasax",
             "ask_faq_python_version",
             "ask_faq_community_size",
             "ask_faq_what_is_forum",
@@ -252,20 +262,20 @@ class ActionFaqs(Action):
 class ActionPause(Action):
     """Pause the conversation"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_pause"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         return [ConversationPaused()]
 
 
 class ActionStoreUnknownProduct(Action):
     """Stores unknown tools people are migrating from in a slot"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_unknown_product"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         # if we dont know the product the user is migrating from,
         # store his last message in a slot.
         return [SlotSet("unknown_product", tracker.latest_message.get("text"))]
@@ -276,10 +286,10 @@ class ActionStoreUnknownNluPart(Action):
        in slot.
     """
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_unknown_nlu_part"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         # if we dont know the part of nlu the user wants information on,
         # store his last message in a slot.
         return [SlotSet("unknown_nlu_part", tracker.latest_message.get("text"))]
@@ -288,10 +298,10 @@ class ActionStoreUnknownNluPart(Action):
 class ActionStoreBotLanguage(Action):
     """Takes the bot language and checks what pipelines can be used"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_bot_language"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         spacy_languages = [
             "english",
             "french",
@@ -320,10 +330,10 @@ class ActionStoreEntityExtractor(Action):
         what pipelines can be used.
     """
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_entity_extractor"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         spacy_entities = ["place", "date", "name", "organisation"]
         duckling = [
             "money",
@@ -350,10 +360,10 @@ class ActionSetOnboarding(Action):
     """Sets the slot 'onboarding' to true/false dependent on whether the user
     has built a bot with rasa before"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_set_onboarding"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         user_type = next(tracker.get_latest_entity_values("user_type"), None)
         is_new_user = intent == "how_to_get_started" and user_type == "new"
@@ -367,17 +377,17 @@ class ActionSetOnboarding(Action):
 class SuggestionForm(FormAction):
     """Accept free text input from the user for suggestions"""
 
-    def name(self):
+    def name(self) -> Text:
         return "suggestion_form"
 
     @staticmethod
-    def required_slots(tracker):
+    def required_slots(tracker) -> List[Text]:
         return ["suggestion"]
 
-    def slot_mappings(self):
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
         return {"suggestion": self.from_text()}
 
-    def submit(self, dispatcher, tracker, domain):
+    def submit(self, dispatcher, tracker, domain) -> List[EventType]:
         dispatcher.utter_template("utter_thank_suggestion", tracker)
         return []
 
@@ -385,10 +395,10 @@ class SuggestionForm(FormAction):
 class ActionStoreProblemDescription(Action):
     """Stores the problem description in a slot."""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_store_problem_description"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         problem = tracker.latest_message.get("text")
 
         return [SlotSet("problem_description", problem)]
@@ -397,10 +407,10 @@ class ActionStoreProblemDescription(Action):
 class ActionGreetUser(Action):
     """Greets the user with/without privacy policy"""
 
-    def name(self):
+    def name(self) -> Text:
         return "action_greet_user"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
@@ -447,7 +457,7 @@ class ActionDefaultAskAffirmation(Action):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List["Event"]:
+    ) -> List[EventType]:
 
         intent_ranking = tracker.latest_message.get("intent_ranking", [])
         if len(intent_ranking) > 1:
@@ -516,7 +526,7 @@ class ActionDefaultFallback(Action):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List["Event"]:
+    ) -> List[EventType]:
 
         # Fallback caused by TwoStageFallbackPolicy
         if (
@@ -537,7 +547,7 @@ class ActionDefaultFallback(Action):
 class CommunityEventAction(Action):
     """Utters Rasa community events."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.last_event_update = None
         self.events = None
         self.events = self._get_events()
@@ -545,7 +555,7 @@ class CommunityEventAction(Action):
     def name(self) -> Text:
         return "action_get_community_events"
 
-    def _get_events(self) -> List["CommunityEvent"]:
+    def _get_events(self) -> List[CommunityEvent]:
         if self.events is None or self._are_events_expired():
             from demo.community_events import get_community_events
 
@@ -567,7 +577,7 @@ class CommunityEventAction(Action):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List["Event"]:
+    ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         events = self._get_events()
 
@@ -620,10 +630,10 @@ class CommunityEventAction(Action):
 
 
 class ActionNextStep(Action):
-    def name(self):
+    def name(self) -> Text:
         return "action_next_step"
 
-    def run(self, dispatcher, tracker, domain):
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         step = int(tracker.get_slot("step")) + 1
 
         if step in [2, 3, 4]:
@@ -631,4 +641,70 @@ class ActionNextStep(Action):
         else:
             dispatcher.utter_template("utter_no_more_steps", tracker)
 
+        return []
+
+
+def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
+    skipped = 0
+    for e in reversed(tracker.events):
+        if e.get("event") == event_type:
+            skipped += 1
+            if skipped > skip:
+                return e
+    return None
+
+
+class ActionDocsSearch(Action):
+    def name(self):
+        return "action_docs_search"
+
+    def run(self, dispatcher, tracker, domain):
+        search_text = tracker.latest_message.get("text")
+        # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
+        if search_text == "/technical_question{}":
+            last_user_event = get_last_event_for(tracker, "user", skip=2)
+            if last_user_event:
+                search_text = last_user_event.get("text")
+
+        # Search of docs pages
+        algolia = AlgoliaAPI(
+            config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
+        )
+        alg_res = algolia.search(search_text)
+
+        doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+        doc_list += (
+            "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
+            if len(alg_res.get("hits")) > 1
+            else ""
+        )
+
+        dispatcher.utter_message(
+            "I can't answer your question directly, but I found the following from the docs:\n"
+            + doc_list
+        )
+
+        return []
+
+
+class ActionForumSearch(Action):
+    def name(self):
+        return "action_forum_search"
+
+    def run(self, dispatcher, tracker, domain):
+        search_text = tracker.latest_message.get("text")
+        # If we're in a TwoStageFallback we need to look back two more user utterance to get the actual text
+        if search_text == "/technical_question{}" or search_text == "/deny":
+            last_user_event = get_last_event_for(tracker, "user", skip=3)
+            search_text = last_user_event.get("text")
+
+        # Search forum
+        discourse = DiscourseAPI("https://forum.rasa.com/search")
+        doc_list = discourse.query(search_text)
+        doc_list = doc_list.json()
+
+        forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
+        forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
+
+        dispatcher.utter_message("I found the following from our forum:\n" + forum)
         return []

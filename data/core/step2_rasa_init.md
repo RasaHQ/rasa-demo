@@ -20,7 +20,6 @@
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
 
-
 ## Installation went well
 * install_rasa
     - utter_installation_command
@@ -41,7 +40,6 @@
 * affirm
     - utter_run_rasa_init
     - utter_direct_to_step3
-
 
 ## Problems installing
 * install_rasa
@@ -80,7 +78,6 @@
     - utter_run_rasa_init
     - utter_direct_to_step3
 
-
 ## Problems installing (cut to the chase)
 * get_started_step2
     - action_greet_user
@@ -112,7 +109,6 @@
     - utter_run_rasa_init
     - utter_direct_to_step3
 
-
 ## Problems installing (but FAQ)
 * install_rasa
     - utter_installation_command
@@ -122,7 +118,7 @@
     - utter_ask_if_problem
 * affirm
     - utter_ask_describe_problem
-* ask_faq_ee OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
+* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
     - action_store_problem_description
     - utter_installation_instructions
@@ -142,14 +138,13 @@
     - utter_ask_if_problem
 * affirm
     - utter_ask_describe_problem
-* ask_faq_ee OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
+* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-
 
 ## Problems installing (but FAQ + cut to the chase)
 * get_started_step2
@@ -161,7 +156,7 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* ask_faq_ee OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
+* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
     - action_store_problem_description
     - utter_installation_instructions
@@ -176,14 +171,13 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* ask_faq_ee OR ask_faq_languages OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
+* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
     - utter_run_rasa_init
     - utter_direct_to_step3
-
 
 ## Just don't want to continue
 * install_rasa

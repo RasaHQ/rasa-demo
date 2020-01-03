@@ -4,8 +4,7 @@ docker-compose.override.yml
 .DS_Store
 *.pyc
 *.log
-models/nlu
-models/dialogue
+models
 *.egg-info
 docker-compose.yml
 failed_stories.txt
@@ -14,3 +13,11 @@ story_confmat.pdf
 demo/index.html
 credentials.yml
 .idea
+test_train_split
+results
+.history
+rasa.*
+events.*
+terms
+docker-local
+.pytype/
