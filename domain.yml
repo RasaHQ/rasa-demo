@@ -600,7 +600,7 @@ templates:
   - text: Hmm, I'm not sure that's a valid email, please make sure to include the
       full address 😅
   utter_no_event_for_location_but_next:
-  - text: Sorry, there are currently no events at your location. However, the next
+  - text: Sorry, there are currently no events in {location}. However, the next
       event is the {event_name} in {event_location} on {event_date}.
   utter_no_guide_for_switch:
   - text: Sorry, but we don't have a migration guide for that tool yet. You can still

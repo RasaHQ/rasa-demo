@@ -81,12 +81,10 @@ def get_community_events() -> List[CommunityEvent]:
 
         events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
         # [1].find("ul").find_all("li")
-        print(events)
         events = [CommunityEvent.from_html(e) for e in events]
 
         now = datetime.date.today()
         events = [e for e in events if e is not None and e.date >= now]
-        print(events)
         return sorted(events, key=lambda e: e.date)
 
     return []

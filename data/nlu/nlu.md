@@ -1805,6 +1805,15 @@
 - when will our next group event be?
 - when will the community event take place?
 - when will the next community event be?
+- will there be an event in my city?
+- When is the next event in [Detroit](location)?
+- What is the next event in [Paris](location)?
+- When is the next event in [detroit](location)?
+- What is the next event in [paris](location)?
+- When is the next event for [Detroit](location)?
+- What is the next event for [Paris](location)?
+- When is the next event for [detroit](location)?
+- What is the next event for [paris](location)?
 
 ## intent:ask_wherefrom
 - Are you from around here?
@@ -1903,7 +1912,18 @@
 - what kind of events will be held?
 - what sort of social events are we throwing?
 - where can I see a calendar of community events?
-- will there be an event in my city?
+- What are the events in [Detroit](location)?
+- When are the events in [Paris](location)?
+- what are the events in [Berlin](location)?
+- What are the events in [detroit](location)?
+- When are the events in [paris](location)?
+- what are the events in [berlin](location)?
+- What are the events for [Detroit](location)?
+- When are the events for [Paris](location)?
+- what are the events for [Berlin](location)?
+- What are the events for [detroit](location)?
+- When are the events for [paris](location)?
+- what are the events for [berlin](location)?
 
 ## intent:ask_whoami
 - Can you tell me who I am?

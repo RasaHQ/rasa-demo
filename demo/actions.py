@@ -578,50 +578,89 @@ class CommunityEventAction(Action):
         domain: Dict[Text, Any],
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
+        location = next(tracker.get_latest_entity_values("location"), None)
+
         events = self._get_events()
+        events_for_location = None
+        if location:
+            events_for_location = [
+                e
+                for e in events
+                if e.city.lower() == location.lower()
+                or e.country.lower() == location.lower()
+            ]
 
         if not events:
             dispatcher.utter_template("utter_no_community_event", tracker)
         elif intent == "ask_which_events":
-            self._utter_event_overview(dispatcher)
+            self._utter_event_overview(
+                tracker, dispatcher, events, events_for_location, location
+            )
         elif intent == "ask_when_next_event":
-            self._utter_next_event(tracker, dispatcher)
+            self._utter_next_event(
+                tracker, dispatcher, events, events_for_location, location
+            )
 
         return []
 
-    def _utter_event_overview(self, dispatcher: CollectingDispatcher) -> None:
-        events = self._get_events()
+    def _utter_event_overview(
+        self,
+        tracker: Tracker,
+        dispatcher: CollectingDispatcher,
+        events: List,
+        events_for_location: List,
+        location: Text,
+    ) -> None:
+
+        if not events:
+            return
+
+        if location:
+            if not events_for_location:
+                header = (
+                    f"Sorry, there are currently no events in {location}. \n\n"
+                    "However, here are the next Rasa events:"
+                )
+            else:
+                events = events_for_location
+                header = f"Here are the next Rasa events in {location}:"
+        else:
+            header = "Here are the next Rasa events:"
+
         event_items = ["- {} in {}".format(e.name_as_link(), e.city) for e in events]
         locations = "\n".join(event_items)
         dispatcher.utter_message(
-            "Here are the next Rasa events:\n\n"
-            + locations
-            + "\n\nWe hope to see you at them!"
+            f"{header} \n\n {locations} \n\n We hope to see you at them!"
         )
 
     def _utter_next_event(
-        self, tracker: Tracker, dispatcher: CollectingDispatcher
+        self,
+        tracker: Tracker,
+        dispatcher: CollectingDispatcher,
+        events: List,
+        events_for_location: List,
+        location: Text,
     ) -> None:
-        location = next(tracker.get_latest_entity_values("location"), None)
-        events = self._get_events()
+
+        if not events:
+            return
 
         if location:
-            events_for_location = [
-                e for e in events if e.city == location or e.country == location
-            ]
-            if not events_for_location and events:
+            if not events_for_location:
                 next_event = events[0]
+                next_event_kwargs = next_event.as_kwargs()
+                next_event_kwargs["location"] = location
                 dispatcher.utter_template(
                     "utter_no_event_for_location_but_next",
                     tracker,
-                    **next_event.as_kwargs(),
+                    **next_event_kwargs,
                 )
-            elif events_for_location:
+            else:
                 next_event = events_for_location[0]
                 dispatcher.utter_template(
                     "utter_next_event_for_location", tracker, **next_event.as_kwargs()
                 )
-        elif events:
+        else:
             next_event = events[0]
             dispatcher.utter_template(
                 "utter_next_event", tracker, **next_event.as_kwargs()
