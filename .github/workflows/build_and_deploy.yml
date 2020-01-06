@@ -88,14 +88,6 @@ jobs:
     needs: [build_id]
     steps:
     - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
     - name: Login to gcloud registry
       id: gcloud
       uses: elgohr/gcloud-login-action@master
