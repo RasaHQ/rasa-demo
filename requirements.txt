@@ -1,2 +1,3 @@
 rasa==1.6.0
 -r demo/requirements.txt
+pytablewriter
