@@ -99,9 +99,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements-dev.txt
      - name: Setup Google Cloud
-        uses: actions/gcloud/auth@master
-        env:
-          GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
+       uses: actions/gcloud/auth@master
+       env:
+        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
     - name: Pull Latest Image
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
