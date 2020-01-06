@@ -19,6 +19,7 @@ pipeline:
   - number
   - amount-of-money
 - name: EntitySynonymMapper
+- name: ResponseSelector
 policies:
 - name: EmbeddingPolicy
   max_history: 10

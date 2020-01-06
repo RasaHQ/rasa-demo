@@ -1,6 +1,6 @@
 ## out of scope
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
 
 ## say enter data outside the flows
@@ -26,7 +26,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -46,7 +46,7 @@
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_newsletter
 * affirm
     - utter_great
@@ -66,7 +66,7 @@
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_newsletter
 * deny
     - utter_thumbsup
@@ -81,7 +81,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
@@ -97,7 +97,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
@@ -110,7 +110,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -127,7 +127,7 @@
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_newsletter
 * affirm
     - utter_great
@@ -144,7 +144,7 @@
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_newsletter
 * deny
     - utter_thumbsup
@@ -156,7 +156,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * contact_sales
     - utter_moreinformation
     - sales_form
@@ -172,7 +172,7 @@
     - sales_form
     - form{"name": "sales_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_sales
 * affirm
     - utter_great
@@ -187,7 +187,7 @@
     - sales_form
     - form{"name": "sales_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_sales
 * deny
     - utter_thumbsup

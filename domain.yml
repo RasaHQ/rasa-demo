@@ -631,12 +631,6 @@ templates:
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
-  utter_out_of_scope:
-  - text: I can't help you with that, I'm sorry.
-  - text: Sorry, I can’t deal with that request.
-  - text: I'm sorry, I can''t handle that request.
-  - text: Even a Rasa bot is not completely perfect - it seems like I can't handle
-      that request.
   utter_possibilities:
   - text: "You can ask me about:\n- how to get started with Rasa\n- the components\
       \ of Rasa,\n- booking a sales call\n- subscribing to our newsletter\n"
@@ -900,7 +894,6 @@ actions:
 - utter_not_sure
 - utter_noworries
 - utter_offer_recommendation
-- utter_out_of_scope
 - utter_possibilities
 - utter_possibilities_to_contribute
 - utter_quickstart_nlu_only
@@ -931,6 +924,7 @@ actions:
 - utter_what_help
 - utter_what_language
 - utter_x_tutorial
+- respond_out_of_scope
 forms:
 - sales_form
 - subscribe_newsletter_form

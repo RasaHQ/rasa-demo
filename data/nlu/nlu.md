@@ -3954,7 +3954,20 @@
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
 
-## intent:out_of_scope
+## intent:out_of_scope/non_english
+- de donde eres
+- de que lugar eres?
+- epdi iruka
+- eres humana
+- kalhmera sara ti kaneis
+- kannst du auch deutsch?
+- kannst du dies auch auf deutsch?
+- oui je besoine de l'aide
+- que puedes hacer?
+- tu parles francais?
+- tudo bom
+
+## intent:out_of_scope/other
 - 4 + 2 = ?
 - After registration I see that I have an available balance of 0.00000000. What does this balance represent?
 - Are you ready?
@@ -4073,8 +4086,6 @@
 - connect to alexa
 - cr
 - custom service
-- de donde eres
-- de que lugar eres?
 - did i break you
 - dinner
 - do you believe in god?
@@ -4089,8 +4100,6 @@
 - do you want to marry me?
 - docs
 - doctor
-- epdi iruka
-- eres humana
 - everything
 - example of a chatbot
 - genocide
@@ -4164,9 +4173,6 @@
 - isn't the newsletter just spam?
 - it's a pity
 - i´m hungry
-- kalhmera sara ti kaneis
-- kannst du auch deutsch?
-- kannst du dies auch auf deutsch?
 - license
 - ljljl
 - lunch
@@ -4186,14 +4192,12 @@
 - only that?
 - order good
 - order pizza
-- oui je besoine de l'aide
 - personal or work?
 - pizza
 - please help with my ice cream it's dripping
 - please hjave lunchj
 - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
 - please play music
-- que puedes hacer?
 - rasa topics
 - really? you're so touchy?
 - refresh
@@ -4215,8 +4219,6 @@
 - that link doesn't work!
 - the one that is better than you
 - tricked  ya
-- tu parles francais?
-- tudo bom
 - turn off my stove
 - umm
 - wait a bit i am still reading
