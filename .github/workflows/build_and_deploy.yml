@@ -9,5 +9,6 @@ jobs:
 
     steps:
     - name: Code Formatting Tests
+      working-directory: ./
       run: |
         make lint
