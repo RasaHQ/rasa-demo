@@ -85,7 +85,7 @@ jobs:
   build-images:
     name: Build and Push Images
     runs-on: ubuntu-latest
-    needs: [lint-testing, type-testing, build_id]
+    needs: [lint-testing, type-testing, build_id, training-testing]
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
@@ -107,6 +107,7 @@ jobs:
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:v$build_id -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Push Image
+      uses: actions/gcloud/cli@master
       run: |
         docker push gcr.io/replicated-test/rasa-demo:v$build_id
         docker push gcr.io/replicated-test/rasa-demo:latest
