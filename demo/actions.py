@@ -583,6 +583,7 @@ class CommunityEventAction(Action):
         events = self._get_events()
         events_for_location = None
         if location:
+            location = location.title()
             events_for_location = [
                 e
                 for e in events
@@ -603,8 +604,8 @@ class CommunityEventAction(Action):
 
         return []
 
+    @staticmethod
     def _utter_event_overview(
-        self,
         tracker: Tracker,
         dispatcher: CollectingDispatcher,
         events: List,
@@ -633,8 +634,8 @@ class CommunityEventAction(Action):
             f"{header} \n\n {locations} \n\n We hope to see you at them!"
         )
 
+    @staticmethod
     def _utter_next_event(
-        self,
         tracker: Tracker,
         dispatcher: CollectingDispatcher,
         events: List,
