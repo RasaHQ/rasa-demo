@@ -107,10 +107,11 @@ jobs:
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:v$build_id -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Push Image
-      uses: actions/gcloud/cli@master
-      run: |
-        docker push gcr.io/replicated-test/rasa-demo:v$build_id
-        docker push gcr.io/replicated-test/rasa-demo:latest
+      uses: actions/gcloud/auth@master
+      with:
+        args:
+          docker push gcr.io/replicated-test/rasa-demo:v$build_id
+          docker push gcr.io/replicated-test/rasa-demo:latest
     - name: Get Build Id
       run: |
         echo $build_id
