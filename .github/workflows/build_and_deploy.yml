@@ -33,7 +33,6 @@ jobs:
     - name: Build and Push Action Image
       working-directory: ${{ github.workspace }}
       run: |
-        openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv
-        -in travis_gcloud_auth.json.enc -out travis_gcloud_auth.json -d
+        openssl aes-256-cbc -K $encrypted_8857e34a5e52_key -iv $encrypted_8857e34a5e52_iv -in travis_gcloud_auth.json.enc -out travis_gcloud_auth.json -d
         docker login -u _json_key -p "$(cat travis_gcloud_auth.json)" https://gcr.io
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
