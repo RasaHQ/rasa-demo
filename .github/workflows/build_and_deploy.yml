@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
     - name: Code Formatting Tests
-      working-directory: ./
+      working-directory: ${{ github.workspace }}
       run: |
         make lint
