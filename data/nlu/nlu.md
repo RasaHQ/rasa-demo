@@ -1142,8 +1142,6 @@
 - are you having a good day
 - are you ok
 - are you okay
-- come stai?
-- como estas
 - h r u ?
 - hello, how are you?
 - hey how are you?
@@ -1999,13 +1997,11 @@
 - Who are you
 - Who are you?
 - You are Human ?
-- como te llamas
 - hey what is your name
 - hi! what's your name?
 - ok who are you ?
 - tell me something about you
 - u are?
-- wer bist Du?
 - what are you called?
 - what is sara?
 - what is your job?
@@ -3373,7 +3369,6 @@
 ## intent:how_to_get_started
 - can you help me to build a bot
 - can you tell me how to build a bot?
-- como inicio en rasa
 - About [Core](product)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
@@ -3955,6 +3950,11 @@
 - where to train [intents](nlu_part) in rasa?
 
 ## intent:out_of_scope/non_english
+- como te llamas
+- wer bist Du?
+- como inicio en rasa
+- come stai?
+- como estas
 - de donde eres
 - de que lugar eres?
 - epdi iruka
