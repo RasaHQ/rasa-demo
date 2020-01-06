@@ -3968,6 +3968,7 @@
 - tudo bom
 
 ## intent:out_of_scope/other
+- I am asking you an out of scope question
 - 4 + 2 = ?
 - After registration I see that I have an available balance of 0.00000000. What does this balance represent?
 - Are you ready?

@@ -497,7 +497,15 @@ class ActionDefaultAskAffirmation(Action):
                 }
             )
 
-        buttons.append({"title": "Something else", "payload": "/out_of_scope"})
+        # /out_of_scope is a retrieval intent
+        # you cannot send rasa the '/out_of_scope' intent
+        # instead, you can send one of the sentences that it will map onto the response
+        buttons.append(
+            {
+                "title": "Something else",
+                "payload": "I am asking you an out of scope question",
+            }
+        )
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
 

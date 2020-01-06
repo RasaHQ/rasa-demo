@@ -57,7 +57,7 @@ intents:
 - nicetomeeyou
 - nlu_generation_tool_recommendation
 - nlu_info
-- out_of_scope
+- out_of_scope: {triggers: respond_out_of_scope}
 - pipeline_recommendation
 - rasa_cost
 - react_negative
