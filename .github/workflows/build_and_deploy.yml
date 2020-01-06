@@ -1,0 +1,13 @@
+  
+name: Build and Deploy
+on: [pull_request]
+
+jobs:
+  build-images:
+    name: Build and Push Images
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Code Formatting Tests
+      run: |
+        make lint
