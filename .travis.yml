@@ -20,6 +20,10 @@ jobs:
     script:
     - make types
   - stage: test
+    name: "Rasa Train"
+    script:
+    - rasa train
+  - stage: test
     name: "Test Training Stories"
     script:
       - rasa train core --config augmentedmemo-only.yml --augmentation 0 --quiet
