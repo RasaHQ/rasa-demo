@@ -3,65 +3,9 @@ name: Build and Deploy
 on: [push]
 
 jobs:
-  lint-testing:
-    name: Code Formatting Tests
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-    - name: Code Formatting Tests
-      working-directory: ${{ github.workspace }}
-      run: |
-        make lint
-  type-testing:
-    name: Type Tests
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-    - name: Type Checking
-      working-directory: ${{ github.workspace }}
-      run: |
-        make types
-  training-testing:
-    name: Training Stories
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-    - name: Train Model
-      working-directory: ${{ github.workspace }}
-      run: |
-        rasa train
-    - name: Test Training Stories
-      working-directory: ${{ github.workspace }}
-      run: |
-        rasa test --stories test_stories/stories.md --fail-on-prediction-errors
-  # build-images:
-  #   name: Build and Push Images
+  # lint-testing:
+  #   name: Code Formatting Tests
   #   runs-on: ubuntu-latest
-  #   needs: [lint-testing, type-testing]
   #   steps:
   #   - uses: actions/checkout@v1
   #   - name: Set up Python 3.7
@@ -72,10 +16,70 @@ jobs:
   #     run: |
   #       python -m pip install --upgrade pip
   #       pip install -r requirements-dev.txt
-  #   - name: Build and Push Action Image
+  #   - name: Code Formatting Tests
   #     working-directory: ${{ github.workspace }}
-  #     env:
-  #       gcr_docker_auth: ${{ secrets.gcr_docker_auth}}
   #     run: |
-  #       docker login -u _json_key -p "$(cat gcr_docker_auth.json)" https://gcr.io
-  #       docker pull gcr.io/replicated-test/rasa-demo:latest || true
+  #       make lint
+  # type-testing:
+  #   name: Type Tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Set up Python 3.7
+  #     uses: actions/setup-python@v1
+  #     with:
+  #       python-version: 3.7
+  #   - name: Install dependencies
+  #     run: |
+  #       python -m pip install --upgrade pip
+  #       pip install -r requirements-dev.txt
+  #   - name: Type Checking
+  #     working-directory: ${{ github.workspace }}
+  #     run: |
+  #       make types
+  # training-testing:
+  #   name: Testing Stories
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Set up Python 3.7
+  #     uses: actions/setup-python@v1
+  #     with:
+  #       python-version: 3.7
+  #   - name: Install dependencies
+  #     run: |
+  #       python -m pip install --upgrade pip
+  #       pip install -r requirements-dev.txt
+  #   - name: Train Model
+  #     working-directory: ${{ github.workspace }}
+  #     run: |
+  #       rasa train
+  #   - name: Test Training Stories
+  #     working-directory: ${{ github.workspace }}
+  #     run: |
+  #       rasa test --stories test_stories/stories.md --fail-on-prediction-errors
+  #   - name: Cross-validate NLU model
+  #     run: |
+  #       rasa test nlu -f 5 --cross-validation
+  #       python format_results.py 
+  build-images:
+    name: Build and Push Images
+    runs-on: ubuntu-latest
+    needs: [lint-testing, type-testing]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt
+    - name: Build and Push Action Image
+      working-directory: ${{ github.workspace }}
+      env:
+        GCR_DOCKER_AUTH: ${{ secrets.gcr_docker_auth}}
+      run: |
+        docker login -u _json_key -p "$(cat $GCR_DOCKER_AUTH.json)" https://gcr.io
+        docker pull gcr.io/replicated-test/rasa-demo:latest || true
