@@ -86,5 +86,5 @@ jobs:
         name: replicated-test/rasa-demo:latest
         username: ${{ steps.gcloud.outputs.username }}
         password: ${{ steps.gcloud.outputs.password }}
-        run: |
-          docker pull gcr.io/replicated-test/rasa-demo:latest || true
+      run: |
+        docker pull gcr.io/replicated-test/rasa-demo:latest || true
