@@ -78,8 +78,8 @@ jobs:
         pip install -r requirements-dev.txt
     - name: Build and Push Action Image
       working-directory: ${{ github.workspace }}
+      uses: benjlevesque/actions-docker-gcr/push@master
       env:
-        GCR_DOCKER_AUTH: ${{ secrets.gcr_docker_auth}}
+        GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
       run: |
-        docker login -u _json_key -p $GCR_DOCKER_AUTH https://gcr.io
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
