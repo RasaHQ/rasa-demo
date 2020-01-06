@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build-images:
     name: Build and Push Images
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     container: python:3.7-slim
     steps:
     - uses: actions/checkout@v1
