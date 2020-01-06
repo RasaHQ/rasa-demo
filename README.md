@@ -98,3 +98,4 @@ black .
 Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies
 GmbH. [Copy of the license](https://github.com/RasaHQ/rasa-demo/blob/master/LICENSE).
 Licensees may convey the work under this license. There is no warranty for the work.
+
