@@ -21,3 +21,8 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make lint
+    - name: Type Checking
+      working-directory: ${{ github.workspace }}
+      run: |
+        make types
+    
