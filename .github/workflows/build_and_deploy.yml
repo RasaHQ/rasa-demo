@@ -25,4 +25,8 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
-    
+    - name: Test Training Stories
+      working-directory: ${{ github.workspace }}
+      run: |
+        rasa train core --config augmentedmemo-only.yml --augmentation 0 --quiet
+        rasa test core --fail-on-prediction-errors --quiet
