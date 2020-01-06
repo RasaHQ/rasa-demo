@@ -1218,8 +1218,6 @@
 - whats new
 - whatsapp
 - yow are you
-- ¿Qué pasa?
-- ça va ?
 
 ## intent:ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -2058,6 +2056,7 @@
 - whom i talking to
 - yes but who are you in your heart
 - may i know your name
+- what is rasa mascot
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2122,7 +2121,6 @@
 - then bye
 - tlak to you later
 - toodle-oo
-- tschüssikowski
 
 ## intent:canthelp
 - I think you cant help me
@@ -3116,8 +3114,8 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
-- botonic
-- wordpress
+- [botonic](company)
+- [wordpress](company)
 - slack
 - e commerce bot
 
@@ -3464,7 +3462,6 @@
 - What are the components of rasa?
 - What are the prerequisites for installing RASA
 - What do I Need for Rasa implementation?
-- Wie fange ich mit Rasa an?
 - Yeah please help me out
 - Yes I am [new](user_type)
 - Yes, I want to know more about [NLU](product)
@@ -3512,7 +3509,6 @@
 - help with rasa
 - hi can you help e build a chatbot
 - hi, can you help in understanding NLU
-- hilf mir beim start
 - how about [nlu](product)
 - how about building chatbot
 - how can I build a chatbot
@@ -3969,6 +3965,11 @@
 - where to train [intents](nlu_part) in rasa?
 
 ## intent:out_of_scope/non_english
+- Wie fange ich mit Rasa an?
+- hilf mir beim start
+- tschüssikowski
+- ¿Qué pasa?
+- ça va ?
 - como te llamas
 - wer bist Du?
 - como inicio en rasa
@@ -4152,7 +4153,6 @@
 - how many lines of codes
 - how much is 10 + 89 ?
 - how much is 10 + 89
-- how to extract relationship
 - how to get rasa studio
 - how to go to newyork ?
 - i am hungry
@@ -4264,14 +4264,12 @@
 - what is google rcs
 - what is machine learning
 - what is nice?
-- what is rasa mascot
 - what is the capital of delhi
 - what is the capital of india
 - what is the current petrol price
 - what is the day ?
 - what is the real use case where we can use this one
 - what is your address?
-- what is your github link
 - what is your purpose
 - what lnu mean?
 - what the latest news ?
@@ -4655,6 +4653,7 @@
 - where can i find this code
 - where is the source code?
 - where is your source code
+- what is your github link
 - yes with your source code
 - your code
 - your code please
@@ -4704,6 +4703,7 @@
 - switching from [DialogFlow](current_api)
 
 ## intent:technical_question
+- how to extract [relationship](entity)
 - Create ecommerce bot
 - How can I visualise conversation flow?
 - How many languages does Spacy support?
