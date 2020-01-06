@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build-images:
     name: Build and Push Images
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
@@ -24,10 +24,6 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
-    - name: Train Model
-      working-directory: ${{ github.workspace }}
-      run: |
-        rasa train
     - name: Test Training Stories
       working-directory: ${{ github.workspace }}
       run: |
