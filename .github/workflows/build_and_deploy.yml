@@ -1,5 +1,5 @@
   
-name: Build and Deploy
+name: Build and Deploy Job
 on: [pull_request]
 
 jobs:
