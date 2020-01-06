@@ -239,7 +239,7 @@ templates:
       to build a level 3 assistant from scratch, or check out our [blog](https://blog.rasa.com/tag/tutorials/)
       for in-depth tutorials on customizing your assistant.
   utter_ask_faq_voice:
-  - text: Yes, that is possible! You can connect Rasa to any channel you like. You
+  - text: You can connect Rasa to any channel you like, including voice channels. You
       can find more information [here](https://rasa.com/docs/core/connectors/).
   utter_ask_faq_what_is_forum:
   - text: [Rasa Forum](https://forum.rasa.com) is the place where all the community

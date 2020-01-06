@@ -360,6 +360,17 @@
 ## intent:ask_faq_channels
 - Can you tell which messaging channels does rasa support?
 - Channels
+- Can I use the rasa code for my own website?
+- Can I use your open source code on my website?
+- how to use rasa in salesforce
+- i want to integrate my rasa bot to webex  may i know how
+- how to setup rasax on slack
+- so... i trying to deploy my rasa bot on
+- how to use rasa caht in react application
+- how can i setup rasa in django project ?
+- how to integrate u in my react application
+- how to integrate rasa chatbot with my website
+- Is there a connector for skype?
 - DOES RASA SUPPORT MESSENGER?
 - DOES RASA SUPPORT SMS?
 - DOES RASA SUPPORT THE WHATS APP?
@@ -563,9 +574,13 @@
 - which programming languages
 - which programming languages do you support?
 - which programming languages does rasa supports?
+- rasa php
 - Do I have to be a programmer to use rasa?
 - what's your programming language
 - what programming language do you recommend
+- can I develop using java
+- Does it have a java library
+- does rasa support python
 - programming language
 - what programming language does rasa use
 - But what kind of programming language is the code written in?
@@ -885,6 +900,7 @@
 
 ## intent:ask_faq_voice
 - Building a rasa voice bot?
+- can i programm a vocal assistant
 - Building a voice bot using rasa.
 - Can I build a rasa voice bot?
 - Can I use my voice to speak to these bots?
@@ -903,6 +919,7 @@
 - How to build a voice bot using rasa?
 - How to build a voice bot with rasa?
 - How to build a voice bot?
+- how to integrate speech to text in rasa
 - How to use rasa to build a voice bot.
 - I can build a voice bot with rasa, right?
 - I can build a voice bot with rasa?
@@ -3377,6 +3394,7 @@
 - About [Core](product)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
+- I wanted to build a bot my product customer support
 - Can you tell me more about [NLU](product)?
 - Get started
 - HOW CAN i connect to rasa
@@ -3481,6 +3499,7 @@
 - components in rasa
 - components of Rasa?
 - components of rasa
+- rasa components
 - different parts of Rasa
 - do you know how to set up a chatbot?
 - find out how to get started with Rasa
@@ -3955,6 +3974,10 @@
 - where to train [intents](nlu_part) in rasa?
 
 ## intent:out_of_scope
+- documentation
+- your specifications
+- what is open source?
+- where is formal documentation
 - 4 + 2 = ?
 - After registration I see that I have an available balance of 0.00000000. What does this balance represent?
 - Are you ready?
@@ -4682,8 +4705,6 @@
 - switching from [DialogFlow](current_api)
 
 ## intent:technical_question
-- Can I use the rasa code for my own website?
-- Can I use your open source code on my website?
 - Create ecommerce bot
 - How can I visualise conversation flow?
 - How many languages does Spacy support?
@@ -4694,11 +4715,8 @@
 - how do you retrieve previous messages
 - how many words can you handle?
 - how to use flask?
-- how to use rasa in salesforce
 - how to visualise dialogue flow
 - is this test compatible with linux?
-- rasa php
-- rasa-core error
 - what database rasa use
 - what is significance of domain.yml file
 - what is the policy
@@ -4712,74 +4730,48 @@
 - Can you send messages based on events?
 - How did rasa works?
 - How do I use ngrok with [rasa x](product)?
-- I am getting some error
-- I have a problem
-- I need help with a problem
 - I want to know more about tracker
-- I wanted to build a bot my product customer support
-- Is there a connector for skype?
 - What is the difference between entities and slots?
 - Where can I get the source code of Rasa?
-- Which  other tools can be used to  create chatbots?
+- Which other tools can be used to create chatbots?
 - an I use Rasa for e-mail applications
 - any open source GUI rasa have?
 - any other tools to create chatbots?
-- can I develop using java
 - can i install on may mac
 - can rasa run standalone
-- can you help me with this problem
-- can you help with some documentation
-- conda threw some weird error
-- conda throws some unexpected error
 - db processing
 - do you have docker image for rasa?
-- documentation
 - does rasa support prestashop?
-- does rasa support python
-- getting some error
 - hey can i run this onpremise
 - how about interactive learning
 - how can I get a docker image
 - how can I train data
 - how can i deploy my server on production?
-- how can i setup rasa in django project ?
 - how i deploy my bot on production server?
 - how to get the metadata file
 - how to integrate RASA with customer data?
-- how to integrate rasa chatbot with my website
-- how to integrate speech to text in rasa
-- how to integrate u in my react application
 - how to use formaction
-- how to use rasa caht in react application
-- i am having trouble setting this up
+- how to use form actions
+- how to use forms
 - interactive learning?
 - is rasa core able to run standalone?
 - ok quick question here do i download this api
-- rasa components
-- so... i trying to deploy my rasa bot on
-- technical side of things?
 - tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible.
-- there is error
 - training model?
 - what are the features does rasa have?
 - what does on-premise mean?
 - what infrastructure is required to run a bot?
 - what is a synonym called?
 - what is endpoint
-- what is open source?
 - what is pip?
 - what is the last version of rasa [core](product)?
 - what technologies did u use to create more mature chatbot?
 - what's pip
-- where is formal documentation
-- which technology is used to create you
 - yes what if i have to code open end responses into some categories
-- your specifications
 - best policies to be used
 - Deploy to a Server
-- Hello, Sara. How can I configure etnity extraction for russian lnguage?
+- Hello, Sara. How can I configure [etnity extraction](nlu_part) for [russian](language) lnguage?
 - can I use Rasa with my Raspberry Pi
-- how to setup rasax on slack
 - Can I run Rasa on a raspberry pi ?
 - can I run rasa on a raspberry pi
 - Can I run rasa on a raspberry pi ?
@@ -4789,9 +4781,7 @@
 - deploy rasa chat bot in flask
 - How can i automate retraining of my rasa models
 - can i user rasa for my text classification problem?
-- i want to integrate my rasa bot to webex  may i know how
 - how to initialize a new project?
-- Does it have a java library
 - how to train model
 - what are the policy available
 - i need help with policies
@@ -4801,11 +4791,23 @@
 - how to handle sending scheduled message to custom webhooks
 - actions
 - actions on rasa
-- why do I get errors using rasa?
-- there are some python incompatibilities
 - how to add dropdowns?
 - replace default nlu with custom component
-- can i programm a vocal assistant
+- which technology is used to create you
+- rasa-core error
+- I am getting some error
+- I have a problem
+- I need help with a problem
+- can you help me with this problem
+- can you help with some documentation
+- conda threw some weird error
+- conda throws some unexpected error
+- getting some error
+- i am having trouble setting this up
+- technical side of things?
+- there is error
+- why do I get errors using rasa?
+- there are some python incompatibilities
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4928,10 +4930,12 @@
 
 ## synonym:entity recognition
 - ner
-- entity extraction
+- entity extraction 
 - Entity recognition
 - NER
 - recognition
+- etnity extraction
+- entities
 
 ## synonym:full stack developer
 - full stack develope
