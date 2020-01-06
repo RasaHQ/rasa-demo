@@ -82,9 +82,8 @@ jobs:
       with:
         account_key: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
     - name: Pull Latest Image
-      with:
-        name: replicated-test/rasa-demo:latest
-        username: ${{ steps.gcloud.outputs.username }}
+      env:
         password: ${{ steps.gcloud.outputs.password }}
       run: |
+        docker login -u _json_key -p $password https://gcr.io
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
