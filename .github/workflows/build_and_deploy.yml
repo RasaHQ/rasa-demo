@@ -103,8 +103,8 @@ jobs:
     - name: Build Image
       with:
         build_id: ${{ steps.buildnumber.outputs.build_number }}
-      run: |
-        docker build -t gcr.io/replicated-test/rasa-demo:v$build_id -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
+        run: |
+          docker build -t gcr.io/replicated-test/rasa-demo:v$build_id -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Configure Docker to use Google Cloud Platform
       uses: actions/gcloud/cli@master
       with:
