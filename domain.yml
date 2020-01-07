@@ -5,7 +5,7 @@ intents:
 - ask_faq_community_size
 - ask_faq_differencecorenlu
 - ask_faq_differencerasarasax
-- ask_faq_languages
+- ask_faq_human_languages_rasa
 - ask_faq_is_programming_required
 - ask_faq_opensource
 - ask_faq_ee
@@ -22,7 +22,7 @@ intents:
 - ask_howdoing
 - ask_howold
 - ask_isbot
-- ask_languagesbot
+- ask_human_languages_sara
 - ask_question_in_forum
 - ask_restaurant
 - ask_time
@@ -192,7 +192,7 @@ templates:
   utter_ask_faq_community_size:
   - text: Rasa has more than 7000 community members and over 300 code and content
       contributors 🚀.
-  utter_ask_faq_languages:
+  utter_ask_faq_human_languages_rasa:
   - text: You can use Rasa to build assistants in any language you want!
   utter_ask_faq_is_programming_required:
   - text: Rasa Open Source is written in Python, but programming is not required to develop an
@@ -281,7 +281,7 @@ templates:
   - text: I am indeed a bot 🤖
   utter_ask_job_function:
   - text: What's your job? 🕴
-  utter_ask_languagesbot:
+  utter_ask_human_languages_sara:
   - text: I can spell baguette in French, but unfortunately English is the only language
       I can answer you in.
   - text: I am in the process of learning, but at the moment I can only speak English.
@@ -487,7 +487,7 @@ templates:
       toolset built on top of Rasa Open Source that comes with a UI that helps you learn
       from real conversations and improve your assistant. Rasa X is completely optional -- if
       you'd like, you can use Rasa Open Source on its own.
-  utter_faq_language_more:
+  utter_faq_human_language_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/nlu/language-support/)
       for more information.
   utter_faq_ee_more:
@@ -709,7 +709,7 @@ templates:
   - text: Got it.
   utter_what_help:
   - text: Ok, what can I help you with?
-  utter_ask_language:
+  utter_ask_human_language:
   - text: Which (human) language is your assistant in?
   utter_x_tutorial:
   - text: Rasa Masterclass covers how to [set up Rasa X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how
@@ -752,7 +752,7 @@ actions:
 - utter_ask_faq_community_size
 - utter_ask_faq_differencecorenlu
 - utter_ask_faq_differencerasarasax
-- utter_ask_faq_languages
+- utter_ask_faq_human_languages_rasa
 - utter_ask_faq_is_programming_required
 - utter_ask_faq_opensource
 - utter_ask_faq_ee
@@ -774,7 +774,7 @@ actions:
 - utter_ask_if_problem
 - utter_ask_isbot
 - utter_ask_job_function
-- utter_ask_languagesbot
+- utter_ask_human_languages_sara
 - utter_ask_migration
 - utter_ask_name
 - utter_ask_ready_to_build
@@ -826,7 +826,7 @@ actions:
 - utter_explain_use_case
 - utter_explain_x
 - utter_faq_channels_more
-- utter_faq_language_more
+- utter_faq_human_language_more
 - utter_faq_ee_more
 - utter_faq_slots_more
 - utter_faq_voice_more
@@ -893,7 +893,7 @@ actions:
 - utter_thank_suggestion
 - utter_thumbsup
 - utter_what_help
-- utter_ask_language
+- utter_ask_human_language
 - utter_x_tutorial
 - respond_out_of_scope
 forms:

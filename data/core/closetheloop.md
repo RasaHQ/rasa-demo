@@ -589,7 +589,7 @@
 * enter_data
     - utter_not_sure
     - utter_possibilities
-* ask_faq_languages
+* ask_faq_human_languages_rasa
     - action_faqs
 * enter_data
     - utter_not_sure
@@ -606,7 +606,7 @@
 * enter_data
     - utter_not_sure
     - utter_possibilities
-* ask_faq_languages
+* ask_faq_human_languages_rasa
     - action_faqs
 * enter_data
     - utter_not_sure
@@ -716,7 +716,7 @@
     - slot{"shown_privacy":true}
 * ask_whoami
     - action_chitchat
-* ask_languagesbot
+* ask_human_languages_sara
     - action_chitchat
 * ask_howold
     - action_chitchat

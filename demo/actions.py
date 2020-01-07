@@ -212,7 +212,7 @@ class ActionChitchat(Action):
             "ask_whatisrasa",
             "ask_isbot",
             "ask_howold",
-            "ask_languagesbot",
+            "ask_human_languages_sara",
             "ask_restaurant",
             "ask_time",
             "ask_wherefrom",
@@ -242,7 +242,7 @@ class ActionFaqs(Action):
         # retrieve the correct chitchat utterance dependent on the intent
         if intent in [
             "ask_faq_ee",
-            "ask_faq_languages",
+            "ask_faq_human_languages_rasa",
             "ask_faq_is_programming_required",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",

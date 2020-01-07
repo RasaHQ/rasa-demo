@@ -57,7 +57,7 @@
 - what is rasa x ee?
 - what is the enterprise edition
 
-## intent:ask_faq_languages
+## intent:ask_faq_human_languages_rasa
 - what about languages supported in rasa?
 - need to use [portuguese](language)
 - What language u support?
@@ -168,7 +168,7 @@
 - Are you the bot?
 - are you a Skynet ?
 
-## intent:ask_languagesbot
+## intent:ask_human_languages_sara
 - Do you know any other languages?
 - What do you speak?
 - what languages do you know?
