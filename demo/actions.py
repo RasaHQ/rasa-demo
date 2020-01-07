@@ -591,9 +591,13 @@ class CommunityEventAction(Action):
             ]
 
         if not events:
-            dispatcher.utter_message(text="Looks like we don't have currently have any Rasa events planned.")
+            dispatcher.utter_message(
+                text="Looks like we don't have currently have any Rasa events planned."
+            )
         else:
-            self._utter_events(tracker, dispatcher, events, events_for_location, location)
+            self._utter_events(
+                tracker, dispatcher, events, events_for_location, location
+            )
 
         return []
 
