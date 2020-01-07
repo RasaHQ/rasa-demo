@@ -102,7 +102,7 @@ jobs:
         args: -c "docker pull gcr.io/replicated-test/rasa-demo:latest || true"
     - name: Build Image
       run: |
-        docker build -t gcr.io/replicated-test/rasa-demo:v$$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
+        docker build -t gcr.io/replicated-test/rasa-demo:v$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Configure Docker to use Google Cloud Platform
       uses: actions/gcloud/cli@master
       with:
@@ -111,4 +111,4 @@ jobs:
       uses: actions/gcloud/cli@master
       with:
         entrypoint: sh
-        args: -c "docker push gcr.io/replicated-test/rasa-demo:v$$BUILD_NUMBER"
+        args: -c "docker push gcr.io/replicated-test/rasa-demo:v$BUILD_NUMBER"
