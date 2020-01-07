@@ -99,7 +99,7 @@ jobs:
     - name: Build Image
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
-    - name: Push image to Google Cloud Container Registry
+    - name: Push PR Image to Google Cloud Container Registry
       uses: actions/gcloud/cli@master
       with:
         entrypoint: sh
