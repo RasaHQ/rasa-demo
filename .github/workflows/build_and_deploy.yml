@@ -100,9 +100,9 @@ jobs:
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:v$build_id -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Authenticate into Google Cloud Platform
-        uses: actions/gcloud/auth@master
-        env:
-          GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
+      uses: actions/gcloud/auth@master
+      env:
+        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
     - name: Configure Docker to use Google Cloud Platform
       uses: actions/gcloud/cli@master
       with:
