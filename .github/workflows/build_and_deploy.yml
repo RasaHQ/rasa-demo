@@ -11,8 +11,11 @@ jobs:
         uses: einaregilsson/build-number@v2 
         with:
           token: ${{secrets.github_token}}        
-      - name: Print new build number
-        run: echo "Build number is $BUILD_NUMBER"
+      - name: Upload build number
+        uses: actions/upload-artifact@v1
+        with:
+          name: BUILD_NUMBER
+          path: BUILD_NUMBER
   # lint-testing:
   #   name: Code Formatting Tests
   #   runs-on: ubuntu-latest
@@ -100,6 +103,13 @@ jobs:
       with:
         entrypoint: sh
         args: -c "docker pull gcr.io/replicated-test/rasa-demo:latest || true"
+    - name: Download build number
+      uses: actions/download-artifact@v1
+      with:
+        name: BUILD_NUMBER
+    - name: Restore build number
+      id: buildnumber
+      uses: einaregilsson/build-number@v2 
     - name: Build Image
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:v$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
