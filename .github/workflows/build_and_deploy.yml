@@ -91,16 +91,16 @@ jobs:
     needs: [build_id]
     steps:
     - uses: actions/checkout@v1
+    - name: Authenticate into Google Cloud Platform
+      uses: actions/gcloud/auth@master
+      env:
+        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
     - name: Pull Latest Image
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
     - name: Build Image
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:v${{ steps.buildnumber.outputs.build_number }} -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
-    - name: Authenticate into Google Cloud Platform
-      uses: actions/gcloud/auth@master
-      env:
-        GCLOUD_AUTH: ${{ secrets.GCLOUD_AUTH }}
     - name: Configure Docker to use Google Cloud Platform
       uses: actions/gcloud/cli@master
       with:
