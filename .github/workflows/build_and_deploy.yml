@@ -108,7 +108,7 @@ jobs:
       with:
         args: "auth configure-docker --quiet"
     - name: Push image to Google Cloud Container Registry
-        uses: actions/gcloud/cli@master
-        with:
-          entrypoint: sh
-          args: -c "docker push gcr.io/replicated-test/rasa-demo:v$build_id"
+      uses: actions/gcloud/cli@master
+      with:
+        entrypoint: sh
+        args: -c "docker push gcr.io/replicated-test/rasa-demo:v$build_id"
