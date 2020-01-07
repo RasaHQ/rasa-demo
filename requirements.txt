@@ -1,2 +1,2 @@
-rasa==1.6.0
+rasa==1.6.1
 -r demo/requirements.txt
