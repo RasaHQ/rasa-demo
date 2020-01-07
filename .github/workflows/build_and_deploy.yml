@@ -88,6 +88,9 @@ jobs:
     needs: [build_id]
     steps:
     - uses: actions/checkout@v1
+    - name: Echo Build ID
+      run: |
+        echo $build_id
     - name: Pull Latest Image
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
