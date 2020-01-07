@@ -37,23 +37,23 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
-  data-validation:
-    name: Data Validation
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements-dev.txt
-    - name: Rasa Data Validation
-      working-directory: ${{ github.workspace }}
-      run: |
-        rasa data validate --fail-on-warnings
+  # data-validation:
+  #   name: Data Validation
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v1
+  #   - name: Set up Python 3.7
+  #     uses: actions/setup-python@v1
+  #     with:
+  #       python-version: 3.7
+  #   - name: Install dependencies
+  #     run: |
+  #       python -m pip install --upgrade pip
+  #       pip install -r requirements-dev.txt
+  #   - name: Rasa Data Validation
+  #     working-directory: ${{ github.workspace }}
+  #     run: |
+  #       rasa data validate --fail-on-warnings
   training-testing:
     name: Testing Stories
     needs: [data-validation]
