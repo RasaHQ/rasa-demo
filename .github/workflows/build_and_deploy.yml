@@ -88,11 +88,6 @@ jobs:
     needs: [build_id]
     steps:
     - uses: actions/checkout@v1
-    - name: Login to gcloud registry
-      id: gcloud
-      uses: elgohr/gcloud-login-action@master
-      with:
-        account_key: ${{ secrets.GCLOUD_AUTH }}
     - name: Pull Latest Image
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
