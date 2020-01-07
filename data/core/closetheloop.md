@@ -846,8 +846,8 @@
 * get_started_step4
     - action_greet_user
     - slot{"shown_privacy":true}
-* rasa_cost
-    - utter_rasa_cost
+* ask_faq_opensource_cost
+    - action_faqs
     - utter_anything_else
 * affirm
     - utter_what_help

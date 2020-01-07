@@ -245,7 +245,7 @@ class ActionFaqs(Action):
             "ask_faq_is_programming_required",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",
-            "ask_faq_opensource",
+            "ask_faq_opensource_cost",
             "ask_faq_voice",
             "ask_faq_slots",
             "ask_faq_channels",

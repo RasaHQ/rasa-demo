@@ -7,7 +7,7 @@ intents:
 - ask_faq_differencerasarasax
 - ask_faq_languages
 - ask_faq_is_programming_required
-- ask_faq_opensource
+- ask_faq_opensource_cost
 - ask_faq_ee
 - ask_faq_python_version
 - ask_faq_rasax
@@ -59,7 +59,6 @@ intents:
 - nlu_info
 - out_of_scope: {triggers: respond_out_of_scope}
 - pipeline_recommendation
-- rasa_cost
 - react_negative
 - react_positive
 - signup_newsletter
@@ -212,10 +211,6 @@ templates:
       development even easier.
   utter_ask_faq_tutorialnlu:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
-  utter_ask_faq_opensource:
-  - text: Rasa is open source! We strive to provide well-maintained and documented
-      open source tools, allowing all makers to build the best AI assistants without
-      friction.
   utter_ask_faq_ee:
   - text: Rasa Enterprise is our enterprise product, which comes with more options
       for increasing security and privacy, as well as expert support.
@@ -506,6 +501,15 @@ templates:
   utter_faq_voice_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/)
       for more information.
+  utter_ask_faq_opensource_cost:
+  - text: "The Rasa machine learning framework is open source! 
+      We strive to provide well-maintained and documented
+      open source tools, allowing all makers to build the best AI assistants without
+      friction.\nIn addition to that,\
+      \ we offer a toolset [Rasa X](https://rasa.com/docs/rasa-x/), which comes in\
+      \ two editions:\n- Rasa X Community Edition (Free)\n- Rasa X Enterprise Edition\
+      \ (Paid Subscription)\n\nYou can find out more [here](https://rasa.com/product/pricing/)\
+      \ about the differences between the Rasa X editions."
   utter_first_bot_with_rasa:
   - text: Let's go. Are you new to Rasa?
   utter_get_started_step1:
@@ -630,12 +634,6 @@ templates:
   - text: Rasa Open Source is a machine learning framework for automated text and
       voice-based conversations. Rasa X is a tool that helps you build, improve, and
       deploy AI Assistants that are powered by the Rasa Open Source framework.
-  utter_rasa_cost:
-  - text: "The Rasa machine learning framework is open source!\nIn addition to that,\
-      \ we offer a toolset [Rasa X](https://rasa.com/docs/rasa-x/), which comes in\
-      \ two editions:\n- Rasa X Community Edition (Free)\n- Rasa X Enterprise Edition\
-      \ (Paid Subscription)\n\nYou can find out more [here](https://rasa.com/product/pricing/)\
-      \ about the differences between the Rasa X editions."
   utter_react_negative:
   - text: 😕
   - text: 😞
@@ -762,7 +760,6 @@ actions:
 - utter_ask_faq_differencerasarasax
 - utter_ask_faq_languages
 - utter_ask_faq_is_programming_required
-- utter_ask_faq_opensource
 - utter_ask_faq_ee
 - utter_ask_faq_python_version
 - utter_ask_faq_rasax
@@ -772,6 +769,7 @@ actions:
 - utter_ask_faq_tutorials
 - utter_ask_faq_voice
 - utter_ask_faq_what_is_forum
+- utter_ask_faq_opensource_cost
 - utter_ask_feedback
 - utter_ask_feedback_message
 - utter_ask_for_nlu_specifics
@@ -878,7 +876,6 @@ actions:
 - utter_possibilities
 - utter_possibilities_to_contribute
 - utter_rasa_components_details
-- utter_rasa_cost
 - utter_react_negative
 - utter_react_positive
 - utter_reasons_to_contribute

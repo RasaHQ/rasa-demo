@@ -633,8 +633,8 @@
     - utter_anything_else
 
 ## how much does rasa cost
-* rasa_cost
-    - utter_rasa_cost
+* ask_faq_opensource_cost
+    - action_faqs
     - utter_anything_else
 
 ## source code

@@ -7,7 +7,7 @@ ask_faq_differencecorenlu,What is the difference between Core and NLU?,
 ask_faq_differencerasarasax,What is the difference between Rasa and Rasa X?
 ask_faq_languages,What languages does Rasa support?,
 ask_faq_is_programming_required,Is programming required?
-ask_faq_opensource,Is Rasa open-source?,
+ask_faq_opensource_cost,Is Rasa open-source and free?,
 ask_faq_ee,What is Rasa X Enterprise Edition?,
 ask_faq_python_version,Which Python version is needed?,
 ask_faq_rasax,What is Rasa X?
@@ -68,7 +68,6 @@ nlu_generation_tool_recommendation,I want a recommendation for an NLU data gener
 nlu_info,I want more information about NLU.,
 nlu_info,I want info on {nlu_part}.,nlu_part
 pipeline_recommendation,I want a pipeline recommendation.,
-rasa_cost,How much does Rasa cost?,
 react_negative,I'm sad!,
 react_positive,I'm happy!,
 signup_newsletter,Signup for the newsletter,

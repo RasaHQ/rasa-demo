@@ -694,7 +694,59 @@
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
 
-## intent:ask_faq_opensource
+## intent:ask_faq_opensource_cost
+- Are you free?
+- Can you tell me whats the price for rasa platform?
+- How much do you cost?
+- How much does it cost?
+- How much does rasa cost?
+- How much it costs
+- I want to learn more about the pricing
+- I would like to know the cost first.
+- Subscription cost?
+- Subscription price
+- What does Rasa cost?
+- What is the cost of RASA?
+- What is the price ?
+- Whats the cost?
+- are you free ?
+- are you really free
+- are you really free?
+- can you give me prices ?
+- can you tell me prices
+- cost
+- cost?
+- give me the pricing
+- how cost to install Rasa?
+- how much costs the rasa platform
+- how much do you cost
+- how much does RASA cost
+- how much does Rasa cost ?
+- how much does it cost
+- how much does it cost normally?
+- how much does it cost?
+- how much does rasa cost
+- how much does rasa cost?
+- how much is it
+- how much it costs?
+- how mush does rasa cost
+- is it for free?
+- is it free
+- is it free?
+- is rasa [core](product) paid?
+- is rasa free
+- is rasa free of cost
+- is rasa stack free
+- is this free?
+- this is free?
+- what is price?
+- what is pricing of rasa
+- what is rasa cost ?
+- what is the enterprise pricing schedule?
+- what is the price of rasa
+- what is the price?
+- whats the cost of rasa
+- your cost?
 - Are you open-source?
 - Could you tell me whether rasa is open source or not?
 - How do I find out if rasa is open source?
@@ -4339,60 +4391,6 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
-
-## intent:rasa_cost
-- Are you free?
-- Can you tell me whats the price for rasa platform?
-- How much do you cost?
-- How much does it cost?
-- How much does rasa cost?
-- How much it costs
-- I want to learn more about the pricing
-- I would like to know the cost first.
-- Subscription cost?
-- Subscription price
-- What does Rasa cost?
-- What is the cost of RASA?
-- What is the price ?
-- Whats the cost?
-- are you free ?
-- are you really free
-- are you really free?
-- can you give me prices ?
-- can you tell me prices
-- cost
-- cost?
-- give me the pricing
-- how cost to install Rasa?
-- how much costs the rasa platform
-- how much do you cost
-- how much does RASA cost
-- how much does Rasa cost ?
-- how much does it cost
-- how much does it cost normally?
-- how much does it cost?
-- how much does rasa cost
-- how much does rasa cost?
-- how much is it
-- how much it costs?
-- how mush does rasa cost
-- is it for free?
-- is it free
-- is it free?
-- is rasa [core](product) paid?
-- is rasa free
-- is rasa free of cost
-- is rasa stack free
-- is this free?
-- this is free?
-- what is price?
-- what is pricing of rasa
-- what is rasa cost ?
-- what is the enterprise pricing schedule?
-- what is the price of rasa
-- what is the price?
-- whats the cost of rasa
-- your cost?
 
 ## intent:react_negative
 - I am feeling bad
