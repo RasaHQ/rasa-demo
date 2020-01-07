@@ -1,3 +1,6 @@
+session_config:
+  session_expiration_time: 480  # value in minutes, 0 means infinitely long
+  carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
 intents:
 - affirm
 - ask_builder
