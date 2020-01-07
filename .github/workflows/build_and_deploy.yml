@@ -56,7 +56,6 @@ jobs:
   #       rasa data validate --fail-on-warnings
   training-testing:
     name: Testing Stories
-    needs: [data-validation]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
