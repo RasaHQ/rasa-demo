@@ -12,6 +12,7 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
+    AllSlotsReset,
 )
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
@@ -328,35 +329,97 @@ class ActionStoreBotLanguage(Action):
             return [SlotSet("can_use_spacy", False)]
 
 
-class ActionStoreEntityExtractor(Action):
-    """Takes the entity which the user wants to extract and checks
-        what pipelines can be used.
+class PipelineRecommendationForm(FormAction):
+    """First asks for the nlu_part,
+
+    Then
+    - for nlu_part = entity recognition:
+       -> Ask for the entity to extract, and recommend the best entity extractor
+    - for nlu_part = intent classification
+       -> Asks for the human language, and recommend the best nlu pipeline
     """
 
     def name(self) -> Text:
-        return "action_store_entity_extractor"
+        return "pipeline_recommendation_form"
 
-    def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        spacy_entities = ["place", "date", "name", "organisation"]
-        duckling = [
-            "money",
-            "duration",
-            "distance",
-            "ordinals",
-            "time",
-            "amount-of-money",
-            "numbers",
-        ]
+    @staticmethod
+    def required_slots(tracker) -> List[Text]:
+        nlu_part = tracker.get_slot("nlu_part")
+        entity_to_extract = tracker.get_slot("entity_to_extract")
+        if entity_to_extract:
+            nlu_part = "entity recognition"
 
-        entity_to_extract = next(tracker.get_latest_entity_values("entity"), None)
+        if not nlu_part:
+            return ["nlu_part"]
+        elif "entity" in nlu_part.lower():
+            return ["entity_to_extract"]
+        elif "intent" in nlu_part.lower():
+            return ["language"]
+        else:
+            return []
 
-        extractor = "CRFEntityExtractor"
-        if entity_to_extract in spacy_entities:
-            extractor = "SpacyEntityExtractor"
-        elif entity_to_extract in duckling:
-            extractor = "DucklingHTTPExtractor"
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        return {
+            "nlu_part": self.from_entity(entity="nlu_part"),
+            "entity_to_extract": [
+                self.from_entity(entity="entity_to_extract"),
+                self.from_text(),
+            ],
+            "language": [self.from_entity(entity="language"), self.from_text(),],
+        }
 
-        return [SlotSet("entity_extractor", extractor)]
+    def submit(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        """Once we have all the slots filled, utter the pipeline recommendation"""
+
+        nlu_part = tracker.get_slot("nlu_part")
+        entity_to_extract = tracker.get_slot("entity_to_extract")
+        if entity_to_extract:
+            nlu_part = "entity recognition"
+
+        if "entity" in nlu_part.lower():
+            entity_to_extract = tracker.get_slot("entity_to_extract")
+
+            if entity_to_extract in ["place", "name", "organisation"]:
+                dispatcher.utter_template(
+                    "utter_spacy", tracker, **{"entity_to_extract": entity_to_extract},
+                )
+            elif entity_to_extract in [
+                "money",
+                "duration",
+                "distance",
+                "ordinals",
+                "time",
+                "date",
+                "amount-of-money",
+                "numbers",
+            ]:
+                dispatcher.utter_template(
+                    "utter_duckling",
+                    tracker,
+                    **{"entity_to_extract": entity_to_extract},
+                )
+            else:
+                dispatcher.utter_template(
+                    "utter_crf", tracker, **{"entity_to_extract": entity_to_extract},
+                )
+        elif "intent" in nlu_part.lower():
+            language = tracker.get_slot("language")
+
+            if language in ["english"]:
+                dispatcher.utter_template("utter_spacy_or_tensorflow", tracker)
+            else:
+                dispatcher.utter_template(
+                    "utter_tensorflow", tracker, **{"language": language}
+                )
+        else:
+            dispatcher.utter_template("utter_dont_know_nlu_part", tracker)
+
+        return [AllSlotsReset()]
 
 
 class ActionSetOnboarding(Action):

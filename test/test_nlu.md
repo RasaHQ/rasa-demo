@@ -561,9 +561,19 @@
 - the one that is better than you
 
 ## intent:pipeline_recommendation
-- what pipeline should I start with?
-- give me a recommendation
-- what pipeline should i use?
+- I don’t know which pipeline to use
+- can you help me with the pipeline?
+- pipeline
+- pipeline recommendation
+- recommend pipeline
+- should I better start with the tensorflow pipeline or spacy?
+- spacy or tensorflow, what is better to start?
+- what pipeline should I use for [entity extraction](nlu_part)?
+- What is the best [entity extractor](nlu_part)?
+- Is duckling the best [entity extractor](nlu_part)?
+- What is the best pipeline for [entity extraction](nlu_part)?
+- I want to extract [places](entity_to_extract), what is the best pipeline?
+- I want to extract [name](entity_to_extract), what is the best pipeline?
 
 ## intent:signup_newsletter
 - can you add alan@mail.com to the newsletter list?

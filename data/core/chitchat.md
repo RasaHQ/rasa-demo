@@ -674,10 +674,10 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * deny
     - utter_ask_faq_tutorialnlu
     - utter_anything_else
@@ -761,10 +761,10 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info
     - action_store_unknown_nlu_part
     - utter_dont_know_nlu_part
@@ -782,7 +782,7 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
@@ -793,7 +793,7 @@
     - utter_thumbsup
     - utter_anything_else
 
-## not new to rasa + nlu + intent + pipeline recommendation, spacy
+## not new to rasa + nlu + intent + pipeline recommendation
 * greet
     - action_greet_user
 * how_to_get_started
@@ -804,22 +804,21 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
-    - utter_what_language
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
 * ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
     - action_chitchat
-    - utter_what_language
-* enter_data{"language": "en"}
-    - action_store_bot_language
-    - slot{"can_use_spacy": true}
-    - utter_spacy_or_tensorflow
+    - pipeline_recommendation_form
+    - form{"name": null}
     - utter_anything_else
 
-## not new to rasa + nlu + intent + pipeline recommendation, not spacy
+
+## not new to rasa + nlu + pipeline_recommendation_form
 * greet
     - action_greet_user
 * how_to_get_started
@@ -830,33 +829,7 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part": "intent classification"}
-    - utter_nlu_intent_tutorial
-    - utter_offer_recommendation
-* pipeline_recommendation OR affirm
-    - utter_what_language
-* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
-    - action_chitchat
-    - utter_what_language
-* enter_data{"language": "en"}
-    - action_store_bot_language
-    - slot{"can_use_spacy": false}
-    - utter_tensorflow
-    - utter_anything_else
-
-## not new to rasa + nlu + entity + pipeline duckling
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding": false}
-    - utter_ask_which_product
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
@@ -864,38 +837,11 @@
     - action_chitchat
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
-    - utter_ask_entities
-* enter_data{"entity": "date ranges"}
-    - action_store_entity_extractor
-    - slot{"entity_extractor": "DucklingHTTPExtractor"}
-    - utter_duckling
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
     - utter_anything_else
 
-## not new to rasa + nlu + entity + pipeline duckling
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding": false}
-    - utter_ask_which_product
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part": "entity recognition"}
-    - utter_nlu_entity_tutorial
-    - utter_offer_recommendation
-* pipeline_recommendation OR affirm
-    - utter_ask_entities
-* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
-    - action_chitchat
-    - utter_ask_entities
-* enter_data{"entity": "date ranges"}
-    - action_store_entity_extractor
-    - slot{"entity_extractor": "DucklingHTTPExtractor"}
-    - utter_duckling
-    - utter_anything_else
 
 ## how to get started without privacy policy
 * how_to_get_started
