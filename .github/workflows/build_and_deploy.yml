@@ -3,19 +3,6 @@ name: Build and Deploy
 on: [pull_request]
 
 jobs:
-  build_id:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate build number
-        id: buildnumber
-        uses: einaregilsson/build-number@v2 
-        with:
-          token: ${{secrets.github_token}}        
-      - name: Upload build number
-        uses: actions/upload-artifact@v1
-        with:
-          name: BUILD_NUMBER
-          path: BUILD_NUMBER
   # lint-testing:
   #   name: Code Formatting Tests
   #   runs-on: ubuntu-latest
@@ -91,8 +78,8 @@ jobs:
   build-images:
     name: Build and Push Images
     runs-on: ubuntu-latest
-    needs: [build_id]
     steps:
+    
     - uses: actions/checkout@v1
     - name: Authenticate into Google Cloud Platform
       uses: actions/gcloud/auth@master
@@ -103,13 +90,8 @@ jobs:
       with:
         entrypoint: sh
         args: -c "docker pull gcr.io/replicated-test/rasa-demo:latest || true"
-    - name: Download build number
-      uses: actions/download-artifact@v1
-      with:
-        name: BUILD_NUMBER
-    - name: Restore build number
-      id: buildnumber
-      uses: einaregilsson/build-number@v2 
+    - name: Set Build ID from PR Ref
+      run: echo ::set-env name=BUILD_NUMBER::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
     - name: Build Image
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:v$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
