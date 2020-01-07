@@ -1764,57 +1764,6 @@
 - what you doing?
 - what you talk about?
 
-## intent:ask_when_next_event
-- Assuming that there is an upcoming event, when is that event?
-- At what time is the next event scheduled?
-- At which date the next community event will take place?
-- By chance do you know the date of next community event?
-- Do you know the exact date for the next community event?
-- Do you know when is the next event in [Montreal](location)?
-- If there is an upcoming event when is it?
-- Is next community event held in 2019?
-- Is there a Rasa event in [San Francisco](location)
-- Is there an event in [Montreal](location)?
-- Is there any special in next community event?
-- On what day is the next event scheduled?
-- Tell me when the next community event is happening;
-- What and when is the next event?
-- What even is coming up next and when is it please?
-- What is the date of the next community event?
-- What's the next community event
-- What's the next rasa event
-- When does the upcoming event occur?
-- When is it planned the next event in [Montreal](location)?
-- When is it scheduled the next community event?
-- When is it that the next event occurs?
-- When is the next community event?
-- When is the next event in [Berlin](location)
-- When is the next event scheduled?
-- When is the next user group meetup
-- When will the next event occur in the community?
-- Where is next community event held?
-- do you have an event in [Berlin](location)
-- is there an event in [Montreal](location)
-- what community events are there?
-- what date is the next community event?
-- when is our next group event going to take place?
-- when is the event within the community gonna happen?
-- when is the next community event gonna be?
-- when is the next event?
-- when is the next group event going to be?
-- when will our next group event be?
-- when will the community event take place?
-- when will the next community event be?
-- will there be an event in my city?
-- When is the next event in [Detroit](location)?
-- What is the next event in [Paris](location)?
-- When is the next event in [detroit](location)?
-- What is the next event in [paris](location)?
-- When is the next event for [Detroit](location)?
-- What is the next event for [Paris](location)?
-- When is the next event for [detroit](location)?
-- What is the next event for [paris](location)?
-
 ## intent:ask_wherefrom
 - Are you from around here?
 - Around where are you from?
@@ -1915,15 +1864,64 @@
 - What are the events in [Detroit](location)?
 - When are the events in [Paris](location)?
 - what are the events in [Berlin](location)?
-- What are the events in [detroit](location)?
+- What are the events in [Switzerland](location)?
 - When are the events in [paris](location)?
 - what are the events in [berlin](location)?
 - What are the events for [Detroit](location)?
 - When are the events for [Paris](location)?
-- what are the events for [Berlin](location)?
-- What are the events for [detroit](location)?
+- what are the events for [China](location)?
+- What are the events for [New York](location)?
 - When are the events for [paris](location)?
 - what are the events for [berlin](location)?
+- Assuming that there is an upcoming event, when is that event?
+- At what time is the next event scheduled?
+- At which date the next community event will take place?
+- By chance do you know the date of next community event?
+- Do you know the exact date for the next community event?
+- Do you know when is the next event in [Montreal](location)?
+- If there is an upcoming event when is it?
+- Is next community event held in 2019?
+- Is there a Rasa event in [San Francisco](location)
+- Is there an event in [Montreal](location)?
+- Is there any special in next community event?
+- On what day is the next event scheduled?
+- Tell me when the next community event is happening;
+- What and when is the next event?
+- What even is coming up next and when is it please?
+- What is the date of the next community event?
+- What's the next community event
+- What's the next rasa event
+- When does the upcoming event occur?
+- When is it planned the next event in [Montreal](location)?
+- When is it scheduled the next community event?
+- When is it that the next event occurs?
+- When is the next community event?
+- When is the next event in [Berlin](location)
+- When is the next event scheduled?
+- When is the next user group meetup
+- When will the next event occur in the community?
+- Where is next community event held?
+- do you have an event in [Berlin](location)
+- is there an event in [Montreal](location)
+- what community events are there?
+- what date is the next community event?
+- when is our next group event going to take place?
+- when is the event within the community gonna happen?
+- when is the next community event gonna be?
+- when is the next event?
+- when is the next group event going to be?
+- when will our next group event be?
+- when will the community event take place?
+- when will the next community event be?
+- will there be an event in my city?
+- When is the next event in [california](location)?
+- What is the next event in [Paris](location)?
+- When is the next event in [detroit](location)?
+- What is the next event in [san francisco](location)?
+- When is the next event for [Detroit](location)?
+- What is the next event for [Seattle](location)?
+- When is the next event for [India](location)?
+- What is the next event for [paris](location)?
 
 ## intent:ask_whoami
 - Can you tell me who I am?
@@ -4862,6 +4860,12 @@
 - thnks
 - thx
 - yes thanks
+
+## lookup: location
+data/nlu/lookups/location.txt
+
+## lookup: product
+data/nlu/lookups/products.txt
 
 ## synonym: duration
 - how long
