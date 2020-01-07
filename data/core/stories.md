@@ -395,3 +395,17 @@
 ## negative reaction
 * react_negative
     - utter_react_negative
+
+## what pipeline for intents
+* pipeline_recommendation
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
+    - utter_anything_else
+
+## what pipeline for entities
+* pipeline_recommendation
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
+    - utter_anything_else

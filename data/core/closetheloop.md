@@ -316,12 +316,9 @@
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * affirm
-    - utter_what_language
-* enter_data{"language":"spanish"}
-    - slot{"language":"spanish"}
-    - action_store_bot_language
-    - slot{"can_use_spacy":true}
-    - utter_spacy_or_tensorflow
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
     - utter_anything_else
 * how_to_get_started
     - utter_getstarted
@@ -489,18 +486,15 @@
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * affirm
-    - utter_what_language
-* enter_data{"language":"spanish"}
-    - slot{"language":"spanish"}
-    - action_store_bot_language
-    - slot{"can_use_spacy":true}
-    - utter_spacy_or_tensorflow
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
     - utter_anything_else
 * enter_data{"language":"french"}
     - slot{"language":"spanish"}
-    - action_store_bot_language
-    - slot{"can_use_spacy":true}
-    - utter_spacy_or_tensorflow
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
     - utter_anything_else
 
 ## Story from conversation with dominik on November 19th 2018

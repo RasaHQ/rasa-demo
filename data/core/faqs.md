@@ -184,10 +184,10 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * deny
     - utter_ask_faq_tutorialnlu
     - utter_anything_else
@@ -203,10 +203,10 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info
     - action_store_unknown_nlu_part
     - utter_dont_know_nlu_part
@@ -224,7 +224,7 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
@@ -235,7 +235,7 @@
     - utter_thumbsup
     - utter_anything_else
 
-## not new to rasa + nlu + intent + pipeline recommendation, spacy
+## not new to rasa + nlu + intent + pipeline recommendation
 * greet
     - action_greet_user
 * how_to_get_started
@@ -246,22 +246,20 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
-    - utter_what_language
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
 * ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
     - action_faqs
-    - utter_what_language
-* enter_data{"language": "en"}
-    - action_store_bot_language
-    - slot{"can_use_spacy": true}
-    - utter_spacy_or_tensorflow
+    - pipeline_recommendation_form
+    - form{"name": null}
     - utter_anything_else
 
-## not new to rasa + nlu + intent + pipeline recommendation, not spacy
+## not new to rasa + nlu + pipeline_recommendation_form
 * greet
     - action_greet_user
 * how_to_get_started
@@ -272,33 +270,7 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part": "intent classification"}
-    - utter_nlu_intent_tutorial
-    - utter_offer_recommendation
-* pipeline_recommendation OR affirm
-    - utter_what_language
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
-    - utter_what_language
-* enter_data{"language": "en"}
-    - action_store_bot_language
-    - slot{"can_use_spacy": false}
-    - utter_tensorflow
-    - utter_anything_else
-
-## not new to rasa + nlu + entity + pipeline duckling
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding": false}
-    - utter_ask_which_product
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
+    - utter_ask_nlu_part
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
@@ -306,38 +278,11 @@
     - action_faqs
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
-    - utter_ask_entities
-* enter_data{"entity": "date ranges"}
-    - action_store_entity_extractor
-    - slot{"entity_extractor": "DucklingHTTPExtractor"}
-    - utter_duckling
+    - pipeline_recommendation_form
+    - form{"name": "pipeline_recommendation_form"}
+    - form{"name": null}
     - utter_anything_else
 
-## not new to rasa + nlu + entity + pipeline duckling
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding": false}
-    - utter_ask_which_product
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part": "entity recognition"}
-    - utter_nlu_entity_tutorial
-    - utter_offer_recommendation
-* pipeline_recommendation OR affirm
-    - utter_ask_entities
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
-    - utter_ask_entities
-* enter_data{"entity": "date ranges"}
-    - action_store_entity_extractor
-    - slot{"entity_extractor": "DucklingHTTPExtractor"}
-    - utter_duckling
-    - utter_anything_else
 
 ## FAQ - tell more about rasa x ee
 * ask_faq_ee

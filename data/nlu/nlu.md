@@ -692,7 +692,8 @@
 - which languages does rasa support
 - which languages supports rasa
 - your [NLU](product) understand [spanish](language)?
-- could I program spanish speaking bots?
+- could I program [spanish](language) speaking bots?
+- can I make a bot in [Dutch](language)?
 
 ## intent:ask_faq_opensource
 - Are you open-source?
@@ -1490,8 +1491,6 @@
 - I need to know what time it is.
 - Pardon me, but do you know the time?
 - Tell me the time.
-- Time, please!
-- Time?
 - What is the current time?
 - What is the exact time?
 - What is the hour and minute right now?
@@ -2642,7 +2641,6 @@
 - abhbose3k@gmail.com
 - [accenture](company)
 - [allianz](company)
-- [amounts](entity)
 - [arabic](language)
 - [assistant to the CEO](job_function)
 - [bayer](company)
@@ -2653,8 +2651,6 @@
 - [chinese](language) is the language of my bot
 - [chinese](language) is the only language but I want to add more
 - [clue](company)
-- [companies](entity)
-- [custom entity](entity)
 - [data analyst](job_function)
 - [data science engineer](job_function)
 - [data scientist](job_function)
@@ -2662,7 +2658,6 @@
 - [dev](job_function)
 - [developer advocate](job_function)
 - [developer](job_function)
-- [distances](entity)
 - [dutch](language)
 - [dutch](language) is the language of my bot
 - [dutch](language) is the only language but I want to add more
@@ -2681,7 +2676,6 @@
 - [google enginer](job_function)
 - [growth manager](job_function)
 - [hindi](language)
-- [how long](entity)
 - [intel](company)
 - [italian](language)
 - [italian](language) is the language of my bot
@@ -2698,7 +2692,6 @@
 - [no job](job_function)
 - none
 - none i will build it from scraps
-- [numbers](entity)
 - one billion
 - one
 - one that flatters me every morning
@@ -2720,7 +2713,6 @@
 - [spanish](language) is the only language but I want to add more
 - [susi ai](company)
 - [t-mobile US](company)
-- [time](entity)
 - [ubisoft](company)
 - [vodafone](company)
 - [wurst co kg](company)
@@ -2756,7 +2748,6 @@
 - all the training data was in [mandarin](language)
 - all the training data was in [portuguese](language)
 - all the training data was in [spanish](language)
-- amounts of [money](entity)
 - an ice cream bot
 - around $500,000 per year
 - around 200k
@@ -2779,19 +2770,15 @@
 - driver
 - eisenkleber limited co kg
 - email = Patti.Salazar@gmail.com
-- extracting [durations](entity)
 - faq
 - funny bot
-- get [dates](entity) from messages
 - got it
 - half a million
 - have no idea
 - head of biz deve
 - health care
-- how much [money](entity)
 - i am [self emplayed](job_function)
 - i am a [projject manager](job_function)
-- i am interested in [ordinals](entity)
 - i don't have one
 - i don't have it
 - i don't know
@@ -2811,7 +2798,6 @@
 - i want to build an insurance bot
 - i want to build bots
 - i want to built a [Eric Jones](name) bot
-- i want to extract [names](entity)
 - i work in [biz dev](job_function)
 - i'd like to build a transformer
 - i'd like to build sentient glibber or glitter
@@ -4325,7 +4311,6 @@
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
 - can you help me with the pipeline?
-- give me a recommendation
 - pipeline
 - pipeline recommendation
 - recommend pipeline
@@ -4339,6 +4324,63 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
+- what pipeline should I use for [entity extraction](nlu_part)?
+- What is the best [entity extractor](nlu_part)?
+- Is duckling the best [entity extractor](nlu_part)?
+- What is the best pipeline for [entity extraction](nlu_part)?
+- I want to [extract](nlu_part) [places](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [name](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [organizations](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) amounts of [money](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [duration](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [distance](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [ordinals](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [times](entity_to_extract), what is the best pipeline?
+- I want to [extract](nlu_part) [dates](entity_to_extract), what is the best pipeline?
+- what is the best pipeline for [extracting](nlu_part) [places](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [name](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [organizations](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) amounts of [money](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [duration](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [distance](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [ordinals](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [times](entity_to_extract)?
+- what is the best pipeline for [extracting](nlu_part) [dates](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [places](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [name](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [organizations](entity_to_extract)?
+- what is the best [extractor](nlu_part) for amounts of [money](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [duration](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [distance](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [ordinals](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [times](entity_to_extract)?
+- what is the best [extractor](nlu_part) for [dates](entity_to_extract)?
+- [place](entity_to_extract)
+- [name](entity_to_extract)
+- [organisation](entity_to_extract)
+- [organization](entity_to_extract)
+- [money](entity_to_extract)
+- [duration](entity_to_extract)
+- [distance](entity_to_extract)
+- [ordinals](entity_to_extract)
+- [time](entity_to_extract)
+- [date](entity_to_extract)
+- [amount-of-money](entity_to_extract)
+- [numbers](entity_to_extract)
+- [amounts](entity_to_extract)
+- [companies](entity_to_extract)
+- [custom entity](entity_to_extract)
+- [distances](entity_to_extract)
+- [how long](entity_to_extract)
+- [numbers](entity_to_extract)
+- [times](entity_to_extract)
+- amounts of [money](entity_to_extract)
+- [extracting](nlu_part) [durations](entity_to_extract)
+- get [dates](entity_to_extract) [from messages](nlu_part)
+- how much [money](entity_to_extract)
+- i am interested in [ordinals](entity_to_extract)
+- i want to [extract](nlu_part) [names](entity_to_extract)
+- [entities](nlu_part)
 
 ## intent:rasa_cost
 - Are you free?
@@ -4889,7 +4931,7 @@
 - thx
 - yes thanks
 
-## synonym: duration
+## synonym:duration
 - how long
 - durations
 
@@ -4927,14 +4969,27 @@
 ## synonym:distance
 - distances
 
+## synonym:english
+- English
+- en
+- EN
+- American
+- British
+- british
+
 ## synonym:entity recognition
 - ner
-- entity extraction 
+- entity extraction
 - Entity recognition
 - NER
 - recognition
 - etnity extraction
 - entities
+- entity extractor
+- extract
+- extracting
+- extractor
+- from messages
 
 ## synonym:full stack developer
 - full stack develope
@@ -4971,6 +5026,7 @@
 
 ## synonym:organisation
 - companies
+- organization
 
 ## synonym:rasa
 - Rasa
@@ -4984,6 +5040,9 @@
 - Full stack
 - full
 - full framework
+
+## synonym:time
+- times
 
 ## synonym:wit.ai
 - wit
