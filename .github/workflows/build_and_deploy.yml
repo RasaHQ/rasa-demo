@@ -79,7 +79,6 @@ jobs:
     name: Build and Push Images
     runs-on: ubuntu-latest
     steps:
-    
     - uses: actions/checkout@v1
     - name: Authenticate into Google Cloud Platform
       uses: actions/gcloud/auth@master
@@ -94,7 +93,7 @@ jobs:
       run: echo ::set-env name=BUILD_NUMBER::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
     - name: Build Image
       run: |
-        docker build -t gcr.io/replicated-test/rasa-demo:v$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
+        docker build -t gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Configure Docker to use Google Cloud Platform
       uses: actions/gcloud/cli@master
       with:
@@ -103,4 +102,4 @@ jobs:
       uses: actions/gcloud/cli@master
       with:
         entrypoint: sh
-        args: -c "docker push gcr.io/replicated-test/rasa-demo:v$BUILD_NUMBER"
+        args: -c "docker push gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER"
