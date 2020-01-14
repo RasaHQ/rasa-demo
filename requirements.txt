@@ -1,2 +1,2 @@
-rasa==1.6.1
+rasa==1.6.1  # when updating, check the sdk version in the Dockerfile as well!
 -r demo/requirements.txt

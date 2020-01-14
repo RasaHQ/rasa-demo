@@ -1,4 +1,4 @@
-FROM rasa/rasa-sdk:1.5.2
+FROM rasa/rasa-sdk:1.6.1
 
 WORKDIR /app
 
