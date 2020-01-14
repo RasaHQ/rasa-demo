@@ -57,7 +57,9 @@ intents:
 - nicetomeeyou
 - nlu_generation_tool_recommendation
 - nlu_info
-- out_of_scope: {triggers: respond_out_of_scope}
+- out_of_scope:
+    triggers: respond_out_of_scope
+    use_entities: []
 - pipeline_recommendation
 - react_negative
 - react_positive

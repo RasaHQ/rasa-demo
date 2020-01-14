@@ -2835,6 +2835,7 @@
 - faq
 - funny bot
 - get [dates](entity) from messages
+- how to extract [relationship](entity)
 - got it
 - half a million
 - have no idea
@@ -4701,7 +4702,6 @@
 - switching from [DialogFlow](current_api)
 
 ## intent:technical_question
-- how to extract [relationship](entity)
 - Create ecommerce bot
 - How can I visualise conversation flow?
 - How many languages does Spacy support?
