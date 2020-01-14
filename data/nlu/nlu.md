@@ -547,6 +547,12 @@
 - what is rasa x enterprise
 - what is the enterprise edition
 - what's the rasa x enterprise edition
+- please provide information on your enterprise package
+- what is rasa enterprise
+- rasa enterprise
+- tell me about rasa enterprise
+- rasa enterprise please
+- more info about enterprise
 
 ## intent:ask_faq_is_programming_required
 - Does rasa require programming knowledge
@@ -2250,6 +2256,10 @@
 - I would like to have a call with sales team
 - I would like to have a demo scheduled
 - I would like to talk to someone from your sales team
+- i want to buy the enterprise edition
+- i would like rasa enterprise
+- purchase rasa enterprise 
+- buy rasa enterprise
 - Ok I want to talk to your sales team immediately
 - Please connect me to someone from sales
 - Please schedule a sales call
@@ -2354,7 +2364,6 @@
 - ok, well, then a sales call with the fabulous [Theodora Estrada](name)
 - please can you book call for me
 - please connect me to sales
-- please provide information on your enterprise package
 - request a call
 - request call
 - request call with sales team

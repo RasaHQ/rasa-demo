@@ -217,8 +217,8 @@ templates:
   utter_ask_faq_tutorialnlu:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_ask_faq_ee:
-  - text: Rasa Enterprise is our enterprise product, which comes with more options
-      for increasing security and privacy, as well as expert support.
+  - text: Rasa Enterprise is an enterprise-ready subscription to develop and ship contextual assistants at scale,
+      which comes features for increased security and privacy, as well as expert support.
   utter_ask_faq_python_version:
   - text: The supported Python versions are 3.6 and 3.7 🐍. The recommended version
       is 3.7.
@@ -511,10 +511,9 @@ templates:
       We strive to provide well-maintained and documented
       open source tools, allowing all makers to build the best AI assistants without
       friction.\nIn addition to that,\
-      \ we offer a toolset [Rasa X](https://rasa.com/docs/rasa-x/), which comes in\
-      \ two editions:\n- Rasa X Community Edition (Free)\n- Rasa X Enterprise Edition\
-      \ (Paid Subscription)\n\nYou can find out more [here](https://rasa.com/product/pricing/)\
-      \ about the differences between the Rasa X editions."
+      \ we offer the free toolset [Rasa X](https://rasa.com/docs/rasa-x/) and paid Rasa Enterprise \
+      \ subscriptions.\n\nYou can find out more [here](https://rasa.com/product/pricing/)\
+      \ about the plans and pricing."
   utter_first_bot_with_rasa:
   - text: Let's go. Are you new to Rasa?
   utter_get_started_step1:
