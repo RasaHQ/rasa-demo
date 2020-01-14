@@ -580,12 +580,6 @@ templates:
   - text: Sure, we can book a sales call! Let's get to know each other first 😉
   utter_must_accept:
   - text: We can't speak until you accept.
-  utter_next_event:
-  - text: The next event is the {event_name} in {event_location} on {event_date}.
-      Hope to see you there!
-  utter_next_event_for_location:
-  - text: The next event in {event_location} is the {event_name} on {event_date}.
-      Hope to see you there!
   utter_nicetomeeyou:
   - text: Likewise!
   - text: Thank you. It is a pleasure to meet you as well!
@@ -604,14 +598,9 @@ templates:
   utter_nlu_tools:
   - text: We recommend using Rasa X to easily create and classify NLU data from within
       a UI.
-  utter_no_community_event:
-  - text: Looks like we don't have currently have any Rasa events planned.
   utter_no_email:
   - text: Hmm, I'm not sure that's a valid email, please make sure to include the
       full address 😅
-  utter_no_event_for_location_but_next:
-  - text: Sorry, there are currently no events at your location. However, the next
-      event is the {event_name} in {event_location} on {event_date}.
   utter_no_guide_for_switch:
   - text: Sorry, but we don't have a migration guide for that tool yet. You can still
       follow the [tutorial](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/)
@@ -884,15 +873,11 @@ actions:
 - utter_link_to_forum
 - utter_moreinformation
 - utter_must_accept
-- utter_next_event
-- utter_next_event_for_location
 - utter_nicetomeeyou
 - utter_nlu_entity_tutorial
 - utter_nlu_intent_tutorial
 - utter_nlu_tools
-- utter_no_community_event
 - utter_no_email
-- utter_no_event_for_location_but_next
 - utter_no_guide_for_switch
 - utter_no_more_steps
 - utter_no_speak

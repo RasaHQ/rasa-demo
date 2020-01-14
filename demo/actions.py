@@ -578,55 +578,72 @@ class CommunityEventAction(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
-        intent = tracker.latest_message["intent"].get("name")
+
         events = self._get_events()
+        location = next(tracker.get_latest_entity_values("location"), None)
+        events_for_location = None
+        if location:
+            location = location.title()
+            events_for_location = [
+                e
+                for e in events
+                if e.city.lower() == location.lower()
+                or e.country.lower() == location.lower()
+            ]
 
         if not events:
-            dispatcher.utter_template("utter_no_community_event", tracker)
-        elif intent == "ask_which_events":
-            self._utter_event_overview(dispatcher)
-        elif intent == "ask_when_next_event":
-            self._utter_next_event(tracker, dispatcher)
+            dispatcher.utter_message(
+                text="Looks like we don't have currently have any Rasa events planned."
+            )
+        else:
+            self._utter_events(
+                tracker, dispatcher, events, events_for_location, location
+            )
 
         return []
 
-    def _utter_event_overview(self, dispatcher: CollectingDispatcher) -> None:
-        events = self._get_events()
-        event_items = ["- {} in {}".format(e.name_as_link(), e.city) for e in events]
-        locations = "\n".join(event_items)
-        dispatcher.utter_message(
-            "Here are the next Rasa events:\n\n"
-            + locations
-            + "\n\nWe hope to see you at them!"
-        )
-
-    def _utter_next_event(
-        self, tracker: Tracker, dispatcher: CollectingDispatcher
+    @staticmethod
+    def _utter_events(
+        tracker: Tracker,
+        dispatcher: CollectingDispatcher,
+        events: List,
+        events_for_location: List,
+        location: Text,
     ) -> None:
-        location = next(tracker.get_latest_entity_values("location"), None)
-        events = self._get_events()
+
+        only_next = True if "next" in tracker.latest_message.get("text") else False
 
         if location:
-            events_for_location = [
-                e for e in events if e.city == location or e.country == location
-            ]
-            if not events_for_location and events:
-                next_event = events[0]
-                dispatcher.utter_template(
-                    "utter_no_event_for_location_but_next",
-                    tracker,
-                    **next_event.as_kwargs(),
+            if not events_for_location:
+                header = (
+                    f"Sorry, there are currently no events in {location}. \n\n"
+                    "However, here are the upcoming Rasa events:"
                 )
-            elif events_for_location:
-                next_event = events_for_location[0]
-                dispatcher.utter_template(
-                    "utter_next_event_for_location", tracker, **next_event.as_kwargs()
-                )
-        elif events:
-            next_event = events[0]
-            dispatcher.utter_template(
-                "utter_next_event", tracker, **next_event.as_kwargs()
-            )
+                if only_next:
+                    header = (
+                        f"Sorry, there are currently no events in {location}. \n\n"
+                        "However, here is the next Rasa event:"
+                    )
+
+            else:
+                events = events_for_location
+                header = f"Here are the upcoming Rasa events in {location}:"
+                if only_next:
+                    header = f"Here is the next event in {location}:"
+
+        else:
+            header = "Here are the upcoming Rasa events:"
+            if only_next:
+                header = "Here is the next Rasa event:"
+
+        if only_next:
+            events = events[0:1]
+
+        event_items = [f"- {e.name_as_link()} in {e.city}" for e in events]
+        events = "\n".join(event_items)
+        dispatcher.utter_message(
+            text=f"{header} \n\n {events} \n\n We hope to see you there!"
+        )
 
 
 class ActionNextStep(Action):

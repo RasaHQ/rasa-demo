@@ -5,7 +5,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-DATE_FORMAT = "%d %B %Y"
+DATE_FORMAT = "%d %B, %Y"
 
 
 class CommunityEvent:
@@ -24,18 +24,16 @@ class CommunityEvent:
 
     @classmethod
     def from_html(cls, html) -> Optional["CommunityEvent"]:
-        link = html.a.get("href")
-
-        event_properties = html.get_text().split(",")
-
-        if len(event_properties) != 3:
-            logger.warning("Error when trying to parse event details from html.")
+        try:
+            city = html.contents[0]
+            link = html.contents[3].get("href")
+            name = html.contents[3].contents[0]
+            date_as_string = html.contents[8]
+            country = get_country_for(city)
+            date = parse_community_date(date_as_string).date()
+        except Exception as e:
+            logger.warning(f"Error when trying to parse event details from html.\n{e}")
             return None
-
-        city, name, date_as_string = html.get_text().split(",")
-        country = get_country_for(city)
-
-        date = parse_community_date(date_as_string).date()
 
         return cls(
             name.strip(),
@@ -83,12 +81,10 @@ def get_community_events() -> List[CommunityEvent]:
 
         events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
         # [1].find("ul").find_all("li")
-        print(events)
         events = [CommunityEvent.from_html(e) for e in events]
 
         now = datetime.date.today()
         events = [e for e in events if e is not None and e.date >= now]
-        print(events)
         return sorted(events, key=lambda e: e.date)
 
     return []
