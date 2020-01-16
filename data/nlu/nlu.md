@@ -730,6 +730,7 @@
 - would you call rasa open source software?
 - would you consider rasa open source software?
 - How is it opensource
+- about Rasa OPen Source
 
 ## intent:ask_faq_python_version
 - What Python version should I use?
@@ -1260,6 +1261,7 @@
 - when is your birthday?
 - when were you born?
 - when you were bon
+- how old r u ?
 
 ## intent:ask_isbot
 - Ar you a bot ?
@@ -3125,6 +3127,7 @@
 - wordpress
 - slack
 - e commerce bot
+- cicciopasticcio
 
 ## intent:explain
 - can you elaborate
@@ -4319,6 +4322,7 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- cosa posso fare?
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4391,6 +4395,7 @@
 - what is the price?
 - whats the cost of rasa
 - your cost?
+- do i need to pay to use rasa
 
 ## intent:react_negative
 - I am feeling bad
@@ -4824,6 +4829,7 @@
 - how to add dropdowns?
 - replace default nlu with custom component
 - can i programm a vocal assistant
+- connect rasa to my own website
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4906,21 +4912,15 @@
 - thx
 - yes thanks
 
-## lookup: location
-data/nlu/lookups/location.txt
-
-## lookup: product
-data/nlu/lookups/products.txt
-
 ## synonym: duration
-- how long
 - durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
-- usa
 - United States
+- U.S.
+- usa
 
 ## synonym:United Kingdom
 - UK
@@ -4930,21 +4930,21 @@ data/nlu/lookups/products.txt
 - both
 
 ## synonym:core
-- Core
 - CORE
+- Core
 
 ## synonym:custom actions
-- actions
 - Actions
 - Custom actions
+- actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
-- DialogFlwo
 - dialog flow
+- DialogFlwo
+- DialogFlow
 - google
 
 ## synonym:distance
@@ -4965,8 +4965,8 @@ data/nlu/lookups/products.txt
 
 ## synonym:intent classification
 - intent classificaton
-- intent recognition
 - intent
+- intent recognition
 - intents
 
 ## synonym:italian
@@ -4974,9 +4974,9 @@ data/nlu/lookups/products.txt
 
 ## synonym:luis
 - LUIS
-- Luis
-- LUIS.ai
 - luis.ai
+- LUIS.ai
+- Luis
 
 ## synonym:money
 - amounts
@@ -4985,10 +4985,10 @@ data/nlu/lookups/products.txt
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
 - rasa_nlu
+- NLU
 
 ## synonym:organisation
 - companies
@@ -4998,28 +4998,34 @@ data/nlu/lookups/products.txt
 
 ## synonym:stack
 - fullstack
-- Full Stack
-- Full
-- full stack
-- full staclk
-- Full stack
 - full
+- Full stack
+- full staclk
 - full framework
+- full stack
+- Full
+- Full Stack
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- rasa x
-- Rasa X
-- X
 - Rasax
-- rasax
 - RASAX
+- Rasa X
+- rasa x
 - RASA X
+- X
+- rasax
 
 ## regex:greet
 - hey[^\s]*
 
 ## regex:zipcode
 - [0-9]{5}
+
+## lookup:location.txt
+  /app/git/1/data/location.txt
+
+## lookup:products.txt
+  /app/git/1/data/products.txt
