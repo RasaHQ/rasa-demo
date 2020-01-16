@@ -19,6 +19,8 @@ pipeline:
   - number
   - amount-of-money
 - name: EntitySynonymMapper
+- name: ResponseSelector
+  retrieval_intent: out_of_scope
 policies:
 - name: EmbeddingPolicy
   max_history: 10

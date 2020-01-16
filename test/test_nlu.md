@@ -528,10 +528,18 @@
 - what is [entity recognition](nlu_part)?
 - I don’t understand [entity recognition](nlu_part)
 
-## intent:out_of_scope
+## intent:out_of_scope/non_english
+- de donde eres
+- de que lugar eres?
+- epdi iruka
+- eres humana
+- kalhmera sara ti kaneis
+- kannst du auch deutsch?
+- spreek je Nederlands?
+
+## intent:out_of_scope/other
 - who is your favourite robot?
 - can you tell me how to build a bot?
-- kannst du auch deutsch?
 - isn't the newsletter just spam?
 - i want to buy a roomba for my grandson
 - Can I ask you questions first?

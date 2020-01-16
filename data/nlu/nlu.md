@@ -360,6 +360,17 @@
 ## intent:ask_faq_channels
 - Can you tell which messaging channels does rasa support?
 - Channels
+- Can I use the rasa code for my own website?
+- Can I use your open source code on my website?
+- how to use rasa in salesforce
+- i want to integrate my rasa bot to webex  may i know how
+- how to setup rasax on slack
+- so... i trying to deploy my rasa bot on
+- how to use rasa caht in react application
+- how can i setup rasa in django project ?
+- how to integrate u in my react application
+- how to integrate rasa chatbot with my website
+- Is there a connector for skype?
 - DOES RASA SUPPORT MESSENGER?
 - DOES RASA SUPPORT SMS?
 - DOES RASA SUPPORT THE WHATS APP?
@@ -536,6 +547,12 @@
 - what is rasa x enterprise
 - what is the enterprise edition
 - what's the rasa x enterprise edition
+- please provide information on your enterprise package
+- what is rasa enterprise
+- rasa enterprise
+- tell me about rasa enterprise
+- rasa enterprise please
+- more info about enterprise
 
 ## intent:ask_faq_is_programming_required
 - Does rasa require programming knowledge
@@ -563,9 +580,13 @@
 - which programming languages
 - which programming languages do you support?
 - which programming languages does rasa supports?
+- rasa php
 - Do I have to be a programmer to use rasa?
 - what's your programming language
 - what programming language do you recommend
+- can I develop using java
+- Does it have a java library
+- does rasa support python
 - programming language
 - what programming language does rasa use
 - But what kind of programming language is the code written in?
@@ -679,7 +700,59 @@
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
 
-## intent:ask_faq_opensource
+## intent:ask_faq_opensource_cost
+- Are you free?
+- Can you tell me whats the price for rasa platform?
+- How much do you cost?
+- How much does it cost?
+- How much does rasa cost?
+- How much it costs
+- I want to learn more about the pricing
+- I would like to know the cost first.
+- Subscription cost?
+- Subscription price
+- What does Rasa cost?
+- What is the cost of RASA?
+- What is the price ?
+- Whats the cost?
+- are you free ?
+- are you really free
+- are you really free?
+- can you give me prices ?
+- can you tell me prices
+- cost
+- cost?
+- give me the pricing
+- how cost to install Rasa?
+- how much costs the rasa platform
+- how much do you cost
+- how much does RASA cost
+- how much does Rasa cost ?
+- how much does it cost
+- how much does it cost normally?
+- how much does it cost?
+- how much does rasa cost
+- how much does rasa cost?
+- how much is it
+- how much it costs?
+- how mush does rasa cost
+- is it for free?
+- is it free
+- is it free?
+- is rasa [core](product) paid?
+- is rasa free
+- is rasa free of cost
+- is rasa stack free
+- is this free?
+- this is free?
+- what is price?
+- what is pricing of rasa
+- what is rasa cost ?
+- what is the enterprise pricing schedule?
+- what is the price of rasa
+- what is the price?
+- whats the cost of rasa
+- your cost?
 - Are you open-source?
 - Could you tell me whether rasa is open source or not?
 - How do I find out if rasa is open source?
@@ -885,6 +958,7 @@
 
 ## intent:ask_faq_voice
 - Building a rasa voice bot?
+- can i programm a vocal assistant
 - Building a voice bot using rasa.
 - Can I build a rasa voice bot?
 - Can I use my voice to speak to these bots?
@@ -903,6 +977,7 @@
 - How to build a voice bot using rasa?
 - How to build a voice bot with rasa?
 - How to build a voice bot?
+- how to integrate speech to text in rasa
 - How to use rasa to build a voice bot.
 - I can build a voice bot with rasa, right?
 - I can build a voice bot with rasa?
@@ -1142,8 +1217,6 @@
 - are you having a good day
 - are you ok
 - are you okay
-- come stai?
-- como estas
 - h r u ?
 - hello, how are you?
 - hey how are you?
@@ -1203,8 +1276,6 @@
 - whats new
 - whatsapp
 - yow are you
-- ¿Qué pasa?
-- ça va ?
 
 ## intent:ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -2017,13 +2088,11 @@
 - Who are you
 - Who are you?
 - You are Human ?
-- como te llamas
 - hey what is your name
 - hi! what's your name?
 - ok who are you ?
 - tell me something about you
 - u are?
-- wer bist Du?
 - what are you called?
 - what is sara?
 - what is your job?
@@ -2063,6 +2132,7 @@
 - whom i talking to
 - yes but who are you in your heart
 - may i know your name
+- what is rasa mascot
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2127,7 +2197,6 @@
 - then bye
 - tlak to you later
 - toodle-oo
-- tschüssikowski
 
 ## intent:canthelp
 - I think you cant help me
@@ -2187,6 +2256,10 @@
 - I would like to have a call with sales team
 - I would like to have a demo scheduled
 - I would like to talk to someone from your sales team
+- i want to buy the enterprise edition
+- i would like rasa enterprise
+- purchase rasa enterprise 
+- buy rasa enterprise
 - Ok I want to talk to your sales team immediately
 - Please connect me to someone from sales
 - Please schedule a sales call
@@ -2291,7 +2364,6 @@
 - ok, well, then a sales call with the fabulous [Theodora Estrada](name)
 - please can you book call for me
 - please connect me to sales
-- please provide information on your enterprise package
 - request a call
 - request call
 - request call with sales team
@@ -2790,6 +2862,7 @@
 - faq
 - funny bot
 - get [dates](entity) from messages
+- how to extract [relationship](entity)
 - got it
 - half a million
 - have no idea
@@ -3121,8 +3194,8 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
-- botonic
-- wordpress
+- [botonic](company)
+- [wordpress](company)
 - slack
 - e commerce bot
 
@@ -3391,10 +3464,10 @@
 ## intent:how_to_get_started
 - can you help me to build a bot
 - can you tell me how to build a bot?
-- como inicio en rasa
 - About [Core](product)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
+- I wanted to build a bot my product customer support
 - Can you tell me more about [NLU](product)?
 - Get started
 - HOW CAN i connect to rasa
@@ -3469,7 +3542,6 @@
 - What are the components of rasa?
 - What are the prerequisites for installing RASA
 - What do I Need for Rasa implementation?
-- Wie fange ich mit Rasa an?
 - Yeah please help me out
 - Yes I am [new](user_type)
 - Yes, I want to know more about [NLU](product)
@@ -3499,6 +3571,7 @@
 - components in rasa
 - components of Rasa?
 - components of rasa
+- rasa components
 - different parts of Rasa
 - do you know how to set up a chatbot?
 - find out how to get started with Rasa
@@ -3516,7 +3589,6 @@
 - help with rasa
 - hi can you help e build a chatbot
 - hi, can you help in understanding NLU
-- hilf mir beim start
 - how about [nlu](product)
 - how about building chatbot
 - how can I build a chatbot
@@ -3972,7 +4044,31 @@
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
 
-## intent:out_of_scope
+## intent:out_of_scope/non_english
+- Wie fange ich mit Rasa an?
+- hilf mir beim start
+- tschüssikowski
+- ¿Qué pasa?
+- ça va ?
+- como te llamas
+- wer bist Du?
+- como inicio en rasa
+- come stai?
+- como estas
+- de donde eres
+- de que lugar eres?
+- epdi iruka
+- eres humana
+- kalhmera sara ti kaneis
+- kannst du auch deutsch?
+- kannst du dies auch auf deutsch?
+- oui je besoine de l'aide
+- que puedes hacer?
+- tu parles francais?
+- tudo bom
+
+## intent:out_of_scope/other
+- I am asking you an out of scope question
 - 4 + 2 = ?
 - After registration I see that I have an available balance of 0.00000000. What does this balance represent?
 - Are you ready?
@@ -4091,8 +4187,6 @@
 - connect to alexa
 - cr
 - custom service
-- de donde eres
-- de que lugar eres?
 - did i break you
 - dinner
 - do you believe in god?
@@ -4107,8 +4201,6 @@
 - do you want to marry me?
 - docs
 - doctor
-- epdi iruka
-- eres humana
 - everything
 - example of a chatbot
 - genocide
@@ -4141,7 +4233,6 @@
 - how many lines of codes
 - how much is 10 + 89 ?
 - how much is 10 + 89
-- how to extract relationship
 - how to get rasa studio
 - how to go to newyork ?
 - i am hungry
@@ -4182,9 +4273,6 @@
 - isn't the newsletter just spam?
 - it's a pity
 - i´m hungry
-- kalhmera sara ti kaneis
-- kannst du auch deutsch?
-- kannst du dies auch auf deutsch?
 - license
 - ljljl
 - lunch
@@ -4204,14 +4292,12 @@
 - only that?
 - order good
 - order pizza
-- oui je besoine de l'aide
 - personal or work?
 - pizza
 - please help with my ice cream it's dripping
 - please hjave lunchj
 - please hurry, i have deadline in two weeks to deliver the bot it is for very big company
 - please play music
-- que puedes hacer?
 - rasa topics
 - really? you're so touchy?
 - refresh
@@ -4233,8 +4319,6 @@
 - that link doesn't work!
 - the one that is better than you
 - tricked  ya
-- tu parles francais?
-- tudo bom
 - turn off my stove
 - umm
 - wait a bit i am still reading
@@ -4260,14 +4344,12 @@
 - what is google rcs
 - what is machine learning
 - what is nice?
-- what is rasa mascot
 - what is the capital of delhi
 - what is the capital of india
 - what is the current petrol price
 - what is the day ?
 - what is the real use case where we can use this one
 - what is your address?
-- what is your github link
 - what is your purpose
 - what lnu mean?
 - what the latest news ?
@@ -4337,60 +4419,6 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
-
-## intent:rasa_cost
-- Are you free?
-- Can you tell me whats the price for rasa platform?
-- How much do you cost?
-- How much does it cost?
-- How much does rasa cost?
-- How much it costs
-- I want to learn more about the pricing
-- I would like to know the cost first.
-- Subscription cost?
-- Subscription price
-- What does Rasa cost?
-- What is the cost of RASA?
-- What is the price ?
-- Whats the cost?
-- are you free ?
-- are you really free
-- are you really free?
-- can you give me prices ?
-- can you tell me prices
-- cost
-- cost?
-- give me the pricing
-- how cost to install Rasa?
-- how much costs the rasa platform
-- how much do you cost
-- how much does RASA cost
-- how much does Rasa cost ?
-- how much does it cost
-- how much does it cost normally?
-- how much does it cost?
-- how much does rasa cost
-- how much does rasa cost?
-- how much is it
-- how much it costs?
-- how mush does rasa cost
-- is it for free?
-- is it free
-- is it free?
-- is rasa [core](product) paid?
-- is rasa free
-- is rasa free of cost
-- is rasa stack free
-- is this free?
-- this is free?
-- what is price?
-- what is pricing of rasa
-- what is rasa cost ?
-- what is the enterprise pricing schedule?
-- what is the price of rasa
-- what is the price?
-- whats the cost of rasa
-- your cost?
 
 ## intent:react_negative
 - I am feeling bad
@@ -4651,6 +4679,7 @@
 - where can i find this code
 - where is the source code?
 - where is your source code
+- what is your github link
 - yes with your source code
 - your code
 - your code please
@@ -4700,8 +4729,6 @@
 - switching from [DialogFlow](current_api)
 
 ## intent:technical_question
-- Can I use the rasa code for my own website?
-- Can I use your open source code on my website?
 - Create ecommerce bot
 - How can I visualise conversation flow?
 - How many languages does Spacy support?
@@ -4712,11 +4739,8 @@
 - how do you retrieve previous messages
 - how many words can you handle?
 - how to use flask?
-- how to use rasa in salesforce
 - how to visualise dialogue flow
 - is this test compatible with linux?
-- rasa php
-- rasa-core error
 - what database rasa use
 - what is significance of domain.yml file
 - what is the policy
@@ -4730,74 +4754,48 @@
 - Can you send messages based on events?
 - How did rasa works?
 - How do I use ngrok with [rasa x](product)?
-- I am getting some error
-- I have a problem
-- I need help with a problem
 - I want to know more about tracker
-- I wanted to build a bot my product customer support
-- Is there a connector for skype?
 - What is the difference between entities and slots?
 - Where can I get the source code of Rasa?
-- Which  other tools can be used to  create chatbots?
+- Which other tools can be used to create chatbots?
 - an I use Rasa for e-mail applications
 - any open source GUI rasa have?
 - any other tools to create chatbots?
-- can I develop using java
 - can i install on may mac
 - can rasa run standalone
-- can you help me with this problem
-- can you help with some documentation
-- conda threw some weird error
-- conda throws some unexpected error
 - db processing
 - do you have docker image for rasa?
-- documentation
 - does rasa support prestashop?
-- does rasa support python
-- getting some error
 - hey can i run this onpremise
 - how about interactive learning
 - how can I get a docker image
 - how can I train data
 - how can i deploy my server on production?
-- how can i setup rasa in django project ?
 - how i deploy my bot on production server?
 - how to get the metadata file
 - how to integrate RASA with customer data?
-- how to integrate rasa chatbot with my website
-- how to integrate speech to text in rasa
-- how to integrate u in my react application
 - how to use formaction
-- how to use rasa caht in react application
-- i am having trouble setting this up
+- how to use form actions
+- how to use forms
 - interactive learning?
 - is rasa core able to run standalone?
 - ok quick question here do i download this api
-- rasa components
-- so... i trying to deploy my rasa bot on
-- technical side of things?
 - tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible.
-- there is error
 - training model?
 - what are the features does rasa have?
 - what does on-premise mean?
 - what infrastructure is required to run a bot?
 - what is a synonym called?
 - what is endpoint
-- what is open source?
 - what is pip?
 - what is the last version of rasa [core](product)?
 - what technologies did u use to create more mature chatbot?
 - what's pip
-- where is formal documentation
-- which technology is used to create you
 - yes what if i have to code open end responses into some categories
-- your specifications
 - best policies to be used
 - Deploy to a Server
-- Hello, Sara. How can I configure etnity extraction for russian lnguage?
+- Hello, Sara. How can I configure [etnity extraction](nlu_part) for [russian](language) lnguage?
 - can I use Rasa with my Raspberry Pi
-- how to setup rasax on slack
 - Can I run Rasa on a raspberry pi ?
 - can I run rasa on a raspberry pi
 - Can I run rasa on a raspberry pi ?
@@ -4807,9 +4805,7 @@
 - deploy rasa chat bot in flask
 - How can i automate retraining of my rasa models
 - can i user rasa for my text classification problem?
-- i want to integrate my rasa bot to webex  may i know how
 - how to initialize a new project?
-- Does it have a java library
 - how to train model
 - what are the policy available
 - i need help with policies
@@ -4819,11 +4815,23 @@
 - how to handle sending scheduled message to custom webhooks
 - actions
 - actions on rasa
-- why do I get errors using rasa?
-- there are some python incompatibilities
 - how to add dropdowns?
 - replace default nlu with custom component
-- can i programm a vocal assistant
+- which technology is used to create you
+- rasa-core error
+- I am getting some error
+- I have a problem
+- I need help with a problem
+- can you help me with this problem
+- can you help with some documentation
+- conda threw some weird error
+- conda throws some unexpected error
+- getting some error
+- i am having trouble setting this up
+- technical side of things?
+- there is error
+- why do I get errors using rasa?
+- there are some python incompatibilities
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4952,10 +4960,12 @@ data/nlu/lookups/products.txt
 
 ## synonym:entity recognition
 - ner
-- entity extraction
+- entity extraction 
 - Entity recognition
 - NER
 - recognition
+- etnity extraction
+- entities
 
 ## synonym:full stack developer
 - full stack develope

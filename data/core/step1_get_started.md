@@ -419,7 +419,7 @@
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
 * deny
-    - utter_quickstart_nlu_only
+    - utter_ask_faq_tutorialnlu
     - utter_anything_else
 
 ## not new to rasa + nlu + unknown topic
@@ -633,8 +633,8 @@
     - utter_anything_else
 
 ## how much does rasa cost
-* rasa_cost
-    - utter_rasa_cost
+* ask_faq_opensource_cost
+    - action_faqs
     - utter_anything_else
 
 ## source code

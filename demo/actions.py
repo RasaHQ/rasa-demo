@@ -102,7 +102,10 @@ class SalesForm(FormAction):
                 self.from_entity(entity="job_function"),
                 self.from_text(intent="enter_data"),
             ],
-            "use_case": self.from_text(intent="enter_data"),
+            "use_case": [
+                self.from_text(intent="enter_data"),
+                self.from_intent(intent="ask_faq_voice", value="voice"),
+            ],
             "budget": [
                 self.from_entity(entity="amount-of-money"),
                 self.from_entity(entity="number"),
@@ -242,7 +245,7 @@ class ActionFaqs(Action):
             "ask_faq_is_programming_required",
             "ask_faq_tutorialcore",
             "ask_faq_tutorialnlu",
-            "ask_faq_opensource",
+            "ask_faq_opensource_cost",
             "ask_faq_voice",
             "ask_faq_slots",
             "ask_faq_channels",
@@ -494,7 +497,15 @@ class ActionDefaultAskAffirmation(Action):
                 }
             )
 
-        buttons.append({"title": "Something else", "payload": "/out_of_scope"})
+        # /out_of_scope is a retrieval intent
+        # you cannot send rasa the '/out_of_scope' intent
+        # instead, you can send one of the sentences that it will map onto the response
+        buttons.append(
+            {
+                "title": "Something else",
+                "payload": "I am asking you an out of scope question",
+            }
+        )
 
         dispatcher.utter_button_message(message_title, buttons=buttons)
 

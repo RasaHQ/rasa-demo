@@ -2,7 +2,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -50,7 +50,7 @@
 * ask_whatspossible
     - action_chitchat
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
 
 ## story number 5
@@ -67,7 +67,7 @@
     - utter_noworries
     - utter_anything_else
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
 
 ## story number 6
@@ -181,7 +181,7 @@
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_newsletter
 * affirm
     - utter_great
@@ -201,7 +201,7 @@
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_ask_continue_newsletter
 * deny
     - utter_thumbsup
@@ -237,7 +237,7 @@
 * deny
     - utter_nohelp
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
 * ask_whoisit
     - action_chitchat
@@ -263,7 +263,7 @@
 * deny
     - utter_nohelp
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
 * enter_data{"number":5}
     - utter_not_sure
@@ -381,7 +381,7 @@
 * ask_whoisit
     - action_chitchat
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * ask_whatspossible
     - action_chitchat
 * how_to_get_started{"product":"nlu"}
@@ -684,7 +684,7 @@
 * greet
     - action_greet_user
 * out_of_scope
-    - utter_out_of_scope
+    - respond_out_of_scope
 * affirm
     - utter_thumbsup
 * affirm
@@ -726,11 +726,11 @@
     - action_chitchat
 * ask_howold
     - action_chitchat
-* out_of_scope{"number":42}
-    - utter_out_of_scope
+* out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
-* out_of_scope{"number":42}
-    - utter_out_of_scope
+* out_of_scope
+    - respond_out_of_scope
     - utter_possibilities
 
 ## Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
@@ -846,8 +846,8 @@
 * get_started_step4
     - action_greet_user
     - slot{"shown_privacy":true}
-* rasa_cost
-    - utter_rasa_cost
+* ask_faq_opensource_cost
+    - action_faqs
     - utter_anything_else
 * affirm
     - utter_what_help

@@ -1,4 +1,4 @@
-  
+
 name: Build and Deploy
 on: [pull_request]
 
@@ -75,7 +75,7 @@ jobs:
     - name: Test Training Stories
       working-directory: ${{ github.workspace }}
       run: |
-        rasa test --stories test_stories/stories.md --fail-on-prediction-errors
+        rasa test --stories test/test_stories.md --fail-on-prediction-errors
     - name: Cross-validate NLU model
       run: |
         rasa test nlu -f 5 --cross-validation
@@ -92,7 +92,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: model
-        path: models 
+        path: models
   build-images:
     name: Build and Push Images
     needs: [lint-testing, type-testing, training-testing]
