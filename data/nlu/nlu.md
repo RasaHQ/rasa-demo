@@ -224,6 +224,8 @@
 - ys
 - yup
 - yyeeeh
+- Okay cool
+- ok..
 
 ## intent:ask_builder
 - By whom were you built?
@@ -408,6 +410,7 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- on what channels can I use rasa
 
 ## intent:ask_faq_community_size
 - Did you know the size of rasa community?
@@ -553,6 +556,8 @@
 - tell me about rasa enterprise
 - rasa enterprise please
 - more info about enterprise
+- tell me about rasa enterpeise
+- rasa enterprise plans
 
 ## intent:ask_faq_is_programming_required
 - Does rasa require programming knowledge
@@ -1276,6 +1281,8 @@
 - whats new
 - whatsapp
 - yow are you
+- how are you Rasa
+- Hey Sara, how's it going
 
 ## intent:ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -1429,6 +1436,7 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- you speak [french](language) ?
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -1473,6 +1481,7 @@
 - i need information from posters in the forum
 - ok send me to the forum
 - to the forum
+- need help on chatbot
 
 ## intent:ask_restaurant
 - Any good restaurants nearby?
@@ -2258,7 +2267,7 @@
 - I would like to talk to someone from your sales team
 - i want to buy the enterprise edition
 - i would like rasa enterprise
-- purchase rasa enterprise 
+- purchase rasa enterprise
 - buy rasa enterprise
 - Ok I want to talk to your sales team immediately
 - Please connect me to someone from sales
@@ -2481,6 +2490,7 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- I don't agree
 
 ## intent:enter_data
 - $1
@@ -3198,6 +3208,8 @@
 - [wordpress](company)
 - slack
 - e commerce bot
+- My name is [javier](name)
+- I am [Prateek](name)
 
 ## intent:explain
 - can you elaborate
@@ -3359,6 +3371,7 @@
 - whats up
 - yo
 - yoo
+- ssup?
 
 ## intent:handleinsult
 - FUCK
@@ -3460,6 +3473,8 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
+- don't you have a sweater
+- F u
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -3765,6 +3780,8 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 - I am trying to build a bot using rasa
+- i am [new](user_type) but so how can i start
+- where can i find rasa document
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4066,6 +4083,10 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
+- tertyryutyi
+- wsdrcftvgybhnj
+- kannst du mir helfen
+- tu kaisi he
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4401,6 +4422,8 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- CALL THE POLICE
+- I want to speak binary with you
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4832,6 +4855,8 @@
 - there is error
 - why do I get errors using rasa?
 - there are some python incompatibilities
+- can this be integrated with mongo db
+- Can you help me with forms
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4913,22 +4938,21 @@
 - thnks
 - thx
 - yes thanks
+- thanks for your information
 
-## lookup: location
-data/nlu/lookups/location.txt
-
-## lookup: product
-data/nlu/lookups/products.txt
+## intent:out_of_scope
+- why sky is blue?
+- tu pagal
 
 ## synonym: duration
-- how long
 - durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
-- usa
 - United States
+- U.S.
+- usa
 
 ## synonym:United Kingdom
 - UK
@@ -4938,34 +4962,34 @@ data/nlu/lookups/products.txt
 - both
 
 ## synonym:core
-- Core
 - CORE
+- Core
 
 ## synonym:custom actions
-- actions
 - Actions
 - Custom actions
+- actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
-- DialogFlwo
 - dialog flow
+- DialogFlwo
+- DialogFlow
 - google
 
 ## synonym:distance
 - distances
 
 ## synonym:entity recognition
+- entities
 - ner
-- entity extraction 
+- entity extraction
 - Entity recognition
 - NER
-- recognition
 - etnity extraction
-- entities
+- recognition
 
 ## synonym:full stack developer
 - full stack develope
@@ -4975,8 +4999,8 @@ data/nlu/lookups/products.txt
 
 ## synonym:intent classification
 - intent classificaton
-- intent recognition
 - intent
+- intent recognition
 - intents
 
 ## synonym:italian
@@ -4984,9 +5008,9 @@ data/nlu/lookups/products.txt
 
 ## synonym:luis
 - LUIS
-- Luis
-- LUIS.ai
 - luis.ai
+- LUIS.ai
+- Luis
 
 ## synonym:money
 - amounts
@@ -4995,10 +5019,10 @@ data/nlu/lookups/products.txt
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
 - rasa_nlu
+- NLU
 
 ## synonym:organisation
 - companies
@@ -5008,25 +5032,25 @@ data/nlu/lookups/products.txt
 
 ## synonym:stack
 - fullstack
-- Full Stack
-- Full
-- full stack
-- full staclk
-- Full stack
 - full
+- Full stack
+- full staclk
 - full framework
+- full stack
+- Full
+- Full Stack
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- rasa x
-- Rasa X
-- X
 - Rasax
-- rasax
 - RASAX
+- Rasa X
+- rasa x
 - RASA X
+- X
+- rasax
 
 ## regex:greet
 - hey[^\s]*
