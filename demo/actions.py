@@ -49,7 +49,7 @@ class SubscribeNewsletterForm(FormAction):
             return {"email": value}
         else:
             # no entity was picked up, we want to ask again
-            dispatcher.utter_template("utter_no_email", tracker)
+            dispatcher.utter_message(template="utter_no_email")
             return {"email": None}
 
     def submit(
@@ -67,9 +67,9 @@ class SubscribeNewsletterForm(FormAction):
 
         # utter submit template
         if added_to_list:
-            dispatcher.utter_template("utter_confirmationemail", tracker)
+            dispatcher.utter_message(template="utter_confirmationemail")
         else:
-            dispatcher.utter_template("utter_already_subscribed", tracker)
+            dispatcher.utter_message(template="utter_already_subscribed")
         return []
 
 
@@ -135,7 +135,7 @@ class SalesForm(FormAction):
             return {"business_email": value}
         else:
             # no entity was picked up, we want to ask again
-            dispatcher.utter_template("utter_no_email", tracker)
+            dispatcher.utter_message(template="utter_no_email")
             return {"business_email": None}
 
     def submit(
@@ -162,14 +162,14 @@ class SalesForm(FormAction):
         try:
             gdrive = GDriveService()
             gdrive.store_data(sales_info)
-            dispatcher.utter_template("utter_confirm_salesrequest", tracker)
+            dispatcher.utter_message(template="utter_confirm_salesrequest")
             return []
         except Exception as e:
             logger.error(
                 "Failed to write data to gdocs. Error: {}" "".format(e.message),
                 exc_info=True,
             )
-            dispatcher.utter_template("utter_salesrequest_failed", tracker)
+            dispatcher.utter_message(template="utter_salesrequest_failed")
             return []
 
 
@@ -184,12 +184,12 @@ class ActionExplainSalesForm(Action):
 
         if requested_slot not in SalesForm.required_slots(tracker):
             dispatcher.utter_message(
-                "Sorry, I didn't get that. Please rephrase or answer the question "
+                template="Sorry, I didn't get that. Please rephrase or answer the question "
                 "above."
             )
             return []
 
-        dispatcher.utter_template("utter_explain_" + requested_slot, tracker)
+        dispatcher.utter_message(template=f"utter_explain_{requested_slot}")
         return []
 
 
@@ -223,7 +223,7 @@ class ActionChitchat(Action):
             "ask_howbuilt",
             "ask_whoisit",
         ]:
-            dispatcher.utter_template("utter_" + intent, tracker)
+            dispatcher.utter_message(template=f"utter_{intent}")
         return []
 
 
@@ -258,7 +258,7 @@ class ActionFaqs(Action):
             "ask_faq_differencerasarasax",
             "ask_faq_rasax",
         ]:
-            dispatcher.utter_template("utter_" + intent, tracker)
+            dispatcher.utter_message(template=f"utter_{intent}")
         return []
 
 
@@ -391,7 +391,7 @@ class SuggestionForm(FormAction):
         return {"suggestion": self.from_text()}
 
     def submit(self, dispatcher, tracker, domain) -> List[EventType]:
-        dispatcher.utter_template("utter_thank_suggestion", tracker)
+        dispatcher.utter_message(template="utter_thank_suggestion")
         return []
 
 
@@ -419,23 +419,23 @@ class ActionGreetUser(Action):
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         if intent == "greet" or (intent == "enter_data" and name_entity):
             if shown_privacy and name_entity and name_entity.lower() != "sara":
-                dispatcher.utter_template("utter_greet_name", tracker, name=name_entity)
+                dispatcher.utter_message(template="utter_greet_name", name=name_entity)
                 return []
             elif shown_privacy:
-                dispatcher.utter_template("utter_greet_noname", tracker)
+                dispatcher.utter_message(template="utter_greet_noname")
                 return []
             else:
-                dispatcher.utter_template("utter_greet", tracker)
-                dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-                dispatcher.utter_template("utter_ask_goal", tracker)
+                dispatcher.utter_message(template="utter_greet")
+                dispatcher.utter_message(template="utter_inform_privacypolicy")
+                dispatcher.utter_message(template="utter_ask_goal")
                 return [SlotSet("shown_privacy", True)]
         elif intent[:-1] == "get_started_step" and not shown_privacy:
-            dispatcher.utter_template("utter_greet", tracker)
-            dispatcher.utter_template("utter_inform_privacypolicy", tracker)
-            dispatcher.utter_template("utter_" + intent, tracker)
+            dispatcher.utter_message(template="utter_greet")
+            dispatcher.utter_message(template="utter_inform_privacypolicy")
+            dispatcher.utter_message(template=f"utter_{intent}")
             return [SlotSet("shown_privacy", True), SlotSet("step", intent[-1])]
         elif intent[:-1] == "get_started_step" and shown_privacy:
-            dispatcher.utter_template("utter_" + intent, tracker)
+            dispatcher.utter_message(template=f"utter_{intent}")
             return [SlotSet("step", intent[-1])]
         return []
 
@@ -507,7 +507,7 @@ class ActionDefaultAskAffirmation(Action):
             }
         )
 
-        dispatcher.utter_button_message(message_title, buttons=buttons)
+        dispatcher.utter_message(text=message_title, buttons=buttons)
 
         return []
 
@@ -545,13 +545,13 @@ class ActionDefaultFallback(Action):
             and tracker.events[-4].get("name") == "action_default_ask_affirmation"
         ):
 
-            dispatcher.utter_template("utter_restart_with_button", tracker)
+            dispatcher.utter_message(template="utter_restart_with_button")
 
             return [SlotSet("feedback_value", "negative"), ConversationPaused()]
 
         # Fallback caused by Core
         else:
-            dispatcher.utter_template("utter_default", tracker)
+            dispatcher.utter_message(template="utter_default")
             return [UserUtteranceReverted()]
 
 
@@ -665,9 +665,9 @@ class ActionNextStep(Action):
         step = int(tracker.get_slot("step")) + 1
 
         if step in [2, 3, 4]:
-            dispatcher.utter_template("utter_continue_step{}".format(step), tracker)
+            dispatcher.utter_message(template=f"utter_continue_step{step}")
         else:
-            dispatcher.utter_template("utter_no_more_steps", tracker)
+            dispatcher.utter_message(template="utter_no_more_steps")
 
         return []
 
@@ -708,7 +708,7 @@ class ActionDocsSearch(Action):
         )
 
         dispatcher.utter_message(
-            "I can't answer your question directly, but I found the following from the docs:\n"
+            text="I can't answer your question directly, but I found the following from the docs:\n"
             + doc_list
         )
 
@@ -734,5 +734,5 @@ class ActionForumSearch(Action):
         forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
         forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
 
-        dispatcher.utter_message("I found the following from our forum:\n" + forum)
+        dispatcher.utter_message(text=f"I found the following from our forum:\n{forum}")
         return []
