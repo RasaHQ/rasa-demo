@@ -11,7 +11,7 @@ pipeline:
   max_ngram: 4
 - name: EmbeddingIntentClassifier
   epochs: 50
-  loss_type: margin
+  ranking_length: 5
 - name: DucklingHTTPExtractor
   url: http://localhost:8000
   dimensions:
