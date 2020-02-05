@@ -693,6 +693,11 @@ class ActionDocsSearch(Action):
             last_user_event = get_last_event_for(tracker, "user", skip=2)
             if last_user_event:
                 search_text = last_user_event.get("text")
+            else:
+                dispatcher.utter_message(
+                    text="Sorry, I can't answer your question."
+                )
+                return []
 
         # Search of docs pages
         algolia = AlgoliaAPI(
@@ -724,7 +729,13 @@ class ActionForumSearch(Action):
         # If we're in a TwoStageFallback we need to look back two more user utterance to get the actual text
         if search_text == "/technical_question{}" or search_text == "/deny":
             last_user_event = get_last_event_for(tracker, "user", skip=3)
-            search_text = last_user_event.get("text")
+            if last_user_event:
+                search_text = last_user_event.get("text")
+            else:
+                dispatcher.utter_message(
+                    text="Sorry, I can't answer your question."
+                )
+                return []
 
         # Search forum
         discourse = DiscourseAPI("https://forum.rasa.com/search")
