@@ -662,12 +662,13 @@ class ActionNextStep(Action):
         return "action_next_step"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        step = int(tracker.get_slot("step")) + 1
+        if tracker.get_slot("step"):
+            step = int(tracker.get_slot("step")) + 1
 
-        if step in [2, 3, 4]:
-            dispatcher.utter_message(template=f"utter_continue_step{step}")
-        else:
-            dispatcher.utter_message(template="utter_no_more_steps")
+            if step in [2, 3, 4]:
+                dispatcher.utter_message(template=f"utter_continue_step{step}")
+            else:
+                dispatcher.utter_message(template="utter_no_more_steps")
 
         return []
 
