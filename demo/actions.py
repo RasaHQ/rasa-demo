@@ -704,17 +704,18 @@ class ActionDocsSearch(Action):
         )
         alg_res = algolia.search(search_text)
 
-        doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
-        doc_list += (
-            "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
-            if len(alg_res.get("hits")) > 1
-            else ""
-        )
+        if alg_res:
+            doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+            doc_list += (
+                "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
+                if len(alg_res.get("hits")) > 1
+                else ""
+            )
 
-        dispatcher.utter_message(
-            text="I can't answer your question directly, but I found the following from the docs:\n"
-            + doc_list
-        )
+            dispatcher.utter_message(
+                text="I can't answer your question directly, but I found the following from the docs:\n"
+                + doc_list
+            )
 
         return []
 
@@ -739,8 +740,12 @@ class ActionForumSearch(Action):
         doc_list = discourse.query(search_text)
         doc_list = doc_list.json()
 
-        forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
-        forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
+        if doc_list:
+            forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
+            forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
 
-        dispatcher.utter_message(text=f"I found the following from our forum:\n{forum}")
+            dispatcher.utter_message(
+                text=f"I found the following from our forum:\n{forum}"
+            )
+
         return []

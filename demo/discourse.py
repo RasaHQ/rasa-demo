@@ -10,8 +10,10 @@ class DiscourseAPI(object):
 
     @staticmethod
     def get_discourse_links(topics: List[Dict[Text, Any]], index: int):
-        doc_url = f"https://forum.rasa.com/t/{topics[index]['slug']}/{str(topics[index]['id'])}"
-        forum = f"- [{topics[index]['title']}]({doc_url})"
+        forum = None
+        if topics:
+            doc_url = f"https://forum.rasa.com/t/{topics[index]['slug']}/{str(topics[index]['id'])}"
+            forum = f"- [{topics[index]['title']}]({doc_url})"
         return forum
 
     def query(self, search_string: Text, include_blurbs=False):
