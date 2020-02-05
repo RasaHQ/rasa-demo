@@ -4083,8 +4083,7 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
-- tertyryutyi
-- wsdrcftvgybhnj
+- tu pagal
 - kannst du mir helfen
 - tu kaisi he
 
@@ -4424,6 +4423,9 @@
 - ı am learning python
 - CALL THE POLICE
 - I want to speak binary with you
+- tertyryutyi
+- wsdrcftvgybhnj
+- why sky is blue?
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4940,9 +4942,11 @@
 - yes thanks
 - thanks for your information
 
-## intent:out_of_scope
-- why sky is blue?
-- tu pagal
+## lookup: location
+data/nlu/lookups/location.txt
+
+## lookup: product
+data/nlu/lookups/products.txt
 
 ## synonym: duration
 - durations
