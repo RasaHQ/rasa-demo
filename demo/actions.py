@@ -695,9 +695,7 @@ class ActionDocsSearch(Action):
             if last_user_event:
                 search_text = last_user_event.get("text")
             else:
-                dispatcher.utter_message(
-                    text="Sorry, I can't answer your question."
-                )
+                dispatcher.utter_message(text="Sorry, I can't answer your question.")
                 return []
 
         # Search of docs pages
@@ -733,9 +731,7 @@ class ActionForumSearch(Action):
             if last_user_event:
                 search_text = last_user_event.get("text")
             else:
-                dispatcher.utter_message(
-                    text="Sorry, I can't answer your question."
-                )
+                dispatcher.utter_message(text="Sorry, I can't answer your question.")
                 return []
 
         # Search forum
