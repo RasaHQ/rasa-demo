@@ -1,5 +1,5 @@
 import requests
-from typing import Any, Dict, List, Text
+from typing import Any, Dict, List, Text, Optional
 
 
 class DiscourseAPI(object):

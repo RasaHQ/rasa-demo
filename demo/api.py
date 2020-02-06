@@ -4,6 +4,9 @@ from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
 from mailchimp3.helpers import check_email
 from typing import Text
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class MailChimpAPI:
@@ -20,7 +23,15 @@ class MailChimpAPI:
         try:
             check_email(email)
             return True
-        except (TypeError, ValueError):
+        except ValueError:  # purposely raised in case of invalid email
+            return False
+        except Exception as e:
+            logger.warning(
+                f"Error: exception in check_email.\n"
+                f"{type(e)} - {e}\n"
+                f"email = {email}\n"
+                f"type(email) = {type(email)}"
+            )
             return False
 
     def subscribe_user(self, list_id: Text, email: Text) -> bool:
