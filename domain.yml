@@ -155,6 +155,8 @@ slots:
     type: unfeaturized
   use_case:
     type: unfeaturized
+  docs_found:
+    type: bool
 responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received
@@ -507,7 +509,7 @@ responses:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/)
       for more information.
   utter_ask_faq_opensource_cost:
-  - text: "The Rasa machine learning framework is open source! 
+  - text: "The Rasa machine learning framework is open source!
       We strive to provide well-maintained and documented
       open source tools, allowing all makers to build the best AI assistants without
       friction.\nIn addition to that,\

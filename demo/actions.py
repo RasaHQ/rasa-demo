@@ -726,7 +726,7 @@ class ActionDocsSearch(Action):
         )
         alg_res = algolia.search(search_text)
 
-        if alg_res:
+        if alg_res and alg_res.get("hits") and len(alg_res.get("hits")) > 0:
             doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
             doc_list += (
                 "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
@@ -738,8 +738,13 @@ class ActionDocsSearch(Action):
                 text="I can't answer your question directly, but I found the following from the docs:\n"
                 + doc_list
             )
+            return [SlotSet("docs_found", True)]
 
-        return []
+        dispatcher.utter_message(
+            text=("I can't answer your question directly, and also "
+                  "found nothing in our documentation that would help.")
+        )
+        return [SlotSet("docs_found", False)]
 
 
 class ActionForumSearch(Action):
@@ -759,15 +764,26 @@ class ActionForumSearch(Action):
 
         # Search forum
         discourse = DiscourseAPI("https://forum.rasa.com/search")
-        doc_list = discourse.query(search_text)
-        doc_list = doc_list.json()
+        disc_res = discourse.query(search_text)
+        disc_res = disc_res.json()
 
-        if doc_list:
-            forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
-            forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
+        if disc_res and disc_res.get("topics") and len(disc_res.get("topics")) > 0:
+            forum = discourse.get_discourse_links(disc_res.get("topics"), 0)
+            forum += (
+                "\n" + discourse.get_discourse_links(disc_res.get("topics"), 1)
+                if len(disc_res.get("topics")) > 1
+                else ""
+            )
 
             dispatcher.utter_message(
                 text=f"I found the following from our forum:\n{forum}"
+            )
+        else:
+            dispatcher.utter_message(
+                text=(
+                    f"I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
+                    f"I recommend you post your question there."
+                )
             )
 
         return []
