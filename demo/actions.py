@@ -741,8 +741,10 @@ class ActionDocsSearch(Action):
             return [SlotSet("docs_found", True)]
 
         dispatcher.utter_message(
-            text=("I can't answer your question directly, and also "
-                  "found nothing in our documentation that would help.")
+            text=(
+                "I can't answer your question directly, and also "
+                "found nothing in our documentation that would help."
+            )
         )
         return [SlotSet("docs_found", False)]
 
