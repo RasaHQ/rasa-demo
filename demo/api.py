@@ -20,7 +20,7 @@ class MailChimpAPI:
         try:
             check_email(email)
             return True
-        except:
+        except (TypeError, ValueError):
             return False
 
     def subscribe_user(self, list_id: Text, email: Text) -> bool:
