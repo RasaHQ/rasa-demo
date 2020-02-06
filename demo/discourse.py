@@ -9,7 +9,7 @@ class DiscourseAPI(object):
         self.url = url
 
     @staticmethod
-    def get_discourse_links(topics: List[Dict[Text, Any]], index: int):
+    def get_discourse_links(topics: Optional[List[Dict[Text, Any]]], index: int):
         forum = None
         if topics:
             doc_url = f"https://forum.rasa.com/t/{topics[index]['slug']}/{str(topics[index]['id'])}"
