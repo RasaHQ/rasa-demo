@@ -12,6 +12,8 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
+    ActionExecuted,
+    UserUttered,
 )
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
@@ -676,7 +678,21 @@ class ActionNextStep(Action):
             else:
                 dispatcher.utter_message(template="utter_no_more_steps")
 
-        return []
+            return []
+
+        else:
+            # trigger get_started_step1 intent
+            return [
+                ActionExecuted("action_listen"),
+                SlotSet("step", "1"),
+                UserUttered(
+                    "/get_started_step1",
+                    {
+                        "intent": {"name": "get_started_step1", "confidence": 1.0},
+                        "entities": {},
+                    },
+                ),
+            ]
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
