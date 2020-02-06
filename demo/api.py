@@ -2,6 +2,7 @@
 
 from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
+from mailchimp3.helpers import check_email
 from typing import Text
 
 
@@ -11,6 +12,16 @@ class MailChimpAPI:
     def __init__(self, api_key: Text) -> None:
 
         self.client = MailChimp(mc_api=api_key)
+
+    @staticmethod
+    def is_valid_email(email: Text) -> bool:
+        """Use mailchimp3 helper function to validate that it will accept it as a valid
+        email"""
+        try:
+            check_email(email)
+            return True
+        except:
+            return False
 
     def subscribe_user(self, list_id: Text, email: Text) -> bool:
         # subscribe the user to the newsletter if they're not already

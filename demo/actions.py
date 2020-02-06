@@ -45,8 +45,14 @@ class SubscribeNewsletterForm(FormAction):
     def validate_email(self, value, dispatcher, tracker, domain):
         """Check to see if an email entity was actually picked up by duckling."""
         if any(tracker.get_latest_entity_values("email")):
-            # entity was picked up, validate slot
-            return {"email": value}
+            # entity was picked up,
+            # check if mailchimp will accept it as a valid email
+            if MailChimpAPI.is_valid_email(value):
+                # validate slot
+                return {"email": value}
+            else:
+                dispatcher.utter_message(template="utter_no_email")
+                return {"email": None}
         else:
             # no entity was picked up, we want to ask again
             dispatcher.utter_message(template="utter_no_email")
