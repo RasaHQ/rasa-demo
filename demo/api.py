@@ -21,6 +21,7 @@ class MailChimpAPI:
         """Use mailchimp3 helper function to validate that it will accept it as a valid
         email"""
         try:
+            email = str(email)
             check_email(email)
             return True
         except ValueError:  # purposely raised in case of invalid email
