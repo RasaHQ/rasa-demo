@@ -684,7 +684,6 @@ class ActionNextStep(Action):
             # trigger get_started_step1 intent
             return [
                 ActionExecuted("action_listen"),
-                SlotSet("step", "1"),
                 UserUttered(
                     "/get_started_step1",
                     {
@@ -710,23 +709,26 @@ class ActionDocsSearch(Action):
         return "action_docs_search"
 
     def run(self, dispatcher, tracker, domain):
+        docs_found = False
         search_text = tracker.latest_message.get("text")
-        # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
-        if search_text == "/technical_question{}":
-            last_user_event = get_last_event_for(tracker, "user", skip=2)
-            if last_user_event:
-                search_text = last_user_event.get("text")
-            else:
-                dispatcher.utter_message(text="Sorry, I can't answer your question.")
-                return []
 
         # Search of docs pages
+        alg_res = None
         algolia = AlgoliaAPI(
             config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
         )
-        alg_res = algolia.search(search_text)
+        if search_text == "/technical_question{}":
+            # If we're in a TwoStageFallback we need to look back one more user utterance
+            # to get the actual text
+            last_user_event = get_last_event_for(tracker, "user", skip=2)
+            if last_user_event:
+                search_text = last_user_event.get("text")
+                alg_res = algolia.search(search_text)
+        else:
+            alg_res = algolia.search(search_text)
 
         if alg_res and alg_res.get("hits") and len(alg_res.get("hits")) > 0:
+            docs_found = True
             doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
             doc_list += (
                 "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
@@ -738,15 +740,16 @@ class ActionDocsSearch(Action):
                 text="I can't answer your question directly, but I found the following from the docs:\n"
                 + doc_list
             )
-            return [SlotSet("docs_found", True)]
 
-        dispatcher.utter_message(
-            text=(
-                "I can't answer your question directly, and also "
-                "found nothing in our documentation that would help."
+        else:
+            dispatcher.utter_message(
+                text=(
+                    "I can't answer your question directly, and also "
+                    "found nothing in our documentation that would help."
+                )
             )
-        )
-        return [SlotSet("docs_found", False)]
+
+        return [SlotSet("docs_found", docs_found)]
 
 
 class ActionForumSearch(Action):

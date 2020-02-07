@@ -12,9 +12,9 @@ class AlgoliaAPI(object):
 
     def get_algolia_link(self, hits: List, index: int):
         doc_link = f"- [{hits[index].get('hierarchy').get('lvl0')}"
-        if hits[index]["hierarchy"].get("lvl1"):
+        if hits[index].get('hierarchy').get("lvl1"):
             doc_link += f"/{hits[index].get('hierarchy').get('lvl1').strip()}"
-            if hits[index]["hierarchy"].get("lvl2"):
+            if hits[index].get('hierarchy').get("lvl2"):
                 doc_link += f"/{hits[index].get('hierarchy').get('lvl2').strip()}"
         doc_link += f"]({hits[index].get('url')})"
         return doc_link
