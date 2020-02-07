@@ -12,6 +12,8 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
+    ActionExecuted,
+    UserUttered,
 )
 from demo.api import MailChimpAPI
 from demo.algolia import AlgoliaAPI
@@ -45,8 +47,14 @@ class SubscribeNewsletterForm(FormAction):
     def validate_email(self, value, dispatcher, tracker, domain):
         """Check to see if an email entity was actually picked up by duckling."""
         if any(tracker.get_latest_entity_values("email")):
-            # entity was picked up, validate slot
-            return {"email": value}
+            # entity was picked up,
+            # check if mailchimp will accept it as a valid email
+            if MailChimpAPI.is_valid_email(value):
+                # validate slot
+                return {"email": value}
+            else:
+                dispatcher.utter_message(template="utter_no_email")
+                return {"email": None}
         else:
             # no entity was picked up, we want to ask again
             dispatcher.utter_message(template="utter_no_email")
@@ -662,14 +670,28 @@ class ActionNextStep(Action):
         return "action_next_step"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        step = int(tracker.get_slot("step")) + 1
+        if tracker.get_slot("step"):
+            step = int(tracker.get_slot("step")) + 1
 
-        if step in [2, 3, 4]:
-            dispatcher.utter_message(template=f"utter_continue_step{step}")
+            if step in [2, 3, 4]:
+                dispatcher.utter_message(template=f"utter_continue_step{step}")
+            else:
+                dispatcher.utter_message(template="utter_no_more_steps")
+
+            return []
+
         else:
-            dispatcher.utter_message(template="utter_no_more_steps")
-
-        return []
+            # trigger get_started_step1 intent
+            return [
+                ActionExecuted("action_listen"),
+                UserUttered(
+                    "/get_started_step1",
+                    {
+                        "intent": {"name": "get_started_step1", "confidence": 1.0},
+                        "entities": {},
+                    },
+                ),
+            ]
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
@@ -687,32 +709,47 @@ class ActionDocsSearch(Action):
         return "action_docs_search"
 
     def run(self, dispatcher, tracker, domain):
+        docs_found = False
         search_text = tracker.latest_message.get("text")
-        # If we're in a TwoStageFallback we need to look back one more user utterance to get the actual text
-        if search_text == "/technical_question{}":
-            last_user_event = get_last_event_for(tracker, "user", skip=2)
-            if last_user_event:
-                search_text = last_user_event.get("text")
 
         # Search of docs pages
+        alg_res = None
         algolia = AlgoliaAPI(
             config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
         )
-        alg_res = algolia.search(search_text)
+        if search_text == "/technical_question{}":
+            # If we're in a TwoStageFallback we need to look back one more user utterance
+            # to get the actual text
+            last_user_event = get_last_event_for(tracker, "user", skip=2)
+            if last_user_event:
+                search_text = last_user_event.get("text")
+                alg_res = algolia.search(search_text)
+        else:
+            alg_res = algolia.search(search_text)
 
-        doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
-        doc_list += (
-            "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
-            if len(alg_res.get("hits")) > 1
-            else ""
-        )
+        if alg_res and alg_res.get("hits") and len(alg_res.get("hits")) > 0:
+            docs_found = True
+            doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+            doc_list += (
+                "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
+                if len(alg_res.get("hits")) > 1
+                else ""
+            )
 
-        dispatcher.utter_message(
-            text="I can't answer your question directly, but I found the following from the docs:\n"
-            + doc_list
-        )
+            dispatcher.utter_message(
+                text="I can't answer your question directly, but I found the following from the docs:\n"
+                + doc_list
+            )
 
-        return []
+        else:
+            dispatcher.utter_message(
+                text=(
+                    "I can't answer your question directly, and also "
+                    "found nothing in our documentation that would help."
+                )
+            )
+
+        return [SlotSet("docs_found", docs_found)]
 
 
 class ActionForumSearch(Action):
@@ -724,15 +761,34 @@ class ActionForumSearch(Action):
         # If we're in a TwoStageFallback we need to look back two more user utterance to get the actual text
         if search_text == "/technical_question{}" or search_text == "/deny":
             last_user_event = get_last_event_for(tracker, "user", skip=3)
-            search_text = last_user_event.get("text")
+            if last_user_event:
+                search_text = last_user_event.get("text")
+            else:
+                dispatcher.utter_message(text="Sorry, I can't answer your question.")
+                return []
 
         # Search forum
         discourse = DiscourseAPI("https://forum.rasa.com/search")
-        doc_list = discourse.query(search_text)
-        doc_list = doc_list.json()
+        disc_res = discourse.query(search_text)
+        disc_res = disc_res.json()
 
-        forum = discourse.get_discourse_links(doc_list.get("topics"), 0)
-        forum += "\n" + discourse.get_discourse_links(doc_list.get("topics"), 1)
+        if disc_res and disc_res.get("topics") and len(disc_res.get("topics")) > 0:
+            forum = discourse.get_discourse_links(disc_res.get("topics"), 0)
+            forum += (
+                "\n" + discourse.get_discourse_links(disc_res.get("topics"), 1)
+                if len(disc_res.get("topics")) > 1
+                else ""
+            )
 
-        dispatcher.utter_message(text=f"I found the following from our forum:\n{forum}")
+            dispatcher.utter_message(
+                text=f"I found the following from our forum:\n{forum}"
+            )
+        else:
+            dispatcher.utter_message(
+                text=(
+                    f"I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
+                    f"I recommend you post your question there."
+                )
+            )
+
         return []

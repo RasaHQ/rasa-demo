@@ -5,16 +5,24 @@
     - utter_getstarted
     - utter_first_bot_with_rasa
 
-## tech question, deny
+## technical_question - docs_found - deny
 * technical_question
-  - action_docs_search
-  - utter_ask_docs_help
+    - action_docs_search
+    - slot{"docs_found": true}
+    - utter_ask_docs_help
 * deny
-  - action_forum_search
+    - action_forum_search
 
-## tech question, affirm
+## technical_question - docs_found - affirm
 * technical_question
-  - action_docs_search
-  - utter_ask_docs_help
+    - action_docs_search
+    - slot{"docs_found": true}
+    - utter_ask_docs_help
 * affirm
-  - utter_great
+    - utter_great
+
+## technical_question - no docs_found
+* technical_question
+    - action_docs_search
+    - slot{"docs_found": false}
+    - action_forum_search
