@@ -714,6 +714,8 @@ responses:
   - text: Rasa Masterclass covers how to [set up Rasa X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how
       to [improve your assistant](https://www.youtube.com/watch?v=LWzsS5Q-RoI) by sharing your assistant with
       others.
+  utter_ask_rephrase:
+  - text: Can you rephrase the question?
 actions:
 - action_chitchat
 - action_default_ask_affirmation
