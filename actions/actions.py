@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import logging
+import json
 from datetime import datetime
 from typing import Any, Dict, List, Text, Union, Optional
-import json
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -15,14 +15,17 @@ from rasa_sdk.events import (
     ActionExecuted,
     UserUttered,
 )
-from actions.algolia import AlgoliaAPI
-from actions.discourse import DiscourseAPI
+
 from actions import config
-from actions.api import MailChimpAPI
-from actions.community_events import CommunityEvent
-from actions.gdrive_service import GDriveService
+from actions.api import community_events
+from actions.api.algolia import AlgoliaAPI
+from actions.api.discourse import DiscourseAPI
+from actions.api.gdrive_service import GDriveService
+from actions.api.mailchimp import MailChimpAPI
 
 logger = logging.getLogger(__name__)
+
+INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 
 
 class SubscribeNewsletterForm(FormAction):
@@ -456,7 +459,7 @@ class ActionDefaultAskAffirmation(Action):
     def __init__(self) -> None:
         import pandas as pd
 
-        self.intent_mappings = pd.read_csv("demo/intent_description_mapping.csv")
+        self.intent_mappings = pd.read_csv(INTENT_DESCRIPTION_MAPPING_PATH)
         self.intent_mappings.fillna("", inplace=True)
         self.intent_mappings.entities = self.intent_mappings.entities.map(
             lambda entities: {e.strip() for e in entities.split(",")}
@@ -573,13 +576,11 @@ class CommunityEventAction(Action):
     def name(self) -> Text:
         return "action_get_community_events"
 
-    def _get_events(self) -> List[CommunityEvent]:
+    def _get_events(self) -> List[community_events.CommunityEvent]:
         if self.events is None or self._are_events_expired():
-            from actions.community_events import get_community_events
-
             logger.debug("Getting events from website.")
             self.last_event_update = datetime.now()
-            self.events = get_community_events()
+            self.events = community_events.get_community_events()
 
         return self.events
 
