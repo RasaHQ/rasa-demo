@@ -79,7 +79,7 @@ jobs:
     - name: Cross-validate NLU model
       run: |
         rasa test nlu -f 5 --cross-validation
-        python format_results.py
+        python .github/workflows/format_results.py
     - name: post cross-val results to PR
       uses: amn41/comment-on-pr@comment-file-contents
       continue-on-error: true

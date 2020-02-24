@@ -1,5 +1,8 @@
 -r requirements.txt
 
+# action to create report PR
+pytablewriter
+
 # lint/format/types
 black==19.10b0
 flake8==3.7.8
