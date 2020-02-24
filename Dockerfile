@@ -2,13 +2,13 @@ FROM rasa/rasa-sdk:1.7.0
 
 WORKDIR /app
 
-COPY demo/requirements.txt ./
+COPY actions/requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-COPY ./demo /app/demo
+COPY ./actions /app/actions
 COPY setup.py /app
 
 RUN  pip install -e . --no-cache-dir
 
-CMD ["start", "--actions", "demo.actions"]
+CMD ["start", "--actions", "actions.actions"]

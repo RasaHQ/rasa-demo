@@ -7,7 +7,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from gspread.models import Spreadsheet
 from typing import List, Text, Optional
 
-from demo import config
+from actions import config
 
 logger = logging.getLogger(__name__)
 

@@ -15,13 +15,12 @@ from rasa_sdk.events import (
     ActionExecuted,
     UserUttered,
 )
-from demo.api import MailChimpAPI
-from demo.algolia import AlgoliaAPI
-from demo.discourse import DiscourseAPI
-from demo import config
-from demo.api import MailChimpAPI
-from demo.community_events import CommunityEvent
-from demo.gdrive_service import GDriveService
+from actions.algolia import AlgoliaAPI
+from actions.discourse import DiscourseAPI
+from actions import config
+from actions.api import MailChimpAPI
+from actions.community_events import CommunityEvent
+from actions.gdrive_service import GDriveService
 
 logger = logging.getLogger(__name__)
 
@@ -576,7 +575,7 @@ class CommunityEventAction(Action):
 
     def _get_events(self) -> List[CommunityEvent]:
         if self.events is None or self._are_events_expired():
-            from demo.community_events import get_community_events
+            from actions.community_events import get_community_events
 
             logger.debug("Getting events from website.")
             self.last_event_update = datetime.now()
