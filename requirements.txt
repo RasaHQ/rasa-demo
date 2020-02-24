@@ -1,2 +1,2 @@
 rasa==1.7.0  # when updating, check the sdk version in the Dockerfile as well!
--r demo/requirements.txt
+-r actions/requirements-actions.txt

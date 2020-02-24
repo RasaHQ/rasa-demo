@@ -2,9 +2,9 @@ FROM rasa/rasa-sdk:1.7.0
 
 WORKDIR /app
 
-COPY actions/requirements.txt ./
+COPY actions/requirements-actions.txt ./
 
-RUN pip install -r requirements.txt
+RUN pip install -r requirements-actions.txt
 
 COPY ./actions /app/actions
 COPY setup.py /app
