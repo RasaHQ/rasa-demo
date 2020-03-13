@@ -3,6 +3,7 @@ import logging
 from datetime import datetime
 from typing import Any, Dict, List, Text, Union, Optional
 import json
+import requests
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -24,6 +25,8 @@ from demo.community_events import CommunityEvent
 from demo.gdrive_service import GDriveService
 
 logger = logging.getLogger(__name__)
+
+RASA_X_HOST = "rasa-x:5002"
 
 
 class SubscribeNewsletterForm(FormAction):
@@ -790,5 +793,47 @@ class ActionForumSearch(Action):
                     f"I recommend you post your question there."
                 )
             )
+
+        return []
+
+
+class ActionTagConvo(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self):
+        return NotImplementedError
+
+    def tag_convo(self, tracker, label):
+        endpoint = f"http://{RASA_X_HOST}/api/conversations/{tracker.sender_id}/tags"
+        requests.post(url=endpoint, data=label)
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        return NotImplementedError
+
+
+class ActionTagPositive(ActionTagConvo):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self):
+        return "action_tag_positive"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+
+        label = '[{"value":"postive feedback","color":"76af3d"}]'
+        self.tag_convo(tracker, label)
+
+        return []
+
+
+class ActionTagNegative(ActionTagConvo):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self):
+        return "action_tag_negative"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+
+        label = '[{"value":"negative feedback","color":"ff0000"}]'
+        self.tag_convo(tracker, label)
 
         return []
