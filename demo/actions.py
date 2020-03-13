@@ -808,7 +808,7 @@ class ActionTagConvo(Action):
         requests.post(url=endpoint, data=label)
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        return NotImplementedError
+        return []
 
 
 class ActionTagPositive(ActionTagConvo):
