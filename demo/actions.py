@@ -26,7 +26,9 @@ from demo.gdrive_service import GDriveService
 
 logger = logging.getLogger(__name__)
 
-RASA_X_HOST = "rasa-x:5002"
+# RASA_X_HOST = "rasa-x:5002"
+
+RASA_X_HOST = "localhost:5002"
 
 
 class SubscribeNewsletterForm(FormAction):
@@ -811,29 +813,44 @@ class ActionTagConvo(Action):
         return []
 
 
-class ActionTagPositive(ActionTagConvo):
+class ActionTagFeedback(ActionTagConvo):
     """Returns the chitchat utterance dependent on the intent"""
 
     def name(self):
-        return "action_tag_positive"
+        return "action_tag_feedback"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
 
-        label = '[{"value":"postive feedback","color":"76af3d"}]'
+        feedback = tracker.get_slot("feedback_value")
+
+        if feedback == "positive":
+            label = '[{"value":"postive feedback","color":"76af3d"}]'
+        elif feedback == "negative":
+            label = '[{"value":"negative feedback","color":"ff0000"}]'
+        else:
+            return
+
         self.tag_convo(tracker, label)
 
         return []
 
 
-class ActionTagNegative(ActionTagConvo):
+class ActionTagDocsSearch(ActionTagConvo):
     """Returns the chitchat utterance dependent on the intent"""
 
     def name(self):
-        return "action_tag_negative"
+        return "action_tag_docs_search"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        intent = tracker.latest_message["intent"].get("name")
 
-        label = '[{"value":"negative feedback","color":"ff0000"}]'
+        if intent == "affirm":
+            label = '[{"value":"docs search helpful","color":"e5ff00"}]'
+        elif intent == "deny":
+            label = '[{"value":"docs search unhelpful","color":"eb8f34"}]'
+        else:
+            return []
+
         self.tag_convo(tracker, label)
 
         return []
