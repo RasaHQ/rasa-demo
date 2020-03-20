@@ -13,7 +13,10 @@ def intent_table():
     writer.headers = ["class"] + cols
 
     classes = list(data.keys())
-    classes.remove("accuracy")
+    try:
+        classes.remove("accuracy")
+    except:
+        pass
     classes.sort(key=lambda x: data[x]["support"], reverse=True)
 
     def format_cell(data, c, k):
