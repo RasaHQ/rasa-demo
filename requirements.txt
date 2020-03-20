@@ -1,3 +1,4 @@
-rasa==1.8.0  # when updating, check the sdk version in the Dockerfile as well!
+rasa==1.8.2  # when updating, check the sdk version in the Dockerfile as well!
 -r demo/requirements.txt
 pytablewriter
+tensorflow_text==2.1.0
