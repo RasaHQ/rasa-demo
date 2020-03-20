@@ -217,7 +217,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_postive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
