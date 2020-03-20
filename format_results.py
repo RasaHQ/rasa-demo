@@ -9,7 +9,6 @@ def intent_table():
     with open("results/intent_report.json", "r") as f:
         data = json.loads(f.read())
 
-
     cols = ["support", "f1-score", "confused_with"]
     writer.headers = ["class"] + cols
 
