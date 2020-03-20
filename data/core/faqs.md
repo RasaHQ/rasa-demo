@@ -423,7 +423,7 @@
     - slot{"docs_found": true}
     - utter_ask_docs_help
 * deny
-    - action_tag_negative
+    - action_tag_docs_search
     - action_forum_search
 
 ## technical_question - docs_found - affirm
@@ -432,7 +432,7 @@
     - slot{"docs_found": true}
     - utter_ask_docs_help
 * affirm
-    - action_tag_postive
+    - action_tag_docs_search
     - utter_great
 
 ## technical_question - no docs_found

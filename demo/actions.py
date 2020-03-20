@@ -828,7 +828,7 @@ class ActionTagFeedback(ActionTagConvo):
         elif feedback == "negative":
             label = '[{"value":"negative feedback","color":"ff0000"}]'
         else:
-            return
+            return []
 
         self.tag_convo(tracker, label)
 

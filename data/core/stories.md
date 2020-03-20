@@ -22,7 +22,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -38,7 +38,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -105,7 +105,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 * contact_sales
@@ -116,7 +116,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -142,7 +142,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -173,7 +173,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
-    - action_tag_negative
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 
@@ -250,7 +250,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
-    - action_tag_negative
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 * contact_sales
@@ -261,7 +261,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -316,7 +316,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
-    - action_tag_negative
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 
@@ -352,7 +352,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
-    - action_tag_positive
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -383,7 +383,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
-    - action_tag_negative
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 
