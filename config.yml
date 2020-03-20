@@ -1,7 +1,9 @@
 language: en
 pipeline:
-- name: WhitespaceTokenizer
-- name: CRFEntityExtractor
+- name: ConveRTTokenizer
+- name: ConveRTFeaturizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
   OOV_token: oov
   token_pattern: (?u)\b\w+\b
@@ -9,8 +11,8 @@ pipeline:
   analyzer: char_wb
   min_ngram: 1
   max_ngram: 4
-- name: EmbeddingIntentClassifier
-  epochs: 50
+- name: DIETClassifier
+  epochs: 200
   ranking_length: 5
 - name: DucklingHTTPExtractor
   url: http://localhost:8000
