@@ -1,29 +1,67 @@
 from pytablewriter import MarkdownTableWriter
 import json
 
-writer = MarkdownTableWriter()
-writer.table_name = "Intent Cross-Validation Results (5 folds)"
 
-with open('results/intent_report.json', 'r') as f:
-    data = json.loads(f.read())
+def intent_table():
+    writer = MarkdownTableWriter()
+    writer.table_name = "Intent Cross-Validation Results (5 folds)"
 
-cols = ["support", "f1-score", "confused_with"]
-writer.headers = ["class"] + cols
+    with open("results/intent_report.json", "r") as f:
+        data = json.loads(f.read())
 
-classes = list(data.keys())
-classes.sort(key = lambda x: data[x]['support'], reverse=True)
+    cols = ["support", "f1-score", "confused_with"]
+    writer.headers = ["class"] + cols
 
-def format_cell(data, c, k):
-    if not data[c].get(k):
-        return "N/A"
-    if k == "confused_with":
-        return ", ".join([f"{k}({v})" for k,v in data[c][k].items()])
-    else:
-        return data[c][k]
+    classes = list(data.keys())
+    classes.remove("accuracy")
+    classes.sort(key=lambda x: data[x]["support"], reverse=True)
 
-writer.value_matrix = [
-    [c] + [format_cell(data, c, k) for k in cols]
-    for c in classes
-]
+    def format_cell(data, c, k):
+        if not data[c].get(k):
+            return "N/A"
+        if k == "confused_with":
+            return ", ".join([f"{k}({v})" for k, v in data[c][k].items()])
+        else:
+            return data[c][k]
 
-writer.dump('results.md')
+    writer.value_matrix = [
+        [c] + [format_cell(data, c, k) for k in cols] for c in classes
+    ]
+
+    return writer.dumps()
+
+
+def entity_table():
+
+    writer = MarkdownTableWriter()
+    writer.table_name = "Entity Cross-Validation Results (5 folds)"
+
+    with open("results/CRFEntityExtractor_report.json", "r") as f:
+        data = json.loads(f.read())
+
+    cols = ["support", "f1-score", "precision", "recall"]
+    writer.headers = ["entity"] + cols
+
+    classes = list(data.keys())
+    classes.sort(key=lambda x: data[x]["support"], reverse=True)
+
+    def format_cell(data, c, k):
+        if not data[c].get(k):
+            return "N/A"
+        else:
+            return data[c][k]
+
+    writer.value_matrix = [
+        [c] + [format_cell(data, c, k) for k in cols] for c in classes
+    ]
+
+    return writer.dumps()
+
+
+intents = intent_table()
+entities = entity_table()
+
+with open("results.md", "w") as f:
+    f.write(intents)
+    f.write("\n\n\n")
+    f.write(entities)
