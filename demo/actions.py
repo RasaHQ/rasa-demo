@@ -26,10 +26,6 @@ from demo.gdrive_service import GDriveService
 
 logger = logging.getLogger(__name__)
 
-# RASA_X_HOST = "rasa-x:5002"
-
-RASA_X_HOST = "localhost:5002"
-
 
 class SubscribeNewsletterForm(FormAction):
     """Asks for the user's email, call the newsletter API and sign up user"""
@@ -799,22 +795,13 @@ class ActionForumSearch(Action):
         return []
 
 
-class ActionTagConvo(Action):
-    """Returns the chitchat utterance dependent on the intent"""
-
-    def name(self):
-        return NotImplementedError
-
-    def tag_convo(self, tracker, label):
-        endpoint = f"http://{RASA_X_HOST}/api/conversations/{tracker.sender_id}/tags"
-        requests.post(url=endpoint, data=label)
-
-    def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        return []
+def tag_convo(tracker, label):
+    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
+    requests.post(url=endpoint, data=label)
 
 
-class ActionTagFeedback(ActionTagConvo):
-    """Returns the chitchat utterance dependent on the intent"""
+class ActionTagFeedback(Action):
+    """Tag a conversation in Rasa X as positive or negative feedback """
 
     def name(self):
         return "action_tag_feedback"
@@ -830,13 +817,13 @@ class ActionTagFeedback(ActionTagConvo):
         else:
             return []
 
-        self.tag_convo(tracker, label)
+        tag_convo(tracker, label)
 
         return []
 
 
-class ActionTagDocsSearch(ActionTagConvo):
-    """Returns the chitchat utterance dependent on the intent"""
+class ActionTagDocsSearch(Action):
+    """Tag a conversation in Rasa X according to whether the docs search was helpful"""
 
     def name(self):
         return "action_tag_docs_search"
@@ -851,6 +838,6 @@ class ActionTagDocsSearch(ActionTagConvo):
         else:
             return []
 
-        self.tag_convo(tracker, label)
+        tag_convo(tracker, label)
 
         return []
