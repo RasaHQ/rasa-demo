@@ -795,9 +795,11 @@ class ActionForumSearch(Action):
         return []
 
 
-def tag_convo(tracker, label):
+def tag_convo(tracker: Tracker, label: Text) -> None:
+    """Tag a conversation in Rasa X with a given label"""
     endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
     requests.post(url=endpoint, data=label)
+    return
 
 
 class ActionTagFeedback(Action):
