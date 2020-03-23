@@ -24,7 +24,7 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: out_of_scope
 policies:
-- name: EmbeddingPolicy
+- name: TEDPolicy
   max_history: 10
   epochs: 20
   batch_size:
