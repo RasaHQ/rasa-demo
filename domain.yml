@@ -735,6 +735,9 @@ actions:
 - action_store_unknown_nlu_part
 - action_store_unknown_product
 - respond_out_of_scope
+- action_tag_docs_search
+- action_tag_feedback
+
 forms:
 - sales_form
 - subscribe_newsletter_form
