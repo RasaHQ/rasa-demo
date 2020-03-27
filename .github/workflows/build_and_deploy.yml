@@ -86,7 +86,7 @@ jobs:
     - name: Test Training Stories
       working-directory: ${{ github.workspace }}
       run: |
-        rasa test --stories test/test_stories.md --fail-on-prediction-errors
+        rasa test core --stories test/test_stories.md --fail-on-prediction-errors
     - name: Upload model
       if: github.ref == 'refs/heads/master'
       uses: actions/upload-artifact@master
