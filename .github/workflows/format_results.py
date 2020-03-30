@@ -4,7 +4,7 @@ import json
 
 def intent_table():
     writer = MarkdownTableWriter()
-    writer.table_name = "Intent Cross-Validation Results (5 folds)"
+    writer.table_name = "Intent Cross-Validation Results (3 folds)"
 
     with open("results/intent_report.json", "r") as f:
         data = json.loads(f.read())
