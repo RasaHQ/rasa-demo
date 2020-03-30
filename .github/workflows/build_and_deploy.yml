@@ -68,17 +68,9 @@ jobs:
       run: |
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
-    - name: Train Model
-      working-directory: ${{ github.workspace }}
-      run: |
-        rasa train
-    - name: Test Training Stories
-      working-directory: ${{ github.workspace }}
-      run: |
-        rasa test --stories test/test_stories.md --fail-on-prediction-errors
     - name: Cross-validate NLU model
       run: |
-        rasa test nlu -f 5 --cross-validation
+        rasa test nlu -f 3 --cross-validation
         python .github/workflows/format_results.py
     - name: post cross-val results to PR
       uses: amn41/comment-on-pr@comment-file-contents
@@ -87,6 +79,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         msg: results.md
+    - name: Train Model
+      working-directory: ${{ github.workspace }}
+      run: |
+        rasa train
+    - name: Test Training Stories
+      working-directory: ${{ github.workspace }}
+      run: |
+        rasa test core --stories test/test_stories.md --fail-on-prediction-errors
     - name: Upload model
       if: github.ref == 'refs/heads/master'
       uses: actions/upload-artifact@master

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import json
+import requests
 from datetime import datetime
 from typing import Any, Dict, List, Text, Union, Optional
 
@@ -790,5 +791,55 @@ class ActionForumSearch(Action):
                     f"I recommend you post your question there."
                 )
             )
+
+        return []
+
+
+def tag_convo(tracker: Tracker, label: Text) -> None:
+    """Tag a conversation in Rasa X with a given label"""
+    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
+    requests.post(url=endpoint, data=label)
+    return
+
+
+class ActionTagFeedback(Action):
+    """Tag a conversation in Rasa X as positive or negative feedback """
+
+    def name(self):
+        return "action_tag_feedback"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+
+        feedback = tracker.get_slot("feedback_value")
+
+        if feedback == "positive":
+            label = '[{"value":"postive feedback","color":"76af3d"}]'
+        elif feedback == "negative":
+            label = '[{"value":"negative feedback","color":"ff0000"}]'
+        else:
+            return []
+
+        tag_convo(tracker, label)
+
+        return []
+
+
+class ActionTagDocsSearch(Action):
+    """Tag a conversation in Rasa X according to whether the docs search was helpful"""
+
+    def name(self):
+        return "action_tag_docs_search"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        intent = tracker.latest_message["intent"].get("name")
+
+        if intent == "affirm":
+            label = '[{"value":"docs search helpful","color":"e5ff00"}]'
+        elif intent == "deny":
+            label = '[{"value":"docs search unhelpful","color":"eb8f34"}]'
+        else:
+            return []
+
+        tag_convo(tracker, label)
 
         return []

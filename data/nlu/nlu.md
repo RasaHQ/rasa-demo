@@ -4832,6 +4832,15 @@
 - there is error
 - why do I get errors using rasa?
 - there are some python incompatibilities
+- can tell me about rasa_sdk
+- rasa sdk
+- where is rasa sdk?
+- Do you have a python sdk?
+- RASA sdk
+- do RASA has sdk to develop bot
+- python sdk
+- how to run sdk endpoint in background
+- sdk
 
 ## intent:telljoke
 - Can you tell a joke?
