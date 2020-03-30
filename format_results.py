@@ -39,7 +39,7 @@ def entity_table():
     writer = MarkdownTableWriter()
     writer.table_name = "Entity Cross-Validation Results (5 folds)"
 
-    with open("results/CRFEntityExtractor_report.json", "r") as f:
+    with open("results/DIETClassifier_report.json", "r") as f:
         data = json.loads(f.read())
 
     cols = ["support", "f1-score", "precision", "recall"]
