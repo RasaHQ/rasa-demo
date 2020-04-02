@@ -3765,6 +3765,14 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 - I am trying to build a bot using rasa
+- more about [Rasa open source](product)
+- tell me about [rasa open source](product)
+- i want to know about [rasa Open source](product)
+- get started with [Rasa Open Source](product)
+- [Rasa open source](product)
+- [rasa open source](product)
+- [rasa Open source](product)
+- [Rasa Open Source](product)
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -5014,6 +5022,10 @@ data/nlu/lookups/products.txt
 
 ## synonym:rasa
 - Rasa
+- rasa open source
+- Rasa Open Source
+- Rasa open source
+- rasa Open Source
 
 ## synonym:stack
 - fullstack
