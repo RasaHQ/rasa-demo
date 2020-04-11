@@ -68,3 +68,9 @@
     - utter_thumbsup
     - action_deactivate_form
     - form{"name": null}
+
+## greet + canthelp
+* greet
+    - action_greet_user
+* canthelp
+    - utter_canthelp
