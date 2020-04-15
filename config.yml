@@ -23,6 +23,8 @@ pipeline:
 - name: EntitySynonymMapper
 - name: ResponseSelector
   retrieval_intent: out_of_scope
+- name: ResponseSelector
+  retrieval_intent: faq
 policies:
 - name: TEDPolicy
   max_history: 10

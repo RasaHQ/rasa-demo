@@ -113,10 +113,7 @@ class SalesForm(FormAction):
                 self.from_entity(entity="job_function"),
                 self.from_text(intent="enter_data"),
             ],
-            "use_case": [
-                self.from_text(intent="enter_data"),
-                self.from_intent(intent="ask_faq_voice", value="voice"),
-            ],
+            "use_case": [self.from_text(intent="enter_data"),],
             "budget": [
                 self.from_entity(entity="amount-of-money"),
                 self.from_entity(entity="number"),
@@ -238,39 +235,35 @@ class ActionChitchat(Action):
         return []
 
 
-class ActionFaqs(Action):
+class ActionExplainFaqs(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
     def name(self) -> Text:
-        return "action_faqs"
+        return "action_explain_faq"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        intent = tracker.latest_message["intent"].get("name")
+        topic = tracker.get_slot("faq")
 
-        logger.debug("Detected FAQ intent: {}".format(intent))
+        if topic in ["channels", "language", "ee", "slots", "voice"]:
+            dispatcher.utter_message(template=f"utter_faq_{topic}_more")
 
-        # retrieve the correct chitchat utterance dependent on the intent
-        if intent in [
-            "ask_faq_ee",
-            "ask_faq_languages",
-            "ask_faq_is_programming_required",
-            "ask_faq_tutorialcore",
-            "ask_faq_tutorialnlu",
-            "ask_faq_opensource_cost",
-            "ask_faq_voice",
-            "ask_faq_slots",
-            "ask_faq_channels",
-            "ask_faq_differencecorenlu",
-            "ask_faq_differencerasarasax",
-            "ask_faq_python_version",
-            "ask_faq_community_size",
-            "ask_faq_what_is_forum",
-            "ask_faq_tutorials",
-            "ask_faq_differencerasarasax",
-            "ask_faq_rasax",
-        ]:
-            dispatcher.utter_message(template=f"utter_{intent}")
         return []
+
+
+class ActionSetFaqSlot(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self) -> Text:
+        return "action_set_faq_slot"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        fullintent = tracker.latest_message["intent"].get("full_retrieval_intent_name")
+        if fullintent.startswith("faq"):
+            topic = fullintent.split("/")[1]
+        else:
+            topic = None
+
+        return [SlotSet("faq", topic)]
 
 
 class ActionPause(Action):

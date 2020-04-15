@@ -3,22 +3,26 @@
     - action_next_step
 
 ## faqs
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 
 ## more faqs
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
+* faq
+    - respond_faq
+    - action_set_faq_slot
 
 ## just newsletter
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -37,8 +41,9 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_continue_newsletter
 * affirm
     - utter_great
@@ -57,8 +62,9 @@
     - utter_can_do
     - subscribe_newsletter_form
     - form{"name": "subscribe_newsletter_form"}
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_continue_newsletter
 * deny
     - utter_thumbsup
@@ -73,8 +79,9 @@
 ## just newsletter (with email already) + confirm
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR  ask_faq_channels OR  ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
@@ -89,8 +96,9 @@
 ## just newsletter (with email already)
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * signup_newsletter{"email": "maxmeier@firma.de"}
     - utter_can_do
     - subscribe_newsletter_form
@@ -102,8 +110,9 @@
 ## just sales
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * contact_sales
     - utter_moreinformation
     - sales_form
@@ -118,8 +127,9 @@
     - utter_moreinformation
     - sales_form
     - form{"name": "sales_form"}
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_continue_sales
 * affirm
     - utter_great
@@ -133,8 +143,9 @@
     - utter_moreinformation
     - sales_form
     - form{"name": "sales_form"}
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_continue_sales
 * deny
     - utter_thumbsup
@@ -147,8 +158,9 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_first_bot_with_rasa
 * deny
     - action_set_onboarding
@@ -167,8 +179,9 @@
     - action_set_onboarding
     - slot{"onboarding": false}
     - utter_ask_which_product
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_which_product
 * deny
     - utter_thumbsup
@@ -185,11 +198,12 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_for_nlu_specifics
 * deny
-    - utter_ask_faq_tutorialnlu
+    - utter_tutorialnlu
     - utter_anything_else
 
 ## not new to rasa + nlu + unknown topic
@@ -204,8 +218,9 @@
     - utter_ask_which_product
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_for_nlu_specifics
 * nlu_info
     - action_store_unknown_nlu_part
@@ -228,8 +243,9 @@
 * nlu_info{"nlu_part": "intent classification"}
     - utter_nlu_intent_tutorial
     - utter_offer_recommendation
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_offer_recommendation
 * deny
     - utter_thumbsup
@@ -252,8 +268,9 @@
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
     - utter_what_language
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_what_language
 * enter_data{"language": "en"}
     - action_store_bot_language
@@ -278,8 +295,9 @@
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
     - utter_what_language
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_what_language
 * enter_data{"language": "en"}
     - action_store_bot_language
@@ -302,8 +320,9 @@
 * nlu_info{"nlu_part": "entity recognition"}
     - utter_nlu_entity_tutorial
     - utter_offer_recommendation
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
     - utter_ask_entities
@@ -330,8 +349,9 @@
     - utter_offer_recommendation
 * pipeline_recommendation OR affirm
     - utter_ask_entities
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_entities
 * enter_data{"entity": "date ranges"}
     - action_store_entity_extractor
@@ -340,41 +360,47 @@
     - utter_anything_else
 
 ## FAQ - tell more about rasa x ee
-* ask_faq_ee
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * explain
-    - utter_faq_ee_more
+    - action_explain_faq
 
 ## FAQ - tell more about languages
-* ask_faq_languages OR ask_faq_is_programming_required
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * explain
-    - utter_faq_language_more
+    - action_explain_faq
 
 ## FAQ - tell more about voice
-* ask_faq_voice
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * explain
-    - utter_faq_voice_more
+    - action_explain_faq
 
 ## FAQ - tell more about slots
-* ask_faq_slots
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * explain
-    - utter_faq_slots_more
+    - action_explain_faq
 
 ## FAQ - tell more about channels
-* ask_faq_channels
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * explain
-    - utter_faq_channels_more
+    - action_explain_faq
 
 ## FAQ - Step 2 flow interrupted
 * get_started_step2
     - action_greet_user
     - slot{"step": "2"}
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
@@ -384,8 +410,9 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_ready_to_build
 
 ## FAQ - Step 2 flow interrupted
@@ -393,8 +420,9 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_ready_to_build
 * affirm
     - utter_run_rasa_init
@@ -405,8 +433,9 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
@@ -448,8 +477,9 @@
     - utter_ask_ready_to_build
 * deny
     - utter_ask_if_problem
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
@@ -465,8 +495,9 @@
     - utter_ask_if_problem
 * affirm
     - utter_ask_describe_problem
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - action_store_problem_description
     - utter_installation_instructions
     - utter_direct_to_forum_for_help
@@ -481,8 +512,9 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_ready_to_build
 
 ## Just don't want to continue
@@ -490,15 +522,17 @@
     - utter_installation_command
     - utter_having_trouble_installing
     - utter_ask_ready_to_build
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_ready_to_build
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -524,8 +558,9 @@
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_first_bot_with_rasa
 * affirm
     - action_set_onboarding
@@ -553,8 +588,9 @@
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_built_bot_before
 * affirm
     - utter_ask_migration
@@ -580,8 +616,9 @@
     - utter_built_bot_before
 * affirm
     - utter_ask_migration
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_migration
 * deny
     - utter_explain_rasa_components
@@ -609,8 +646,9 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_explain_nlucorex
 * affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
@@ -639,8 +677,9 @@
     - utter_explain_core
     - utter_explain_x
     - utter_direct_to_step2
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain stack and try it out
@@ -653,8 +692,9 @@
     - action_set_onboarding
     - slot{"onboarding": true}
     - utter_built_bot_before
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_built_bot_before
 * deny
     - utter_explain_rasa_components
@@ -680,8 +720,9 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_explain_nlucorex
 * affirm OR how_to_get_started{"product":"all"} OR explain
     - utter_explain_nlu
@@ -709,8 +750,9 @@
     - utter_also_explain_nlucore
 * deny
     - utter_direct_to_step2
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain core and direct to step2
@@ -730,8 +772,9 @@
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_also_explain_nlu
 * deny
     - utter_direct_to_step2
@@ -755,8 +798,9 @@
     - utter_also_explain_nlu
 * deny
     - utter_direct_to_step2
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain core, then nlu and direct to step2
@@ -776,8 +820,9 @@
 * how_to_get_started{"product": "core"}
     - utter_explain_core
     - utter_also_explain_nlu
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_also_explain_nlu
 * affirm
     - utter_explain_nlu
@@ -801,8 +846,9 @@
     - slot{"product": "x"}
     - utter_explain_x
     - utter_also_explain_nlucore
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 
 ## new to rasa/bots, explain core, then nlu and direct to step2
 * greet
@@ -824,8 +870,9 @@
 * affirm
     - utter_explain_nlu
     - utter_direct_to_step2
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_direct_to_step2
 
 ## new to rasa/bots, explain nlu and direct to step2
@@ -845,8 +892,9 @@
 * how_to_get_started{"product": "nlu"}
     - utter_explain_nlu
     - utter_also_explain_core
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_also_explain_core
 * deny
     - utter_direct_to_step2
@@ -869,8 +917,9 @@
     - slot{"product": "x"}
     - utter_explain_x
     - utter_also_explain_nlucore
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * deny
     - utter_direct_to_step2
 
@@ -893,8 +942,9 @@
     - utter_also_explain_core
 * deny
     - utter_direct_to_step2
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_direct_to_step2
 
 ## new to rasa/bots, don't explain and direct to step2
@@ -911,8 +961,9 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_explain_nlucorex
 * deny
     - utter_direct_to_step2
@@ -933,15 +984,17 @@
     - utter_ask_explain_nlucorex
 * deny
     - utter_direct_to_step2
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_direct_to_step2
 
 ## not new to rasa + not interested in products
 * greet
     - action_greet_user
-* ask_faq_ee OR ask_faq_languages OR ask_faq_is_programming_required OR ask_faq_tutorialcore OR ask_faq_tutorialnlu OR ask_faq_opensource_cost OR ask_faq_voice OR ask_faq_slots OR ask_faq_channels OR ask_faq_differencecorenlu OR ask_faq_python_version OR ask_faq_community_size OR ask_faq_what_is_forum OR ask_faq_tutorials OR ask_faq_differencerasarasax OR ask_faq_rasax
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa

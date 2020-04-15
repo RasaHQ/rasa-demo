@@ -679,7 +679,7 @@
     - action_chitchat
     - utter_ask_for_nlu_specifics
 * deny
-    - utter_ask_faq_tutorialnlu
+    - utter_tutorialnlu
     - utter_anything_else
 
 ## not new to rasa + rasa x + nothing special
