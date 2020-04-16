@@ -511,6 +511,7 @@
 - what's the difference?
 - whats the diference
 - whats the difference between [core](product) and [nlu](product)
+- does the [open source](product) version have [core](product)?
 
 ## intent:faq/differencerasarasax
 - Are [Rasa](product) and [Rasa X](product) the same thing?
@@ -529,6 +530,8 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
+- what is the difference between[ rasa open source](company)[rasa open source](product:rasa) and [rasa x](company)[rasa x](product:x)
+- is [rasa open source](product) needed for [rasa x](product)?
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -803,6 +806,10 @@
 - would you call rasa open source software?
 - would you consider rasa open source software?
 - How is it opensource
+- The [open source](product)[open source](company) version
+- what is [rasa](product)[rasa open source](product) used for?
+- What is included in [RASA open source](product) edition?
+- you are [open source](product)
 
 ## intent:faq/python_version
 - What Python version should I use?
@@ -2258,7 +2265,7 @@
 - I would like to talk to someone from your sales team
 - i want to buy the enterprise edition
 - i would like rasa enterprise
-- purchase rasa enterprise 
+- purchase rasa enterprise
 - buy rasa enterprise
 - Ok I want to talk to your sales team immediately
 - Please connect me to someone from sales
@@ -3773,6 +3780,17 @@
 - [rasa open source](product)
 - [rasa Open source](product)
 - [Rasa Open Source](product)
+- [rasa open source](product)[rasa open source](product:rasa) then lets talk about[ rasa x](product)[rasa x](product:x)
+- [rasa open source](product)[rasa open source](product:rasa) please and thank you
+- [rasa open source](product:rasa)[rasa open source](product) to begin with
+- [open source rasa](product)
+- the [rasa open source](product:rasa)[rasa open source](product)
+- Tell me about [rasa open source](product:rasa)[rasa open source](product)
+- Rada [open source](product)
+- how to train [rasa open source](product)[rasa open source](product:rasa)
+- More about [Rasa open source](product)
+- Rosa [open source](product)
+- [rasa open source](product) first
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -3910,6 +3928,7 @@
 - please tell steps for installing chatbot
 - what do I need to install Rasa
 - what sould i do to install rasa
+- how can I install [rasa open source](product)?
 
 ## intent:next_step
 - continue to next step
@@ -4931,12 +4950,6 @@
 - thx
 - yes thanks
 
-## lookup: location
-data/nlu/lookups/location.txt
-
-## lookup: product
-data/nlu/lookups/products.txt
-
 ## synonym: duration
 - how long
 - durations
@@ -4977,7 +4990,7 @@ data/nlu/lookups/products.txt
 
 ## synonym:entity recognition
 - ner
-- entity extraction 
+- entity extraction
 - Entity recognition
 - NER
 - recognition
@@ -5026,6 +5039,9 @@ data/nlu/lookups/products.txt
 - Rasa Open Source
 - Rasa open source
 - rasa Open Source
+- open source
+- open source rasa
+- RASA open source
 
 ## synonym:stack
 - fullstack
@@ -5048,9 +5064,16 @@ data/nlu/lookups/products.txt
 - rasax
 - RASAX
 - RASA X
+-  rasa x
 
 ## regex:greet
 - hey[^\s]*
 
 ## regex:zipcode
 - [0-9]{5}
+
+## lookup:location.txt
+  data/nlu/lookups/location.txt
+
+## lookup:products.txt
+  data/nlu/lookups/products.txt
