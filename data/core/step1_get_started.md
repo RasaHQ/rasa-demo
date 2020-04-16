@@ -361,6 +361,57 @@
     - utter_explain_core
     - utter_explain_nlu
 
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* how_to_get_started{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
 ## skip to info on rasa x
 * how_to_get_started{"product": "x"}
     - slot{"product": "x"}
@@ -432,6 +483,25 @@
 * how_to_get_started{"product": "rasa"}
     - utter_explain_nlu
     - utter_explain_core
+
+## new to rasa + rasa oss
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
 
 ## skip to info on core
 * how_to_get_started{"product": "core"}

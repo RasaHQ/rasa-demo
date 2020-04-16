@@ -552,6 +552,31 @@
     - utter_explain_x
     - utter_direct_to_step2
 
+
+## new to rasa + not new to chatbots + not migrating
+* greet
+    - action_greet_user
+* faq
+    - respond_faq
+    - action_set_faq_slot
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
 ## new to rasa + not new to chatbots + not migrating
 * greet
     - action_greet_user

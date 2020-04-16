@@ -275,6 +275,29 @@
     - utter_explain_core
     - utter_explain_x
     - utter_direct_to_step2
+## new to rasa + not new to chatbots + not migrating
+* greet
+    - action_greet_user
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* ask_weather OR ask_builder OR ask_howdoing OR ask_whoisit OR ask_whatisrasa OR ask_isbot OR ask_howold OR ask_languagesbot OR ask_restaurant OR ask_time OR ask_wherefrom OR ask_whoami OR handleinsult OR nicetomeeyou OR telljoke OR ask_whatismyname OR ask_howbuilt
+    - action_chitchat
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
 
 ## new to rasa + not new to chatbots + not migrating
 * greet
