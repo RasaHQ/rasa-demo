@@ -257,8 +257,8 @@ class ActionSetFaqSlot(Action):
         return "action_set_faq_slot"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        fullintent = tracker.latest_message["intent"].get("full_retrieval_intent_name")
-        if fullintent.startswith("faq"):
+        fullintent = tracker.latest_message["intent"].get("full_retrieval_intent")
+        if fullintent and fullintent.startswith("faq"):
             topic = fullintent.split("/")[1]
         else:
             topic = None

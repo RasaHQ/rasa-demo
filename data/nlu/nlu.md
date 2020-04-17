@@ -530,7 +530,7 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
-- what is the difference between[ rasa open source](company)[rasa open source](product:rasa) and [rasa x](company)[rasa x](product:x)
+- what is the difference between [rasa open source](product:rasa) and [rasa x](product:x)
 - is [rasa open source](product) needed for [rasa x](product)?
 
 ## intent:faq/ee
@@ -806,8 +806,6 @@
 - would you call rasa open source software?
 - would you consider rasa open source software?
 - How is it opensource
-- The [open source](product)[open source](company) version
-- what is [rasa](product)[rasa open source](product) used for?
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
 
@@ -3780,14 +3778,14 @@
 - [rasa open source](product)
 - [rasa Open source](product)
 - [Rasa Open Source](product)
-- [rasa open source](product)[rasa open source](product:rasa) then lets talk about[ rasa x](product)[rasa x](product:x)
-- [rasa open source](product)[rasa open source](product:rasa) please and thank you
-- [rasa open source](product:rasa)[rasa open source](product) to begin with
+- [rasa open source](product) then lets talk about[ rasa x](product)
+- [rasa open source](product) please and thank you
+- [rasa open source](product:rasa) to begin with
 - [open source rasa](product)
-- the [rasa open source](product:rasa)[rasa open source](product)
-- Tell me about [rasa open source](product:rasa)[rasa open source](product)
+- the [rasa open source](product)
+- Tell me about [rasa open source](product)
 - Rada [open source](product)
-- how to train [rasa open source](product)[rasa open source](product:rasa)
+- how to train [rasa open source](product)
 - More about [Rasa open source](product)
 - Rosa [open source](product)
 - [rasa open source](product) first
@@ -3929,6 +3927,8 @@
 - what do I need to install Rasa
 - what sould i do to install rasa
 - how can I install [rasa open source](product)?
+- The [open source](product) version
+- what is [rasa open source](product) used for?
 
 ## intent:next_step
 - continue to next step
