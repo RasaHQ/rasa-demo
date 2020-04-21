@@ -224,6 +224,7 @@
 - ys
 - yup
 - yyeeeh
+- considering
 
 ## intent:ask_builder
 - By whom were you built?
@@ -699,6 +700,7 @@
 - which languages supports rasa
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
+- How about [hindi](language)?
 
 ## intent:ask_faq_opensource_cost
 - Are you free?
@@ -2197,6 +2199,8 @@
 - then bye
 - tlak to you later
 - toodle-oo
+- Exit
+- Close this talk
 
 ## intent:canthelp
 - I think you cant help me
@@ -2258,7 +2262,7 @@
 - I would like to talk to someone from your sales team
 - i want to buy the enterprise edition
 - i would like rasa enterprise
-- purchase rasa enterprise 
+- purchase rasa enterprise
 - buy rasa enterprise
 - Ok I want to talk to your sales team immediately
 - Please connect me to someone from sales
@@ -2788,7 +2792,6 @@
 - [portuguese](language) is the only language but I want to add more
 - [product manager](job_function)
 - [project manager](job_function)
-- [rasa](company)
 - [reddit](company)
 - [saler](job_function)
 - [sales manager](job_function)
@@ -3198,6 +3201,10 @@
 - [wordpress](company)
 - slack
 - e commerce bot
+- general and sales
+
+## intent:get_started_step1
+- [rasa](product)
 
 ## intent:explain
 - can you elaborate
@@ -3212,6 +3219,7 @@
 - why do you need to know that
 - why is that necessary
 - give me more details
+- why
 
 ## intent:greet
 - Bom dia
@@ -3773,6 +3781,8 @@
 - [rasa open source](product)
 - [rasa Open source](product)
 - [Rasa Open Source](product)
+- rasa basics
+- how can i get stared
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4074,6 +4084,10 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
+- こにちは
+- 日本語分かる？
+- chào
+- 你好
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4391,7 +4405,6 @@
 - who will anser my email?
 - who's Bill Gates?
 - whta you think about gdpr?
-- why
 - why do you need that?
 - why its called rasa ?
 - will u kill me
@@ -4409,6 +4422,12 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- what kind of bird are you?
+- contextua
+- contextual
+- talk to me about voulette
+- voulette voulette
+- Do you have a demo?
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4516,6 +4535,7 @@
 - I like you
 - I love you
 - you are realy intelligent
+- I like Rasa
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4849,6 +4869,8 @@
 - python sdk
 - how to run sdk endpoint in background
 - sdk
+- where can i find api documentation for rasa x
+- where is the api for rasa x
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4931,11 +4953,9 @@
 - thx
 - yes thanks
 
-## lookup: location
-data/nlu/lookups/location.txt
-
-## lookup: product
-data/nlu/lookups/products.txt
+## intent:out_of_scope
+- Cars
+- please voulette
 
 ## synonym: duration
 - how long
@@ -4977,7 +4997,7 @@ data/nlu/lookups/products.txt
 
 ## synonym:entity recognition
 - ner
-- entity extraction 
+- entity extraction
 - Entity recognition
 - NER
 - recognition
@@ -5054,3 +5074,9 @@ data/nlu/lookups/products.txt
 
 ## regex:zipcode
 - [0-9]{5}
+
+## lookup:location.txt
+  data/nlu/lookups/location.txt
+
+## lookup:products.txt
+  data/nlu/lookups/products.txt
