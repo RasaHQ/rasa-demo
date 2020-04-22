@@ -3202,8 +3202,6 @@
 - slack
 - e commerce bot
 - general and sales
-
-## intent:get_started_step1
 - [rasa](product)
 
 ## intent:explain
@@ -4428,6 +4426,8 @@
 - talk to me about voulette
 - voulette voulette
 - Do you have a demo?
+- Cars
+- please voulette
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4952,10 +4952,6 @@
 - thnks
 - thx
 - yes thanks
-
-## intent:out_of_scope
-- Cars
-- please voulette
 
 ## synonym: duration
 - how long
