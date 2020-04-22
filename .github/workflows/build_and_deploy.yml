@@ -91,7 +91,7 @@ jobs:
         msg: results.md
     - name: Train Model
       if: |
-          contains(  steps.files.outputs.all, 'data/'' ) 
+          contains(  steps.files.outputs.all, 'data/' ) 
           || contains(  steps.files.outputs.all, 'config.yml' ) 
           || contains(  steps.files.outputs.all, 'domain.yml' )
       working-directory: ${{ github.workspace }}
@@ -99,7 +99,7 @@ jobs:
         rasa train
     - name: Test Training Stories
       if: |
-          ( contains(  steps.files.outputs.all, 'data/core/'' ) 
+          ( contains(  steps.files.outputs.all, 'data/core/' ) 
           || contains(  steps.files.outputs.all, 'config.yml' ) 
           || contains(  steps.files.outputs.all, 'domain.yml' ) )
           && steps.train.outcome == 'success'
