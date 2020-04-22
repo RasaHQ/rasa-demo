@@ -35,5 +35,6 @@ policies:
 - core_threshold: 0.3
   name: TwoStageFallbackPolicy
   nlu_threshold: 0.8
+  deny_suggestion_intent_name: "trigger_rephrase"
 - name: FormPolicy
 - name: MappingPolicy

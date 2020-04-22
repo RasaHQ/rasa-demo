@@ -507,7 +507,7 @@ class ActionDefaultAskAffirmation(Action):
             if len(intent.split("/")) > 1:
                 message = self.get_button_title(intent, entities)
                 buttons.append(
-                    {"title": message, "payload": message, }
+                    {"title": message, "payload": message,}
                 )
             else:
                 buttons.append(
@@ -518,7 +518,7 @@ class ActionDefaultAskAffirmation(Action):
                 )
 
         buttons.append(
-            {"title": "Something else", "payload": "/trigger_rephrase", }
+            {"title": "Something else", "payload": "/trigger_rephrase",}
         )
 
         dispatcher.utter_message(text=message_title, buttons=buttons)
