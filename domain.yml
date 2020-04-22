@@ -3,26 +3,12 @@ session_config:
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
 intents:
 - affirm
-- ask_builder
 - faq
+- chitchat
 - ask_how_contribute
-- ask_howbuilt
-- ask_howdoing
-- ask_howold
-- ask_isbot
-- ask_languagesbot
 - ask_question_in_forum
-- ask_restaurant
-- ask_time
-- ask_weather
-- ask_whatismyname
-- ask_whatisrasa
-- ask_whatspossible
 - ask_when_next_event
-- ask_wherefrom
 - ask_which_events
-- ask_whoami
-- ask_whoisit
 - ask_why_contribute
 - bye
 - canthelp
@@ -37,12 +23,10 @@ intents:
 - get_started_step3
 - get_started_step4
 - greet
-- handleinsult
 - how_to_get_started
 - human_handoff
 - install_rasa
 - next_step
-- nicetomeeyou
 - nlu_generation_tool_recommendation
 - nlu_info
 - out_of_scope:
@@ -56,7 +40,6 @@ intents:
 - suggestion
 - switch
 - technical_question
-- telljoke
 - thank
 entities:
 - amount-of-money
@@ -158,9 +141,6 @@ responses:
   - text: Is there anything else I can help you with?
   utter_ask_budget:
   - text: What's your annual budget for conversational AI? 💸
-  utter_ask_builder:
-  - text: The engineers at Rasa 🛠
-  - text: One of the smart engineers at Rasa! 🧠
   utter_ask_business_email:
   - text: What's your business email?
   utter_ask_company:
@@ -202,94 +182,20 @@ responses:
   utter_ask_goal:
   - text: If you're new to Rasa, I can help you get started! If you've already started
       building an assistant, you can also ask me about the different parts of Rasa 🐦
-  utter_ask_howbuilt:
-  - text: I was built with a lot of love and patience.
-  - text: Well, when two chatbots love each other very much...
-  - text: They always ask how I was built, but never how I am...
-  - text: I was made by software engineers, but hard work is what built me.
-  - text: I'm building myself every day. I've been working out, did you notice?
-  utter_ask_howdoing:
-  - text: I'm great! Thanks for asking.
-  - text: I'm good, thanks!
-  - text: A little bit too warm, otherwise fine.
-  - text: A little bit cold, otherwise fine.
-  utter_ask_howold:
-  - text: Old enough to be a bot!
-  - text: '42'
-  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
-      matter.
-  - text: Never ask a chatbot her age!
-  - text: My first git commit was many moons ago.
-  - text: Why do you ask? Are my wrinkles showing?
-  - text: I've hit the age where I actively try to forget how old I am.
   utter_ask_if_problem:
   - text: Did you encounter any problems during installation?
-  utter_ask_isbot:
-  - text: Yep, I'm a bot!
-  - text: Yes, I'm a bot.
-  - text: Yep, you guessed it, I'm a bot!
-  - text: I am indeed a bot 🤖
   utter_ask_job_function:
   - text: What's your job? 🕴
-  utter_ask_languagesbot:
-  - text: I can spell baguette in French, but unfortunately English is the only language
-      I can answer you in.
-  - text: I am in the process of learning, but at the moment I can only speak English.
-  - text: Binary code and the language of love. And English.
-  - text: I was written in Python, but for your convenience I'll translate to English.
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:
   - text: What's your name?
-  utter_ask_restaurant:
-  - text: I'm sorry, I can't recommend you a restaurant as I usually cook at home.
-  - text: I'm sorry, I'm not getting taste buds for another few updates.
-  - text: I'd need some more data. If you lick the monitor perhaps I can evaluate
-      your taste buds.
-  utter_ask_time:
-  - text: It's the most wonderful time of the year!
-  - text: It's party time!
-  - text: Time is a human construct, you'll have to tell me.
-  - text: It's five o'clock somewhere!
-  - text: "In an ever expanding universe, the real question is: what time isn't it?"
-  - text: That's hard to say -- it's different all over the world!
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Rasa?
-  utter_ask_weather:
-  - text: I don't know about where you live, but in my world it's always sunny *
-  - text: It's getting pretty chilly!
-  - text: Where I'm from, it's almost never-leaving-the-house weather.
-  - text: Winter is coming ⚔️
-  utter_ask_whatismyname:
-  - text: It's probably the one that your parents chose for you.
-  - text: I'd tell you, but there's restricted access to that chunk of memory.
-  - text: Believe it or not, I actually am not spying on your personal information.
-  - text: You're the second person now to ask me that. Rihanna was the first.
-  utter_ask_whatisrasa:
-  - text: Rasa Open Source is a conversational AI framework for that provides machine
-      learning tools for building contextual assistants. You can read more about it here
-      in the docs or on our [website](https://rasa.com/).
-  utter_ask_whatspossible:
-  - text: "You can ask me about:\n- how to get started with Rasa\n- Rasa and Rasa\
-      \ X\n- subscribing to our newsletter\n- booking a sales call\n"
-  utter_ask_wherefrom:
-  - text: I was born in Berlin, but I consider myself a citizen of the world.
-  - text: I was born in the coolest city on Earth, in Berlin.
-  - text: My developers come from all over the world!
-  - text: I was taught not to give out my address on the internet.
-  - text: My address starts with github.com.
   utter_ask_which_product:
   - text: Ok, which product would you like to know more about? Rasa Open Source or Rasa X?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
-  utter_ask_whoami:
-  - text: I hope you are being yourself.
-  - text: Who do you think you are?
-  - text: Unfortunately I haven't been programmed with the amount of necessary philosophy
-      knowledge to answer that.
-  utter_ask_whoisit:
-  - text: I'm Sara, the Rasa bot! At the same time I'm also the Rasa mascot 🐦
-  - text: I'm both the Rasa bot and the Rasa mascot. My name is Sara!
   utter_awesome:
   - text: Awesome, thanks! 👍
   - text: Sweet, thank you! 😄
@@ -477,10 +383,6 @@ responses:
   - text: Hey!
   - text: Hi!
   - text: Hey there!
-  utter_handleinsult:
-  - text: That's not very nice 😢
-  - text: That wasn't very nice. Perhaps try an anger management class?
-  - text: I'll pretend I didn't process that mean comment.
   utter_have_you_used_rasa_before:
   - text: Have you used Rasa before?
   utter_inform_privacypolicy:
@@ -505,13 +407,6 @@ responses:
   - text: Sure, we can book a sales call! Let's get to know each other first 😉
   utter_must_accept:
   - text: We can't speak until you accept.
-  utter_nicetomeeyou:
-  - text: Likewise!
-  - text: Thank you. It is a pleasure to meet you as well!
-  - text: It is nice to meet you too!
-  - text: Pleased to meet you too!
-  - text: It's always a pleasure to meet new people!
-  - text: Nice to meet you too! Happy to be of help.
   utter_nlu_entity_tutorial:
   - text: "[Part 2](https://blog.rasa.com/rasa-nlu-in-depth-part-2-entity-recognition/)
       of the Rasa NLU In Depth series from our software engineer Tobias is a great
@@ -617,13 +512,6 @@ responses:
   - text: We have a guide for migrating from DialogFlow [here](https://www.rasa.com/docs/rasa/migrate-from/google-dialogflow-to-rasa/).
   utter_switch_luis:
   - text: We have a guide for migrating from LUIS [here](https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/).
-  utter_telljoke:
-  - text: Why are eggs not very much into jokes? - Because they could crack up.
-  - text: What's a tree's favorite drink? - Root beer!
-  - text: Why do the French like to eat snails so much? - They can't stand fast food.
-  - text: Why did the robot get angry? - Because someone kept pushing its buttons.
-  - text: What do you call a pirate droid? - Arrrr-2-D2
-  - text: Why did the robot cross the road? - Because he was programmed to.
   utter_tensorflow:
   - text: For {language}, you can only use the
       [supervised_embeddings](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#section-supervised-embeddings-pipeline) pipeline.
@@ -644,7 +532,7 @@ responses:
   utter_ask_rephrase:
   - text: Can you rephrase the question?
 actions:
-- action_chitchat
+- respond_chitchat
 - action_default_ask_affirmation
 - action_default_fallback
 - action_docs_search

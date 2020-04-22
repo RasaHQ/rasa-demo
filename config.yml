@@ -27,6 +27,9 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: faq
   scale_loss: false
+- name: ResponseSelector
+  retrieval_intent: chitchat
+  scale_loss: false
 policies:
 - name: TEDPolicy
   max_history: 10

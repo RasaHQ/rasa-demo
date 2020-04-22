@@ -225,7 +225,7 @@
 - yup
 - yyeeeh
 
-## intent:ask_builder
+## intent:chitchat/ask_builder
 - By whom were you built?
 - Can I ask the name of the people who designed you?
 - Do you know who built you?
@@ -1142,7 +1142,7 @@
 - in what ways can I help out?
 - what can I do?
 
-## intent:ask_howbuilt
+## intent:chitchat/ask_howbuilt
 - By what means were you made?
 - By what method were you fashioned?
 - Can you explain how you were created?
@@ -1190,7 +1190,7 @@
 - so how were you made?
 - what are you made of
 
-## intent:ask_howdoing
+## intent:chitchat/ask_howdoing
 - Ahoy matey how are you?
 - Are you ok?
 - Do you feel good?
@@ -1282,7 +1282,7 @@
 - whatsapp
 - yow are you
 
-## intent:ask_howold
+## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
 - How long have you been alive?
 - How long have you been around?
@@ -1337,7 +1337,7 @@
 - when were you born?
 - when you were bon
 
-## intent:ask_isbot
+## intent:chitchat/ask_isbot
 - Ar you a bot ?
 - Are you a bot
 - Are you a chat bot?
@@ -1376,7 +1376,7 @@
 - you are chatbot
 - you're a bot
 
-## intent:ask_languagesbot
+## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
 - Can you communicate in any other languages?
 - Can you speak more than one language?
@@ -1479,7 +1479,7 @@
 - ok send me to the forum
 - to the forum
 
-## intent:ask_restaurant
+## intent:chitchat/ask_restaurant
 - Any good restaurants nearby?
 - Can you find a restaurant for me?
 - Can you find me a burger joint?
@@ -1536,7 +1536,7 @@
 - I want to find some restauant nearby
 - show me restaurents
 
-## intent:ask_time
+## intent:chitchat/ask_time
 - Can you give me the time?
 - Can you tell me the time?
 - Can you tell me what time it is?
@@ -1589,7 +1589,7 @@
 - what's the time
 - whats the time now
 
-## intent:ask_weather
+## intent:chitchat/ask_weather
 - Are there any meteorological changes that I need to be aware of?
 - Are we in for a scorcher?
 - Beautiful day, isn't it?
@@ -1669,7 +1669,7 @@
 - wheather at you location?
 - wheather be like at your place?
 
-## intent:ask_whatismyname
+## intent:chitchat/ask_whatismyname
 - Can you tell me my name?
 - Can you tell me what I am called?
 - Do I have a name?
@@ -1708,7 +1708,7 @@
 - what is my name?
 - what's my name?
 
-## intent:ask_whatisrasa
+## intent:chitchat/ask_whatisrasa
 - Can you brief me about rasa
 - Can you tell me more about rasa?
 - Can you tell me what Rasa does?
@@ -1785,7 +1785,7 @@
 - whats rasa
 - yeah go on explaining what rasa is
 
-## intent:ask_whatspossible
+## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
 - Can you help me?
 - Could you please show me what you can
@@ -1888,7 +1888,7 @@
 - what you doing?
 - what you talk about?
 
-## intent:ask_wherefrom
+## intent:chitchat/ask_wherefrom
 - Are you from around here?
 - Around where are you from?
 - Do you know where you come from?
@@ -2047,7 +2047,7 @@
 - When is the next event for [India](location)?
 - What is the next event for [paris](location)?
 
-## intent:ask_whoami
+## intent:chitchat/ask_whoami
 - Can you tell me who I am?
 - Can you tell me who am I?
 - Do you know who I am?
@@ -2075,7 +2075,7 @@
 - who are I ?
 - who may i ?
 
-## intent:ask_whoisit
+## intent:chitchat/ask_whoisit
 - HI, what's your name?
 - Hello. What's your name?
 - I want to know who you are
@@ -3365,7 +3365,7 @@
 - yo
 - yoo
 
-## intent:handleinsult
+## intent:chitchat/handleinsult
 - FUCK
 - Fuck
 - Fuck Off
@@ -3947,7 +3947,7 @@
 - take me to the next step
 - what is the next step ?
 
-## intent:nicetomeeyou
+## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
 - Feels great to see you!
 - Glad to finally meet you!
@@ -4869,7 +4869,7 @@
 - how to run sdk endpoint in background
 - sdk
 
-## intent:telljoke
+## intent:chitchat/telljoke
 - Can you tell a joke?
 - Can you tell me a joke.
 - Come up with a joke you think I'll find funny.

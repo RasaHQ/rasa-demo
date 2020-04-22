@@ -348,8 +348,8 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * faq{"product":"rasa"}
-    - utter_explain_nlu
     - utter_explain_core
+    - utter_explain_nlu
 
 
 
@@ -808,11 +808,10 @@
     - utter_switch_dialogflow
     - utter_anything_else
 
-## how much does rasa cost
+## faq
 * faq
     - respond_faq
     - action_set_faq_slot
-    - utter_anything_else
 
 ## source code
 * source_code
