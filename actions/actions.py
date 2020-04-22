@@ -484,8 +484,11 @@ class ActionDefaultAskAffirmation(Action):
                 intent_ranking = intent_ranking[:1]
         first_intent_names = [
             intent.get("name", "")
+            if intent.get("name", "") not in ["out_of_scope", "faq", "chitchat"]
+            else tracker.latest_message.get("response_selector")
+            .get(intent.get("name", ""))
+            .get("full_retrieval_intent")
             for intent in intent_ranking
-            if intent.get("name", "") != "out_of_scope"
         ]
 
         message_title = (
@@ -501,21 +504,21 @@ class ActionDefaultAskAffirmation(Action):
         for intent in first_intent_names:
             logger.debug(intent)
             logger.debug(entities)
-            buttons.append(
-                {
-                    "title": self.get_button_title(intent, entities),
-                    "payload": "/{}{}".format(intent, entities_json),
-                }
-            )
+            if len(intent.split("/")) > 1:
+                message = self.get_button_title(intent, entities)
+                buttons.append(
+                    {"title": message, "payload": message,}
+                )
+            else:
+                buttons.append(
+                    {
+                        "title": self.get_button_title(intent, entities),
+                        "payload": "/{}{}".format(intent, entities_json),
+                    }
+                )
 
-        # /out_of_scope is a retrieval intent
-        # you cannot send rasa the '/out_of_scope' intent
-        # instead, you can send one of the sentences that it will map onto the response
         buttons.append(
-            {
-                "title": "Something else",
-                "payload": "I am asking you an out of scope question",
-            }
+            {"title": "Something else", "payload": "/trigger_rephrase",}
         )
 
         dispatcher.utter_message(text=message_title, buttons=buttons)
