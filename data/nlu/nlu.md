@@ -4086,6 +4086,7 @@
 - 日本語分かる？
 - chào
 - 你好
+- I'm speaking a non-english language.
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4428,6 +4429,7 @@
 - Do you have a demo?
 - Cars
 - please voulette
+- Out of scope question.
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
