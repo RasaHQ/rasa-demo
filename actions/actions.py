@@ -504,14 +504,14 @@ class ActionDefaultAskAffirmation(Action):
         for intent in first_intent_names:
             logger.debug(intent)
             logger.debug(entities)
-            if len(intent.split("/")) > 1:
+            if "/" in intent:
                 message = self.get_button_title(intent, entities)
                 buttons.append({"title": message, "payload": message})
             else:
                 buttons.append(
                     {
                         "title": self.get_button_title(intent, entities),
-                        "payload": "/{}{}".format(intent, entities_json),
+                        "payload": f"/{intent}{entities_json}",
                     }
                 )
 
