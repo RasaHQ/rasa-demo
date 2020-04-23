@@ -515,10 +515,7 @@ class ActionDefaultAskAffirmation(Action):
                 buttons.append({"title": button_title, "payload": button_title})
             else:
                 buttons.append(
-                    {
-                        "title": button_title,
-                        "payload": f"/{intent}{entities_json}",
-                    }
+                    {"title": button_title, "payload": f"/{intent}{entities_json}"}
                 )
 
         buttons.append({"title": "Something else", "payload": "/trigger_rephrase"})
