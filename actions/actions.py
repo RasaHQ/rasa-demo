@@ -482,6 +482,11 @@ class ActionDefaultAskAffirmation(Action):
                 intent_ranking = intent_ranking[:2]
             else:
                 intent_ranking = intent_ranking[:1]
+
+        # for the intent name used to retrieve the button title, we either use
+        # the name of the name of the "main" intent, or if it's an intent that triggers
+        # the response selector, we use the full retrieval intent name so that we
+        # can distinguish between the different sub intents
         first_intent_names = [
             intent.get("name", "")
             if intent.get("name", "") not in ["out_of_scope", "faq", "chitchat"]
@@ -502,15 +507,16 @@ class ActionDefaultAskAffirmation(Action):
 
         buttons = []
         for intent in first_intent_names:
-            logger.debug(intent)
-            logger.debug(entities)
+            button_title = self.get_button_title(intent, entities)
             if "/" in intent:
-                message = self.get_button_title(intent, entities)
-                buttons.append({"title": message, "payload": message})
+                # here we use the button title as the payload as well, because you
+                # can't force a response selector sub intent, so we need NLU to parse
+                # that correctly
+                buttons.append({"title": button_title, "payload": button_title})
             else:
                 buttons.append(
                     {
-                        "title": self.get_button_title(intent, entities),
+                        "title": button_title,
                         "payload": f"/{intent}{entities_json}",
                     }
                 )
