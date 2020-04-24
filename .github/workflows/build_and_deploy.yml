@@ -3,6 +3,34 @@ name: Build and Deploy
 on: [pull_request]
 
 jobs:
+  set-changed-files:
+    name: Set Changed Files Env Vars
+    runs-on: ubuntu-latest
+    steps:
+    - id: files
+      uses: jitterbit/get-changed-files@v1
+    - name: set_training
+      if: |
+          contains(  steps.files.outputs.all, 'data/' ) 
+          || contains(  steps.files.outputs.all, 'config.yml' ) 
+          || contains(  steps.files.outputs.all, 'domain.yml' )
+      run: echo "::set-env name=TRAINING::true"
+    - name: set_nlu
+      if: |
+        contains(  steps.files.outputs.all, 'data/nlu/' ) 
+        || contains(  steps.files.outputs.all, 'config.yml' )
+      run: echo "::set-env name=NLU::true"
+    - name: set_stories
+      if: |
+        ( contains(  steps.files.outputs.all, 'data/core/' ) 
+        || contains(  steps.files.outputs.all, 'config.yml' ) 
+        || contains(  steps.files.outputs.all, 'domain.yml' ) )
+      run: echo "::set-env name=STORIES::true"
+    - name: set_actions
+      if: |
+        contains(  steps.files.outputs.all, 'actions/' ) 
+        || contains(  steps.files.outputs.all, 'Dockerfile' )
+      run: echo "::set-env name=ACTIONS::true"
   lint-testing:
     name: Code Formatting Tests
     runs-on: ubuntu-latest
@@ -58,30 +86,19 @@ jobs:
     name: Testing Stories
     runs-on: ubuntu-latest
     needs: [data-validation]
+    if: ${{ TRAINING }} == "true"
     steps:
-    - id: files
-      uses: jitterbit/get-changed-files@v1
-    - run: |
-          for changed_file in steps.files.outputs.all; do
-            echo " ${changed_file} changed "
-          done
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
-      if: |
-        contains(  steps.files.outputs.all, 'data/' ) 
-        || contains(  steps.files.outputs.all, 'config.yml' ) 
-        || contains(  steps.files.outputs.all, 'domain.yml' )
     - name: Install dependencies
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
     - name: Cross-validate NLU model
-      if: |
-          contains(  steps.files.outputs.all, 'data/nlu/' ) 
-          || contains(  steps.files.outputs.all, 'config.yml' )
+      if: ${{ NLU }} == "true"
       run: |  
           rasa test nlu -f 3 --cross-validation
           python .github/workflows/format_results.py
@@ -98,11 +115,7 @@ jobs:
       run: |
         rasa train
     - name: Test Training Stories
-      if: |
-          ( contains(  steps.files.outputs.all, 'data/core/' ) 
-          || contains(  steps.files.outputs.all, 'config.yml' ) 
-          || contains(  steps.files.outputs.all, 'domain.yml' ) )
-          && steps.train.outcome == 'success'
+      if: ${{ STORIES }} == "true"
       working-directory: ${{ github.workspace }}
       run: |
         rasa test core --stories test/test_stories.md --fail-on-prediction-errors
@@ -117,34 +130,25 @@ jobs:
     name: Build and Push Images
     needs: [lint-testing, type-testing, training-testing]
     runs-on: ubuntu-latest
+    if: ${{ ACTIONS }} == "true"
     steps:
     - uses: actions/checkout@v1
-    - id: files
-      uses: jitterbit/get-changed-files@v1
     - name: Authenticate into Google Cloud Platform
-      if: |
-        contains(  steps.files.outputs.all, 'actions/' ) 
-        || contains(  steps.files.outputs.all, 'Dockerfile' )
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '275.0.0'
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
     - name: Configure Docker to use Google Cloud Platform
-      if: success()
       run: |
         gcloud auth configure-docker
     - name: Pull Latest Image
-      if: success()
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
     - name: Set Build ID from PR Ref
-      if: success()
       run: echo ::set-env name=BUILD_NUMBER::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
     - name: Build Image
-      if: success()
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Push PR Image to Google Cloud Container Registry
-      if: success()
       run: |
         docker push gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER
