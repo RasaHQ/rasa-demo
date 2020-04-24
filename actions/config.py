@@ -41,3 +41,5 @@ algolia_app_id = os.environ.get("ALGOLIA_APP_ID", "")
 algolia_search_key = os.environ.get("ALGOLIA_SEARCH_KEY", "")
 
 algolia_docs_index = os.environ.get("ALGOLIA_DOCS_INDEX", "")
+
+rasa_x_host = os.environ.get("RASA_X_HOST", "rasa-x:5002")
