@@ -1,7 +1,9 @@
 language: en
 pipeline:
-- name: WhitespaceTokenizer
-- name: CRFEntityExtractor
+- name: ConveRTTokenizer
+- name: ConveRTFeaturizer
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
   OOV_token: oov
   token_pattern: (?u)\b\w+\b
@@ -9,9 +11,9 @@ pipeline:
   analyzer: char_wb
   min_ngram: 1
   max_ngram: 4
-- name: EmbeddingIntentClassifier
-  epochs: 50
-  loss_type: margin
+- name: DIETClassifier
+  epochs: 200
+  ranking_length: 5
 - name: DucklingHTTPExtractor
   url: http://localhost:8000
   dimensions:
@@ -22,7 +24,7 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: out_of_scope
 policies:
-- name: EmbeddingPolicy
+- name: TEDPolicy
   max_history: 10
   epochs: 20
   batch_size:
@@ -33,5 +35,6 @@ policies:
 - core_threshold: 0.3
   name: TwoStageFallbackPolicy
   nlu_threshold: 0.8
+  deny_suggestion_intent_name: "trigger_rephrase"
 - name: FormPolicy
 - name: MappingPolicy

@@ -38,7 +38,7 @@ if you want to train it faster, try the training command with
 
 Then, to run, first set up your action server in one terminal window:
 ```bash
-rasa run actions --actions demo.actions
+rasa run actions --actions actions.actions
 ```
 
 There are some custom actions that require connections to external services,
@@ -74,7 +74,7 @@ rasa test core --stories test/test_stories.md
 
 `data/nlu` - contains NLU training data
 
-`demo` - contains custom action/api code
+`actions` - contains custom action code
 
 `domain.yml` - the domain file, including bot response templates
 
