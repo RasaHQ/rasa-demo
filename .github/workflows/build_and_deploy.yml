@@ -120,11 +120,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - id: files
+      uses: jitterbit/get-changed-files@v1
     - name: Authenticate into Google Cloud Platform
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '275.0.0'
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
+      if: |
+        contains(  steps.files.outputs.all, 'actions/' ) 
+        || contains(  steps.files.outputs.all, 'Dockerfile' )
     - name: Configure Docker to use Google Cloud Platform
       run: |
         gcloud auth configure-docker
