@@ -1439,6 +1439,7 @@
 - which languages do you understand?
 - you know [French](language)
 - you speak [french](language) ?
+- I want to speak binary with you
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
