@@ -3480,7 +3480,6 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
-- don't you have a sweater
 - F u
 
 ## intent:how_to_get_started
