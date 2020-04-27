@@ -79,3 +79,5 @@ switch,I want to migrate from {current_api}.,current_api
 technical_question,A technical question.,
 telljoke,Tell me a joke!,
 thank,Thanks!,
+out_of_scope/other,Out of scope question.,
+out_of_scope/non_english,I'm speaking a non-english language.,
