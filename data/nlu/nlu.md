@@ -4442,7 +4442,6 @@
 - you're a woman
 - ı am learning python
 - CALL THE POLICE
-- I want to speak binary with you
 - tertyryutyi
 - wsdrcftvgybhnj
 - why sky is blue?
