@@ -224,6 +224,7 @@
 - ys
 - yup
 - yyeeeh
+- considering
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -702,6 +703,7 @@
 - which languages supports rasa
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
+- How about [hindi](language)?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -2202,6 +2204,8 @@
 - then bye
 - tlak to you later
 - toodle-oo
+- Exit
+- Close this talk
 
 ## intent:canthelp
 - I think you cant help me
@@ -2793,7 +2797,6 @@
 - [portuguese](language) is the only language but I want to add more
 - [product manager](job_function)
 - [project manager](job_function)
-- [rasa](company)
 - [reddit](company)
 - [saler](job_function)
 - [sales manager](job_function)
@@ -3203,6 +3206,8 @@
 - [wordpress](company)
 - slack
 - e commerce bot
+- general and sales
+- [rasa](product)
 
 ## intent:explain
 - can you elaborate
@@ -3217,6 +3222,7 @@
 - why do you need to know that
 - why is that necessary
 - give me more details
+- why
 
 ## intent:greet
 - Bom dia
@@ -3789,6 +3795,8 @@
 - More about [Rasa open source](product)
 - Rosa [open source](product)
 - [rasa open source](product) first
+- rasa basics
+- how can i get stared
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4093,6 +4101,11 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
+- こにちは
+- 日本語分かる？
+- chào
+- 你好
+- I'm speaking a non-english language.
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4410,7 +4423,6 @@
 - who will anser my email?
 - who's Bill Gates?
 - whta you think about gdpr?
-- why
 - why do you need that?
 - why its called rasa ?
 - will u kill me
@@ -4428,6 +4440,15 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- what kind of bird are you?
+- contextua
+- contextual
+- talk to me about voulette
+- voulette voulette
+- Do you have a demo?
+- Cars
+- please voulette
+- Out of scope question.
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4535,6 +4556,7 @@
 - I like you
 - I love you
 - you are realy intelligent
+- I like Rasa
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4868,6 +4890,8 @@
 - python sdk
 - how to run sdk endpoint in background
 - sdk
+- where can i find api documentation for rasa x
+- where is the api for rasa x
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?

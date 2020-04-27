@@ -41,6 +41,7 @@ intents:
 - switch
 - technical_question
 - thank
+- trigger_rephrase
 entities:
 - amount-of-money
 - company
