@@ -68,7 +68,7 @@
 
 ## faq
 * faq/opensource_cost
-  - The Rasa machine learning framework is open source! We strive to provide well-maintained and documented open source tools, allowing all makers to build the best AI assistants without friction.\nIn addition to that,  we offer the free toolset [Rasa X](https://rasa.com/docs/rasa-x/) and paid Rasa Enterprise   subscriptions.\n\nYou can find out more [here](https://rasa.com/product/pricing/)  about the plans and pricing.
+  - The Rasa machine learning framework is open source! We strive to provide well-maintained and documented open source tools, allowing all makers to build the best AI assistants without friction. In addition to that,  we offer the free toolset [Rasa X](https://rasa.com/docs/rasa-x/) and paid Rasa Enterprise   subscriptions. You can find out more [here](https://rasa.com/product/pricing/)  about the plans and pricing.
 
 ## chitchat
 * chitchat/ask_builder 
@@ -153,7 +153,7 @@
 
 ## chitchat
 * chitchat/ask_whatspossible 
-  -  You can ask me about:\n- how to get started with Rasa\n- Rasa and Rasa  X\n- subscribing to our newsletter\n- booking a sales call
+  -  You can ask me about how to get started with Rasa, the difference between Rasa and Rasa X, subscribing to our newsletter or booking a sales call.
 
 ## chitchat
 * chitchat/ask_wherefrom 
