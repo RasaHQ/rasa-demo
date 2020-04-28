@@ -466,6 +466,7 @@
 - Any integrations with WhatsApp and Facebook?
 - what ui can I use
 - which user interface can I use?
+- integrate rasa with ui
 
 ## intent:ask_faq_community_size
 - Did you know the size of rasa community?
@@ -4912,7 +4913,6 @@
 - what should I do when I want to use a binary slot
 - How d I use a boolean slot
 - what  are values of a boolean slot
-- integrate rasa with ui
 - fallback
 - stories files
 - use of stories files
