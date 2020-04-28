@@ -67,14 +67,14 @@ jobs:
           contains(  steps.files.outputs.all, ' data/' ) 
           || contains(  steps.files.outputs.all, ' config.yml' ) 
           || contains(  steps.files.outputs.all, ' domain.yml' )
-      run: echo "::set-env name=TRAINING::true"
+      run: echo "::set-env name=RUN_TRAINING::true"
     - name: Set up Python 3.7
-      if: env.TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
     - name: Install dependencies
-      if: env.TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
@@ -96,7 +96,7 @@ jobs:
       with:
         msg: results.md
     - name: Train Model
-      if: env.TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       working-directory: ${{ github.workspace }}
       run: |
         rasa train
@@ -111,7 +111,7 @@ jobs:
     - name: Upload model
       if: |
           github.ref == 'refs/heads/master' 
-          && env.TRAINING == 'true'
+          && env.RUN_TRAINING == 'true'
       uses: actions/upload-artifact@master
       with:
         name: model
