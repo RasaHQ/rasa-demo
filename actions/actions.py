@@ -113,7 +113,7 @@ class SalesForm(FormAction):
                 self.from_entity(entity="job_function"),
                 self.from_text(intent="enter_data"),
             ],
-            "use_case": [self.from_text(intent="enter_data"),],
+            "use_case": [self.from_text(intent="enter_data")],
             "budget": [
                 self.from_entity(entity="amount-of-money"),
                 self.from_entity(entity="number"),
