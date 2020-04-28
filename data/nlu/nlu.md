@@ -76,7 +76,6 @@
 - go ahead
 - go for it
 - going super well
-- good
 - good.
 - great
 - great lets do that
@@ -101,7 +100,6 @@
 - kk
 - lets do it
 - lets do this
-- nice
 - not bad
 - of course
 - ofcoure i do
@@ -225,6 +223,61 @@
 - yup
 - yyeeeh
 - considering
+- More a less
+- cool beans
+
+## intent:react_positive
+- good
+- nice
+- :)
+- :D
+- HAHA
+- I am happy
+- LOL
+- Lol
+- Lol thats funny
+- Looks nice
+- WOW
+- Wow
+- You are great
+- You're cute.
+- You're nice.
+- You're really cool
+- hAHAHA
+- ha ha
+- haha
+- hahah
+- hahaha
+- happy
+- i am feeling happy
+- i am happy
+- i am happy today
+- i am very happy with your response
+- i love you
+- it's pretty cool
+- lol
+- love you
+- okay Rasabot, you're cool
+- rasa is awesome
+- such a great demo
+- that is funny
+- that was a great interaction
+- thats funny
+- today was a nice day
+- wow
+- you are a badass bot!
+- you are awesome
+- you are cool
+- you are cool man
+- you are doin great
+- you are funny
+- you are great
+- you are my new bestfriend
+- you seem pretty cool :D
+- I like you
+- I love you
+- you are realy intelligent
+- I like Rasa
 
 ## intent:ask_builder
 - By whom were you built?
@@ -332,6 +385,7 @@
 - why were you made?
 - you are made by who?
 - you are working for which company?
+- who is the author of rasa
 
 ## intent:ask_faq_rasax
 - what is Rasa X?
@@ -409,6 +463,9 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- Any integrations with WhatsApp and Facebook?
+- what ui can I use
+- which user interface can I use?
 
 ## intent:ask_faq_community_size
 - Did you know the size of rasa community?
@@ -701,6 +758,10 @@
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
 - How about [hindi](language)?
+- what lanquages do you support
+- What lanquages do you serve
+- does rasa support other language beside english?
+- how to build rasa with different languages?
 
 ## intent:ask_faq_opensource_cost
 - Are you free?
@@ -1333,6 +1394,7 @@
 - when is your birthday?
 - when were you born?
 - when you were bon
+- What's your age?
 
 ## intent:ask_isbot
 - Ar you a bot ?
@@ -1372,6 +1434,7 @@
 - you are ai
 - you are chatbot
 - you're a bot
+- hey are you human>
 
 ## intent:ask_languagesbot
 - Are you familiar with more than one language?
@@ -1781,6 +1844,7 @@
 - what is rasa?
 - whats rasa
 - yeah go on explaining what rasa is
+- what are the components of rasa
 
 ## intent:ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -1884,6 +1948,8 @@
 - what you do
 - what you doing?
 - what you talk about?
+- you can hep me
+- what can you teache me?
 
 ## intent:ask_wherefrom
 - Are you from around here?
@@ -2485,6 +2551,7 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- none of them
 
 ## intent:enter_data
 - $1
@@ -3781,6 +3848,8 @@
 - [Rasa Open Source](product)
 - rasa basics
 - how can i get stared
+- how to build assistant?
+- how to build assistant with rasa?
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4430,6 +4499,9 @@
 - Cars
 - please voulette
 - Out of scope question.
+- i need money
+- no, i need cash, money! Do you have it ?
+- the beatles
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4487,57 +4559,10 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
-
-## intent:react_positive
-- :)
-- :D
-- HAHA
-- I am happy
-- LOL
-- Lol
-- Lol thats funny
-- Looks nice
-- WOW
-- Wow
-- You are great
-- You're cute.
-- You're nice.
-- You're really cool
-- hAHAHA
-- ha ha
-- haha
-- hahah
-- hahaha
-- happy
-- i am feeling happy
-- i am happy
-- i am happy today
-- i am very happy with your response
-- i love you
-- it's pretty cool
-- lol
-- love you
-- okay Rasabot, you're cool
-- rasa is awesome
-- such a great demo
-- that is funny
-- that was a great interaction
-- thats funny
-- today was a nice day
-- wow
-- you are a badass bot!
-- you are awesome
-- you are cool
-- you are cool man
-- you are doin great
-- you are funny
-- you are great
-- you are my new bestfriend
-- you seem pretty cool :D
-- I like you
-- I love you
-- you are realy intelligent
-- I like Rasa
+- i am so worry
+- i will leave
+- Although I understand your still in development, I feel a little bit disappointed.
+- Surely you're not so smart lik i thought
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4873,6 +4898,27 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- Hello, where can I find the paper about DIET?
+- Is there a technical paper about DIET?
+- domain
+- How do I get yes / no answer buttons
+- I am searching the changlog
+- rasa templates
+- how to add in my website
+- php
+- php code
+- what is the difference between slot and entity
+- is slot teh same as entity
+- what should I do when I want to use a binary slot
+- How d I use a boolean slot
+- what  are values of a boolean slot
+- integrate rasa with ui
+- fallback
+- stories files
+- use of stories files
+- installation error
+- bash: poetry: command not found
+- Can i use NLU on its own
 
 ## intent:telljoke
 - Can you tell a joke?
