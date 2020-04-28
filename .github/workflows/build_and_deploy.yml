@@ -128,29 +128,29 @@ jobs:
       if: |
         contains(  steps.files.outputs.all, ' actions/' ) 
         || contains(  steps.files.outputs.all, ' Dockerfile' )
-      run: echo "::set-env name=ACTIONS::true"
+      run: echo "::set-env name=ACTIONS_CHANGED::true"
     - name: Authenticate into Google Cloud Platform
-      if: env.ACTIONS == 'true'
+      if: env.ACTIONS_CHANGED == 'true'
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '275.0.0'
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
     - name: Configure Docker to use Google Cloud Platform
-      if: env.ACTIONS == 'true'
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
         gcloud auth configure-docker
     - name: Pull Latest Image
-      if: env.ACTIONS == 'true'
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
     - name: Set Build ID from PR Ref
-      if: env.ACTIONS == 'true'
+      if: env.ACTIONS_CHANGED == 'true'
       run: echo ::set-env name=BUILD_NUMBER::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
     - name: Build Image
-      if: env.ACTIONS == 'true'
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
         docker build -t gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
     - name: Push PR Image to Google Cloud Container Registry
-      if: env.ACTIONS == 'true'
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
         docker push gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER
