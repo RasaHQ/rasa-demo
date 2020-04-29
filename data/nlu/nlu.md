@@ -531,7 +531,7 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
-- what is the difference between [rasa open source](product:rasa) and [rasa x](product:x)
+- what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 
 ## intent:faq/ee
@@ -3786,7 +3786,7 @@
 - [Rasa Open Source](product)
 - [rasa open source](product) then lets talk about[ rasa x](product)
 - [rasa open source](product) please and thank you
-- [rasa open source](product:rasa) to begin with
+- [rasa open source](product) to begin with
 - [open source rasa](product)
 - the [rasa open source](product)
 - Tell me about [rasa open source](product)
@@ -4973,6 +4973,13 @@
 - thnks
 - thx
 - yes thanks
+
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
 
 ## synonym: duration
 - how long
