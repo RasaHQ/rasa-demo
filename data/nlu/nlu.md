@@ -4762,6 +4762,8 @@
 - switch to rasa from another platform
 - migrate to rasa from another tool
 - switch to rasa
+- from which tools can I migrate to rasa?
+- can I migrate to rasa from another tool?
 
 ## intent:technical_question
 - Create ecommerce bot
