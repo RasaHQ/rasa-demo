@@ -225,6 +225,7 @@
 - yup
 - yyeeeh
 - considering
+- That's awesome.
 
 ## intent:ask_builder
 - By whom were you built?
@@ -357,6 +358,7 @@
 - i want to learn more about Rasa X
 - tell me what is rasa x
 - what is rasa x?
+- what is rasax
 
 ## intent:ask_faq_channels
 - Can you tell which messaging channels does rasa support?
@@ -409,6 +411,7 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- Do you  help to  integrate Facebook
 
 ## intent:ask_faq_community_size
 - Did you know the size of rasa community?
@@ -530,6 +533,7 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
+- what is the different between [rasa](product) and [rasa X](product:x)
 
 ## intent:ask_faq_ee
 - Can you tell me about the enterprise edition?
@@ -1372,6 +1376,7 @@
 - you are ai
 - you are chatbot
 - you're a bot
+- you robo
 
 ## intent:ask_languagesbot
 - Are you familiar with more than one language?
@@ -1431,6 +1436,7 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- ARE YOU SPANISH
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -1781,6 +1787,7 @@
 - what is rasa?
 - whats rasa
 - yeah go on explaining what rasa is
+- RASA IS SOFTWARE?
 
 ## intent:ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -2135,6 +2142,9 @@
 - yes but who are you in your heart
 - may i know your name
 - what is rasa mascot
+- what are you
+- your name
+- your real name friend
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -3203,6 +3213,7 @@
 - e commerce bot
 - general and sales
 - [rasa](product)
+- [botpress](current_api)
 
 ## intent:explain
 - can you elaborate
@@ -3781,6 +3792,8 @@
 - [Rasa Open Source](product)
 - rasa basics
 - how can i get stared
+- how to using you
+- What are the coponent
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -3918,6 +3931,7 @@
 - please tell steps for installing chatbot
 - what do I need to install Rasa
 - what sould i do to install rasa
+- installation steps of rasa
 
 ## intent:next_step
 - continue to next step
@@ -4087,6 +4101,14 @@
 - chào
 - 你好
 - I'm speaking a non-english language.
+- 呵呵
+- 我该如何使用
+- 你懂中文吗？
+- 您好
+- 你叫什么名字
+- 你是谁
+- 中文
+- kya hindi me bat kar sakate ho
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4430,6 +4452,10 @@
 - Cars
 - please voulette
 - Out of scope question.
+- Hi i want to go palghar
+- I want to go palghar
+- your contry name
+- you girl
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4487,6 +4513,8 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
+- iam not feeling good
+- not good
 
 ## intent:react_positive
 - :)
@@ -4757,6 +4785,7 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- [dialogflow](current_api) and implementation from scratch
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -4873,6 +4902,22 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- do we need to write training data nlu.md
+- For training data, to we need to exclusively write the file in MD format?
+- How can i talk to RASA through the url
+- what is action server
+- is it a best practice to connect an external cms
+- can you show me buttons
+- I'd like to handle chitchat
+- Can Rasa be incorporated into iOS apps?
+- how to implement buttons
+- buttons
+- implement buttons
+- I want to build RASA DIET in google colab
+- tensorflow-text
+- installation of tensorflow-text
+- ConveRTFeaturizer
+- whatsapp bro
 
 ## intent:telljoke
 - Can you tell a joke?
@@ -4954,6 +4999,7 @@
 - thnks
 - thx
 - yes thanks
+- thanks f
 
 ## synonym: duration
 - how long
