@@ -1436,7 +1436,7 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
-- ARE YOU SPANISH
+- ARE YOU [SPANISH](language)
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
