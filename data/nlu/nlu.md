@@ -226,7 +226,7 @@
 - yyeeeh
 - considering
 
-## intent:ask_builder
+## intent:chitchat/ask_builder
 - By whom were you built?
 - Can I ask the name of the people who designed you?
 - Do you know who built you?
@@ -333,7 +333,7 @@
 - you are made by who?
 - you are working for which company?
 
-## intent:ask_faq_rasax
+## intent:faq/rasax
 - what is Rasa X?
 - how does Rasa X work?
 - what is X?
@@ -358,7 +358,7 @@
 - tell me what is rasa x
 - what is rasa x?
 
-## intent:ask_faq_channels
+## intent:faq/channels
 - Can you tell which messaging channels does rasa support?
 - Channels
 - Can I use the rasa code for my own website?
@@ -410,7 +410,7 @@
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
 
-## intent:ask_faq_community_size
+## intent:faq/community_size
 - Did you know the size of rasa community?
 - Do you know how big the Rasa community is?
 - Do you know how many people are in the Rasa community?
@@ -452,7 +452,7 @@
 - how many forum members do you have
 - how many people are using Rasa
 
-## intent:ask_faq_differencecorenlu
+## intent:faq/differencecorenlu
 - DIFFERENCES BETWEEN [CORE](product) AND [NLU](product)
 - Do you know the difference between [core](product) and [nlu](product)?
 - How do [core](product) and [nlu](product) conflict?
@@ -512,8 +512,9 @@
 - what's the difference?
 - whats the diference
 - whats the difference between [core](product) and [nlu](product)
+- does the [open source](product) version have [core](product)?
 
-## intent:ask_faq_differencerasarasax
+## intent:faq/differencerasarasax
 - Are [Rasa](product) and [Rasa X](product) the same thing?
 - Can I use [Rasa X](product) without using [Rasa](product)?
 - Can i use [rasa](product) without [rasa x](product)?
@@ -530,8 +531,10 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
+- what is the difference between [rasa open source](product:rasa) and [rasa x](product:x)
+- is [rasa open source](product) needed for [rasa x](product)?
 
-## intent:ask_faq_ee
+## intent:faq/ee
 - Can you tell me about the enterprise edition?
 - I want information about the enterprise edition
 - Tell me about rasa x ee
@@ -555,7 +558,7 @@
 - rasa enterprise please
 - more info about enterprise
 
-## intent:ask_faq_is_programming_required
+## intent:faq/is_programming_required
 - Does rasa require programming knowledge
 - Do I need programming skills to develop a chatbot in rasa
 - do I need programming experience to use rasa
@@ -606,7 +609,7 @@
 - which language is rasa programmed in
 - Which programming language is rasa written in?
 
-## intent:ask_faq_languages
+## intent:faq/languages
 - Any languages that rasa supports?
 - Can I use Rasa with [Thai](language) language
 - Can rasa support any language?
@@ -702,7 +705,7 @@
 - could I program spanish speaking bots?
 - How about [hindi](language)?
 
-## intent:ask_faq_opensource_cost
+## intent:faq/opensource_cost
 - Are you free?
 - Can you tell me whats the price for rasa platform?
 - How much do you cost?
@@ -805,8 +808,10 @@
 - would you call rasa open source software?
 - would you consider rasa open source software?
 - How is it opensource
+- What is included in [RASA open source](product) edition?
+- you are [open source](product)
 
-## intent:ask_faq_python_version
+## intent:faq/python_version
 - What Python version should I use?
 - Which python version should I install to run Rasa example?
 - Which version of Python to install?
@@ -822,7 +827,7 @@
 - which python version should i install
 - which version of python do i need
 
-## intent:ask_faq_slots
+## intent:faq/slots
 - Definition of slots please.
 - Does anyone know what slots are?
 - Explain slots to me?
@@ -886,7 +891,7 @@
 - which are the slots?
 - which slots are there?
 
-## intent:ask_faq_tutorialcore
+## intent:faq/tutorialcore
 - are there some core tutorials i could look at
 - can you show me a core tutorial
 - core tutorial
@@ -902,7 +907,7 @@
 - please show me a core tutorial
 - rasa core tutorial
 
-## intent:ask_faq_tutorialnlu
+## intent:faq/tutorialnlu
 - are there some nlu tutorials i could look at
 - can you show me a nlu tutorial
 - do you have a nlu tutorial i can follow
@@ -919,7 +924,7 @@
 - rasa nlu tutorial
 - I am looking for tutorial on Rasa NLU
 
-## intent:ask_faq_tutorials
+## intent:faq/tutorials
 - Did you have an tutorial.
 - Great. Are there any tutorials?
 - Im looking for some tutorial
@@ -958,7 +963,7 @@
 - yes, where I can find some hand-on tutorials to use RASA products?
 - I need to study RASA step by step, which is the best site to study?
 
-## intent:ask_faq_voice
+## intent:faq/voice
 - Building a rasa voice bot?
 - can i programm a vocal assistant
 - Building a voice bot using rasa.
@@ -1032,7 +1037,7 @@
 - with rasa can I make a voice bot?
 - you have speech recognition?
 
-## intent:ask_faq_what_is_forum
+## intent:faq/what_is_forum
 - Could you please describe the Rasa forum?
 - Could you please explain the Rasa forum to me?
 - Could you please give me a description of the Rasa forum?
@@ -1139,7 +1144,7 @@
 - in what ways can I help out?
 - what can I do?
 
-## intent:ask_howbuilt
+## intent:chitchat/ask_howbuilt
 - By what means were you made?
 - By what method were you fashioned?
 - Can you explain how you were created?
@@ -1187,7 +1192,7 @@
 - so how were you made?
 - what are you made of
 
-## intent:ask_howdoing
+## intent:chitchat/ask_howdoing
 - Ahoy matey how are you?
 - Are you ok?
 - Do you feel good?
@@ -1279,7 +1284,7 @@
 - whatsapp
 - yow are you
 
-## intent:ask_howold
+## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
 - How long have you been alive?
 - How long have you been around?
@@ -1334,7 +1339,7 @@
 - when were you born?
 - when you were bon
 
-## intent:ask_isbot
+## intent:chitchat/ask_isbot
 - Ar you a bot ?
 - Are you a bot
 - Are you a chat bot?
@@ -1373,7 +1378,7 @@
 - you are chatbot
 - you're a bot
 
-## intent:ask_languagesbot
+## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
 - Can you communicate in any other languages?
 - Can you speak more than one language?
@@ -1476,7 +1481,7 @@
 - ok send me to the forum
 - to the forum
 
-## intent:ask_restaurant
+## intent:chitchat/ask_restaurant
 - Any good restaurants nearby?
 - Can you find a restaurant for me?
 - Can you find me a burger joint?
@@ -1533,7 +1538,7 @@
 - I want to find some restauant nearby
 - show me restaurents
 
-## intent:ask_time
+## intent:chitchat/ask_time
 - Can you give me the time?
 - Can you tell me the time?
 - Can you tell me what time it is?
@@ -1586,7 +1591,7 @@
 - what's the time
 - whats the time now
 
-## intent:ask_weather
+## intent:chitchat/ask_weather
 - Are there any meteorological changes that I need to be aware of?
 - Are we in for a scorcher?
 - Beautiful day, isn't it?
@@ -1666,7 +1671,7 @@
 - wheather at you location?
 - wheather be like at your place?
 
-## intent:ask_whatismyname
+## intent:chitchat/ask_whatismyname
 - Can you tell me my name?
 - Can you tell me what I am called?
 - Do I have a name?
@@ -1705,7 +1710,7 @@
 - what is my name?
 - what's my name?
 
-## intent:ask_whatisrasa
+## intent:chitchat/ask_whatisrasa
 - Can you brief me about rasa
 - Can you tell me more about rasa?
 - Can you tell me what Rasa does?
@@ -1782,7 +1787,7 @@
 - whats rasa
 - yeah go on explaining what rasa is
 
-## intent:ask_whatspossible
+## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
 - Can you help me?
 - Could you please show me what you can
@@ -1885,7 +1890,7 @@
 - what you doing?
 - what you talk about?
 
-## intent:ask_wherefrom
+## intent:chitchat/ask_wherefrom
 - Are you from around here?
 - Around where are you from?
 - Do you know where you come from?
@@ -2044,7 +2049,7 @@
 - When is the next event for [India](location)?
 - What is the next event for [paris](location)?
 
-## intent:ask_whoami
+## intent:chitchat/ask_whoami
 - Can you tell me who I am?
 - Can you tell me who am I?
 - Do you know who I am?
@@ -2072,7 +2077,7 @@
 - who are I ?
 - who may i ?
 
-## intent:ask_whoisit
+## intent:chitchat/ask_whoisit
 - HI, what's your name?
 - Hello. What's your name?
 - I want to know who you are
@@ -3366,7 +3371,7 @@
 - yo
 - yoo
 
-## intent:handleinsult
+## intent:chitchat/handleinsult
 - FUCK
 - Fuck
 - Fuck Off
@@ -3779,6 +3784,17 @@
 - [rasa open source](product)
 - [rasa Open source](product)
 - [Rasa Open Source](product)
+- [rasa open source](product) then lets talk about[ rasa x](product)
+- [rasa open source](product) please and thank you
+- [rasa open source](product:rasa) to begin with
+- [open source rasa](product)
+- the [rasa open source](product)
+- Tell me about [rasa open source](product)
+- Rada [open source](product)
+- how to train [rasa open source](product)
+- More about [Rasa open source](product)
+- Rosa [open source](product)
+- [rasa open source](product) first
 - rasa basics
 - how can i get stared
 
@@ -3918,6 +3934,9 @@
 - please tell steps for installing chatbot
 - what do I need to install Rasa
 - what sould i do to install rasa
+- how can I install [rasa open source](product)?
+- The [open source](product) version
+- what is [rasa open source](product) used for?
 
 ## intent:next_step
 - continue to next step
@@ -3936,7 +3955,7 @@
 - take me to the next step
 - what is the next step ?
 
-## intent:nicetomeeyou
+## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
 - Feels great to see you!
 - Glad to finally meet you!
@@ -4874,7 +4893,7 @@
 - where can i find api documentation for rasa x
 - where is the api for rasa x
 
-## intent:telljoke
+## intent:chitchat/telljoke
 - Can you tell a joke?
 - Can you tell me a joke.
 - Come up with a joke you think I'll find funny.
@@ -5044,6 +5063,9 @@
 - Rasa Open Source
 - Rasa open source
 - rasa Open Source
+- open source
+- open source rasa
+- RASA open source
 
 ## synonym:stack
 - fullstack
@@ -5066,6 +5088,7 @@
 - rasax
 - RASAX
 - RASA X
+-  rasa x
 
 ## regex:greet
 - hey[^\s]*

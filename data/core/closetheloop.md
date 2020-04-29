@@ -47,8 +47,8 @@
 * thank
     - utter_noworries
     - utter_anything_else
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * out_of_scope
     - respond_out_of_scope
     - utter_possibilities
@@ -73,18 +73,18 @@
 ## story number 6
 * greet
     - action_greet_user
-* ask_whoisit
-    - action_chitchat
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 
 ## story number 7
 * greet
     - action_greet_user
 * greet
     - action_greet_user
-* ask_whoisit
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * contact_sales
     - utter_moreinformation
     - sales_form
@@ -114,14 +114,14 @@
 ## story number 11, continue
 * greet
     - action_greet_user
-* ask_whatspossible
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -139,14 +139,14 @@
 ## story number 11, don't continue
 * greet
     - action_greet_user
-* ask_whatspossible
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -217,16 +217,16 @@
     - action_greet_user
 * greet
     - action_greet_user
-* ask_howdoing
-    - action_chitchat
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 
 ## story number 15
 * greet
     - action_greet_user
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -239,22 +239,22 @@
 * out_of_scope
     - respond_out_of_scope
     - utter_possibilities
-* ask_whoisit
-    - action_chitchat
-* ask_howdoing
-    - action_chitchat
-* ask_howdoing
-    - action_chitchat
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 
 ## story number 18
 * greet
     - action_greet_user
-* ask_weather
-    - action_chitchat
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * deny
     - utter_nohelp
 * enter_data
@@ -277,8 +277,8 @@
     - action_greet_user
 * greet
     - action_greet_user
-* ask_whatisrasa
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -330,10 +330,10 @@
 ## Story from conversation with linda on November 15th 2018
 * greet
     - action_greet_user
-* ask_whatisrasa
-    - action_chitchat
-* ask_whatisrasa
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -354,8 +354,8 @@
     - action_greet_user
 * greet
     - action_greet_user
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -378,12 +378,12 @@
 ## Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
 * greet
     - action_greet_user
-* ask_whoisit
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * out_of_scope
     - respond_out_of_scope
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * how_to_get_started{"product":"nlu"}
     - utter_getstarted
     - utter_first_bot_with_rasa
@@ -393,8 +393,8 @@
     - action_greet_user
 * greet
     - action_greet_user
-* ask_isbot
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * affirm
     - utter_thumbsup
 
@@ -403,8 +403,8 @@
     - action_greet_user
 * greet
     - action_greet_user
-* ask_howdoing
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * affirm
     - utter_thumbsup
 
@@ -449,8 +449,8 @@
 * enter_data
     - utter_thumbsup
     - utter_anything_else
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -539,8 +539,8 @@
 * get_started_step1
     - action_greet_user
     - slot{"shown_privacy":true}
-* ask_whatisrasa
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -576,10 +576,10 @@
 * get_started_step1
     - action_greet_user
     - slot{"shown_privacy":true}
-* ask_howdoing
-    - action_chitchat
-* ask_whoisit
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -588,15 +588,16 @@
 * get_started_step1
     - action_greet_user
     - slot{"shown_privacy":true}
-* ask_howdoing
-    - action_chitchat
-* ask_whoisit
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
-* ask_faq_languages
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -605,15 +606,16 @@
 * get_started_step1
     - action_greet_user
     - slot{"shown_privacy":true}
-* ask_howdoing
-    - action_chitchat
-* ask_whoisit
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
-* ask_faq_languages
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -707,8 +709,9 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* ask_faq_differencecorenlu
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product":"core"}
     - utter_explain_core
@@ -720,12 +723,12 @@
 * get_started_step1
     - action_greet_user
     - slot{"shown_privacy":true}
-* ask_whoami
-    - action_chitchat
-* ask_languagesbot
-    - action_chitchat
-* ask_howold
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * out_of_scope
     - respond_out_of_scope
     - utter_possibilities
@@ -740,10 +743,10 @@
     - slot{"step":"1"}
 * greet
     - action_greet_user
-* ask_howdoing
-    - action_chitchat
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * contact_sales
     - utter_moreinformation
     - sales_form
@@ -763,10 +766,10 @@
     - slot{"step":"1"}
 * greet
     - action_greet_user
-* ask_howdoing
-    - action_chitchat
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * contact_sales
     - utter_moreinformation
     - sales_form
@@ -786,8 +789,8 @@
     - slot{"step":"1"}
 * greet
     - action_greet_user
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * enter_data
     - utter_not_sure
     - utter_possibilities
@@ -802,9 +805,10 @@
     - utter_explain_rasa_components
     - utter_rasa_components_details
     - utter_ask_explain_nlucorex
-* ask_faq_differencecorenlu{"product":"nlu"}
+* faq{"product":"nlu"}
     - slot{"product":"nlu"}
-    - action_faqs
+    - respond_faq
+    - action_set_faq_slot
     - utter_ask_explain_nlucorex
 * how_to_get_started{"product":"core"}
     - utter_explain_core
@@ -846,13 +850,14 @@
 * get_started_step4
     - action_greet_user
     - slot{"shown_privacy":true}
-* ask_faq_opensource_cost
-    - action_faqs
+* faq
+    - respond_faq
+    - action_set_faq_slot
     - utter_anything_else
 * affirm
     - utter_what_help
-* ask_whatspossible
-    - action_chitchat
+* chitchat
+    - respond_chitchat
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
