@@ -176,9 +176,21 @@
 
 ## just switch
 * switch
+    - utter_ask_which_tool
+* switch{"current_api":"tensorflow"}
+    - slot{"current_api":"__other__"}
     - action_store_unknown_product
     - utter_no_guide_for_switch
     - utter_anything_else
+
+## just switch
+* switch
+    - utter_ask_which_tool
+* switch OR enter_data
+    - action_store_unknown_product
+    - utter_no_guide_for_switch
+    - utter_anything_else
+
 
 ## new to rasa/bots, explain stack
 * how_to_get_started
