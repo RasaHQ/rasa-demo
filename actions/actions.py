@@ -13,8 +13,7 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
-    ActionExecuted,
-    UserUttered,
+    FollowupAction,
 )
 
 from actions import config
@@ -387,6 +386,8 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
+        if intent == "next_step":
+            intent = "get_started_step1"
         if intent == "greet" or (intent == "enter_data" and name_entity):
             if shown_privacy and name_entity and name_entity.lower() != "sara":
                 dispatcher.utter_message(template="utter_greet_name", name=name_entity)
@@ -643,17 +644,7 @@ class ActionNextStep(Action):
             return []
 
         else:
-            # trigger get_started_step1 intent
-            return [
-                ActionExecuted("action_listen"),
-                UserUttered(
-                    "/get_started_step1",
-                    {
-                        "intent": {"name": "get_started_step1", "confidence": 1.0},
-                        "entities": {},
-                    },
-                ),
-            ]
+            return [FollowupAction("action_greet_user")]
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
