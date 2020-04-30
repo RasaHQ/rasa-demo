@@ -532,6 +532,7 @@
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](product) and [rasa x](product)
+- what is the difference between [rasa open source](rasa) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 
 ## intent:faq/ee
@@ -2588,7 +2589,7 @@
 - I'm a real good [engineer](job_function)
 - I'm an [AI researcher](job_function)
 - I'm an [engineer](job_function)
-- I'm in [business ](job_function)
+- I'm in [business](job_function)
 - I'm in [project mgmt](job_function)
 - I'm the [boss](job_function)
 - I'm the [developer](job_function)
@@ -2692,7 +2693,7 @@
 - [Full Stack](job_function)
 - [Full stack](job_function).
 - [Helvetia](company)
-- [I am a freelancer ](company)
+- [I am a freelancer](company)
 - [IBM](company)
 - [IT manager](job_function)
 - [Im Phyllis Howard](name)
@@ -3680,7 +3681,7 @@
 - hw to get started with Rasa
 - i am [new](user_type)
 - i am [new](user_type) to rasa
-- i am a [new ](user_type)
+- i am a [new](user_type)
 - i am a [new](user_type) user
 - i m [new](user_type)
 - i need help with rasa
@@ -3784,7 +3785,7 @@
 - [rasa open source](product)
 - [rasa Open source](product)
 - [Rasa Open Source](product)
-- [rasa open source](product) then lets talk about[ rasa x](product)
+- [rasa open source](product) then lets talk about [rasa x](product)
 - [rasa open source](product) please and thank you
 - [rasa open source](product) to begin with
 - [open source rasa](product)
