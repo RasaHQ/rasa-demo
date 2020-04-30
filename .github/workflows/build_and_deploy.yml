@@ -64,9 +64,9 @@ jobs:
       uses: jitterbit/get-changed-files@v1
     - name: set_training
       if: |
-          contains(  steps.files.outputs.all, ' data/' ) 
-          || contains(  steps.files.outputs.all, ' config.yml' ) 
-          || contains(  steps.files.outputs.all, ' domain.yml' )
+          contains(  steps.files.outputs.all, 'data/' ) 
+          || contains(  steps.files.outputs.all, 'config.yml' ) 
+          || contains(  steps.files.outputs.all, 'domain.yml' )
       run: echo "::set-env name=RUN_TRAINING::true"
     - name: Set up Python 3.7
       if: env.RUN_TRAINING == 'true'
@@ -82,8 +82,8 @@ jobs:
       id: cvnlu
       if: |
           ( contains(github.event.pull_request.labels.*.name, 'nlu_testing_required') 
-          && contains(  steps.files.outputs.all, ' data/nlu/' ) )
-          || contains(  steps.files.outputs.all, ' config.yml' )
+          && contains(  steps.files.outputs.all, 'data/nlu/' ) )
+          || contains(  steps.files.outputs.all, 'config.yml' )
       run: |  
           rasa test nlu -f 3 --cross-validation
           python .github/workflows/format_results.py
@@ -102,9 +102,9 @@ jobs:
         rasa train
     - name: Test Training Stories
       if: |
-          contains(  steps.files.outputs.all, ' data/core/' ) 
-          || contains(  steps.files.outputs.all, ' config.yml' ) 
-          || contains(  steps.files.outputs.all, ' domain.yml' )
+          contains(  steps.files.outputs.all, 'data/core/' ) 
+          || contains(  steps.files.outputs.all, 'config.yml' ) 
+          || contains(  steps.files.outputs.all, 'domain.yml' )
       working-directory: ${{ github.workspace }}
       run: |
         rasa test core --stories test/test_stories.md --fail-on-prediction-errors
@@ -126,8 +126,8 @@ jobs:
       uses: jitterbit/get-changed-files@v1
     - name: set_actions
       if: |
-        contains(  steps.files.outputs.all, ' actions/' ) 
-        || contains(  steps.files.outputs.all, ' Dockerfile' )
+        contains(  steps.files.outputs.all, 'actions/' ) 
+        || contains(  steps.files.outputs.all, 'Dockerfile' )
       run: echo "::set-env name=ACTIONS_CHANGED::true"
     - name: Authenticate into Google Cloud Platform
       if: env.ACTIONS_CHANGED == 'true'
