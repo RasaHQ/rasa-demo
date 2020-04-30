@@ -631,6 +631,44 @@
     - utter_thumbsup
     - utter_anything_else
 
+
+## pipeline
+* pipeline_recommendation
+    - utter_what_language
+* enter_data{"language":"english"}
+    - slot{"language": "english"}
+    - utter_pipeline_english
+    - utter_anything_else
+
+## pipeline
+* pipeline_recommendation
+    - utter_what_language
+* enter_data{"language":"spanish"}
+    - slot{"language": "__other__"}
+    - action_store_bot_language
+    - slot{"can_use_spacy":true}
+    - utter_pipeline_nonenglish_spacy
+    - utter_anything_else
+
+## pipeline
+* pipeline_recommendation
+    - utter_what_language
+* enter_data{"language":"Russian"}
+    - slot{"language": "__other__"}
+    - action_store_bot_language
+    - slot{"can_use_spacy":false}
+    - utter_pipeline_nonenglish_nospacy
+    - utter_anything_else
+
+## pipeline
+* pipeline_recommendation
+    - utter_what_language
+* enter_data
+    - action_store_bot_language
+    - slot{"can_use_spacy":true}
+    - utter_pipeline_nonenglish_spacy
+    - utter_anything_else
+
 ## not new to rasa + nlu + intent + pipeline recommendation, spacy
 * how_to_get_started
     - utter_getstarted
