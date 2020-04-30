@@ -650,7 +650,7 @@ class ActionNextStep(Action):
                     "/get_started_step1",
                     {
                         "intent": {"name": "get_started_step1", "confidence": 1.0},
-                        "entities": {},
+                        "entities": [],
                     },
                 ),
             ]
