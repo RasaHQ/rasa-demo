@@ -225,6 +225,9 @@
 - yup
 - yyeeeh
 - considering
+- Hmm, not sure what you mean...
+- i am not sure
+- is not sure
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -2206,6 +2209,8 @@
 - toodle-oo
 - Exit
 - Close this talk
+- Close
+- Close down yes
 
 ## intent:canthelp
 - I think you cant help me
@@ -2490,6 +2495,12 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- im not sure
+- I’m not sure
+- I'm not sure
+- i´m not sure
+- not sure now
+- not sure.. not a lot
 
 ## intent:enter_data
 - $1
@@ -3208,6 +3219,15 @@
 - e commerce bot
 - general and sales
 - [rasa](product)
+- i don't know yet
+- I don't know
+- absolutely don't know
+- don't know
+- not sure
+- mmm....not sure
+- not sure yet, will see
+- I am john
+- my name is john
 
 ## intent:explain
 - can you elaborate
@@ -3370,6 +3390,7 @@
 - whats up
 - yo
 - yoo
+- nihao
 
 ## intent:chitchat/handleinsult
 - FUCK
@@ -3797,6 +3818,12 @@
 - [rasa open source](product) first
 - rasa basics
 - how can i get stared
+- [Rasa Open source](product)
+- explain [rasa open source](product) to me
+- Please tell me about [rasa open source](product)
+- tell me more about [rasa open source](product)
+- [rasa open source](product), please!
+- i want to know more about sara [open source](product)
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4776,6 +4803,11 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- [dialogueflow](company)
+- do you know [dialogueflow](current_api)
+- how to migrate to [dialogueflow](current_api)
+- what is the procesure for getting responces through [dialogueflow](current_api) api
+- why should i use rasa instead of google [dialogueflow](current_api)
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -4892,6 +4924,10 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- I need info how to set initial responses
+- which port does rasa open source use
+- running on k8s
+- how to run rasa on kubernetes
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -4974,6 +5010,46 @@
 - thx
 - yes thanks
 
+## intent:dont_know
+- ok i don't know
+- I don't know yet, but thanks
+- i don't know?
+
+## intent:ask_whatspossible
+- I don't know what that means
+- not sure what you mean
+
+## intent:out_of_scope
+- i really don't know say!
+- I don't know you talk about
+- really? i am not sure
+
+## intent:ask_whatismyname
+- i am not sure what you mean
+- whats my name
+
+## intent:ask_faq_channels
+- How do I connect to whatsapp?
+
+## intent:ask_faq_is_programming_required
+- skills needed for rasa
+
+## intent:ask_faq_opensource_cost
+- [Open source](product).
+- The [Open source](product) one
+- [Open source](product) please
+- [Open source](product) ?
+- [Open source](product)
+- the [open source](product) typ of thing
+- where is [rasa open source](product)
+- [rase open source](product)
+
+## intent:ask_faq_opensource
+- [Open source Rasa](product)
+
+## intent:ask_whatisrasa
+- I'm new what's rasa
+
 ## synonym: duration
 - how long
 - durations
@@ -5008,6 +5084,7 @@
 - DialogFlwo
 - dialog flow
 - google
+- dialogueflow
 
 ## synonym:distance
 - distances
@@ -5066,6 +5143,10 @@
 - open source
 - open source rasa
 - RASA open source
+- Open source
+- Open source Rasa
+- Rasa Open source
+- rase open source
 
 ## synonym:stack
 - fullstack
@@ -5088,7 +5169,6 @@
 - rasax
 - RASAX
 - RASA X
--  rasa x
 
 ## regex:greet
 - hey[^\s]*
