@@ -359,14 +359,14 @@
 ## chitchat --> email --> no email
 * greet
     - action_greet_user
-* ask_whatspossible
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
