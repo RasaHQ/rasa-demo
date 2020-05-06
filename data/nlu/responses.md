@@ -138,7 +138,7 @@
 
 ## chitchat
 * chitchat/ask_weather 
-  -  I don't know about where you live, but in my world it's always sunny ☀️
+  -  I don't know about where you live, but in my world it's always sunny 🔆
   -  It's getting pretty chilly!
   -  Where I'm from, it's almost never-leaving-the-house weather.
   -  Winter is coming ⚔️
