@@ -226,6 +226,7 @@
 - yyeeeh
 - considering
 - That's awesome.
+- Got it
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -333,6 +334,10 @@
 - why were you made?
 - you are made by who?
 - you are working for which company?
+- what is you mother name
+- what is father name
+- who is your mother
+- who is your father
 
 ## intent:faq/rasax
 - what is Rasa X?
@@ -536,6 +541,7 @@
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
+- what is the difference between rasaand [rasa x](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -926,6 +932,7 @@
 - please show me a nlu tutorial
 - rasa nlu tutorial
 - I am looking for tutorial on Rasa NLU
+- Hey is there a tutorial on how to train an intent cassification model in Python_
 
 ## intent:faq/tutorials
 - Did you have an tutorial.
@@ -1194,6 +1201,7 @@
 - in what way were you made?
 - so how were you made?
 - what are you made of
+- Are you built using rasa?
 
 ## intent:chitchat/ask_howdoing
 - Ahoy matey how are you?
@@ -1348,7 +1356,6 @@
 - Are you a chat bot?
 - Are you the bot?
 - Hi there, are you the bot?
-- So I'm here Today to ask one very simple question, what are you ?
 - are you a BOT
 - are you a Skynet ?
 - are you a bot
@@ -1363,7 +1370,6 @@
 - are you artificial intelligence
 - are you bot
 - are you bot?
-- are you human?
 - are you rasa bot?
 - are you real
 - are you real lol
@@ -1381,6 +1387,33 @@
 - you are chatbot
 - you're a bot
 - you robo
+- real bot then?
+- are you really a bbot?
+
+## intent:chitchat/ask_ishuman
+- are u human
+- r u a human
+- are you real human?
+- you are a human
+- Rara, are you a human?
+- you are bot or human?
+- are you human
+- ok, i know i confused you there being a human! :)
+- you are human or bot
+- Are you human?
+- are you a human ?
+- Are you human ?
+- Are you a human being?
+- sara, are you a robot or human?
+- r u real?
+- are you a real person
+- are u a real person?
+- Are you a real person?
+- are you a real person?
+- are you real person or chat bot?
+- So I'm here Today to ask one very simple question, what are you ?
+- you sound like a real human
+- wow you sound like real human
 
 ## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
@@ -1390,7 +1423,7 @@
 - Do you know other languages?
 - Do you speak [german](language)?
 - Do you speak any other languages?
-- Do you understand spanish?
+- Do you understand [spanish](language)?
 - How many different languages are you fluent in?
 - How many languages are you familiar with?
 - How many languages can you speak?
@@ -1423,7 +1456,7 @@
 - how many languages are you fluent in?
 - how many languages do you know?
 - tell me some languages you know?
-- what else do you know besides English?
+- what else do you know besides [English](language)?
 - what foreign languages are you fluent in?
 - what foreign languages do you know?
 - what language do you use
@@ -1441,6 +1474,8 @@
 - which languages do you understand?
 - you know [French](language)
 - ARE YOU [SPANISH](language)
+- we cant converse in [french](language)?
+- can we converse in [french](language)?
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -2100,7 +2135,6 @@
 - Who are yopu?
 - Who are you
 - Who are you?
-- You are Human ?
 - hey what is your name
 - hi! what's your name?
 - ok who are you ?
@@ -2241,6 +2275,7 @@
 - you can't help me with what i need
 - you cannot help me with what I want
 - you cant help me
+- quit
 
 ## intent:contact_sales
 - But I wanted a sales call
@@ -3218,6 +3253,11 @@
 - general and sales
 - [rasa](product)
 - [botpress](current_api)
+- simple bpt
+- education bot
+- contexual
+- Sorry  it's not [suleman](name) is [Shehzad](name)
+- [x](product)
 
 ## intent:explain
 - can you elaborate
@@ -3233,6 +3273,8 @@
 - why is that necessary
 - give me more details
 - why
+- what do you mean
+- what does that mean
 
 ## intent:greet
 - Bom dia
@@ -3481,6 +3523,13 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
+- monkey man
+- little ugly monkey
+- you are ugly
+- you are insane
+- why are ugly
+- why are you ugly
+- your crazy
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -3809,6 +3858,7 @@
 - how can i get stared
 - how to using you
 - What are the coponent
+- create chatbot steps
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -3852,6 +3902,34 @@
 - that's annoying I'd like to speak to someone real
 - thats not helping, can i talk to human?
 - wrong i want to speak to a human
+- can i speak to human
+- can i speak to your human
+- i want to chat with human
+- How do I talk to a human
+- talk with a human
+- Can i talk to a human instead
+- nevermind.... you're not human ... I need to talk to a live person
+- Can you get a human to assist me?
+- Can i talk to a human?
+- Can I talk to a human
+- Can I speak to a human?
+- can i speak to a human
+- no, i want to talk to human
+- can you hand a conversation over to a human?
+- can I talk to human?
+- can I talk to human
+- talk to human
+- i want human :(
+- can i talk to human
+- i want to talk to a human \
+- i want to speak to human
+- can i talk to a real person?
+- connect me to a real person
+- I need a real person
+- can i took with a real person
+- let me speak to a real person
+- let me speak to a real person please
+- i want to talk to a real person
 
 ## intent:install_rasa
 - Can you get me Rasa [Core](product)?
@@ -3948,6 +4026,9 @@
 - what sould i do to install rasa
 - installation steps of rasa
 - how can I install [rasa open source](product)?
+- The [open source](product) version
+- what is [rasa open source](product) used for?
+- How to download rasa
 
 ## intent:next_step
 - continue to next step
@@ -4125,6 +4206,7 @@
 - 你是谁
 - 中文
 - kya hindi me bat kar sakate ho
+- Dumme sara
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4472,6 +4554,21 @@
 - I want to go palghar
 - your contry name
 - you girl
+- gsaf
+- expert of rasa
+- i want play ball
+- flight catch up
+- how do you like your coffee
+- Can you get analytics on who I'm chatting with when I use Rasa
+- coronavirus
+- have you heard of corona?
+- where do i type in commandy
+- where to type in commands
+- kiss me
+- you have to
+- what type of bot?
+- sfasd
+- asdkjasdhjkasd
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4531,6 +4628,9 @@
 - you're rather dull
 - iam not feeling good
 - not good
+- Thats so rude
+- sadly
+- That tool here isnt good
 
 ## intent:react_positive
 - :)
@@ -4582,6 +4682,9 @@
 - I love you
 - you are realy intelligent
 - I like Rasa
+- hèhè
+- like u
+- you are so smart
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4934,6 +5037,19 @@
 - installation of tensorflow-text
 - ConveRTFeaturizer
 - whatsapp bro
+- What does the NLU pipeline do
+- what does the nlu pipeline do
+- What is DIET
+- how can create multilingual chatbor
+- websocket
+- hosting
+- host models
+- What is COnvert?
+- Hi the command rasa init doesn't do anything in windows
+- what is the knowledge base server
+- testing chatbot
+- what is knowledge base
+- knowledge base action
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5131,7 +5247,6 @@
 - rasax
 - RASAX
 - RASA X
--  rasa x
 
 ## regex:greet
 - hey[^\s]*
