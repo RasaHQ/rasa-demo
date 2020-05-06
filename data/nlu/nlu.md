@@ -1345,7 +1345,6 @@
 - Are you a chat bot?
 - Are you the bot?
 - Hi there, are you the bot?
-- So I'm here Today to ask one very simple question, what are you ?
 - are you a BOT
 - are you a Skynet ?
 - are you a bot
@@ -1377,6 +1376,8 @@
 - you are ai
 - you are chatbot
 - you're a bot
+- real bot then?
+- are you really a bbot?
 
 ## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
@@ -4585,8 +4586,6 @@
 - I love you
 - you are realy intelligent
 - I like Rasa
-- you sound like a real human
-- wow you sound like real human
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -5025,10 +5024,9 @@
 - Are you a real person?
 - are you a real person?
 - are you real person or chat bot?
-
-## intent:ask_isbot
-- real bot then?
-- are you really a bbot?
+- So I'm here Today to ask one very simple question, what are you ?
+- you sound like a real human
+- wow you sound like real human
 
 ## synonym: duration
 - how long
