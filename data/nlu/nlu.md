@@ -3840,6 +3840,34 @@
 - that's annoying I'd like to speak to someone real
 - thats not helping, can i talk to human?
 - wrong i want to speak to a human
+- can i speak to human
+- can i speak to your human
+- i want to chat with human
+- How do I talk to a human
+- talk with a human
+- Can i talk to a human instead
+- nevermind.... you're not human ... I need to talk to a live person
+- Can you get a human to assist me?
+- Can i talk to a human?
+- Can I talk to a human
+- Can I speak to a human?
+- can i speak to a human
+- no, i want to talk to human
+- can you hand a conversation over to a human?
+- can I talk to human?
+- can I talk to human
+- talk to human
+- i want human :(
+- can i talk to human
+- i want to talk to a human \
+- i want to speak to human
+- can i talk to a real person?
+- connect me to a real person
+- I need a real person
+- can i took with a real person
+- let me speak to a real person
+- let me speak to a real person please
+- i want to talk to a real person
 
 ## intent:install_rasa
 - Can you get me Rasa [Core](product)?
@@ -4557,6 +4585,8 @@
 - I love you
 - you are realy intelligent
 - I like Rasa
+- you sound like a real human
+- wow you sound like real human
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4974,6 +5004,32 @@
 - thx
 - yes thanks
 
+## intent:chitchat/ask_ishuman
+- are u human
+- r u a human
+- are you real human?
+- you are a human
+- Rara, are you a human?
+- you are bot or human?
+- are you human
+- ok, i know i confused you there being a human! :)
+- you are human or bot
+- Are you human?
+- are you a human ?
+- Are you human ?
+- Are you a human being?
+- sara, are you a robot or human?
+- r u real?
+- are you a real person
+- are u a real person?
+- Are you a real person?
+- are you a real person?
+- are you real person or chat bot?
+
+## intent:ask_isbot
+- real bot then?
+- are you really a bbot?
+
 ## synonym: duration
 - how long
 - durations
@@ -5088,7 +5144,6 @@
 - rasax
 - RASAX
 - RASA X
--  rasa x
 
 ## regex:greet
 - hey[^\s]*
