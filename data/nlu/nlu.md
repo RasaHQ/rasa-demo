@@ -538,7 +538,7 @@
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](rasa) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
-- what is the difference between rasaand rasa x
+- what is the difference between rasaand [rasa x](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -1368,7 +1368,6 @@
 - are you artificial intelligence
 - are you bot
 - are you bot?
-- are you human?
 - are you rasa bot?
 - are you real
 - are you real lol
@@ -1385,8 +1384,6 @@
 - you are ai
 - you are chatbot
 - you're a bot
-- are u human
-- are you human
 
 ## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
@@ -1396,7 +1393,7 @@
 - Do you know other languages?
 - Do you speak [german](language)?
 - Do you speak any other languages?
-- Do you understand spanish?
+- Do you understand [spanish](language)?
 - How many different languages are you fluent in?
 - How many languages are you familiar with?
 - How many languages can you speak?
@@ -1429,7 +1426,7 @@
 - how many languages are you fluent in?
 - how many languages do you know?
 - tell me some languages you know?
-- what else do you know besides English?
+- what else do you know besides [English](language)?
 - what foreign languages are you fluent in?
 - what foreign languages do you know?
 - what language do you use
@@ -1446,8 +1443,8 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
-- we cant converse in french?
-- can we converse in french?
+- we cant converse in [french](language)?
+- can we converse in [french](language)?
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -2106,7 +2103,6 @@
 - Who are yopu?
 - Who are you
 - Who are you?
-- You are Human ?
 - hey what is your name
 - hi! what's your name?
 - ok who are you ?
@@ -3497,6 +3493,7 @@
 - you are insane
 - why are ugly
 - why are you ugly
+- your crazy
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -4553,7 +4550,6 @@
 - Thats so rude
 - sadly
 - That tool here isnt good
-- your crazy
 
 ## intent:react_positive
 - :)
