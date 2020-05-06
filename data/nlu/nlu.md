@@ -1379,6 +1379,31 @@
 - real bot then?
 - are you really a bbot?
 
+## intent:chitchat/ask_ishuman
+- are u human
+- r u a human
+- are you real human?
+- you are a human
+- Rara, are you a human?
+- you are bot or human?
+- are you human
+- ok, i know i confused you there being a human! :)
+- you are human or bot
+- Are you human?
+- are you a human ?
+- Are you human ?
+- Are you a human being?
+- sara, are you a robot or human?
+- r u real?
+- are you a real person
+- are u a real person?
+- Are you a real person?
+- are you a real person?
+- are you real person or chat bot?
+- So I'm here Today to ask one very simple question, what are you ?
+- you sound like a real human
+- wow you sound like real human
+
 ## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
 - Can you communicate in any other languages?
@@ -5002,31 +5027,6 @@
 - thnks
 - thx
 - yes thanks
-
-## intent:chitchat/ask_ishuman
-- are u human
-- r u a human
-- are you real human?
-- you are a human
-- Rara, are you a human?
-- you are bot or human?
-- are you human
-- ok, i know i confused you there being a human! :)
-- you are human or bot
-- Are you human?
-- are you a human ?
-- Are you human ?
-- Are you a human being?
-- sara, are you a robot or human?
-- r u real?
-- are you a real person
-- are u a real person?
-- Are you a real person?
-- are you a real person?
-- are you real person or chat bot?
-- So I'm here Today to ask one very simple question, what are you ?
-- you sound like a real human
-- wow you sound like real human
 
 ## synonym: duration
 - how long
