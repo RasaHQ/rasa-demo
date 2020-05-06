@@ -4,9 +4,9 @@ ask_builder,Who built you?,
 faq/channels,What channels does Rasa support?,
 faq/community_size,How big is the Rasa community?,
 faq/differencecorenlu,What is the difference between Core and NLU?,
-faq/differencerasarasax,What is the difference between Rasa and Rasa X?
+faq/differencerasarasax,What is the difference between Rasa and Rasa X?,
 faq/languages,What languages does Rasa support?,
-faq/is_programming_required,Is programming required?
+faq/is_programming_required,Is programming required?,
 faq/opensource_cost,Is Rasa open-source and free?,
 faq/ee,What is Rasa X Enterprise Edition?,
 faq/python_version,Which Python version is needed?,
