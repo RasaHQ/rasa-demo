@@ -225,6 +225,7 @@
 - yup
 - yyeeeh
 - considering
+- Got it
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -332,6 +333,10 @@
 - why were you made?
 - you are made by who?
 - you are working for which company?
+- what is you mother name
+- what is father name
+- who is your mother
+- who is your father
 
 ## intent:faq/rasax
 - what is Rasa X?
@@ -533,6 +538,7 @@
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](rasa) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
+- what is the difference between rasaand [rasa x](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -923,6 +929,7 @@
 - please show me a nlu tutorial
 - rasa nlu tutorial
 - I am looking for tutorial on Rasa NLU
+- Hey is there a tutorial on how to train an intent cassification model in Python_
 
 ## intent:faq/tutorials
 - Did you have an tutorial.
@@ -1191,6 +1198,7 @@
 - in what way were you made?
 - so how were you made?
 - what are you made of
+- Are you built using rasa?
 
 ## intent:chitchat/ask_howdoing
 - Ahoy matey how are you?
@@ -1360,7 +1368,6 @@
 - are you artificial intelligence
 - are you bot
 - are you bot?
-- are you human?
 - are you rasa bot?
 - are you real
 - are you real lol
@@ -1386,7 +1393,7 @@
 - Do you know other languages?
 - Do you speak [german](language)?
 - Do you speak any other languages?
-- Do you understand spanish?
+- Do you understand [spanish](language)?
 - How many different languages are you fluent in?
 - How many languages are you familiar with?
 - How many languages can you speak?
@@ -1419,7 +1426,7 @@
 - how many languages are you fluent in?
 - how many languages do you know?
 - tell me some languages you know?
-- what else do you know besides English?
+- what else do you know besides [English](language)?
 - what foreign languages are you fluent in?
 - what foreign languages do you know?
 - what language do you use
@@ -1436,6 +1443,8 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- we cant converse in [french](language)?
+- can we converse in [french](language)?
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -2094,7 +2103,6 @@
 - Who are yopu?
 - Who are you
 - Who are you?
-- You are Human ?
 - hey what is your name
 - hi! what's your name?
 - ok who are you ?
@@ -2232,6 +2240,7 @@
 - you can't help me with what i need
 - you cannot help me with what I want
 - you cant help me
+- quit
 
 ## intent:contact_sales
 - But I wanted a sales call
@@ -3208,6 +3217,11 @@
 - e commerce bot
 - general and sales
 - [rasa](product)
+- simple bpt
+- education bot
+- contexual
+- Sorry  it's not [suleman](name) is [Shehzad](name)
+- [x](product)
 
 ## intent:explain
 - can you elaborate
@@ -3223,6 +3237,8 @@
 - why is that necessary
 - give me more details
 - why
+- what do you mean
+- what does that mean
 
 ## intent:greet
 - Bom dia
@@ -3471,6 +3487,13 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
+- monkey man
+- little ugly monkey
+- you are ugly
+- you are insane
+- why are ugly
+- why are you ugly
+- your crazy
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -3797,6 +3820,7 @@
 - [rasa open source](product) first
 - rasa basics
 - how can i get stared
+- create chatbot steps
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -3937,6 +3961,7 @@
 - how can I install [rasa open source](product)?
 - The [open source](product) version
 - what is [rasa open source](product) used for?
+- How to download rasa
 
 ## intent:next_step
 - continue to next step
@@ -4106,6 +4131,7 @@
 - chào
 - 你好
 - I'm speaking a non-english language.
+- Dumme sara
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4449,6 +4475,21 @@
 - Cars
 - please voulette
 - Out of scope question.
+- gsaf
+- expert of rasa
+- i want play ball
+- flight catch up
+- how do you like your coffee
+- Can you get analytics on who I'm chatting with when I use Rasa
+- coronavirus
+- have you heard of corona?
+- where do i type in commandy
+- where to type in commands
+- kiss me
+- you have to
+- what type of bot?
+- sfasd
+- asdkjasdhjkasd
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4506,6 +4547,9 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
+- Thats so rude
+- sadly
+- That tool here isnt good
 
 ## intent:react_positive
 - :)
@@ -4557,6 +4601,9 @@
 - I love you
 - you are realy intelligent
 - I like Rasa
+- hèhè
+- like u
+- you are so smart
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4892,6 +4939,19 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- What does the NLU pipeline do
+- what does the nlu pipeline do
+- What is DIET
+- how can create multilingual chatbor
+- websocket
+- hosting
+- host models
+- What is COnvert?
+- Hi the command rasa init doesn't do anything in windows
+- what is the knowledge base server
+- testing chatbot
+- what is knowledge base
+- knowledge base action
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5088,7 +5148,6 @@
 - rasax
 - RASAX
 - RASA X
--  rasa x
 
 ## regex:greet
 - hey[^\s]*
