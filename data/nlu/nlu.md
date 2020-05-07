@@ -225,6 +225,7 @@
 - yup
 - yyeeeh
 - considering
+- That's awesome.
 - Got it
 
 ## intent:chitchat/ask_builder
@@ -362,6 +363,7 @@
 - i want to learn more about Rasa X
 - tell me what is rasa x
 - what is rasa x?
+- what is rasax
 
 ## intent:faq/channels
 - Can you tell which messaging channels does rasa support?
@@ -414,6 +416,7 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- Do you  help to  integrate Facebook
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
@@ -536,7 +539,7 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
-- what is the difference between [rasa open source](rasa) and [rasa x](product)
+- what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
 
@@ -1383,6 +1386,7 @@
 - you are ai
 - you are chatbot
 - you're a bot
+- you robo
 - real bot then?
 - are you really a bbot?
 
@@ -1469,6 +1473,7 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- ARE YOU [SPANISH](language)
 - we cant converse in [french](language)?
 - can we converse in [french](language)?
 
@@ -1821,6 +1826,7 @@
 - what is rasa?
 - whats rasa
 - yeah go on explaining what rasa is
+- RASA IS SOFTWARE?
 
 ## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -2174,6 +2180,9 @@
 - yes but who are you in your heart
 - may i know your name
 - what is rasa mascot
+- what are you
+- your name
+- your real name friend
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -3243,6 +3252,7 @@
 - e commerce bot
 - general and sales
 - [rasa](product)
+- [botpress](current_api)
 - simple bpt
 - education bot
 - contexual
@@ -3846,6 +3856,8 @@
 - [rasa open source](product) first
 - rasa basics
 - how can i get stared
+- how to using you
+- What are the coponent
 - create chatbot steps
 
 ## intent:human_handoff
@@ -4012,9 +4024,8 @@
 - please tell steps for installing chatbot
 - what do I need to install Rasa
 - what sould i do to install rasa
+- installation steps of rasa
 - how can I install [rasa open source](product)?
-- The [open source](product) version
-- what is [rasa open source](product) used for?
 - How to download rasa
 
 ## intent:next_step
@@ -4185,6 +4196,14 @@
 - chào
 - 你好
 - I'm speaking a non-english language.
+- 呵呵
+- 我该如何使用
+- 你懂中文吗？
+- 您好
+- 你叫什么名字
+- 你是谁
+- 中文
+- kya hindi me bat kar sakate ho
 - Dumme sara
 
 ## intent:out_of_scope/other
@@ -4529,6 +4548,10 @@
 - Cars
 - please voulette
 - Out of scope question.
+- Hi i want to go palghar
+- I want to go palghar
+- your contry name
+- you girl
 - gsaf
 - expert of rasa
 - i want play ball
@@ -4601,6 +4624,8 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
+- iam not feeling good
+- not good
 - Thats so rude
 - sadly
 - That tool here isnt good
@@ -4877,6 +4902,7 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- [dialogflow](current_api) and implementation from scratch
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -4993,6 +5019,22 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- do we need to write training data nlu.md
+- For training data, to we need to exclusively write the file in MD format?
+- How can i talk to RASA through the url
+- what is action server
+- is it a best practice to connect an external cms
+- can you show me buttons
+- I'd like to handle chitchat
+- Can Rasa be incorporated into iOS apps?
+- how to implement buttons
+- buttons
+- implement buttons
+- I want to build RASA DIET in google colab
+- tensorflow-text
+- installation of tensorflow-text
+- ConveRTFeaturizer
+- whatsapp bro
 - What does the NLU pipeline do
 - what does the nlu pipeline do
 - What is DIET
@@ -5087,6 +5129,7 @@
 - thnks
 - thx
 - yes thanks
+- thanks f
 
 ## synonym: duration
 - how long
