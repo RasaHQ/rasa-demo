@@ -15,7 +15,7 @@ jobs:
       - name: Checkout git repository 🕝
         uses: actions/checkout@v2
 
-        - name: Authenticate into Google Cloud Platform
+      - name: Authenticate into Google Cloud Platform
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: '275.0.0'
