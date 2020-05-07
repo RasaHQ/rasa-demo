@@ -39,5 +39,4 @@ jobs:
       
       - name: Push PR Image to Google Cloud Container Registry
         run: |
-          docker push gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER
-          docker push gcr.io/replicated-test/rasa-demo:latest
+          docker push gcr.io/replicated-test/rasa-demo
