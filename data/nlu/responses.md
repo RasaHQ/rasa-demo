@@ -72,8 +72,8 @@
 
 ## chitchat
 * chitchat/ask_builder 
-  -  The engineers at Rasa 🛠
   -  One of the smart engineers at Rasa! 🧠
+  -  The engineers at Rasa 🛠
 
 ## chitchat
 * chitchat/ask_howbuilt 
@@ -108,6 +108,9 @@
   -  Yep, you guessed it, I'm a bot!
   -  I am indeed a bot 🤖
 
+## chitchat
+* chitchat/ask_ishuman
+  -  I'm not a human, I'm a bot! 🤖
 
 ## chitchat
 * chitchat/ask_restaurant 
@@ -135,7 +138,7 @@
 
 ## chitchat
 * chitchat/ask_weather 
-  -  I don't know about where you live, but in my world it's always sunny *
+  -  I don't know about where you live, but in my world it's always sunny 🔆
   -  It's getting pretty chilly!
   -  Where I'm from, it's almost never-leaving-the-house weather.
   -  Winter is coming ⚔️
