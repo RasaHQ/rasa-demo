@@ -33,6 +33,20 @@
     - utter_explain_core
     - utter_explain_x
     - utter_direct_to_step2
+## new to rasa at start
+* how_to_get_started{"user_type": "new"}
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_getstarted_new
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product":"rasa"}
+    - utter_explain_nlu
+    - utter_explain_core
+
 
 ## new to rasa + built a bot before
 * how_to_get_started
@@ -228,6 +242,21 @@
 * deny
     - utter_direct_to_step2
 
+## new to rasa/bots, explain core
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product":"rasa"}
+    - utter_explain_nlu
+    - utter_explain_core
 ## new to rasa/bots, explain x, then nlu+core
 * how_to_get_started
     - utter_getstarted
@@ -248,6 +277,23 @@
     - utter_explain_nlu
     - utter_explain_core
     - utter_direct_to_step2
+
+
+## new to rasa/bots, explain x, then nlu+core
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product":"rasa"}
+    - utter_explain_nlu
+    - utter_explain_core
 
 ## new to rasa/bots, explain x
 * how_to_get_started
@@ -319,6 +365,20 @@
     - utter_explain_x
     - utter_direct_to_step2
 
+## not new to rasa/bots, explain all
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product":"rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+
+
 ## new to rasa/bots, explain all
 * how_to_get_started
     - utter_getstarted
@@ -336,6 +396,22 @@
     - utter_explain_core
     - utter_explain_x
     - utter_direct_to_step2
+
+## new to rasa/bots, explain all
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm OR how_to_get_started{"user_type": "new"} OR explain
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product":"rasa"}
+    - utter_explain_nlu
+    - utter_explain_core
 
 ## new to rasa/bots, don't explain
 * how_to_get_started
@@ -384,6 +460,57 @@
     - slot{"onboarding": false}
     - utter_ask_which_product
 * how_to_get_started{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* how_to_get_started{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasa
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
     - utter_explain_core
     - utter_explain_nlu
 
@@ -459,6 +586,25 @@
     - utter_explain_nlu
     - utter_explain_core
 
+## new to rasa + rasa oss
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding": true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* deny
+    - utter_explain_rasa_components
+    - utter_rasa_components_details
+    - utter_ask_explain_nlucorex
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
 ## skip to info on core
 * how_to_get_started{"product": "core"}
     - utter_explain_core
@@ -475,7 +621,7 @@
 * how_to_get_started{"product": "nlu"}
     - utter_ask_for_nlu_specifics
 * deny
-    - utter_ask_faq_tutorialnlu
+    - utter_tutorialnlu
     - utter_anything_else
 
 ## not new to rasa + nlu + unknown topic
@@ -688,10 +834,10 @@
     - utter_switch_dialogflow
     - utter_anything_else
 
-## how much does rasa cost
-* ask_faq_opensource_cost
-    - action_faqs
-    - utter_anything_else
+## faq
+* faq
+    - respond_faq
+    - action_set_faq_slot
 
 ## source code
 * source_code
