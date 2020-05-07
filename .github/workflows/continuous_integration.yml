@@ -5,6 +5,7 @@ on:
     - master
     paths:
     - 'actions/**'
+    - 'Dockerfile'
 
 jobs:
   docker:
