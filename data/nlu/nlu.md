@@ -4026,8 +4026,6 @@
 - what sould i do to install rasa
 - installation steps of rasa
 - how can I install [rasa open source](product)?
-- The [open source](product) version
-- what is [rasa open source](product) used for?
 - How to download rasa
 
 ## intent:next_step
