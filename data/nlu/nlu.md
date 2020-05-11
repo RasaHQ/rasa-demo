@@ -338,6 +338,7 @@
 - what is father name
 - who is your mother
 - who is your father
+- your mother
 
 ## intent:faq/rasax
 - what is Rasa X?
@@ -4027,6 +4028,7 @@
 - installation steps of rasa
 - how can I install [rasa open source](product)?
 - How to download rasa
+- where do i download rasa
 
 ## intent:next_step
 - continue to next step
@@ -5048,6 +5050,9 @@
 - testing chatbot
 - what is knowledge base
 - knowledge base action
+- multipass issue
+- embeddings
+- how to write stories to train rasa
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5130,6 +5135,9 @@
 - thx
 - yes thanks
 - thanks f
+
+## intent:ask_faq_languages
+- I want to build a bot in [Hindi](language)
 
 ## synonym: duration
 - how long
