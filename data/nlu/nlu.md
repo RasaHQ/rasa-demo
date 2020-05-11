@@ -620,6 +620,7 @@
 - Which programming language is rasa written in?
 
 ## intent:faq/languages
+- I want to build a bot in [Hindi](language)
 - Any languages that rasa supports?
 - Can I use Rasa with [Thai](language) language
 - Can rasa support any language?
@@ -5135,9 +5136,6 @@
 - thx
 - yes thanks
 - thanks f
-
-## intent:ask_faq_languages
-- I want to build a bot in [Hindi](language)
 
 ## synonym: duration
 - how long
