@@ -224,6 +224,8 @@
 - ys
 - yup
 - yyeeeh
+- Okay cool
+- ok..
 - considering
 - That's awesome.
 - Got it
@@ -417,6 +419,7 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- on what channels can I use rasa
 - Do you  help to  integrate Facebook
 
 ## intent:faq/community_size
@@ -567,6 +570,8 @@
 - tell me about rasa enterprise
 - rasa enterprise please
 - more info about enterprise
+- tell me about rasa enterpeise
+- rasa enterprise plans
 
 ## intent:faq/is_programming_required
 - Does rasa require programming knowledge
@@ -1296,6 +1301,8 @@
 - whats new
 - whatsapp
 - yow are you
+- how are you Rasa
+- Hey Sara, how's it going
 
 ## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -1475,6 +1482,8 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- you speak [french](language) ?
+- I want to speak binary with you
 - ARE YOU [SPANISH](language)
 - we cant converse in [french](language)?
 - can we converse in [french](language)?
@@ -1522,6 +1531,7 @@
 - i need information from posters in the forum
 - ok send me to the forum
 - to the forum
+- need help on chatbot
 
 ## intent:chitchat/ask_restaurant
 - Any good restaurants nearby?
@@ -2536,6 +2546,7 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- I don't agree
 
 ## intent:enter_data
 - $1
@@ -3252,6 +3263,8 @@
 - [wordpress](company)
 - slack
 - e commerce bot
+- My name is [manuel](name)
+- I am [Aniket](name)
 - general and sales
 - [rasa](product)
 - [botpress](current_api)
@@ -3424,6 +3437,7 @@
 - whats up
 - yo
 - yoo
+- ssup?
 
 ## intent:chitchat/handleinsult
 - FUCK
@@ -3525,6 +3539,7 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
+- F u
 - monkey man
 - little ugly monkey
 - you are ugly
@@ -3837,6 +3852,8 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 - I am trying to build a bot using rasa
+- i am [new](user_type) but so how can i start
+- where can i find rasa document
 - more about [Rasa open source](product)
 - tell me about [rasa open source](product)
 - i want to know about [rasa Open source](product)
@@ -4194,6 +4211,9 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
+- tu pagal
+- kannst du mir helfen
+- tu kaisi he
 - こにちは
 - 日本語分かる？
 - chào
@@ -4542,6 +4562,10 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- CALL THE POLICE
+- tertyryutyi
+- wsdrcftvgybhnj
+- why sky is blue?
 - what kind of bird are you?
 - contextua
 - contextual
@@ -5011,6 +5035,8 @@
 - there is error
 - why do I get errors using rasa?
 - there are some python incompatibilities
+- can this be integrated with mongo db
+- Can you help me with forms
 - can tell me about rasa_sdk
 - rasa sdk
 - where is rasa sdk?
@@ -5135,17 +5161,18 @@
 - thnks
 - thx
 - yes thanks
+- thanks for your information
 - thanks f
 
 ## synonym: duration
-- how long
 - durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
-- usa
 - United States
+- U.S.
+- usa
 
 ## synonym:United Kingdom
 - UK
@@ -5155,34 +5182,34 @@
 - both
 
 ## synonym:core
-- Core
 - CORE
+- Core
 
 ## synonym:custom actions
-- actions
 - Actions
 - Custom actions
+- actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
-- DialogFlwo
 - dialog flow
+- DialogFlwo
+- DialogFlow
 - google
 
 ## synonym:distance
 - distances
 
 ## synonym:entity recognition
+- entities
 - ner
 - entity extraction
 - Entity recognition
 - NER
-- recognition
 - etnity extraction
-- entities
+- recognition
 
 ## synonym:full stack developer
 - full stack develope
@@ -5192,8 +5219,8 @@
 
 ## synonym:intent classification
 - intent classificaton
-- intent recognition
 - intent
+- intent recognition
 - intents
 
 ## synonym:italian
@@ -5201,9 +5228,9 @@
 
 ## synonym:luis
 - LUIS
-- Luis
-- LUIS.ai
 - luis.ai
+- LUIS.ai
+- Luis
 
 ## synonym:money
 - amounts
@@ -5212,10 +5239,10 @@
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
 - rasa_nlu
+- NLU
 
 ## synonym:organisation
 - companies
@@ -5232,25 +5259,25 @@
 
 ## synonym:stack
 - fullstack
-- Full Stack
-- Full
-- full stack
-- full staclk
-- Full stack
 - full
+- Full stack
+- full staclk
 - full framework
+- full stack
+- Full
+- Full Stack
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- rasa x
-- Rasa X
-- X
 - Rasax
-- rasax
 - RASAX
+- Rasa X
+- rasa x
 - RASA X
+- X
+- rasax
 
 ## regex:greet
 - hey[^\s]*
