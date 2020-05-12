@@ -227,8 +227,6 @@
 - cool beans
 
 ## intent:react_positive
-- good
-- nice
 - :)
 - :D
 - HAHA
