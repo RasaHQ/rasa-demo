@@ -224,7 +224,10 @@
 - ys
 - yup
 - yyeeeh
+- Okay cool
+- ok..
 - considering
+- That's awesome.
 - Got it
 
 ## intent:chitchat/ask_builder
@@ -362,6 +365,7 @@
 - i want to learn more about Rasa X
 - tell me what is rasa x
 - what is rasa x?
+- what is rasax
 
 ## intent:faq/channels
 - Can you tell which messaging channels does rasa support?
@@ -414,6 +418,8 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- on what channels can I use rasa
+- Do you  help to  integrate Facebook
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
@@ -536,7 +542,7 @@
 - what's the difference between [rasa](product) and [rasa x](product)
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
-- what is the difference between [rasa open source](rasa) and [rasa x](product)
+- what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
 
@@ -563,6 +569,8 @@
 - tell me about rasa enterprise
 - rasa enterprise please
 - more info about enterprise
+- tell me about rasa enterpeise
+- rasa enterprise plans
 
 ## intent:faq/is_programming_required
 - Does rasa require programming knowledge
@@ -1291,6 +1299,8 @@
 - whats new
 - whatsapp
 - yow are you
+- how are you Rasa
+- Hey Sara, how's it going
 
 ## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -1383,6 +1393,7 @@
 - you are ai
 - you are chatbot
 - you're a bot
+- you robo
 - real bot then?
 - are you really a bbot?
 
@@ -1469,6 +1480,9 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- you speak [french](language) ?
+- I want to speak binary with you
+- ARE YOU [SPANISH](language)
 - we cant converse in [french](language)?
 - can we converse in [french](language)?
 
@@ -1515,6 +1529,7 @@
 - i need information from posters in the forum
 - ok send me to the forum
 - to the forum
+- need help on chatbot
 
 ## intent:chitchat/ask_restaurant
 - Any good restaurants nearby?
@@ -1821,6 +1836,7 @@
 - what is rasa?
 - whats rasa
 - yeah go on explaining what rasa is
+- RASA IS SOFTWARE?
 
 ## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -2174,6 +2190,9 @@
 - yes but who are you in your heart
 - may i know your name
 - what is rasa mascot
+- what are you
+- your name
+- your real name friend
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2525,6 +2544,7 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- I don't agree
 
 ## intent:enter_data
 - $1
@@ -3240,8 +3260,11 @@
 - [wordpress](company)
 - slack
 - e commerce bot
+- My name is [manuel](name)
+- I am [Aniket](name)
 - general and sales
 - [rasa](product)
+- [botpress](current_api)
 - simple bpt
 - education bot
 - contexual
@@ -3411,6 +3434,7 @@
 - whats up
 - yo
 - yoo
+- ssup?
 
 ## intent:chitchat/handleinsult
 - FUCK
@@ -3512,6 +3536,7 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
+- F u
 - monkey man
 - little ugly monkey
 - you are ugly
@@ -3824,6 +3849,8 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 - I am trying to build a bot using rasa
+- i am [new](user_type) but so how can i start
+- where can i find rasa document
 - more about [Rasa open source](product)
 - tell me about [rasa open source](product)
 - i want to know about [rasa Open source](product)
@@ -3845,6 +3872,8 @@
 - [rasa open source](product) first
 - rasa basics
 - how can i get stared
+- how to using you
+- What are the coponent
 - create chatbot steps
 
 ## intent:human_handoff
@@ -4011,9 +4040,8 @@
 - please tell steps for installing chatbot
 - what do I need to install Rasa
 - what sould i do to install rasa
+- installation steps of rasa
 - how can I install [rasa open source](product)?
-- The [open source](product) version
-- what is [rasa open source](product) used for?
 - How to download rasa
 
 ## intent:next_step
@@ -4179,11 +4207,22 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
+- tu pagal
+- kannst du mir helfen
+- tu kaisi he
 - こにちは
 - 日本語分かる？
 - chào
 - 你好
 - I'm speaking a non-english language.
+- 呵呵
+- 我该如何使用
+- 你懂中文吗？
+- 您好
+- 你叫什么名字
+- 你是谁
+- 中文
+- kya hindi me bat kar sakate ho
 - Dumme sara
 
 ## intent:out_of_scope/other
@@ -4519,6 +4558,10 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- CALL THE POLICE
+- tertyryutyi
+- wsdrcftvgybhnj
+- why sky is blue?
 - what kind of bird are you?
 - contextua
 - contextual
@@ -4528,6 +4571,10 @@
 - Cars
 - please voulette
 - Out of scope question.
+- Hi i want to go palghar
+- I want to go palghar
+- your contry name
+- you girl
 - gsaf
 - expert of rasa
 - i want play ball
@@ -4600,6 +4647,8 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
+- iam not feeling good
+- not good
 - Thats so rude
 - sadly
 - That tool here isnt good
@@ -4884,6 +4933,7 @@
 - switch to rasa
 - from which tools can I migrate to rasa?
 - can I migrate to rasa from another tool?
+- [dialogflow](current_api) and implementation from scratch
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -4989,6 +5039,8 @@
 - there is error
 - why do I get errors using rasa?
 - there are some python incompatibilities
+- can this be integrated with mongo db
+- Can you help me with forms
 - can tell me about rasa_sdk
 - rasa sdk
 - where is rasa sdk?
@@ -5000,6 +5052,22 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- do we need to write training data nlu.md
+- For training data, to we need to exclusively write the file in MD format?
+- How can i talk to RASA through the url
+- what is action server
+- is it a best practice to connect an external cms
+- can you show me buttons
+- I'd like to handle chitchat
+- Can Rasa be incorporated into iOS apps?
+- how to implement buttons
+- buttons
+- implement buttons
+- I want to build RASA DIET in google colab
+- tensorflow-text
+- installation of tensorflow-text
+- ConveRTFeaturizer
+- whatsapp bro
 - What does the NLU pipeline do
 - what does the nlu pipeline do
 - What is DIET
@@ -5094,16 +5162,18 @@
 - thnks
 - thx
 - yes thanks
+- thanks for your information
+- thanks f
 
 ## synonym: duration
-- how long
 - durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
-- usa
 - United States
+- U.S.
+- usa
 
 ## synonym:United Kingdom
 - UK
@@ -5113,34 +5183,34 @@
 - both
 
 ## synonym:core
-- Core
 - CORE
+- Core
 
 ## synonym:custom actions
-- actions
 - Actions
 - Custom actions
+- actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
-- DialogFlwo
 - dialog flow
+- DialogFlwo
+- DialogFlow
 - google
 
 ## synonym:distance
 - distances
 
 ## synonym:entity recognition
+- entities
 - ner
 - entity extraction
 - Entity recognition
 - NER
-- recognition
 - etnity extraction
-- entities
+- recognition
 
 ## synonym:full stack developer
 - full stack develope
@@ -5150,8 +5220,8 @@
 
 ## synonym:intent classification
 - intent classificaton
-- intent recognition
 - intent
+- intent recognition
 - intents
 
 ## synonym:italian
@@ -5159,9 +5229,9 @@
 
 ## synonym:luis
 - LUIS
-- Luis
-- LUIS.ai
 - luis.ai
+- LUIS.ai
+- Luis
 
 ## synonym:money
 - amounts
@@ -5170,10 +5240,10 @@
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
 - rasa_nlu
+- NLU
 
 ## synonym:organisation
 - companies
@@ -5190,25 +5260,25 @@
 
 ## synonym:stack
 - fullstack
-- Full Stack
-- Full
-- full stack
-- full staclk
-- Full stack
 - full
+- Full stack
+- full staclk
 - full framework
+- full stack
+- Full
+- Full Stack
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- rasa x
-- Rasa X
-- X
 - Rasax
-- rasax
 - RASAX
+- Rasa X
+- rasa x
 - RASA X
+- X
+- rasax
 
 ## regex:greet
 - hey[^\s]*
