@@ -340,6 +340,7 @@
 - what is father name
 - who is your mother
 - who is your father
+- your mother
 
 ## intent:faq/rasax
 - what is Rasa X?
@@ -624,6 +625,7 @@
 - Which programming language is rasa written in?
 
 ## intent:faq/languages
+- I want to build a bot in [Hindi](language)
 - Any languages that rasa supports?
 - Can I use Rasa with [Thai](language) language
 - Can rasa support any language?
@@ -4043,6 +4045,7 @@
 - installation steps of rasa
 - how can I install [rasa open source](product)?
 - How to download rasa
+- where do i download rasa
 
 ## intent:next_step
 - continue to next step
@@ -5081,6 +5084,9 @@
 - testing chatbot
 - what is knowledge base
 - knowledge base action
+- multipass issue
+- embeddings
+- how to write stories to train rasa
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
