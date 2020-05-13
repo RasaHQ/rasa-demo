@@ -60,19 +60,35 @@ jobs:
     needs: [data-validation]
     steps:
     - uses: actions/checkout@v1
+    - id: files
+      uses: jitterbit/get-changed-files@v1
+    - name: set_training
+      if: |
+          contains(  steps.files.outputs.all, 'data/' ) 
+          || contains(  steps.files.outputs.all, 'config.yml' ) 
+          || contains(  steps.files.outputs.all, 'domain.yml' )
+      run: echo "::set-env name=RUN_TRAINING::true"
     - name: Set up Python 3.7
+      if: env.RUN_TRAINING == 'true'
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
     - name: Install dependencies
+      if: env.RUN_TRAINING == 'true'
       run: |
-        python -m pip install --upgrade "pip<20"
-        pip install -r requirements-dev.txt
+          python -m pip install --upgrade "pip<20"
+          pip install -r requirements-dev.txt
     - name: Cross-validate NLU model
-      run: |
-        rasa test nlu -f 3 --cross-validation
-        python .github/workflows/format_results.py
+      id: cvnlu
+      if: |
+          ( contains(github.event.pull_request.labels.*.name, 'nlu_testing_required') 
+          && contains(  steps.files.outputs.all, 'data/nlu/' ) )
+          || contains(  steps.files.outputs.all, 'config.yml' )
+      run: |  
+          rasa test nlu -f 3 --cross-validation
+          python .github/workflows/format_results.py
     - name: post cross-val results to PR
+      if: steps.cvnlu.outcome == 'success'
       uses: amn41/comment-on-pr@comment-file-contents
       continue-on-error: true
       env:
@@ -80,15 +96,22 @@ jobs:
       with:
         msg: results.md
     - name: Train Model
+      if: env.RUN_TRAINING == 'true'
       working-directory: ${{ github.workspace }}
       run: |
         rasa train
     - name: Test Training Stories
+      if: |
+          contains(  steps.files.outputs.all, 'data/core/' ) 
+          || contains(  steps.files.outputs.all, 'config.yml' ) 
+          || contains(  steps.files.outputs.all, 'domain.yml' )
       working-directory: ${{ github.workspace }}
       run: |
         rasa test core --stories test/test_stories.md --fail-on-prediction-errors
     - name: Upload model
-      if: github.ref == 'refs/heads/master'
+      if: |
+          github.ref == 'refs/heads/master' 
+          && env.RUN_TRAINING == 'true'
       uses: actions/upload-artifact@master
       with:
         name: model
@@ -99,22 +122,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - id: files
+      uses: jitterbit/get-changed-files@v1
+    - name: set_actions
+      if: |
+        contains(  steps.files.outputs.all, 'actions/' ) 
+        || contains(  steps.files.outputs.all, 'Dockerfile' )
+      run: echo "::set-env name=ACTIONS_CHANGED::true"
     - name: Authenticate into Google Cloud Platform
+      if: env.ACTIONS_CHANGED == 'true'
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '275.0.0'
         service_account_key: ${{ secrets.GCLOUD_AUTH }}
     - name: Configure Docker to use Google Cloud Platform
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
         gcloud auth configure-docker
     - name: Pull Latest Image
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
         docker pull gcr.io/replicated-test/rasa-demo:latest || true
-    - name: Set Build ID from PR Ref
-      run: echo ::set-env name=BUILD_NUMBER::$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
     - name: Build Image
+      if: env.ACTIONS_CHANGED == 'true'
       run: |
-        docker build -t gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
-    - name: Push PR Image to Google Cloud Container Registry
-      run: |
-        docker push gcr.io/replicated-test/rasa-demo:pr$BUILD_NUMBER
+        docker build --cache-from gcr.io/replicated-test/rasa-demo:latest .
+
