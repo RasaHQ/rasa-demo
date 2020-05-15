@@ -76,7 +76,6 @@
 - go ahead
 - go for it
 - going super well
-- good
 - good.
 - great
 - great lets do that
@@ -101,7 +100,6 @@
 - kk
 - lets do it
 - lets do this
-- nice
 - not bad
 - of course
 - ofcoure i do
@@ -224,7 +222,65 @@
 - ys
 - yup
 - yyeeeh
+- Okay cool
+- ok..
 - considering
+- More a less
+- cool beans
+
+## intent:react_positive
+- :)
+- :D
+- HAHA
+- I am happy
+- LOL
+- Lol
+- Lol thats funny
+- Looks nice
+- WOW
+- Wow
+- You are great
+- You're cute.
+- You're nice.
+- You're really cool
+- hAHAHA
+- ha ha
+- haha
+- hahah
+- hahaha
+- happy
+- i am feeling happy
+- i am happy
+- i am happy today
+- i am very happy with your response
+- i love you
+- it's pretty cool
+- lol
+- love you
+- okay Rasabot, you're cool
+- rasa is awesome
+- such a great demo
+- that is funny
+- that was a great interaction
+- thats funny
+- today was a nice day
+- wow
+- you are a badass bot!
+- you are awesome
+- you are cool
+- you are cool man
+- you are doin great
+- you are funny
+- you are great
+- you are my new bestfriend
+- you seem pretty cool :D
+- I like you
+- I love you
+- you are realy intelligent
+- I like Rasa
+- hèhè
+- like u
+- you are so smart
 - That's awesome.
 - Got it
 
@@ -334,10 +390,12 @@
 - why were you made?
 - you are made by who?
 - you are working for which company?
+- who is the author of rasa
 - what is you mother name
 - what is father name
 - who is your mother
 - who is your father
+- your mother
 
 ## intent:faq/rasax
 - what is Rasa X?
@@ -416,6 +474,11 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- Any integrations with WhatsApp and Facebook?
+- what ui can I use
+- which user interface can I use?
+- integrate rasa with ui
+- on what channels can I use rasa
 - Do you  help to  integrate Facebook
 
 ## intent:faq/community_size
@@ -566,6 +629,8 @@
 - tell me about rasa enterprise
 - rasa enterprise please
 - more info about enterprise
+- tell me about rasa enterpeise
+- rasa enterprise plans
 
 ## intent:faq/is_programming_required
 - Does rasa require programming knowledge
@@ -619,6 +684,7 @@
 - Which programming language is rasa written in?
 
 ## intent:faq/languages
+- I want to build a bot in [Hindi](language)
 - Any languages that rasa supports?
 - Can I use Rasa with [Thai](language) language
 - Can rasa support any language?
@@ -713,6 +779,10 @@
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
 - How about [hindi](language)?
+- what lanquages do you support
+- What lanquages do you serve
+- does rasa support other language beside english?
+- how to build rasa with different languages?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -1294,6 +1364,8 @@
 - whats new
 - whatsapp
 - yow are you
+- how are you Rasa
+- Hey Sara, how's it going
 
 ## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -1349,6 +1421,7 @@
 - when is your birthday?
 - when were you born?
 - when you were bon
+- What's your age?
 
 ## intent:chitchat/ask_isbot
 - Ar you a bot ?
@@ -1391,6 +1464,7 @@
 - are you really a bbot?
 
 ## intent:chitchat/ask_ishuman
+- hey are you human
 - are u human
 - r u a human
 - are you real human?
@@ -1473,6 +1547,8 @@
 - what languages you prefer more speaking at?
 - which languages do you understand?
 - you know [French](language)
+- you speak [french](language) ?
+- I want to speak binary with you
 - ARE YOU [SPANISH](language)
 - we cant converse in [french](language)?
 - can we converse in [french](language)?
@@ -1520,6 +1596,7 @@
 - i need information from posters in the forum
 - ok send me to the forum
 - to the forum
+- need help on chatbot
 
 ## intent:chitchat/ask_restaurant
 - Any good restaurants nearby?
@@ -1826,6 +1903,7 @@
 - what is rasa?
 - whats rasa
 - yeah go on explaining what rasa is
+- what are the components of rasa
 - RASA IS SOFTWARE?
 
 ## intent:chitchat/ask_whatspossible
@@ -1930,6 +2008,8 @@
 - what you do
 - what you doing?
 - what you talk about?
+- you can hep me
+- what can you teache me?
 
 ## intent:chitchat/ask_wherefrom
 - Are you from around here?
@@ -2534,6 +2614,8 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- none of them
+- I don't agree
 
 ## intent:enter_data
 - $1
@@ -3250,6 +3332,8 @@
 - [wordpress](company)
 - slack
 - e commerce bot
+- My name is [manuel](name)
+- I am [Aniket](name)
 - general and sales
 - [rasa](product)
 - [botpress](current_api)
@@ -3422,6 +3506,7 @@
 - whats up
 - yo
 - yoo
+- ssup?
 
 ## intent:chitchat/handleinsult
 - FUCK
@@ -3523,6 +3608,7 @@
 - you're the most moronic person I know
 - your mom gay
 - you are annoying
+- F u
 - monkey man
 - little ugly monkey
 - you are ugly
@@ -3835,6 +3921,8 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 - I am trying to build a bot using rasa
+- i am [new](user_type) but so how can i start
+- where can i find rasa document
 - more about [Rasa open source](product)
 - tell me about [rasa open source](product)
 - i want to know about [rasa Open source](product)
@@ -3856,6 +3944,8 @@
 - [rasa open source](product) first
 - rasa basics
 - how can i get stared
+- how to build assistant?
+- how to build assistant with rasa?
 - how to using you
 - What are the coponent
 - create chatbot steps
@@ -4027,6 +4117,7 @@
 - installation steps of rasa
 - how can I install [rasa open source](product)?
 - How to download rasa
+- where do i download rasa
 
 ## intent:next_step
 - continue to next step
@@ -4191,6 +4282,9 @@
 - que puedes hacer?
 - tu parles francais?
 - tudo bom
+- tu pagal
+- kannst du mir helfen
+- tu kaisi he
 - こにちは
 - 日本語分かる？
 - chào
@@ -4539,6 +4633,10 @@
 - you will know it from the single red rose it carries between its teeth
 - you're a woman
 - ı am learning python
+- CALL THE POLICE
+- tertyryutyi
+- wsdrcftvgybhnj
+- why sky is blue?
 - what kind of bird are you?
 - contextua
 - contextual
@@ -4548,6 +4646,9 @@
 - Cars
 - please voulette
 - Out of scope question.
+- i need money
+- no, i need cash, money! Do you have it ?
+- the beatles
 - Hi i want to go palghar
 - I want to go palghar
 - your contry name
@@ -4624,65 +4725,15 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
+- i am so worry
+- i will leave
+- Although I understand your still in development, I feel a little bit disappointed.
+- Surely you're not so smart lik i thought
 - iam not feeling good
 - not good
 - Thats so rude
 - sadly
 - That tool here isnt good
-
-## intent:react_positive
-- :)
-- :D
-- HAHA
-- I am happy
-- LOL
-- Lol
-- Lol thats funny
-- Looks nice
-- WOW
-- Wow
-- You are great
-- You're cute.
-- You're nice.
-- You're really cool
-- hAHAHA
-- ha ha
-- haha
-- hahah
-- hahaha
-- happy
-- i am feeling happy
-- i am happy
-- i am happy today
-- i am very happy with your response
-- i love you
-- it's pretty cool
-- lol
-- love you
-- okay Rasabot, you're cool
-- rasa is awesome
-- such a great demo
-- that is funny
-- that was a great interaction
-- thats funny
-- today was a nice day
-- wow
-- you are a badass bot!
-- you are awesome
-- you are cool
-- you are cool man
-- you are doin great
-- you are funny
-- you are great
-- you are my new bestfriend
-- you seem pretty cool :D
-- I like you
-- I love you
-- you are realy intelligent
-- I like Rasa
-- hèhè
-- like u
-- you are so smart
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -5008,6 +5059,8 @@
 - there is error
 - why do I get errors using rasa?
 - there are some python incompatibilities
+- can this be integrated with mongo db
+- Can you help me with forms
 - can tell me about rasa_sdk
 - rasa sdk
 - where is rasa sdk?
@@ -5019,6 +5072,26 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- Hello, where can I find the paper about DIET?
+- Is there a technical paper about DIET?
+- domain
+- How do I get yes / no answer buttons
+- I am searching the changlog
+- rasa templates
+- how to add in my website
+- php
+- php code
+- what is the difference between slot and entity
+- is slot teh same as entity
+- what should I do when I want to use a binary slot
+- How d I use a boolean slot
+- what  are values of a boolean slot
+- fallback
+- stories files
+- use of stories files
+- installation error
+- bash: poetry: command not found
+- Can i use NLU on its own
 - do we need to write training data nlu.md
 - For training data, to we need to exclusively write the file in MD format?
 - How can i talk to RASA through the url
@@ -5048,6 +5121,9 @@
 - testing chatbot
 - what is knowledge base
 - knowledge base action
+- multipass issue
+- embeddings
+- how to write stories to train rasa
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5129,17 +5205,18 @@
 - thnks
 - thx
 - yes thanks
+- thanks for your information
 - thanks f
 
 ## synonym: duration
-- how long
 - durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
-- usa
 - United States
+- U.S.
+- usa
 
 ## synonym:United Kingdom
 - UK
@@ -5149,34 +5226,34 @@
 - both
 
 ## synonym:core
-- Core
 - CORE
+- Core
 
 ## synonym:custom actions
-- actions
 - Actions
 - Custom actions
+- actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
-- DialogFlwo
 - dialog flow
+- DialogFlwo
+- DialogFlow
 - google
 
 ## synonym:distance
 - distances
 
 ## synonym:entity recognition
+- entities
 - ner
 - entity extraction
 - Entity recognition
 - NER
-- recognition
 - etnity extraction
-- entities
+- recognition
 
 ## synonym:full stack developer
 - full stack develope
@@ -5186,8 +5263,8 @@
 
 ## synonym:intent classification
 - intent classificaton
-- intent recognition
 - intent
+- intent recognition
 - intents
 
 ## synonym:italian
@@ -5195,9 +5272,9 @@
 
 ## synonym:luis
 - LUIS
-- Luis
-- LUIS.ai
 - luis.ai
+- LUIS.ai
+- Luis
 
 ## synonym:money
 - amounts
@@ -5206,10 +5283,10 @@
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
 - rasa_nlu
+- NLU
 
 ## synonym:organisation
 - companies
@@ -5226,25 +5303,25 @@
 
 ## synonym:stack
 - fullstack
-- Full Stack
-- Full
-- full stack
-- full staclk
-- Full stack
 - full
+- Full stack
+- full staclk
 - full framework
+- full stack
+- Full
+- Full Stack
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- rasa x
-- Rasa X
-- X
 - Rasax
-- rasax
 - RASAX
+- Rasa X
+- rasa x
 - RASA X
+- X
+- rasax
 
 ## regex:greet
 - hey[^\s]*
