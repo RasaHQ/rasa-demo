@@ -609,9 +609,9 @@
 - what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
-- the difference between Rasa and Rasa X
-- tell me difference between Rasa and Rasa X
-- difference between Rasa and Rasa X
+- the difference between [Rasa](product) and [Rasa X](product)
+- tell me difference between [Rasa](product) and [Rasa X](product)
+- difference between [Rasa](product) and [Rasa X](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -689,6 +689,7 @@
 - Is there API for any other programming languages?
 - which language is rasa programmed in
 - Which programming language is rasa written in?
+- What language is the open source coding done in?
 
 ## intent:faq/languages
 - I want to build a bot in [Hindi](language)
@@ -790,7 +791,6 @@
 - What lanquages do you serve
 - does rasa support other language beside english?
 - how to build rasa with different languages?
-- What language is the open source coding done in?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -1561,7 +1561,7 @@
 - ARE YOU [SPANISH](language)
 - we cant converse in [french](language)?
 - can we converse in [french](language)?
-- Do you speak italian?
+- Do you speak [italian](language)?
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -4979,8 +4979,8 @@
 - [dialogflow](current_api) and implementation from scratch
 - how to migrate to [dialogueflow](current_api)
 - why should i use rasa instead of google [dialogueflow](current_api)
-- switch from dilogueflow
-- how do i migrate from dialogflow
+- switch from [dilogueflow](current_api)
+- how do i migrate from [dialogflow](current_api)
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -5274,6 +5274,7 @@
 - DialogFlow
 - google
 - dialogueflow
+- dilogueflow
 
 ## synonym:distance
 - distances
