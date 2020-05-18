@@ -3342,6 +3342,7 @@
 - contexual
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
+- [dialogueflow](current_api)
 
 ## intent:explain
 - can you elaborate
@@ -4954,6 +4955,8 @@
 - switching
 - switching from [DialogFlow](current_api)
 - [dialogflow](current_api) and implementation from scratch
+- how to migrate to [dialogueflow](current_api)
+- why should i use rasa instead of google [dialogueflow](current_api)
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -5242,6 +5245,7 @@
 - DialogFlwo
 - DialogFlow
 - google
+- dialogueflow
 
 ## synonym:distance
 - distances
