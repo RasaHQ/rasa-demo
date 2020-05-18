@@ -691,9 +691,18 @@ class ActionDocsSearch(Action):
 
         if alg_res and alg_res.get("hits") and len(alg_res.get("hits")) > 0:
             docs_found = True
-            doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+            hits = [
+                hit
+                for hit in alg_res.get("hits")
+                if "Rasa X Changelog " not in hit.get("hierarchy", {}).values()
+                and "Rasa Open Source Change Log "
+                not in hit.get("hierarchy", {}).values()
+            ]
+            if not hits:
+                hits = alg_res.get("hits")
+            doc_list = algolia.get_algolia_link(hits, 0)
             doc_list += (
-                "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
+                "\n" + algolia.get_algolia_link(hits, 1)
                 if len(alg_res.get("hits")) > 1
                 else ""
             )
