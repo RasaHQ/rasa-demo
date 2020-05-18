@@ -76,7 +76,6 @@
 - go ahead
 - go for it
 - going super well
-- good
 - good.
 - great
 - great lets do that
@@ -101,7 +100,6 @@
 - kk
 - lets do it
 - lets do this
-- nice
 - not bad
 - of course
 - ofcoure i do
@@ -227,6 +225,62 @@
 - Okay cool
 - ok..
 - considering
+- More a less
+- cool beans
+
+## intent:react_positive
+- :)
+- :D
+- HAHA
+- I am happy
+- LOL
+- Lol
+- Lol thats funny
+- Looks nice
+- WOW
+- Wow
+- You are great
+- You're cute.
+- You're nice.
+- You're really cool
+- hAHAHA
+- ha ha
+- haha
+- hahah
+- hahaha
+- happy
+- i am feeling happy
+- i am happy
+- i am happy today
+- i am very happy with your response
+- i love you
+- it's pretty cool
+- lol
+- love you
+- okay Rasabot, you're cool
+- rasa is awesome
+- such a great demo
+- that is funny
+- that was a great interaction
+- thats funny
+- today was a nice day
+- wow
+- you are a badass bot!
+- you are awesome
+- you are cool
+- you are cool man
+- you are doin great
+- you are funny
+- you are great
+- you are my new bestfriend
+- you seem pretty cool :D
+- I like you
+- I love you
+- you are realy intelligent
+- I like Rasa
+- hèhè
+- like u
+- you are so smart
 - That's awesome.
 - Got it
 
@@ -336,6 +390,7 @@
 - why were you made?
 - you are made by who?
 - you are working for which company?
+- who is the author of rasa
 - what is you mother name
 - what is father name
 - who is your mother
@@ -419,6 +474,10 @@
 - which messaging channels does rasa support?
 - which particular messaging channels are supported by rasa?
 - what chat services do you support
+- Any integrations with WhatsApp and Facebook?
+- what ui can I use
+- which user interface can I use?
+- integrate rasa with ui
 - on what channels can I use rasa
 - Do you  help to  integrate Facebook
 
@@ -721,6 +780,10 @@
 - your [NLU](product) understand [spanish](language)?
 - could I program spanish speaking bots?
 - How about [hindi](language)?
+- what lanquages do you support
+- What lanquages do you serve
+- does rasa support other language beside english?
+- how to build rasa with different languages?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -1359,6 +1422,7 @@
 - when is your birthday?
 - when were you born?
 - when you were bon
+- What's your age?
 
 ## intent:chitchat/ask_isbot
 - Ar you a bot ?
@@ -1401,6 +1465,7 @@
 - are you really a bbot?
 
 ## intent:chitchat/ask_ishuman
+- hey are you human
 - are u human
 - r u a human
 - are you real human?
@@ -1839,6 +1904,7 @@
 - what is rasa?
 - whats rasa
 - yeah go on explaining what rasa is
+- what are the components of rasa
 - RASA IS SOFTWARE?
 
 ## intent:chitchat/ask_whatspossible
@@ -1943,6 +2009,8 @@
 - what you do
 - what you doing?
 - what you talk about?
+- you can hep me
+- what can you teache me?
 
 ## intent:chitchat/ask_wherefrom
 - Are you from around here?
@@ -2547,6 +2615,7 @@
 - I don't wanna tell the name of my company
 - no stop
 - stop it, i do not care!!!
+- none of them
 - I don't agree
 
 ## intent:enter_data
@@ -3274,6 +3343,7 @@
 - contexual
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
+- [dialogueflow](current_api)
 
 ## intent:explain
 - can you elaborate
@@ -3876,6 +3946,8 @@
 - [rasa open source](product) first
 - rasa basics
 - how can i get stared
+- how to build assistant?
+- how to build assistant with rasa?
 - how to using you
 - What are the coponent
 - create chatbot steps
@@ -4576,6 +4648,9 @@
 - Cars
 - please voulette
 - Out of scope question.
+- i need money
+- no, i need cash, money! Do you have it ?
+- the beatles
 - Hi i want to go palghar
 - I want to go palghar
 - your contry name
@@ -4652,65 +4727,15 @@
 - i dont like bots
 - this is a really frustrating experience
 - you're rather dull
+- i am so worry
+- i will leave
+- Although I understand your still in development, I feel a little bit disappointed.
+- Surely you're not so smart lik i thought
 - iam not feeling good
 - not good
 - Thats so rude
 - sadly
 - That tool here isnt good
-
-## intent:react_positive
-- :)
-- :D
-- HAHA
-- I am happy
-- LOL
-- Lol
-- Lol thats funny
-- Looks nice
-- WOW
-- Wow
-- You are great
-- You're cute.
-- You're nice.
-- You're really cool
-- hAHAHA
-- ha ha
-- haha
-- hahah
-- hahaha
-- happy
-- i am feeling happy
-- i am happy
-- i am happy today
-- i am very happy with your response
-- i love you
-- it's pretty cool
-- lol
-- love you
-- okay Rasabot, you're cool
-- rasa is awesome
-- such a great demo
-- that is funny
-- that was a great interaction
-- thats funny
-- today was a nice day
-- wow
-- you are a badass bot!
-- you are awesome
-- you are cool
-- you are cool man
-- you are doin great
-- you are funny
-- you are great
-- you are my new bestfriend
-- you seem pretty cool :D
-- I like you
-- I love you
-- you are realy intelligent
-- I like Rasa
-- hèhè
-- like u
-- you are so smart
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4931,6 +4956,8 @@
 - switching
 - switching from [DialogFlow](current_api)
 - [dialogflow](current_api) and implementation from scratch
+- how to migrate to [dialogueflow](current_api)
+- why should i use rasa instead of google [dialogueflow](current_api)
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -5049,6 +5076,26 @@
 - sdk
 - where can i find api documentation for rasa x
 - where is the api for rasa x
+- Hello, where can I find the paper about DIET?
+- Is there a technical paper about DIET?
+- domain
+- How do I get yes / no answer buttons
+- I am searching the changlog
+- rasa templates
+- how to add in my website
+- php
+- php code
+- what is the difference between slot and entity
+- is slot teh same as entity
+- what should I do when I want to use a binary slot
+- How d I use a boolean slot
+- what  are values of a boolean slot
+- fallback
+- stories files
+- use of stories files
+- installation error
+- bash: poetry: command not found
+- Can i use NLU on its own
 - do we need to write training data nlu.md
 - For training data, to we need to exclusively write the file in MD format?
 - How can i talk to RASA through the url
@@ -5206,6 +5253,7 @@
 - DialogFlwo
 - DialogFlow
 - google
+- dialogueflow
 
 ## synonym:distance
 - distances
