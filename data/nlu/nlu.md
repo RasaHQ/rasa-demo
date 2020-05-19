@@ -4137,7 +4137,7 @@
 - please go to the next step
 - take me to the next step
 - what is the next step ?
-- 'take me to the next step
+- take me to the next step
 
 ## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
