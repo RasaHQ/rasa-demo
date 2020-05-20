@@ -4150,6 +4150,7 @@
 - please go to the next step
 - take me to the next step
 - what is the next step ?
+- take me to the next step
 
 ## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
@@ -4212,6 +4213,7 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
+- i want a recommendation for an nlu data generation tool
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
