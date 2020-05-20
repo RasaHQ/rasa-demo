@@ -784,7 +784,6 @@
 - What lanquages do you serve
 - does rasa support other language beside english?
 - how to build rasa with different languages?
-- do u understand my language?
 
 ## intent:faq/opensource_cost
 - Are you free?
