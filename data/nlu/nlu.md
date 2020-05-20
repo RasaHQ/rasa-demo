@@ -283,6 +283,7 @@
 - you are so smart
 - That's awesome.
 - Got it
+- you are ideal
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -783,6 +784,7 @@
 - What lanquages do you serve
 - does rasa support other language beside english?
 - how to build rasa with different languages?
+- do u understand my language?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -889,6 +891,9 @@
 - How is it opensource
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
+- is rasa open
+- okay tell me about the pricing details
+- I want to buy rasa
 
 ## intent:faq/python_version
 - What Python version should I use?
@@ -1042,6 +1047,7 @@
 - where can i get a tutorial on rasa
 - yes, where I can find some hand-on tutorials to use RASA products?
 - I need to study RASA step by step, which is the best site to study?
+- Can you suggest me some good course from which i can learn to build chatbots efficiently
 
 ## intent:faq/voice
 - Building a rasa voice bot?
@@ -1905,6 +1911,8 @@
 - yeah go on explaining what rasa is
 - what are the components of rasa
 - RASA IS SOFTWARE?
+- what's rasa purpose?
+- what's the purpose of rasa company?
 
 ## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -2514,6 +2522,7 @@
 - sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
+- Can i have a deno
 
 ## intent:deny
 - I don't want to
@@ -3343,6 +3352,8 @@
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
 - [dialogueflow](current_api)
+- T10
+- the company is called t10
 
 ## intent:explain
 - can you elaborate
@@ -3617,6 +3628,7 @@
 - why are ugly
 - why are you ugly
 - your crazy
+- meh, this is stupid
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -3950,6 +3962,8 @@
 - how to using you
 - What are the coponent
 - create chatbot steps
+- can you tell me how to create a new rasa project
+- can you help me build my bot?
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4198,6 +4212,8 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
+- How to generate NLU using frontend.
+- NLU data  generation
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -4260,6 +4276,7 @@
 - what is a [intent](nlu_part)?
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
+- what does NLU server do?
 
 ## intent:out_of_scope/non_english
 - Wie fange ich mit Rasa an?
@@ -4687,6 +4704,7 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
+- nlu pipeline
 
 ## intent:react_negative
 - I am feeling bad
@@ -4735,6 +4753,7 @@
 - Thats so rude
 - sadly
 - That tool here isnt good
+- It wasnt funny
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4910,6 +4929,8 @@
 - yes with your source code
 - your code
 - your code please
+- i need nlu.md file
+- i need smalltalk.md file
 
 ## intent:switch
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
@@ -5127,6 +5148,19 @@
 - multipass issue
 - embeddings
 - how to write stories to train rasa
+- tell me about the nlu training data format
+- how can i get data from a database and use them as a response to a question?
+- how to add a database?
+- I want to integrate a database and look up values based on an entity the user gave me. How is this possible?
+- what is default fall back
+- fallback actions
+- what is custom actions
+- I am facing some issues with LMS
+- my nlu cant detect entities
+- how do i detect entities
+- how to evaluate model
+- Can I have multiple .md data files?
+- response selector?
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
