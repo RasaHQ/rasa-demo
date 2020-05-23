@@ -685,10 +685,9 @@ class ActionDocsSearch(Action):
             last_user_event = get_last_event_for(tracker, "user", skip=2)
             if last_user_event:
                 search_text = last_user_event.get("text")
-                algolia_result = algolia.search(search_text)	
-        else:	
+                algolia_result = algolia.search(search_text)
+        else:
             algolia_result = algolia.search(search_text)
-
 
         if (
             algolia_result
