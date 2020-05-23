@@ -227,6 +227,7 @@
 - considering
 - More a less
 - cool beans
+- sounds good!
 
 ## intent:react_positive
 - :)
@@ -284,6 +285,7 @@
 - That's awesome.
 - Got it
 - you are ideal
+- you good
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -481,6 +483,8 @@
 - integrate rasa with ui
 - on what channels can I use rasa
 - Do you  help to  integrate Facebook
+- how can i integrate the rasa chat bot to my website
+- how can i integrate rasa in my siteweb ?
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
@@ -606,6 +610,9 @@
 - what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
+- the difference between [Rasa](product) and [Rasa X](product)
+- tell me difference between [Rasa](product) and [Rasa X](product)
+- difference between [Rasa](product) and [Rasa X](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -683,6 +690,7 @@
 - Is there API for any other programming languages?
 - which language is rasa programmed in
 - Which programming language is rasa written in?
+- What language is the open source coding done in?
 
 ## intent:faq/languages
 - I want to build a bot in [Hindi](language)
@@ -1121,6 +1129,7 @@
 - with rasa can I invent a voice bot?
 - with rasa can I make a voice bot?
 - you have speech recognition?
+- do rasa provide speech intent
 
 ## intent:faq/what_is_forum
 - Could you please describe the Rasa forum?
@@ -1557,6 +1566,7 @@
 - ARE YOU [SPANISH](language)
 - we cant converse in [french](language)?
 - can we converse in [french](language)?
+- Do you speak [italian](language)?
 
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
@@ -2270,6 +2280,7 @@
 - what are you
 - your name
 - your real name friend
+- what`s u name?
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2336,6 +2347,7 @@
 - toodle-oo
 - Exit
 - Close this talk
+- byr
 
 ## intent:canthelp
 - I think you cant help me
@@ -2363,6 +2375,7 @@
 - you cannot help me with what I want
 - you cant help me
 - quit
+- that does not help
 
 ## intent:contact_sales
 - But I wanted a sales call
@@ -3963,6 +3976,7 @@
 - create chatbot steps
 - can you tell me how to create a new rasa project
 - can you help me build my bot?
+- start
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4149,6 +4163,7 @@
 - please go to the next step
 - take me to the next step
 - what is the next step ?
+- take me to the next step
 
 ## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
@@ -4211,8 +4226,10 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
-- How to generate NLU using frontend.
-- NLU data  generation
+- How to generate [NLU](product) using frontend.
+- [NLU](product) data  generation
+- i want a recommendation for an [nlu](product) data generation tool
+
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -4316,6 +4333,9 @@
 - 中文
 - kya hindi me bat kar sakate ho
 - Dumme sara
+- αστεία λές
+- rasa codigo abierto
+- 卧槽
 
 ## intent:out_of_scope/other
 - I am asking you an out of scope question
@@ -4685,6 +4705,9 @@
 - what type of bot?
 - sfasd
 - asdkjasdhjkasd
+- j  bhbhj
+- eshdtjfjfyk
+- drhdtjfjfyj
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4753,6 +4776,7 @@
 - sadly
 - That tool here isnt good
 - It wasnt funny
+- boring
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4930,6 +4954,7 @@
 - your code please
 - i need nlu.md file
 - i need smalltalk.md file
+- source
 
 ## intent:switch
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
@@ -4977,6 +5002,8 @@
 - [dialogflow](current_api) and implementation from scratch
 - how to migrate to [dialogueflow](current_api)
 - why should i use rasa instead of google [dialogueflow](current_api)
+- switch from [dilogueflow](current_api)
+- how do i migrate from [dialogflow](current_api)
 
 ## intent:technical_question
 - Create ecommerce bot
@@ -5160,6 +5187,9 @@
 - how to evaluate model
 - Can I have multiple .md data files?
 - response selector?
+- credentials.yml
+- credentials
+- how can I use transformers
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5202,6 +5232,7 @@
 - tell me a story joke
 - tell me something funny, like a joke
 - you can say a jok
+- telljoke
 
 ## intent:thank
 - Cool. Thanks
@@ -5279,6 +5310,7 @@
 - DialogFlow
 - google
 - dialogueflow
+- dilogueflow
 
 ## synonym:distance
 - distances
