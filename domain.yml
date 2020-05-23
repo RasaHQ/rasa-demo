@@ -3,8 +3,10 @@ session_config:
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
 intents:
 - affirm
-- faq
-- chitchat
+- faq:
+    use_entities: []
+- chitchat:
+    use_entities: []
 - ask_how_contribute
 - ask_question_in_forum
 - ask_when_next_event
