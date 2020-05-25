@@ -400,30 +400,30 @@
 - your mother
 
 ## intent:faq/rasax
-- what is Rasa X?
-- how does Rasa X work?
-- what is X?
-- can you explain rasa x to me
-- could you elaborate more about rasa x
-- tell me about Rasa X please
-- what is this rasa x thing. could you tell me more?
-- what's the purpose of Rasa X
-- whats rasax
-- is Rasa X separate from Rasa?
-- how does rasa x relate to rasa core
-- I need to know about Rasa X
-- please tell me more about rasa x
-- elaborate on rasa x
-- Can you tell me about rasa x?
-- I want information about rasa x
-- Rasa X
-- Rasa X features
-- Tell me about rasa x
-- can someone help me with infos about rasa x
-- i want to learn more about Rasa X
-- tell me what is rasa x
-- what is rasa x?
-- what is rasax
+- what is [Rasa X](product) ?
+- how does [Rasa X](product) work?
+- what is [X](product) ?
+- can you explain [rasa x](product) to me
+- could you elaborate more about [rasa x](product)
+- tell me about [Rasa X](product) please
+- what is this [rasa x](product) thing. could you tell me more?
+- what's the purpose of [Rasa X](product)
+- whats [rasax](product)
+- is [Rasa X](product) separate from Rasa?
+- how does [rasa x](product) relate to rasa core
+- I need to know about [Rasa X](product)
+- please tell me more about [rasa x](product)
+- elaborate on [rasa x](product)
+- Can you tell me about [rasa x](product)?
+- I want information about [rasa x](product)
+- [Rasa X](product)
+- [Rasa X](product) features
+- Tell me about [rasa x](product)
+- can someone help me with infos about [rasa x](product)
+- i want to learn more about [Rasa X](product)
+- tell me what is [rasa x](product)
+- what is [rasa x](product) ?
+- what is [rasax](product)
 
 ## intent:faq/channels
 - Can you tell which messaging channels does rasa support?
@@ -590,7 +590,7 @@
 - does the [open source](product) version have [core](product)?
 
 ## intent:faq/differencerasarasax
-- Are [Rasa](product) and [Rasa X](product) the same thing?
+- Are [Rasa](product) and [Rasa X](product)] the same thing?
 - Can I use [Rasa X](product) without using [Rasa](product)?
 - Can i use [rasa](product) without [rasa x](product)?
 - Do I need both [Rasa](product) and [Rasa X](product)?
@@ -620,7 +620,7 @@
 - can someone help me with infos about the enterprise edition
 - can you tell me about rasa x ee?
 - enterprise features
-- i want to learn more about Rasa X EE
+- i want to learn more about [Rasa X](product) EE
 - tell me about rasa x EE
 - tell me more about rasa x EE
 - tell me what is rasa x ee
@@ -5352,7 +5352,7 @@
 ## synonym:x
 - Rasax
 - RASAX
-- Rasa X
+- [Rasa X](product)
 - rasa x
 - RASA X
 - X
