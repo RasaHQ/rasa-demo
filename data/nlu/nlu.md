@@ -424,6 +424,7 @@
 - tell me what is [rasa x](product)
 - what is [rasa x](product) ?
 - what is [rasax](product)
+- what's [rasa x](product)
 
 ## intent:faq/channels
 - Can you tell which messaging channels does rasa support?
@@ -482,6 +483,8 @@
 - integrate rasa with ui
 - on what channels can I use rasa
 - Do you  help to  integrate Facebook
+- in which rasa version google hangouts chat available
+- What channels does Rasa support?
 - how can i integrate the rasa chat bot to my website
 - how can i integrate rasa in my siteweb ?
 
@@ -609,6 +612,9 @@
 - what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
+- difference between [rasa](product) and [rasa x](product)
+- what is the difference between [rasa](product) and [rasa x](product)
+- what is the difference between [rasa](product) and rasax
 - the difference between [Rasa](product) and [Rasa X](product)
 - tell me difference between [Rasa](product) and [Rasa X](product)
 - difference between [Rasa](product) and [Rasa X](product)
@@ -689,6 +695,9 @@
 - Is there API for any other programming languages?
 - which language is rasa programmed in
 - Which programming language is rasa written in?
+- is Rasa available in java ?
+- I need help to make rasa in java
+- Rasa development in Java
 - What language is the open source coding done in?
 
 ## intent:faq/languages
@@ -913,6 +922,8 @@
 - which python version
 - which python version should i install
 - which version of python do i need
+- which python?
+- which python is rasa using?
 
 ## intent:faq/slots
 - Definition of slots please.
@@ -1915,6 +1926,7 @@
 - yeah go on explaining what rasa is
 - what are the components of rasa
 - RASA IS SOFTWARE?
+- what is Rasa
 
 ## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -2020,6 +2032,7 @@
 - what you talk about?
 - you can hep me
 - what can you teache me?
+- what you can
 
 ## intent:chitchat/ask_wherefrom
 - Are you from around here?
@@ -2273,7 +2286,8 @@
 - what are you
 - your name
 - your real name friend
-- what`s u name?
+- could please tell me about yourself
+- what's u name?
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2527,6 +2541,7 @@
 - sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
+- bookin
 
 ## intent:deny
 - I don't want to
@@ -3521,6 +3536,7 @@
 - yo
 - yoo
 - ssup?
+- helleo
 
 ## intent:chitchat/handleinsult
 - FUCK
@@ -4133,6 +4149,7 @@
 - how can I install [rasa open source](product)?
 - How to download rasa
 - where do i download rasa
+- I have a specific question regarding installation
 
 ## intent:next_step
 - continue to next step
@@ -4276,6 +4293,7 @@
 - what is a [intent](nlu_part)?
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
+- how enttity extrcation works
 
 ## intent:out_of_scope/non_english
 - Wie fange ich mit Rasa an?
@@ -5153,6 +5171,8 @@
 - multipass issue
 - embeddings
 - how to write stories to train rasa
+- does mongodb works for rasax
+- tensorflow
 - credentials.yml
 - credentials
 - how can I use transformers
