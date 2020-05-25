@@ -1,5 +1,11 @@
 ## faqs
-* faq: what is Rasa X?
+* faq: what is [Rasa X](product)?
+    - slot{"product": "x"}
+    - respond_faq
+    - action_set_faq_slot
+
+## faqs
+* faq: Can you tell which messaging channels does rasa support?
     - respond_faq
     - action_set_faq_slot
 
@@ -88,3 +94,39 @@
 * affirm: sure
     - utter_thumbsup
     - utter_anything_else
+
+## not new to rasa + rasa
+* how_to_get_started: help me get started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny: no
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq: [rasa open source](product)
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
+
+## not new to rasa + rasax
+* how_to_get_started
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* deny
+    - action_set_onboarding
+    - slot{"onboarding": false}
+    - utter_ask_which_product
+* faq: [rasa x](product)
+    - slot{"product": "x"}
+    - utter_explain_x
+    - utter_also_explain_nlucore
+
+## faq with entities
+* faq: what's the difference between [rasa](product) and [rasa x](product)
+    - slot{"product": "x"}
+    - respond_faq
+    - action_set_faq_slot
+
+## chitchat 
+* chitchat: By what means were you made?
+    - respond_chitchat

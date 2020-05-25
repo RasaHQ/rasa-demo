@@ -212,6 +212,8 @@ class ActionExplainFaqs(Action):
 
         if topic in ["channels", "language", "ee", "slots", "voice"]:
             dispatcher.utter_message(template=f"utter_faq_{topic}_more")
+        else:
+            dispatcher.utter_message(template=f"utter_no_further_info")
 
         return []
 
@@ -223,7 +225,11 @@ class ActionSetFaqSlot(Action):
         return "action_set_faq_slot"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        fullintent = tracker.latest_message["intent"].get("full_retrieval_intent")
+        fullintent = (
+            tracker.latest_message.get("response_selector", {})
+            .get("faq", {})
+            .get("full_retrieval_intent")
+        )
         if fullintent and fullintent.startswith("faq"):
             topic = fullintent.split("/")[1]
         else:

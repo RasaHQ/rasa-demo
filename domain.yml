@@ -4,7 +4,8 @@ session_config:
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
 intents:
 - affirm
-- faq
+- faq:
+    use_entities: ["product"]
 - chitchat:
     use_entities: []
 - ask_how_contribute
@@ -534,6 +535,9 @@ responses:
       others.
   utter_ask_rephrase:
   - text: Can you rephrase the question?
+  utter_no_further_info:
+  - text: Sorry, that's all the info I've got on that subject 😕
+
 actions:
 - respond_chitchat
 - action_default_ask_affirmation
