@@ -401,7 +401,7 @@ responses:
   - text: If you haven't already read the detailed instruction guide, you can look
       it up [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
   utter_ask_ready_to_build:
-  - text: If you got it successfully installed, are ready to start building a contextual assistant?
+  - text: If you got it successfully installed, are you ready to start building a contextual assistant?
   utter_link_to_forum:
   - text: "Here's the link to the forum: [https://forum.rasa.com](https://forum.rasa.com)"
   utter_moreinformation:
