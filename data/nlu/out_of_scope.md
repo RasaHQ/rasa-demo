@@ -130,7 +130,6 @@
 - are u, facebook?
 - are you single?
 - are you dev?
-- are you human ?
 - are you russian?
 - are you sick
 - are you using Rasa [Core](product) and [NLU](product) ?
@@ -179,7 +178,6 @@
 - example of a chatbot
 - genocide
 - get me a club mate
-- github link?
 - give me a girl friend
 - give me food
 - go back
@@ -198,7 +196,6 @@
 - how can i get them?
 - how can i test this
 - how come you say ok ?
-- how come?
 - how do you learn
 - how good is Rasa
 - how it compares to alexa

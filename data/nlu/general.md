@@ -419,6 +419,7 @@
 - why
 - what do you mean
 - what does that mean
+- how come?
 
 ## intent:greet
 - Bom dia

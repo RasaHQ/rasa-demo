@@ -375,6 +375,7 @@
 - So I'm here Today to ask one very simple question, what are you ?
 - you sound like a real human
 - wow you sound like real human
+- are you human ?
 
 ## intent:chitchat/ask_languagesbot
 - Are you familiar with more than one language?
@@ -1112,7 +1113,7 @@
 - why are you ugly
 - your crazy
 
-## intent:chitchat/nicetomeeyou
+## intent:chitchat/nicetomeetyou
 - Delighted to make your acquaintance.
 - Feels great to see you!
 - Glad to finally meet you!
