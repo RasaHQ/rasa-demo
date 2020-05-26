@@ -5245,9 +5245,13 @@
 - Please restart this chat/
 - ok restart please
 - please restart the bot
-
-## intent:faq
-- can i use java ?
+- restart this conversation
+- i want to restart
+- why don't you restart????
+- hey, i said restart
+- i want to restart
+- restart session pls
+- restart ps
 
 ## synonym: duration
 - durations
