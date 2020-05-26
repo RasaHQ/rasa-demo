@@ -4150,7 +4150,6 @@
 - please go to the next step
 - take me to the next step
 - what is the next step ?
-- take me to the next step
 
 ## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
@@ -5240,6 +5239,15 @@
 - yes thanks
 - thanks for your information
 - thanks f
+
+## intent:restart
+- yep you can restart
+- Please restart this chat/
+- ok restart please
+- please restart the bot
+
+## intent:faq
+- can i use java ?
 
 ## synonym: duration
 - durations
