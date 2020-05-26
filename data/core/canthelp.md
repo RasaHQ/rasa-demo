@@ -68,3 +68,12 @@
     - utter_thumbsup
     - action_deactivate_form
     - form{"name": null}
+
+## New Story
+
+* faq{"product":"x"}
+    - slot{"product":"x"}
+    - action_default_fallback
+* faq{"product":"x"}
+    - slot{"product":"x"}
+    - action_default_fallback
