@@ -496,6 +496,7 @@
 - custom connection
 - Can I create a chat bot and set it up on a web page?
 - Does Rasa have the functionality of being able to set up the bot on web pages?
+- whatsapp
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
@@ -919,6 +920,7 @@
 - How is it opensource
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
+- Is rasa opne source?
 
 ## intent:faq/python_version
 - What Python version should I use?
@@ -1395,7 +1397,6 @@
 - whatchya upto ?
 - whats goin on
 - whats new
-- whatsapp
 - yow are you
 - how are you Rasa
 - Hey Sara, how's it going
@@ -1942,6 +1943,8 @@
 - RASA IS SOFTWARE?
 - rasa os
 - what is Rasa
+- Why should I use you ?
+- why to use RASA
 
 ## intent:chitchat/ask_whatspossible
 - Can you explain me in one sentence what you are doing?
@@ -3386,6 +3389,7 @@
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
 - [dialogueflow](current_api)
+- ibm watson assistant
 
 ## intent:explain
 - can you elaborate
@@ -3662,6 +3666,7 @@
 - why are you ugly
 - your crazy
 - stupid rasa
+- u are dumb
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -5209,6 +5214,10 @@
 - rasa core agent information
 - rasa shell
 - what is an intemt
+- lookup
+- lookup tables
+- connect rasa x to rasa core
+- is it possible to do automatic test ?
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5252,6 +5261,7 @@
 - tell me something funny, like a joke
 - you can say a jok
 - telljoke
+- tell me a jock
 
 ## intent:thank
 - Cool. Thanks
