@@ -597,7 +597,7 @@
 - whats the diference
 - whats the difference between [core](product) and [nlu](product)
 - does the [open source](product) version have [core](product)?
-- What are the two components that make up Rasa Open Source?
+- What are the two components that make up [Rasa Open Source](product)?
 
 ## intent:faq/differencerasarasax
 - Are [Rasa](product) and [Rasa X](product) the same thing?
@@ -622,8 +622,8 @@
 - the difference between [Rasa](product) and [Rasa X](product)
 - tell me difference between [Rasa](product) and [Rasa X](product)
 - difference between [Rasa](product) and [Rasa X](product)
-- install rasa x with or wothout rasa open source?
-- relationship between rasa open and rasa x
+- install [rasa x](product) with or without [rasa open source](product) ?
+- relationship between [rasa open source](product) and [rasa x](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -5266,13 +5266,6 @@
 - yes thanks
 - thanks for your information
 - thanks f
-
-## intent:out_of_scope
-- Can I ask you about gardening?
-- sudo poweroff
-
-## intent:faq
-- the difference between [rasa](product) and [rasa x]{"entity": "product", "value": "x"}
 
 ## synonym: duration
 - durations
