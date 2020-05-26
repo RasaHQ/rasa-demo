@@ -35,6 +35,7 @@ intents:
 - pipeline_recommendation
 - react_negative
 - react_positive
+- restart
 - signup_newsletter
 - source_code
 - suggestion
