@@ -2677,7 +2677,6 @@
 - Country names
 - Evaluate Rasa :-)
 - Flexible, but looking for low-cost alternative to proof of concept
-- How to migrate from [DialogFlwo](current_api)
 - I am [Christina Sullivan](name)
 - I am [Hattie Rice](name)
 - I am [Robert Starks](name)
@@ -4955,6 +4954,7 @@
 - source
 
 ## intent:switch
+- How to migrate from [DialogFlwo](current_api)
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
 - How to migrate a bot from [DialogFlow](current_api) to Rasa?
 - How to migrate from [DialogFlow](current_api) to Rasa?
@@ -4997,6 +4997,13 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- migrate to rasa
+- how to migrate my bot to rasa
+- switch to rasa from another platform
+- migrate to rasa from another tool
+- switch to rasa
+- from which tools can I migrate to rasa?
+- can I migrate to rasa from another tool?
 - [dialogflow](current_api) and implementation from scratch
 - how to migrate to [dialogueflow](current_api)
 - why should i use rasa instead of google [dialogueflow](current_api)
