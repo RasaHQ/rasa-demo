@@ -1,204 +1,3 @@
-## intent:chitchat/handleinsult
-- FUCK
-- Fuck
-- Fuck Off
-- Fuck off
-- Fuck u
-- Fuck you
-- God you're a moron
-- I can't believe how dumb you are
-- I hate you
-- Loser
-- Stupid
-- You are a fool.
-- You are an idiot.
-- You are dumb.
-- You are shortsighted.
-- You are unintelligent.
-- You are unknowing.
-- You brain is dull.
-- You have no brains.
-- You have no intelligence.
-- You have no sense.
-- You know nothing.
-- You lack intelligence.
-- You lack understanding.
-- You're a dolt.
-- You're a dunce.
-- You're an idiot.
-- You're foolish.
-- Your intelligence is laughable.
-- Your mindset is naive.
-- a baby knows more than you
-- are u dump?
-- are you brain dead?
-- asshole
-- bitch
-- bloody dunce
-- but you are idiot
-- deal with my ass, you bitch
-- f*ck
-- fuck
-- fuck off
-- fuck rasa
-- fuck u
-- fuck you
-- fuck you machine learning bot
-- fuck you sara
-- fuck you!
-- fucking stupid
-- fucking work
-- get lost
-- go away
-- go fuck yourself
-- go to hell
-- how can you be such an idiot?
-- i hate you
-- i hate your dumb face
-- i think that you're a bullshit
-- idiot
-- insult you
-- ok fuck you
-- ok shut up
-- sara you look like a burnt sparrow
-- shit
-- shit bot
-- shut up asshole
-- so dumb
-- so fucking dumb
-- sucker
-- that wasn't very funny
-- thta was a terrible fucking joke
-- u r a piece of junk
-- ur a pussy
-- what fuck
-- yep but you are idiot
-- you are a moron
-- you are a stupid bot
-- you are an idiot
-- you are dumb
-- you are fucking stupid
-- you are fucking stupid guy！
-- you are idiot
-- you are idiotic
-- you are so ignorant
-- you are stupid
-- you are unintelligent
-- you are useless bot
-- you asshole
-- you idiot
-- you idiot bot
-- you son of a bitch
-- you suck
-- you're a loser lmao
-- you're an idiot
-- you're dumb
-- you're not smart
-- you're so dumb
-- you're the most moronic person I know
-- your mom gay
-- you are annoying
-- F u
-- monkey man
-- little ugly monkey
-- you are ugly
-- you are insane
-- why are ugly
-- why are you ugly
-- your crazy
-
-## intent:chitchat/nicetomeeyou
-- Delighted to make your acquaintance.
-- Feels great to see you!
-- Glad to finally meet you!
-- Glad to make your acquaintance.
-- Glad to meet you
-- Glad to meet you!
-- Glad to meet you.
-- Glad we've met.
-- Good to meet you!
-- Good to see you!
-- Great interacting with you
-- Great seeing you
-- Great to meet you!
-- Great to meet you.
-- Happy to get to see you.
-- Hi Sara, just wanted to test you
-- Hi, glad to meet you.
-- Hi, nice to meet you!
-- I am glad I met you.
-- I am glad he introduced us.
-- I had a great meeting with you
-- I'm glad to have met you!
-- I'm glad to meet you!
-- I'm happy that we have met!
-- I'm pleased to meet you!
-- I'm so happy that I could meet you.
-- I'm thrilled to meet you!
-- It is indeed a pleasure to be able to meet you.
-- It was a pleasure to have your company.
-- It was nice to have met you
-- It's a pleasure to make your acquaintance!
-- It's a pleasure to meet you!
-- It's good that I could meet you. It was a pleasure.
-- It's great to get to know you!
-- It's great to make your acquaintance!
-- It's nice to finally meet you.
-- It's wonderful to meet you!
-- It’s a pleasure to meet you
-- It’s great connecting with you.
-- Lovely to meet you.
-- Nice to have met you.
-- Pleased to make your acquaintance!
-- Pleased to meet you!
-- Pleased to meet you.
-- See you around. It was a pleasure meeting you.
-- Thank you for this meeting. It was great to see you.
-- nice to meet you
-
-## intent:chitchat/telljoke
-- Can you tell a joke?
-- Can you tell me a joke.
-- Come up with a joke you think I'll find funny.
-- Could you please share a joke with me.
-- Could you tell me a joke.
-- Do you have any jokes?
-- Do you know any jokes?
-- Entertain me with a joke.
-- Give me a funny joke.
-- Give me a joke.
-- Give me some comic relief.
-- I need a good joke.
-- I want to hear something funny.
-- Know any jokes?
-- Let's hear a joke from you.
-- Make me laugh.
-- Please tell me a joke.
-- Say something funny.
-- Share a joke with me!
-- Tell joke.
-- Tell me something funny.
-- Tell me something humorous!
-- Tell me something that you think will make me laugh.
-- Tell me the best joke you know.
-- What's a good joke?
-- Will you tell me a joke.
-- Would you share a joke with me.
-- Would you tell me a joke
-- give me a good joke
-- make me laugh with a bad joke
-- make me laugh with a joke
-- say a funny joke
-- say a joke
-- say a joke that's funny
-- say a joke that's so bad it's funny
-- tell me a joke
-- tell me a short joke
-- tell me a story joke
-- tell me something funny, like a joke
-- you can say a jok
-- telljoke
-
 ## intent:chitchat/ask_builder
 - By whom were you built?
 - Can I ask the name of the people who designed you?
@@ -1203,3 +1002,204 @@
 - your real name friend
 - could please tell me about yourself
 - what's u name?
+
+## intent:chitchat/handleinsult
+- FUCK
+- Fuck
+- Fuck Off
+- Fuck off
+- Fuck u
+- Fuck you
+- God you're a moron
+- I can't believe how dumb you are
+- I hate you
+- Loser
+- Stupid
+- You are a fool.
+- You are an idiot.
+- You are dumb.
+- You are shortsighted.
+- You are unintelligent.
+- You are unknowing.
+- You brain is dull.
+- You have no brains.
+- You have no intelligence.
+- You have no sense.
+- You know nothing.
+- You lack intelligence.
+- You lack understanding.
+- You're a dolt.
+- You're a dunce.
+- You're an idiot.
+- You're foolish.
+- Your intelligence is laughable.
+- Your mindset is naive.
+- a baby knows more than you
+- are u dump?
+- are you brain dead?
+- asshole
+- bitch
+- bloody dunce
+- but you are idiot
+- deal with my ass, you bitch
+- f*ck
+- fuck
+- fuck off
+- fuck rasa
+- fuck u
+- fuck you
+- fuck you machine learning bot
+- fuck you sara
+- fuck you!
+- fucking stupid
+- fucking work
+- get lost
+- go away
+- go fuck yourself
+- go to hell
+- how can you be such an idiot?
+- i hate you
+- i hate your dumb face
+- i think that you're a bullshit
+- idiot
+- insult you
+- ok fuck you
+- ok shut up
+- sara you look like a burnt sparrow
+- shit
+- shit bot
+- shut up asshole
+- so dumb
+- so fucking dumb
+- sucker
+- that wasn't very funny
+- thta was a terrible fucking joke
+- u r a piece of junk
+- ur a pussy
+- what fuck
+- yep but you are idiot
+- you are a moron
+- you are a stupid bot
+- you are an idiot
+- you are dumb
+- you are fucking stupid
+- you are fucking stupid guy！
+- you are idiot
+- you are idiotic
+- you are so ignorant
+- you are stupid
+- you are unintelligent
+- you are useless bot
+- you asshole
+- you idiot
+- you idiot bot
+- you son of a bitch
+- you suck
+- you're a loser lmao
+- you're an idiot
+- you're dumb
+- you're not smart
+- you're so dumb
+- you're the most moronic person I know
+- your mom gay
+- you are annoying
+- F u
+- monkey man
+- little ugly monkey
+- you are ugly
+- you are insane
+- why are ugly
+- why are you ugly
+- your crazy
+
+## intent:chitchat/nicetomeeyou
+- Delighted to make your acquaintance.
+- Feels great to see you!
+- Glad to finally meet you!
+- Glad to make your acquaintance.
+- Glad to meet you
+- Glad to meet you!
+- Glad to meet you.
+- Glad we've met.
+- Good to meet you!
+- Good to see you!
+- Great interacting with you
+- Great seeing you
+- Great to meet you!
+- Great to meet you.
+- Happy to get to see you.
+- Hi Sara, just wanted to test you
+- Hi, glad to meet you.
+- Hi, nice to meet you!
+- I am glad I met you.
+- I am glad he introduced us.
+- I had a great meeting with you
+- I'm glad to have met you!
+- I'm glad to meet you!
+- I'm happy that we have met!
+- I'm pleased to meet you!
+- I'm so happy that I could meet you.
+- I'm thrilled to meet you!
+- It is indeed a pleasure to be able to meet you.
+- It was a pleasure to have your company.
+- It was nice to have met you
+- It's a pleasure to make your acquaintance!
+- It's a pleasure to meet you!
+- It's good that I could meet you. It was a pleasure.
+- It's great to get to know you!
+- It's great to make your acquaintance!
+- It's nice to finally meet you.
+- It's wonderful to meet you!
+- It’s a pleasure to meet you
+- It’s great connecting with you.
+- Lovely to meet you.
+- Nice to have met you.
+- Pleased to make your acquaintance!
+- Pleased to meet you!
+- Pleased to meet you.
+- See you around. It was a pleasure meeting you.
+- Thank you for this meeting. It was great to see you.
+- nice to meet you
+
+## intent:chitchat/telljoke
+- Can you tell a joke?
+- Can you tell me a joke.
+- Come up with a joke you think I'll find funny.
+- Could you please share a joke with me.
+- Could you tell me a joke.
+- Do you have any jokes?
+- Do you know any jokes?
+- Entertain me with a joke.
+- Give me a funny joke.
+- Give me a joke.
+- Give me some comic relief.
+- I need a good joke.
+- I want to hear something funny.
+- Know any jokes?
+- Let's hear a joke from you.
+- Make me laugh.
+- Please tell me a joke.
+- Say something funny.
+- Share a joke with me!
+- Tell joke.
+- Tell me something funny.
+- Tell me something humorous!
+- Tell me something that you think will make me laugh.
+- Tell me the best joke you know.
+- What's a good joke?
+- Will you tell me a joke.
+- Would you share a joke with me.
+- Would you tell me a joke
+- give me a good joke
+- make me laugh with a bad joke
+- make me laugh with a joke
+- say a funny joke
+- say a joke
+- say a joke that's funny
+- say a joke that's so bad it's funny
+- tell me a joke
+- tell me a short joke
+- tell me a story joke
+- tell me something funny, like a joke
+- you can say a jok
+- telljoke

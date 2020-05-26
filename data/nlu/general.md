@@ -229,63 +229,6 @@
 - cool beans
 - sounds good!
 
-## intent:react_positive
-- :)
-- :D
-- HAHA
-- I am happy
-- LOL
-- Lol
-- Lol thats funny
-- Looks nice
-- WOW
-- Wow
-- You are great
-- You're cute.
-- You're nice.
-- You're really cool
-- hAHAHA
-- ha ha
-- haha
-- hahah
-- hahaha
-- happy
-- i am feeling happy
-- i am happy
-- i am happy today
-- i am very happy with your response
-- i love you
-- it's pretty cool
-- lol
-- love you
-- okay Rasabot, you're cool
-- rasa is awesome
-- such a great demo
-- that is funny
-- that was a great interaction
-- thats funny
-- today was a nice day
-- wow
-- you are a badass bot!
-- you are awesome
-- you are cool
-- you are cool man
-- you are doin great
-- you are funny
-- you are great
-- you are my new bestfriend
-- you seem pretty cool :D
-- I like you
-- I love you
-- you are realy intelligent
-- I like Rasa
-- hèhè
-- like u
-- you are so smart
-- That's awesome.
-- Got it
-- you good
-
 ## intent:bye
 - Bye
 - Bye bye
@@ -692,3 +635,60 @@
 - sadly
 - That tool here isnt good
 - boring
+
+## intent:react_positive
+- :)
+- :D
+- HAHA
+- I am happy
+- LOL
+- Lol
+- Lol thats funny
+- Looks nice
+- WOW
+- Wow
+- You are great
+- You're cute.
+- You're nice.
+- You're really cool
+- hAHAHA
+- ha ha
+- haha
+- hahah
+- hahaha
+- happy
+- i am feeling happy
+- i am happy
+- i am happy today
+- i am very happy with your response
+- i love you
+- it's pretty cool
+- lol
+- love you
+- okay Rasabot, you're cool
+- rasa is awesome
+- such a great demo
+- that is funny
+- that was a great interaction
+- thats funny
+- today was a nice day
+- wow
+- you are a badass bot!
+- you are awesome
+- you are cool
+- you are cool man
+- you are doin great
+- you are funny
+- you are great
+- you are my new bestfriend
+- you seem pretty cool :D
+- I like you
+- I love you
+- you are realy intelligent
+- I like Rasa
+- hèhè
+- like u
+- you are so smart
+- That's awesome.
+- Got it
+- you good
