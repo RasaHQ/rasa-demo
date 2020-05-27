@@ -621,7 +621,6 @@
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](product) and [rasa x](product)
-- what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
 - difference between [rasa](product) and [rasa x](product)
@@ -4264,7 +4263,6 @@
 - [NLU](product) data  generation
 - i want a recommendation for an [nlu](product) data generation tool
 
-
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
 - I checked the documentation on [intent classification](nlu_part) but I still don’t understand it
@@ -5244,6 +5242,20 @@
 - rasa core agent information
 - rasa shell
 - what is an intemt
+- how to restart the rasa server
+- i don't want to run rasa, i want to restart it
+- action_restart in rasa
+- i want to know restart action
+- how can i restart conversation on chatbot
+- how to restart story if am drooping in between
+- how to restart rasa
+- how to restart the rasa
+- how to restart rasax
+- docker is restarting
+- restart server
+- I am not able to restart action in some action
+- how to restart rasa?
+- how do you restart a story?
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5329,12 +5341,25 @@
 - thanks for your information
 - thanks f
 
-## synonym:english
-- English
-- en
-- eng
-- Eng
-- ENGLISH
+## intent:restart
+- how can i restarted you
+- yep you can restart
+- how to restart?
+- Please restart this chat/
+- ok restart please
+- can we restart the convo?
+- restart this conversation
+- restart the chat
+- restart?
+- please restart the bot
+- I want to restart
+- hey, I said restart
+- i want to restart
+- restart session pls
+- restart ps
+- restart the conversation
+- _restart
+- restart
 
 ## synonym: duration
 - durations
@@ -5375,6 +5400,13 @@
 
 ## synonym:distance
 - distances
+
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
 
 ## synonym:entity recognition
 - entities
