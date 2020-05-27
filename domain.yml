@@ -339,7 +339,7 @@ responses:
   utter_faq_channels_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/)
       for more information.
-  utter_faq_language_more:
+  utter_faq_languages_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/nlu/language-support/)
       for more information.
   utter_faq_ee_more:

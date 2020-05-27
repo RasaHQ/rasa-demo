@@ -210,7 +210,7 @@ class ActionExplainFaqs(Action):
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
         topic = tracker.get_slot("faq")
 
-        if topic in ["channels", "language", "ee", "slots", "voice"]:
+        if topic in ["channels", "languages", "ee", "slots", "voice"]:
             dispatcher.utter_message(template=f"utter_faq_{topic}_more")
         else:
             dispatcher.utter_message(template=f"utter_no_further_info")
