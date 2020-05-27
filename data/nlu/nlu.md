@@ -2173,6 +2173,13 @@
 ## synonym:distance
 - distances
 
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
+
 ## synonym:entity recognition
 - entities
 - ner
