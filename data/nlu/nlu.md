@@ -620,6 +620,7 @@
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](product) and [rasa x](product)
+- what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
 - difference between [rasa](product) and [rasa x](product)
@@ -5293,6 +5294,13 @@
 - yes thanks
 - thanks for your information
 - thanks f
+
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
 
 ## synonym: duration
 - durations

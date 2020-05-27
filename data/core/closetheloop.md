@@ -318,14 +318,27 @@
 * affirm
     - utter_what_language
 * enter_data{"language":"spanish"}
-    - slot{"language":"spanish"}
+    - slot{"language": "__other__"}
     - action_store_bot_language
     - slot{"can_use_spacy":true}
-    - utter_spacy_or_tensorflow
+    - utter_pipeline_nonenglish_spacy
     - utter_anything_else
 * how_to_get_started
     - utter_getstarted
     - utter_first_bot_with_rasa
+
+## Story from conversation with alan on November 16th 2018 2
+* nlu_info{"nlu_part":"intent classification"}
+    - slot{"nlu_part":"intent classification"}
+    - utter_nlu_intent_tutorial
+    - utter_offer_recommendation
+* affirm
+    - utter_what_language
+* enter_data
+    - action_store_bot_language
+    - slot{"can_use_spacy":false}
+    - utter_pipeline_nonenglish_nospacy
+    - utter_anything_else
 
 ## Story from conversation with linda on November 15th 2018
 * greet
@@ -491,16 +504,16 @@
 * affirm
     - utter_what_language
 * enter_data{"language":"spanish"}
-    - slot{"language":"spanish"}
+    - slot{"language": "__other__"}
     - action_store_bot_language
     - slot{"can_use_spacy":true}
-    - utter_spacy_or_tensorflow
+    - utter_pipeline_nonenglish_spacy
     - utter_anything_else
 * enter_data{"language":"french"}
-    - slot{"language":"spanish"}
+    - slot{"language": "__other__"}
     - action_store_bot_language
     - slot{"can_use_spacy":true}
-    - utter_spacy_or_tensorflow
+    - utter_pipeline_nonenglish_spacy
     - utter_anything_else
 
 ## Story from conversation with dominik on November 19th 2018
