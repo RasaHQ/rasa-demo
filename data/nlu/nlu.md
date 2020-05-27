@@ -228,6 +228,7 @@
 - More a less
 - cool beans
 - sounds good!
+- really
 
 ## intent:react_positive
 - :)
@@ -284,7 +285,10 @@
 - you are so smart
 - That's awesome.
 - Got it
+- you are ideal
 - you good
+- Great information
+- I mean to say that I liked the explanation
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -487,6 +491,12 @@
 - What channels does Rasa support?
 - how can i integrate the rasa chat bot to my website
 - how can i integrate rasa in my siteweb ?
+- explain integrations
+- socket io
+- Custom Connectors
+- custom connection
+- Can I create a chat bot and set it up on a web page?
+- Does Rasa have the functionality of being able to set up the bot on web pages?
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
@@ -591,6 +601,7 @@
 - whats the diference
 - whats the difference between [core](product) and [nlu](product)
 - does the [open source](product) version have [core](product)?
+- What are the two components that make up [Rasa Open Source](product)?
 
 ## intent:faq/differencerasarasax
 - Are [Rasa](product) and [Rasa X](product) the same thing?
@@ -610,6 +621,7 @@
 - whats the diff between [rasa](product) and [rasa x](product)
 - when should i use [rasa](product) and when should i use [rasa x](product)
 - what is the difference between [rasa open source](product) and [rasa x](product)
+- what is the difference between [rasa open source](product) and [rasa x](product)
 - is [rasa open source](product) needed for [rasa x](product)?
 - what is the difference between rasaand [rasa x](product)
 - difference between [rasa](product) and [rasa x](product)
@@ -618,6 +630,8 @@
 - the difference between [Rasa](product) and [Rasa X](product)
 - tell me difference between [Rasa](product) and [Rasa X](product)
 - difference between [Rasa](product) and [Rasa X](product)
+- install [rasa x](product) with or without [rasa open source](product) ?
+- relationship between [rasa open source](product) and [rasa x](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -800,6 +814,7 @@
 - What lanquages do you serve
 - does rasa support other language beside english?
 - how to build rasa with different languages?
+- even non latin based languages?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -906,6 +921,9 @@
 - How is it opensource
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
+- is rasa open
+- okay tell me about the pricing details
+- I want to buy rasa
 
 ## intent:faq/python_version
 - What Python version should I use?
@@ -1061,6 +1079,7 @@
 - where can i get a tutorial on rasa
 - yes, where I can find some hand-on tutorials to use RASA products?
 - I need to study RASA step by step, which is the best site to study?
+- Can you suggest me some good course from which i can learn to build chatbots efficiently
 
 ## intent:faq/voice
 - Building a rasa voice bot?
@@ -1386,6 +1405,7 @@
 - yow are you
 - how are you Rasa
 - Hey Sara, how's it going
+- are you cool
 
 ## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -1926,6 +1946,9 @@
 - yeah go on explaining what rasa is
 - what are the components of rasa
 - RASA IS SOFTWARE?
+- what's rasa purpose?
+- what's the purpose of rasa company?
+- rasa os
 - what is Rasa
 
 ## intent:chitchat/ask_whatspossible
@@ -2032,6 +2055,7 @@
 - what you talk about?
 - you can hep me
 - what can you teache me?
+- Can rasa do calculations?
 - what you can
 
 ## intent:chitchat/ask_wherefrom
@@ -2541,6 +2565,7 @@
 - sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
+- Can i have a deno
 - bookin
 
 ## intent:deny
@@ -2676,7 +2701,6 @@
 - Country names
 - Evaluate Rasa :-)
 - Flexible, but looking for low-cost alternative to proof of concept
-- How to migrate from [DialogFlwo](current_api)
 - I am [Christina Sullivan](name)
 - I am [Hattie Rice](name)
 - I am [Robert Starks](name)
@@ -3371,6 +3395,8 @@
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
 - [dialogueflow](current_api)
+- T10
+- the company is called t10
 
 ## intent:explain
 - can you elaborate
@@ -3646,6 +3672,8 @@
 - why are ugly
 - why are you ugly
 - your crazy
+- meh, this is stupid
+- stupid rasa
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -3979,7 +4007,10 @@
 - how to using you
 - What are the coponent
 - create chatbot steps
+- can you tell me how to create a new rasa project
+- can you help me build my bot?
 - start
+- how to build bot with rasa x
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4229,7 +4260,10 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
-- i want a recommendation for an nlu data generation tool
+- How to generate [NLU](product) using frontend.
+- [NLU](product) data  generation
+- i want a recommendation for an [nlu](product) data generation tool
+
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -4292,6 +4326,7 @@
 - what is a [intent](nlu_part)?
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
+- what does NLU server do?
 - how enttity extrcation works
 
 ## intent:out_of_scope/non_english
@@ -4708,6 +4743,7 @@
 - j  bhbhj
 - eshdtjfjfyk
 - drhdtjfjfyj
+- sudo reboot
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4726,6 +4762,9 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
+- nlu pipeline
+- how to build a pipelin
+- how to build a pipeline for the bot
 
 ## intent:react_negative
 - I am feeling bad
@@ -4774,6 +4813,7 @@
 - Thats so rude
 - sadly
 - That tool here isnt good
+- It wasnt funny
 - boring
 
 ## intent:signup_newsletter
@@ -4950,9 +4990,12 @@
 - yes with your source code
 - your code
 - your code please
+- i need nlu.md file
+- i need smalltalk.md file
 - source
 
 ## intent:switch
+- How to migrate from [DialogFlwo](current_api)
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
 - How to migrate a bot from [DialogFlow](current_api) to Rasa?
 - How to migrate from [DialogFlow](current_api) to Rasa?
@@ -4995,6 +5038,13 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- migrate to rasa
+- how to migrate my bot to rasa
+- switch to rasa from another platform
+- migrate to rasa from another tool
+- switch to rasa
+- from which tools can I migrate to rasa?
+- can I migrate to rasa from another tool?
 - [dialogflow](current_api) and implementation from scratch
 - how to migrate to [dialogueflow](current_api)
 - why should i use rasa instead of google [dialogueflow](current_api)
@@ -5184,11 +5234,30 @@
 - multipass issue
 - embeddings
 - how to write stories to train rasa
+- tell me about the nlu training data format
+- how can i get data from a database and use them as a response to a question?
+- how to add a database?
+- I want to integrate a database and look up values based on an entity the user gave me. How is this possible?
+- what is default fall back
+- fallback actions
+- what is custom actions
+- I am facing some issues with LMS
+- my nlu cant detect entities
+- how do i detect entities
+- how to evaluate model
+- Can I have multiple .md data files?
+- response selector?
 - does mongodb works for rasax
 - tensorflow
 - credentials.yml
 - credentials
 - how can I use transformers
+- how long to train
+- what model do you use
+- technical question
+- rasa core agent information
+- rasa shell
+- what is an intemt
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -5286,6 +5355,12 @@
 - i want to restart
 - restart session pls
 - restart ps
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
 
 ## synonym: duration
 - durations
