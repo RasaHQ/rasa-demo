@@ -285,6 +285,7 @@
 - you are so smart
 - That's awesome.
 - Got it
+- you are ideal
 - you good
 - Great information
 - I mean to say that I liked the explanation
@@ -920,6 +921,9 @@
 - How is it opensource
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
+- is rasa open
+- okay tell me about the pricing details
+- I want to buy rasa
 
 ## intent:faq/python_version
 - What Python version should I use?
@@ -1075,6 +1079,7 @@
 - where can i get a tutorial on rasa
 - yes, where I can find some hand-on tutorials to use RASA products?
 - I need to study RASA step by step, which is the best site to study?
+- Can you suggest me some good course from which i can learn to build chatbots efficiently
 
 ## intent:faq/voice
 - Building a rasa voice bot?
@@ -1941,6 +1946,8 @@
 - yeah go on explaining what rasa is
 - what are the components of rasa
 - RASA IS SOFTWARE?
+- what's rasa purpose?
+- what's the purpose of rasa company?
 - rasa os
 - what is Rasa
 
@@ -2558,6 +2565,7 @@
 - sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
+- Can i have a deno
 - bookin
 
 ## intent:deny
@@ -3387,6 +3395,8 @@
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
 - [dialogueflow](current_api)
+- T10
+- the company is called t10
 
 ## intent:explain
 - can you elaborate
@@ -3662,6 +3672,7 @@
 - why are ugly
 - why are you ugly
 - your crazy
+- meh, this is stupid
 - stupid rasa
 
 ## intent:how_to_get_started
@@ -3996,6 +4007,8 @@
 - how to using you
 - What are the coponent
 - create chatbot steps
+- can you tell me how to create a new rasa project
+- can you help me build my bot?
 - start
 - how to build bot with rasa x
 
@@ -4247,7 +4260,10 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
-- i want a recommendation for an nlu data generation tool
+- How to generate [NLU](product) using frontend.
+- [NLU](product) data  generation
+- i want a recommendation for an [nlu](product) data generation tool
+
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -4310,6 +4326,7 @@
 - what is a [intent](nlu_part)?
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
+- what does NLU server do?
 - how enttity extrcation works
 
 ## intent:out_of_scope/non_english
@@ -4745,6 +4762,7 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
+- nlu pipeline
 - how to build a pipelin
 - how to build a pipeline for the bot
 
@@ -4795,6 +4813,7 @@
 - Thats so rude
 - sadly
 - That tool here isnt good
+- It wasnt funny
 - boring
 
 ## intent:signup_newsletter
@@ -4971,6 +4990,8 @@
 - yes with your source code
 - your code
 - your code please
+- i need nlu.md file
+- i need smalltalk.md file
 - source
 
 ## intent:switch
@@ -5199,6 +5220,19 @@
 - multipass issue
 - embeddings
 - how to write stories to train rasa
+- tell me about the nlu training data format
+- how can i get data from a database and use them as a response to a question?
+- how to add a database?
+- I want to integrate a database and look up values based on an entity the user gave me. How is this possible?
+- what is default fall back
+- fallback actions
+- what is custom actions
+- I am facing some issues with LMS
+- my nlu cant detect entities
+- how do i detect entities
+- how to evaluate model
+- Can I have multiple .md data files?
+- response selector?
 - does mongodb works for rasax
 - tensorflow
 - credentials.yml
