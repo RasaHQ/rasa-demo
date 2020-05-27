@@ -228,6 +228,7 @@
 - More a less
 - cool beans
 - sounds good!
+- really
 
 ## intent:react_positive
 - :)
@@ -286,6 +287,8 @@
 - Got it
 - you are ideal
 - you good
+- Great information
+- I mean to say that I liked the explanation
 
 ## intent:chitchat/ask_builder
 - By whom were you built?
@@ -488,6 +491,12 @@
 - What channels does Rasa support?
 - how can i integrate the rasa chat bot to my website
 - how can i integrate rasa in my siteweb ?
+- explain integrations
+- socket io
+- Custom Connectors
+- custom connection
+- Can I create a chat bot and set it up on a web page?
+- Does Rasa have the functionality of being able to set up the bot on web pages?
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
@@ -592,6 +601,7 @@
 - whats the diference
 - whats the difference between [core](product) and [nlu](product)
 - does the [open source](product) version have [core](product)?
+- What are the two components that make up [Rasa Open Source](product)?
 
 ## intent:faq/differencerasarasax
 - Are [Rasa](product) and [Rasa X](product) the same thing?
@@ -619,6 +629,8 @@
 - the difference between [Rasa](product) and [Rasa X](product)
 - tell me difference between [Rasa](product) and [Rasa X](product)
 - difference between [Rasa](product) and [Rasa X](product)
+- install [rasa x](product) with or without [rasa open source](product) ?
+- relationship between [rasa open source](product) and [rasa x](product)
 
 ## intent:faq/ee
 - Can you tell me about the enterprise edition?
@@ -801,6 +813,7 @@
 - What lanquages do you serve
 - does rasa support other language beside english?
 - how to build rasa with different languages?
+- even non latin based languages?
 
 ## intent:faq/opensource_cost
 - Are you free?
@@ -1391,6 +1404,7 @@
 - yow are you
 - how are you Rasa
 - Hey Sara, how's it going
+- are you cool
 
 ## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -1933,6 +1947,7 @@
 - RASA IS SOFTWARE?
 - what's rasa purpose?
 - what's the purpose of rasa company?
+- rasa os
 - what is Rasa
 
 ## intent:chitchat/ask_whatspossible
@@ -2039,6 +2054,7 @@
 - what you talk about?
 - you can hep me
 - what can you teache me?
+- Can rasa do calculations?
 - what you can
 
 ## intent:chitchat/ask_wherefrom
@@ -3656,6 +3672,7 @@
 - why are you ugly
 - your crazy
 - meh, this is stupid
+- stupid rasa
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -3992,6 +4009,7 @@
 - can you tell me how to create a new rasa project
 - can you help me build my bot?
 - start
+- how to build bot with rasa x
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -4179,7 +4197,6 @@
 - please go to the next step
 - take me to the next step
 - what is the next step ?
-- take me to the next step
 
 ## intent:chitchat/nicetomeeyou
 - Delighted to make your acquaintance.
@@ -4725,6 +4742,7 @@
 - j  bhbhj
 - eshdtjfjfyk
 - drhdtjfjfyj
+- sudo reboot
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4744,6 +4762,8 @@
 - what pipeline should i use?
 - which pipeline is better?
 - nlu pipeline
+- how to build a pipelin
+- how to build a pipeline for the bot
 
 ## intent:react_negative
 - I am feeling bad
@@ -5217,6 +5237,12 @@
 - credentials.yml
 - credentials
 - how can I use transformers
+- how long to train
+- what model do you use
+- technical question
+- rasa core agent information
+- rasa shell
+- what is an intemt
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
