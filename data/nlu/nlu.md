@@ -419,7 +419,6 @@
 - Country names
 - Evaluate Rasa :-)
 - Flexible, but looking for low-cost alternative to proof of concept
-- How to migrate from [DialogFlwo](current_api)
 - I am [Christina Sullivan](name)
 - I am [Hattie Rice](name)
 - I am [Robert Starks](name)
@@ -1448,6 +1447,7 @@
 - What are the coponent
 - create chatbot steps
 - start
+- how to build bot with rasa x
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -1713,6 +1713,8 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
+- how to build a pipelin
+- how to build a pipeline for the bot
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -1892,6 +1894,7 @@
 - github link?
 
 ## intent:switch
+- How to migrate from [DialogFlwo](current_api)
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
 - How to migrate a bot from [DialogFlow](current_api) to Rasa?
 - How to migrate from [DialogFlow](current_api) to Rasa?
@@ -1934,6 +1937,13 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- migrate to rasa
+- how to migrate my bot to rasa
+- switch to rasa from another platform
+- migrate to rasa from another tool
+- switch to rasa
+- from which tools can I migrate to rasa?
+- can I migrate to rasa from another tool?
 - [dialogflow](current_api) and implementation from scratch
 - how to migrate to [dialogueflow](current_api)
 - why should i use rasa instead of google [dialogueflow](current_api)
@@ -2114,6 +2124,12 @@
 - credentials.yml
 - credentials
 - how can I use transformers
+- how long to train
+- what model do you use
+- technical question
+- rasa core agent information
+- rasa shell
+- what is an intemt
 
 ## synonym: duration
 - durations
