@@ -98,6 +98,7 @@
 - to the forum
 - need help on chatbot
 
+
 ## intent:ask_which_events
 - Any other event like rasa meetup in future?
 - Can you tell me what kinds of events you have?
@@ -386,6 +387,7 @@
 - sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
+- Can i have a deno
 - bookin
 
 ## intent:enter_data
@@ -1113,6 +1115,9 @@
 - Sorry  it's not [suleman](name) is [Shehzad](name)
 - [x](product)
 - [dialogueflow](current_api)
+- T10
+- the company is called t10
+
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -1446,6 +1451,8 @@
 - how to using you
 - What are the coponent
 - create chatbot steps
+- can you tell me how to create a new rasa project
+- can you help me build my bot?
 - start
 - how to build bot with rasa x
 
@@ -1631,7 +1638,10 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
-- i want a recommendation for an nlu data generation tool
+- How to generate [NLU](product) using frontend.
+- [NLU](product) data  generation
+- i want a recommendation for an [nlu](product) data generation tool
+
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -1694,6 +1704,7 @@
 - what is a [intent](nlu_part)?
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
+- what does NLU server do?
 - how enttity extrcation works
 
 ## intent:pipeline_recommendation
@@ -1713,10 +1724,12 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
+- nlu pipeline
 - how to build a pipelin
 - how to build a pipeline for the bot
 - how to build a pipelin
 - how to build a pipeline for the bot
+
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -1892,6 +1905,8 @@
 - yes with your source code
 - your code
 - your code please
+- i need nlu.md file
+- i need smalltalk.md file
 - source
 - github link?
 
@@ -2121,6 +2136,19 @@
 - multipass issue
 - embeddings
 - how to write stories to train rasa
+- tell me about the nlu training data format
+- how can i get data from a database and use them as a response to a question?
+- how to add a database?
+- I want to integrate a database and look up values based on an entity the user gave me. How is this possible?
+- what is default fall back
+- fallback actions
+- what is custom actions
+- I am facing some issues with LMS
+- my nlu cant detect entities
+- how do i detect entities
+- how to evaluate model
+- Can I have multiple .md data files?
+- response selector?
 - does mongodb works for rasax
 - tensorflow
 - credentials.yml
