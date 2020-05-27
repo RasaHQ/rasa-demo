@@ -291,7 +291,7 @@ class ActionStoreBotLanguage(Action):
                 SlotSet("can_use_spacy", False),
             ]
 
-        if language in spacy_languages:
+        if language.lower() in spacy_languages:
             return [SlotSet("can_use_spacy", True)]
         else:
             return [SlotSet("can_use_spacy", False)]
