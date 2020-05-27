@@ -409,3 +409,4 @@
 - j  bhbhj
 - eshdtjfjfyk
 - drhdtjfjfyj
+- sudo reboot

@@ -253,6 +253,7 @@
 - yow are you
 - how are you Rasa
 - Hey Sara, how's it going
+- are you cool
 
 ## intent:chitchat/ask_howold
 - Do you have friends the same age as you, if so, how old are they?
@@ -749,6 +750,7 @@
 - yeah go on explaining what rasa is
 - what are the components of rasa
 - RASA IS SOFTWARE?
+- rasa os
 - what is Rasa
 
 ## intent:chitchat/ask_whatspossible
@@ -855,6 +857,7 @@
 - what you talk about?
 - you can hep me
 - what can you teache me?
+- Can rasa do calculations?
 - what you can
 
 ## intent:chitchat/ask_wherefrom
@@ -1112,6 +1115,7 @@
 - why are ugly
 - why are you ugly
 - your crazy
+- stupid rasa
 
 ## intent:chitchat/nicetomeetyou
 - Delighted to make your acquaintance.

@@ -228,6 +228,7 @@
 - More a less
 - cool beans
 - sounds good!
+- really
 
 ## intent:bye
 - Bye
@@ -586,7 +587,6 @@
 - please go to the next step
 - take me to the next step
 - what is the next step ?
-- take me to the next step
 
 ## intent:react_negative
 - I am feeling bad
@@ -693,6 +693,8 @@
 - That's awesome.
 - Got it
 - you good
+- Great information
+- I mean to say that I liked the explanation
 
 ## intent:thank
 - Cool. Thanks
