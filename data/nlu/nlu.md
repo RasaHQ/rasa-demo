@@ -923,9 +923,9 @@
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
 - Is rasa opne source?
-- is rasa open
+- is [rasa](product) open
 - okay tell me about the pricing details
-- I want to buy rasa
+- I want to buy [rasa](product)
 
 ## intent:faq/python_version
 - What Python version should I use?
