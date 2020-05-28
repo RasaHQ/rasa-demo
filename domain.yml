@@ -3,8 +3,6 @@ session_config:
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
 intents:
 - affirm
-- faq
-- chitchat
 - ask_how_contribute
 - ask_question_in_forum
 - ask_when_next_event
@@ -12,11 +10,13 @@ intents:
 - ask_why_contribute
 - bye
 - canthelp
+- chitchat
 - contact_sales
 - deny
 - enter_data:
     use_entities: []
 - explain
+- faq
 - feedback
 - get_started_step1
 - get_started_step2
@@ -539,12 +539,10 @@ responses:
   utter_ask_rephrase:
   - text: Can you rephrase the question?
 actions:
-- respond_chitchat
 - action_default_ask_affirmation
 - action_default_fallback
 - action_docs_search
 - action_explain_sales_form
-- respond_faq
 - action_set_faq_slot
 - action_explain_faq
 - action_forum_search
@@ -558,9 +556,11 @@ actions:
 - action_store_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
-- respond_out_of_scope
 - action_tag_docs_search
 - action_tag_feedback
+- respond_chitchat
+- respond_faq
+- respond_out_of_scope
 
 forms:
 - sales_form
