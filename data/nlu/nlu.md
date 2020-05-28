@@ -1727,6 +1727,9 @@
 - nlu pipeline
 - how to build a pipelin
 - how to build a pipeline for the bot
+- how to build a pipelin
+- how to build a pipeline for the bot
+
 
 ## intent:signup_newsletter
 - I also want to subscribe
