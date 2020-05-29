@@ -1968,6 +1968,20 @@
 - how do i migrate from [dialogflow](current_api)
 
 ## intent:technical_question
+- how to restart the rasa server
+- i don't want to run rasa, i want to restart it
+- action_restart in rasa
+- i want to know restart action
+- how can i restart conversation on chatbot
+- how to restart story if am drooping in between
+- how to restart rasa
+- how to restart the rasa
+- how to restart rasax
+- docker is restarting
+- restart server
+- I am not able to restart action in some action
+- how to restart rasa?
+- how do you restart a story?
 - Create ecommerce bot
 - How can I visualise conversation flow?
 - How many languages does Spacy support?
@@ -2160,6 +2174,26 @@
 - rasa core agent information
 - rasa shell
 - what is an intemt
+
+## intent:restart
+- yep you can restart
+- Please restart this chat/
+- ok restart please
+- please restart the bot
+- restart this conversation
+- i want to restart
+- why don't you restart????
+- hey, i said restart
+- i want to restart
+- restart session pls
+- restart ps
+
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
 
 ## synonym: duration
 - durations
