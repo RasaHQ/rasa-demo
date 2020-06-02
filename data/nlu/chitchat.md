@@ -159,6 +159,8 @@
 - so how were you made?
 - what are you made of
 - Are you built using rasa?
+- Are u developed in rasa
+- are you build with rasa ?
 
 ## intent:chitchat/ask_howdoing
 - Ahoy matey how are you?
@@ -1116,6 +1118,7 @@
 - why are you ugly
 - your crazy
 - stupid rasa
+- damn you
 
 ## intent:chitchat/nicetomeetyou
 - Delighted to make your acquaintance.
@@ -1208,3 +1211,13 @@
 - tell me something funny, like a joke
 - you can say a jok
 - telljoke
+
+## intent:out_of_scope
+- asdfgasd
+- asdfgasdas
+
+## lookup:location.txt
+  data/nlu/lookups/location.txt
+
+## lookup:products.txt
+  data/nlu/lookups/products.txt

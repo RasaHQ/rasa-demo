@@ -98,7 +98,6 @@
 - to the forum
 - need help on chatbot
 
-
 ## intent:ask_which_events
 - Any other event like rasa meetup in future?
 - Can you tell me what kinds of events you have?
@@ -389,6 +388,7 @@
 - we started working with rasa but now we need support
 - Can i have a deno
 - bookin
+- Is there a live demo of rasa somewhere ?
 
 ## intent:enter_data
 - $1
@@ -1118,7 +1118,6 @@
 - T10
 - the company is called t10
 
-
 ## intent:how_to_get_started
 - can you help me to build a bot
 - can you tell me how to build a bot?
@@ -1642,7 +1641,6 @@
 - [NLU](product) data  generation
 - i want a recommendation for an [nlu](product) data generation tool
 
-
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
 - I checked the documentation on [intent classification](nlu_part) but I still don’t understand it
@@ -1727,9 +1725,6 @@
 - nlu pipeline
 - how to build a pipelin
 - how to build a pipeline for the bot
-- how to build a pipelin
-- how to build a pipeline for the bot
-
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -2174,6 +2169,15 @@
 - rasa core agent information
 - rasa shell
 - what is an intemt
+- Rasa provides me recall and precision?
+- i want to run rasa x in ibm cloud
+- how to build stories
+- testing
+- whats tensorflow
+- what is a custom action?
+- which python libraries are used
+- Should I run the 'rasa init' command in the anaconda prompt ?
+- Where to run rasa init command ?
 
 ## intent:restart
 - yep you can restart
@@ -2184,149 +2188,5 @@
 - i want to restart
 - why don't you restart????
 - hey, i said restart
-- i want to restart
 - restart session pls
 - restart ps
-
-## synonym:english
-- English
-- en
-- eng
-- Eng
-- ENGLISH
-
-## synonym: duration
-- durations
-- how long
-
-## synonym:USA
-- US
-- United States
-- U.S.
-- usa
-
-## synonym:United Kingdom
-- UK
-- U.K.
-
-## synonym:all
-- both
-
-## synonym:core
-- CORE
-- Core
-
-## synonym:custom actions
-- Actions
-- Custom actions
-- actions
-
-## synonym:date
-- dates
-
-## synonym:dialogflow
-- dialog flow
-- DialogFlwo
-- DialogFlow
-- google
-- dialogueflow
-- dilogueflow
-
-## synonym:distance
-- distances
-
-## synonym:english
-- English
-- en
-- eng
-- Eng
-- ENGLISH
-
-## synonym:entity recognition
-- entities
-- ner
-- entity extraction
-- Entity recognition
-- NER
-- etnity extraction
-- recognition
-
-## synonym:full stack developer
-- full stack develope
-
-## synonym:helvetia
-- Helvetia
-
-## synonym:intent classification
-- intent classificaton
-- intent
-- intent recognition
-- intents
-
-## synonym:italian
-- italina
-
-## synonym:luis
-- LUIS
-- luis.ai
-- LUIS.ai
-- Luis
-
-## synonym:money
-- amounts
-
-## synonym:name
-- names
-
-## synonym:nlu
-- Natural Language Understanding
-- Nlu
-- rasa_nlu
-- NLU
-
-## synonym:organisation
-- companies
-
-## synonym:rasa
-- Rasa
-- rasa open source
-- Rasa Open Source
-- Rasa open source
-- rasa Open Source
-- open source
-- open source rasa
-- RASA open source
-
-## synonym:stack
-- fullstack
-- full
-- Full stack
-- full staclk
-- full framework
-- full stack
-- Full
-- Full Stack
-
-## synonym:wit.ai
-- wit
-
-## synonym:x
-- Rasax
-- RASAX
-- Rasa X
-- rasa x
-- RASA X
-- X
-- rasax
-
-## regex:greet
-- hey[^\s]*
-
-## regex:zipcode
-- [0-9]{5}
-
-## lookup:location.txt
-data/nlu/lookups/location.txt
-
-## lookup:products.txt
-data/nlu/lookups/products.txt
