@@ -593,7 +593,7 @@
 - does the [open source](product) version have [core](product)?
 
 ## intent:faq/differencerasarasax
-- Are [Rasa](product) and [Rasa X](product)] the same thing?
+- Are [Rasa](product) and [Rasa X](product) the same thing?
 - Can I use [Rasa X](product) without using [Rasa](product)?
 - Can i use [rasa](product) without [rasa x](product)?
 - Do I need both [Rasa](product) and [Rasa X](product)?
@@ -626,7 +626,7 @@
 - can someone help me with infos about the enterprise edition
 - can you tell me about rasa x ee?
 - enterprise features
-- i want to learn more about [Rasa X](product) EE
+- i want to learn more about Rasa X EE
 - tell me about rasa x EE
 - tell me more about rasa x EE
 - tell me what is rasa x ee
@@ -5379,7 +5379,7 @@
 ## synonym:x
 - Rasax
 - RASAX
-- [Rasa X](product)
+- Rasa X
 - rasa x
 - RASA X
 - X

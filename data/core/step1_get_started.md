@@ -484,10 +484,10 @@
     - action_set_onboarding
     - slot{"onboarding": false}
     - utter_ask_which_product
-* faq{"product": "x"}
-    - slot{"product": "x"}
-    - utter_explain_x
-    - utter_also_explain_nlucore
+* faq{"product": "rasa"}
+    - slot{"product": "rasa"}
+    - utter_explain_core
+    - utter_explain_nlu
 
 ## not new to rasa + rasa
 * how_to_get_started
