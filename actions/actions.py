@@ -297,7 +297,7 @@ class ActionStoreBotLanguage(Action):
                 SlotSet("can_use_spacy", False),
             ]
 
-        if language in spacy_languages:
+        if language.lower() in spacy_languages:
             return [SlotSet("can_use_spacy", True)]
         else:
             return [SlotSet("can_use_spacy", False)]
@@ -672,7 +672,7 @@ class ActionDocsSearch(Action):
         search_text = tracker.latest_message.get("text")
 
         # Search of docs pages
-        alg_res = None
+        algolia_result = None
         algolia = AlgoliaAPI(
             config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
         )
@@ -682,16 +682,29 @@ class ActionDocsSearch(Action):
             last_user_event = get_last_event_for(tracker, "user", skip=2)
             if last_user_event:
                 search_text = last_user_event.get("text")
-                alg_res = algolia.search(search_text)
+                algolia_result = algolia.search(search_text)
         else:
-            alg_res = algolia.search(search_text)
+            algolia_result = algolia.search(search_text)
 
-        if alg_res and alg_res.get("hits") and len(alg_res.get("hits")) > 0:
+        if (
+            algolia_result
+            and algolia_result.get("hits")
+            and len(algolia_result.get("hits")) > 0
+        ):
             docs_found = True
-            doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+            hits = [
+                hit
+                for hit in algolia_result.get("hits")
+                if "Rasa X Changelog " not in hit.get("hierarchy", {}).values()
+                and "Rasa Open Source Change Log "
+                not in hit.get("hierarchy", {}).values()
+            ]
+            if not hits:
+                hits = algolia_result.get("hits")
+            doc_list = algolia.get_algolia_link(hits, 0)
             doc_list += (
-                "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
-                if len(alg_res.get("hits")) > 1
+                "\n" + algolia.get_algolia_link(hits, 1)
+                if len(algolia_result.get("hits")) > 1
                 else ""
             )
 
