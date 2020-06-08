@@ -303,36 +303,10 @@
     - respond_faq
     - action_set_faq_slot
     - utter_what_language
-* enter_data{"language": "english"}
-    - slot{"language": "english"}
-    - utter_pipeline_english
-    - utter_anything_else
-
-## not new to rasa + nlu + intent + pipeline recommendation, spacy
-* greet
-    - action_greet_user
-* how_to_get_started
-    - utter_getstarted
-    - utter_first_bot_with_rasa
-* deny
-    - action_set_onboarding
-    - slot{"onboarding": false}
-    - utter_ask_which_product
-* how_to_get_started{"product": "nlu"}
-    - utter_ask_for_nlu_specifics
-* nlu_info{"nlu_part": "intent classification"}
-    - utter_nlu_intent_tutorial
-    - utter_offer_recommendation
-* pipeline_recommendation OR affirm
-    - utter_what_language
-* faq
-    - respond_faq
-    - action_set_faq_slot
-    - utter_what_language
-* enter_data
+* enter_data{"language": "en"}
     - action_store_bot_language
-    - slot{"can_use_spacy":false}
-    - utter_pipeline_nonenglish_nospacy
+    - slot{"can_use_spacy": true}
+    - utter_spacy_or_tensorflow
     - utter_anything_else
 
 ## not new to rasa + nlu + intent + pipeline recommendation, not spacy
@@ -356,11 +330,10 @@
     - respond_faq
     - action_set_faq_slot
     - utter_what_language
-* enter_data{"language": "russian"}
-    - slot{"language": "__other__"}
+* enter_data{"language": "en"}
     - action_store_bot_language
-    - slot{"can_use_spacy":false}
-    - utter_pipeline_nonenglish_nospacy
+    - slot{"can_use_spacy": false}
+    - utter_tensorflow
     - utter_anything_else
 
 ## not new to rasa + nlu + entity + pipeline duckling

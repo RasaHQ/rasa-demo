@@ -187,7 +187,7 @@
 
 
 ## chitchat
-* chitchat/nicetomeetyou 
+* chitchat/nicetomeeyou 
   -  Likewise!
   -  Thank you. It is a pleasure to meet you as well!
   -  It is nice to meet you too!

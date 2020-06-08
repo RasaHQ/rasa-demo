@@ -2,21 +2,6 @@
 from algoliasearch.search_client import SearchClient
 from typing import Text, List
 
-import spacy
-
-en_spacy = spacy.load("en")
-
-additional_stopwords = {"need", "want", "help", "able", "unable", "know", "use"}
-STOPWORDS = spacy.lang.en.stop_words.STOP_WORDS.union(additional_stopwords)
-
-
-def preprocess_search_text(search_text: Text) -> Text:
-    tokens = en_spacy(search_text.lower())
-    stripped_search_text = " ".join(
-        [w.text for w in tokens if w.text not in STOPWORDS and not w.is_punct]
-    )
-    return stripped_search_text
-
 
 class AlgoliaAPI(object):
     """Class to connect to the Algolia API"""
@@ -35,6 +20,5 @@ class AlgoliaAPI(object):
         return doc_link
 
     def search(self, search_string: Text):
-        search_text = preprocess_search_text(search_string)
-        res = self.index.search(search_text)
+        res = self.index.search(search_string)
         return res

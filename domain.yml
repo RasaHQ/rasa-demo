@@ -4,6 +4,10 @@ session_config:
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
 intents:
 - affirm
+- faq:
+    use_entities: ["product"]
+- chitchat:
+    use_entities: []
 - ask_how_contribute
 - ask_question_in_forum
 - ask_when_next_event
@@ -11,15 +15,11 @@ intents:
 - ask_why_contribute
 - bye
 - canthelp
-- chitchat:
-  use_entities: []
 - contact_sales
 - deny
 - enter_data:
     use_entities: []
 - explain
-- faq:
-  use_entities: ["product"]
 - feedback
 - get_started_step1
 - get_started_step2
@@ -38,7 +38,6 @@ intents:
 - pipeline_recommendation
 - react_negative
 - react_positive
-- restart
 - signup_newsletter
 - source_code
 - suggestion
@@ -93,9 +92,7 @@ slots:
   job_function:
     type: unfeaturized
   language:
-    type: categorical
-    values:
-      - english
+    type: unfeaturized
   name:
     type: text
   nlu_part:
@@ -502,19 +499,16 @@ responses:
   utter_source_code:
   - text: Like Rasa Open Source, my code is freely available on GitHub! You can find
       it [here](https://github.com/RasaHQ/rasa-demo) 👻
-  utter_pipeline_english:
-  - text: If your training data is in English, a good starting point is this 
-      [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer), 
-      which uses both pretrained and supervised embeddings.
   utter_spacy:
   - text: SpaCy has excellent pre-trained named-entity recognizers for this -- check
       out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would
       suggest using the [SpacyEntityExtractor](https://rasa.com/docs/rasa/nlu/components/#spacyentityextractor)
       component in your pipeline.
-  utter_pipeline_nonenglish_spacy:
-  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) 
-      for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#a-longer-answer)
-      also works for your language.
+  utter_spacy_or_tensorflow:
+  - text: Looks like for your {language} assistant, you can use either
+      [pretrained_embeddings_spacy](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#section-pretrained-embeddings-spacy-pipeline)
+      or our [supervised_embeddings](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#section-supervised-embeddings-pipeline)
+      pipeline!
   utter_suggestion:
   - text: I don't have a skill to help you with this stage yet, but please ask any
       questions you have so I can learn them in the future!
@@ -522,9 +516,9 @@ responses:
   - text: We have a guide for migrating from DialogFlow [here](https://www.rasa.com/docs/rasa/migrate-from/google-dialogflow-to-rasa/).
   utter_switch_luis:
   - text: We have a guide for migrating from LUIS [here](https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/).
-  utter_pipeline_nonenglish_nospacy:
-  - text: For {language}, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) 
-          for languages other than English.
+  utter_tensorflow:
+  - text: For {language}, you can only use the
+      [supervised_embeddings](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#section-supervised-embeddings-pipeline) pipeline.
   utter_thank_suggestion:
   - text: Thanks for your input!
   utter_thumbsup:
@@ -545,10 +539,12 @@ responses:
   - text: Sorry, that's all the info I've got on that subject 😕
 
 actions:
+- respond_chitchat
 - action_default_ask_affirmation
 - action_default_fallback
 - action_docs_search
 - action_explain_sales_form
+- respond_faq
 - action_set_faq_slot
 - action_explain_faq
 - action_forum_search
@@ -562,11 +558,9 @@ actions:
 - action_store_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
+- respond_out_of_scope
 - action_tag_docs_search
 - action_tag_feedback
-- respond_chitchat
-- respond_faq
-- respond_out_of_scope
 
 forms:
 - sales_form
