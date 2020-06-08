@@ -1,3 +1,4 @@
+
 session_config:
   session_expiration_time: 480  # value in minutes, 0 means infinitely long
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
@@ -10,13 +11,15 @@ intents:
 - ask_why_contribute
 - bye
 - canthelp
-- chitchat
+- chitchat:
+    use_entities: []
 - contact_sales
 - deny
 - enter_data:
     use_entities: []
 - explain
-- faq
+- faq:
+    use_entities: ["product"]
 - feedback
 - get_started_step1
 - get_started_step2
@@ -339,7 +342,7 @@ responses:
   utter_faq_channels_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/)
       for more information.
-  utter_faq_language_more:
+  utter_faq_languages_more:
   - text: Please read our [documentation](https://rasa.com/docs/rasa/nlu/language-support/)
       for more information.
   utter_faq_ee_more:
@@ -538,6 +541,9 @@ responses:
       others.
   utter_ask_rephrase:
   - text: Can you rephrase the question?
+  utter_no_further_info:
+  - text: Sorry, that's all the info I've got on that subject 😕
+
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
