@@ -515,6 +515,8 @@
 - How is it opensource
 - What is included in [RASA open source](product) edition?
 - you are [open source](product)
+- is rasa opensource?
+- how much is Rasa stack?
 
 ## intent:faq/python_version
 - What Python version should I use?
