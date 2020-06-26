@@ -1,5 +1,5 @@
 ## intent:why_rasa
-- why should i use rasa instead of google [dialogueflow](current_api)
+- why should i use rasa instead of google [dialogflow](current_api)
 - why rasa
 - why should I use rasa?
 - why should I switch to rasa?
@@ -7,9 +7,41 @@
 - how is rasa's NLU better than [watson](current_api) 's
 - why should i use rasa instead of IBM [watson](current_api) ?
 - Is it better to use rasa or [luis](current_api)?
-- Is rasa better than google [dialogueflow](current_api)?
+- Is rasa better than google [dialogflow](current_api)?
 - what sets rasa apart?
 - give me a reason to use Rasa
+- why should I switch to rasa from [dialogflow](current_api)
+- why should I switch from [luis](current_api)
+- give me a reason to switch to Rasa from [luis](current_api)
+- Why switch to Rasa?
+- why switch from [dialogflow](current_api)?
+- why not use [watson](current_api)?
+- why would you opt for rasa
+- why use rasa
+- why should I switch
+- I meant why you over competitors ?
+- why to use RASA
+- why is Rasa useful
+- why is rasa better?
+- why RASA?
+- why should i choose rasa
+- why is rasa so good?
+- why is rasa good
+- why do I need rasa
+- why should I use Rasa
+- why only rasa
+- why to use rasa
+- why should I migrate to rasa?
+- why migrate?
+- why switch?
+- why not use ibm watson
+- why people go for Rasa chatbot?
+- why to use rasa over other available platform
+- i want to know more about nlu and why is it better than watson or luis
+- why is rasa a good nlp libarary
+- and why i should not use Tenserflow?
+- why would i use your product
+- why is rasa interesting
 
 
 ## intent:ask_how_contribute

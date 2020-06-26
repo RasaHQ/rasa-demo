@@ -547,7 +547,11 @@ responses:
   utter_why_rasa:
   - text:  Rasa provides the infrastructure and tools needed to build
       high-performing, resilient assistants that work. What's more,
-      Rasa is **open source** - no black-box magic! Would you like to learn more?
+      Rasa is **open source** - no black-box magic! 
+  utter_ask_more: 
+  - text: Would you like to learn more?
+  utter_ask_more_migrate:
+  - text: Would you like to learn more advantages of switching to Rasa?
   utter_why_rasa_research:
     - text: Rasa invests in extensive research to create leading-edge 
         conversational AI, enabling developers to create the best text- and

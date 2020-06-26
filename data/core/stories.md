@@ -416,12 +416,11 @@
     - utter_why_rasa
     - utter_ask_more
 * affirm
-    - utter_why_rasa_os
     - utter_why_rasa_research
-    - utter_why_rasa_dialogue
     - utter_why_rasa_nlu
-    - utter_why_rasa_community
-    - utter_why_rasa_agnostic
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
 
 ## why rasa
 * why_rasa{"current_api":"tensorflow"}
@@ -429,27 +428,24 @@
     - utter_why_rasa
     - utter_ask_more
 * affirm
-    - utter_why_rasa_os
     - utter_why_rasa_research
-    - utter_why_rasa_dialogue
     - utter_why_rasa_nlu
-    - utter_why_rasa_community
-    - utter_why_rasa_agnostic
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
 
 ## why rasa
 * why_rasa{"current_api":"luis"}
     - slot{"current_api":"luis"}
     - utter_why_rasa
     - utter_switch_luis
-    - utter_ask_more
+    - utter_ask_more_migrate
 * affirm
-    - utter_why_rasa_os
     - utter_why_rasa_research
-    - utter_why_rasa_dialogue
     - utter_why_rasa_nlu
-    - utter_why_rasa_community
-    - utter_why_rasa_agnostic
-
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
 
 
 ## why rasa
@@ -457,14 +453,13 @@
     - slot{"current_api":"dialogflow"}
     - utter_why_rasa
     - utter_switch_dialogflow
-    - utter_ask_more
+    - utter_ask_more_migrate
 * affirm
-    - utter_why_rasa_os
     - utter_why_rasa_research
-    - utter_why_rasa_dialogue
     - utter_why_rasa_nlu
-    - utter_why_rasa_community
-    - utter_why_rasa_agnostic
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
 
 ## why rasa
 * why_rasa
@@ -486,7 +481,7 @@
     - slot{"current_api":"luis"}
     - utter_why_rasa
     - utter_switch_luis
-    - utter_ask_more
+    - utter_ask_more_migrate
 * deny
     - utter_anything_else
 
@@ -495,6 +490,6 @@
     - slot{"current_api":"dialogflow"}
     - utter_why_rasa
     - utter_switch_dialogflow
-    - utter_ask_more
+    - utter_ask_more_migrate
 * deny
     - utter_anything_else
