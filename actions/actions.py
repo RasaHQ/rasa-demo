@@ -814,3 +814,24 @@ class ActionTagDocsSearch(Action):
         tag_convo(tracker, label)
 
         return []
+
+
+class ActionWhyRasa(Action):
+    """Returns a formatted list of Rasa advantages"""
+
+    def name(self):
+        return "action_why_rasa"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+
+        reasons = "\n" + "\n- ".join(
+            [
+                "Rasa is Open Source!",
+                "Rasa invests in extensive research to create leading-edge conversational AI",
+                "Rasa's NLU provides developers with the technology to understand messages, determine intent, and capture key contextual information.",
+                "Assistants built on Rasa can hold meaningful conversations with users - multi-step conversations that remember context and integrate business logic. ",
+            ]
+        )
+        dispatcher.utter_message(template="utter_why_rasa", reasons=reasons)
+
+        return []

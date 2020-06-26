@@ -410,3 +410,91 @@
 ## negative reaction
 * react_negative
     - utter_react_negative
+
+## why rasa
+* why_rasa
+    - utter_why_rasa
+    - utter_ask_more
+* affirm
+    - utter_why_rasa_os
+    - utter_why_rasa_research
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_nlu
+    - utter_why_rasa_community
+    - utter_why_rasa_agnostic
+
+## why rasa
+* why_rasa{"current_api":"tensorflow"}
+    - slot{"current_api":"__other__"}
+    - utter_why_rasa
+    - utter_ask_more
+* affirm
+    - utter_why_rasa_os
+    - utter_why_rasa_research
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_nlu
+    - utter_why_rasa_community
+    - utter_why_rasa_agnostic
+
+## why rasa
+* why_rasa{"current_api":"luis"}
+    - slot{"current_api":"luis"}
+    - utter_why_rasa
+    - utter_switch_luis
+    - utter_ask_more
+* affirm
+    - utter_why_rasa_os
+    - utter_why_rasa_research
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_nlu
+    - utter_why_rasa_community
+    - utter_why_rasa_agnostic
+
+
+
+## why rasa
+* why_rasa{"current_api":"dialogflow"}
+    - slot{"current_api":"dialogflow"}
+    - utter_why_rasa
+    - utter_switch_dialogflow
+    - utter_ask_more
+* affirm
+    - utter_why_rasa_os
+    - utter_why_rasa_research
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_nlu
+    - utter_why_rasa_community
+    - utter_why_rasa_agnostic
+
+## why rasa
+* why_rasa
+    - utter_why_rasa
+    - utter_ask_more
+* deny
+    - utter_anything_else
+
+## why rasa
+* why_rasa{"current_api":"tensorflow"}
+    - slot{"current_api":"__other__"}
+    - utter_why_rasa
+    - utter_ask_more
+* deny
+    - utter_anything_else
+
+## why rasa
+* why_rasa{"current_api":"luis"}
+    - slot{"current_api":"luis"}
+    - utter_why_rasa
+    - utter_switch_luis
+    - utter_ask_more
+* deny
+    - utter_anything_else
+
+## why rasa
+* why_rasa{"current_api":"dialogflow"}
+    - slot{"current_api":"dialogflow"}
+    - utter_why_rasa
+    - utter_switch_dialogflow
+    - utter_ask_more
+* deny
+    - utter_anything_else
