@@ -22,6 +22,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -37,6 +38,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -102,6 +104,8 @@
     - utter_docu
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 * contact_sales
@@ -111,6 +115,8 @@
     - form{"name": null}
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -135,6 +141,8 @@
     - form{"name": null}
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
+    - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -165,6 +173,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 
@@ -208,6 +217,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -240,6 +250,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 * contact_sales
@@ -250,6 +261,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
@@ -304,6 +316,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 
@@ -339,20 +352,21 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "positive"}
     - slot{"feedback_value": "positive"}
+    - action_tag_feedback
     - utter_great
     - utter_anything_else
 
 ## chitchat --> email --> no email
 * greet
     - action_greet_user
-* ask_whatspossible
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
-* ask_weather
-    - action_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
+* chitchat
+    - respond_chitchat
 * signup_newsletter
     - utter_can_do
     - subscribe_newsletter_form
@@ -369,6 +383,7 @@
     - utter_ask_feedback
 * feedback{"feedback_value": "negative"}
     - slot{"feedback_value": "negative"}
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 
@@ -395,3 +410,86 @@
 ## negative reaction
 * react_negative
     - utter_react_negative
+
+## why rasa
+* why_rasa
+    - utter_why_rasa
+    - utter_ask_more
+* affirm
+    - utter_why_rasa_research
+    - utter_why_rasa_nlu
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
+
+## why rasa
+* why_rasa{"current_api":"tensorflow"}
+    - slot{"current_api":"__other__"}
+    - utter_why_rasa
+    - utter_ask_more
+* affirm
+    - utter_why_rasa_research
+    - utter_why_rasa_nlu
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
+
+## why rasa
+* why_rasa{"current_api":"luis"}
+    - slot{"current_api":"luis"}
+    - utter_why_rasa
+    - utter_switch_luis
+    - utter_ask_more_migrate
+* affirm
+    - utter_why_rasa_research
+    - utter_why_rasa_nlu
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
+
+
+## why rasa
+* why_rasa{"current_api":"dialogflow"}
+    - slot{"current_api":"dialogflow"}
+    - utter_why_rasa
+    - utter_switch_dialogflow
+    - utter_ask_more_migrate
+* affirm
+    - utter_why_rasa_research
+    - utter_why_rasa_nlu
+    - utter_why_rasa_dialogue
+    - utter_why_rasa_os
+    - utter_why_rasa_compliant
+
+## why rasa
+* why_rasa
+    - utter_why_rasa
+    - utter_ask_more
+* deny
+    - utter_anything_else
+
+## why rasa
+* why_rasa{"current_api":"tensorflow"}
+    - slot{"current_api":"__other__"}
+    - utter_why_rasa
+    - utter_ask_more
+* deny
+    - utter_anything_else
+
+## why rasa
+* why_rasa{"current_api":"luis"}
+    - slot{"current_api":"luis"}
+    - utter_why_rasa
+    - utter_switch_luis
+    - utter_ask_more_migrate
+* deny
+    - utter_anything_else
+
+## why rasa
+* why_rasa{"current_api":"dialogflow"}
+    - slot{"current_api":"dialogflow"}
+    - utter_why_rasa
+    - utter_switch_dialogflow
+    - utter_ask_more_migrate
+* deny
+    - utter_anything_else

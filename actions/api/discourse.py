@@ -1,5 +1,5 @@
 import requests
-from typing import Any, Dict, List, Text
+from typing import Any, Dict, List, Text, Optional
 
 
 class DiscourseAPI(object):
@@ -9,9 +9,11 @@ class DiscourseAPI(object):
         self.url = url
 
     @staticmethod
-    def get_discourse_links(topics: List[Dict[Text, Any]], index: int):
-        doc_url = f"https://forum.rasa.com/t/{topics[index]['slug']}/{str(topics[index]['id'])}"
-        forum = f"- [{topics[index]['title']}]({doc_url})"
+    def get_discourse_links(topics: Optional[List[Dict[Text, Any]]], index: int):
+        forum = None
+        if topics:
+            doc_url = f"https://forum.rasa.com/t/{topics[index].get('slug')}/{str(topics[index].get('id'))}"
+            forum = f"- [{topics[index].get('title')}]({doc_url})"
         return forum
 
     def query(self, search_string: Text, include_blurbs=False):

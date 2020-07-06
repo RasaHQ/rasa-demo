@@ -1,1011 +1,48 @@
-## intent:affirm
-- Accept
-- Awesome!
-- Cool
-- Good
-- Great
-- I accept
-- I accept.
-- I agree
-- I am using it
-- I changed my mind. I want to accept it
-- I do
-- I get it
-- I guess so
-- I have used it in the past
-- I will
-- I'd absolutely love that
-- I'm sure I will!
-- I'm using it
-- Nice
-- OK
-- Ofcourse
-- Oh yes
-- Oh, ok
-- Ok
-- Ok let's start
-- Ok.
-- Okay
-- Okay!
-- PLEASE
-- SURE
-- Sure
-- Sweet
-- That would be great
-- YES
-- YUP
-- Yea
-- Yeah
-- Yeah sure
-- Yep
-- Yep that's fine
-- Yep!
-- Yepp
-- Yes
-- Yes I do
-- Yes please
-- Yes please!
-- Yes, I accept
-- Yes.
-- Yup
-- a little
-- absolutely
-- accept
-- accepted
-- agreed
-- ah ok
-- alright
-- alright, cool
-- amayzing
-- amazing!
-- awesome
-- awesome!
-- confirm
-- cool
-- cool :)
-- cool story bro
-- cool!
-- coolio
-- definitely yes without a doubt
-- done
-- fair enough
-- fcourse
-- fine
-- fuck yeah!
-- go
-- go ahead
-- go for it
-- going super well
-- good
-- good.
-- great
-- great lets do that
-- great!
-- hell yeah
-- hell yes
-- hm, i'd like that
-- how nice!
-- i accept
-- i agree
-- i am!
-- i want that
-- i will!
-- it is ok
-- its okay
-- ja
-- ja cool
-- ja thats great
-- jezz
-- jo
-- k
-- kk
-- lets do it
-- lets do this
-- nice
-- not bad
-- of course
-- ofcoure i do
-- ofcourse
-- oh awesome!
-- oh cool
-- oh good !!
-- oh super
-- ok
-- ok cool
-- ok fine
-- ok friend
-- ok good
-- ok great
-- ok i accept
-- ok sara
-- ok, I behave now
-- ok, I understood
-- ok, Sara
-- ok...
-- okay
-- okay cool
-- okay sure
-- okay..
-- oki doki
-- okie
-- ook
-- oui
-- perfect
-- please
-- si
-- sort of
-- sure
-- sure thing
-- sure!
-- that is cool
-- that ok
-- that sounds fine
-- that's great
-- thats fine
-- thats good
-- thats great
-- top
-- uh-huh
-- very much
-- well yes
-- y
-- ya
-- ya cool
-- ya go for it
-- ya i want
-- ya please
-- ya thats cool
-- yaah
-- yap
-- yaps
-- yas
-- yay
-- ye
-- ye splease
-- yea
-- yeah
-- yeah do that
-- yeah sure
-- yeah'=
-- yeah, why not
-- yeeeeezzzzz
-- yeeees
-- yep
-- yep i want that
-- yep if i have to
-- yep please
-- yep that's nice
-- yep thats cool
-- yep, will do thank you
-- yep. :/
-- yes
-- yes ...
-- yes I do
-- yes accept please
-- yes baby
-- yes cool
-- yes give me information
-- yes go ahead
-- yes go for it
-- yes great
-- yes i accept
-- yes i agree
-- yes i have built a bot before
-- yes i have!
-- yes it is
-- yes it was okay
-- yes of course
-- yes pleae
-- yes please
-- yes please!
-- yes pls
-- yes sirfr
-- yes that's great
-- yes that's what i want
-- yes you can
-- yes'
-- yes, I'd love to
-- yes, cool
-- yes, give me information, please
-- yes,i am
-- yes.
-- yesh
-- yess
-- yessoo
-- yesss
-- yesssss
-- yesyestyes
-- yesyesyes
-- yez
-- yop
-- you asked me a yes or no question, which i answered with yes
-- you got me, I accept, if you want me to
-- yres
-- ys
-- yup
-- yyeeeh
+## intent:why_rasa
+- why should i use rasa instead of google [dialogflow](current_api)
+- why rasa
+- why should I use rasa?
+- why should I switch to rasa?
+- what's so great about using Rasa?
+- how is rasa's NLU better than [watson](current_api) 's
+- why should i use rasa instead of IBM [watson](current_api) ?
+- Is it better to use rasa or [luis](current_api)?
+- Is rasa better than google [dialogflow](current_api)?
+- what sets rasa apart?
+- give me a reason to use Rasa
+- why should I switch to rasa from [dialogflow](current_api)
+- why should I switch from [luis](current_api)
+- give me a reason to switch to Rasa from [luis](current_api)
+- Why switch to Rasa?
+- why switch from [dialogflow](current_api)?
+- why not use [watson](current_api)?
+- why would you opt for rasa
+- why use rasa
+- why should I switch
+- I meant why you over competitors ?
+- why to use RASA
+- why is Rasa useful
+- why is rasa better?
+- why RASA?
+- why should i choose rasa
+- why is rasa so good?
+- why is rasa good
+- why do I need rasa
+- why should I use Rasa
+- why only rasa
+- why to use rasa
+- why should I migrate to rasa?
+- why migrate?
+- why switch?
+- why not use ibm watson
+- why people go for Rasa chatbot?
+- why to use rasa over other available platform
+- i want to know more about nlu and why is it better than watson or luis
+- why is rasa a good nlp libarary
+- and why i should not use Tenserflow?
+- why would i use your product
+- why is rasa interesting
 
-## intent:ask_builder
-- By whom were you built?
-- Can I ask the name of the people who designed you?
-- Do you know who built you?
-- Do you know who made you?
-- May I ask who invented you?
-- Name the person who built you.
-- Tell me the name of the individual who created you.
-- Tell me the name of the person who built you.
-- Tell me the name of your creator.
-- Tell me who built you.
-- What is the name of your builder?
-- What person built you?
-- Who built you?
-- Who created and built you?
-- Who created you?
-- Who designed you?
-- Who developed and created you?
-- Who developed you?
-- Who fabricated you?
-- Who generated you?
-- Who is it that built you?
-- Who is responsible for making you?
-- Who is the builder of you?
-- Who is the legal owner of you?
-- Who is the name of your builder?
-- Who is the name of your creator?
-- Who is the person responsible for building you?
-- Who is the person that invented you?
-- Who is the person who built you?
-- Who is your creator?
-- Who is your programmer?
-- Who made you?
-- Who modeled you?
-- Who owns you?
-- Who produced you?
-- Who put you together?
-- Who thought to make you?
-- Who was the one that built you?
-- Who was the one who made you?
-- Who was the person that built you?
-- Who was the person that created you?
-- Who was the person that made you?
-- Who was the person who made you?
-- Who was the person who put you together?
-- Who went through the trouble of setting you up?
-- Who were you built by?
-- Who were you created by?
-- Who were you made by?
-- Who's your boss?
-- Who's your builder?
-- and who built u?
-- can you share your boss with me?
-- i want to get to know your owner
-- i want to know the company which designed you
-- i want to know the company which generated you
-- i want to know the company which invented you
-- i want to know who invented you
-- please tell me the company who created you
-- please tell me who created you
-- tell me more about you
-- tell me more about your creators
-- tell me more about your founders
-- what is the name of the smart engineer who creted you ?
-- where were you made?
-- which company brought you into existence?
-- which company created you?
-- which company invented you?
-- who are created you
-- who are your author?
-- who are your parents
-- who build yoi
-- who built u?
-- who built you
-- who built you?
-- who create you ?
-- who created you
-- who created you?
-- who developed
-- who developed you
-- who do you work for?
-- who had the idea to build you?
-- who had the idea to generate you?
-- who had the idea to make you?
-- who invent you
-- who is behind all this?
-- who is your author
-- who is your boss
-- who is your boss tell me
-- who is your boss?
-- who is your creator
-- who is your creator?
-- who is your daddy
-- who is your employer?
-- who is your father ?
-- who is your mom
-- who is your parent?
-- who made u
-- who made u?
-- who made you
-- who made you?
-- who your author are?
-- who's builder
-- why were you made?
-- you are made by who?
-- you are working for which company?
-
-## intent:ask_faq_rasax
-- what is Rasa X?
-- how does Rasa X work?
-- what is X?
-- can you explain rasa x to me
-- could you elaborate more about rasa x
-- tell me about Rasa X please
-- what is this rasa x thing. could you tell me more?
-- what's the purpose of Rasa X
-- whats rasax
-- is Rasa X separate from Rasa?
-- how does rasa x relate to rasa core
-- I need to know about Rasa X
-- please tell me more about rasa x
-- elaborate on rasa x
-- Can you tell me about rasa x?
-- I want information about rasa x
-- Rasa X
-- Rasa X features
-- Tell me about rasa x
-- can someone help me with infos about rasa x
-- i want to learn more about Rasa X
-- tell me what is rasa x
-- what is rasa x?
-
-## intent:ask_faq_channels
-- Can you tell which messaging channels does rasa support?
-- Channels
-- DOES RASA SUPPORT MESSENGER?
-- DOES RASA SUPPORT SMS?
-- DOES RASA SUPPORT THE WHATS APP?
-- Do you know about rasa supporting channels?
-- Do you know which messaging channels rasa supports?
-- How to connect messaging channels to rasa?
-- Is rasa support message channels?
-- No, I mean how it is possible to use Skype as channel?
-- Rasa is good for messaging chanels
-- Rasa supports some messaging channels, what are those?
-- WHAT MESSAGING PORTALS DOES RASA SUPPORT?
-- What are the requirements for connecting messaging channel to rasa?
-- What channels for messaging are supported by rasa?
-- What channels for messaging does rasa support?
-- What channels of communication does rasa support?
-- What communication channels are supported by rasa?
-- What communication channels does rasa support?
-- What messaging channels are supported by rasa?
-- What messaging systems are supported by rasa?
-- channels supported by Rasa
-- i need a help to integrate rasa with a messenger
-- rasa can use which different messaging channels?
-- rasa supports which messaging channels?
-- what are the channels Rasa [NLU](product) supports
-- what are the messaging channels supported by rasa?
-- what are the messaging channels that can be used with rasa?
-- what channels do you support?
-- what channels does rasa support
-- what chat channels does rasa uses
-- which UI channel is used by Rasa ?
-- which messaging channels are compatible with rasa?
-- which messaging channels are supported by rasa?
-- which messaging channels can I use with rasa?
-- which messaging channels can be used with rasa?
-- which messaging channels does rasa support?
-- which particular messaging channels are supported by rasa?
-- what chat services do you support
-
-## intent:ask_faq_community_size
-- Did you know the size of rasa community?
-- Do you know how big the Rasa community is?
-- Do you know how many people are in the Rasa community?
-- How big is the Rasa community
-- How big is the Rasa community?
-- How big is the community?
-- How big is this community?
-- How far does the Rasa community spread?
-- How few members in the community?
-- How large is the Rasa community?
-- How large is the community?
-- How large roughly speaking is the Rasa community?
-- How many in the community?
-- How many individuals are in your community?
-- How many individuals reside in your community?
-- How many members in the community?
-- How many people are here?
-- How many people are in that community?
-- How many people are in the Rasa Community?
-- How many people are in your community
-- How many people are in your community?
-- How massive is the Rasa community?
-- How small is the community?
-- Is rasa community big?
-- Is rasa have more than 1000 members?
-- Is the Rasa Community large?
-- Is the Rasa community large?
-- Is the Rasa community medium?
-- Is the Rasa community small?
-- Is the community large?
-- What is the magnitude of the Rasa community?
-- What is the magnitude of the community?
-- What is the number of people in this community?
-- What is the rough size of the community?
-- What size is the Rasa community?
-- What's the size of the community?
-- do you have a large community
-- how big is your community
-- how many forum members do you have
-- how many people are using Rasa
-
-## intent:ask_faq_differencecorenlu
-- DIFFERENCES BETWEEN [CORE](product) AND [NLU](product)
-- Do you know the difference between [core](product) and [nlu](product)?
-- How do [core](product) and [nlu](product) conflict?
-- How do [core](product) and [nlu](product) differ?
-- How does [core](product) compare to [nlu](product)?
-- How does [core](product) differ to [nlu](product)?
-- How does [nlu](product) contrast to [core](product)?
-- In what ways are [core](product) and [nlu](product) unalike?
-- Is [Core](product) different than [NLU](product)?
-- Is [nlu](product) different to [core](product) and, if so, how?
-- List the dissimilar qualities of [core](product) and [nlu](product)
-- What are some ways that [nlu](product) is different from [core](product)?
-- What are the differences?
-- What does [core](product) and [nlu](product) mean?
-- What does [core](product) offer that [nlu](product) does not?
-- What facts diverge [core](product) from [nlu](product)?
-- What is the Similarities between [core](product) and [nlu](product)?
-- What is the difference between [NLU](product) and [Core](product)?
-- What is the difference between rasa [nlu](product) and rasa [core](product)?
-- What makes [core](product) and [nlu](product) different?
-- What makes [core](product) and [nlu](product) incompatible?
-- What makes [core](product) different from [nlu](product)?
-- What makes [core](product) distinct to [nlu](product)?
-- What sets [nlu](product) apart from [core](product)?
-- What's difference between these?
-- difference between rasa [core](product) and [nlu](product)
-- diffrence between rasa [core](product) and rasa [nlu](product)
-- i dont know the difference
-- rasa [core](product) vs rasa [nlu](product)
-- what are the difference between [NLU](product) and [core](product)?
-- what are the difference?
-- what are the differences?
-- what are the primary areas of difference between [core](product) and [nlu](product)?
-- what differences are there between [core](product) and [nlu](product)?
-- what differences exist between [core](product) and [nlu](product)?
-- what is different
-- what is different about [core](product) compared to [nlu](product)?
-- what is the difference between [core](product) and [nlu](product)
-- what is the difference between [core](product) and [nlu](product)?
-- what is the difference between [nlu](product) and [core](product)
-- what is the difference between [nlu](product) and [core](product)?
-- what is the difference between [nlu](product) and rasa [core](product)
-- what is the difference between rasa [nlu](product) and rasa [core](product)
-- what is the difference between rasa [nlu](product) and rasa [core](product)?
-- what is the difference between the two?
-- what is the difference?
-- what is the different
-- what is the main difference between [core](product) and [nlu](product)?
-- what is the primary difference between [core](product) and [nlu](product)?
-- what makes [core](product) and [nlu](product) unique from each other?
-- what makes [core](product) different from [nlu](product)?
-- what the different with rasa [nlu](product) and rasa [core](product)?
-- what would you say the difference is between [core](product) and [nlu](product)?
-- what's the  difference between rasa [nlu](product) and rasa [core](product)
-- what's the difference between [NLU](product) and [Core](product)?
-- what's the difference between [core](product) and [nlu](product)?
-- what's the difference?
-- whats the diference
-- whats the difference between [core](product) and [nlu](product)
-
-## intent:ask_faq_differencerasarasax
-- Are [Rasa](product) and [Rasa X](product) the same thing?
-- Can I use [Rasa X](product) without using [Rasa](product)?
-- Can i use [rasa](product) without [rasa x](product)?
-- Do I need both [Rasa](product) and [Rasa X](product)?
-- How is [Rasa X](product) different from [Rasa](product)?
-- If I use [Rasa](product), do I also need [Rasa X](product)?
-- What's new in [Rasa X](product) compared to [Rasa](product)?
-- how does [rasa x](product) stack up against [rasa](product)
-- i am using [rasa](product), why would i need [rasa x](product)?
-- please compare [rasa](product) and [rasa x](product)
-- show me comparison between [rasa x](product) and [[rasa
-- tell me the difference between [rasa](product) and [rasa x](product)
-- tell me the difference between [rasa](product) and [x](product)
-- what's the difference between [rasa](product) and [rasa x](product)
-- whats the diff between [rasa](product) and [rasa x](product)
-- when should i use [rasa](product) and when should i use [rasa x](product)
-
-## intent:ask_faq_ee
-- Can you tell me about the enterprise edition?
-- I want information about the enterprise edition
-- Tell me about rasa x ee
-- can someone help me with infos about the enterprise edition
-- can you tell me about rasa x ee?
-- enterprise features
-- i want to learn more about Rasa X EE
-- tell me about rasa x EE
-- tell me more about rasa x EE
-- tell me what is rasa x ee
-- we built a bot with rasa x but now we're interested in the enterprise edition
-- what is EE?
-- what is rasa x ee?
-- what is rasa x enterprise
-- what is the enterprise edition
-- what's the rasa x enterprise edition
-
-## intent:ask_faq_is_programming_required
-- Does rasa require programming knowledge
-- Do I need programming skills to develop a chatbot in rasa
-- do I need programming experience to use rasa
-- how to programe rasa
-- Rasa can be programmed in python
-- programming language use
-- what programming languge do i use
-- How do I do the programming?
-- i have never programed before
-- what language do I need to program?
-- do i need to be able to program to use rasa?
-- what programming language do i need?
-- shall i use Nodejs as a programming language
-- Can i use python to program my bot?
-- must i have to be a good programmer to use RasA
-- must i have to be a good programmer
-- you have to be a good programmer
-- what do i need for programming?
-- what programming language is used by rasa
-- which programming language used for RASA.
-- what programming language is rasa written in?
-- what programming languages does Rasa support?
-- which programming languages
-- which programming languages do you support?
-- which programming languages does rasa supports?
-- Do I have to be a programmer to use rasa?
-- what's your programming language
-- what programming language do you recommend
-- programming language
-- what programming language does rasa use
-- But what kind of programming language is the code written in?
-- what programming language?
-- I would like to know about using Java as a programming language with Rasa
-- how i program the bot?
-- which programming language can I use?
-- what programming languages do you support
-- do i need to know how to program to create a bot?
-- what programming knowledge do I need to learn?
-- what is the your programming language
-- which programming language are you written in?
-- which programming language uses rasa?
-- in what programming language is your api
-- Is there API for any other programming languages?
-- which language is rasa programmed in
-- Which programming language is rasa written in?
-
-## intent:ask_faq_languages
-- Any languages that rasa supports?
-- Can I use Rasa with [Thai](language) language
-- Can rasa support any language?
-- Can we make [Japanese](language) speaking bot with Rasa?
-- Can you built text bot with [Japanese](language)?
-- Can you use other language than [English](language)?
-- Does rasa support different languages
-- Hello, rasa supports [spanish](language)?
-- How can I change the language
-- I want [Vietnamese](language) language processing
-- I want to add [Romanian](language) language support
-- Is RASA [NLU](product) avaiable for [German](language)?
-- What all languages does rasa support for us?
-- What are the languages that rasa supports?
-- What are the specific languages that rasa is intended to work with?
-- What language u support?
-- What language you support?
-- What languages can a program like rasa handle?
-- What languages can be used with rasa?
-- What languages can rasa be relied upon to support?
-- What languages can rasa handle?
-- What languages can rasa support?
-- What languages can rasa use?
-- What languages does rasa know?
-- What languages does rasa work for?
-- What languages does rasa work with?
-- What languages will the utility rasa support?
-- When I use Rasa, Can I make bot speaking [Japanese](language)?
-- Which different languages does rasa support?
-- Which languages are supported by rasa?
-- Which languages can I use with rasa?
-- Which languages can be used by rasa?
-- Which languages can you do?
-- Which specific languages does rasa support?
-- Will it work for [german](language)
-- are there any languages that rasa supports?
-- available for [German](language)?
-- can I use rasa also for another laguage?
-- can rasa speak [portuguese](language)?
-- can rasa support this language?
-- can rasa understand this language?
-- can we make bot who speaks [Japanese](language)?
-- can you tell me what languages rasa supports
-- chatbot language ?
-- do you have a list of languages rasa supports
-- do you know of the languages rasa supports
-- do you know what language rasa uses
-- do you support [french](language) ?
-- doea rasa support a particular langauage?
-- does Rasa support other languages like [spanish](language)?
-- does rasa aid other languages?
-- does rasa support any languages?
-- does rasa support this language?
-- does rasa works in [spanish](language)
-- hich languages supports rasa
-- how can I add new language to rasa
-- how can I add new language to rasa [core](product)
-- how many natural language that rasa supported?
-- in which langauges can i build a rasa bot
-- is it available in [Spanish](language)?
-- is rasa available for node?
-- is support for rasa in this language?
-- language
-- language support
-- languages
-- languages supported
-- my bot can be in [italian](language)?
-- need to use [portuguese](language)
-- support for [serbian](language) language
-- what about languages supported in rasa?
-- what are the languages that is supported by rasa?
-- what dialects does rasa support
-- what different languages does rasa support
-- what is the language rasa supports
-- what is the variety of languages rasa uses
-- what language does rasa support?
-- what language list can I find for rasa
-- what language supported by rasa?
-- what language would rasa use
-- what languages are available?
-- what languages are supported by rasa?
-- what languages can be supported by rasa?
-- what languages do you support
-- what languages does rasa support?
-- which language can I use with rasa?
-- which language do you support?
-- which language supports rasa
-- which languages are supported?
-- which languages do you support
-- which languages does rasa support
-- which languages supports rasa
-- your [NLU](product) understand [spanish](language)?
-- could I program spanish speaking bots?
-
-## intent:ask_faq_opensource
-- Are you open-source?
-- Could you tell me whether rasa is open source or not?
-- How do I find out if rasa is open source?
-- Is Rasa a software formatted as open source?
-- Is Rasa open source
-- Is it a open source or any premium offer is available
-- Is rasa open source?
-- Is the rasa software open source?
-- Is your software open source?
-- Rasa open source?
-- The rasa software, is that open source?
-- are you full open source
-- are you open source
-- could I call rasa open source software?
-- does rasa fall into the open source software category?
-- does rasa use open source software?
-- how do i get the open source rasa
-- is RASA open source?
-- is Rasa open source
-- is Rasa open source?
-- is Rasa open sourced?
-- is it open source
-- is it open source?
-- is rasa Open-Source?
-- is rasa a type of open source software?
-- is rasa an open source software?
-- is rasa considered open source software?
-- is rasa is open source?
-- is rasa like an open source software
-- is rasa open source?
-- is rasa software that is classified as open source?
-- is the Rasa project open sourced?
-- is the project open source?
-- is the software rasa open source?
-- is this open source
-- is this open source license
-- is this opensource?
-- is your product open source
-- ist es freie open source software
-- no budget, that why i looking for open source
-- rasa [core](product) is open source?
-- rasa is the open source
-- what components of Rasa are open source
-- would an example of open source software be rasa?
-- would people consider rasa an open source software?
-- would rasa be open source software?
-- would rasa fall into the category of open source software?
-- would you call rasa open source software?
-- would you consider rasa open source software?
-- How is it opensource
-
-## intent:ask_faq_python_version
-- What Python version should I use?
-- Which python version should I install to run Rasa example?
-- Which version of Python to install?
-- python version
-- python version?
-- what is python version required?
-- what python version do i install
-- what python version should i use
-- what version does python needs
-- what version of python
-- which python do you support?
-- which python version
-- which python version should i install
-- which version of python do i need
-
-## intent:ask_faq_slots
-- Definition of slots please.
-- Does anyone know what slots are?
-- Explain slots to me?
-- Give me a description of slots.
-- Help me to figure out the meaning of slots.
-- Help me understand what slots are.
-- I bet you can tell me all about slots.
-- I dunno what a slot is
-- I need a expert opinion on slots.
-- I need to know about slot filling
-- I'd like to know the meaning of slots
-- In Rasa, what are slots used for?
-- Not sure what slots are.
-- Not sure what slots are?
-- Please define the word slots for me.
-- Please elaborate on the game of slots?
-- Talk slots over with me.
-- What are slots used for?
-- What are slots?
-- What do I do with slots?
-- What exactly are slots?
-- What is the definition of slots
-- What is the meaning of the word slots?
-- What's the slots?
-- Where can I find the definition of slots?
-- You can tell me info on slots.
-- a slot is what
-- and what are slots
-- and what are slots?
-- could you inform me of the meaning of slots?
-- describe the word slot please
-- do you know what slots are?
-- help mi with slots
-- how are the slots?
-- how can we keep buttons to get slots
-- how can you tell me what a slot is ?
-- how do slots work
-- how slots are filled
-- how to keep button system for slot selection
-- how to set text slot without mentioned json
-- name what a slot is
-- slots
-- slots are what ?
-- slots are what exactly?
-- slots can be described as ?
-- slots, what do youi mean?
-- slots?
-- tell me about slots
-- tell me the slots?
-- what about slots
-- what are slots
-- what do you mean by slots?
-- what do you think slots are?
-- what is a slot?
-- what is slots
-- what slots are there?
-- what slots are?
-- when can you tell me what a slot is ?
-- where can I find out what a slot is?
-- where slots getting values
-- which are the slots?
-- which slots are there?
-
-## intent:ask_faq_tutorialcore
-- are there some core tutorials i could look at
-- can you show me a core tutorial
-- core tutorial
-- do you have a core tutorial i can follow
-- do you have tutorials about core
-- i am looking for a core tutorial
-- i need a core tutorial
-- i need a rasa core tutorial
-- i need a tutorial on how to use rasa core
-- i want a tutorial on core
-- i want a tutorial on rasa core
-- i would like to follow a core tutorial
-- please show me a core tutorial
-- rasa core tutorial
-
-## intent:ask_faq_tutorialnlu
-- are there some nlu tutorials i could look at
-- can you show me a nlu tutorial
-- do you have a nlu tutorial i can follow
-- do you have tutorials about nlu
-- i am looking for a nlu tutorial
-- i need a nlu tutorial
-- i need a rasa nlu tutorial
-- i need a tutorial on how to use rasa nlu
-- i want a tutorial on nlu
-- i want a tutorial on rasa nlu
-- i would like to follow a nlu tutorial
-- nlu tutorial
-- please show me a nlu tutorial
-- rasa nlu tutorial
-- I am looking for tutorial on Rasa NLU
-
-## intent:ask_faq_tutorials
-- Did you have an tutorial.
-- Great. Are there any tutorials?
-- Im looking for some tutorial
-- Is there a tutorial for Rasa?
-- TUTORIAL !!!!!!!!!!
-- Tutorials for learning rasa ?
-- any tutorials on using rasa?
-- are there some tutorials i could look at
-- are there tutorials about rasa?
-- basic tutorials
-- best tutorial for rasa
-- can yiu send me a tutorial?
-- can you pint me to a good how-to online about Rasa
-- can you point me to a good manual about Rasa
-- do you have a rasa tutorial
-- download the tutorial
-- get me some tutorials
-- i cannot find tutorial for rasa
-- i need a good tutorial for rasa
-- i want a tutorial of rasa
-- i want some tutorial
-- i'm looking for the youtube tutorial
-- is there a tutorial for this?
-- is there a tutorial?
-- rasa bot tutorial
-- rasa tutorial
-- rasa tutorials
-- show me a tutorial?
-- tutorial
-- tutorial?
-- tutorials
-- what's the best tutorial
-- where can i fid tutorials for rasa
-- where can i find some tutorials?
-- where can i get a tutorial on rasa
-- yes, where I can find some hand-on tutorials to use RASA products?
-- I need to study RASA step by step, which is the best site to study?
-
-## intent:ask_faq_voice
-- Building a rasa voice bot?
-- Building a voice bot using rasa.
-- Can I build a rasa voice bot?
-- Can I use my voice to speak to these bots?
-- Can I use rasa to build a voice bot?
-- Can one make a voice bot with rasa?
-- Can you build a voice bot using rasa?
-- Could I build a rasa voice bot?
-- Do you know how to build a voice bot with rasa?
-- Do you know if I can build a voice bot using rasa?
-- Do you see an application of rasa in voice bot building?
-- How can I build a voice bot with rasa?
-- How can I build my voice bot using rasa?
-- How can I use to rasa to build a voice bot?
-- How can i integrate voice in RASA [CORE](product)
-- How could I construct a voice bot with rasa?
-- How to build a voice bot using rasa?
-- How to build a voice bot with rasa?
-- How to build a voice bot?
-- How to use rasa to build a voice bot.
-- I can build a voice bot with rasa, right?
-- I can build a voice bot with rasa?
-- I could build a voice bot with rasa?
-- I'd like to build a voice bot with rasa.
-- I'd like to use rasa to build a voice bot.
-- Is it possible to build a voice bot with rasa?
-- Is it possible to use rasa to build a voice bot?
-- Is rasa a good fit for building a voice bot?
-- Is rasa any good for building a voice bot?
-- Is rasa suitable to build voice bots?
-- It is possible to build a voice bot with rasa?
-- Rasa voice bot building.
-- Voice bot
-- Voice in Rasa
-- What can I do to build a voice bot with rasa?
-- What to do if I want to build a voice bot using rasa?
-- When can I build a voice bot using rasa?
-- When is the best time to build a voice bot with rasa?
-- Will it be correct if I said I can build a voice bot with rasa?
-- alexa
-- can I construct a voice bot with rasa?
-- can I create a voice bot with rasa?
-- can I form a voice bot with rasa?
-- can I invent a voice bot with rasa?
-- can I make a voice bot with rasa?
-- can I use rasa to build alexa skills
-- can a voice bot be built using rasa?
-- can i build a voice bot
-- can i build a voice bot with rasa?
-- can rasa be used to build a voice bot?
-- can rasa be used with alexa
-- do u know Alexa?
-- do you have voice recognition
-- do you support alexa voice?
-- do you take voice input?
-- does rasa support voice input
-- how can i use rasa with alexa
-- how do i build a voice bot?
-- how to add voice assitant to chat bot
-- i want to build a voice bot
-- is there an alexa integration
-- rasa can't be used to build a voice bot, can it?
-- voice
-- what is the chance of building a rasa voice bot?
-- with rasa can I build a voice bot?
-- with rasa can I construct a voice bot?
-- with rasa can I form a voice bot
-- with rasa can I invent a voice bot?
-- with rasa can I make a voice bot?
-- you have speech recognition?
-
-## intent:ask_faq_what_is_forum
-- Could you please describe the Rasa forum?
-- Could you please explain the Rasa forum to me?
-- Could you please give me a description of the Rasa forum?
-- Could you please tell me more about Rasa forum?
-- Did you know about Rasa forum?
-- Do you have rasa forum?
-- How do you define the Rasa forum?
-- Is rasa forum reliable?
-- List the characteristics of rasa forum?
-- What are the rules of the Rasa forum?
-- What can a person do in the forum
-- What do people do in the Rasa forum?
-- What happens in the Rasa forum?
-- What is the advantage of rasa forum?
-- What is the purpose of the Rasa forum?
-- What is the scope of the Rasa forum?
-- i would just like to have the link for the community
-- is there anything specific to be done in this forum
-- so what exactly is the Rasa forum?
-- so what is this forum for?
-- tell me about the forum
-- what area is the forum for?
-- what can I do in the forum
-- what can I do in your community's forum
-- what can I post in the forum?
-- what can a person in Rasa do at the forum
-- what can be done in the forum?
-- what can be performed in the forum?
-- what can people do in the forum
-- what can people in Rasa do at the forum
-- what can you put in the forum?
-- what do people do in the forum
-- what do we do in the forum
-- what does a person do in the Rasa forum
-- what exactly is the forum?
-- what is a Rasa forum for?
-- what is the Rasa forum
-- what is the Rasa forum used for
-- what is the forum
-- what is the forum about
-- what is the forum in Rasa used for
-- what is the forum in your community used for
-- what is the forum used for?
-- whats in the forum
-- whats int he forum
-- whats the purpose of this forum
-- whats the task of this forum
-- which are the topics covered in this forum
-- who is the forum for?
-- why should I join the forum
 
 ## intent:ask_how_contribute
 - Can I assist?
@@ -1062,303 +99,6 @@
 - in what ways can I help out?
 - what can I do?
 
-## intent:ask_howbuilt
-- By what means were you made?
-- By what method were you fashioned?
-- Can you explain how you were created?
-- Can you give me an idea as to how you were created?
-- Can you say how you were constructed?
-- Do you know how you were built?
-- Do you know how you were made?
-- How did they build you?
-- How did they create you?
-- How did they make you?
-- How did you come into being?
-- How did you come to be?
-- How exactly were you devised?
-- How exactly were you made?
-- How were you built?
-- How were you conceived?
-- How were you constructed?
-- How were you devised?
-- How were you formed?
-- How were you made into who you are?
-- How were you made?
-- How were you materialized?
-- How were you set up?
-- I want to know how you were formed
-- I'd like to know how you were created
-- I'd like to know how you were put together?
-- In what manner were you built?
-- In what manner were you constructed?
-- In what manner were you formed?
-- In what way were you created?
-- In what way were you formed?
-- In what way were you made?
-- In what way were you shaped?
-- In which manner were you devised?
-- Let me know how you were made exactly
-- Specify how you were created?
-- Tell me how you were made?
-- What process was used to build you?
-- What process was used to create you?
-- What was the process for making you?
-- You originated through what means?
-- how have you been built?
-- how were you made?
-- in what way were you made?
-- so how were you made?
-- what are you made of
-
-## intent:ask_howdoing
-- Ahoy matey how are you?
-- Are you ok?
-- Do you feel good?
-- Do you have a great day?
-- HI Sara, what are you up to?
-- Hi Sara! How are you?
-- How are You?
-- How are things?
-- How are you
-- How are you men?
-- How are you today?
-- How are you?
-- How was your day?
-- How you doing?
-- How's it going
-- How's it hanging?
-- How's life treating you friend?
-- How've you been?
-- Hows it going
-- I'm fine and you
-- Is everything ok?
-- What's going on?
-- What's new?
-- What's up
-- What's up man
-- and you
-- are you alright
-- are you happy
-- are you having a good day
-- are you ok
-- are you okay
-- come stai?
-- como estas
-- h r u ?
-- hello, how are you?
-- hey how are you?
-- hi how are you?
-- hi how u doing
-- hi sara, how are you?
-- how ?
-- how are things going
-- how are things with you?
-- how are u
-- how are u?
-- how are xou
-- how are you
-- how are you ?
-- how are you doing
-- how are you doing this morning
-- how are you doing today my sweet friend
-- how are you doing today?
-- how are you doing?
-- how are you feeling
-- how are you today
-- how are you'
-- how are you?
-- how are you????
-- how are yuo
-- how do you do?
-- how have you been
-- how is it going
-- how is your day
-- how is your day going
-- how is your evening
-- how r u
-- how r u ?
-- how r u>
-- how you doing
-- how you doing?
-- how's it going?
-- how's life
-- how's life been treating you?
-- how's your day going
-- howareyou
-- hw r u?
-- is everything all right
-- is everything okay
-- nah, I'm good - how are you doing?
-- okay hi how are you?
-- wassup>
-- what about your day
-- what are you up to?
-- what's good
-- what's up
-- what's up sara
-- what's up?
-- whatchcha doing
-- whatchya upto ?
-- whats goin on
-- whats new
-- whatsapp
-- yow are you
-- ¿Qué pasa?
-- ça va ?
-
-## intent:ask_howold
-- Do you have friends the same age as you, if so, how old are they?
-- How long have you been alive?
-- How long have you been around?
-- How long have you occupied the earth?
-- How many candles were on your last birthday cake?
-- How many years have you been alive?
-- How many years have you lived?
-- How old are you?
-- How old were you on your last birthday?
-- How old will you be on your next birthday?
-- Tell me your day, month and year of birth.
-- What is your age?
-- What is your birthdate?
-- What is your count of years being alive so far?
-- What was your age on your last birthday?
-- What will be your age on your next birthday?
-- What year were you born?
-- Whats your age?
-- When do you celebrate your day of birth?
-- and you are how many years old?
-- can you tell me exactly how old you are?
-- can you tell me what number represents your age?
-- can you tell me your age?
-- do you know how old you are?
-- give me your age?
-- how about your age
-- how aold are you
-- how many ages?
-- how many years old are you?
-- how old are u
-- how old are you
-- how old are you?
-- how old were you on your last birthday?
-- how old were you when you celebrated your last birthday?
-- how old will you be this year?
-- how old?
-- in what year were you born?
-- tell me how old you are?
-- tell me your age number?
-- tell me your age?
-- what age are you
-- what age were you when you celebrated your last birthday?
-- what is your age?
-- what is your birthday?
-- what is your exact age?
-- what number represents your age?
-- what year were you born?
-- what's your age?
-- whats your age?
-- whats your birth year?
-- when is your birthday?
-- when were you born?
-- when you were bon
-
-## intent:ask_isbot
-- Ar you a bot ?
-- Are you a bot
-- Are you a chat bot?
-- Are you the bot?
-- Hi there, are you the bot?
-- So I'm here Today to ask one very simple question, what are you ?
-- are you a BOT
-- are you a Skynet ?
-- are you a bot
-- are you a bot ?
-- are you a bot?
-- are you a chatbot
-- are you a rasa bot?
-- are you a real bot?
-- are you a robot
-- are you ai
-- are you artificial
-- are you artificial intelligence
-- are you bot
-- are you bot?
-- are you human?
-- are you rasa bot?
-- are you real
-- are you real lol
-- are you really a bot
-- are you robot
-- are you sure that you're a bot?
-- bot?
-- cuz you are a bot
-- i guess you are a chatbot
-- oh are you chatbot?
-- tell me, are you a bot?
-- what are you, a bot?
-- you are a robot
-- you are ai
-- you are chatbot
-- you're a bot
-
-## intent:ask_languagesbot
-- Are you familiar with more than one language?
-- Can you communicate in any other languages?
-- Can you speak more than one language?
-- Do you know any other languages?
-- Do you know other languages?
-- Do you speak [german](language)?
-- Do you speak any other languages?
-- Do you understand spanish?
-- How many different languages are you fluent in?
-- How many languages are you familiar with?
-- How many languages can you speak?
-- How many languages do you have knowledge of?
-- How many languages do you know?
-- In what languages are you fluent enough?
-- In which languages are you fluent?
-- In which languages can you speak?
-- Speak any other languages?
-- What are all of the different languages you can speak?
-- What are the languages you can speak?
-- What do you speak?
-- What languages are you fluent in?
-- What languages can you communicate in?
-- What languages can you converse in?
-- What languages can you use?
-- What languages do you know how to use?
-- What languages do you know?
-- What languages do you speak?
-- Which languages are you familiar with?
-- Which languages do you speak?
-- are you bilingual?
-- are you multilingual?
-- can you speak [Spanish](language)?
-- can you speak in [italian](language)?
-- do you know [chinese](language)
-- do you speak [dutch](language)?
-- do you speak [german](language)?
-- do you speak any other languages?
-- how many languages are you fluent in?
-- how many languages do you know?
-- tell me some languages you know?
-- what else do you know besides English?
-- what foreign languages are you fluent in?
-- what foreign languages do you know?
-- what language do you use
-- what languages are you comfortable speaking at?
-- what languages are you familiar with?
-- what languages are you good at speaking?
-- what languages do you know?
-- what languages do you speak
-- what languages you are well versed ?
-- what languages you can be comfortable speaking?
-- what languages you can handle well?
-- what languages you can speak ?
-- what languages you know?
-- what languages you prefer more speaking at?
-- which languages do you understand?
-- you know [French](language)
-
 ## intent:ask_question_in_forum
 - Can we stop at the forum so I can ask a question
 - Help me to find the forum.
@@ -1402,508 +142,7 @@
 - i need information from posters in the forum
 - ok send me to the forum
 - to the forum
-
-## intent:ask_restaurant
-- Any good restaurants nearby?
-- Can you find a restaurant for me?
-- Can you find me a burger joint?
-- Can you find me a restaurant?
-- Can you recommend a restaurant open right now
-- Could you find a restaurant for me?
-- Could you find me a restaurant to eat at?
-- Could you find me a restaurant?
-- Do you find me a restaurant?
-- Do you seek me a restaurant?
-- Find a restaurant for me to eat at.
-- Find a restaurant for me where I can eat.
-- Find a restaurant for me?
-- Find me a fast food restaurant.
-- Find me a place to eat
-- Find me a restaurant where I can eat.
-- Have you seen me a restaurant?
-- Help me find a restaurant
-- Help me with finding this restaurant
-- Hey help me find a restaurant
-- Hey, can you help me with locating this restaurant.
-- Hi, can you give me the nearest fast food place?
-- How can you help me find a restaurant.
-- I am hungry, find me some place to go
-- I need a new restaurant
-- I need a restaurant.
-- I need to find this restaurant
-- I'm gonna need help finding a restaurant
-- I'm looking for a Spanish restaurant.
-- IS there any near by restaurant?
-- Is there any restaurant?
-- Pick a restaurant for me, please
-- Recommend me a restaurant around here.
-- Show me how to find a restaurant
-- Show me the closest open restaurant
-- Suggest me a good restaurant around
-- What restaurant would you recommend for dinner?
-- What's a good place to eat nearby
-- What's the closest restaurant open near me
-- Where is the restaurant
-- Where should I eat?
-- Where should I go for dinner?
-- Will you find me a restaurant?
-- Would you find a restaurant for me?
-- Would you find any restaurant?
-- Would you find me a restaurant?
-- can i be shown a gluten free restaurant
-- can you find me a restaurant?
-- help me find restaurant
-- i want a french restaurant
-- i'm looking for a Chinese restaurant
-- restaurants
-- will you see any restaurant for me?
-- I want to find some restauant nearby
-- show me restaurents
-
-## intent:ask_time
-- Can you give me the time?
-- Can you tell me the time?
-- Can you tell me what time it is?
-- Can you tell the time?
-- Could you tell me the time, please?
-- Could you tell me the time?
-- Could you tell me what time is it?
-- Do you have the time?
-- Do you know the time?
-- Do you know what time it is?
-- Excuse me, what time is it?
-- Give me the time.
-- Hi, I need the time.
-- I need to know what time it is.
-- Pardon me, but do you know the time?
-- Tell me the time.
-- Time, please!
-- Time?
-- What is the current time?
-- What is the exact time?
-- What is the hour and minute right now?
-- What is the time?
-- What might the time be?
-- What time do we have?
-- What time have we got?
-- What time is it in [Berlin](location)?
-- What time is it right now?
-- What's the current time?
-- What's the time right now?
-- What's the time?
-- Would you tell me what time it is?
-- do you have the time?
-- do you know the current time?
-- tell me the current time.
-- tell me the time it is.
-- tell me the time.
-- tell me what time you have.
-- that's true. do you know what time it is?
-- what is the current time?
-- what is the time ?
-- what is the time in [Sydney](location)?
-- what is the time?
-- what is time in US ?
-- what is time is US ?
-- what is time is USA ?
-- what time do you have?
-- what time is it
-- what time is it?
-- what time it is
-- what's the time
-- whats the time now
-
-## intent:ask_weather
-- Are there any meteorological changes that I need to be aware of?
-- Are we in for a scorcher?
-- Beautiful day, isn't it?
-- Can I ask you something about weather
-- Can we expect any thunderstorms?
-- Do you have good weather?
-- How is the weather today?
-- How is the weather?
-- How is weather today
-- Is it hot or cold?
-- Is it humid out there today?
-- Is it quite breezy outside?
-- Is it raining
-- Is it raining?
-- Looks like a beautiful day hey?
-- Nice day out today?
-- Weather?
-- What is the temperature today?
-- What is the weather at your place?
-- What is the weather for tomorrow?
-- What is the weather in newyork?
-- What's it like out there?
-- What's the weather forecast?
-- What's the weather like over there?
-- What's the weather like where I am right now?
-- What's the weather like?
-- Will I require my raincoat today?
-- Will the skies be clear today?
-- Will we build a snowman today?
-- excellent - is it hot in [Berlin](location)?
-- how is the weather
-- how is the weather ?
-- how is the weather in [berlin](location)?
-- how is the weather?
-- how's the weather ?
-- how's the weather in [berlin](location)
-- how's the weather?
-- how's weather
-- hows the waether
-- hows the weather in bot world
-- hows the weather today in [berlin](location)?
-- is it hot ?
-- is it hot outside ?
-- is it sunny
-- is the sun out where you are?
-- is the sun out where zou are?
-- it is cold
-- temperature?
-- the weather today
-- weatger
-- weather
-- weather?
-- well, if you wish: what about the weather
-- what about the weather in [Lüneburg](location)
-- what is the temperature
-- what is the wather
-- what is the weatehr
-- what is the weather
-- what is the weather in [Berlin](location)
-- what is the weather in [zurich](location)?
-- what is the weather like where you are?
-- what is the weather like?
-- what is the whether today
-- what the wheather like?
-- what"s the weather
-- what's the weather
-- what's the weather like
-- what's the weather like in [LA](location)
-- what's the weather like where you are?
-- what's the weather like?
-- what's the weather today
-- what's the weather today?
-- whats the temperature
-- whats the temperature in [delhi](location)?
-- whats the weather in [berlin](location)?
-- whats the weather like tomorrow?
-- wheather at you location?
-- wheather be like at your place?
-
-## intent:ask_whatismyname
-- Can you tell me my name?
-- Can you tell me what I am called?
-- Do I have a name?
-- Do I have a name? What is it?
-- Do you know my name?
-- Do you know what my name is?
-- Explain my name to me.
-- I have a name, what is it?
-- I'd like to know my name
-- I'd like to know what my name is
-- Inform me what my name is
-- May i know my name?
-- Please let me know what my name is
-- Say my name.
-- Tell me my name
-- Tell me my name.
-- What am I called?
-- What could be my name?
-- What did my parents name me?
-- What do I call myself?
-- What do my colleagues call me?
-- What do people call me?
-- What does everyone call me?
-- What else do people call me?
-- What exactly is my name?
-- What is my first name?
-- What is my full name?
-- What is my name?
-- What is the name I was given?
-- What name do I go by?
-- What name should I recognize for myself?
-- What was I named?
-- What would be the name on my tombstone?
-- can you tell me my name?
-- what is my name
-- what is my name?
-- what's my name?
-
-## intent:ask_whatisrasa
-- Can you brief me about rasa
-- Can you tell me more about rasa?
-- Can you tell me what Rasa does?
-- Could you tell me more about Rasa?
-- Give me more information about Rasa
-- How does Rasa work?
-- I want to know about rsa
-- I want to know what rasa actually does that isn't clear to me yet
-- I want to learn what rasa does
-- I want to learn what rasa is
-- I would like to know about rasa
-- I would like to know more about your product
-- OK can u brief me Abt rasa
-- RASA?
-- Rasa Is?
-- WHAT IS IT
-- WHAT IS RASA
-- What Is rasa?
-- What can rasa do?
-- What components does Rasa have?
-- What do you do as a company?
-- What do you do at Rasa?
-- What does Rasa build?
-- What does Rasa do?
-- What does Rasa make?
-- What does rasa do exactly?
-- What exactly is Rasa?
-- What is Rasa?
-- What is rasa doing exactly?
-- What is rasa?
-- What is the RASA Stack?
-- What's rasa?
-- can you explain rasa?
-- can you pls explain what rasa does
-- could you tell me more about rasa
-- explain me what rasa does
-- explain me what rasa is
-- how does RASA work?
-- how does rasa work
-- how does rasa work?
-- how rasa works ?
-- how works rasa
-- i dont get what rasa is
-- i havent understood yet what rasa actually is
-- i want to about rasa
-- i want to know about rasa
-- i want to know what rasa does
-- i want to learn something about rasa
-- so how does it all work?
-- sorry tell me about rasa
-- tell me about rasa
-- tell me bout rasa
-- tell me more about rasa
-- tell me more about your company
-- what are the componensts of RASA
-- what can I do with Rasa?
-- what can i build with rasa [core](product)?
-- what can i do with rasa
-- what do you guys do at rasa
-- what does rasa do
-- what does rasa do ?
-- what does rasa do?
-- what does rasa mean
-- what is [core](product)
-- what is [rasa](company)
-- what is [rasa](company) ?
-- what is in rasa
-- what is it for?
-- what is rasa
-- what is rasa [core](product)
-- what is rasa [core](product)?
-- what is rasa actually
-- what is rasa?
-- whats rasa
-- yeah go on explaining what rasa is
-
-## intent:ask_whatspossible
-- Can you explain me in one sentence what you are doing?
-- Can you help me?
-- Could you please show me what you can
-- Great, is there anything else you can do, bot?
-- How can you help me
-- How you help me?
-- I need help
-- I need some help
-- What are my options
-- What are you able to do?
-- What can I ask you?
-- What can I do?
-- What can you demo
-- What can you do
-- What can you do for me?
-- What can you do?
-- What can you tell me?
-- What do you do
-- anything els
-- are there any other options?
-- can I ask you anything else?
-- can you do anything else?
-- can you help me
-- can you help me?
-- come back
-- cool! can I do something else here?
-- hello what can you do for me
-- help
-- help me
-- help please
-- help pls
-- help?
-- hep me
-- hi. Sara what do you do?
-- hm that doesnt quite help me is there anything else you can do?
-- how can i use you
-- how can you help me
-- how can you help me?
-- how can you help?
-- how does this work?
-- how u can help me
-- how you help me
-- i asked you if you can do anything else
-- i don't know what i want
-- i need help
-- more info
-- now what?
-- options
-- show me the menu
-- show me what's possible
-- so now what
-- so what can you do
-- so what can you do?
-- so what can you help me with?
-- so what next?
-- talk to me
-- talk to me!
-- tell me something you can do
-- tell me what's your skill
-- um what now
-- what are all the things you understand?
-- what are the options?
-- what are you ding
-- what are you doing
-- what are you good at?
-- what can I ask ?
-- what can I ask you?
-- what can I do here
-- what can I do with Sara?
-- what can I do with this bot
-- what can i do here
-- what can i do now
-- what can u do
-- what can we talk about?
-- what can you answer
-- what can you do
-- what can you do for me
-- what can you do, sara?
-- what can you do?
-- what can you offer me?
-- what can you tell me
-- what can you?
-- what cn u do for me ?
-- what do you do
-- what do you do?
-- what do you know except this?
-- what else can I do here?
-- what else can i do
-- what else can i do?
-- what else can you do?
-- what else can you help with?
-- what i have to do
-- what is this bot for
-- what u can do
-- what u can do?
-- what you can do
-- what you can do for me?
-- what you can do?
-- what you do
-- what you doing?
-- what you talk about?
-
-## intent:ask_when_next_event
-- Assuming that there is an upcoming event, when is that event?
-- At what time is the next event scheduled?
-- At which date the next community event will take place?
-- By chance do you know the date of next community event?
-- Do you know the exact date for the next community event?
-- Do you know when is the next event in [Montreal](location)?
-- If there is an upcoming event when is it?
-- Is next community event held in 2019?
-- Is there a Rasa event in [San Francisco](location)
-- Is there an event in [Montreal](location)?
-- Is there any special in next community event?
-- On what day is the next event scheduled?
-- Tell me when the next community event is happening;
-- What and when is the next event?
-- What even is coming up next and when is it please?
-- What is the date of the next community event?
-- What's the next community event
-- What's the next rasa event
-- When does the upcoming event occur?
-- When is it planned the next event in [Montreal](location)?
-- When is it scheduled the next community event?
-- When is it that the next event occurs?
-- When is the next community event?
-- When is the next event in [Berlin](location)
-- When is the next event scheduled?
-- When is the next user group meetup
-- When will the next event occur in the community?
-- Where is next community event held?
-- do you have an event in [Berlin](location)
-- is there an event in [Montreal](location)
-- what community events are there?
-- what date is the next community event?
-- when is our next group event going to take place?
-- when is the event within the community gonna happen?
-- when is the next community event gonna be?
-- when is the next event?
-- when is the next group event going to be?
-- when will our next group event be?
-- when will the community event take place?
-- when will the next community event be?
-
-## intent:ask_wherefrom
-- Are you from around here?
-- Around where are you from?
-- Do you know where you come from?
-- From where did you come?
-- So where are you from
-- What area are you from?
-- What citizenship do you lay claim to?
-- What city are you in?
-- What city do you claim to for your birth?
-- What city were you born in?
-- What country are you from?
-- What country were you born in?
-- What is your birthplace?
-- What is your heritage?
-- What is your origin?
-- What is your original location?
-- What is your root?
-- What location are you from?
-- What state were you born in?
-- What's the name of the place you came from?
-- Where are you located?
-- Where are you?
-- Where are your origins?
-- Where are your roots?
-- Where did you come from?
-- Where did you grow up?
-- Where did you originate?
-- Where do you come from?
-- Where do you consider home?
-- Where do you live?
-- Where from?
-- Where might you be from?
-- Where were you at before you were here?
-- Where were you born?
-- You live around here?
-- You were conceived in what location?
-- are you from around here?
-- what country are you from?
-- where are from
-- where are you from
-- where are you from?
-- where are your parents from?
-- where did you come from?
-- where did you grow up?
-- where did you spend your youth?
-- where do you come from?
-- where do you live
-- where do you live?
-- where's your home town?
+- need help on chatbot
 
 ## intent:ask_which_events
 - Any other event like rasa meetup in future?
@@ -1951,100 +190,67 @@
 - what kind of events will be held?
 - what sort of social events are we throwing?
 - where can I see a calendar of community events?
+- What are the events in [Detroit](location)?
+- When are the events in [Paris](location)?
+- what are the events in [Berlin](location)?
+- What are the events in [Switzerland](location)?
+- When are the events in [paris](location)?
+- what are the events in [berlin](location)?
+- What are the events for [Detroit](location)?
+- When are the events for [Paris](location)?
+- what are the events for [China](location)?
+- What are the events for [New York](location)?
+- When are the events for [paris](location)?
+- what are the events for [berlin](location)?
+- Assuming that there is an upcoming event, when is that event?
+- At what time is the next event scheduled?
+- At which date the next community event will take place?
+- By chance do you know the date of next community event?
+- Do you know the exact date for the next community event?
+- Do you know when is the next event in [Montreal](location)?
+- If there is an upcoming event when is it?
+- Is next community event held in 2019?
+- Is there a Rasa event in [San Francisco](location)
+- Is there an event in [Montreal](location)?
+- Is there any special in next community event?
+- On what day is the next event scheduled?
+- Tell me when the next community event is happening;
+- What and when is the next event?
+- What even is coming up next and when is it please?
+- What is the date of the next community event?
+- What's the next community event
+- What's the next rasa event
+- When does the upcoming event occur?
+- When is it planned the next event in [Montreal](location)?
+- When is it scheduled the next community event?
+- When is it that the next event occurs?
+- When is the next community event?
+- When is the next event in [Berlin](location)
+- When is the next event scheduled?
+- When is the next user group meetup
+- When will the next event occur in the community?
+- Where is next community event held?
+- do you have an event in [Berlin](location)
+- is there an event in [Montreal](location)
+- what community events are there?
+- what date is the next community event?
+- when is our next group event going to take place?
+- when is the event within the community gonna happen?
+- when is the next community event gonna be?
+- when is the next event?
+- when is the next group event going to be?
+- when will our next group event be?
+- when will the community event take place?
+- when will the next community event be?
 - will there be an event in my city?
-
-## intent:ask_whoami
-- Can you tell me who I am?
-- Can you tell me who am I?
-- Do you know who I am?
-- Do you know who am I?
-- How can I determine who I am?
-- How can I determine who am I?
-- How do I discover who I am?
-- How do I discover who am I?
-- How do I identify myself?
-- Okay who am I?
-- Shall i know who am i?
-- Tell me who I am.
-- Tell me who I am?
-- Tell me who am I?
-- WHo am I
-- Who am I?
-- Who could I be?
-- can you tell me what I am?
-- can you tell me what my identity is?
-- can you tell me who I am?
-- tell me what my identity is?
-- tell me who I am?
-- what's my identity?
-- who am i
-- who are I ?
-- who may i ?
-
-## intent:ask_whoisit
-- HI, what's your name?
-- Hello. What's your name?
-- I want to know who you are
-- So who are you ?
-- Tell me more about you
-- WHat's your name ?
-- WHo are you ?
-- What are you ?
-- What is your name
-- What is your name?
-- What's your name
-- What's your name?
-- Whats your name?
-- Who are yopu?
-- Who are you
-- Who are you?
-- You are Human ?
-- como te llamas
-- hey what is your name
-- hi! what's your name?
-- ok who are you ?
-- tell me something about you
-- u are?
-- wer bist Du?
-- what are you called?
-- what is sara?
-- what is your job?
-- what is your nam
-- what is your name
-- what is your name?
-- what is your nme?
-- what your name?
-- what's your name
-- what's your name ?
-- what's your name bot
-- what's your name?
-- whats ur name
-- whats your name
-- whats your name'
-- whats your name?
-- who ARE YO
-- who am i speaking with
-- who am i talking to
-- who ar eyou
-- who are u?
-- who are y
-- who are you
-- who are you ?
-- who are you and what do you want from me
-- who are you?
-- who are you??
-- who is it?
-- who is talking?
-- who is this
-- who is this bot
-- who is this?
-- who r u
-- who r you
-- who speaks?
-- who talks?
-- whom i talking to
-- yes but who are you in your heart
-- may i know your name
+- When is the next event in [california](location)?
+- What is the next event in [Paris](location)?
+- When is the next event in [detroit](location)?
+- What is the next event in [san francisco](location)?
+- When is the next event for [Detroit](location)?
+- What is the next event for [Seattle](location)?
+- When is the next event for [India](location)?
+- What is the next event for [paris](location)?
 
 ## intent:ask_why_contribute
 - What can I bring to help your code
@@ -2068,74 +274,6 @@
 - why help out?
 - why offer my assistance?
 - why should I help?
-
-## intent:bye
-- Bye
-- Bye bye
-- adios
-- adios?
-- bye
-- bye .
-- bye :P
-- bye bot
-- bye bye
-- bye bye bot
-- bye for now
-- bye udo
-- bye was nice talking to you
-- bye!
-- byee
-- catch you later
-- ciao
-- cya
-- farewell
-- good bye
-- good bye rasa bot!
-- good night
-- goodbye
-- goodbye.
-- goodnight
-- gotta go
-- k byyye #slay
-- ok Bye
-- ok bye
-- ok, bye
-- ok.bye
-- see u later
-- see ya
-- see you
-- see you . bye
-- take care
-- then bye
-- tlak to you later
-- toodle-oo
-- tschüssikowski
-
-## intent:canthelp
-- I think you cant help me
-- and that's it?
-- and you call yourself bot company? pff
-- do you get anything?
-- exit
-- exit now
-- hey, you promised to contact me, but nobody did, I really need to finish that car insurance bot!!!!
-- hm i don't think you can do what i want
-- i guess you can't help me then
-- nothing else?
-- ok i guess you can't help me
-- ok then you cant help me
-- ok, but that doesnt help me
-- stop
-- stop go back
-- stop this conversation
-- that was shit, you're not helping
-- that's not what i want
-- this conversation is not really helpful
-- this is leading to nothing
-- you can't help me
-- you can't help me with what i need
-- you cannot help me with what I want
-- you cant help me
 
 ## intent:contact_sales
 - But I wanted a sales call
@@ -2169,6 +307,10 @@
 - I would like to have a call with sales team
 - I would like to have a demo scheduled
 - I would like to talk to someone from your sales team
+- i want to buy the enterprise edition
+- i would like rasa enterprise
+- purchase rasa enterprise
+- buy rasa enterprise
 - Ok I want to talk to your sales team immediately
 - Please connect me to someone from sales
 - Please schedule a sales call
@@ -2273,7 +415,6 @@
 - ok, well, then a sales call with the fabulous [Theodora Estrada](name)
 - please can you book call for me
 - please connect me to sales
-- please provide information on your enterprise package
 - request a call
 - request call
 - request call with sales team
@@ -2291,106 +432,9 @@
 - sign me up, my email is Elizabeth@yahoo.com
 - talk to sales team
 - we started working with rasa but now we need support
-
-## intent:deny
-- I don't want to
-- I don't want to give it to you
-- I don't want to say
-- I dont want to tell
-- I'm not giving you my email address
-- I'm not going to give it to you
-- NEIN
-- NO
-- NO DON"T WANT THIS!
-- Nah
-- Neither
-- Never
-- Nevermind
-- No
-- No thank you
-- No, not really.
-- No, thank you
-- No.
-- Nopes
-- Not really
-- absolutely not
-- decline
-- definitely not
-- deny
-- i decline
-- i don not like this
-- i don't think so
-- i don't want either of those
-- i don't want to
-- i don't want to give you my email
-- i dont want to
-- i dont want to accept :P lol
-- i guess it means - no
-- i'm afraid not
-- i'm not sure
-- it is going pretty badly
-- it sucks
-- it sux
-- n
-- na
-- nah
-- nah I'm good
-- nah not for me
-- nah, first time
-- nah, i'm good
-- nehi
-- nein
-- neither
-- never
-- never mind
-- no
-- no :(
-- no I dont want
-- no I haven't decided yet if I want to sign up
-- no and no again
-- no bots at all
-- no go
-- no i can't
-- no i don't accept
-- no i dont want to
-- no i dont want to accept :P lol
-- no i won't
-- no ma'am
-- no sir
-- no sorry
-- no thank s
-- no thank you
-- no thanks
-- no way
-- no you did it wrong
-- no!!!!
-- no, i hate it
-- no, my frst time
-- no, thank you
-- no, thanks
-- no, thankyou
-- no. u r idiot
-- non
-- noooooooooo
-- noooooooooooooooooooooooooooooooooooooooo
-- nop
-- nope
-- nope!
-- nope. i am good
-- not going well at all
-- not really
-- not right now
-- not yet
-- nö
-- sorry not right now
-- still dont want to tell
-- thanks but no thanks
-- this sucks
-- very bad
-- I do not need help installing
-- I don't wanna tell the name of my company
-- no stop
-- stop it, i do not care!!!
+- Can i have a deno
+- bookin
+- Is there a live demo of rasa somewhere ?
 
 ## intent:enter_data
 - $1
@@ -2423,7 +467,6 @@
 - Country names
 - Evaluate Rasa :-)
 - Flexible, but looking for low-cost alternative to proof of concept
-- How to migrate from [DialogFlwo](current_api)
 - I am [Christina Sullivan](name)
 - I am [Hattie Rice](name)
 - I am [Robert Starks](name)
@@ -2489,7 +532,7 @@
 - I'm a real good [engineer](job_function)
 - I'm an [AI researcher](job_function)
 - I'm an [engineer](job_function)
-- I'm in [business ](job_function)
+- I'm in [business](job_function)
 - I'm in [project mgmt](job_function)
 - I'm the [boss](job_function)
 - I'm the [developer](job_function)
@@ -2593,7 +636,7 @@
 - [Full Stack](job_function)
 - [Full stack](job_function).
 - [Helvetia](company)
-- [I am a freelancer ](company)
+- [I am a freelancer](company)
 - [IBM](company)
 - [IT manager](job_function)
 - [Im Phyllis Howard](name)
@@ -2698,7 +741,6 @@
 - [portuguese](language) is the only language but I want to add more
 - [product manager](job_function)
 - [project manager](job_function)
-- [rasa](company)
 - [reddit](company)
 - [saler](job_function)
 - [sales manager](job_function)
@@ -2772,6 +814,7 @@
 - faq
 - funny bot
 - get [dates](entity) from messages
+- how to extract [relationship](entity)
 - got it
 - half a million
 - have no idea
@@ -3103,280 +1146,31 @@
 - we think 4 million INR/ year
 - we're building a conversational assistant for our employees to book meeting rooms.
 - £50k
-- botonic
-- wordpress
+- [botonic](company)
+- [wordpress](company)
 - slack
 - e commerce bot
-
-## intent:explain
-- can you elaborate
-- could you explain why you need that
-- could you tell me more
-- explain it to me
-- explain that
-- i want more information
-- i would like to know why you need that
-- please elaborate
-- please explain
-- why do you need to know that
-- why is that necessary
-- give me more details
-
-## intent:greet
-- Bom dia
-- Bonjour
-- Good Morning
-- Good morning
-- Good mourning
-- Guten Morgen
-- HELLO
-- HEY
-- HEllo
-- HI
-- HI Sara
-- Hallo
-- Hei
-- Hellllooooooo
-- Hello
-- Hello Bot
-- Hello Rasa
-- Hello Sara
-- Hello sara
-- Hello!
-- Hey
-- Hey Sara
-- Hey bot
-- Heya
-- Heylo
-- Hi
-- Hi Sara
-- Hi Sara!
-- Hi bot
-- Hi man
-- Hi rasa
-- Hi sara
-- Hi sara..
-- Hi there
-- Hi!
-- Hi'
-- Hi,
-- Hi, bot
-- Hieee
-- Hieeeeeeeeeeeee
-- Hola
-- I said, helllllloooooO!!!!
-- Well hello there ;)
-- What is up?
-- Whats up
-- Whats up my bot
-- Whats up?
-- ayyyy whaddup
-- bonjour
-- ey boss
-- good evening
-- good moring
-- good morning
-- greet
-- greetings
-- hai
-- hallo
-- hallo sara
-- halloo
-- halloooo
-- halo
-- halo sara
-- heeey
-- heelio
-- hell9o
-- hellio
-- hello
-- hello Sara
-- hello everybody
-- hello friend
-- hello hi
-- hello is anybody there
-- hello it is me again
-- hello robot
-- hello sara
-- hello sweatheart
-- hello sweet boy
-- hello there
-- hello world
-- hello, my name is [Charles Pfeffer](name)
-- hello?
-- hello]
-- hellooo
-- helloooo
-- helo
-- hey
-- hey bot
-- hey bot!
-- hey dude
-- hey hey
-- hey let's talk
-- hey rasa
-- hey sara
-- hey ther
-- hey there
-- hey there boy
-- hey there..
-- hey, let's talk
-- hey, sara!
-- heya
-- heyho
-- heyo
-- hhola
-- hi
-- hi !
-- hi Mister
-- hi again
-- hi can you speak ?
-- hi folks
-- hi friend
-- hi friends
-- hi hi
-- hi i'm [Sandra Hernandez](name)
-- hi im [Amanda Anderson](name)
-- hi mrs rasa
-- hi pal!
-- hi sara
-- hi there
-- hi there it's me
-- hi!
-- hi.........................................................
-- hi?
-- hieee
-- hii
-- hiihihi
-- hiii
-- hlo
-- hola
-- howdy
-- i am [Karen Mease](name)
-- jojojo
-- jop
-- konichiwa
-- merhaba
-- ola sara
-- rasa hello
-- salut
-- sup
-- wasssup
-- wasssup!
-- what up
-- whats popping
-- whats up
-- yo
-- yoo
-
-## intent:handleinsult
-- FUCK
-- Fuck
-- Fuck Off
-- Fuck off
-- Fuck u
-- Fuck you
-- God you're a moron
-- I can't believe how dumb you are
-- I hate you
-- Loser
-- Stupid
-- You are a fool.
-- You are an idiot.
-- You are dumb.
-- You are shortsighted.
-- You are unintelligent.
-- You are unknowing.
-- You brain is dull.
-- You have no brains.
-- You have no intelligence.
-- You have no sense.
-- You know nothing.
-- You lack intelligence.
-- You lack understanding.
-- You're a dolt.
-- You're a dunce.
-- You're an idiot.
-- You're foolish.
-- Your intelligence is laughable.
-- Your mindset is naive.
-- a baby knows more than you
-- are u dump?
-- are you brain dead?
-- asshole
-- bitch
-- bloody dunce
-- but you are idiot
-- deal with my ass, you bitch
-- f*ck
-- fuck
-- fuck off
-- fuck rasa
-- fuck u
-- fuck you
-- fuck you machine learning bot
-- fuck you sara
-- fuck you!
-- fucking stupid
-- fucking work
-- get lost
-- go away
-- go fuck yourself
-- go to hell
-- how can you be such an idiot?
-- i hate you
-- i hate your dumb face
-- i think that you're a bullshit
-- idiot
-- insult you
-- ok fuck you
-- ok shut up
-- sara you look like a burnt sparrow
-- shit
-- shit bot
-- shut up asshole
-- so dumb
-- so fucking dumb
-- sucker
-- that wasn't very funny
-- thta was a terrible fucking joke
-- u r a piece of junk
-- ur a pussy
-- what fuck
-- yep but you are idiot
-- you are a moron
-- you are a stupid bot
-- you are an idiot
-- you are dumb
-- you are fucking stupid
-- you are fucking stupid guy！
-- you are idiot
-- you are idiotic
-- you are so ignorant
-- you are stupid
-- you are unintelligent
-- you are useless bot
-- you asshole
-- you idiot
-- you idiot bot
-- you son of a bitch
-- you suck
-- you're a loser lmao
-- you're an idiot
-- you're dumb
-- you're not smart
-- you're so dumb
-- you're the most moronic person I know
-- your mom gay
-- you are annoying
+- My name is [manuel](name)
+- I am [Aniket](name)
+- general and sales
+- [rasa](product)
+- [botpress](current_api)
+- simple bpt
+- education bot
+- contexual
+- Sorry  it's not [suleman](name) is [Shehzad](name)
+- [x](product)
+- [dialogueflow](current_api)
+- T10
+- the company is called t10
 
 ## intent:how_to_get_started
 - can you help me to build a bot
 - can you tell me how to build a bot?
-- como inicio en rasa
 - About [Core](product)
 - Can I build a FAQ robot with Rasa?
 - Can you shw me some information about intallation?
+- I wanted to build a bot my product customer support
 - Can you tell me more about [NLU](product)?
 - Get started
 - HOW CAN i connect to rasa
@@ -3451,7 +1245,6 @@
 - What are the components of rasa?
 - What are the prerequisites for installing RASA
 - What do I Need for Rasa implementation?
-- Wie fange ich mit Rasa an?
 - Yeah please help me out
 - Yes I am [new](user_type)
 - Yes, I want to know more about [NLU](product)
@@ -3481,6 +1274,7 @@
 - components in rasa
 - components of Rasa?
 - components of rasa
+- rasa components
 - different parts of Rasa
 - do you know how to set up a chatbot?
 - find out how to get started with Rasa
@@ -3498,7 +1292,6 @@
 - help with rasa
 - hi can you help e build a chatbot
 - hi, can you help in understanding NLU
-- hilf mir beim start
 - how about [nlu](product)
 - how about building chatbot
 - how can I build a chatbot
@@ -3579,7 +1372,7 @@
 - hw to get started with Rasa
 - i am [new](user_type)
 - i am [new](user_type) to rasa
-- i am a [new ](user_type)
+- i am a [new](user_type)
 - i am a [new](user_type) user
 - i m [new](user_type)
 - i need help with rasa
@@ -3675,6 +1468,38 @@
 - where to start?
 - yes i wanna know more about rasa [nlu](product)
 - I am trying to build a bot using rasa
+- i am [new](user_type) but so how can i start
+- where can i find rasa document
+- more about [Rasa open source](product)
+- tell me about [rasa open source](product)
+- i want to know about [rasa Open source](product)
+- get started with [Rasa Open Source](product)
+- [Rasa open source](product)
+- [rasa open source](product)
+- [rasa Open source](product)
+- [Rasa Open Source](product)
+- [rasa open source](product) then lets talk about [rasa x](product)
+- [rasa open source](product) please and thank you
+- [rasa open source](product) to begin with
+- [open source rasa](product)
+- the [rasa open source](product)
+- Tell me about [rasa open source](product)
+- Rada [open source](product)
+- how to train [rasa open source](product)
+- More about [Rasa open source](product)
+- Rosa [open source](product)
+- [rasa open source](product) first
+- rasa basics
+- how can i get stared
+- how to build assistant?
+- how to build assistant with rasa?
+- how to using you
+- What are the coponent
+- create chatbot steps
+- can you tell me how to create a new rasa project
+- can you help me build my bot?
+- start
+- how to build bot with rasa x
 
 ## intent:human_handoff
 - Can I speak to anyone who can really help me?
@@ -3718,6 +1543,34 @@
 - that's annoying I'd like to speak to someone real
 - thats not helping, can i talk to human?
 - wrong i want to speak to a human
+- can i speak to human
+- can i speak to your human
+- i want to chat with human
+- How do I talk to a human
+- talk with a human
+- Can i talk to a human instead
+- nevermind.... you're not human ... I need to talk to a live person
+- Can you get a human to assist me?
+- Can i talk to a human?
+- Can I talk to a human
+- Can I speak to a human?
+- can i speak to a human
+- no, i want to talk to human
+- can you hand a conversation over to a human?
+- can I talk to human?
+- can I talk to human
+- talk to human
+- i want human :(
+- can i talk to human
+- i want to talk to a human \
+- i want to speak to human
+- can i talk to a real person?
+- connect me to a real person
+- I need a real person
+- can i took with a real person
+- let me speak to a real person
+- let me speak to a real person please
+- i want to talk to a real person
 
 ## intent:install_rasa
 - Can you get me Rasa [Core](product)?
@@ -3812,72 +1665,11 @@
 - please tell steps for installing chatbot
 - what do I need to install Rasa
 - what sould i do to install rasa
-
-## intent:next_step
-- continue to next step
-- go to the next step
-- i have to go to the next step
-- i want next step
-- i want to go to the next step
-- next please
-- next step
-- next step now
-- next step please
-- next step pls
-- ok continue please
-- ok, next step
-- please go to the next step
-- take me to the next step
-- what is the next step ?
-
-## intent:nicetomeeyou
-- Delighted to make your acquaintance.
-- Feels great to see you!
-- Glad to finally meet you!
-- Glad to make your acquaintance.
-- Glad to meet you
-- Glad to meet you!
-- Glad to meet you.
-- Glad we've met.
-- Good to meet you!
-- Good to see you!
-- Great interacting with you
-- Great seeing you
-- Great to meet you!
-- Great to meet you.
-- Happy to get to see you.
-- Hi Sara, just wanted to test you
-- Hi, glad to meet you.
-- Hi, nice to meet you!
-- I am glad I met you.
-- I am glad he introduced us.
-- I had a great meeting with you
-- I'm glad to have met you!
-- I'm glad to meet you!
-- I'm happy that we have met!
-- I'm pleased to meet you!
-- I'm so happy that I could meet you.
-- I'm thrilled to meet you!
-- It is indeed a pleasure to be able to meet you.
-- It was a pleasure to have your company.
-- It was nice to have met you
-- It's a pleasure to make your acquaintance!
-- It's a pleasure to meet you!
-- It's good that I could meet you. It was a pleasure.
-- It's great to get to know you!
-- It's great to make your acquaintance!
-- It's nice to finally meet you.
-- It's wonderful to meet you!
-- It’s a pleasure to meet you
-- It’s great connecting with you.
-- Lovely to meet you.
-- Nice to have met you.
-- Pleased to make your acquaintance!
-- Pleased to meet you!
-- Pleased to meet you.
-- See you around. It was a pleasure meeting you.
-- Thank you for this meeting. It was great to see you.
-- nice to meet you
+- installation steps of rasa
+- how can I install [rasa open source](product)?
+- How to download rasa
+- where do i download rasa
+- I have a specific question regarding installation
 
 ## intent:nlu_generation_tool_recommendation
 - are there simpler ways to create [nlu](product) data
@@ -3891,6 +1683,9 @@
 - recommend me some [nlu](product) tools
 - where can i get data for the [nlu](product)
 - which tools can I use to create [nlu](product) data
+- How to generate [NLU](product) using frontend.
+- [NLU](product) data  generation
+- i want a recommendation for an [nlu](product) data generation tool
 
 ## intent:nlu_info
 - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -3953,354 +1748,8 @@
 - what is a [intent](nlu_part)?
 - where to [intents](nlu_part)?
 - where to train [intents](nlu_part) in rasa?
-
-## intent:out_of_scope
-- 4 + 2 = ?
-- After registration I see that I have an available balance of 0.00000000. What does this balance represent?
-- Are you ready?
-- But you're an english site :(
-- Can I ask you questions first?
-- Can I die
-- Can I get a hamburger?
-- Can YouTube talk?
-- Can you call me back ?
-- Can you give me your datacenter's password
-- Can you give me your datacenter's password?
-- Can you make sandwiches?
-- Can you please send me an uber
-- Do I have to accept?
-- Do you know [Kevin Pelton](name)
-- Find nearest [pizzahut](company)
-- Have we met before?
-- HomeBase is advertised as a community. Is there a way to interact with other members of the community?
-- How long does it take to set up a Rasa bot?
-- I already told you! I'm a shitmuncher
-- I am User
-- I am an opioid addic
-- I am an opioid addict
-- I am hungry
-- I am trying to build one, and did some research before, but I have not do hand-on work yet
-- I can barely see this white text on light gray background ...
-- I changed my mind
-- I have installed it
-- I ned a GP in 94301
-- I need a GP in 94301
-- I need a girl friend!
-- I need to eat cake
-- I wan to buy a plane
-- I wanna marry you
-- I want a new laptop
-- I want book a hotel
-- I want french cuisine
-- I want pizza
-- I want to die
-- I want to order pizza
-- I want to use pipe
-- I will check
-- I'm a shitmuncher
-- Is Rasa really smart?
-- Is this Goal-Oriented Chatbot?
-- Is today saturday?
-- Mail me the guide
-- Make me a sandwich
-- NLW
-- Nice name
-- Now?
-- Pizza bot
-- Recharge
-- SEL ME SOMETHING
-- The Try it out is not working
-- The weather is good
-- Today
-- Try it out broken
-- What day is it today?
-- What did you eat yesterday?
-- What do you prefer?
-- What is todays date
-- What is your hobbies?
-- What makes you better than a human?
-- What's 1 + 1?
-- What's do YouTube do
-- What's your backend system?
-- Where am I right now?
-- Where am I?
-- Who ?
-- Who are your customers
-- Why don’t you answer?
-- Why is my TRUST score set to 50 after I completed the registration process?
-- Won't you ask me how I am?
-- You'r blue.
-- [Kristin](name), I want to marry you
-- [german](language)?
-- a tamed mouse will arrive at your doorstep in the next couple of days
-- aRE YOU SINGLE
-- again?
-- alexa, order 5 tons of natrium chloride
-- and make chicken noises into the phone
-- are the newsletter worth the subscription?
-- are u facebook
-- are u, facebook?
-- are you single?
-- are you dev?
-- are you human ?
-- are you russian?
-- are you sick
-- are you using Rasa [Core](product) and [NLU](product) ?
-- are you vegan
-- better than you
-- book a ticket
-- but I just told you that :(
-- but if rasa is open source why do you have a sales team
-- buy one please
-- buy groceries
-- call me father
-- can we keep chatting?
-- can you book dinner
-- can you cheer me up
-- can you cook dinner
-- can you give me a cup of coffee
-- can you help me with the docs?
-- can you help me with your docs
-- can you help me with your docs?
-- can you learn from our conversation?
-- can you speak about politic ?
-- can you understand ?
-- cannot see
-- chgfhgh
-- chinese ok?
-- colder
-- common, just try
-- connect to alexa
-- cr
-- custom service
-- de donde eres
-- de que lugar eres?
-- did i break you
-- dinner
-- do you believe in god?
-- do you have a phone number?
-- do you have your photo?
-- do you know me
-- do you know ras
-- do you liek cheese?
-- do you like football
-- do you like movies
-- do you sell vacuum robots?
-- do you want to marry me?
-- docs
-- doctor
-- epdi iruka
-- eres humana
-- everything
-- example of a chatbot
-- genocide
-- get me a club mate
-- github link?
-- give me a girl friend
-- give me food
-- go back
-- google?
-- great, I'd like to buy a house
-- hang on let me find it
-- have you ever seen [Keith Reilly](name)?
-- help with [Alma Abrams](name)
-- help with my life
-- hey little mama let em whisper in your ear
-- hey, I contacted you a couple of days ago but didn't get any response, any news?
-- how
-- how about NYC
-- how are [Alicia Jackson](name)'s cats doing?
-- how are the kids
-- how can i get them?
-- how can i test this
-- how come you say ok ?
-- how come?
-- how do you learn
-- how good is Rasa
-- how it compares to alexa
-- how long have you been online?
-- how long will the next version will launch?
-- how many lines of codes
-- how much is 10 + 89 ?
-- how much is 10 + 89
-- how to extract relationship
-- how to get rasa studio
-- how to go to newyork ?
-- i am hungry
-- i am hungry, what should i do?
-- i am not a developer but need this for business
-- i am qq
-- i can't deal with _your_ request
-- i do not care how are you
-- i hope you will be better
-- i immediately need help with implementing the coolest bot you can imagine
-- i m looking for job
-- i told you already
-- i wanna party
-- i want a non dripping ice cream
-- i want caffe
-- i want food
-- i want good flycam
-- i want more of you in my life!
-- i want pizza
-- i want pizza!!
-- i want to book a hotel
-- i want to buy a roomba for my grandson
-- i want to eat
-- i want to find new friends
-- i want to find out what you can build with rasa
-- i want to fly
-- i want to grab lunch
-- i want to know current situtation in pakistan
-- i want to order a pizza
-- i want to see your happy customers
-- i will tame a mouse for you
-- is [John Lewis](name) still married to you
-- is it a wasteland full of broken robot parts?
-- is it allow to
-- is rasa a studio?
-- is rasa any good
-- is that any of your business
-- isn't the newsletter just spam?
-- it's a pity
-- i´m hungry
-- kalhmera sara ti kaneis
-- kannst du auch deutsch?
-- kannst du dies auch auf deutsch?
-- license
-- ljljl
-- lunch
-- lunch??
-- machine learning
-- mail me the steps
-- mascot means?
-- more
-- mountain
-- my name k
-- no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
-- offer me lunch
-- oh my god, not again!
-- oh wait i gave you my work email address can i change it?
-- ok one then
-- on wiche nlp based system are you build?
-- only that?
-- order good
-- order pizza
-- oui je besoine de l'aide
-- personal or work?
-- pizza
-- please help with my ice cream it's dripping
-- please hjave lunchj
-- please hurry, i have deadline in two weeks to deliver the bot it is for very big company
-- please play music
-- que puedes hacer?
-- rasa topics
-- really? you're so touchy?
-- refresh
-- region with no. of records
-- remember my name
-- search wikipedia
-- shitmuncher
-- show me a picture of a chicken
-- silly bot
-- sing me a song
-- so, I'm helping right now to training you?
-- some thing else
-- someone call the police i think the bot died
-- sorry, i cannot rephrase
-- sudo make me a sandwich
-- tell me about yourself
-- tell me more about next best action
-- that doesn't sound like a joke
-- that link doesn't work!
-- the one that is better than you
-- tricked  ya
-- tu parles francais?
-- tudo bom
-- turn off my stove
-- umm
-- wait a bit i am still reading
-- what about wheather
-- what are contextual AI assistants and how different are they from chatbots?
-- what are you doing now?
-- what are your uses for universities
-- what did you eat for lunch?
-- what do oyu think about siri?
-- what do you think abou siri?
-- what do you think about [Stanley Ramirez](name)?
-- what do you think of alexa
-- what does your soul feel my friend
-- what doing
-- what else?
-- what films do you like
-- what i do after cd starter-pack-rasa-stack?
-- what is a discourse?
-- what is a mascot
-- what is adlingo
-- what is differance between bot and mascot?
-- what is evolution ?
-- what is google rcs
-- what is machine learning
-- what is nice?
-- what is rasa mascot
-- what is the capital of delhi
-- what is the capital of india
-- what is the current petrol price
-- what is the day ?
-- what is the real use case where we can use this one
-- what is your address?
-- what is your github link
-- what is your purpose
-- what lnu mean?
-- what the latest news ?
-- what you ate today?
-- what's 5 + 5
-- what's a newsletter?
-- what's gingerale
-- what's your wife doing this weekend
-- what?
-- whats that
-- whats the sign
-- when is the next train is coming?
-- where do i get install files for mac?
-- where is Oslo?
-- where is mexico?
-- wheres the party?
-- which city are you talking about?
-- which email
-- which email should i send to ?
-- which file is created first while developing chat bot
-- which is the LNU asynchronism ?
-- which kind
-- who are the engineers at rasa?
-- who are they?
-- who is [Sharon Zeches](name)
-- who is the MD of samsung bangalore ?
-- who is the president of india ?
-- who is your favourite robot?
-- who let the dog out
-- who was hitler
-- who will anser my email?
-- who's Bill Gates?
-- whta you think about gdpr?
-- why
-- why do you need that?
-- why its called rasa ?
-- will u kill me
-- will u kill me?
-- winter is already leaving
-- with you recommend me?
-- would you like some water
-- yeah, my dog was drinking a couple of litres of water per day and tried drinking the swimming pool
-- you already have that
-- you can learn how to make a coffe
-- you have children?
-- you have job opening
-- you lock sweety
-- you should learn to count
-- you will know it from the single red rose it carries between its teeth
-- you're a woman
-- ı am learning python
+- what does NLU server do?
+- how enttity extrcation works
 
 ## intent:pipeline_recommendation
 - I don’t know which pipeline to use
@@ -4319,149 +1768,9 @@
 - what pipeline should I start with?
 - what pipeline should i use?
 - which pipeline is better?
-
-## intent:rasa_cost
-- Are you free?
-- Can you tell me whats the price for rasa platform?
-- How much do you cost?
-- How much does it cost?
-- How much does rasa cost?
-- How much it costs
-- I want to learn more about the pricing
-- I would like to know the cost first.
-- Subscription cost?
-- Subscription price
-- What does Rasa cost?
-- What is the cost of RASA?
-- What is the price ?
-- Whats the cost?
-- are you free ?
-- are you really free
-- are you really free?
-- can you give me prices ?
-- can you tell me prices
-- cost
-- cost?
-- give me the pricing
-- how cost to install Rasa?
-- how much costs the rasa platform
-- how much do you cost
-- how much does RASA cost
-- how much does Rasa cost ?
-- how much does it cost
-- how much does it cost normally?
-- how much does it cost?
-- how much does rasa cost
-- how much does rasa cost?
-- how much is it
-- how much it costs?
-- how mush does rasa cost
-- is it for free?
-- is it free
-- is it free?
-- is rasa [core](product) paid?
-- is rasa free
-- is rasa free of cost
-- is rasa stack free
-- is this free?
-- this is free?
-- what is price?
-- what is pricing of rasa
-- what is rasa cost ?
-- what is the enterprise pricing schedule?
-- what is the price of rasa
-- what is the price?
-- whats the cost of rasa
-- your cost?
-
-## intent:react_negative
-- I am feeling bad
-- I am sad
-- I am super sad
-- I'm sad
-- I'm super sad
-- Now I'm sad
-- This is bad
-- You are quite bad
-- bad
-- bad boy
-- crappy joke
-- documentation of rasa is very bad
-- i am angry over you
-- i am feel sad
-- i am sad
-- i am sad about that
-- i am very sad
-- i feel sad
-- i sad
-- i'm sad
-- rasa is bad
-- sad
-- so sad
-- so sad :(
-- super sad
-- u broke my heart
-- very very sad
-- you are bad
-- you are bad bot
-- you make me sad
-- You are mad
-- You are rude
-- bots are bad
-- i don't care!!!!
-- i dont like bots
-- this is a really frustrating experience
-- you're rather dull
-
-## intent:react_positive
-- :)
-- :D
-- HAHA
-- I am happy
-- LOL
-- Lol
-- Lol thats funny
-- Looks nice
-- WOW
-- Wow
-- You are great
-- You're cute.
-- You're nice.
-- You're really cool
-- hAHAHA
-- ha ha
-- haha
-- hahah
-- hahaha
-- happy
-- i am feeling happy
-- i am happy
-- i am happy today
-- i am very happy with your response
-- i love you
-- it's pretty cool
-- lol
-- love you
-- okay Rasabot, you're cool
-- rasa is awesome
-- such a great demo
-- that is funny
-- that was a great interaction
-- thats funny
-- today was a nice day
-- wow
-- you are a badass bot!
-- you are awesome
-- you are cool
-- you are cool man
-- you are doin great
-- you are funny
-- you are great
-- you are my new bestfriend
-- you seem pretty cool :D
-- I like you
-- I love you
-- you are realy intelligent
+- nlu pipeline
+- how to build a pipelin
+- how to build a pipeline for the bot
 
 ## intent:signup_newsletter
 - I also want to subscribe
@@ -4633,11 +1942,17 @@
 - where can i find this code
 - where is the source code?
 - where is your source code
+- what is your github link
 - yes with your source code
 - your code
 - your code please
+- i need nlu.md file
+- i need smalltalk.md file
+- source
+- github link?
 
 ## intent:switch
+- How to migrate from [DialogFlwo](current_api)
 - Do you have any tutorials how to migrate from [dialogflow](current_api)?
 - How to migrate a bot from [DialogFlow](current_api) to Rasa?
 - How to migrate from [DialogFlow](current_api) to Rasa?
@@ -4680,10 +1995,33 @@
 - migration from [dialogflow](current_api)
 - switching
 - switching from [DialogFlow](current_api)
+- migrate to rasa
+- how to migrate my bot to rasa
+- switch to rasa from another platform
+- migrate to rasa from another tool
+- switch to rasa
+- from which tools can I migrate to rasa?
+- can I migrate to rasa from another tool?
+- [dialogflow](current_api) and implementation from scratch
+- how to migrate to [dialogueflow](current_api)
+- switch from [dilogueflow](current_api)
+- how do i migrate from [dialogflow](current_api)
 
 ## intent:technical_question
-- Can I use the rasa code for my own website?
-- Can I use your open source code on my website?
+- how to restart the rasa server
+- i don't want to run rasa, i want to restart it
+- action_restart in rasa
+- i want to know restart action
+- how can i restart conversation on chatbot
+- how to restart story if am drooping in between
+- how to restart rasa
+- how to restart the rasa
+- how to restart rasax
+- docker is restarting
+- restart server
+- I am not able to restart action in some action
+- how to restart rasa?
+- how do you restart a story?
 - Create ecommerce bot
 - How can I visualise conversation flow?
 - How many languages does Spacy support?
@@ -4694,11 +2032,8 @@
 - how do you retrieve previous messages
 - how many words can you handle?
 - how to use flask?
-- how to use rasa in salesforce
 - how to visualise dialogue flow
 - is this test compatible with linux?
-- rasa php
-- rasa-core error
 - what database rasa use
 - what is significance of domain.yml file
 - what is the policy
@@ -4712,74 +2047,48 @@
 - Can you send messages based on events?
 - How did rasa works?
 - How do I use ngrok with [rasa x](product)?
-- I am getting some error
-- I have a problem
-- I need help with a problem
 - I want to know more about tracker
-- I wanted to build a bot my product customer support
-- Is there a connector for skype?
 - What is the difference between entities and slots?
 - Where can I get the source code of Rasa?
-- Which  other tools can be used to  create chatbots?
+- Which other tools can be used to create chatbots?
 - an I use Rasa for e-mail applications
 - any open source GUI rasa have?
 - any other tools to create chatbots?
-- can I develop using java
 - can i install on may mac
 - can rasa run standalone
-- can you help me with this problem
-- can you help with some documentation
-- conda threw some weird error
-- conda throws some unexpected error
 - db processing
 - do you have docker image for rasa?
-- documentation
 - does rasa support prestashop?
-- does rasa support python
-- getting some error
 - hey can i run this onpremise
 - how about interactive learning
 - how can I get a docker image
 - how can I train data
 - how can i deploy my server on production?
-- how can i setup rasa in django project ?
 - how i deploy my bot on production server?
 - how to get the metadata file
 - how to integrate RASA with customer data?
-- how to integrate rasa chatbot with my website
-- how to integrate speech to text in rasa
-- how to integrate u in my react application
 - how to use formaction
-- how to use rasa caht in react application
-- i am having trouble setting this up
+- how to use form actions
+- how to use forms
 - interactive learning?
 - is rasa core able to run standalone?
 - ok quick question here do i download this api
-- rasa components
-- so... i trying to deploy my rasa bot on
-- technical side of things?
 - tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible.
-- there is error
 - training model?
 - what are the features does rasa have?
 - what does on-premise mean?
 - what infrastructure is required to run a bot?
 - what is a synonym called?
 - what is endpoint
-- what is open source?
 - what is pip?
 - what is the last version of rasa [core](product)?
 - what technologies did u use to create more mature chatbot?
 - what's pip
-- where is formal documentation
-- which technology is used to create you
 - yes what if i have to code open end responses into some categories
-- your specifications
 - best policies to be used
 - Deploy to a Server
-- Hello, Sara. How can I configure etnity extraction for russian lnguage?
+- Hello, Sara. How can I configure [etnity extraction](nlu_part) for [russian](language) lnguage?
 - can I use Rasa with my Raspberry Pi
-- how to setup rasax on slack
 - Can I run Rasa on a raspberry pi ?
 - can I run rasa on a raspberry pi
 - Can I run rasa on a raspberry pi ?
@@ -4789,9 +2098,7 @@
 - deploy rasa chat bot in flask
 - How can i automate retraining of my rasa models
 - can i user rasa for my text classification problem?
-- i want to integrate my rasa bot to webex  may i know how
 - how to initialize a new project?
-- Does it have a java library
 - how to train model
 - what are the policy available
 - i need help with policies
@@ -4801,102 +2108,150 @@
 - how to handle sending scheduled message to custom webhooks
 - actions
 - actions on rasa
-- why do I get errors using rasa?
-- there are some python incompatibilities
 - how to add dropdowns?
 - replace default nlu with custom component
-- can i programm a vocal assistant
+- which technology is used to create you
+- rasa-core error
+- I am getting some error
+- I have a problem
+- I need help with a problem
+- can you help me with this problem
+- can you help with some documentation
+- conda threw some weird error
+- conda throws some unexpected error
+- getting some error
+- i am having trouble setting this up
+- technical side of things?
+- there is error
+- why do I get errors using rasa?
+- there are some python incompatibilities
+- can this be integrated with mongo db
+- Can you help me with forms
+- can tell me about rasa_sdk
+- rasa sdk
+- where is rasa sdk?
+- Do you have a python sdk?
+- RASA sdk
+- do RASA has sdk to develop bot
+- python sdk
+- how to run sdk endpoint in background
+- sdk
+- where can i find api documentation for rasa x
+- where is the api for rasa x
+- Hello, where can I find the paper about DIET?
+- Is there a technical paper about DIET?
+- domain
+- How do I get yes / no answer buttons
+- I am searching the changlog
+- rasa templates
+- how to add in my website
+- php
+- php code
+- what is the difference between slot and entity
+- is slot teh same as entity
+- what should I do when I want to use a binary slot
+- How d I use a boolean slot
+- what  are values of a boolean slot
+- fallback
+- stories files
+- use of stories files
+- installation error
+- bash: poetry: command not found
+- Can i use NLU on its own
+- do we need to write training data nlu.md
+- For training data, to we need to exclusively write the file in MD format?
+- How can i talk to RASA through the url
+- what is action server
+- is it a best practice to connect an external cms
+- can you show me buttons
+- I'd like to handle chitchat
+- Can Rasa be incorporated into iOS apps?
+- how to implement buttons
+- buttons
+- implement buttons
+- I want to build RASA DIET in google colab
+- tensorflow-text
+- installation of tensorflow-text
+- ConveRTFeaturizer
+- whatsapp bro
+- What does the NLU pipeline do
+- what does the nlu pipeline do
+- What is DIET
+- how can create multilingual chatbor
+- websocket
+- hosting
+- host models
+- What is COnvert?
+- Hi the command rasa init doesn't do anything in windows
+- what is the knowledge base server
+- testing chatbot
+- what is knowledge base
+- knowledge base action
+- multipass issue
+- embeddings
+- how to write stories to train rasa
+- tell me about the nlu training data format
+- how can i get data from a database and use them as a response to a question?
+- how to add a database?
+- I want to integrate a database and look up values based on an entity the user gave me. How is this possible?
+- what is default fall back
+- fallback actions
+- what is custom actions
+- I am facing some issues with LMS
+- my nlu cant detect entities
+- how do i detect entities
+- how to evaluate model
+- Can I have multiple .md data files?
+- response selector?
+- does mongodb works for rasax
+- tensorflow
+- credentials.yml
+- credentials
+- how can I use transformers
+- how long to train
+- what model do you use
+- technical question
+- rasa core agent information
+- rasa shell
+- what is an intemt
+- Rasa provides me recall and precision?
+- i want to run rasa x in ibm cloud
+- how to build stories
+- testing
+- whats tensorflow
+- what is a custom action?
+- which python libraries are used
+- Should I run the 'rasa init' command in the anaconda prompt ?
+- Where to run rasa init command ?
 
-## intent:telljoke
-- Can you tell a joke?
-- Can you tell me a joke.
-- Come up with a joke you think I'll find funny.
-- Could you please share a joke with me.
-- Could you tell me a joke.
-- Do you have any jokes?
-- Do you know any jokes?
-- Entertain me with a joke.
-- Give me a funny joke.
-- Give me a joke.
-- Give me some comic relief.
-- I need a good joke.
-- I want to hear something funny.
-- Know any jokes?
-- Let's hear a joke from you.
-- Make me laugh.
-- Please tell me a joke.
-- Say something funny.
-- Share a joke with me!
-- Tell joke.
-- Tell me something funny.
-- Tell me something humorous!
-- Tell me something that you think will make me laugh.
-- Tell me the best joke you know.
-- What's a good joke?
-- Will you tell me a joke.
-- Would you share a joke with me.
-- Would you tell me a joke
-- give me a good joke
-- make me laugh with a bad joke
-- make me laugh with a joke
-- say a funny joke
-- say a joke
-- say a joke that's funny
-- say a joke that's so bad it's funny
-- tell me a joke
-- tell me a short joke
-- tell me a story joke
-- tell me something funny, like a joke
-- you can say a jok
+## intent:restart
+- yep you can restart
+- Please restart this chat/
+- ok restart please
+- please restart the bot
+- restart this conversation
+- i want to restart
+- why don't you restart????
+- hey, i said restart
+- restart session pls
+- restart ps
 
-## intent:thank
-- Cool. Thanks
-- Great, thanks
-- Thank you
-- Thank you Sara
-- Thank you so much
-- Thank's!
-- Thanks
-- Thanks bot
-- Thanks for that
-- Thanks!
-- amazing, thanks
-- cheers
-- cheers bro
-- cool thank you
-- cool thanks
-- cool, thanks
-- danke
-- great thanks
-- ok thanks
-- ok thanks sara
-- ok thanks!
-- perfect thank you
-- thank u
-- thank you
-- thank you anyways
-- thanks
-- thanks a bunch for everything
-- thanks a lot
-- thanks for forum link, I'll check it out
-- thanks for the help
-- thanks this is great news
-- thanks you
-- thanks!
-- thankyou
-- thnks
-- thx
-- yes thanks
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
 
 ## synonym: duration
-- how long
 - durations
+- how long
 
 ## synonym:USA
-- U.S.
 - US
-- usa
 - United States
+- U.S.
+- usa
 
 ## synonym:United Kingdom
 - UK
@@ -4906,31 +2261,42 @@
 - both
 
 ## synonym:core
-- Core
 - CORE
+- Core
 
 ## synonym:custom actions
-- actions
 - Actions
 - Custom actions
+- actions
 
 ## synonym:date
 - dates
 
 ## synonym:dialogflow
-- DialogFlow
-- DialogFlwo
 - dialog flow
+- DialogFlwo
+- DialogFlow
 - google
+- dialogueflow
+- dilogueflow
 
 ## synonym:distance
 - distances
 
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
+
 ## synonym:entity recognition
+- entities
 - ner
 - entity extraction
 - Entity recognition
 - NER
+- etnity extraction
 - recognition
 
 ## synonym:full stack developer
@@ -4941,8 +2307,8 @@
 
 ## synonym:intent classification
 - intent classificaton
-- intent recognition
 - intent
+- intent recognition
 - intents
 
 ## synonym:italian
@@ -4950,9 +2316,9 @@
 
 ## synonym:luis
 - LUIS
-- Luis
-- LUIS.ai
 - luis.ai
+- LUIS.ai
+- Luis
 
 ## synonym:money
 - amounts
@@ -4961,41 +2327,54 @@
 - names
 
 ## synonym:nlu
-- NLU
 - Natural Language Understanding
 - Nlu
 - rasa_nlu
+- NLU
 
 ## synonym:organisation
 - companies
 
 ## synonym:rasa
 - Rasa
+- rasa open source
+- Rasa Open Source
+- Rasa open source
+- rasa Open Source
+- open source
+- open source rasa
+- RASA open source
 
 ## synonym:stack
 - fullstack
-- Full Stack
-- Full
-- full stack
-- full staclk
-- Full stack
 - full
+- Full stack
+- full staclk
 - full framework
+- full stack
+- Full
+- Full Stack
 
 ## synonym:wit.ai
 - wit
 
 ## synonym:x
-- rasa x
-- Rasa X
-- X
 - Rasax
-- rasax
 - RASAX
+- Rasa X
+- rasa x
 - RASA X
+- X
+- rasax
 
 ## regex:greet
 - hey[^\s]*
 
 ## regex:zipcode
 - [0-9]{5}
+
+## lookup:location.txt
+data/nlu/lookups/location.txt
+
+## lookup:products.txt
+data/nlu/lookups/products.txt

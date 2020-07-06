@@ -23,17 +23,17 @@
 - please tell me the company who created you
 - Who is your programmer?
 
-## intent:ask_faq_channels
+## intent:faq/channels
 - which messaging channels are supported by rasa?
 - which messaging channels are compatible with rasa?
 - Do you know which messaging channels rasa supports?
 - rasa supports which messaging channels?
 - DOES RASA SUPPORT MESSENGER?
 
-## intent:ask_faq_community_size
+## intent:faq/community_size
 - how many people are using Rasa
 
-## intent:ask_faq_differencecorenlu
+## intent:faq/differencecorenlu
 - what is the main difference between [core](product) and [nlu](product)?
 - How does [core](product) compare to [nlu](product)?
 - What facts diverge [core](product) from [nlu](product)?
@@ -46,18 +46,18 @@
 - what is different about [core](product) compared to [nlu](product)?
 - What makes [core](product) distinct to [nlu](product)?
 
-## intent:ask_faq_differencerasarasax
+## intent:faq/differencerasarasax
 - tell me the difference between [rasa](product) and [rasa x](product:x)
 - Are [Rasa](product) and [Rasa X](product:x) the same thing?
 - What's new in [Rasa X](product:x) compared to [Rasa](product:rasa)?
 
-## intent:ask_faq_ee
+## intent:faq/ee
 - Tell me about rasa x ee
 - Tell me about rasa x ee
 - what is rasa x ee?
 - what is the enterprise edition
 
-## intent:ask_faq_languages
+## intent:faq/languages
 - what about languages supported in rasa?
 - need to use [portuguese](language)
 - What language u support?
@@ -66,7 +66,7 @@
 - which languages supports rasa
 - How can I change the language
 
-## intent:ask_faq_is_programming_required
+## intent:faq/is_programming_required
 - Does rasa require programming knowledge
 - Do I need programming skills to develop a chatbot in rasa
 - do I need programming experience to use rasa
@@ -79,14 +79,14 @@
 - what language do I need to program?
 - do i need to be able to program to use rasa?
 
-## intent:ask_faq_opensource
+## intent:faq/opensource
 - is rasa a type of open source software?
 - is rasa open source?
 
-## intent:ask_faq_python_version
+## intent:faq/python_version
 - what version of python
 
-## intent:ask_faq_slots
+## intent:faq/slots
 - where slots getting values
 - do you know what slots are?
 - what about slots
@@ -97,12 +97,12 @@
 - tell me about slots
 - could you inform me of the meaning of slots?
 
-## intent:ask_faq_tutorials
+## intent:faq/tutorials
 - can you show me a tutorial
 - i want a tutorial on rasa
 - do you have tutorials
 
-## intent:ask_faq_voice
+## intent:faq/voice
 - How can I use to rasa to build a voice bot?
 - Building a voice bot using rasa.
 - Do you know how to build a voice bot with rasa?
@@ -113,7 +113,7 @@
 - How can I build my voice bot using rasa?
 - I can build a voice bot with rasa?
 
-## intent:ask_faq_what_is_forum
+## intent:faq/what_is_forum
 - whats in the forum
 
 ## intent:ask_how_contribute
@@ -528,10 +528,18 @@
 - what is [entity recognition](nlu_part)?
 - I don’t understand [entity recognition](nlu_part)
 
-## intent:out_of_scope
+## intent:out_of_scope/non_english
+- de donde eres
+- de que lugar eres?
+- epdi iruka
+- eres humana
+- kalhmera sara ti kaneis
+- kannst du auch deutsch?
+- spreek je Nederlands?
+
+## intent:out_of_scope/other
 - who is your favourite robot?
 - can you tell me how to build a bot?
-- kannst du auch deutsch?
 - isn't the newsletter just spam?
 - i want to buy a roomba for my grandson
 - Can I ask you questions first?
