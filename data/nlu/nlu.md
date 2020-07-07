@@ -2241,3 +2241,146 @@
 - hey, i said restart
 - restart session pls
 - restart ps
+
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
+
+## synonym: duration
+- durations
+- how long
+
+## synonym:USA
+- US
+- United States
+- U.S.
+- usa
+
+## synonym:United Kingdom
+- UK
+- U.K.
+
+## synonym:all
+- both
+
+## synonym:core
+- CORE
+- Core
+
+## synonym:custom actions
+- Actions
+- Custom actions
+- actions
+
+## synonym:date
+- dates
+
+## synonym:dialogflow
+- dialog flow
+- DialogFlwo
+- DialogFlow
+- google
+- dialogueflow
+- dilogueflow
+
+## synonym:distance
+- distances
+
+## synonym:english
+- English
+- en
+- eng
+- Eng
+- ENGLISH
+
+## synonym:entity recognition
+- entities
+- ner
+- entity extraction
+- Entity recognition
+- NER
+- etnity extraction
+- recognition
+
+## synonym:full stack developer
+- full stack develope
+
+## synonym:helvetia
+- Helvetia
+
+## synonym:intent classification
+- intent classificaton
+- intent
+- intent recognition
+- intents
+
+## synonym:italian
+- italina
+
+## synonym:luis
+- LUIS
+- luis.ai
+- LUIS.ai
+- Luis
+
+## synonym:money
+- amounts
+
+## synonym:name
+- names
+
+## synonym:nlu
+- Natural Language Understanding
+- Nlu
+- rasa_nlu
+- NLU
+
+## synonym:organisation
+- companies
+
+## synonym:rasa
+- Rasa
+- rasa open source
+- Rasa Open Source
+- Rasa open source
+- rasa Open Source
+- open source
+- open source rasa
+- RASA open source
+
+## synonym:stack
+- fullstack
+- full
+- Full stack
+- full staclk
+- full framework
+- full stack
+- Full
+- Full Stack
+
+## synonym:wit.ai
+- wit
+
+## synonym:x
+- Rasax
+- RASAX
+- Rasa X
+- rasa x
+- RASA X
+- X
+- rasax
+
+## regex:greet
+- hey[^\s]*
+
+## regex:zipcode
+- [0-9]{5}
+
+## lookup:location.txt
+data/nlu/lookups/location.txt
+
+## lookup:products.txt
+data/nlu/lookups/products.txt
