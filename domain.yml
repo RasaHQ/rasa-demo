@@ -504,8 +504,8 @@ responses:
   - text: Like Rasa Open Source, my code is freely available on GitHub! You can find
       it [here](https://github.com/RasaHQ/rasa-demo) 👻
   utter_pipeline_english:
-  - text: If your training data is in English, a good starting point is this
-      [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer),
+  - text: If your training data is in English, a good starting point is this 
+      [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer), 
       which uses both pretrained and supervised embeddings.
   utter_spacy:
   - text: SpaCy has excellent pre-trained named-entity recognizers for this -- check
@@ -513,7 +513,7 @@ responses:
       suggest using the [SpacyEntityExtractor](https://rasa.com/docs/rasa/nlu/components/#spacyentityextractor)
       component in your pipeline.
   utter_pipeline_nonenglish_spacy:
-  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer)
+  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) 
       for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#a-longer-answer)
       also works for your language.
   utter_suggestion:
@@ -524,7 +524,7 @@ responses:
   utter_switch_luis:
   - text: We have a guide for migrating from LUIS [here](https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/).
   utter_pipeline_nonenglish_nospacy:
-  - text: For {language}, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer)
+  - text: For {language}, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) 
           for languages other than English.
   utter_thank_suggestion:
   - text: Thanks for your input!
@@ -547,28 +547,28 @@ responses:
   utter_why_rasa:
   - text:  Rasa provides the infrastructure and tools needed to build
       high-performing, resilient assistants that work. What's more,
-      Rasa is **open source** - no black-box magic!
-  utter_ask_more:
+      Rasa is **open source** - no black-box magic! 
+  utter_ask_more: 
   - text: Would you like to learn more?
   utter_ask_more_migrate:
   - text: Would you like to learn more about the advantages of switching to Rasa?
   utter_why_rasa_research:
-    - text: Rasa invests in extensive research to create leading-edge
+    - text: Rasa invests in extensive research to create leading-edge 
         conversational AI, enabling developers to create the best text- and
         voice-based assistants without a dedicated research team.
   utter_why_rasa_nlu:
     - text: Rasa's NLU supports multiple languages, single and multiple
         intents, and both pre-trained and custom entities.
   utter_why_rasa_dialogue:
-    - text: Assistants built on Rasa can hold meaningful conversations
+    - text: Assistants built on Rasa can hold meaningful conversations 
         with users - multi-step conversations that remember context and
         integrate business logic. No state machines here!
   utter_why_rasa_os:
-    - text: Because Rasa is open source, you can customize your bot
+    - text: Because Rasa is open source, you can customize your bot 
         and explore its inner workings as much as you'd like. There's no vendor lock in, and no
-        hidden algorithms.
+        hidden algorithms. 
   utter_why_rasa_compliant:
-    - text: If data security and compliance is a priority for you, Rasa has
+    - text: If data security and compliance is a priority for you, Rasa has 
         your back! You can deploy Rasa either in the cloud or on premise and
         maintain complete control over your assistant & its data.
 
