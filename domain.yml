@@ -582,6 +582,8 @@ responses:
   - text: Here is a coffee
   utter_tea:
   - text: Here is a cup of tea
+  utter_give_coffee:
+  - text: Here is a coffee!!
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
@@ -744,6 +746,7 @@ actions:
 - utter_why_rasa_compliant
 - utter_coffee
 - utter_tea
+- utter_give_coffee
 forms:
 - sales_form
 - subscribe_newsletter_form
