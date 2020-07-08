@@ -20,6 +20,10 @@ COPY ./actions /app/actions
 COPY setup.py /app
 RUN  pip install -e . --no-cache-dir
 
+# Download spacy language data
+RUN python -m spacy download en_core_web_md
+RUN python -m spacy link en_core_web_md en
+
 # Don't use root user to run code
 USER 1001
 
