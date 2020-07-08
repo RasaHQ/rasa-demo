@@ -42,7 +42,8 @@
 - and why i should not use Tenserflow?
 - why would i use your product
 - why is rasa interesting
-
+- Why rasa?
+- Why choose rasa?
 
 ## intent:ask_how_contribute
 - Can I assist?
@@ -2223,6 +2224,11 @@
 - which python libraries are used
 - Should I run the 'rasa init' command in the anaconda prompt ?
 - Where to run rasa init command ?
+- how to set threshold ?
+- how to you exit the server
+- is Rasa works with Unity3d?
+- rasa uses deep learning ?
+- i want to extract predefined entity from user query
 
 ## intent:restart
 - yep you can restart
