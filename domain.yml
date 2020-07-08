@@ -588,6 +588,8 @@ responses:
   - text: Thanks, but I already had enough coffee !
   utter_01_impatient_user:
   - text: I am impatient user 01
+  utter_normal_02:
+  - text: Normal 02
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
@@ -753,6 +755,7 @@ actions:
 - utter_give_coffee
 - utter_already_have_a_coffee
 - utter_01_impatient_user
+- utter_normal_02
 forms:
 - sales_form
 - subscribe_newsletter_form
