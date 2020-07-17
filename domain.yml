@@ -619,6 +619,10 @@ responses:
   - text: holaaa
   utter_pepe:
   - text: asdfasdfasdf
+  utter_lala:
+  - text: test
+  utter_uno:
+  - text: asdfasdf
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
@@ -781,6 +785,8 @@ actions:
 - utter_why_rasa_compliant
 - utter_fedeee
 - utter_pepe
+- utter_lala
+- utter_uno
 forms:
 - sales_form
 - subscribe_newsletter_form
