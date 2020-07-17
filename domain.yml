@@ -625,6 +625,8 @@ responses:
   - text: asdfasdf
   utter_nuevo:
   - text: ddadfasdfasdfasdf
+  utter_dos:
+  - text: asdfasdf
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
@@ -790,6 +792,7 @@ actions:
 - utter_lala
 - utter_uno
 - utter_nuevo
+- utter_dos
 forms:
 - sales_form
 - subscribe_newsletter_form
