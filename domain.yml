@@ -617,6 +617,8 @@ responses:
       control over your assistant & its data.
   utter_fedeee:
   - text: holaaa
+  utter_pepe:
+  - text: asdfasdfasdf
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
@@ -778,6 +780,7 @@ actions:
 - utter_why_rasa_os
 - utter_why_rasa_compliant
 - utter_fedeee
+- utter_pepe
 forms:
 - sales_form
 - subscribe_newsletter_form
