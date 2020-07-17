@@ -623,6 +623,8 @@ responses:
   - text: test
   utter_uno:
   - text: asdfasdf
+  utter_nuevo:
+  - text: ddadfasdfasdfasdf
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
@@ -787,6 +789,7 @@ actions:
 - utter_pepe
 - utter_lala
 - utter_uno
+- utter_nuevo
 forms:
 - sales_form
 - subscribe_newsletter_form
