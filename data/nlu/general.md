@@ -1,7 +1,6 @@
 ## intent:affirm
 - Accept
 - Awesome!
-- Cool
 - Good
 - Great
 - I accept
@@ -61,10 +60,7 @@
 - awesome
 - awesome!
 - confirm
-- cool :)
 - cool story bro
-- cool!
-- coolio
 - definitely yes without a doubt
 - done
 - fair enough
@@ -230,7 +226,11 @@
 - really
 
 ## intent:react_positive
+- Cool
 - cool
+- cool :)
+- cool!
+- coolio
 - :)
 - :D
 - HAHA
