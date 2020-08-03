@@ -861,6 +861,7 @@
 - what can you teache me?
 - Can rasa do calculations?
 - what you can
+- i want ur help
 
 ## intent:chitchat/ask_wherefrom
 - Are you from around here?
@@ -1168,6 +1169,7 @@
 - See you around. It was a pleasure meeting you.
 - Thank you for this meeting. It was great to see you.
 - nice to meet you
+- fine to meet you
 
 ## intent:chitchat/telljoke
 - Can you tell a joke?
@@ -1211,6 +1213,16 @@
 - tell me something funny, like a joke
 - you can say a jok
 - telljoke
+
+## intent:out_of_scope
+- do you think there is any other worlds ?
+- what is your religious
+
+## lookup:location.txt
+  data/nlu/lookups/location.txt
+
+## lookup:products.txt
+  data/nlu/lookups/products.txt
 
 ## lookup:location.txt
   data/nlu/lookups/location.txt

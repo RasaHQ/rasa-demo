@@ -224,6 +224,8 @@
 - cool beans
 - sounds good!
 - really
+- sadly u right
+- i can though
 
 ## intent:react_positive
 - Cool
@@ -332,6 +334,7 @@
 - Exit
 - Close this talk
 - byr
+- let's stop here for now
 
 ## intent:canthelp
 - I think you cant help me
@@ -360,6 +363,15 @@
 - you cant help me
 - quit
 - that does not help
+- you are not able to answer all my questions
+- why you dont help me
+- why cant u help
+- not so helpful
+- no you can not help me
+- why you can not help me
+- I didn't get what I wanted
+- it is not helpful
+- that didn't answer my question
 
 ## intent:deny
 - I don't want to
@@ -480,6 +492,17 @@
 - what do you mean
 - what does that mean
 - how come?
+- but why?
+- what's that?
+- more detail?
+- Tell me More about it
+- give more info
+- im still not clear
+- what you mean by that?
+- what did you mean?
+- show me more information
+- wait, I want information
+- sara, explain
 
 ## intent:greet
 - Bom dia
