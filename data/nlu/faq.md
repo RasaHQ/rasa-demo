@@ -92,6 +92,7 @@
 - custom connection
 - Can I create a chat bot and set it up on a web page?
 - Does Rasa have the functionality of being able to set up the bot on web pages?
+- How to integrete with API
 
 ## intent:faq/community_size
 - Did you know the size of rasa community?
