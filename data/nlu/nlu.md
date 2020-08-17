@@ -44,6 +44,7 @@
 - why is rasa interesting
 - Why rasa?
 - Why choose rasa?
+- Why should I even consider Rasa?
 
 ## intent:ask_how_contribute
 - Can I assist?
