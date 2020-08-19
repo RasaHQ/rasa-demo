@@ -54,6 +54,8 @@ jobs:
         rasa train
     - name: Upload model
       if: env.RUN_TRAINING == 'true'
+      env:
+        RASA_X_API_TOKEN: ${{ secrets.RASA_X_API_TOKEN }}
       working-directory: ${{ github.workspace }}
       run: |
         model_path=`ls models/*.tar.gz | head -n 1`
