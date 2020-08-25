@@ -29,7 +29,6 @@ INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 
 
 class ActionSubscribeNewsletterForm(Action):
-    """Returns the chitchat utterance dependent on the intent"""
 
     def name(self) -> Text:
         return "action_subscribe_newsletter_form"
@@ -106,7 +105,6 @@ class ActionSubscribeNewsletterForm(Action):
 
 
 class ActionSalesForm(Action):
-    """Returns the chitchat utterance dependent on the intent"""
 
     def name(self) -> Text:
         return "action_sales_form"
