@@ -460,7 +460,7 @@ class ActionDefaultAskAffirmation(Action):
             else tracker.latest_message.get("response_selector")
             .get(intent.get("name", ""))
             .get("response")
-            .get("full_retrieval_intent")
+            .get("intent_response_key")
             for intent in intent_ranking
         ]
 
