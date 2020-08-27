@@ -227,7 +227,8 @@ class ActionSetFaqSlot(Action):
         full_intent = (
             tracker.latest_message.get("response_selector", {})
             .get("faq", {})
-            .get("full_retrieval_intent")
+            .get("response")
+            .get("intent_response_key")
         )
         if full_intent:
             topic = full_intent.split("/")[1]
@@ -458,6 +459,7 @@ class ActionDefaultAskAffirmation(Action):
             if intent.get("name", "") not in ["out_of_scope", "faq", "chitchat"]
             else tracker.latest_message.get("response_selector")
             .get(intent.get("name", ""))
+            .get("response")
             .get("full_retrieval_intent")
             for intent in intent_ranking
         ]

@@ -4,16 +4,26 @@ pipeline:
 - name: ConveRTFeaturizer
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
-- name: CountVectorsFeaturizer
-  OOV_token: oov
-  token_pattern: (?u)\b\w+\b
-- name: CountVectorsFeaturizer
-  analyzer: char_wb
-  min_ngram: 1
-  max_ngram: 4
+#- name: CountVectorsFeaturizer
+#  OOV_token: oov
+#  token_pattern: (?u)\b\w+\b
+#- name: CountVectorsFeaturizer
+#  analyzer: char_wb
+#  min_ngram: 1
+#  max_ngram: 4
+- name: CRFEntityExtractor
 - name: DIETClassifier
-  epochs: 200
+  epochs: 50
   ranking_length: 5
+  hidden_layers_sizes:
+    text: [256,128]
+    label: []
+    dense_dimension:
+      text: 256
+      label: 20
+    number_of_transformer_layers: 0
+    entity_recognition: False
+    BILOU_flag: False
 - name: DucklingHTTPExtractor
   url: http://localhost:8000
   dimensions:

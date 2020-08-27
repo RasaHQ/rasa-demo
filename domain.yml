@@ -571,6 +571,8 @@ responses:
     - text: If data security and compliance is a priority for you, Rasa has 
         your back! You can deploy Rasa either in the cloud or on premise and
         maintain complete control over your assistant & its data.
+  utter_spacy_or_tensorflow:
+    - text: Do you want to use spacy or tensorflow?
 
 actions:
 - action_default_ask_affirmation
