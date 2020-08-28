@@ -1,0 +1,747 @@
+version: "2.0"
+stories:
+- story: story number 6
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+- story: story number 8
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: story number 9
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: deny
+  - action: utter_nohelp
+- story: story number 14
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+- story: story number 15
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: story number 17
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: deny
+  - action: utter_nohelp
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_possibilities
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+- story: story number 18
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: deny
+  - action: utter_nohelp
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: deny
+  - action: utter_nohelp
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_possibilities
+  - intent: enter_data
+    entities:
+    - number: 5
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with 00e7815f79e4413abb0dfb4b392f1099 on November 15th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: story from linda
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with dfbb633d10854f97b880a2496d632f0d on November 16th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with alan on November 16th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: nlu_info
+    entities:
+    - nlu_part: duckling
+  - slot_was_set:
+    - nlu_part: duckling
+  - action: utter_duckling_info
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_what_help
+- story: Story from conversation with alan on November 16th 2018 2
+  steps:
+  - checkpoint: STORY_START
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - slot_was_set:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - action: utter_what_language
+  - intent: enter_data
+    entities:
+    - language: spanish
+  - slot_was_set:
+    - language: __other__
+  - action: action_store_bot_language
+  - slot_was_set:
+    - can_use_spacy: true
+  - action: utter_pipeline_nonenglish_spacy
+  - action: utter_anything_else
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with alan on November 16th 2018 2
+  steps:
+  - checkpoint: STORY_START
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - slot_was_set:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - action: utter_what_language
+  - intent: enter_data
+  - action: action_store_bot_language
+  - slot_was_set:
+    - can_use_spacy: false
+  - action: utter_pipeline_nonenglish_nospacy
+  - action: utter_anything_else
+- story: Story from conversation with linda on November 15th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with 477ddbe73e374eedb07104c5d9f42c31 on November 16th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: greet
+  - action: action_greet_user
+- story: Story from conversation with 4986d88ccb784dc19dc5a553a8e07890 on November 19th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_direct_to_step2
+- story: Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with 29d264d8ce574a11bde572f0e79b73f3 on November 19th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: affirm
+  - action: utter_thumbsup
+- story: Story from conversation with 6fd65c93e374489f9c8d76697ab9c493 on November 19th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: affirm
+  - action: utter_thumbsup
+- story: Story from conversation with 4c274f8d470e4b77adbfefe7cda7cad7 on October 27th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: affirm
+  - action: utter_thumbsup
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with dominik on November 19th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: switch
+    entities:
+    - current_api: luis
+  - slot_was_set:
+    - current_api: luis
+  - action: utter_switch_luis
+  - action: utter_anything_else
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_anything_else
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_explain_nlu
+  - action: utter_anything_else
+- story: Story from conversation with dominik
+  steps:
+  - checkpoint: STORY_START
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - slot_was_set:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - action: utter_what_language
+  - intent: enter_data
+    entities:
+    - language: spanish
+  - slot_was_set:
+    - language: __other__
+  - action: action_store_bot_language
+  - slot_was_set:
+    - can_use_spacy: true
+  - action: utter_pipeline_nonenglish_spacy
+  - action: utter_anything_else
+  - intent: enter_data
+    entities:
+    - language: french
+  - slot_was_set:
+    - language: __other__
+  - action: action_store_bot_language
+  - slot_was_set:
+    - can_use_spacy: true
+  - action: utter_pipeline_nonenglish_spacy
+  - action: utter_anything_else
+- story: Story from conversation with dominik on November 19th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_anything_else
+- story: Story from conversation with 201bb55841154f858f524a485f8816c3 on November 18th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with cd483ab3456d47dfb40bd1f51043fb54 on November 18th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+- story: Story from conversation with cfa8bb9deaf0427498c662745431a282 on December 15th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with cdd14d763a664a5b95e998ce165bd86f on December 16th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with 67a8696eb5894b25a800b6cbd7a695bb on December 15th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with 030829eb30ed4339985d7e71737f6c2d on January 1st 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: Story from conversation with e977c395a2404bef8ba7f0c3b7e65970 on January 8th 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_direct_to_step2
+- story: Story from conversation with 602ddccbe2de4f46822e06e2781cf02d on January 8th 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: greet
+  - action: action_greet_user
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: affirm
+  - action: utter_thumbsup
+  - intent: affirm
+  - action: utter_thumbsup
+- story: Story from conversation with 4cdb0b3c6f6c4b3694fcb311ae72743b on January 21st 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - slot_was_set:
+    - step: '1'
+  - intent: affirm
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: deny
+  - action: utter_direct_to_step2
+- story: Story from conversation with 4b7ecc2cab6e42c5b1fedb8ab4056866 on December 29th 2018
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_possibilities
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_possibilities
+- story: Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - slot_was_set:
+    - step: '1'
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+- story: Story from conversation with 4a4e903fc43940db9ccdb9153dfdadcb on January 21st 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - slot_was_set:
+    - step: '1'
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+- story: Story from conversation with 5f3a2ea92d184a9f96df7240e4f7e2d9 on January 21st 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - slot_was_set:
+    - step: '1'
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step4
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_what_help
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2

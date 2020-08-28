@@ -1,0 +1,100 @@
+version: "2.0"
+stories:
+- story: just newsletter + handoff, continue
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: human_handoff
+  - action: utter_contact_email
+  - action: utter_ask_continue_newsletter
+  - intent: affirm
+  - action: utter_great
+  - action: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter + handoff, don't continue
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: human_handoff
+  - action: utter_contact_email
+  - action: utter_ask_continue_newsletter
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_form
+  - active_loop: null
+- story: just sales, continue
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: human_handoff
+  - action: utter_contact_email
+  - action: utter_ask_continue_sales
+  - intent: affirm
+  - action: utter_great
+  - action: sales_form
+  - active_loop: null
+- story: just sales, don't continue
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: human_handoff
+  - action: utter_contact_email
+  - action: utter_ask_continue_sales
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_form
+  - active_loop: null
+- story: just sales, explain, continue
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: explain
+  - action: action_explain_sales_form
+  - action: utter_ask_continue_sales
+  - intent: affirm
+  - action: utter_great
+  - action: sales_form
+  - active_loop: null
+- story: just sales, explain, stop
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: explain
+  - action: action_explain_sales_form
+  - action: utter_ask_continue_sales
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_form
+  - active_loop: null

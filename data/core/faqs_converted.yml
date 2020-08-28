@@ -1,0 +1,1787 @@
+version: "2.0"
+stories:
+- story: next step prompt
+  steps:
+  - checkpoint: STORY_START
+  - intent: next_step
+  - action: action_next_step
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+    entities:
+    - product: all
+  - slot_was_set:
+    - product: all
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: more faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: not new to rasa + not interested in products
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: deny
+  - action: utter_thumbsup
+- story: not new to rasa + not interested in products
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_which_product
+  - intent: deny
+  - action: utter_thumbsup
+- story: not new to rasa + nlu + nothing special
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_for_nlu_specifics
+  - intent: deny
+  - action: utter_tutorialnlu
+  - action: utter_anything_else
+- story: not new to rasa + nlu + unknown topic
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+  - action: action_store_unknown_nlu_part
+  - action: utter_dont_know_nlu_part
+  - action: utter_search_bar
+  - action: utter_anything_else
+- story: not new to rasa + nlu + intent + no recommendation
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_offer_recommendation
+  - intent: deny
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: pipeline_recommendation
+  - checkpoint: GENR_OR_ed8c7
+- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - checkpoint: GENR_OR_ed8c7
+- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+  steps:
+  - checkpoint: GENR_OR_ed8c7
+  - action: utter_what_language
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_what_language
+  - intent: enter_data
+    entities:
+    - language: english
+  - slot_was_set:
+    - language: english
+  - action: utter_pipeline_english
+  - action: utter_anything_else
+- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: pipeline_recommendation
+  - checkpoint: GENR_OR_bb7e2
+- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - checkpoint: GENR_OR_bb7e2
+- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+  steps:
+  - checkpoint: GENR_OR_bb7e2
+  - action: utter_what_language
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_what_language
+  - intent: enter_data
+  - action: action_store_bot_language
+  - slot_was_set:
+    - can_use_spacy: false
+  - action: utter_pipeline_nonenglish_nospacy
+  - action: utter_anything_else
+- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: pipeline_recommendation
+  - checkpoint: GENR_OR_e98bc
+- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
+  - action: utter_nlu_intent_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - checkpoint: GENR_OR_e98bc
+- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
+  steps:
+  - checkpoint: GENR_OR_e98bc
+  - action: utter_what_language
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_what_language
+  - intent: enter_data
+    entities:
+    - language: russian
+  - slot_was_set:
+    - language: __other__
+  - action: action_store_bot_language
+  - slot_was_set:
+    - can_use_spacy: false
+  - action: utter_pipeline_nonenglish_nospacy
+  - action: utter_anything_else
+- story: not new to rasa + nlu + entity + pipeline duckling
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: entity recognition
+  - action: utter_nlu_entity_tutorial
+  - action: utter_offer_recommendation
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_offer_recommendation
+  - intent: pipeline_recommendation
+  - checkpoint: GENR_OR_a214d
+- story: not new to rasa + nlu + entity + pipeline duckling
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: entity recognition
+  - action: utter_nlu_entity_tutorial
+  - action: utter_offer_recommendation
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - checkpoint: GENR_OR_a214d
+- story: not new to rasa + nlu + entity + pipeline duckling
+  steps:
+  - checkpoint: GENR_OR_a214d
+  - action: utter_ask_entities
+  - intent: enter_data
+    entities:
+    - entity: date ranges
+  - action: action_store_entity_extractor
+  - slot_was_set:
+    - entity_extractor: DucklingHTTPExtractor
+  - action: utter_duckling
+  - action: utter_anything_else
+- story: not new to rasa + nlu + entity + pipeline duckling
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: entity recognition
+  - action: utter_nlu_entity_tutorial
+  - action: utter_offer_recommendation
+  - intent: pipeline_recommendation
+  - checkpoint: GENR_OR_09871
+- story: not new to rasa + nlu + entity + pipeline duckling
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_ask_for_nlu_specifics
+  - intent: nlu_info
+    entities:
+    - nlu_part: entity recognition
+  - action: utter_nlu_entity_tutorial
+  - action: utter_offer_recommendation
+  - intent: affirm
+  - checkpoint: GENR_OR_09871
+- story: not new to rasa + nlu + entity + pipeline duckling
+  steps:
+  - checkpoint: GENR_OR_09871
+  - action: utter_ask_entities
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_entities
+  - intent: enter_data
+    entities:
+    - entity: date ranges
+  - action: action_store_entity_extractor
+  - slot_was_set:
+    - entity_extractor: DucklingHTTPExtractor
+  - action: utter_duckling
+  - action: utter_anything_else
+- story: FAQ - tell more about rasa x ee
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+- story: FAQ - tell more about languages
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+- story: FAQ - tell more about voice
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+- story: FAQ - tell more about slots
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+- story: FAQ - tell more about channels
+  steps:
+  - checkpoint: STORY_START
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: technical_question
+  - checkpoint: GENR_OR_c9511
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: enter_data
+  - checkpoint: GENR_OR_c9511
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: out_of_scope
+  - checkpoint: GENR_OR_c9511
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: GENR_OR_c9511
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: technical_question - docs_found - deny
+  steps:
+  - checkpoint: STORY_START
+  - intent: technical_question
+  - action: action_docs_search
+  - slot_was_set:
+    - docs_found: true
+  - action: utter_ask_docs_help
+  - intent: deny
+  - action: action_tag_docs_search
+  - action: action_forum_search
+- story: technical_question - docs_found - affirm
+  steps:
+  - checkpoint: STORY_START
+  - intent: technical_question
+  - action: action_docs_search
+  - slot_was_set:
+    - docs_found: true
+  - action: utter_ask_docs_help
+  - intent: affirm
+  - action: action_tag_docs_search
+  - action: utter_great
+- story: technical_question - no docs_found
+  steps:
+  - checkpoint: STORY_START
+  - intent: technical_question
+  - action: action_docs_search
+  - slot_was_set:
+    - docs_found: false
+  - action: action_forum_search
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_describe_problem
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: FAQ - Step 2 flow interrupted
+  steps:
+  - checkpoint: STORY_START
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+- story: Just don't want to continue
+  steps:
+  - checkpoint: STORY_START
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_ready_to_build
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_631dc
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_631dc
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_631dc
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: GENR_OR_631dc
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_explain_core
+  - action: utter_explain_nlu
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_explain_x
+  - action: utter_also_explain_nlucore
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_ea69f
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_ea69f
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_ea69f
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: GENR_OR_ea69f
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_d16a1
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_d16a1
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_d16a1
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: GENR_OR_d16a1
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_cd83d
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_cd83d
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_cd83d
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: GENR_OR_cd83d
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_411ff
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_411ff
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_411ff
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: GENR_OR_411ff
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_fe93d
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_fe93d
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+  - action: utter_ask_migration
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_fe93d
+- story: new to rasa + not new to chatbots + not migrating
+  steps:
+  - checkpoint: GENR_OR_fe93d
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_94c7a
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_94c7a
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_94c7a
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: GENR_OR_94c7a
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_4f09f
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: all
+  - checkpoint: GENR_OR_4f09f
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - checkpoint: GENR_OR_4f09f
+- story: new to rasa/bots, explain stack and try it out
+  steps:
+  - checkpoint: GENR_OR_4f09f
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain x and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+  - checkpoint: GENR_OR_c470a
+- story: new to rasa/bots, explain x and try it out
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: x
+  - checkpoint: GENR_OR_c470a
+- story: new to rasa/bots, explain x and try it out
+  steps:
+  - checkpoint: GENR_OR_c470a
+  - slot_was_set:
+    - product: x
+  - action: utter_explain_x
+  - action: utter_also_explain_nlucore
+  - intent: deny
+  - action: utter_direct_to_step2
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain core and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_also_explain_nlu
+  - intent: deny
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain core and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: deny
+  - action: utter_direct_to_step2
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain core, then nlu and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_also_explain_nlu
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain x, then direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_explain_x
+  - action: utter_also_explain_nlucore
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+- story: new to rasa/bots, explain core, then nlu and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: core
+  - action: utter_explain_core
+  - action: utter_also_explain_nlu
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_direct_to_step2
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain nlu and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_explain_nlu
+  - action: utter_also_explain_core
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_also_explain_core
+  - intent: deny
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain x and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_explain_x
+  - action: utter_also_explain_nlucore
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: deny
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, explain nlu and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: how_to_get_started
+    entities:
+    - product: nlu
+  - action: utter_explain_nlu
+  - action: utter_also_explain_core
+  - intent: deny
+  - action: utter_direct_to_step2
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, don't explain and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_explain_nlucorex
+  - intent: deny
+  - action: utter_direct_to_step2
+- story: new to rasa/bots, don't explain and direct to step2
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: deny
+  - action: utter_direct_to_step2
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - action: utter_direct_to_step2
+- story: not new to rasa + not interested in products
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+  - action: respond_faq
+  - action: action_set_faq_slot
+  - intent: how_to_get_started
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: deny
+  - action: utter_thumbsup
