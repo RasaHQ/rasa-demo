@@ -38,7 +38,7 @@ enter_data,My name is {name},name
 enter_data,My company is {company},company
 enter_data,My email is {email},email
 enter_data,Install Rasa Stack with {package_manager},package_manager
-explain,Can you explain that?
+explain,Can you explain that?,
 faq/channels,What channels does Rasa support?,
 faq/community_size,How big is the Rasa community?,
 faq/differencecorenlu,What is the difference between Core and NLU?,
