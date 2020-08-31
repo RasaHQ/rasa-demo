@@ -152,7 +152,7 @@
 
 ## chitchat
 * chitchat/ask_whatisrasa 
-  -  Rasa Open Source is a conversational AI framework for that provides machine learning tools for building contextual assistants. You can read more about it here in the docs or on our [website](https://rasa.com/).
+  -  Rasa Open Source is a conversational AI framework that provides machine learning tools for building contextual assistants. You can read more about it here in the docs or on our [website](https://rasa.com/).
 
 ## chitchat
 * chitchat/ask_whatspossible 
