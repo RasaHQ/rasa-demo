@@ -1212,6 +1212,9 @@
 - you can say a jok
 - telljoke
 
+## intent:faq
+- Where can I get information on pricing for rasa-x?
+
 ## lookup:location.txt
   data/nlu/lookups/location.txt
 
