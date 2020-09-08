@@ -77,3 +77,40 @@
 * nlu_generation_tool_recommendation{"product":"nlu"}
     - slot{"product":"nlu"}
     - utter_nlu_tools
+
+## Story from conversation with f5a068e6fc79471e9e4e7fb3eb3fbf56 on September 8th 2020
+
+* get_started_step1
+    - action_greet_user
+    - slot{"shown_privacy":true}
+    - slot{"step":"1"}
+* affirm
+    - utter_getstarted
+    - utter_first_bot_with_rasa
+* affirm
+    - action_set_onboarding
+    - slot{"onboarding":true}
+    - utter_built_bot_before
+* affirm
+    - utter_ask_migration
+* affirm
+    - utter_ask_which_tool
+* enter_data{"language":"python"}
+    - slot{"language":"python"}
+    - slot{"language":"python"}
+    - action_store_unknown_product
+    - slot{"unknown_product":"python"}
+    - utter_no_guide_for_switch
+    - utter_anything_else
+* chitchat
+    - respond_chitchat
+* faq{"company":"c"}
+    - slot{"company":"c"}
+    - slot{"company":"c"}
+    - respond_faq
+    - action_set_faq_slot
+    - slot{"faq":"is_programming_required"}
+* bye
+    - slot{"language":"python"}
+    - slot{"company":"c"}
+    - utter_ask_budget
