@@ -24,12 +24,15 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: out_of_scope
   scale_loss: false
+  epochs: 100
 - name: ResponseSelector
   retrieval_intent: faq
   scale_loss: false
+  epochs: 100
 - name: ResponseSelector
   retrieval_intent: chitchat
   scale_loss: false
+  epochs: 100
 policies:
 - name: TEDPolicy
   max_history: 10
