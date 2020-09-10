@@ -1,11 +1,11 @@
 version: "2.0"
 rules:
-  - rule:
+  - rule: Two stage fallback
     steps:
       - intent: nlu_fallback
       - action: two_stage_fallback
       - active_loop: two_stage_fallback
-  - rule:
+  - rule: Out of scope
     steps:
       - intent: out_of_scope
       - action: respond_out_of_scope

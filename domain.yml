@@ -1,4 +1,4 @@
-
+version: "2.0"
 session_config:
   session_expiration_time: 480  # value in minutes, 0 means infinitely long
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
@@ -551,24 +551,24 @@ responses:
   utter_ask_more_migrate:
   - text: Would you like to learn more about the advantages of switching to Rasa?
   utter_why_rasa_research:
-    - text: Rasa invests in extensive research to create leading-edge
-        conversational AI, enabling developers to create the best text- and
-        voice-based assistants without a dedicated research team.
+  - text: Rasa invests in extensive research to create leading-edge
+      conversational AI, enabling developers to create the best text- and
+      voice-based assistants without a dedicated research team.
   utter_why_rasa_nlu:
-    - text: Rasa's NLU supports multiple languages, single and multiple
-        intents, and both pre-trained and custom entities.
+  - text: Rasa's NLU supports multiple languages, single and multiple
+      intents, and both pre-trained and custom entities.
   utter_why_rasa_dialogue:
-    - text: Assistants built on Rasa can hold meaningful conversations
-        with users - multi-step conversations that remember context and
-        integrate business logic. No state machines here!
+  - text: Assistants built on Rasa can hold meaningful conversations
+      with users - multi-step conversations that remember context and
+      integrate business logic. No state machines here!
   utter_why_rasa_os:
-    - text: Because Rasa is open source, you can customize your bot
-        and explore its inner workings as much as you'd like. There's no vendor lock in, and no
-        hidden algorithms.
+  - text: Because Rasa is open source, you can customize your bot
+      and explore its inner workings as much as you'd like. There's no vendor lock in, and no
+      hidden algorithms.
   utter_why_rasa_compliant:
-    - text: If data security and compliance is a priority for you, Rasa has
-        your back! You can deploy Rasa either in the cloud or on premise and
-        maintain complete control over your assistant & its data.
+  - text: If data security and compliance is a priority for you, Rasa has
+      your back! You can deploy Rasa either in the cloud or on premise and
+      maintain complete control over your assistant & its data.
 
 actions:
 - action_default_ask_affirmation
@@ -597,43 +597,44 @@ actions:
 - respond_out_of_scope
 
 forms:
-  sales_form:
-    job_function:
-      - type: from_entity
-        entity: job_function
-      - type: from_text
-        intent: enter_data
-    use_case:
-      - type: from_text
-        intent: enter_data
-    budget:
-      - type: from_entity
-        entity: amount-of-money
-      - type: from_entity
-        entity: number
-      - type: from_text
-        intent: enter_data
-    person_name:
-      - type: from_entity
-        entity: name
-      - type: from_text
-        intent: enter_data
-    company:
-      - type: from_entity
-        entity: company
-      - type: from_text
-        intent: enter_data
-    business_email:
-      - type: from_entity
-        entity: email
-      - type: from_text
-        intent: enter_data
-  subscribe_newsletter_form:
-    email:
-      - type: from_entity
-        entity: email
-      - type: from_text
-        intent: enter_data
-  suggestion_form:
+  - suggestion_form:
     suggestion:
-      - type: from_text
+    - type: from_text
+  - sales_form:
+    job_function:
+    - type: from_entity
+      entity: job_function
+    - type: from_text
+      intent: enter_data
+    use_case:
+    - type: from_text
+      intent: enter_data
+    budget:
+    - type: from_entity
+      entity: amount-of-money
+    - type: from_entity
+      entity: number
+    - type: from_text
+      intent: enter_data
+    person_name:
+    - type: from_entity
+      entity: name
+    - type: from_text
+      intent: enter_data
+    company:
+    - type: from_entity
+      entity: company
+    - type: from_text
+      intent: enter_data
+    business_email:
+    - type: from_entity
+      entity: email
+    - type: from_text
+      intent: enter_data
+  - subscribe_newsletter_form:
+    email:
+    - type: from_entity
+      entity: email
+    - type: from_text
+      intent: enter_data
+

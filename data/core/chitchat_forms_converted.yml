@@ -90,7 +90,7 @@ stories:
   - action: utter_can_do
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
-  - action:
+  - active_loop: null
   - action: utter_docu
   - action: utter_ask_feedback
 - story: just newsletter
