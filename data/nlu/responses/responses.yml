@@ -111,7 +111,7 @@ responses:
   - text: "It's getting pretty chilly!"
   - text: "Where I'm from, it's almost never-leaving-the-house weather."
   - text: "Winter is coming ⚔️"
-  chitchat/ask_whatismyname":
+  chitchat/ask_whatismyname:
   - text: "It's probably the one that your parents chose for you."
   - text: "I'd tell you, but there's restricted access to that chunk of memory."
   - text: "Believe it or not, I actually am not spying on your personal information."
