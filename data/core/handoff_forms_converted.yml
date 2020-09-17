@@ -2,7 +2,6 @@ version: "2.0"
 stories:
 - story: just newsletter + handoff, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -20,7 +19,6 @@ stories:
   - action: utter_ask_feedback
 - story: just newsletter + handoff, don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -36,7 +34,6 @@ stories:
   - active_loop: null
 - story: just sales, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales
@@ -52,7 +49,6 @@ stories:
   - active_loop: null
 - story: just sales, don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales
@@ -68,7 +64,6 @@ stories:
   - active_loop: null
 - story: just sales, explain, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales
@@ -84,7 +79,6 @@ stories:
   - active_loop: null
 - story: just sales, explain, stop
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales

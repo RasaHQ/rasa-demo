@@ -2,13 +2,11 @@ version: "2.0"
 stories:
 - story: out of scope
   steps:
-  - checkpoint: STORY_START
   - intent: out_of_scope
   - action: respond_out_of_scope
   - action: utter_possibilities
 - story: say enter data outside the flows
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: enter_data
@@ -16,21 +14,18 @@ stories:
   - action: utter_possibilities
 - story: say confirm outside the flows 2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: affirm
   - action: utter_thumbsup
 - story: say greet outside the flows
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: greet
   - checkpoint: GENR_OR_4db11
 - story: say greet outside the flows
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: enter_data

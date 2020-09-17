@@ -2,7 +2,6 @@ version: "2.0"
 stories:
 - story: Get started from website
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -13,7 +12,6 @@ stories:
   - action: utter_ask_ready_to_build
 - story: Get started from website + not interested in step 2
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -22,14 +20,12 @@ stories:
   - action: utter_anything_else
 - story: Direct "install Rasa"
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
 - story: Installation went well
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -39,7 +35,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Installation went well
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -53,7 +48,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -66,7 +60,6 @@ stories:
   - checkpoint: GENR_OR_1fa24
 - story: Problems installing
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -79,7 +72,6 @@ stories:
   - checkpoint: GENR_OR_1fa24
 - story: Problems installing
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -102,7 +94,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -119,7 +110,6 @@ stories:
   - checkpoint: GENR_OR_eef60
 - story: Problems installing
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -136,7 +126,6 @@ stories:
   - checkpoint: GENR_OR_eef60
 - story: Problems installing
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -163,7 +152,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing (cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -178,7 +166,6 @@ stories:
   - checkpoint: GENR_OR_18dbe
 - story: Problems installing (cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -193,7 +180,6 @@ stories:
   - checkpoint: GENR_OR_18dbe
 - story: Problems installing (cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -216,7 +202,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing (cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -227,7 +212,6 @@ stories:
   - checkpoint: GENR_OR_bd854
 - story: Problems installing (cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -238,7 +222,6 @@ stories:
   - checkpoint: GENR_OR_bd854
 - story: Problems installing (cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -257,7 +240,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing (but FAQ)
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -276,7 +258,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing (but FAQ)
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -299,7 +280,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing (but FAQ + cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -320,7 +300,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Problems installing (but FAQ + cut to the chase)
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -337,7 +316,6 @@ stories:
   - action: utter_direct_to_step3
 - story: Just don't want to continue
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -348,7 +326,6 @@ stories:
   - action: utter_anything_else
 - story: Just don't want to continue
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:

@@ -516,7 +516,7 @@ nlu:
     - would you call rasa open source software?
     - would you consider rasa open source software?
     - How is it opensource
-    - What is included in [RASA open source](product) edition?
+    - What is included in [RASA open source]{"entity": "product", "value": "rasa"} edition?
     - you are [open source](product)
     - is rasa opensource?
     - how much is Rasa stack?

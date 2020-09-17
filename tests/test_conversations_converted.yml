@@ -2,7 +2,6 @@ version: "2.0"
 stories:
 - story: faqs
   steps:
-  - checkpoint: STORY_START
   - user: |
       what is [Rasa X]{"entity": "product", "value": "x"}?
     intent: faq
@@ -12,7 +11,6 @@ stories:
   - action: action_set_faq_slot
 - story: faqs
   steps:
-  - checkpoint: STORY_START
   - user: |
       Can you tell which messaging channels does rasa support?
     intent: faq
@@ -20,7 +18,6 @@ stories:
   - action: action_set_faq_slot
 - story: FAQ - tell more about rasa x ee
   steps:
-  - checkpoint: STORY_START
   - user: |
       Can you tell me about the enterprise edition?
     intent: faq
@@ -34,12 +31,9 @@ stories:
   - action: action_explain_faq
 - story: new to rasa at start
   steps:
-  - checkpoint: STORY_START
   - user: |
       I'm [new]{"entity": "user_type"} to Rasa
     intent: how_to_get_started
-  - slot_was_set:
-    - user_type: new
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -54,13 +48,10 @@ stories:
   - user: |
       you are [open source]{"entity": "product", "value": "rasa"} ?
     intent: faq
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: not new to rasa/bots, faq rasa
   steps:
-  - checkpoint: STORY_START
   - user: |
       How do I get started
     intent: how_to_get_started
@@ -74,15 +65,12 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - user: |
-      ed in [RASA open source]{"entity": "product", "value": "rasa"} edition?
+      What is included in [RASA open source]{"entity": "product", "value": "rasa"} edition?
     intent: faq
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: get started rasa open source
   steps:
-  - checkpoint: STORY_START
   - user: |
       How do I get started
     intent: how_to_get_started
@@ -100,11 +88,10 @@ stories:
     intent: how_to_get_started
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: just newsletter + confirm
   steps:
-  - checkpoint: STORY_START
   - user: |
       hi!
     intent: greet
@@ -129,7 +116,6 @@ stories:
   - action: utter_anything_else
 - story: just newsletter, continue, + confirm
   steps:
-  - checkpoint: STORY_START
   - user: |
       hi
     intent: greet
@@ -160,7 +146,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + rasa
   steps:
-  - checkpoint: STORY_START
   - user: |
       help me get started
     intent: how_to_get_started
@@ -175,14 +160,13 @@ stories:
   - action: utter_ask_which_product
   - user: |
       [rasa open source]{"entity": "product", "value": "rasa"}
-    intent: faq
+    intent: how_to_get_started
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: not new to rasa + rasax
   steps:
-  - checkpoint: STORY_START
   - user: |
       how to get started
     intent: how_to_get_started
@@ -204,7 +188,6 @@ stories:
   - action: utter_also_explain_nlucore
 - story: faq with entities
   steps:
-  - checkpoint: STORY_START
   - user: |
       what's the difference between [rasa]{"entity": "product"} and [rasa x]{"entity": "product", "value": "x"}
     intent: faq
@@ -214,7 +197,6 @@ stories:
   - action: action_set_faq_slot
 - story: chitchat
   steps:
-  - checkpoint: STORY_START
   - user: |
       By what means were you made?
     intent: chitchat

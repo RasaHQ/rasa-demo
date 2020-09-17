@@ -2,23 +2,19 @@ version: "2.0"
 stories:
 - story: thanks
   steps:
-  - checkpoint: STORY_START
   - intent: thank
   - action: utter_noworries
   - action: utter_anything_else
 - story: bye
   steps:
-  - checkpoint: STORY_START
   - intent: bye
   - action: utter_bye
 - story: greet
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - checkpoint: GENR_OR_c66a6
 - story: greet
   steps:
-  - checkpoint: STORY_START
   - intent: enter_data
     entities:
     - name: akela
@@ -29,43 +25,36 @@ stories:
   - action: action_greet_user
 - story: neither options
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: deny
   - action: utter_nohelp
 - story: anything else? - yes
   steps:
-  - checkpoint: STORY_START
   - action: utter_anything_else
   - intent: affirm
   - action: utter_what_help
 - story: anything else? - no
   steps:
-  - checkpoint: STORY_START
   - action: utter_anything_else
   - intent: deny
   - action: utter_thumbsup
 - story: anything else?
   steps:
-  - checkpoint: STORY_START
   - action: utter_anything_else
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
 - story: positive reaction
   steps:
-  - checkpoint: STORY_START
   - intent: react_positive
   - action: utter_react_positive
 - story: negative reaction
   steps:
-  - checkpoint: STORY_START
   - intent: react_negative
   - action: utter_react_negative
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
@@ -77,7 +66,6 @@ stories:
   - action: utter_why_rasa_compliant
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
     entities:
     - current_api: tensorflow
@@ -93,7 +81,6 @@ stories:
   - action: utter_why_rasa_compliant
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
     entities:
     - current_api: luis
@@ -110,7 +97,6 @@ stories:
   - action: utter_why_rasa_compliant
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
     entities:
     - current_api: dialogflow
@@ -127,7 +113,6 @@ stories:
   - action: utter_why_rasa_compliant
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
@@ -135,7 +120,6 @@ stories:
   - action: utter_anything_else
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
     entities:
     - current_api: tensorflow
@@ -147,7 +131,6 @@ stories:
   - action: utter_anything_else
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
     entities:
     - current_api: luis
@@ -160,7 +143,6 @@ stories:
   - action: utter_anything_else
 - story: why rasa
   steps:
-  - checkpoint: STORY_START
   - intent: why_rasa
     entities:
     - current_api: dialogflow

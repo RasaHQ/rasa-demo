@@ -63,7 +63,6 @@ stories:
   - action: action_set_faq_slot
 - story: more faqs
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq
@@ -74,7 +73,6 @@ stories:
   - action: action_set_faq_slot
 - story: not new to rasa + not interested in products
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -93,7 +91,6 @@ stories:
   - action: utter_thumbsup
 - story: not new to rasa + not interested in products
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -112,7 +109,6 @@ stories:
   - action: utter_thumbsup
 - story: not new to rasa + nlu + nothing special
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -136,7 +132,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + unknown topic
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -162,7 +157,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + intent + no recommendation
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -191,7 +185,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + intent + pipeline recommendation, spacy
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -215,7 +208,6 @@ stories:
   - checkpoint: GENR_OR_ed8c7
 - story: not new to rasa + nlu + intent + pipeline recommendation, spacy
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -254,7 +246,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + intent + pipeline recommendation, spacy
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -278,7 +269,6 @@ stories:
   - checkpoint: GENR_OR_bb7e2
 - story: not new to rasa + nlu + intent + pipeline recommendation, spacy
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -316,7 +306,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -340,7 +329,6 @@ stories:
   - checkpoint: GENR_OR_e98bc
 - story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -382,7 +370,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + entity + pipeline duckling
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -410,7 +397,6 @@ stories:
   - checkpoint: GENR_OR_a214d
 - story: not new to rasa + nlu + entity + pipeline duckling
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -450,7 +436,6 @@ stories:
   - action: utter_anything_else
 - story: not new to rasa + nlu + entity + pipeline duckling
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -474,7 +459,6 @@ stories:
   - checkpoint: GENR_OR_09871
 - story: not new to rasa + nlu + entity + pipeline duckling
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -554,7 +538,6 @@ stories:
   - action: action_explain_faq
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -567,7 +550,6 @@ stories:
   - action: utter_ask_ready_to_build
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -578,7 +560,6 @@ stories:
   - action: utter_ask_ready_to_build
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -592,7 +573,6 @@ stories:
   - action: utter_direct_to_step3
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -607,7 +587,6 @@ stories:
   - checkpoint: GENR_OR_c9511
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -622,7 +601,6 @@ stories:
   - checkpoint: GENR_OR_c9511
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -645,7 +623,6 @@ stories:
   - action: utter_direct_to_step3
 - story: technical_question - docs_found - deny
   steps:
-  - checkpoint: STORY_START
   - intent: technical_question
   - action: action_docs_search
   - slot_was_set:
@@ -656,7 +633,6 @@ stories:
   - action: action_forum_search
 - story: technical_question - docs_found - affirm
   steps:
-  - checkpoint: STORY_START
   - intent: technical_question
   - action: action_docs_search
   - slot_was_set:
@@ -667,7 +643,6 @@ stories:
   - action: utter_great
 - story: technical_question - no docs_found
   steps:
-  - checkpoint: STORY_START
   - intent: technical_question
   - action: action_docs_search
   - slot_was_set:
@@ -675,7 +650,6 @@ stories:
   - action: action_forum_search
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -692,7 +666,6 @@ stories:
   - action: utter_direct_to_step3
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -711,7 +684,6 @@ stories:
   - action: utter_direct_to_step3
 - story: FAQ - Step 2 flow interrupted
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step2
   - action: action_greet_user
   - slot_was_set:
@@ -726,7 +698,6 @@ stories:
   - action: utter_ask_ready_to_build
 - story: Just don't want to continue
   steps:
-  - checkpoint: STORY_START
   - intent: install_rasa
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -737,7 +708,6 @@ stories:
   - action: utter_ask_ready_to_build
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq
@@ -761,7 +731,6 @@ stories:
   - checkpoint: GENR_OR_631dc
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq
@@ -787,7 +756,6 @@ stories:
   - checkpoint: GENR_OR_631dc
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq
@@ -818,7 +786,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq
@@ -847,7 +814,6 @@ stories:
   - action: utter_explain_nlu
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq
@@ -876,7 +842,6 @@ stories:
   - action: utter_also_explain_nlucore
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -901,7 +866,6 @@ stories:
   - checkpoint: GENR_OR_ea69f
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -928,7 +892,6 @@ stories:
   - checkpoint: GENR_OR_ea69f
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -960,7 +923,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -985,7 +947,6 @@ stories:
   - checkpoint: GENR_OR_d16a1
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1012,7 +973,6 @@ stories:
   - checkpoint: GENR_OR_d16a1
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1044,7 +1004,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1069,7 +1028,6 @@ stories:
   - checkpoint: GENR_OR_cd83d
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1096,7 +1054,6 @@ stories:
   - checkpoint: GENR_OR_cd83d
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1128,7 +1085,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1153,7 +1109,6 @@ stories:
   - checkpoint: GENR_OR_411ff
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1180,7 +1135,6 @@ stories:
   - checkpoint: GENR_OR_411ff
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1212,7 +1166,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1233,7 +1186,6 @@ stories:
   - checkpoint: GENR_OR_fe93d
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1256,7 +1208,6 @@ stories:
   - checkpoint: GENR_OR_fe93d
 - story: new to rasa + not new to chatbots + not migrating
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1288,7 +1239,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain stack and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1311,7 +1261,6 @@ stories:
   - checkpoint: GENR_OR_94c7a
 - story: new to rasa/bots, explain stack and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1336,7 +1285,6 @@ stories:
   - checkpoint: GENR_OR_94c7a
 - story: new to rasa/bots, explain stack and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1366,7 +1314,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain stack and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1389,7 +1336,6 @@ stories:
   - checkpoint: GENR_OR_4f09f
 - story: new to rasa/bots, explain stack and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1414,7 +1360,6 @@ stories:
   - checkpoint: GENR_OR_4f09f
 - story: new to rasa/bots, explain stack and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1444,7 +1389,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain x and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1463,7 +1407,6 @@ stories:
   - checkpoint: GENR_OR_c470a
 - story: new to rasa/bots, explain x and try it out
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1497,7 +1440,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1525,7 +1467,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1553,7 +1494,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core, then nlu and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1582,7 +1522,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain x, then direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1609,7 +1548,6 @@ stories:
   - action: action_set_faq_slot
 - story: new to rasa/bots, explain core, then nlu and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1638,7 +1576,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain nlu and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1666,7 +1603,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain x and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1695,7 +1631,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain nlu and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1723,7 +1658,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, don't explain and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1746,7 +1680,6 @@ stories:
   - action: utter_direct_to_step2
 - story: new to rasa/bots, don't explain and direct to step2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
@@ -1769,7 +1702,6 @@ stories:
   - action: utter_direct_to_step2
 - story: not new to rasa + not interested in products
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: faq

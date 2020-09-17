@@ -2,19 +2,16 @@ version: "2.0"
 stories:
 - story: chitchat
   steps:
-  - checkpoint: STORY_START
   - intent: canthelp
   - action: utter_canthelp
 - story: greet + canthelp
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: canthelp
   - action: utter_canthelp
 - story: greet + newsletter + canthelp + continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -31,7 +28,6 @@ stories:
   - action: utter_docu
 - story: greet + newsletter + canthelp + don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -47,7 +43,6 @@ stories:
   - active_loop: null
 - story: just sales + continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales
@@ -63,7 +58,6 @@ stories:
   - active_loop: null
 - story: just sales + don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales

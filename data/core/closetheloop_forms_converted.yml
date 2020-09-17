@@ -2,7 +2,6 @@ version: "2.0"
 stories:
 - story: story number 1
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
@@ -25,7 +24,6 @@ stories:
   - action: utter_ask_feedback
 - story: story number 2
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -40,7 +38,6 @@ stories:
   - action: utter_anything_else
 - story: story number 4
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -60,7 +57,6 @@ stories:
   - action: utter_possibilities
 - story: story number 5
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -78,7 +74,6 @@ stories:
   - action: utter_possibilities
 - story: story number 6
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -87,7 +82,6 @@ stories:
   - action: respond_chitchat
 - story: story number 7
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: greet
@@ -102,7 +96,6 @@ stories:
   - action: utter_ask_feedback
 - story: story number 8
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: enter_data
@@ -113,7 +106,6 @@ stories:
   - action: utter_possibilities
 - story: story number 11, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -139,7 +131,6 @@ stories:
   - action: utter_ask_feedback
 - story: story number 11, don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -163,7 +154,6 @@ stories:
   - active_loop: null
 - story: story number 12
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -178,7 +168,6 @@ stories:
   - action: utter_anything_else
 - story: story number 12, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -199,7 +188,6 @@ stories:
   - action: utter_anything_else
 - story: story number 12, don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -220,7 +208,6 @@ stories:
 
 - story: Story from conversation with d041ba4b0a89479e9bb6a5007f2cdc87 on November 15th 2018
   steps:
-  - checkpoint: STORY_START
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -238,7 +225,6 @@ stories:
 
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step1
   - action: action_greet_user
   - slot_was_set:
@@ -264,7 +250,6 @@ stories:
   - active_loop: null
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
-  - checkpoint: STORY_START
   - intent: get_started_step1
   - action: action_greet_user
   - slot_was_set:

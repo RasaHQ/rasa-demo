@@ -2,7 +2,6 @@ version: "2.0"
 stories:
 - story: just newsletter + confirm
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -19,7 +18,6 @@ stories:
   - action: utter_anything_else
 - story: just newsletter, continue, + confirm
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -40,7 +38,6 @@ stories:
   - action: utter_anything_else
 - story: just newsletter, don't continue, + confirm
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -60,7 +57,6 @@ stories:
   - action: utter_anything_else
 - story: just newsletter (with email already) + confirm
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -79,7 +75,6 @@ stories:
   - action: utter_anything_else
 - story: just newsletter (with email already)
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -95,7 +90,6 @@ stories:
   - action: utter_ask_feedback
 - story: just newsletter
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -109,7 +103,6 @@ stories:
   - action: utter_ask_feedback
 - story: just newsletter, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -127,7 +120,6 @@ stories:
   - action: utter_ask_feedback
 - story: just newsletter, don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: signup_newsletter
@@ -144,7 +136,6 @@ stories:
   - action: utter_ask_feedback
 - story: just sales
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
@@ -157,7 +148,6 @@ stories:
   - action: utter_ask_feedback
 - story: just sales, continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales
@@ -173,7 +163,6 @@ stories:
   - active_loop: null
 - story: just sales, don't continue
   steps:
-  - checkpoint: STORY_START
   - intent: greet
   - action: action_greet_user
   - intent: contact_sales
