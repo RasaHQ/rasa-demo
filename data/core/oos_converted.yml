@@ -4,7 +4,7 @@ stories:
   steps:
   - checkpoint: STORY_START
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: say enter data outside the flows
   steps:

@@ -249,7 +249,7 @@ stories:
   - intent: affirm
   - action: utter_ask_describe_problem
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -271,7 +271,7 @@ stories:
   - intent: affirm
   - action: utter_ask_describe_problem
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -291,7 +291,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -307,7 +307,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions

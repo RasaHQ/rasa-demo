@@ -401,13 +401,13 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form

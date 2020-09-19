@@ -1898,7 +1898,7 @@ stories:
   steps:
   - checkpoint: STORY_START
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: source code
   steps:

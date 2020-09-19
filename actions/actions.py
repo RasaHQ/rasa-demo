@@ -37,10 +37,10 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         """Once we have an email, attempt to add it to the database"""
 
         email = tracker.get_slot("email")
-        # client = MailChimpAPI(config.mailchimp_api_key)
+        client = MailChimpAPI(config.mailchimp_api_key)
         # if the email is already subscribed, this returns False
-        # added_to_list = client.subscribe_user(config.mailchimp_list, email)
-        added_to_list = True
+        added_to_list = client.subscribe_user(config.mailchimp_list, email)
+
         # utter submit template
         if added_to_list:
             dispatcher.utter_message(template="utter_confirmationemail")

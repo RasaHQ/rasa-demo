@@ -5,7 +5,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: signup_newsletter
   - action: utter_can_do
@@ -27,7 +27,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
   - intent: affirm
@@ -49,7 +49,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
   - intent: deny
@@ -67,7 +67,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: signup_newsletter
     entities:
@@ -87,7 +87,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: signup_newsletter
     entities:
@@ -104,7 +104,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: contact_sales
   - action: utter_moreinformation
@@ -122,7 +122,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
   - intent: affirm
@@ -140,7 +140,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
   - intent: deny

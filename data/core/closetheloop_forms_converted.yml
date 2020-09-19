@@ -5,7 +5,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
   - intent: signup_newsletter
   - action: utter_can_do
@@ -56,9 +56,9 @@ stories:
   - action: utter_noworries
   - action: utter_anything_else
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: story number 5
   steps:
@@ -76,16 +76,16 @@ stories:
   - action: utter_noworries
   - action: utter_anything_else
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: story number 6
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
 - story: story number 7
   steps:
   - intent: greet
@@ -93,7 +93,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -116,13 +116,13 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -142,13 +142,13 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -184,7 +184,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: affirm
   - action: utter_great
@@ -205,7 +205,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: deny
   - action: utter_thumbsup
@@ -229,7 +229,7 @@ stories:
   - action: utter_thumbsup
   - action: utter_anything_else
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -245,9 +245,9 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -272,9 +272,9 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
