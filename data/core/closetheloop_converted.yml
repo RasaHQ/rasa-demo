@@ -234,6 +234,7 @@ stories:
   - action: respond_chitchat
   - intent: out_of_scope
   - action: respond_out_of_scope
+  - action: utter_possibilities
   - intent: chitchat
   - action: respond_chitchat
   - intent: how_to_get_started
@@ -543,6 +544,7 @@ stories:
   - action: action_greet_user
   - intent: out_of_scope
   - action: respond_out_of_scope
+  - action: utter_possibilities
   - intent: affirm
   - action: utter_thumbsup
   - intent: affirm

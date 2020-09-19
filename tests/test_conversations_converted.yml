@@ -107,6 +107,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - user: |
@@ -137,6 +138,7 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - user: |

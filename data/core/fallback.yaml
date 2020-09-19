@@ -5,7 +5,3 @@ rules:
       - intent: nlu_fallback
       - action: two_stage_fallback
       - active_loop: two_stage_fallback
-  - rule: Out of scope
-    steps:
-      - intent: out_of_scope
-      - action: respond_out_of_scope

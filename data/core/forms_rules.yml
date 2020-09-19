@@ -12,6 +12,7 @@ rules:
   - active_loop: subscribe_newsletter_form
   steps:
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 
@@ -46,10 +47,10 @@ rules:
   - action: sales_form
   - active_loop: sales_form
 
-
 - rule: deactivate contact sales form
   condition:
   - active_loop: sales_form
   steps:
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback

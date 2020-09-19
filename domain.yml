@@ -174,9 +174,9 @@ responses:
   - text: Would you like to know more about Rasa Open Source or Rasa X?
   utter_ask_feedback:
   - buttons:
-    - payload: /feedback{"feedback_value":"positive"}
+    - payload: '/feedback{{"feedback_value": "positive"}}'
       title: 👍
-    - payload: /feedback{"feedback_value":"negative"}
+    - payload: '/feedback{{"feedback_value": "negative"}}'
       title: 👎
     text: How is this conversation going?
   utter_ask_feedback_message:
@@ -195,6 +195,8 @@ responses:
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:
+  - text: What's your name?
+  utter_ask_person_name:
   - text: What's your name?
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Rasa?
@@ -582,59 +584,60 @@ actions:
 - action_greet_user
 - action_next_step
 - action_pause
-- action_sales_form
 - action_set_onboarding
 - action_store_bot_language
 - action_store_entity_extractor
 - action_store_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
-- action_subscribe_newsletter_form
 - action_tag_docs_search
 - action_tag_feedback
-- respond_chitchat
-- respond_faq
-- respond_out_of_scope
+- action_submit_subscribe_newsletter_form
+- action_submit_sales_form
+- action_submit_suggestion_form
+- validate_subscribe_newsletter_form
+- validate_sales_form
+
 
 forms:
-  - suggestion_form:
+  suggestion_form:
     suggestion:
-    - type: from_text
-  - sales_form:
+      - type: from_text
+  sales_form:
     job_function:
-    - type: from_entity
-      entity: job_function
-    - type: from_text
-      intent: enter_data
+      - type: from_entity
+        entity: job_function
+      - type: from_text
+        intent: enter_data
     use_case:
-    - type: from_text
-      intent: enter_data
+      - type: from_text
+        intent: enter_data
     budget:
-    - type: from_entity
-      entity: amount-of-money
-    - type: from_entity
-      entity: number
-    - type: from_text
-      intent: enter_data
+      - type: from_entity
+        entity: amount-of-money
+      - type: from_entity
+        entity: number
+      - type: from_text
+        intent: enter_data
     person_name:
-    - type: from_entity
-      entity: name
-    - type: from_text
-      intent: enter_data
+      - type: from_entity
+        entity: name
+      - type: from_text
+        intent: enter_data
     company:
-    - type: from_entity
-      entity: company
-    - type: from_text
-      intent: enter_data
+      - type: from_entity
+        entity: company
+      - type: from_text
+        intent: enter_data
     business_email:
-    - type: from_entity
-      entity: email
-    - type: from_text
-      intent: enter_data
-  - subscribe_newsletter_form:
+      - type: from_entity
+        entity: email
+      - type: from_text
+        intent: enter_data
+  subscribe_newsletter_form:
     email:
-    - type: from_entity
-      entity: email
-    - type: from_text
-      intent: enter_data
+      - type: from_entity
+        entity: email
+      - type: from_text
+        intent: enter_data
 
