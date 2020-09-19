@@ -7,21 +7,21 @@ stories:
     intent: faq
   - slot_was_set:
     - product: x
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
   - user: |
       Can you tell which messaging channels does rasa support?
     intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: FAQ - tell more about rasa x ee
   steps:
   - user: |
       Can you tell me about the enterprise edition?
     intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - slot_was_set:
     - faq: ee
@@ -99,7 +99,7 @@ stories:
   - user: |
       who built you?
     intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - user: |
       can I sign up for the newsletter?
     intent: signup_newsletter
@@ -130,7 +130,7 @@ stories:
   - user: |
       are you a bot?
     intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - action: utter_ask_continue_newsletter
   - user: |
       yep
@@ -195,11 +195,11 @@ stories:
     intent: faq
   - slot_was_set:
     - product: x
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: chitchat
   steps:
   - user: |
       By what means were you made?
     intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
