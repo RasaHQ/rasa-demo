@@ -471,7 +471,7 @@ responses:
   - text: 😍
   utter_reasons_to_contribute:
   - text: "Here a few reasons why you should contribute:\n- Explore the source code\
-      \ in depth\n- Contribute to open source software\n- Earn [Rasa swag])(https://rasa.com/community/contribute/)!\n"
+      \ in depth\n- Contribute to open source software\n- Earn [Rasa swag](https://rasa.com/community/contribute/)!\n"
   utter_recommend_forum:
   - text: You should join the [Rasa Community forum](https://forum.rasa.com), where
       you can ask questions about Rasa Open Source and Rasa X, find resources, and
