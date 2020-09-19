@@ -29,7 +29,6 @@ INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 
 
 class ActionSubmitSubscribeNewsletterForm(Action):
-
     def name(self) -> Text:
         return "action_submit_subscribe_newsletter_form"
 
@@ -49,9 +48,7 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         return []
 
 
-
 class ValidateSubscribeNewsletterForm(Action):
-
     def name(self) -> Text:
         return "validate_subscribe_newsletter_form"
 
@@ -68,8 +65,8 @@ class ValidateSubscribeNewsletterForm(Action):
 
         return validation_events
 
-class ActionSubmitSalesForm(Action):
 
+class ActionSubmitSalesForm(Action):
     def name(self) -> Text:
         return "action_submit_sales_form"
 
@@ -104,7 +101,6 @@ class ActionSubmitSalesForm(Action):
 
 
 class ValidateSalesForm(Action):
-
     def name(self) -> Text:
         return "validate_sales_form"
 
@@ -206,7 +202,7 @@ class ActionStoreUnknownProduct(Action):
 
 class ActionStoreUnknownNluPart(Action):
     """Stores unknown parts of nlu which the user requests information on
-       in slot.
+    in slot.
     """
 
     def name(self) -> Text:
@@ -250,7 +246,7 @@ class ActionStoreBotLanguage(Action):
 
 class ActionStoreEntityExtractor(Action):
     """Takes the entity which the user wants to extract and checks
-        what pipelines can be used.
+    what pipelines can be used.
     """
 
     def name(self) -> Text:
@@ -298,7 +294,6 @@ class ActionSetOnboarding(Action):
 
 
 class ActionSubmitSuggestionForm(Action):
-
     def name(self) -> Text:
         return "action_submit_suggestion_form"
 
