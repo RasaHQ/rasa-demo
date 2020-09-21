@@ -3,11 +3,10 @@ import logging
 import json
 import requests
 from datetime import datetime
-from typing import Any, Dict, List, Text, Union, Optional
+from typing import Any, Dict, List, Text, Optional
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction
 from rasa_sdk.events import (
     SlotSet,
     UserUtteranceReverted,
@@ -130,7 +129,10 @@ class ActionExplainSalesForm(Action):
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
         requested_slot = tracker.get_slot("requested_slot")
 
-        if requested_slot not in SalesForm.required_slots(tracker):
+        sales_form_config = domain.get("forms", {}).get("sales_form", {})
+        sales_form_required_slots = list(sales_form_config.keys())
+
+        if requested_slot not in sales_form_required_slots:
             dispatcher.utter_message(
                 template="Sorry, I didn't get that. Please rephrase or answer the question "
                 "above."
@@ -690,8 +692,8 @@ class ActionForumSearch(Action):
         else:
             dispatcher.utter_message(
                 text=(
-                    f"I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
-                    f"I recommend you post your question there."
+                    "I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
+                    "I recommend you post your question there."
                 )
             )
 

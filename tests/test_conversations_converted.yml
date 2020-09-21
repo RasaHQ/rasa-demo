@@ -113,7 +113,7 @@ stories:
   - user: |
       Yes please
     intent: affirm
-  - action: utter_thumbsup
+  - action: utter_great
   - action: utter_anything_else
 - story: just newsletter, continue, + confirm
   steps:
@@ -144,7 +144,37 @@ stories:
   - user: |
       sure
     intent: affirm
-  - action: utter_thumbsup
+  - action: utter_great
+  - action: utter_anything_else
+- story: just sales, continue, + confirm
+  steps:
+  - user: |
+      hi
+    intent: greet
+  - action: action_greet_user
+  - user: |
+      can i talk to sales?
+    intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - user: |
+      are you a bot?
+    intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_continue_sales
+  - user: |
+      yep
+    intent: affirm
+  - action: utter_great
+  - action: sales_form
+  - active_loop: null
+  - action: action_submit_sales_form
+  - action: utter_ask_feedback
+  - user: |
+      sure
+    intent: affirm
+  - action: utter_great
   - action: utter_anything_else
 - story: not new to rasa + rasa
   steps:
