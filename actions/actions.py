@@ -13,8 +13,7 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
-    ActionExecuted,
-    UserUttered,
+    FollowupAction,
 )
 
 from actions import config
@@ -113,10 +112,7 @@ class SalesForm(FormAction):
                 self.from_entity(entity="job_function"),
                 self.from_text(intent="enter_data"),
             ],
-            "use_case": [
-                self.from_text(intent="enter_data"),
-                self.from_intent(intent="ask_faq_voice", value="voice"),
-            ],
+            "use_case": [self.from_text(intent="enter_data")],
             "budget": [
                 self.from_entity(entity="amount-of-money"),
                 self.from_entity(entity="number"),
@@ -204,73 +200,41 @@ class ActionExplainSalesForm(Action):
         return []
 
 
-class ActionChitchat(Action):
+class ActionExplainFaqs(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
     def name(self) -> Text:
-        return "action_chitchat"
+        return "action_explain_faq"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        intent = tracker.latest_message["intent"].get("name")
+        topic = tracker.get_slot("faq")
 
-        # retrieve the correct chitchat utterance dependent on the intent
-        if intent in [
-            "ask_builder",
-            "ask_weather",
-            "ask_howdoing",
-            "ask_whatspossible",
-            "ask_whatisrasa",
-            "ask_isbot",
-            "ask_howold",
-            "ask_languagesbot",
-            "ask_restaurant",
-            "ask_time",
-            "ask_wherefrom",
-            "ask_whoami",
-            "handleinsult",
-            "nicetomeeyou",
-            "telljoke",
-            "ask_whatismyname",
-            "ask_howbuilt",
-            "ask_whoisit",
-        ]:
-            dispatcher.utter_message(template=f"utter_{intent}")
+        if topic in ["channels", "languages", "ee", "slots", "voice"]:
+            dispatcher.utter_message(template=f"utter_faq_{topic}_more")
+        else:
+            dispatcher.utter_message(template="utter_no_further_info")
+
         return []
 
 
-class ActionFaqs(Action):
+class ActionSetFaqSlot(Action):
     """Returns the chitchat utterance dependent on the intent"""
 
     def name(self) -> Text:
-        return "action_faqs"
+        return "action_set_faq_slot"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
-        intent = tracker.latest_message["intent"].get("name")
+        full_intent = (
+            tracker.latest_message.get("response_selector", {})
+            .get("faq", {})
+            .get("full_retrieval_intent")
+        )
+        if full_intent:
+            topic = full_intent.split("/")[1]
+        else:
+            topic = None
 
-        logger.debug("Detected FAQ intent: {}".format(intent))
-
-        # retrieve the correct chitchat utterance dependent on the intent
-        if intent in [
-            "ask_faq_ee",
-            "ask_faq_languages",
-            "ask_faq_is_programming_required",
-            "ask_faq_tutorialcore",
-            "ask_faq_tutorialnlu",
-            "ask_faq_opensource_cost",
-            "ask_faq_voice",
-            "ask_faq_slots",
-            "ask_faq_channels",
-            "ask_faq_differencecorenlu",
-            "ask_faq_differencerasarasax",
-            "ask_faq_python_version",
-            "ask_faq_community_size",
-            "ask_faq_what_is_forum",
-            "ask_faq_tutorials",
-            "ask_faq_differencerasarasax",
-            "ask_faq_rasax",
-        ]:
-            dispatcher.utter_message(template=f"utter_{intent}")
-        return []
+        return [SlotSet("faq", topic)]
 
 
 class ActionPause(Action):
@@ -333,7 +297,7 @@ class ActionStoreBotLanguage(Action):
                 SlotSet("can_use_spacy", False),
             ]
 
-        if language in spacy_languages:
+        if language.lower() in spacy_languages:
             return [SlotSet("can_use_spacy", True)]
         else:
             return [SlotSet("can_use_spacy", False)]
@@ -428,6 +392,8 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
+        if intent == "next_step":
+            intent = "get_started_step1"
         if intent == "greet" or (intent == "enter_data" and name_entity):
             if shown_privacy and name_entity and name_entity.lower() != "sara":
                 dispatcher.utter_message(template="utter_greet_name", name=name_entity)
@@ -482,10 +448,18 @@ class ActionDefaultAskAffirmation(Action):
                 intent_ranking = intent_ranking[:2]
             else:
                 intent_ranking = intent_ranking[:1]
+
+        # for the intent name used to retrieve the button title, we either use
+        # the name of the name of the "main" intent, or if it's an intent that triggers
+        # the response selector, we use the full retrieval intent name so that we
+        # can distinguish between the different sub intents
         first_intent_names = [
             intent.get("name", "")
+            if intent.get("name", "") not in ["out_of_scope", "faq", "chitchat"]
+            else tracker.latest_message.get("response_selector")
+            .get(intent.get("name", ""))
+            .get("full_retrieval_intent")
             for intent in intent_ranking
-            if intent.get("name", "") != "out_of_scope"
         ]
 
         message_title = (
@@ -499,24 +473,18 @@ class ActionDefaultAskAffirmation(Action):
 
         buttons = []
         for intent in first_intent_names:
-            logger.debug(intent)
-            logger.debug(entities)
-            buttons.append(
-                {
-                    "title": self.get_button_title(intent, entities),
-                    "payload": "/{}{}".format(intent, entities_json),
-                }
-            )
+            button_title = self.get_button_title(intent, entities)
+            if "/" in intent:
+                # here we use the button title as the payload as well, because you
+                # can't force a response selector sub intent, so we need NLU to parse
+                # that correctly
+                buttons.append({"title": button_title, "payload": button_title})
+            else:
+                buttons.append(
+                    {"title": button_title, "payload": f"/{intent}{entities_json}"}
+                )
 
-        # /out_of_scope is a retrieval intent
-        # you cannot send rasa the '/out_of_scope' intent
-        # instead, you can send one of the sentences that it will map onto the response
-        buttons.append(
-            {
-                "title": "Something else",
-                "payload": "I am asking you an out of scope question",
-            }
-        )
+        buttons.append({"title": "Something else", "payload": "/trigger_rephrase"})
 
         dispatcher.utter_message(text=message_title, buttons=buttons)
 
@@ -682,17 +650,7 @@ class ActionNextStep(Action):
             return []
 
         else:
-            # trigger get_started_step1 intent
-            return [
-                ActionExecuted("action_listen"),
-                UserUttered(
-                    "/get_started_step1",
-                    {
-                        "intent": {"name": "get_started_step1", "confidence": 1.0},
-                        "entities": {},
-                    },
-                ),
-            ]
+            return [FollowupAction("action_greet_user")]
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
@@ -714,7 +672,7 @@ class ActionDocsSearch(Action):
         search_text = tracker.latest_message.get("text")
 
         # Search of docs pages
-        alg_res = None
+        algolia_result = None
         algolia = AlgoliaAPI(
             config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
         )
@@ -724,16 +682,29 @@ class ActionDocsSearch(Action):
             last_user_event = get_last_event_for(tracker, "user", skip=2)
             if last_user_event:
                 search_text = last_user_event.get("text")
-                alg_res = algolia.search(search_text)
+                algolia_result = algolia.search(search_text)
         else:
-            alg_res = algolia.search(search_text)
+            algolia_result = algolia.search(search_text)
 
-        if alg_res and alg_res.get("hits") and len(alg_res.get("hits")) > 0:
+        if (
+            algolia_result
+            and algolia_result.get("hits")
+            and len(algolia_result.get("hits")) > 0
+        ):
             docs_found = True
-            doc_list = algolia.get_algolia_link(alg_res.get("hits"), 0)
+            hits = [
+                hit
+                for hit in algolia_result.get("hits")
+                if "Rasa X Changelog " not in hit.get("hierarchy", {}).values()
+                and "Rasa Open Source Change Log "
+                not in hit.get("hierarchy", {}).values()
+            ]
+            if not hits:
+                hits = algolia_result.get("hits")
+            doc_list = algolia.get_algolia_link(hits, 0)
             doc_list += (
-                "\n" + algolia.get_algolia_link(alg_res.get("hits"), 1)
-                if len(alg_res.get("hits")) > 1
+                "\n" + algolia.get_algolia_link(hits, 1)
+                if len(algolia_result.get("hits")) > 1
                 else ""
             )
 

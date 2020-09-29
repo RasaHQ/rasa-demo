@@ -23,6 +23,13 @@ pipeline:
 - name: EntitySynonymMapper
 - name: ResponseSelector
   retrieval_intent: out_of_scope
+  scale_loss: false
+- name: ResponseSelector
+  retrieval_intent: faq
+  scale_loss: false
+- name: ResponseSelector
+  retrieval_intent: chitchat
+  scale_loss: false
 policies:
 - name: TEDPolicy
   max_history: 10
@@ -35,5 +42,6 @@ policies:
 - core_threshold: 0.3
   name: TwoStageFallbackPolicy
   nlu_threshold: 0.8
+  deny_suggestion_intent_name: "trigger_rephrase"
 - name: FormPolicy
 - name: MappingPolicy
