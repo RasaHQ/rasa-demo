@@ -281,8 +281,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet

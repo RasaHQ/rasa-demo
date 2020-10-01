@@ -97,6 +97,8 @@ stories:
   - intent: faq
     entities:
     - product: rasa
+  - slot_was_set:
+    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa + built a bot before
@@ -685,6 +687,8 @@ stories:
   - intent: faq
     entities:
     - product: rasa
+  - slot_was_set:
+    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa/bots, explain x, then nlu+core
@@ -768,6 +772,8 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
+    - product: rasa
+  - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
@@ -925,6 +931,8 @@ stories:
   - intent: faq
     entities:
     - product: rasa
+  - slot_was_set:
+    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa/bots, explain all
@@ -1002,6 +1010,8 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
+    - product: rasa
+  - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
@@ -1081,6 +1091,8 @@ stories:
   - intent: how_to_get_started
     entities:
     - product: rasa
+  - slot_was_set:
+    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: not new to rasa + rasa
@@ -1129,6 +1141,8 @@ stories:
   - action: utter_ask_which_product
   - intent: how_to_get_started
     entities:
+    - product: rasa
+  - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
@@ -1179,6 +1193,8 @@ stories:
   steps:
   - intent: how_to_get_started
     entities:
+    - product: rasa
+  - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
@@ -1255,6 +1271,8 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: how_to_get_started
     entities:
+    - product: rasa
+  - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core

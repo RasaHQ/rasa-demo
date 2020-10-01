@@ -16,7 +16,7 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: affirm
-  - action: utter_thumbsup
+  - action: utter_great
   - action: utter_anything_else
 - story: just newsletter, continue + confirm
   steps:
@@ -38,7 +38,7 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: affirm
-  - action: utter_thumbsup
+  - action: utter_great
   - action: utter_anything_else
 - story: just newsletter, don't continue + confirm
   steps:
@@ -60,7 +60,7 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: affirm
-  - action: utter_thumbsup
+  - action: utter_great
   - action: utter_anything_else
 - story: just newsletter (with email already) + confirm
   steps:
@@ -80,7 +80,7 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: affirm
-  - action: utter_thumbsup
+  - action: utter_great
   - action: utter_anything_else
 - story: just newsletter (with email already)
   steps:
