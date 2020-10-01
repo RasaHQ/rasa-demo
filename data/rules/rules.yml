@@ -1,0 +1,178 @@
+version: "2.0"
+rules:
+- rule: cant help
+  steps:
+  - intent: canthelp
+  - action: utter_canthelp
+  wait_for_user_input: False
+- rule: respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+  wait_for_user_input: False
+- rule: respond to faq
+  conversation_start: true
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: False
+- rule: next step prompt
+  steps:
+  - intent: next_step
+  - action: action_next_step
+  wait_for_user_input: False
+- rule: faqs
+  conversation_start: true
+  steps:
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: False
+- rule: faqs
+  conversation_start: true
+  steps:
+  - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: False
+- rule: faqs
+  conversation_start: true
+  steps:
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: False
+- rule: faqs
+  conversation_start: true
+  steps:
+  - intent: faq
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: False
+- rule: faqs
+  conversation_start: true
+  steps:
+  - intent: faq
+    entities:
+    - product: all
+  - slot_was_set:
+    - product: all
+  - action: utter_faq
+  - action: action_set_faq_slot
+  wait_for_user_input: False
+- rule: human handoff
+  steps:
+  - intent: human_handoff
+  - action: utter_contact_email
+  wait_for_user_input: False
+- rule: out of scope
+  conversation_start: true
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_possibilities
+  wait_for_user_input: False
+- rule: thanks
+  steps:
+  - intent: thank
+  - action: utter_noworries
+  - action: utter_anything_else
+  wait_for_user_input: False
+- rule: bye
+  steps:
+  - intent: bye
+  - action: utter_bye
+  wait_for_user_input: False
+- rule: greet
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  wait_for_user_input: False
+- rule: greet
+  steps:
+  - intent: enter_data
+    entities:
+    - name: akela
+  - action: action_greet_user
+  wait_for_user_input: False
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+  - action: utter_why_rasa
+  - action: utter_ask_more
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: tensorflow
+  - slot_was_set:
+    - current_api: __other__
+  - action: utter_why_rasa
+  - action: utter_ask_more
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: luis
+  - slot_was_set:
+    - current_api: luis
+  - action: utter_why_rasa
+  - action: utter_switch_luis
+  - action: utter_ask_more_migrate
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: dialogflow
+  - slot_was_set:
+    - current_api: dialogflow
+  - action: utter_why_rasa
+  - action: utter_switch_dialogflow
+  - action: utter_ask_more_migrate
+- rule: community events
+  steps:
+  - intent: ask_which_events
+  - action: action_get_community_events
+  wait_for_user_input: False
+- rule: how can I contribute
+  steps:
+  - intent: ask_how_contribute
+  - action: utter_possibilities_to_contribute
+  wait_for_user_input: False
+- rule: why contribute
+  steps:
+  - intent: ask_why_contribute
+  - action: utter_reasons_to_contribute
+  wait_for_user_input: False
+- rule: Get help in the forum
+  steps:
+  - intent: ask_question_in_forum
+  - action: utter_link_to_forum
+  wait_for_user_input: False
+- rule: positive reaction
+  steps:
+  - intent: react_positive
+  - action: utter_react_positive
+  wait_for_user_input: False
+- rule: negative reaction
+  steps:
+  - intent: react_negative
+  - action: utter_react_negative
+  wait_for_user_input: False

@@ -79,29 +79,15 @@ stories:
   - action: utter_reasons_to_contribute
   - intent: ask_how_contribute
   - action: utter_possibilities_to_contribute
-- story: Contribute
-  steps:
-  - intent: ask_why_contribute
-  - action: utter_reasons_to_contribute
-  - intent: ask_how_contribute
-  - action: utter_possibilities_to_contribute
 - story: Prompt -> How can I contribute
   steps:
   - intent: get_started_step4
   - action: action_greet_user
   - intent: ask_how_contribute
   - action: utter_possibilities_to_contribute
-- story: How can I contribute
-  steps:
-  - intent: ask_how_contribute
-  - action: utter_possibilities_to_contribute
 - story: Prompt -> Get help in forum
   steps:
   - intent: get_started_step4
   - action: action_greet_user
-  - intent: ask_question_in_forum
-  - action: utter_link_to_forum
-- story: Get help in the forum
-  steps:
   - intent: ask_question_in_forum
   - action: utter_link_to_forum

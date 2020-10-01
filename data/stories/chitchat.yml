@@ -1,9 +1,5 @@
 version: "2.0"
 stories:
-- story: respond to chitchat
-  steps:
-  - intent: chitchat
-  - action: utter_chitchat
 - story: deny chitchat
   steps:
   - intent: chitchat
@@ -984,7 +980,7 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: chitchat
-  - action: utter_also_explain_nlucore
+  - action: utter_chitchat
   - intent: affirm
   - checkpoint: GENR_OR_94437
 - story: not new to rasa + rasa x + nothing special
@@ -1007,7 +1003,7 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: chitchat
-  - action: utter_also_explain_nlucore
+  - action: utter_chitchat
   - intent: explain
   - checkpoint: GENR_OR_94437
 - story: not new to rasa + rasa x + nothing special

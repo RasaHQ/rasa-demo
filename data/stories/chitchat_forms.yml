@@ -166,7 +166,7 @@ stories:
   - action: utter_ask_continue_sales
   - intent: affirm
   - action: utter_great
-  - active_loop: sales_form
+  - action: sales_form
   - active_loop: null
   - action: action_submit_sales_form
   - action: utter_ask_feedback
