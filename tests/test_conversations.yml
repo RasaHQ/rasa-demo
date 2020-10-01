@@ -233,3 +233,61 @@ stories:
       By what means were you made?
     intent: chitchat
   - action: utter_chitchat
+- story: why rasa
+  steps:
+  - user: |
+      Why should I go with Rasa?
+    intent: why_rasa
+  - action: utter_why_rasa
+  - action: utter_ask_more
+  - user: |
+      yeah
+    intent: affirm
+  - action: utter_why_rasa_research
+  - action: utter_why_rasa_nlu
+  - action: utter_why_rasa_dialogue
+  - action: utter_why_rasa_os
+  - action: utter_why_rasa_compliant
+- story: why contribute
+  steps:
+  - user: |
+      Why should I contribute to Rasa?
+    intent: ask_why_contribute
+  - action: utter_reasons_to_contribute
+  - user: |
+      how can I contribute?
+    intent: ask_how_contribute
+  - action: utter_possibilities_to_contribute
+- story: community events
+  steps:
+  - user: |
+      Does Rasa host any events?
+    intent: ask_which_events
+  - action: action_get_community_events
+  - action: utter_anything_else
+- story: forum question
+  steps:
+  - user: |
+      How can I ask a question in the forum?
+    intent: ask_question_in_forum
+  - action: utter_link_to_forum
+- story: out of scope
+  steps:
+  - user: |
+      do you sell vacuum robots
+    intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_possibilities
+- story: human handoff
+  steps:
+  - user: |
+      I want to speak to a person
+    intent: human_handoff
+  - action: utter_contact_email
+- story: fallback
+  steps:
+  - user: |
+      is it not though am fdfff jkam
+    intent: nlu_fallback
+  - action: two_stage_fallback
+  - active_loop: two_stage_fallback

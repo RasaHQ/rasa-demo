@@ -10,32 +10,36 @@ stories:
   - action: action_greet_user
   - intent: ask_which_events
   - action: action_get_community_events
-  - intent: ask_when_next_event
+  - action: utter_anything_else
+  - intent: ask_which_events
   - action: action_get_community_events
-  - action: utter_recommend_forum
+  - action: utter_anything_else
 - story: 'Happy path: Prompt -> Get event locations -> get next event for location'
   steps:
   - intent: get_started_step4
   - action: action_greet_user
   - intent: ask_which_events
   - action: action_get_community_events
-  - intent: ask_when_next_event
+  - action: utter_anything_else
+  - intent: ask_which_events
     entities:
     - location: Berlin
   - action: action_get_community_events
-  - action: utter_recommend_forum
+  - action: utter_anything_else
 - story: 'Happy path: Get event locations -> get next event'
   steps:
   - intent: ask_which_events
   - action: action_get_community_events
-  - intent: ask_when_next_event
+  - action: utter_anything_else
+  - intent: ask_which_events
   - action: action_get_community_events
   - action: utter_anything_else
 - story: 'Happy path: Get event locations -> get next event for location'
   steps:
   - intent: ask_which_events
   - action: action_get_community_events
-  - intent: ask_when_next_event
+  - action: utter_anything_else
+  - intent: ask_which_events
     entities:
     - location: Berlin
   - action: action_get_community_events
@@ -44,26 +48,25 @@ stories:
   steps:
   - intent: get_started_step4
   - action: action_greet_user
-  - intent: ask_when_next_event
+  - intent: ask_which_events
   - action: action_get_community_events
-  - action: utter_recommend_forum
+  - action: utter_anything_else
 - story: Prompt -> Get next event for location
   steps:
   - intent: get_started_step4
   - action: action_greet_user
-  - intent: ask_when_next_event
+  - intent: ask_which_events
     entities:
     - location: Berlin
   - action: action_get_community_events
-  - action: utter_recommend_forum
 - story: Get next event
   steps:
-  - intent: ask_when_next_event
+  - intent: ask_which_events
   - action: action_get_community_events
   - action: utter_anything_else
 - story: Get next event for location
   steps:
-  - intent: ask_when_next_event
+  - intent: ask_which_events
     entities:
     - location: Berlin
   - action: action_get_community_events

@@ -1,7 +1,6 @@
 language: en
 pipeline:
-- name: ConveRTTokenizer
-- name: ConveRTFeaturizer
+- name: WhitespaceTokenizer
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
@@ -33,6 +32,8 @@ pipeline:
   retrieval_intent: chitchat
   scale_loss: false
   epochs: 100
+- name: FallbackClassifier
+  confidence_threshold: 0.7
 policies:
 - name: TEDPolicy
   max_history: 10
