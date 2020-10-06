@@ -38,7 +38,7 @@ jobs:
           || contains(  steps.files.outputs.all, 'domain.yml' )
       run: echo "RUN_TRAINING=true" >> $GITHUB_ENV
     - name: Set up Python 3.7
-      if: env.RUN_TRAINING == 'true' 
+      if: env.RUN_TRAINING == 'true'
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
