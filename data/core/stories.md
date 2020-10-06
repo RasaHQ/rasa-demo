@@ -493,3 +493,7 @@
     - utter_ask_more_migrate
 * deny
     - utter_anything_else
+
+## need_help_broad
+* need_help_broad
+    - utter_ask_more_details
