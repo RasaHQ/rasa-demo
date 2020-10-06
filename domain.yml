@@ -62,20 +62,20 @@ entities:
 - user_type
 slots:
   budget:
-    type: unfeaturized
+    type: any
   business_email:
-    type: unfeaturized
+    type: any
   can_use_spacy:
     type: bool
   company:
-    type: unfeaturized
+    type: any
   current_api:
     type: categorical
     values:
     - dialogflow
     - luis
   email:
-    type: unfeaturized
+    type: any
   entity_extractor:
     type: categorical
     values:
@@ -83,14 +83,14 @@ slots:
     - spacyentityextractor
     - ducklinghttpextractor
   feedback_message:
-    type: unfeaturized
+    type: any
   feedback_value:
     type: categorical
     values:
     - positive
     - negative
   job_function:
-    type: unfeaturized
+    type: any
   language:
     type: categorical
     values:
@@ -106,7 +106,7 @@ slots:
   onboarding:
     type: bool
   person_name:
-    type: unfeaturized
+    type: any
   problem_description:
     type: text
   product:
@@ -118,21 +118,21 @@ slots:
     - rasa
     - all
   shown_privacy:
-    type: unfeaturized
+    type: any
   step:
-    type: unfeaturized
+    type: any
   suggestion:
-    type: unfeaturized
+    type: any
   unknown_nlu_part:
-    type: unfeaturized
+    type: any
   unknown_product:
-    type: unfeaturized
+    type: any
   use_case:
-    type: unfeaturized
+    type: any
   docs_found:
     type: bool
   faq:
-    type: unfeaturized
+    type: any
 responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received
