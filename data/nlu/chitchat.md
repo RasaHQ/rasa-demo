@@ -255,8 +255,6 @@
 - how are you Rasa
 - Hey Sara, how's it going
 - are you cool
-
-## intent:chitchat
 - How are you?
 
 ## intent:chitchat/ask_howold
