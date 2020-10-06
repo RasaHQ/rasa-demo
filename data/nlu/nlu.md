@@ -143,6 +143,8 @@
 - i need information from posters in the forum
 - ok send me to the forum
 - to the forum
+
+## intent:need_help_broad
 - need help on chatbot
 
 ## intent:ask_which_events
@@ -1164,6 +1166,9 @@
 - [dialogueflow](current_api)
 - T10
 - the company is called t10
+- 1000$
+- 2000$
+- $40
 
 ## intent:how_to_get_started
 - can you help me to build a bot
@@ -2242,13 +2247,6 @@
 - restart session pls
 - restart ps
 
-## synonym:english
-- English
-- en
-- eng
-- Eng
-- ENGLISH
-
 ## synonym: duration
 - durations
 - how long
@@ -2337,6 +2335,7 @@
 - Nlu
 - rasa_nlu
 - NLU
+- Rasa NLU
 
 ## synonym:organisation
 - companies
@@ -2378,9 +2377,3 @@
 
 ## regex:zipcode
 - [0-9]{5}
-
-## lookup:location.txt
-data/nlu/lookups/location.txt
-
-## lookup:products.txt
-data/nlu/lookups/products.txt

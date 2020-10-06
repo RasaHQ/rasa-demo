@@ -77,3 +77,7 @@
 * nlu_generation_tool_recommendation{"product":"nlu"}
     - slot{"product":"nlu"}
     - utter_nlu_tools
+
+## need_help_broad
+* need_help_broad
+    - utter_ask_more_details
