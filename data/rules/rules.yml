@@ -176,3 +176,7 @@ rules:
   - intent: react_negative
   - action: utter_react_negative
   wait_for_user_input: False
+- rule: ask for more details
+  steps:
+  - intent: need_help_broad
+  - action: utter_ask_more_details

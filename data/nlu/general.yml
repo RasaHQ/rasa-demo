@@ -739,3 +739,46 @@ nlu:
     - yes thanks
     - thanks for your information
     - thanks f
+- intent: need_help_broad
+  examples: |
+    - need help on chatbot
+    - I have a question
+    - I have a question about [Rasa NLU](product)
+    - I have a question about the functioning of the device
+    - I have a question for you
+    - I have a question.
+    - hello I have a question
+    - I have a question?
+    - Sure. I have a question for you
+    - Yes, I have a question
+    - yes, I have a question
+    - I am stuck and I need help
+    - I have a few questions
+    - I have a few questions on my pay check
+    - there is an issue during installation
+    - i am stuck
+    - i am stuck with error
+    - I got stuck with the installation
+    - i m stuck while importing data 
+    - I am stuck with action
+    - I am stuck with fallback
+    - i  am stuck with an erorr
+    - im stuck
+    - hi sara, i get the following error when trying to install rasa on my macbook
+    - i have errors in installaition
+    - i am facing a particular error,could u help me?
+    - it is showing error while installing
+    - I am seeing an error
+    - I get errors while installation
+    - error message when installing rasa
+    - Rasa installation error
+    - getting some errors
+    - rasa init error
+    - no i get a error while installing
+    - i have an error on install
+    - i got some error during installation
+    - lots of errors
+    - i got error while installing rasa
+    - I have error during the installation
+    - i get error when initializing a project
+    - I'm getting an error while installing Rasa
