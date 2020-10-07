@@ -31,7 +31,7 @@ jobs:
           docker pull gcr.io/replicated-test/rasa-demo:latest || true
 
       - name: Set Build ID from run ID and number
-        run: echo ::set-env name=BUILD_NUMBER::$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID
+        run: echo "BUILD_NUMBER=$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID" >> $GITHUB_ENV
 
       - name: Build Image
         run: |
