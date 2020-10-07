@@ -1,0 +1,33 @@
+version: "2.0"
+stories:
+- story: say enter data outside the flows
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: say confirm outside the flows 2
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: affirm
+  - action: utter_thumbsup
+- story: say greet outside the flows
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: greet
+  - checkpoint: GENR_OR_4db11
+- story: say greet outside the flows
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+    entities:
+    - name: akela
+  - checkpoint: GENR_OR_4db11
+- story: say greet outside the flows
+  steps:
+  - checkpoint: GENR_OR_4db11
+  - action: action_greet_user

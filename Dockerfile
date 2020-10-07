@@ -1,5 +1,5 @@
 # Pull SDK image as base image
-FROM rasa/rasa-sdk:1.10.0
+FROM rasa/rasa-sdk:2.0.0rc1
 
 # Use subdirectory as working directory
 WORKDIR /app

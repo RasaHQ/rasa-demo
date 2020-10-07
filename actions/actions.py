@@ -3,11 +3,10 @@ import logging
 import json
 import requests
 from datetime import datetime
-from typing import Any, Dict, List, Text, Union, Optional
+from typing import Any, Dict, List, Text, Optional
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.forms import FormAction
 from rasa_sdk.events import (
     SlotSet,
     UserUtteranceReverted,
@@ -28,46 +27,11 @@ logger = logging.getLogger(__name__)
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 
 
-class SubscribeNewsletterForm(FormAction):
-    """Asks for the user's email, call the newsletter API and sign up user"""
-
+class ActionSubmitSubscribeNewsletterForm(Action):
     def name(self) -> Text:
-        return "subscribe_newsletter_form"
+        return "action_submit_subscribe_newsletter_form"
 
-    @staticmethod
-    def required_slots(tracker) -> List[Text]:
-        return ["email"]
-
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        return {
-            "email": [
-                self.from_entity(entity="email"),
-                self.from_text(intent="enter_data"),
-            ]
-        }
-
-    def validate_email(self, value, dispatcher, tracker, domain):
-        """Check to see if an email entity was actually picked up by duckling."""
-        if any(tracker.get_latest_entity_values("email")):
-            # entity was picked up,
-            # check if mailchimp will accept it as a valid email
-            if MailChimpAPI.is_valid_email(value):
-                # validate slot
-                return {"email": value}
-            else:
-                dispatcher.utter_message(template="utter_no_email")
-                return {"email": None}
-        else:
-            # no entity was picked up, we want to ask again
-            dispatcher.utter_message(template="utter_no_email")
-            return {"email": None}
-
-    def submit(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[EventType]:
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         """Once we have an email, attempt to add it to the database"""
 
         email = tracker.get_slot("email")
@@ -83,74 +47,29 @@ class SubscribeNewsletterForm(FormAction):
         return []
 
 
-class SalesForm(FormAction):
-    """Collects sales information and adds it to the spreadsheet"""
-
+class ValidateSubscribeNewsletterForm(Action):
     def name(self) -> Text:
-        return "sales_form"
+        return "validate_subscribe_newsletter_form"
 
-    @staticmethod
-    def required_slots(tracker) -> List[Text]:
-        return [
-            "job_function",
-            "use_case",
-            "budget",
-            "person_name",
-            "company",
-            "business_email",
-        ]
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        extracted_slots = tracker.form_slots_to_validate()
+        validation_events = []
 
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        """A dictionary to map required slots to
-            - an extracted entity
-            - intent: value pairs
-            - a whole message
-            or a list of them, where a first match will be picked"""
+        for slot_name, slot_value in extracted_slots.items():
+            if slot_name == "email" and MailChimpAPI.is_valid_email(slot_value):
+                validation_events.append(SlotSet(slot_name, slot_value))
+            else:
+                dispatcher.utter_message(template="utter_no_email")
+                validation_events.append(SlotSet(slot_name, None))
 
-        return {
-            "job_function": [
-                self.from_entity(entity="job_function"),
-                self.from_text(intent="enter_data"),
-            ],
-            "use_case": [self.from_text(intent="enter_data")],
-            "budget": [
-                self.from_entity(entity="amount-of-money"),
-                self.from_entity(entity="number"),
-                self.from_text(intent="enter_data"),
-            ],
-            "person_name": [
-                self.from_entity(entity="name"),
-                self.from_text(intent="enter_data"),
-            ],
-            "company": [
-                self.from_entity(entity="company"),
-                self.from_text(intent="enter_data"),
-            ],
-            "business_email": [
-                self.from_entity(entity="email"),
-                self.from_text(intent="enter_data"),
-            ],
-        }
+        return validation_events
 
-    def validate_business_email(
-        self, value, dispatcher, tracker, domain
-    ) -> Dict[Text, Any]:
-        """Check to see if an email entity was actually picked up by duckling."""
 
-        if any(tracker.get_latest_entity_values("email")):
-            # entity was picked up, validate slot
-            return {"business_email": value}
-        else:
-            # no entity was picked up, we want to ask again
-            dispatcher.utter_message(template="utter_no_email")
-            return {"business_email": None}
+class ActionSubmitSalesForm(Action):
+    def name(self) -> Text:
+        return "action_submit_sales_form"
 
-    def submit(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
-    ) -> List[EventType]:
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         """Once we have all the information, attempt to add it to the
         Google Drive database"""
 
@@ -180,6 +99,27 @@ class SalesForm(FormAction):
             return []
 
 
+class ValidateSalesForm(Action):
+    def name(self) -> Text:
+        return "validate_sales_form"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+        extracted_slots = tracker.form_slots_to_validate()
+        validation_events = []
+
+        for slot_name, slot_value in extracted_slots.items():
+            if slot_name == "business_email":
+                if MailChimpAPI.is_valid_email(slot_value):
+                    validation_events.append(SlotSet(slot_name, slot_value))
+                else:
+                    dispatcher.utter_message(template="utter_no_email")
+                    validation_events.append(SlotSet(slot_name, None))
+            else:
+                validation_events.append(SlotSet(slot_name, slot_value))
+
+        return validation_events
+
+
 class ActionExplainSalesForm(Action):
     """Returns the explanation for the sales form questions"""
 
@@ -189,7 +129,10 @@ class ActionExplainSalesForm(Action):
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
         requested_slot = tracker.get_slot("requested_slot")
 
-        if requested_slot not in SalesForm.required_slots(tracker):
+        sales_form_config = domain.get("forms", {}).get("sales_form", {})
+        sales_form_required_slots = list(sales_form_config.keys())
+
+        if requested_slot not in sales_form_required_slots:
             dispatcher.utter_message(
                 template="Sorry, I didn't get that. Please rephrase or answer the question "
                 "above."
@@ -261,7 +204,7 @@ class ActionStoreUnknownProduct(Action):
 
 class ActionStoreUnknownNluPart(Action):
     """Stores unknown parts of nlu which the user requests information on
-       in slot.
+    in slot.
     """
 
     def name(self) -> Text:
@@ -305,7 +248,7 @@ class ActionStoreBotLanguage(Action):
 
 class ActionStoreEntityExtractor(Action):
     """Takes the entity which the user wants to extract and checks
-        what pipelines can be used.
+    what pipelines can be used.
     """
 
     def name(self) -> Text:
@@ -352,20 +295,11 @@ class ActionSetOnboarding(Action):
         return []
 
 
-class SuggestionForm(FormAction):
-    """Accept free text input from the user for suggestions"""
-
+class ActionSubmitSuggestionForm(Action):
     def name(self) -> Text:
-        return "suggestion_form"
+        return "action_submit_suggestion_form"
 
-    @staticmethod
-    def required_slots(tracker) -> List[Text]:
-        return ["suggestion"]
-
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        return {"suggestion": self.from_text()}
-
-    def submit(self, dispatcher, tracker, domain) -> List[EventType]:
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
         dispatcher.utter_message(template="utter_thank_suggestion")
         return []
 
@@ -758,8 +692,8 @@ class ActionForumSearch(Action):
         else:
             dispatcher.utter_message(
                 text=(
-                    f"I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
-                    f"I recommend you post your question there."
+                    "I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
+                    "I recommend you post your question there."
                 )
             )
 

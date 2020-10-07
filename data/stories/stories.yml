@@ -1,0 +1,124 @@
+version: "2.0"
+stories:
+- story: neither options
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: deny
+  - action: utter_nohelp
+- story: anything else? - yes
+  steps:
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_what_help
+- story: anything else? - no
+  steps:
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_thumbsup
+- story: anything else?
+  steps:
+  - action: utter_anything_else
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: why rasa
+  steps:
+  - intent: why_rasa
+  - action: utter_why_rasa
+  - action: utter_ask_more
+  - intent: affirm
+  - action: utter_why_rasa_research
+  - action: utter_why_rasa_nlu
+  - action: utter_why_rasa_dialogue
+  - action: utter_why_rasa_os
+  - action: utter_why_rasa_compliant
+- story: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: tensorflow
+  - slot_was_set:
+    - current_api: __other__
+  - action: utter_why_rasa
+  - action: utter_ask_more
+  - intent: affirm
+  - action: utter_why_rasa_research
+  - action: utter_why_rasa_nlu
+  - action: utter_why_rasa_dialogue
+  - action: utter_why_rasa_os
+  - action: utter_why_rasa_compliant
+- story: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: luis
+  - slot_was_set:
+    - current_api: luis
+  - action: utter_why_rasa
+  - action: utter_switch_luis
+  - action: utter_ask_more_migrate
+  - intent: affirm
+  - action: utter_why_rasa_research
+  - action: utter_why_rasa_nlu
+  - action: utter_why_rasa_dialogue
+  - action: utter_why_rasa_os
+  - action: utter_why_rasa_compliant
+- story: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: dialogflow
+  - slot_was_set:
+    - current_api: dialogflow
+  - action: utter_why_rasa
+  - action: utter_switch_dialogflow
+  - action: utter_ask_more_migrate
+  - intent: affirm
+  - action: utter_why_rasa_research
+  - action: utter_why_rasa_nlu
+  - action: utter_why_rasa_dialogue
+  - action: utter_why_rasa_os
+  - action: utter_why_rasa_compliant
+- story: why rasa
+  steps:
+  - intent: why_rasa
+  - action: utter_why_rasa
+  - action: utter_ask_more
+  - intent: deny
+  - action: utter_anything_else
+- story: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: tensorflow
+  - slot_was_set:
+    - current_api: __other__
+  - action: utter_why_rasa
+  - action: utter_ask_more
+  - intent: deny
+  - action: utter_anything_else
+- story: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: luis
+  - slot_was_set:
+    - current_api: luis
+  - action: utter_why_rasa
+  - action: utter_switch_luis
+  - action: utter_ask_more_migrate
+  - intent: deny
+  - action: utter_anything_else
+- story: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: dialogflow
+  - slot_was_set:
+    - current_api: dialogflow
+  - action: utter_why_rasa
+  - action: utter_switch_dialogflow
+  - action: utter_ask_more_migrate
+  - intent: deny
+  - action: utter_anything_else
