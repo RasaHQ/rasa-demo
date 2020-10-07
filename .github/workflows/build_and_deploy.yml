@@ -67,7 +67,7 @@ jobs:
           contains(  steps.files.outputs.all, 'data/' ) 
           || contains(  steps.files.outputs.all, 'config.yml' ) 
           || contains(  steps.files.outputs.all, 'domain.yml' )
-      run: echo "::set-env name=RUN_TRAINING::true"
+      run: echo "RUN_TRAINING=true"  >> $GITHUB_ENV
     - name: Set up Python 3.7
       if: env.RUN_TRAINING == 'true'
       uses: actions/setup-python@v1
@@ -132,7 +132,7 @@ jobs:
       if: |
         contains(  steps.files.outputs.all, 'actions/' ) 
         || contains(  steps.files.outputs.all, 'Dockerfile' )
-      run: echo "::set-env name=ACTIONS_CHANGED::true"
+      run: echo "ACTIONS_CHANGED=true" >> $GITHUB_ENV
     - name: Authenticate into Google Cloud Platform
       if: env.ACTIONS_CHANGED == 'true'
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
