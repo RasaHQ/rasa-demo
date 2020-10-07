@@ -1,5 +1,19 @@
 version: "2.0"
 stories:
+- story: handoff + newsletter
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: human_handoff
+  - action: utter_contact_email
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_docu
+  - action: utter_ask_feedback
 - story: just newsletter + handoff, continue
   steps:
   - intent: greet

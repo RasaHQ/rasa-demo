@@ -1,5 +1,43 @@
 version: "2.0"
 stories:
+- story: faqs
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - intent: faq
+    entities:
+    - product: all
+  - slot_was_set:
+    - product: all
+  - action: utter_faq
+  - action: action_set_faq_slot
+- story: faq products
+  steps:
+  - checkpoint: STORY_START
+  - intent: greet
+  - action: action_greet_user
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - intent: faq
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_faq
+  - action: action_set_faq_slot
 - story: more faqs
   steps:
   - checkpoint: STORY_START
@@ -9,6 +47,10 @@ stories:
   - action: utter_faq
   - action: action_set_faq_slot
   - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
   - action: utter_faq
   - action: action_set_faq_slot
 - story: not new to rasa + not interested in products

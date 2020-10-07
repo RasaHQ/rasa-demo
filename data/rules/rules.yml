@@ -22,7 +22,7 @@ rules:
   - intent: next_step
   - action: action_next_step
   wait_for_user_input: False
-- rule: faqs
+- rule: faq rasa x
   conversation_start: true
   steps:
   - intent: faq
@@ -33,7 +33,7 @@ rules:
   - action: utter_faq
   - action: action_set_faq_slot
   wait_for_user_input: False
-- rule: faqs
+- rule: faq rasa
   conversation_start: true
   steps:
   - intent: faq
@@ -44,7 +44,7 @@ rules:
   - action: utter_faq
   - action: action_set_faq_slot
   wait_for_user_input: False
-- rule: faqs
+- rule: faq nlu
   conversation_start: true
   steps:
   - intent: faq
@@ -55,7 +55,7 @@ rules:
   - action: utter_faq
   - action: action_set_faq_slot
   wait_for_user_input: False
-- rule: faqs
+- rule: faq core
   conversation_start: true
   steps:
   - intent: faq
@@ -66,7 +66,7 @@ rules:
   - action: utter_faq
   - action: action_set_faq_slot
   wait_for_user_input: False
-- rule: faqs
+- rule: faq all
   conversation_start: true
   steps:
   - intent: faq

@@ -287,7 +287,7 @@ stories:
 - story: fallback
   steps:
   - user: |
-      is it not though am fdfff jkam
+      is it named thoh mu
     intent: nlu_fallback
-  - action: two_stage_fallback
-  - active_loop: two_stage_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
