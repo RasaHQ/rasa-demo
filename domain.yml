@@ -29,6 +29,7 @@ intents:
 - how_to_get_started
 - human_handoff
 - install_rasa
+- need_help_broad
 - next_step
 - nlu_generation_tool_recommendation
 - nlu_info
@@ -550,6 +551,9 @@ responses:
       Rasa is **open source** - no black-box magic!
   utter_ask_more:
   - text: Would you like to learn more?
+  utter_ask_more_details:
+  - text: Could you be more specific?
+  - text: Can you tell me more?
   utter_ask_more_migrate:
   - text: Would you like to learn more about the advantages of switching to Rasa?
   utter_why_rasa_research:
