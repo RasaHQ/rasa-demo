@@ -395,7 +395,6 @@ class ActionDefaultAskAffirmation(Action):
             .get("full_retrieval_intent")
             for intent in intent_ranking
         ]
-
         message_title = (
             "Sorry, I'm not sure I've understood " "you correctly 🤔 Do you mean..."
         )
@@ -418,7 +417,7 @@ class ActionDefaultAskAffirmation(Action):
                     {"title": button_title, "payload": f"/{intent}{entities_json}"}
                 )
 
-        buttons.append({"title": "Something else", "payload": "/trigger_rephrase"})
+        buttons.append({"title": "Something else", "payload": "/out_of_scope"})
 
         dispatcher.utter_message(text=message_title, buttons=buttons)
 
