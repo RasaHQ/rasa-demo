@@ -555,3 +555,11 @@ stories:
   - action: utter_ask_more_migrate
   - intent: deny
   - action: utter_anything_else
+- story: need help with a technical question
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: need_help_broad
+  - action: utter_ask_more_details
+  - intent: technical_question
+  - action: action_docs_search
