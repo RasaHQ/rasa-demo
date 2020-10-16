@@ -7,7 +7,7 @@ stories:
 - story: faqs
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
@@ -16,7 +16,7 @@ stories:
     - product: x
   - slot_was_set:
     - product: x
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
@@ -25,7 +25,7 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
@@ -34,7 +34,7 @@ stories:
     - product: nlu
   - slot_was_set:
     - product: nlu
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
@@ -43,7 +43,7 @@ stories:
     - product: core
   - slot_was_set:
     - product: core
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
@@ -52,24 +52,24 @@ stories:
     - product: all
   - slot_was_set:
     - product: all
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: more faqs
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: just newsletter
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: signup_newsletter
   - action: utter_can_do
@@ -90,7 +90,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
   - intent: affirm
@@ -111,7 +111,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
   - intent: deny
@@ -128,7 +128,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: signup_newsletter
     entities:
@@ -147,7 +147,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: signup_newsletter
     entities:
@@ -163,7 +163,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: contact_sales
   - action: utter_moreinformation
@@ -180,7 +180,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
   - intent: affirm
@@ -196,7 +196,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
   - intent: deny
@@ -211,7 +211,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_first_bot_with_rasa
   - intent: deny
@@ -234,7 +234,7 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_which_product
   - intent: deny
@@ -256,7 +256,7 @@ stories:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_for_nlu_specifics
   - intent: deny
@@ -279,7 +279,7 @@ stories:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_for_nlu_specifics
   - intent: nlu_info
@@ -309,7 +309,7 @@ stories:
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_offer_recommendation
   - intent: deny
@@ -341,7 +341,7 @@ stories:
     - intent: affirm
   - action: utter_what_language
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_what_language
   - intent: enter_data
@@ -377,7 +377,7 @@ stories:
     - intent: affirm
   - action: utter_what_language
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_what_language
   - intent: enter_data
@@ -412,7 +412,7 @@ stories:
     - intent: affirm
   - action: utter_what_language
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_what_language
   - intent: enter_data
@@ -447,7 +447,7 @@ stories:
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_offer_recommendation
   - or:
@@ -488,7 +488,7 @@ stories:
     - intent: affirm
   - action: utter_ask_entities
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_entities
   - intent: enter_data
@@ -502,35 +502,35 @@ stories:
 - story: FAQ - tell more about rasa x ee
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
 - story: FAQ - tell more about languages
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
 - story: FAQ - tell more about voice
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
 - story: FAQ - tell more about slots
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
 - story: FAQ - tell more about channels
   steps:
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
@@ -541,7 +541,7 @@ stories:
   - slot_was_set:
     - step: '2'
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_installation_command
   - action: utter_having_trouble_installing
@@ -553,7 +553,7 @@ stories:
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
 - story: FAQ - Step 2 flow interrupted
@@ -563,7 +563,7 @@ stories:
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
   - intent: affirm
@@ -576,7 +576,7 @@ stories:
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
   - intent: deny
@@ -626,7 +626,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -644,7 +644,7 @@ stories:
   - intent: affirm
   - action: utter_ask_describe_problem
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -662,7 +662,7 @@ stories:
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
 - story: Just don't want to continue
@@ -672,7 +672,7 @@ stories:
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
 - story: new to rasa + not new to chatbots + not migrating
@@ -680,7 +680,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: how_to_get_started
   - action: utter_getstarted
@@ -711,7 +711,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: how_to_get_started
   - action: utter_getstarted
@@ -739,7 +739,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: how_to_get_started
   - action: utter_getstarted
@@ -770,7 +770,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_first_bot_with_rasa
   - intent: affirm
@@ -807,7 +807,7 @@ stories:
     - onboarding: true
   - action: utter_built_bot_before
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_built_bot_before
   - intent: affirm
@@ -841,7 +841,7 @@ stories:
   - intent: affirm
   - action: utter_ask_migration
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_migration
   - intent: deny
@@ -877,7 +877,7 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_explain_nlucorex
   - or:
@@ -919,7 +919,7 @@ stories:
   - action: utter_explain_x
   - action: utter_direct_to_step2
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain stack and try it out
@@ -935,7 +935,7 @@ stories:
     - onboarding: true
   - action: utter_built_bot_before
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_built_bot_before
   - intent: deny
@@ -969,7 +969,7 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_explain_nlucorex
   - or:
@@ -1010,7 +1010,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core and direct to step2
@@ -1035,7 +1035,7 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_also_explain_nlu
   - intent: deny
@@ -1064,7 +1064,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core, then nlu and direct to step2
@@ -1089,7 +1089,7 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_also_explain_nlu
   - intent: affirm
@@ -1119,7 +1119,7 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
 - story: new to rasa/bots, explain core, then nlu and direct to step2
   steps:
@@ -1146,7 +1146,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_direct_to_step2
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain nlu and direct to step2
@@ -1171,7 +1171,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_also_explain_core
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_also_explain_core
   - intent: deny
@@ -1200,7 +1200,7 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: deny
   - action: utter_direct_to_step2
@@ -1228,7 +1228,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_direct_to_step2
 - story: new to rasa/bots, don't explain and direct to step2
@@ -1248,7 +1248,7 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_explain_nlucorex
   - intent: deny
@@ -1272,7 +1272,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_direct_to_step2
 - story: not new to rasa + not interested in products
@@ -1280,7 +1280,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: how_to_get_started
   - action: utter_getstarted

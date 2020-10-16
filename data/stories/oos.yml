@@ -3,7 +3,7 @@ stories:
 - story: out of scope
   steps:
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: say enter data outside the flows
   steps:
@@ -33,7 +33,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -53,7 +53,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: affirm
   - action: utter_great
@@ -73,7 +73,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: deny
   - action: utter_thumbsup
@@ -88,7 +88,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: signup_newsletter
     entities:
     - email: maxmeier@firma.de
@@ -106,7 +106,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: signup_newsletter
     entities:
     - email: maxmeier@firma.de
@@ -121,7 +121,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -138,7 +138,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: affirm
   - action: utter_great
@@ -155,7 +155,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: deny
   - action: utter_thumbsup
@@ -167,7 +167,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -183,7 +183,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_sales
   - intent: affirm
   - action: utter_great
@@ -198,7 +198,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_sales
   - intent: deny
   - action: utter_thumbsup

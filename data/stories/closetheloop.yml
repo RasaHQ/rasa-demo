@@ -5,7 +5,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -51,9 +51,9 @@ stories:
   - action: utter_noworries
   - action: utter_anything_else
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: story number 5
   steps:
@@ -70,16 +70,16 @@ stories:
   - action: utter_noworries
   - action: utter_anything_else
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: story number 6
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
 - story: story number 7
   steps:
   - intent: greet
@@ -87,7 +87,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -118,13 +118,13 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -143,13 +143,13 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -184,7 +184,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: affirm
   - action: utter_great
@@ -204,7 +204,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_ask_continue_newsletter
   - intent: deny
   - action: utter_thumbsup
@@ -221,15 +221,15 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
 - story: story number 15
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -240,24 +240,24 @@ stories:
   - intent: deny
   - action: utter_nohelp
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
 - story: story number 18
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: deny
   - action: utter_nohelp
   - intent: enter_data
@@ -266,7 +266,7 @@ stories:
   - intent: deny
   - action: utter_nohelp
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
   - intent: enter_data
     entities:
@@ -283,7 +283,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
@@ -363,9 +363,9 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
@@ -387,7 +387,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
@@ -418,11 +418,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: how_to_get_started
     entities:
     - product: nlu
@@ -435,7 +435,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: affirm
   - action: utter_thumbsup
 - story: Story from conversation with 6fd65c93e374489f9c8d76697ab9c493 on November 19th 2018
@@ -445,7 +445,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: affirm
   - action: utter_thumbsup
 - story: Story from conversation with 35d1ecc91c364cbf8a6edf006e5d8c9a on November 19th 2018
@@ -489,7 +489,7 @@ stories:
   - action: utter_thumbsup
   - action: utter_anything_else
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -606,7 +606,7 @@ stories:
   - slot_was_set:
     - shown_privacy: true
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -646,9 +646,9 @@ stories:
   - slot_was_set:
     - shown_privacy: true
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -659,14 +659,14 @@ stories:
   - slot_was_set:
     - shown_privacy: true
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: enter_data
   - action: utter_not_sure
@@ -678,14 +678,14 @@ stories:
   - slot_was_set:
     - shown_privacy: true
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - intent: enter_data
   - action: utter_not_sure
@@ -763,7 +763,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - intent: affirm
   - action: utter_thumbsup
   - intent: affirm
@@ -789,7 +789,7 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_explain_nlucorex
   - intent: how_to_get_started
@@ -806,16 +806,16 @@ stories:
   - slot_was_set:
     - shown_privacy: true
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
   - intent: out_of_scope
-  - action: respond_out_of_scope
+  - action: utter_out_of_scope
   - action: utter_possibilities
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
@@ -828,9 +828,9 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -853,9 +853,9 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -878,7 +878,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -899,7 +899,7 @@ stories:
     - product: nlu
   - slot_was_set:
     - product: nlu
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_explain_nlucorex
   - intent: how_to_get_started
@@ -951,13 +951,13 @@ stories:
   - slot_was_set:
     - shown_privacy: true
   - intent: faq
-  - action: respond_faq
+  - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_anything_else
   - intent: affirm
   - action: utter_what_help
   - intent: chitchat
-  - action: respond_chitchat
+  - action: utter_chitchat
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
