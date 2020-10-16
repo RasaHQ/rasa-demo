@@ -56,35 +56,10 @@ stories:
   - action: utter_ask_if_problem
   - intent: affirm
   - action: utter_ask_describe_problem
-  - intent: technical_question
-  - checkpoint: GENR_OR_1fa24
-- story: Problems installing
-  steps:
-  - intent: install_rasa
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: affirm
-  - action: utter_ask_describe_problem
-  - intent: enter_data
-  - checkpoint: GENR_OR_1fa24
-- story: Problems installing
-  steps:
-  - intent: install_rasa
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: affirm
-  - action: utter_ask_describe_problem
-  - intent: out_of_scope
-  - checkpoint: GENR_OR_1fa24
-- story: Problems installing
-  steps:
-  - checkpoint: GENR_OR_1fa24
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
   - action: action_store_problem_description
   - slot_was_set:
     - problem_description: I don't know how to customize the pipeline
@@ -106,43 +81,10 @@ stories:
   - action: utter_ask_if_problem
   - intent: affirm
   - action: utter_ask_describe_problem
-  - intent: technical_question
-  - checkpoint: GENR_OR_eef60
-- story: Problems installing
-  steps:
-  - intent: get_started_step2
-  - action: action_greet_user
-  - slot_was_set:
-    - step: '2'
-  - intent: affirm
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: affirm
-  - action: utter_ask_describe_problem
-  - intent: enter_data
-  - checkpoint: GENR_OR_eef60
-- story: Problems installing
-  steps:
-  - intent: get_started_step2
-  - action: action_greet_user
-  - slot_was_set:
-    - step: '2'
-  - intent: affirm
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: affirm
-  - action: utter_ask_describe_problem
-  - intent: out_of_scope
-  - checkpoint: GENR_OR_eef60
-- story: Problems installing
-  steps:
-  - checkpoint: GENR_OR_eef60
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
   - action: action_store_problem_description
   - slot_was_set:
     - problem_description: I don't know how to customize the pipeline
@@ -162,39 +104,10 @@ stories:
   - action: utter_ask_ready_to_build
   - intent: deny
   - action: utter_ask_if_problem
-  - intent: technical_question
-  - checkpoint: GENR_OR_18dbe
-- story: Problems installing (cut to the chase)
-  steps:
-  - intent: get_started_step2
-  - action: action_greet_user
-  - slot_was_set:
-    - step: '2'
-  - intent: affirm
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: enter_data
-  - checkpoint: GENR_OR_18dbe
-- story: Problems installing (cut to the chase)
-  steps:
-  - intent: get_started_step2
-  - action: action_greet_user
-  - slot_was_set:
-    - step: '2'
-  - intent: affirm
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: out_of_scope
-  - checkpoint: GENR_OR_18dbe
-- story: Problems installing (cut to the chase)
-  steps:
-  - checkpoint: GENR_OR_18dbe
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
   - action: action_store_problem_description
   - action: utter_installation_instructions
   - action: utter_direct_to_forum_for_help
@@ -208,31 +121,10 @@ stories:
   - action: utter_ask_ready_to_build
   - intent: deny
   - action: utter_ask_if_problem
-  - intent: technical_question
-  - checkpoint: GENR_OR_bd854
-- story: Problems installing (cut to the chase)
-  steps:
-  - intent: install_rasa
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: enter_data
-  - checkpoint: GENR_OR_bd854
-- story: Problems installing (cut to the chase)
-  steps:
-  - intent: install_rasa
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
-  - intent: deny
-  - action: utter_ask_if_problem
-  - intent: out_of_scope
-  - checkpoint: GENR_OR_bd854
-- story: Problems installing (cut to the chase)
-  steps:
-  - checkpoint: GENR_OR_bd854
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
   - action: action_store_problem_description
   - action: utter_installation_instructions
   - action: utter_direct_to_forum_for_help
@@ -249,7 +141,7 @@ stories:
   - intent: affirm
   - action: utter_ask_describe_problem
   - intent: faq
-  - action: utter_faq
+  - action: respond_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -271,7 +163,7 @@ stories:
   - intent: affirm
   - action: utter_ask_describe_problem
   - intent: faq
-  - action: utter_faq
+  - action: respond_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -291,7 +183,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: faq
-  - action: utter_faq
+  - action: respond_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions
@@ -307,7 +199,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: faq
-  - action: utter_faq
+  - action: respond_faq
   - action: action_set_faq_slot
   - action: action_store_problem_description
   - action: utter_installation_instructions

@@ -1,9 +1,13 @@
 version: "2.0"
 stories:
+- story: chitchat
+  steps:
+  - intent: chitchat
+  - action: respond_chitchat
 - story: deny chitchat
   steps:
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - intent: deny
   - action: utter_nohelp
 - story: more chitchat
@@ -11,67 +15,197 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
 - story: greet chitchat
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: utter_chitchat
-- story: new to rasa + not new to chatbots + not migrating
+  - action: respond_chitchat
+- story: just newsletter + confirm
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: utter_chitchat
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
+  - action: respond_chitchat
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
   - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter, continue, + confirm
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: chitchat
+  - action: respond_chitchat
+  - action: utter_ask_continue_newsletter
   - intent: affirm
-  - action: utter_ask_migration
+  - action: utter_great
+  - action: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter, don't continue, + confirm
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: chitchat
+  - action: respond_chitchat
+  - action: utter_ask_continue_newsletter
   - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_feedback
   - intent: affirm
-  - checkpoint: GENR_OR_9fc6d
-- story: new to rasa + not new to chatbots + not migrating
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter (with email already) + confirm
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: utter_chitchat
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
+  - action: respond_chitchat
+  - intent: signup_newsletter
     entities:
-    - product: all
-  - checkpoint: GENR_OR_9fc6d
+    - email: maxmeier@firma.de
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter (with email already)
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: signup_newsletter
+    entities:
+    - email: maxmeier@firma.de
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter, continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: chitchat
+  - action: respond_chitchat
+  - action: utter_ask_continue_newsletter
+  - intent: affirm
+  - action: utter_great
+  - action: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter, don't continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: chitchat
+  - action: respond_chitchat
+  - action: utter_ask_continue_newsletter
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_feedback
+- story: just sales
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: chitchat
+  - action: respond_chitchat
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - active_loop: null
+  - action: utter_ask_feedback
+- story: just sales, continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: chitchat
+  - action: respond_chitchat
+  - action: utter_ask_continue_sales
+  - intent: affirm
+  - action: utter_great
+  - action: sales_form
+  - active_loop: null
+- story: just sales, don't continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: chitchat
+  - action: respond_chitchat
+  - action: utter_ask_continue_sales
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
@@ -86,11 +220,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_9fc6d
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_9fc6d
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -103,7 +238,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -116,59 +251,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_f3a5e
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_f3a5e
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_f3a5e
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_f3a5e
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -186,7 +274,7 @@ stories:
     - onboarding: true
   - action: utter_built_bot_before
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_built_bot_before
   - intent: affirm
   - action: utter_ask_migration
@@ -194,59 +282,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_32eba
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_32eba
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_32eba
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_32eba
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -264,7 +305,7 @@ stories:
     - onboarding: true
   - action: utter_built_bot_before
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_built_bot_before
   - intent: affirm
   - action: utter_ask_migration
@@ -277,8 +318,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -294,65 +335,18 @@ stories:
   - intent: affirm
   - action: utter_ask_migration
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_migration
   - intent: deny
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_e1e6e
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_e1e6e
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_e1e6e
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_e1e6e
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -376,61 +370,14 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_d1b75
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_d1b75
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_d1b75
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_d1b75
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -453,59 +400,18 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_13b40
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_13b40
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_13b40
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_13b40
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain NLU and try it out
   steps:
@@ -520,7 +426,7 @@ stories:
     - onboarding: true
   - action: utter_built_bot_before
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_built_bot_before
   - intent: deny
   - action: utter_explain_rasa_components
@@ -567,57 +473,14 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_6a1d5
-- story: new to rasa/bots, explain stack and try it out
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_6a1d5
-- story: new to rasa/bots, explain stack and try it out
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_6a1d5
-- story: new to rasa/bots, explain stack and try it out
-  steps:
-  - checkpoint: GENR_OR_6a1d5
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -638,55 +501,18 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_c61d6
-- story: new to rasa/bots, explain stack and try it out
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_c61d6
-- story: new to rasa/bots, explain stack and try it out
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_c61d6
-- story: new to rasa/bots, explain stack and try it out
-  steps:
-  - checkpoint: GENR_OR_c61d6
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core and try out stack
   steps:
@@ -710,7 +536,7 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_also_explain_nlu
   - intent: deny
   - action: utter_direct_to_step2
@@ -738,7 +564,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core, then nlu and try out stack
   steps:
@@ -762,7 +588,7 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
@@ -792,7 +618,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: new to rasa/bots, explain nlu and try out stack
   steps:
@@ -816,7 +642,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_also_explain_core
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_also_explain_core
   - intent: deny
   - action: utter_direct_to_step2
@@ -844,7 +670,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: new to rasa/bots, don't explain and try out stack
   steps:
@@ -863,7 +689,7 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_explain_nlucorex
   - intent: deny
   - action: utter_direct_to_step2
@@ -886,14 +712,14 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: not new to rasa + not interested in products
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
@@ -912,7 +738,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -934,7 +760,7 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_which_product
   - intent: deny
   - action: utter_thumbsup
@@ -955,7 +781,7 @@ stories:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_for_nlu_specifics
   - intent: deny
   - action: utter_tutorialnlu
@@ -980,35 +806,10 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: chitchat
-  - action: utter_chitchat
-  - intent: affirm
-  - checkpoint: GENR_OR_94437
-- story: not new to rasa + rasa x + nothing special
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: x
-  - slot_was_set:
-    - product: x
-  - action: utter_explain_x
   - action: utter_also_explain_nlucore
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: explain
-  - checkpoint: GENR_OR_94437
-- story: not new to rasa + rasa x + nothing special
-  steps:
-  - checkpoint: GENR_OR_94437
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_direct_to_step2
@@ -1020,7 +821,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -1044,7 +845,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -1065,7 +866,7 @@ stories:
   - intent: deny
   - action: utter_direct_to_step2
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_direct_to_step2
 - story: not new to rasa + nlu + unknown topic
   steps:
@@ -1084,7 +885,7 @@ stories:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_for_nlu_specifics
   - intent: nlu_info
   - action: action_store_unknown_nlu_part
@@ -1113,7 +914,7 @@ stories:
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_offer_recommendation
   - intent: deny
   - action: utter_thumbsup
@@ -1139,37 +940,12 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_95d37
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_95d37
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
-  steps:
-  - checkpoint: GENR_OR_95d37
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_what_language
   - intent: enter_data
     entities:
@@ -1199,37 +975,12 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_8520a
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_8520a
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - checkpoint: GENR_OR_8520a
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_what_language
   - intent: enter_data
     entities:
@@ -1262,37 +1013,12 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_fbf7a
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_fbf7a
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - checkpoint: GENR_OR_fbf7a
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_what_language
   - intent: enter_data
   - action: action_store_bot_language
@@ -1322,39 +1048,11 @@ stories:
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_6f643
-- story: not new to rasa + nlu + entity + pipeline duckling
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
-  - action: utter_nlu_entity_tutorial
-  - action: utter_offer_recommendation
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_6f643
-- story: not new to rasa + nlu + entity + pipeline duckling
-  steps:
-  - checkpoint: GENR_OR_6f643
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_ask_entities
   - intent: enter_data
     entities:
@@ -1385,37 +1083,12 @@ stories:
     - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_e04bc
-- story: not new to rasa + nlu + entity + pipeline duckling
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
-  - action: utter_nlu_entity_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_e04bc
-- story: not new to rasa + nlu + entity + pipeline duckling
-  steps:
-  - checkpoint: GENR_OR_e04bc
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_ask_entities
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_entities
   - intent: enter_data
     entities:
@@ -1431,7 +1104,7 @@ stories:
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -1444,55 +1117,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_36845
-- story: how to get started without privacy policy
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_36845
-- story: how to get started without privacy policy
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: chitchat
-  - action: utter_chitchat
-  - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_36845
-- story: how to get started without privacy policy
-  steps:
-  - checkpoint: GENR_OR_36845
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -1504,7 +1134,7 @@ stories:
   - slot_was_set:
     - step: '2'
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_continue_rasa_init
   - intent: affirm
   - action: utter_run_rasa_init
@@ -1515,7 +1145,7 @@ stories:
   - slot_was_set:
     - step: '2'
   - intent: chitchat
-  - action: utter_chitchat
+  - action: respond_chitchat
   - action: utter_ask_continue_rasa_init
   - intent: deny
   - action: utter_thumbsup

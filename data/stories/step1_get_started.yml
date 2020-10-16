@@ -37,45 +37,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_94391
-- story: new to rasa at start
-  steps:
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_getstarted_new
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_94391
-- story: new to rasa at start
-  steps:
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_getstarted_new
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_94391
-- story: new to rasa at start
-  steps:
-  - checkpoint: GENR_OR_94391
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -97,8 +64,6 @@ stories:
   - intent: faq
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa + built a bot before
@@ -106,27 +71,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_4ddc9
-- story: new to rasa + built a bot before
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_4ddc9
-- story: new to rasa + built a bot before
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_4ddc9
-- story: new to rasa + built a bot before
-  steps:
-  - checkpoint: GENR_OR_4ddc9
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -137,43 +87,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_988a0
-- story: new to rasa + built a bot before
-  steps:
-  - checkpoint: GENR_OR_4ddc9
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_988a0
-- story: new to rasa + built a bot before
-  steps:
-  - checkpoint: GENR_OR_4ddc9
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_988a0
-- story: new to rasa + built a bot before
-  steps:
-  - checkpoint: GENR_OR_988a0
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -183,27 +102,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_c5f28
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_c5f28
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_c5f28
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_c5f28
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -214,43 +118,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_03db5
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_c5f28
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_03db5
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_c5f28
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_03db5
-- story: new to rasa + not new to chatbots + not migrating
-  steps:
-  - checkpoint: GENR_OR_03db5
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -260,27 +133,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_e9959
-- story: new to rasa + not new to chatbots + migrating from dialogflow
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_e9959
-- story: new to rasa + not new to chatbots + migrating from dialogflow
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_e9959
-- story: new to rasa + not new to chatbots + migrating from dialogflow
-  steps:
-  - checkpoint: GENR_OR_e9959
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -297,27 +155,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_be98b
-- story: new to rasa + not new to chatbots + migrating from luis
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_be98b
-- story: new to rasa + not new to chatbots + migrating from luis
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_be98b
-- story: new to rasa + not new to chatbots + migrating from luis
-  steps:
-  - checkpoint: GENR_OR_be98b
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -334,27 +177,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_6f78a
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_6f78a
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_6f78a
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - checkpoint: GENR_OR_6f78a
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -370,27 +198,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_d59e7
-- story: migrating from dialogflow
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_d59e7
-- story: migrating from dialogflow
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_d59e7
-- story: migrating from dialogflow
-  steps:
-  - checkpoint: GENR_OR_d59e7
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -409,27 +222,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_e383a
-- story: new to rasa + not new to chatbots + migrating from luis
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_e383a
-- story: new to rasa + not new to chatbots + migrating from luis
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_e383a
-- story: new to rasa + not new to chatbots + migrating from luis
-  steps:
-  - checkpoint: GENR_OR_e383a
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -448,27 +246,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_70554
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_70554
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_70554
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - checkpoint: GENR_OR_70554
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -477,24 +260,9 @@ stories:
   - action: utter_ask_migration
   - intent: affirm
   - action: utter_ask_which_tool
-  - intent: switch
-  - checkpoint: GENR_OR_137c0
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - checkpoint: GENR_OR_70554
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: affirm
-  - action: utter_ask_migration
-  - intent: affirm
-  - action: utter_ask_which_tool
-  - intent: enter_data
-  - checkpoint: GENR_OR_137c0
-- story: new to rasa + not new to chatbots + migrating from something else
-  steps:
-  - checkpoint: GENR_OR_137c0
+  - or:
+    - intent: switch
+    - intent: enter_data
   - action: action_store_unknown_product
   - action: utter_no_guide_for_switch
   - action: utter_anything_else
@@ -524,17 +292,9 @@ stories:
   steps:
   - intent: switch
   - action: utter_ask_which_tool
-  - intent: switch
-  - checkpoint: GENR_OR_3a7a8
-- story: just switch
-  steps:
-  - intent: switch
-  - action: utter_ask_which_tool
-  - intent: enter_data
-  - checkpoint: GENR_OR_3a7a8
-- story: just switch
-  steps:
-  - checkpoint: GENR_OR_3a7a8
+  - or:
+    - intent: switch
+    - intent: enter_data
   - action: action_store_unknown_product
   - action: utter_no_guide_for_switch
   - action: utter_anything_else
@@ -543,27 +303,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_86272
-- story: new to rasa/bots, explain stack
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_86272
-- story: new to rasa/bots, explain stack
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_86272
-- story: new to rasa/bots, explain stack
-  steps:
-  - checkpoint: GENR_OR_86272
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -572,39 +317,12 @@ stories:
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - intent: affirm
-  - checkpoint: GENR_OR_1c53c
-- story: new to rasa/bots, explain stack
-  steps:
-  - checkpoint: GENR_OR_86272
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: how_to_get_started
-    entities:
-    - product: all
-  - checkpoint: GENR_OR_1c53c
-- story: new to rasa/bots, explain stack
-  steps:
-  - checkpoint: GENR_OR_86272
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: true
-  - action: utter_built_bot_before
-  - intent: deny
-  - action: utter_explain_rasa_components
-  - action: utter_rasa_components_details
-  - action: utter_ask_explain_nlucorex
-  - intent: explain
-  - checkpoint: GENR_OR_1c53c
-- story: new to rasa/bots, explain stack
-  steps:
-  - checkpoint: GENR_OR_1c53c
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - product: all
+    - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
@@ -614,27 +332,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_5ed48
-- story: new to rasa/bots, explain core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_5ed48
-- story: new to rasa/bots, explain core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_5ed48
-- story: new to rasa/bots, explain core
-  steps:
-  - checkpoint: GENR_OR_5ed48
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -655,27 +358,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_ed903
-- story: new to rasa/bots, explain core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_ed903
-- story: new to rasa/bots, explain core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_ed903
-- story: new to rasa/bots, explain core
-  steps:
-  - checkpoint: GENR_OR_ed903
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -687,8 +375,6 @@ stories:
   - intent: faq
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa/bots, explain x, then nlu+core
@@ -696,27 +382,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_c05da
-- story: new to rasa/bots, explain x, then nlu+core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_c05da
-- story: new to rasa/bots, explain x, then nlu+core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_c05da
-- story: new to rasa/bots, explain x, then nlu+core
-  steps:
-  - checkpoint: GENR_OR_c05da
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -741,27 +412,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_71482
-- story: new to rasa/bots, explain x, then nlu+core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_71482
-- story: new to rasa/bots, explain x, then nlu+core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_71482
-- story: new to rasa/bots, explain x, then nlu+core
-  steps:
-  - checkpoint: GENR_OR_71482
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -773,8 +429,6 @@ stories:
   - intent: faq
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa/bots, explain x
@@ -782,27 +436,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_6b376
-- story: new to rasa/bots, explain x
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_6b376
-- story: new to rasa/bots, explain x
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_6b376
-- story: new to rasa/bots, explain x
-  steps:
-  - checkpoint: GENR_OR_6b376
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -825,27 +464,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_500a8
-- story: new to rasa/bots, explain nlu
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_500a8
-- story: new to rasa/bots, explain nlu
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_500a8
-- story: new to rasa/bots, explain nlu
-  steps:
-  - checkpoint: GENR_OR_500a8
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -866,27 +490,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_2e686
-- story: new to rasa/bots, explain nlu then core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_2e686
-- story: new to rasa/bots, explain nlu then core
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_2e686
-- story: new to rasa/bots, explain nlu then core
-  steps:
-  - checkpoint: GENR_OR_2e686
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -931,36 +540,19 @@ stories:
   - intent: faq
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: new to rasa/bots, explain all
   steps:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_82888
-- story: new to rasa/bots, explain all
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_82888
-- story: new to rasa/bots, explain all
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_82888
-- story: new to rasa/bots, explain all
-  steps:
-  - checkpoint: GENR_OR_82888
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -979,27 +571,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_d83a3
-- story: new to rasa/bots, explain all
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_d83a3
-- story: new to rasa/bots, explain all
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_d83a3
-- story: new to rasa/bots, explain all
-  steps:
-  - checkpoint: GENR_OR_d83a3
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -1011,8 +588,6 @@ stories:
   - intent: faq
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa/bots, don't explain
@@ -1020,27 +595,12 @@ stories:
   - intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - intent: affirm
-  - checkpoint: GENR_OR_20691
-- story: new to rasa/bots, don't explain
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: how_to_get_started
-    entities:
-    - user_type: new
-  - checkpoint: GENR_OR_20691
-- story: new to rasa/bots, don't explain
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: explain
-  - checkpoint: GENR_OR_20691
-- story: new to rasa/bots, don't explain
-  steps:
-  - checkpoint: GENR_OR_20691
+  - or:
+    - intent: affirm
+    - intent: how_to_get_started
+      entities:
+      - user_type: new
+    - intent: explain
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
@@ -1091,10 +651,8 @@ stories:
   - intent: how_to_get_started
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: not new to rasa + rasa
   steps:
   - intent: how_to_get_started
@@ -1110,8 +668,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: not new to rasa + rasax
   steps:
   - intent: how_to_get_started
@@ -1127,8 +685,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: not new to rasa + rasa
   steps:
   - intent: how_to_get_started
@@ -1142,10 +700,8 @@ stories:
   - intent: how_to_get_started
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: not new to rasa + rasa
   steps:
   - intent: how_to_get_started
@@ -1161,8 +717,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: not new to rasa + rasax
   steps:
   - intent: how_to_get_started
@@ -1193,8 +749,6 @@ stories:
   steps:
   - intent: how_to_get_started
     entities:
-    - product: rasa
-  - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
@@ -1272,8 +826,6 @@ stories:
   - intent: how_to_get_started
     entities:
     - product: rasa
-  - slot_was_set:
-    - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: new to rasa + rasa oss
@@ -1297,8 +849,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_nlu
   - action: utter_explain_core
+  - action: utter_explain_nlu
 - story: new to rasa + rasa oss
   steps:
   - intent: how_to_get_started
@@ -1455,32 +1007,9 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_d6f95
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_d6f95
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
-  steps:
-  - checkpoint: GENR_OR_d6f95
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: enter_data
     entities:
@@ -1511,32 +1040,9 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_bbb04
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_bbb04
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - checkpoint: GENR_OR_bbb04
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: enter_data
     entities:
@@ -1567,32 +1073,9 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_84bc3
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_84bc3
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
-  steps:
-  - checkpoint: GENR_OR_84bc3
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: enter_data
   - action: action_store_bot_language
@@ -1619,32 +1102,9 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_b86ad
-- story: not new to rasa + nlu + intent + pipeline recommendation, english
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
-  - action: utter_nlu_intent_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_b86ad
-- story: not new to rasa + nlu + intent + pipeline recommendation, english
-  steps:
-  - checkpoint: GENR_OR_b86ad
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_what_language
   - intent: enter_data
     entities:
@@ -1715,32 +1175,9 @@ stories:
     - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_f9417
-- story: not new to rasa + nlu + entity + pipeline spacy
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
-  - action: utter_nlu_entity_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_f9417
-- story: not new to rasa + nlu + entity + pipeline spacy
-  steps:
-  - checkpoint: GENR_OR_f9417
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_ask_entities
   - intent: enter_data
     entities:
@@ -1769,32 +1206,9 @@ stories:
     - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_0ef2a
-- story: not new to rasa + nlu + entity + pipeline duckling
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
-  - action: utter_nlu_entity_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_0ef2a
-- story: not new to rasa + nlu + entity + pipeline duckling
-  steps:
-  - checkpoint: GENR_OR_0ef2a
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_ask_entities
   - intent: enter_data
     entities:
@@ -1823,32 +1237,9 @@ stories:
     - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
-  - intent: pipeline_recommendation
-  - checkpoint: GENR_OR_06ee6
-- story: not new to rasa + nlu + entity + pipeline CRFEntityExtractor
-  steps:
-  - intent: how_to_get_started
-  - action: utter_getstarted
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: nlu
-  - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
-  - action: utter_nlu_entity_tutorial
-  - action: utter_offer_recommendation
-  - intent: affirm
-  - checkpoint: GENR_OR_06ee6
-- story: not new to rasa + nlu + entity + pipeline CRFEntityExtractor
-  steps:
-  - checkpoint: GENR_OR_06ee6
+  - or:
+    - intent: pipeline_recommendation
+    - intent: affirm
   - action: utter_ask_entities
   - intent: enter_data
     entities:
@@ -1914,9 +1305,8 @@ stories:
   - action: utter_anything_else
 - story: faq
   steps:
-  - checkpoint: STORY_START
   - intent: faq
-  - action: utter_faq
+  - action: respond_faq
   - action: action_set_faq_slot
 - story: source code
   steps:

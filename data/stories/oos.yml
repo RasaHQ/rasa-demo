@@ -1,5 +1,10 @@
 version: "2.0"
 stories:
+- story: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_possibilities
 - story: say enter data outside the flows
   steps:
   - intent: greet
@@ -17,17 +22,185 @@ stories:
   steps:
   - intent: greet
   - action: action_greet_user
-  - intent: greet
-  - checkpoint: GENR_OR_4db11
-- story: say greet outside the flows
+  - or:
+    - intent: greet
+    - intent: enter_data
+      entities:
+      - name: akela
+  - action: action_greet_user
+- story: just newsletter + confirm
   steps:
   - intent: greet
   - action: action_greet_user
-  - intent: enter_data
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter, continue + confirm
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_ask_continue_newsletter
+  - intent: affirm
+  - action: utter_great
+  - action: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter, don't continue + confirm
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_ask_continue_newsletter
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter (with email already) + confirm
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: signup_newsletter
     entities:
-    - name: akela
-  - checkpoint: GENR_OR_4db11
-- story: say greet outside the flows
+    - email: maxmeier@firma.de
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter (with email already)
   steps:
-  - checkpoint: GENR_OR_4db11
+  - intent: greet
   - action: action_greet_user
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: signup_newsletter
+    entities:
+    - email: maxmeier@firma.de
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter, continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_ask_continue_newsletter
+  - intent: affirm
+  - action: utter_great
+  - action: subscribe_newsletter_form
+  - active_loop: null
+  - action: utter_docu
+  - action: utter_ask_feedback
+- story: just newsletter, don't continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_ask_continue_newsletter
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_feedback
+- story: just sales
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - active_loop: null
+  - action: utter_ask_feedback
+- story: just sales, continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_ask_continue_sales
+  - intent: affirm
+  - action: utter_great
+  - action: sales_form
+  - active_loop: null
+- story: just sales, don't continue
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - intent: out_of_scope
+  - action: respond_out_of_scope
+  - action: utter_ask_continue_sales
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
