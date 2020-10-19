@@ -11,6 +11,7 @@ rules:
   - action: utter_chitchat
   wait_for_user_input: False
 - rule: respond to faq
+  conversation_start: true
   steps:
   - intent: faq
   - action: utter_faq
@@ -22,6 +23,7 @@ rules:
   - action: action_next_step
   wait_for_user_input: False
 - rule: faq rasa x
+  conversation_start: true
   steps:
   - intent: faq
     entities:
@@ -32,6 +34,7 @@ rules:
   - action: action_set_faq_slot
   wait_for_user_input: False
 - rule: faq rasa
+  conversation_start: true
   steps:
   - intent: faq
     entities:
@@ -42,6 +45,7 @@ rules:
   - action: action_set_faq_slot
   wait_for_user_input: False
 - rule: faq nlu
+  conversation_start: true
   steps:
   - intent: faq
     entities:
@@ -52,6 +56,7 @@ rules:
   - action: action_set_faq_slot
   wait_for_user_input: False
 - rule: faq core
+  conversation_start: true
   steps:
   - intent: faq
     entities:
@@ -62,6 +67,7 @@ rules:
   - action: action_set_faq_slot
   wait_for_user_input: False
 - rule: faq all
+  conversation_start: true
   steps:
   - intent: faq
     entities:
@@ -77,6 +83,7 @@ rules:
   - action: utter_contact_email
   wait_for_user_input: False
 - rule: out of scope
+  conversation_start: true
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope

@@ -34,7 +34,7 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: out_of_scope
-  - action: utter_thumbsup
+  - action: utter_out_of_scope
   - action: utter_anything_else
 - story: story number 4
   steps:

@@ -540,8 +540,8 @@ stories:
   - intent: faq
     entities:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: new to rasa/bots, explain all
   steps:
   - intent: how_to_get_started
@@ -651,8 +651,8 @@ stories:
   - intent: how_to_get_started
     entities:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: not new to rasa + rasa
   steps:
   - intent: how_to_get_started
@@ -668,8 +668,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: not new to rasa + rasax
   steps:
   - intent: how_to_get_started
@@ -685,8 +685,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: not new to rasa + rasa
   steps:
   - intent: how_to_get_started
@@ -700,8 +700,8 @@ stories:
   - intent: how_to_get_started
     entities:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: not new to rasa + rasa
   steps:
   - intent: how_to_get_started
@@ -717,8 +717,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: not new to rasa + rasax
   steps:
   - intent: how_to_get_started
@@ -849,8 +849,8 @@ stories:
     - product: rasa
   - slot_was_set:
     - product: rasa
-  - action: utter_explain_core
   - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: new to rasa + rasa oss
   steps:
   - intent: how_to_get_started
