@@ -415,17 +415,17 @@ nlu:
 - intent: faq/opensource_cost
   examples: |
     - Are you free?
-    - Can you tell me whats the price for rasa platform?
+    - Can you tell me whats the price for [rasa](product) platform?
     - How much do you cost?
     - How much does it cost?
-    - How much does rasa cost?
+    - How much does [rasa](product) cost?
     - How much it costs
     - I want to learn more about the pricing
     - I would like to know the cost first.
     - Subscription cost?
     - Subscription price
-    - What does Rasa cost?
-    - What is the cost of RASA?
+    - What does [Rasa](product) cost?
+    - What is the cost of [RASA](product)?
     - What is the price ?
     - Whats the cost?
     - are you free ?
@@ -436,90 +436,90 @@ nlu:
     - cost
     - cost?
     - give me the pricing
-    - how cost to install Rasa?
-    - how much costs the rasa platform
+    - how cost to install [Rasa](product)?
+    - how much costs the [rasa](product) platform
     - how much do you cost
-    - how much does RASA cost
-    - how much does Rasa cost ?
+    - how much does [Rasa](product) cost
+    - how much does [RASA](product) cost ?
     - how much does it cost
     - how much does it cost normally?
     - how much does it cost?
-    - how much does rasa cost
-    - how much does rasa cost?
+    - how much does [rasa](product) cost
+    - how much does [rasa](product) cost?
     - how much is it
     - how much it costs?
-    - how mush does rasa cost
+    - how mush does [rasa](product) cost
     - is it for free?
     - is it free
     - is it free?
-    - is rasa [core](product) paid?
-    - is rasa free
-    - is rasa free of cost
-    - is rasa stack free
+    - is [rasa core](product) paid?
+    - is [rasa](product) free
+    - is [rasa](product) free of cost
+    - is [rasa](product) stack free
     - is this free?
     - this is free?
     - what is price?
-    - what is pricing of rasa
-    - what is rasa cost ?
+    - what is pricing of [rasa](product)
+    - what is [rasa](product) cost ?
     - what is the enterprise pricing schedule?
-    - what is the price of rasa
+    - what is the price of [rasa](product)
     - what is the price?
-    - whats the cost of rasa
+    - whats the cost of [rasa](product)
     - your cost?
     - Are you open-source?
-    - Could you tell me whether rasa is open source or not?
+    - Could you tell me whether rasa is [open source](product) or not?
     - How do I find out if rasa is open source?
     - Is Rasa a software formatted as open source?
-    - Is Rasa open source
-    - Is it a open source or any premium offer is available
-    - Is rasa open source?
-    - Is the rasa software open source?
+    - Is [rasa open source](product)
+    - Is it a [open source](product) or any premium offer is available
+    - Is [rasa open source](product)?
+    - Is the [rasa](product) software open source?
     - Is your software open source?
-    - Rasa open source?
-    - The rasa software, is that open source?
+    - [rasa open source](product)?
+    - The [rasa](product) software, is that open source?
     - are you full open source
     - are you open source
-    - could I call rasa open source software?
-    - does rasa fall into the open source software category?
-    - does rasa use open source software?
-    - how do i get the open source rasa
-    - is RASA open source?
-    - is Rasa open source
-    - is Rasa open source?
-    - is Rasa open sourced?
-    - is it open source
-    - is it open source?
-    - is rasa Open-Source?
-    - is rasa a type of open source software?
-    - is rasa an open source software?
-    - is rasa considered open source software?
-    - is rasa is open source?
-    - is rasa like an open source software
-    - is rasa open source?
-    - is rasa software that is classified as open source?
-    - is the Rasa project open sourced?
+    - could I call [rasa open source](product) software?
+    - does rasa fall into the [open source](product) software category?
+    - does rasa use [open source](product) software?
+    - how do i get the [open source](product) rasa
+    - is [rasa open source](product)?
+    - is [rasa open source](product)
+    - is [rasa open source](product)?
+    - is [rasa open source](product)?
+    - is it [open source](product)
+    - is it [open source](product)?
+    - is [rasa](product) Open-Source?
+    - is [rasa](product) a type of open source software?
+    - is [rasa](product) an open source software?
+    - is [rasa](product) considered [open source](product) software?
+    - is [rasa](product) is open source?
+    - is [rasa](product) like an open source software
+    - is [rasa open source](product)?
+    - is [rasa](product) software that is classified as open source?
+    - is the [Rasa](product) project open sourced?
     - is the project open source?
-    - is the software rasa open source?
+    - is the software [rasa open source](product)?
     - is this open source
-    - is this open source license
+    - is this [open source](product) license
     - is this opensource?
     - is your product open source
-    - ist es freie open source software
+    - ist es freie [open source](product) software
     - no budget, that why i looking for open source
-    - rasa [core](product) is open source?
-    - rasa is the open source
+    - [rasa core](product) is open source?
+    - [rasa](product) is the open source
     - what components of Rasa are open source
-    - would an example of open source software be rasa?
-    - would people consider rasa an open source software?
-    - would rasa be open source software?
-    - would rasa fall into the category of open source software?
-    - would you call rasa open source software?
-    - would you consider rasa open source software?
+    - would an example of [open source](product) software be rasa?
+    - would people consider rasa an [open source](product) software?
+    - would rasa be [open source](product) software?
+    - would rasa fall into the category of [open source](product) software?
+    - would you call [rasa open source](product) software?
+    - would you consider [rasa open source](product) software?
     - How is it opensource
-    - What is included in [RASA open source]{"entity": "product", "value": "rasa"} edition?
+    - What is included in [rasa open source](product) edition?
     - you are [open source](product)
-    - is rasa opensource?
-    - how much is Rasa stack?
+    - is [rasa](product) opensource?
+    - how much is [Rasa](product) stack?
 - intent: faq/python_version
   examples: |
     - What Python version should I use?

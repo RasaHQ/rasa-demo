@@ -25,7 +25,9 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
+  - action: utter_ask_feedback
 - story: greet + newsletter + canthelp + don't continue
   steps:
   - intent: greet
@@ -56,6 +58,8 @@ stories:
   - action: utter_great
   - action: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
+  - action: utter_ask_feedback
 - story: just sales + don't continue
   steps:
   - intent: greet

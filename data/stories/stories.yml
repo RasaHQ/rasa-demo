@@ -26,6 +26,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
     entities:
@@ -44,6 +45,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
@@ -63,6 +65,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: affirm
@@ -77,6 +80,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: deny
@@ -97,6 +101,7 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: newsletter, continue, affirm, then contact sales
@@ -114,6 +119,7 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
@@ -129,6 +135,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
     entities:
@@ -158,6 +165,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
     entities:
@@ -193,6 +201,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
@@ -214,6 +223,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: just newsletter
@@ -225,6 +235,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: newsletter then sales
@@ -236,6 +247,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: contact_sales
@@ -243,6 +255,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
     entities:
@@ -261,12 +274,14 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: newsletter, confirm, then sales
@@ -278,6 +293,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
@@ -293,6 +309,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
     entities:
@@ -317,6 +334,7 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: newsletter + ask why email
@@ -342,12 +360,14 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
@@ -375,6 +395,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: neither --> sales
@@ -388,6 +409,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
     entities:

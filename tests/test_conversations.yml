@@ -113,7 +113,7 @@ stories:
   - user: |
       Yes please
     intent: affirm
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: just newsletter, continue, + confirm
   steps:
@@ -144,7 +144,7 @@ stories:
   - user: |
       sure
     intent: affirm
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: just sales, continue, + confirm
   steps:
@@ -264,7 +264,6 @@ stories:
       Does Rasa host any events?
     intent: ask_which_events
   - action: action_get_community_events
-  - action: utter_anything_else
 - story: forum question
   steps:
   - user: |

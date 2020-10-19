@@ -11,6 +11,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: thank
@@ -21,6 +22,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
 - story: story number 2
   steps:
@@ -31,6 +33,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: out_of_scope
@@ -45,6 +48,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: thank
@@ -64,6 +68,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: thank
@@ -93,6 +98,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
 - story: story number 8
   steps:
@@ -136,6 +142,7 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
 - story: story number 11, don't continue
@@ -170,6 +177,7 @@ stories:
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: enter_data
@@ -190,6 +198,7 @@ stories:
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: enter_data
@@ -460,6 +469,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: deny
   - action: utter_thumbsup
@@ -484,6 +494,7 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: enter_data
   - action: utter_thumbsup
@@ -842,6 +853,8 @@ stories:
   - action: utter_great
   - action: sales_form
   - active_loop: null
+  - action: action_submit_sales_form
+  - action: utter_ask_feedback
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
   - intent: get_started_step1
