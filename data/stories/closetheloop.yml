@@ -6,6 +6,7 @@ stories:
   - action: action_greet_user
   - intent: out_of_scope
   - action: utter_out_of_scope
+  - action: utter_possibilities
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -145,29 +146,6 @@ stories:
   - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
-- story: story number 11, don't continue
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: chitchat
-  - action: utter_chitchat
-  - intent: signup_newsletter
-  - action: utter_can_do
-  - action: subscribe_newsletter_form
-  - active_loop: subscribe_newsletter_form
-  - intent: deny
-  - action: utter_cantsignup
-  - action: utter_ask_continue_newsletter
-  - intent: deny
-  - action: utter_thumbsup
-  - action: action_deactivate_loop
-  - active_loop: null
 - story: story number 12
   steps:
   - intent: greet
@@ -200,25 +178,6 @@ stories:
   - active_loop: null
   - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
-  - action: utter_ask_feedback
-  - intent: enter_data
-  - action: utter_thumbsup
-  - action: utter_anything_else
-- story: story number 12, don't continue
-  steps:
-  - intent: greet
-  - action: action_greet_user
-  - intent: signup_newsletter
-  - action: utter_can_do
-  - action: subscribe_newsletter_form
-  - active_loop: subscribe_newsletter_form
-  - intent: out_of_scope
-  - action: utter_out_of_scope
-  - action: utter_ask_continue_newsletter
-  - intent: deny
-  - action: utter_thumbsup
-  - action: action_deactivate_loop
-  - active_loop: null
   - action: utter_ask_feedback
   - intent: enter_data
   - action: utter_thumbsup
@@ -430,6 +389,7 @@ stories:
   - action: utter_chitchat
   - intent: out_of_scope
   - action: utter_out_of_scope
+  - action: utter_possibilities
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
@@ -775,6 +735,7 @@ stories:
   - action: action_greet_user
   - intent: out_of_scope
   - action: utter_out_of_scope
+  - action: utter_possibilities
   - intent: affirm
   - action: utter_thumbsup
   - intent: affirm
@@ -854,6 +815,7 @@ stories:
   - action: sales_form
   - active_loop: null
   - action: action_submit_sales_form
+  - action: utter_docu
   - action: utter_ask_feedback
 - story: Story from conversation with af5a6b3c39d04c6db2b682960e63f01c on January 21st 2019
   steps:
@@ -880,6 +842,7 @@ stories:
   - action: utter_thumbsup
   - action: action_deactivate_loop
   - active_loop: null
+  - action: utter_ask_feedback
 - story: Story from conversation with 53d4ca53494d4469b7d94aca2f7b3fec on January 21st 2019
   steps:
   - intent: get_started_step1
