@@ -243,7 +243,7 @@ class ActionStoreUnknownProduct(Action):
         domain: Dict[Text, Any],
     ) -> List[EventType]:
         # if we dont know the product the user is migrating from,
-        # store his last message in a slot.
+        # store their last message in a slot.
         return [SlotSet("unknown_product", tracker.latest_message.get("text"))]
 
 
@@ -262,7 +262,7 @@ class ActionStoreUnknownNluPart(Action):
         domain: Dict[Text, Any],
     ) -> List[EventType]:
         # if we dont know the part of nlu the user wants information on,
-        # store his last message in a slot.
+        # store their last message in a slot.
         return [SlotSet("unknown_nlu_part", tracker.latest_message.get("text"))]
 
 
