@@ -6,6 +6,7 @@ from datetime import datetime
 from typing import Any, Dict, List, Text, Optional
 
 from rasa_sdk import Action, Tracker
+from rasa_sdk.forms import FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import (
     SlotSet,
@@ -52,27 +53,23 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         return []
 
 
-class ValidateSubscribeNewsletterForm(Action):
+class ValidateSubscribeNewsletterForm(FormValidationAction):
     def name(self) -> Text:
         return "validate_subscribe_newsletter_form"
 
-    def run(
+    def validate_email(
         self,
+        value: Text,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
-        extracted_slots = tracker.slots_to_validate()
-        validation_events = []
 
-        for slot_name, slot_value in extracted_slots.items():
-            if slot_name == "email" and MailChimpAPI.is_valid_email(slot_value):
-                validation_events.append(SlotSet(slot_name, slot_value))
-            else:
-                dispatcher.utter_message(template="utter_no_email")
-                validation_events.append(SlotSet(slot_name, None))
-
-        return validation_events
+        if MailChimpAPI.is_valid_email(value):
+            return {"email": value}
+        else:
+            dispatcher.utter_message(template="utter_no_email")
+            return {"email": None}
 
 
 class ActionSubmitSalesForm(Action):
@@ -114,30 +111,23 @@ class ActionSubmitSalesForm(Action):
             return []
 
 
-class ValidateSalesForm(Action):
+class ValidateSalesForm(FormValidationAction):
     def name(self) -> Text:
         return "validate_sales_form"
 
-    def run(
+    def validate_business_email(
         self,
+        value: Text,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
-        extracted_slots = tracker.slots_to_validate()
-        validation_events = []
 
-        for slot_name, slot_value in extracted_slots.items():
-            if slot_name == "business_email":
-                if MailChimpAPI.is_valid_email(slot_value):
-                    validation_events.append(SlotSet(slot_name, slot_value))
-                else:
-                    dispatcher.utter_message(template="utter_no_email")
-                    validation_events.append(SlotSet(slot_name, None))
-            else:
-                validation_events.append(SlotSet(slot_name, slot_value))
-
-        return validation_events
+        if MailChimpAPI.is_valid_email(value):
+            return {"business_email": value}
+        else:
+            dispatcher.utter_message(template="utter_no_email")
+            return {"business_email": None}
 
 
 class ActionExplainSalesForm(Action):
