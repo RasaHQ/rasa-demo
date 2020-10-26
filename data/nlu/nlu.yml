@@ -150,6 +150,7 @@ nlu:
 - intent: ask_which_events
   examples: |
     - Any other event like rasa meetup in future?
+    - Does Rasa host any events?
     - Can you tell me what kinds of events you have?
     - Could you please list the kinds of events that you have?
     - Do you have a user group
