@@ -415,6 +415,7 @@ nlu:
 - intent: faq/opensource_cost
   examples: |
     - Are you free?
+    - do you cost anything?
     - Can you tell me whats the price for [rasa](product) platform?
     - How much do you cost?
     - How much does it cost?
