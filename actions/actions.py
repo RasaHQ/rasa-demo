@@ -63,7 +63,7 @@ class ValidateSubscribeNewsletterForm(FormValidationAction):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List[EventType]:
+    ) -> Dict[Text, Any]:
 
         if MailChimpAPI.is_valid_email(value):
             return {"email": value}
@@ -121,7 +121,7 @@ class ValidateSalesForm(FormValidationAction):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
-    ) -> List[EventType]:
+    ) -> Dict[Text, Any]:
 
         if MailChimpAPI.is_valid_email(value):
             return {"business_email": value}

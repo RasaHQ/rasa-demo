@@ -1,5 +1,9 @@
 version: "2.0"
 stories:
+- story: community events
+  steps:
+  - intent: ask_which_events
+  - action: action_get_community_events
 - story: Step 4 prompt
   steps:
   - intent: get_started_step4
@@ -102,3 +106,7 @@ stories:
   steps:
   - intent: ask_question_in_forum
   - action: utter_link_to_forum
+- story: Why contribute
+  steps:
+  - intent: ask_why_contribute
+  - action: utter_reasons_to_contribute
