@@ -1,0 +1,54 @@
+version: "2.0"
+rules:
+- rule: feedback out_of_scope
+  steps:
+  - action: utter_ask_feedback
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_anything_else
+- rule: feedback enter_data
+  steps:
+  - action: utter_ask_feedback
+  - intent: enter_data
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- rule: feedback affirm
+  steps:
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- rule: feedback deny
+  steps:
+  - action: utter_ask_feedback
+  - intent: deny
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- rule: feedback thank
+  steps:
+  - action: utter_ask_feedback
+  - intent: thank
+  - action: utter_noworries
+  - action: utter_anything_else
+- rule: negative feedback
+  steps:
+  - action: utter_ask_feedback
+  - intent: feedback
+    entities:
+    - feedback_value: negative
+  - slot_was_set:
+    - feedback_value: negative
+  - action: action_tag_feedback
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- rule: positive feedback
+  steps:
+  - action: utter_ask_feedback
+  - intent: feedback
+    entities:
+    - feedback_value: positive
+  - slot_was_set:
+    - feedback_value: positive
+  - action: action_tag_feedback
+  - action: utter_great
+  - action: utter_anything_else

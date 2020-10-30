@@ -1,7 +1,6 @@
 language: en
 pipeline:
-- name: ConveRTTokenizer
-- name: ConveRTFeaturizer
+- name: WhitespaceTokenizer
 - name: RegexFeaturizer
 - name: LexicalSyntacticFeaturizer
 - name: CountVectorsFeaturizer
@@ -14,7 +13,7 @@ pipeline:
 - name: DIETClassifier
   epochs: 200
   ranking_length: 5
-- name: DucklingHTTPExtractor
+- name: DucklingEntityExtractor
   url: http://localhost:8000
   dimensions:
   - email
@@ -24,12 +23,17 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: out_of_scope
   scale_loss: false
+  epochs: 100
 - name: ResponseSelector
   retrieval_intent: faq
   scale_loss: false
+  epochs: 100
 - name: ResponseSelector
   retrieval_intent: chitchat
   scale_loss: false
+  epochs: 100
+- name: FallbackClassifier
+  threshold: 0.7
 policies:
 - name: TEDPolicy
   max_history: 10
@@ -39,9 +43,8 @@ policies:
   - 64
 - max_history: 6
   name: AugmentedMemoizationPolicy
-- core_threshold: 0.3
-  name: TwoStageFallbackPolicy
-  nlu_threshold: 0.8
-  deny_suggestion_intent_name: "trigger_rephrase"
-- name: FormPolicy
-- name: MappingPolicy
+- name: RulePolicy
+  core_fallback_threshold: 0.3
+  core_fallback_action_name: "action_default_fallback"
+  enable_fallback_prediction: True
+

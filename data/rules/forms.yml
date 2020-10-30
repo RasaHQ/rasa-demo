@@ -1,0 +1,309 @@
+version: "2.0"
+rules:
+- rule: activate newsletter form
+  steps:
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+
+- rule: deactivate newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_docu
+  - action: utter_ask_feedback
+
+- rule: continue newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - action: utter_ask_continue_newsletter
+  - intent: affirm
+  - action: utter_great
+  - action: subscribe_newsletter_form
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_docu
+  - action: utter_ask_feedback
+
+- rule: don't continue newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - action: utter_ask_continue_newsletter
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_feedback
+
+
+- rule: explain in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: explain
+  - action: utter_response_why_email
+  - action: utter_ask_continue_newsletter
+
+- rule: deny in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: deny
+  - action: utter_cantsignup
+  - action: utter_ask_continue_newsletter
+
+- rule: canthelp in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: canthelp
+  - action: utter_canthelp
+  - action: utter_ask_continue_newsletter
+
+- rule: chitchat in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_continue_newsletter
+
+- rule: faq in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_newsletter
+
+- rule: Rasa x faq in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_newsletter
+
+- rule: all faq in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: faq
+    entities:
+    - product: all
+  - slot_was_set:
+    - product: all
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_newsletter
+
+- rule: Rasa faq in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_newsletter
+
+- rule: Rasa NLU faq in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_newsletter
+
+- rule: Rasa Core faq in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: faq
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_newsletter
+
+- rule: handoff in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: human_handoff
+  - action: utter_contact_email
+  - action: utter_ask_continue_newsletter
+
+- rule: out of scope in newsletter form
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_ask_continue_newsletter
+
+- rule: activate contact sales form
+  steps:
+  - intent: contact_sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+
+- rule: deactivate contact sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - active_loop: null
+  - action: action_submit_sales_form
+  - action: utter_ask_feedback
+
+- rule: continue sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - action: utter_ask_continue_sales
+  - intent: affirm
+  - action: utter_great
+  - action: sales_form
+  - active_loop: null
+  - action: action_submit_sales_form
+  - action: utter_docu
+  - action: utter_ask_feedback
+
+- rule: don't continue sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - action: utter_ask_continue_sales
+  - intent: deny
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_feedback
+
+- rule: canthelp in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: canthelp
+  - action: utter_canthelp
+  - action: utter_ask_continue_sales
+
+- rule: chitchat in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+  - action: utter_ask_continue_sales
+
+- rule: faq in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_sales
+
+- rule: Rasa x faq in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_sales
+
+- rule: all faq in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: faq
+    entities:
+    - product: all
+  - slot_was_set:
+    - product: all
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_sales
+
+- rule: Rasa faq in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: faq
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_sales
+
+- rule: Rasa NLU faq in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: faq
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_sales
+
+- rule: Rasa Core faq in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: faq
+    entities:
+    - product: core
+  - slot_was_set:
+    - product: core
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: utter_ask_continue_sales
+
+- rule: handoff in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: human_handoff
+  - action: utter_contact_email
+  - action: utter_ask_continue_sales
+
+- rule: out of scope in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_ask_continue_sales

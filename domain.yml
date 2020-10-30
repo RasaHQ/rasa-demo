@@ -1,4 +1,4 @@
-
+version: "2.0"
 session_config:
   session_expiration_time: 480  # value in minutes, 0 means infinitely long
   carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
@@ -29,12 +29,11 @@ intents:
 - how_to_get_started
 - human_handoff
 - install_rasa
+- need_help_broad
 - next_step
 - nlu_generation_tool_recommendation
 - nlu_info
-- out_of_scope:
-    triggers: respond_out_of_scope
-    use_entities: []
+- out_of_scope
 - pipeline_recommendation
 - react_negative
 - react_positive
@@ -64,20 +63,20 @@ entities:
 - user_type
 slots:
   budget:
-    type: unfeaturized
+    type: any
   business_email:
-    type: unfeaturized
+    type: any
   can_use_spacy:
     type: bool
   company:
-    type: unfeaturized
+    type: any
   current_api:
     type: categorical
     values:
     - dialogflow
     - luis
   email:
-    type: unfeaturized
+    type: any
   entity_extractor:
     type: categorical
     values:
@@ -85,14 +84,14 @@ slots:
     - spacyentityextractor
     - ducklinghttpextractor
   feedback_message:
-    type: unfeaturized
+    type: any
   feedback_value:
     type: categorical
     values:
     - positive
     - negative
   job_function:
-    type: unfeaturized
+    type: any
   language:
     type: categorical
     values:
@@ -108,7 +107,7 @@ slots:
   onboarding:
     type: bool
   person_name:
-    type: unfeaturized
+    type: any
   problem_description:
     type: text
   product:
@@ -120,21 +119,21 @@ slots:
     - rasa
     - all
   shown_privacy:
-    type: unfeaturized
+    type: any
   step:
-    type: unfeaturized
+    type: any
   suggestion:
-    type: unfeaturized
+    type: any
   unknown_nlu_part:
-    type: unfeaturized
+    type: any
   unknown_product:
-    type: unfeaturized
+    type: any
   use_case:
-    type: unfeaturized
+    type: any
   docs_found:
     type: bool
   faq:
-    type: unfeaturized
+    type: any
 responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received
@@ -176,9 +175,9 @@ responses:
   - text: Would you like to know more about Rasa Open Source or Rasa X?
   utter_ask_feedback:
   - buttons:
-    - payload: /feedback{"feedback_value":"positive"}
+    - payload: '/feedback{{"feedback_value": "positive"}}'
       title: 👍
-    - payload: /feedback{"feedback_value":"negative"}
+    - payload: '/feedback{{"feedback_value": "negative"}}'
       title: 👎
     text: How is this conversation going?
   utter_ask_feedback_message:
@@ -197,6 +196,8 @@ responses:
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:
+  - text: What's your name?
+  utter_ask_person_name:
   - text: What's your name?
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Rasa?
@@ -504,8 +505,8 @@ responses:
   - text: Like Rasa Open Source, my code is freely available on GitHub! You can find
       it [here](https://github.com/RasaHQ/rasa-demo) 👻
   utter_pipeline_english:
-  - text: If your training data is in English, a good starting point is this 
-      [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer), 
+  - text: If your training data is in English, a good starting point is this
+      [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer),
       which uses both pretrained and supervised embeddings.
   utter_spacy:
   - text: SpaCy has excellent pre-trained named-entity recognizers for this -- check
@@ -513,7 +514,7 @@ responses:
       suggest using the [SpacyEntityExtractor](https://rasa.com/docs/rasa/nlu/components/#spacyentityextractor)
       component in your pipeline.
   utter_pipeline_nonenglish_spacy:
-  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) 
+  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer)
       for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#a-longer-answer)
       also works for your language.
   utter_suggestion:
@@ -524,7 +525,7 @@ responses:
   utter_switch_luis:
   - text: We have a guide for migrating from LUIS [here](https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/).
   utter_pipeline_nonenglish_nospacy:
-  - text: For {language}, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) 
+  - text: For {language}, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer)
           for languages other than English.
   utter_thank_suggestion:
   - text: Thanks for your input!
@@ -547,30 +548,33 @@ responses:
   utter_why_rasa:
   - text:  Rasa provides the infrastructure and tools needed to build
       high-performing, resilient assistants that work. What's more,
-      Rasa is **open source** - no black-box magic! 
-  utter_ask_more: 
+      Rasa is **open source** - no black-box magic!
+  utter_ask_more:
   - text: Would you like to learn more?
+  utter_ask_more_details:
+  - text: Could you be more specific?
+  - text: Can you tell me more?
   utter_ask_more_migrate:
   - text: Would you like to learn more about the advantages of switching to Rasa?
   utter_why_rasa_research:
-    - text: Rasa invests in extensive research to create leading-edge 
-        conversational AI, enabling developers to create the best text- and
-        voice-based assistants without a dedicated research team.
+  - text: Rasa invests in extensive research to create leading-edge
+      conversational AI, enabling developers to create the best text- and
+      voice-based assistants without a dedicated research team.
   utter_why_rasa_nlu:
-    - text: Rasa's NLU supports multiple languages, single and multiple
-        intents, and both pre-trained and custom entities.
+  - text: Rasa's NLU supports multiple languages, single and multiple
+      intents, and both pre-trained and custom entities.
   utter_why_rasa_dialogue:
-    - text: Assistants built on Rasa can hold meaningful conversations 
-        with users - multi-step conversations that remember context and
-        integrate business logic. No state machines here!
+  - text: Assistants built on Rasa can hold meaningful conversations
+      with users - multi-step conversations that remember context and
+      integrate business logic. No state machines here!
   utter_why_rasa_os:
-    - text: Because Rasa is open source, you can customize your bot 
-        and explore its inner workings as much as you'd like. There's no vendor lock in, and no
-        hidden algorithms. 
+  - text: Because Rasa is open source, you can customize your bot
+      and explore its inner workings as much as you'd like. There's no vendor lock in, and no
+      hidden algorithms.
   utter_why_rasa_compliant:
-    - text: If data security and compliance is a priority for you, Rasa has 
-        your back! You can deploy Rasa either in the cloud or on premise and
-        maintain complete control over your assistant & its data.
+  - text: If data security and compliance is a priority for you, Rasa has
+      your back! You can deploy Rasa either in the cloud or on premise and
+      maintain complete control over your assistant & its data.
 
 actions:
 - action_default_ask_affirmation
@@ -592,11 +596,52 @@ actions:
 - action_store_unknown_product
 - action_tag_docs_search
 - action_tag_feedback
-- respond_chitchat
-- respond_faq
-- respond_out_of_scope
+- action_submit_subscribe_newsletter_form
+- action_submit_sales_form
+- action_submit_suggestion_form
+- validate_subscribe_newsletter_form
+- validate_sales_form
+
 
 forms:
-- sales_form
-- subscribe_newsletter_form
-- suggestion_form
+  suggestion_form:
+    suggestion:
+      - type: from_text
+  sales_form:
+    job_function:
+      - type: from_entity
+        entity: job_function
+      - type: from_text
+        intent: enter_data
+    use_case:
+      - type: from_text
+        intent: enter_data
+    budget:
+      - type: from_entity
+        entity: amount-of-money
+      - type: from_entity
+        entity: number
+      - type: from_text
+        intent: enter_data
+    person_name:
+      - type: from_entity
+        entity: name
+      - type: from_text
+        intent: enter_data
+    company:
+      - type: from_entity
+        entity: company
+      - type: from_text
+        intent: enter_data
+    business_email:
+      - type: from_entity
+        entity: email
+      - type: from_text
+        intent: enter_data
+  subscribe_newsletter_form:
+    email:
+      - type: from_entity
+        entity: email
+      - type: from_text
+        intent: enter_data
+
