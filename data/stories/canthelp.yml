@@ -1,0 +1,24 @@
+version: "2.0"
+stories:
+- story: chitchat
+  steps:
+  - intent: canthelp
+  - action: utter_canthelp
+- story: greet + canthelp
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: canthelp
+  - action: utter_canthelp
+- story: Story from conversation with 3db7df5613a2487a809694e2f6b2b34e on November 25th 2019
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: nlu_generation_tool_recommendation
+    entities:
+    - product: nlu
+  - slot_was_set:
+    - product: nlu
+  - action: utter_nlu_tools

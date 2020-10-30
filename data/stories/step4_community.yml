@@ -1,0 +1,112 @@
+version: "2.0"
+stories:
+- story: community events
+  steps:
+  - intent: ask_which_events
+  - action: action_get_community_events
+- story: Step 4 prompt
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+- story: 'Happy path: Prompt -> Get event locations -> get next event'
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_which_events
+  - action: action_get_community_events
+  - intent: ask_when_next_event
+  - action: action_get_community_events
+  - action: utter_recommend_forum
+- story: 'Happy path: Prompt -> Get event locations -> get next event for location'
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_which_events
+  - action: action_get_community_events
+  - intent: ask_when_next_event
+    entities:
+    - location: Berlin
+  - action: action_get_community_events
+  - action: utter_recommend_forum
+- story: 'Happy path: Get event locations -> get next event'
+  steps:
+  - intent: ask_which_events
+  - action: action_get_community_events
+  - intent: ask_when_next_event
+  - action: action_get_community_events
+  - action: utter_anything_else
+- story: 'Happy path: Get event locations -> get next event for location'
+  steps:
+  - intent: ask_which_events
+  - action: action_get_community_events
+  - intent: ask_when_next_event
+    entities:
+    - location: Berlin
+  - action: action_get_community_events
+  - action: utter_anything_else
+- story: Prompt -> Get next event
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_when_next_event
+  - action: action_get_community_events
+  - action: utter_recommend_forum
+- story: Prompt -> Get next event for location
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_when_next_event
+    entities:
+    - location: Berlin
+  - action: action_get_community_events
+  - action: utter_recommend_forum
+- story: Get next event
+  steps:
+  - intent: ask_when_next_event
+  - action: action_get_community_events
+  - action: utter_anything_else
+- story: Get next event for location
+  steps:
+  - intent: ask_when_next_event
+    entities:
+    - location: Berlin
+  - action: action_get_community_events
+  - action: utter_anything_else
+- story: Prompt -> Contribute
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_why_contribute
+  - action: utter_reasons_to_contribute
+  - intent: ask_how_contribute
+  - action: utter_possibilities_to_contribute
+- story: Contribute
+  steps:
+  - intent: ask_why_contribute
+  - action: utter_reasons_to_contribute
+  - intent: ask_how_contribute
+  - action: utter_possibilities_to_contribute
+- story: Prompt -> How can I contribute
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_how_contribute
+  - action: utter_possibilities_to_contribute
+- story: How can I contribute
+  steps:
+  - intent: ask_how_contribute
+  - action: utter_possibilities_to_contribute
+- story: Prompt -> Get help in forum
+  steps:
+  - intent: get_started_step4
+  - action: action_greet_user
+  - intent: ask_question_in_forum
+  - action: utter_link_to_forum
+- story: Get help in the forum
+  steps:
+  - intent: ask_question_in_forum
+  - action: utter_link_to_forum
+- story: Why contribute
+  steps:
+  - intent: ask_why_contribute
+  - action: utter_reasons_to_contribute

@@ -1,5 +1,5 @@
 # Pull SDK image as base image
-FROM rasa/rasa-sdk:1.10.0
+FROM rasa/rasa-sdk:2.0.0
 
 # Use subdirectory as working directory
 WORKDIR /app
@@ -18,7 +18,7 @@ COPY ./actions /app/actions
 
 # Install modules from setup.py
 COPY setup.py /app
-RUN  pip install -e . --no-cache-dir
+RUN pip install . --no-cache-dir
 
 # Download spacy language data
 RUN python -m spacy download en_core_web_md

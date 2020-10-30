@@ -1,0 +1,232 @@
+version: "2.0"
+stories:
+- story: Get started from website
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+- story: Get started from website + not interested in step 2
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: deny
+  - action: utter_anything_else
+- story: Direct "install Rasa"
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+- story: Installation went well
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Installation went well
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_describe_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - slot_was_set:
+    - problem_description: I don't know how to customize the pipeline
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_describe_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - slot_was_set:
+    - problem_description: I don't know how to customize the pipeline
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing (cut to the chase)
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing (cut to the chase)
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing (but FAQ)
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_describe_problem
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing (but FAQ)
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_describe_problem
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing (but FAQ + cut to the chase)
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Problems installing (but FAQ + cut to the chase)
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+- story: Just don't want to continue
+  steps:
+  - intent: install_rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: deny
+  - action: utter_anything_else
+- story: Just don't want to continue
+  steps:
+  - intent: get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: deny
+  - action: utter_anything_else

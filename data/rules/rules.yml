@@ -1,0 +1,56 @@
+version: "2.0"
+rules:
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+  - action: utter_why_rasa
+  - action: utter_ask_more
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: tensorflow
+  - slot_was_set:
+    - current_api: __other__
+  - action: utter_why_rasa
+  - action: utter_ask_more
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: luis
+  - slot_was_set:
+    - current_api: luis
+  - action: utter_why_rasa
+  - action: utter_switch_luis
+  - action: utter_ask_more_migrate
+- rule: why rasa
+  steps:
+  - intent: why_rasa
+    entities:
+    - current_api: dialogflow
+  - slot_was_set:
+    - current_api: dialogflow
+  - action: utter_why_rasa
+  - action: utter_switch_dialogflow
+  - action: utter_ask_more_migrate
+- rule: ask for more details
+  steps:
+  - intent: need_help_broad
+  - action: utter_ask_more_details
+- rule: sales -> need_help_broad -> deactivate loop
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: need_help_broad
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_more_details
+- rule: newsletter -> need_help_broad -> deactivate loop
+  condition:
+  - active_loop: subscribe_newsletter_form
+  steps:
+  - intent: need_help_broad
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_ask_more_details

@@ -1,0 +1,64 @@
+version: "2.0"
+stories:
+- story: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_possibilities
+- story: say enter data outside the flows
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: enter_data
+  - action: utter_not_sure
+  - action: utter_possibilities
+- story: say confirm outside the flows 2
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: affirm
+  - action: utter_thumbsup
+- story: say greet outside the flows
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - or:
+    - intent: greet
+    - intent: enter_data
+      entities:
+      - name: akela
+  - action: action_greet_user
+- story: newsletter + confirm
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_possibilities
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else
+- story: just newsletter + confirm
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_possibilities
+  - intent: signup_newsletter
+  - action: utter_can_do
+  - action: subscribe_newsletter_form
+  - active_loop: subscribe_newsletter_form
+  - active_loop: null
+  - action: action_submit_subscribe_newsletter_form
+  - action: utter_docu
+  - action: utter_ask_feedback
+  - intent: affirm
+  - action: utter_thumbsup
+  - action: utter_anything_else

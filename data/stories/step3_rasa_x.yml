@@ -1,0 +1,17 @@
+version: "2.0"
+stories:
+- story: Get started from website
+  steps:
+  - intent: get_started_step3
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '3'
+- story: Get started from website
+  steps:
+  - intent: get_started_step3
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '3'
+  - intent: affirm
+  - action: utter_explain_x
+  - action: utter_direct_to_step4

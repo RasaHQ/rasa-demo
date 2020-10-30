@@ -1,6 +1,0 @@
-core
-nlu
-x
-rasa x
-both
-all
