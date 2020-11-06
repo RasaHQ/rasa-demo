@@ -21,3 +21,4 @@ events.*
 terms
 docker-local
 .pytype/
+.vscode

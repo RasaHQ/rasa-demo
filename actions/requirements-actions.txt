@@ -7,3 +7,8 @@ geopy~=1.18.1
 pandas~=0.24.1
 algoliasearch>=2.0,<3.0
 spacy~=2.2.4
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-exporter-jaeger
+opentelemetry-instrumentation-sqlalchemy
+jaeger-client~=4.3.0
