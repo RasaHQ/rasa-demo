@@ -1,5 +1,31 @@
 version: "2.0"
 nlu:
+- intent: faq/rasa_playground
+  examples: |
+    - what is [Rasa Playground](product) ?
+    - how does [Rasa Playground](product) work?
+    - what is [playground](product) ?
+    - can you explain [rasa playground](product) to me
+    - could you elaborate more about [rasa playground](product)
+    - tell me about [Rasa Playground](product) please
+    - what is this [rasa playground](product) thing. could you tell me more?
+    - what's the purpose of [Rasa Playground](product)
+    - whats [rasaplayground](product)
+    - is [Rasa Playground](product) separate from Rasa?
+    - how does [rasa playground](product) relate to rasa core
+    - I need to know about [Rasa playground](product)
+    - please tell me more about [rasa playground](product)
+    - elaborate on [rasa playground](product)
+    - Can you tell me about [rasa playground](product)?
+    - I want information about [rasa playground](product)
+    - [Rasa Playground](product)
+    - Tell me about [rasa playgrounds](product)
+    - can someone help me with infos about [rasa playground](product)
+    - i want to learn more about [Rasa playground](product)
+    - tell me what is [rasa playground](product)
+    - what is [rasa playground](product) ?
+    - what is [rasaplayground](product)
+    - what's [rasa playground](product)
 - intent: faq/rasax
   examples: |
     - what is [Rasa X](product) ?

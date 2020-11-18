@@ -193,12 +193,17 @@ responses:
   - text: Did you encounter any problems during installation?
   utter_ask_job_function:
   - text: What's your job? 🕴
+  utter_ask_x_local_server:
+  - text: Are you trying to install Rasa X on your local machine or on a server?
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:
   - text: What's your name?
   utter_ask_person_name:
   - text: What's your name?
+  utter_ask_playground_or_install:
+  - text: To help you best, I'd like to ask you a few questions about what brings you here.
+      Would you like to try out Rasa with our interactive Playground or are you trying to install Rasa?
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Rasa?
   utter_ask_which_product:
@@ -402,6 +407,8 @@ responses:
   utter_installation_command_followup:
   - text: "Once you're done, you can install Rasa Open Source with pip using the following\
       \ command. \n\n\"pip install rasa\""
+  utter_interested_in_starter_packs:
+  - text: Got it, are you interested in seeing any example Rasa Open Source assistants to help you get started?
   utter_having_trouble_installing:
   - text: If you are having any trouble installing, you can look up detailed installation
       instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
@@ -449,6 +456,10 @@ responses:
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
+  utter_playground_info:
+  - text: "Rasa playground is a guided page where you can learn the basics of building an assistant in Rasa Open Source.
+      You'll be able to customize the assistant, talk to it, and download the project so you can continue to build.
+      You can access the playground by visiting this [page](https://rasa.com/docs/rasa/playground)."
   utter_possibilities:
   - text: "You can ask me about:\n- how to get started with Rasa\n- the components\
       \ of Rasa,\n- booking a sales call\n- subscribing to our newsletter\n"
@@ -456,6 +467,13 @@ responses:
   - text: Check out the [Contribute to Rasa](https://github.com/orgs/RasaHQ/projects/23)
       board for ideas on how to contribute code or content. You can also help by answering
       other members' questions on the [forum](http://forum.rasa.com).
+  utter_rasa_x_local_installation:
+  - text: This [page](https://rasa.com/docs/rasa-x/installation-and-setup/install/local-mode)
+      has a guide on how to run Rasa X in local mode.
+  utter_rasa_x_server_installation:
+  - text: You can install Rasa X on a server using either
+      [Docker-Compose](https://rasa.com/docs/rasa-x/installation-and-setup/install/docker-compose) or
+      [Helm](https://rasa.com/docs/rasa-x/installation-and-setup/install/helm-chart).
   utter_rasa_components_details:
   - text: Rasa Open Source is a machine learning framework for automated text and
       voice-based conversations. Rasa X is a tool that helps you build, improve, and
@@ -504,6 +522,9 @@ responses:
   utter_source_code:
   - text: Like Rasa Open Source, my code is freely available on GitHub! You can find
       it [here](https://github.com/RasaHQ/rasa-demo) 👻
+  utter_starter_pack_info:
+  - text: We have example for a Financial Services Assistant available [here](https://github.com/RasaHQ/financial-demo)
+      and a Helpdesk Assistant available [here](https://github.com/RasaHQ/helpdesk-assistant).
   utter_pipeline_english:
   - text: If your training data is in English, a good starting point is this
       [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer),

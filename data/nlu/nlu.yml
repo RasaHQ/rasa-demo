@@ -2369,6 +2369,16 @@ nlu:
     - RASA X
     - X
     - rasax
+- synonym: playground
+  examples: |
+    - Rasaplayground
+    - RASAPlayground
+    - Rasa Playground
+    - rasa playground
+    - RASA playgrounds
+    - playgrounds
+    - Playground
+    - rasaplaygrounds
 - regex: greet
   examples: |
     - hey[^\s]*
