@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import Any, Dict, List, Text, Optional
 
 from rasa_sdk import Action, Tracker
-from rasa_sdk.forms import FormValidationAction
+from rasa_sdk import FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import (
     SlotSet,
@@ -412,7 +412,7 @@ class ActionGreetUser(Action):
         domain: Dict[Text, Any],
     ) -> List[EventType]:
         if (domain and "headers" in domain):
-            logger.debug(f"headers: {domain['headers']}")
+            logger.debug(f"headers.traceparent: {domain['headers'].get('traceparent')}")
         else:
             logger.debug(f"headers empty")
         with extract_start_span(tracer, domain, self.name()):
