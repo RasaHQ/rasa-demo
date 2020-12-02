@@ -227,6 +227,7 @@ nlu:
     - cool beans
     - sounds good!
     - really
+    - im good yeah
 - intent: react_positive
   examples: |
     - Cool
@@ -291,6 +292,7 @@ nlu:
     - you good
     - Great information
     - I mean to say that I liked the explanation
+    - u r cute
 - intent: bye
   examples: |
     - Bye
@@ -363,6 +365,8 @@ nlu:
     - you cant help me
     - quit
     - that does not help
+    - I hate you
+    - fuck you
 - intent: deny
   examples: |
     - I don't want to
@@ -465,6 +469,7 @@ nlu:
     - stop it, i do not care!!!
     - none of them
     - I don't agree
+    - not totally
 - intent: explain
   examples: |
     - can you elaborate
@@ -483,6 +488,7 @@ nlu:
     - what do you mean
     - what does that mean
     - how come?
+    - Why not?
 - intent: greet
   examples: |
     - Bom dia
@@ -632,6 +638,7 @@ nlu:
     - yoo
     - ssup?
     - helleo
+    - My name is rahul
 - intent: next_step
   examples: |
     - continue to next step
@@ -698,6 +705,8 @@ nlu:
     - sadly
     - That tool here isnt good
     - boring
+    - leave it sara
+    - that's rude
 - intent: thank
   examples: |
     - Cool. Thanks
@@ -759,7 +768,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr

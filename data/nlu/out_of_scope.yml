@@ -43,6 +43,7 @@ nlu:
     - αστεία λές
     - rasa codigo abierto
     - 卧槽
+    - Namaste
 - intent: out_of_scope/other
   examples: |
     - I am asking you an out of scope question
@@ -415,3 +416,21 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - Hi product onboarding on Dec 2nd!
+    - why you cold?
+    - nimit
+    - current [time](entity)?
+    - flasdkjfasjf;ladsldj
+    - lkdlfalkjd;lsaldjd
+    - we want taxi
+    - I want taxi
+    - op
+    - kmlkkljkjk
+    - opkojkok
+    - cursing how do you handle
+    - I want to find out the name of a new rasa attribute
+    - aubergine
+    - f
+    - s
+    - sokol
+    - marry me

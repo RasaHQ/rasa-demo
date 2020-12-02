@@ -47,6 +47,9 @@ nlu:
     - why is rasa interesting
     - Why rasa?
     - Why choose rasa?
+    - features of rasa
+    - features
+    - [DialogFlow]{"entity": "current_api", "value": "dialogflow"} is better than you
 - intent: ask_how_contribute
   examples: |
     - Can I assist?
@@ -440,6 +443,7 @@ nlu:
     - Can i have a deno
     - bookin
     - Is there a live demo of rasa somewhere ?
+    - book sales
 - intent: enter_data
   examples: |
     - $1
@@ -1168,6 +1172,12 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
+    - 2
+    - 1
+    - [dveloper](job_function)
+    - i want 2,0
+    - product
+    - [entity](entity)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1675,6 +1685,10 @@ nlu:
     - How to download rasa
     - where do i download rasa
     - I have a specific question regarding installation
+    - how to build resa in ubantu
+    - how to run rasa in ubantu
+    - how to install rasa
+    - How o I install rasa 2.0
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -1755,6 +1769,7 @@ nlu:
     - where to train [intents](nlu_part) in rasa?
     - what does NLU server do?
     - how enttity extrcation works
+    - what are [Synonyms](nlu_part) in [entity recognition](nlu_part)
 - intent: pipeline_recommendation
   examples: |
     - I don’t know which pipeline to use
@@ -2233,6 +2248,23 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - text response
+    - what about responses
+    - is gif supported？
+    - endpoints.yml
+    - Text to speech
+    - two stage fallback
+    - nlu_fallback what is that
+    - utils.configure_coloured_logging
+    - "gpu": len(tf.config.list_physical_devices("GPU")), AttributeError: module 'tensorflow' has no attribute 'config'
+    - how to run rasa
+    - How do I use Forms?
+    - What are Forms for?
+    - git error
+    - git
+    - ResponseSelector
+    - i want to know about the implimentation of rasa in rocketchat
+    - Forms in Rasa
 - intent: restart
   examples: |
     - yep you can restart
@@ -2375,9 +2407,3 @@ nlu:
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt
