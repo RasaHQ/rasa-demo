@@ -242,6 +242,7 @@ nlu:
     - you robo
     - real bot then?
     - are you really a bbot?
+    - are u a bot
 - intent: chitchat/ask_ishuman
   examples: |
     - hey are you human

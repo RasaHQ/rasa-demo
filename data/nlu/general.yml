@@ -483,6 +483,18 @@ nlu:
     - what do you mean
     - what does that mean
     - how come?
+    - Why should I do that
+    - what sory
+    - what happens/
+    - but why?
+    - more detail?
+    - can you explain it to me
+    - im still not clear
+    - I would like to know more
+    - Can i get the detail
+    - not sure what you mean
+    - ohhh how come
+    - can you explain both to me?
 - intent: greet
   examples: |
     - Bom dia
@@ -649,6 +661,13 @@ nlu:
     - please go to the next step
     - take me to the next step
     - what is the next step ?
+    - what's next
+    - ok whats next
+    - let's just continue
+    - LET CONTINUE
+    - Please continue
+    - take me to next steps
+    - please give me the steps
 - intent: react_negative
   examples: |
     - I am feeling bad
@@ -759,7 +778,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr
