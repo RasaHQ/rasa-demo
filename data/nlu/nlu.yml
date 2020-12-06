@@ -1168,6 +1168,9 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
+    - [dveloper](job_function)
+    - 2
+    - 1
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1675,6 +1678,22 @@ nlu:
     - How to download rasa
     - where do i download rasa
     - I have a specific question regarding installation
+    - How to install Rasa X on to Mac?
+    - i have issues in installing rasa in windows 10
+    - jaimerai installer rasa
+    - Question: how can I install Rasa on my macbook?
+    - how to install in mac / mamp
+    - no..i have issue installing
+    - i want to install rasa on docker
+    - Install rasa x
+    - Rasa X install
+    - how can i setup [ras](product)a x on windows 10
+    - How can I install the framework
+    - what are the installation steps?
+    - what should i do to install
+    - install rasa with docker on windows
+    - yes. give me installation docs
+    - Installation of rasa open source, excluding rasa x.
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -1691,6 +1710,12 @@ nlu:
     - How to generate [NLU](product) using frontend.
     - [NLU](product) data  generation
     - i want a recommendation for an [nlu](product) data generation tool
+    - I need some [NLU]{"entity": "product", "value": "nlu"} data
+    - you can give me data
+    - where can I get [NLU]{"entity": "product", "value": "nlu"} data
+    - how can I get [nlu](product) data
+    - Ways to feed data
+    - how do i make my own datasets
 - intent: nlu_info
   examples: |
     - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -1776,6 +1801,13 @@ nlu:
     - nlu pipeline
     - how to build a pipelin
     - how to build a pipeline for the bot
+    - Pipelines in Rasa
+    - Information about pipeline
+    - I want a pipeline recommendation
+    - which are the different pipelines in rasa
+    - explain pipeline
+    - can you recommend a pipeline
+    - I want to learn more about pipelines.
 - intent: signup_newsletter
   examples: |
     - I also want to subscribe
@@ -2233,6 +2265,14 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - how does rasa [core](product) model the [dialog](current_api)?
+    - How I can use BERT
+    - how to use nlu-config.yml
+    - can i use c++
+    - Can you run rasa on windows?
+    - Nope what about migrating to docker
+    - ResponseSelector
+    - can i deploy a bot on kubernetes
 - intent: restart
   examples: |
     - yep you can restart
@@ -2375,9 +2415,3 @@ nlu:
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt

@@ -830,3 +830,18 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: out_of_scope
+  examples: |
+    - i want to learn how to make my own cheese
+    - book authors
+    - whats my today sales
+    - why do you keep showing me buttons
+    - bcj
+    - LMAO
+    - dobryde n
+    - u thr
+    - Schade
+    - njsabdjasdjhasdbasd
+    - sorry, but it was true
+    - ererqr
+    - tmkc
