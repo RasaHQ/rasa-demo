@@ -883,18 +883,18 @@ stories:
     - product: core
   - action: utter_explain_core
   - action: utter_also_explain_nlu
-- story: Story from conversation with 4a4e903fc43940db9ccdb9153dfdadcb on January 21st 2019
-  steps:
-  - intent: get_started_step1
-  - action: action_greet_user
-  - slot_was_set:
-    - shown_privacy: true
-  - slot_was_set:
-    - step: '1'
-  - intent: install_rasa
-  - action: utter_installation_command
-  - action: utter_having_trouble_installing
-  - action: utter_ask_ready_to_build
+# - story: Story from conversation with 4a4e903fc43940db9ccdb9153dfdadcb on January 21st 2019
+#   steps:
+#   - intent: get_started_step1
+#   - action: action_greet_user
+#   - slot_was_set:
+#     - shown_privacy: true
+#   - slot_was_set:
+#     - step: '1'
+#   - intent: install_rasa
+#   - action: utter_installation_command
+#   - action: utter_having_trouble_installing
+#   - action: utter_ask_ready_to_build
 - story: Story from conversation with 5f3a2ea92d184a9f96df7240e4f7e2d9 on January 21st 2019
   steps:
   - intent: get_started_step1

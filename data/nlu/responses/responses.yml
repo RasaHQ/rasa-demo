@@ -4,6 +4,10 @@ responses:
   - text: "I only understand English, I'm sorry."
   utter_out_of_scope/other:
   - text: "I can't help you with that, I'm sorry."
+  utter_faq/rasa_playground:
+  - text: "Rasa playground is a guided page where you can learn the basics of building an assistant in Rasa Open Source.
+    You'll be able to customize the assistant, talk to it, and download the project so you can continue to build.
+    You can access the playground by visiting this [page](https://rasa.com/docs/rasa/playground)."
   utter_faq/channels:
   - text: "We have a [comprehensive list of supported connectors](https://rasa.com/docs/core/connectors/),
     but if you don't see the one you're looking for, you can always create a custom connector by following

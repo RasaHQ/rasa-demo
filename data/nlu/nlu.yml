@@ -1168,6 +1168,10 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
+    - [local](product)
+    - [server](product)
+    - I'm interested in [local](product) installation
+    - I'm interested in [server](product) installation
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot

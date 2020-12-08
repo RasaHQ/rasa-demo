@@ -21,6 +21,8 @@ intents:
 - faq:
     use_entities: ["product"]
 - feedback
+- get_started_intro
+- get_started_playground
 - get_started_step1
 - get_started_step2
 - get_started_step3
@@ -204,6 +206,8 @@ responses:
   utter_ask_playground_or_install:
   - text: To help you best, I'd like to ask you a few questions about what brings you here.
       Would you like to try out Rasa with our interactive Playground or are you trying to install Rasa?
+  utter_ask_playground_help:
+  - text: Do you have any questions or issues you're running into with Rasa Playground?
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Rasa?
   utter_ask_which_product:
@@ -409,12 +413,14 @@ responses:
       \ command. \n\n\"pip install rasa\""
   utter_interested_in_starter_packs:
   - text: Got it, are you interested in seeing any example Rasa Open Source assistants to help you get started?
-  utter_having_trouble_installing:
-  - text: If you are having any trouble installing, you can look up detailed installation
-      instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
+  utter_interested_in_installation:
+  - text: Would you like to learn more about installing Rasa?
   utter_installation_instructions:
   - text: If you haven't already read the detailed instruction guide, you can look
       it up [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
+  utter_having_trouble_installing:
+  - text: If you are having any trouble installing, you can look up detailed installation
+      instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
   utter_ask_ready_to_build:
   - text: If you got it successfully installed, are you ready to start building a contextual assistant?
   utter_link_to_forum:
@@ -456,10 +462,6 @@ responses:
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
-  utter_playground_info:
-  - text: "Rasa playground is a guided page where you can learn the basics of building an assistant in Rasa Open Source.
-      You'll be able to customize the assistant, talk to it, and download the project so you can continue to build.
-      You can access the playground by visiting this [page](https://rasa.com/docs/rasa/playground)."
   utter_possibilities:
   - text: "You can ask me about:\n- how to get started with Rasa\n- the components\
       \ of Rasa,\n- booking a sales call\n- subscribing to our newsletter\n"
