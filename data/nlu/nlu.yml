@@ -279,6 +279,14 @@ nlu:
     - why help out?
     - why offer my assistance?
     - why should I help?
+- intent: book_demo
+  examples: |
+    - I would like to have a demo scheduled
+    - Is there a live demo of rasa somewhere ?
+    - Can i have a deno
+    - bookin
+    - I want to see a demonstration of rasa enterprise
+    - How can I try out rasa enterprise
 - intent: contact_sales
   examples: |
     - But I wanted a sales call
@@ -310,7 +318,6 @@ nlu:
     - I would like to book a sales call
     - I would like to contact your sales team please
     - I would like to have a call with sales team
-    - I would like to have a demo scheduled
     - I would like to talk to someone from your sales team
     - i want to buy the enterprise edition
     - i would like rasa enterprise
@@ -437,9 +444,6 @@ nlu:
     - sign me up, my email is Elizabeth@yahoo.com
     - talk to sales team
     - we started working with rasa but now we need support
-    - Can i have a deno
-    - bookin
-    - Is there a live demo of rasa somewhere ?
 - intent: enter_data
   examples: |
     - $1

@@ -1,0 +1,6 @@
+version: "2.0"
+stories:
+- story: book demo CTA
+  steps:
+  - intent: book_demo
+  - action: utter_schedule_enterprise_demo

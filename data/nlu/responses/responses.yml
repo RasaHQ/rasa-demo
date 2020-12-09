@@ -28,7 +28,8 @@ responses:
     [here](https://www.youtube.com/watch?v=k5UeywXA28k)."
   utter_faq/ee:
   - text: "Rasa Enterprise is an enterprise-ready subscription to develop and ship contextual assistants
-    at scale, which comes features for increased security and privacy, as well as expert support."
+    at scale, which comes features for increased security and privacy, as well as expert support. If you'd like to schedule
+    a demo of Rasa Enterprise, you can do so by visiting this [page](https://info.rasa.com/rasa-technical-demo)."
   utter_faq/python_version:
   - text: "The supported Python versions are 3.6 and 3.7 🐍. The recommended version is 3.7."
   utter_faq/rasax:

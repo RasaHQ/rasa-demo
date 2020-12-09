@@ -468,7 +468,7 @@ stories:
   # - action: utter_installation_instructions
   # - action: utter_direct_to_forum_for_help
   # - action: utter_run_rasa_init
-  - action: utter_direct_to_step3
+  # - action: utter_direct_to_step3
 - story: technical_question - docs_found - deny
   steps:
   - intent: technical_question

@@ -9,6 +9,7 @@ intents:
 - ask_when_next_event
 - ask_which_events
 - ask_why_contribute
+- book_demo
 - bye
 - canthelp
 - chitchat:
@@ -540,6 +541,8 @@ responses:
   - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer)
       for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#a-longer-answer)
       also works for your language.
+  utter_schedule_enterprise_demo:
+  - text: You can schedule a technical demo of Rasa Enterprise by visiting this [page](https://info.rasa.com/rasa-technical-demo).
   utter_suggestion:
   - text: I don't have a skill to help you with this stage yet, but please ask any
       questions you have so I can learn them in the future!
