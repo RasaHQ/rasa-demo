@@ -22,7 +22,7 @@ rules:
   steps:
   - action: utter_ask_feedback
   - intent: deny
-  - action: utter_thumbsup
+  - action: utter_what_help
   - action: utter_anything_else
 - rule: feedback thank
   steps:

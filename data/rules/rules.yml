@@ -72,21 +72,21 @@ rules:
   - action: utter_why_rasa
   - action: utter_switch_dialogflow
   - action: utter_ask_more_migrate
-- rule: community events
-  steps:
-  - intent: ask_which_events
-  - action: action_get_community_events
-  wait_for_user_input: False
-- rule: how can I contribute
-  steps:
-  - intent: ask_how_contribute
-  - action: utter_possibilities_to_contribute
-  wait_for_user_input: False
-- rule: why contribute
-  steps:
-  - intent: ask_why_contribute
-  - action: utter_reasons_to_contribute
-  wait_for_user_input: False
+#- rule: community events
+#  steps:
+#  - intent: ask_which_events
+#  - action: action_get_community_events
+#  wait_for_user_input: False
+#- rule: how can I contribute
+#  steps:
+#  - intent: ask_how_contribute
+#  - action: utter_possibilities_to_contribute
+#  wait_for_user_input: False
+#- rule: why contribute
+#  steps:
+#  - intent: ask_why_contribute
+#  - action: utter_reasons_to_contribute
+#  wait_for_user_input: False
 - rule: Get help in the forum
   steps:
   - intent: ask_question_in_forum

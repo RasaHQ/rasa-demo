@@ -432,7 +432,7 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: deny
-  - action: utter_thumbsup
+  - action: utter_what_help
   - action: utter_anything_else
   - intent: affirm
   - action: utter_thumbsup
