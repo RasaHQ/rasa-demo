@@ -4,6 +4,18 @@ stories:
   steps:
   - intent: install_rasa
   - action: utter_ask_which_product
+
+- story: install rasa x
+  steps:
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+
 - story: install rasa open source
   steps:
   - intent: install_rasa
@@ -25,9 +37,59 @@ stories:
   - action: utter_ask_x_local_server
   - intent: enter_data
     entities:
-    - product: server
+    - install_type: server
   - slot_was_set:
-    - product: server
+    - install_type: server
+  - action: utter_rasa_x_server_installation
+
+- story: install rasa x locally
+  steps:
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+
+- story: Local Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+- story: Server Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: server
+  - slot_was_set:
+    - install_type: server
+  - action: utter_rasa_x_server_installation
+
+- story: Local Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: faq
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+- story: Server Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: faq
+    entities:
+    - install_type: server
+  - slot_was_set:
+    - install_type: server
   - action: utter_rasa_x_server_installation
 
 - story: install rasa x local
@@ -40,10 +102,11 @@ stories:
   - action: utter_ask_x_local_server
   - intent: enter_data
     entities:
-    - product: local
+    - install_type: local
   - slot_was_set:
-    - product: local
+    - install_type: local
   - action: utter_rasa_x_local_installation
+
 
 - story: Installation went well
   steps:

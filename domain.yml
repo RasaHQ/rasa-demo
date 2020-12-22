@@ -10,6 +10,7 @@ intents:
 - ask_which_events
 - ask_why_contribute
 - book_demo
+- broken
 - bye
 - canthelp
 - chitchat:
@@ -64,6 +65,7 @@ entities:
 - number
 - product
 - user_type
+- install_type
 slots:
   budget:
     type: any
@@ -121,6 +123,12 @@ slots:
     - x
     - rasa
     - all
+    - playground
+  install_type:
+    type: categorical
+    values:
+    - local
+    - server
   shown_privacy:
     type: any
   step:
@@ -204,9 +212,10 @@ responses:
   - text: What's your name?
   utter_ask_person_name:
   - text: What's your name?
-  utter_ask_playground_or_install:
+  utter_ask_intro:
   - text: To help you best, I'd like to ask you a few questions about what brings you here.
-      Would you like to try out Rasa with our interactive Playground or are you trying to install Rasa?
+  utter_ask_playground_or_install:
+  - text: Would you like to try out Rasa with our interactive Playground or are you trying to install Rasa?
   utter_ask_playground_help:
   - text: Do you have any questions or issues you're running into with Rasa Playground?
   utter_ask_use_case:

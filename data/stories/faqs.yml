@@ -54,6 +54,15 @@ stories:
     - product: all
   - action: utter_faq
   - action: action_set_faq_slot
+- story: faq playground
+  steps:
+  - intent: faq
+    entities:
+    - product: playground
+  - slot_was_set:
+    - product: playground
+  - action: utter_faq
+  - action: action_set_faq_slot
 - story: more faqs
   steps:
   - intent: greet

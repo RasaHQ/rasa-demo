@@ -1,0 +1,14 @@
+version: "2.0"
+stories:
+- story: Something is broken
+  steps:
+  - intent: broken
+  - action: utter_ask_describe_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - slot_was_set:
+    - problem_description: I don't know how to customize the pipeline
+  - action: utter_direct_to_forum_for_help

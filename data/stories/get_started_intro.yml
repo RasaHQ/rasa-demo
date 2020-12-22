@@ -5,6 +5,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: affirm
   - action: utter_what_help
@@ -13,6 +14,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: faq
     entities:
@@ -20,11 +22,13 @@ stories:
   - slot_was_set:
     - product: playground
   - action: utter_faq
+  - action: action_set_faq_slot
 
 - story: Getting started with Rasa Open Source installation
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -41,6 +45,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -57,6 +62,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -68,9 +74,9 @@ stories:
   - action: utter_ask_x_local_server
   - intent: enter_data
     entities:
-    - product: local
+    - install_type: local
   - slot_was_set:
-    - product: local
+    - install_type: local
   - action: utter_rasa_x_local_installation
 
 
@@ -78,6 +84,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -89,9 +96,9 @@ stories:
   - action: utter_ask_x_local_server
   - intent: enter_data
     entities:
-    - product: local
+    - install_type: local
   - slot_was_set:
-    - product: local
+    - install_type: local
   - action: utter_rasa_x_local_installation
 
 
@@ -99,6 +106,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -110,15 +118,16 @@ stories:
   - action: utter_ask_x_local_server
   - intent: enter_data
     entities:
-    - product: server
+    - install_type: server
   - slot_was_set:
-    - product: server
+    - install_type: server
   - action: utter_rasa_x_server_installation
 
 - story: Getting started with Starter Packs
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: deny
   - action: utter_interested_in_starter_packs
@@ -130,6 +139,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
+  - action: utter_ask_intro
   - action: utter_ask_playground_or_install
   - intent: deny
   - action: utter_interested_in_starter_packs
@@ -137,5 +147,26 @@ stories:
   - action: utter_what_help
 
 
+- story: Getting started with Rasa playground
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_intro
+  - action: utter_ask_playground_or_install
+  - intent: faq
+    entities:
+    - product: playground
+  - slot_was_set:
+    - product: playground
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
 
 

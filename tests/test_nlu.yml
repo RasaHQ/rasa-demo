@@ -511,6 +511,8 @@ nlu:
     - I need assistance in getting Rasa Stack.
     - I want to use Rasa Stack
     - Help me get Rasa Core.
+    - How do I install Rasa X
+    - install Rasa X
 - intent: next_step
   examples: |
     - Next step please

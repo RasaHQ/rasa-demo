@@ -35,7 +35,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa at start
   steps:
   - intent: how_to_get_started
@@ -85,7 +84,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: how_to_get_started
@@ -116,7 +114,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + migrating from dialogflow
   steps:
   - intent: how_to_get_started
@@ -315,7 +312,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core
   steps:
   - intent: how_to_get_started
@@ -341,7 +337,7 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain core
   steps:
   - intent: how_to_get_started
@@ -395,7 +391,6 @@ stories:
   - intent: affirm
   - action: utter_explain_nlu
   - action: utter_explain_core
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain x, then nlu+core
   steps:
   - intent: how_to_get_started
@@ -447,7 +442,7 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain nlu
   steps:
   - intent: how_to_get_started
@@ -473,7 +468,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_also_explain_core
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain nlu then core
   steps:
   - intent: how_to_get_started
@@ -500,7 +495,6 @@ stories:
   - action: utter_also_explain_core
   - intent: affirm
   - action: utter_explain_core
-  - action: utter_direct_to_step2
 - story: not new to rasa/bots, explain all
   steps:
   - intent: how_to_get_started
@@ -515,7 +509,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: not new to rasa/bots, explain all
   steps:
   - intent: how_to_get_started
@@ -554,7 +547,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain all
   steps:
   - intent: how_to_get_started
@@ -599,7 +591,7 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: not new to rasa + not interested in products
   steps:
   - intent: how_to_get_started
@@ -795,7 +787,12 @@ stories:
   - intent: affirm
   - action: utter_explain_nlu
   - action: utter_explain_core
-  - action: utter_direct_to_step2
+- story: explain NLU & Core
+  steps:
+  - action: utter_also_explain_nlucore
+  - intent: affirm
+  - action: utter_explain_nlu
+  - action: utter_explain_core
 - story: new to rasa + rasa oss
   steps:
   - intent: how_to_get_started

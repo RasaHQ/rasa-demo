@@ -1,5 +1,13 @@
 version: "2.0"
 nlu:
+- intent: broken
+  examples: |
+    - it's not working
+    - I think it's broken
+    - [Rasa playgrounds](product) isn't working for me
+    - [Playground](product) is broken
+    - [rasa](product) is not working
+    - help me can you fix it
 - intent: why_rasa
   examples: |
     - why should i use rasa instead of google [dialogflow](current_api)
@@ -1172,10 +1180,14 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
-    - [local](product)
-    - [server](product)
-    - I'm interested in [local](product) installation
-    - I'm interested in [server](product) installation
+    - [local](install_type)
+    - [locally](install_type)
+    - [server](install_type)
+    - I'm interested in [local](install_type) installation
+    - I'm interested in [server](install_type) installation
+    - [my computer](install_type)
+    - [my machine](install_type)
+    - [my laptop](install_type)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1586,6 +1598,11 @@ nlu:
     - i want to talk to a real person
 - intent: install_rasa
   examples: |
+    - Hoe do I install [Rasa X](product)
+    - install [Rasa X](product)
+    - I want to install [Rasa X](product)
+    - How to install [rasa X](product)?
+    - Help me install [rasa x](product)
     - Can you get me Rasa [Core](product)?
     - Can you help me to install Rasa?
     - Do you mind helping me install Rasa?
@@ -2021,6 +2038,7 @@ nlu:
     - how do i migrate from [dialogflow](current_api)
 - intent: technical_question
   examples: |
+    - what is helm
     - how to restart the rasa server
     - i don't want to run rasa, i want to restart it
     - action_restart in rasa
@@ -2387,6 +2405,12 @@ nlu:
     - playgrounds
     - Playground
     - rasaplaygrounds
+- synonym: local
+  examples: |
+    - locally
+    - my computer
+    - my machine
+    - my laptop
 - regex: greet
   examples: |
     - hey[^\s]*
