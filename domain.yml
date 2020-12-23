@@ -576,33 +576,6 @@ responses:
       your back! You can deploy Rasa either in the cloud or on premise and
       maintain complete control over your assistant & its data.
 
-actions:
-- action_default_ask_affirmation
-- action_default_fallback
-- action_docs_search
-- action_explain_sales_form
-- action_set_faq_slot
-- action_explain_faq
-- action_forum_search
-- action_get_community_events
-- action_greet_user
-- action_next_step
-- action_pause
-- action_set_onboarding
-- action_store_bot_language
-- action_store_entity_extractor
-- action_store_problem_description
-- action_store_unknown_nlu_part
-- action_store_unknown_product
-- action_tag_docs_search
-- action_tag_feedback
-- action_submit_subscribe_newsletter_form
-- action_submit_sales_form
-- action_submit_suggestion_form
-- validate_subscribe_newsletter_form
-- validate_sales_form
-
-
 forms:
   suggestion_form:
     suggestion:
