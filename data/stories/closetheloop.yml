@@ -380,7 +380,7 @@ stories:
     - product: core
   - slot_was_set:
     - product: core
-  - action: utter_direct_to_step2
+  - action: utter_explain_core
 - story: Story from conversation with 7830abb04e1c49809d89b0d420443928 on November 19th 2018
   steps:
   - intent: greet
@@ -606,7 +606,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -688,7 +687,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
   - intent: enter_data
   - action: utter_not_sure
   - action: utter_possibilities
@@ -724,7 +722,6 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-  - action: utter_direct_to_step2
 - story: Story from conversation with 602ddccbe2de4f46822e06e2781cf02d on January 8th 2019
   steps:
   - intent: get_started_step1
@@ -770,7 +767,7 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: Story from conversation with 4b7ecc2cab6e42c5b1fedb8ab4056866 on December 29th 2018
   steps:
   - intent: get_started_step1
@@ -919,7 +916,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: Story from conversation with ced8c1eb9a8d485f88a02d931b2879bd on January 16th 2019
   steps:
   - intent: get_started_step4
@@ -952,4 +948,3 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2

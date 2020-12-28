@@ -53,7 +53,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -84,7 +83,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -115,7 +113,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -174,7 +171,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -205,7 +201,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -233,10 +228,8 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain NLU and try it out
   steps:
   - intent: greet
@@ -263,7 +256,6 @@ stories:
   - action: utter_also_explain_core
   - intent: affirm
   - action: utter_explain_core
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain rasa x only
   steps:
   - intent: greet
@@ -308,7 +300,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain stack and try it out
   steps:
   - intent: greet
@@ -334,10 +325,8 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core and try out stack
   steps:
   - intent: greet
@@ -363,7 +352,7 @@ stories:
   - action: utter_chitchat
   - action: utter_also_explain_nlu
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain core and try out stack
   steps:
   - intent: greet
@@ -386,10 +375,9 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core, then nlu and try out stack
   steps:
   - intent: greet
@@ -416,7 +404,6 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core, then nlu and try out stack
   steps:
   - intent: greet
@@ -440,10 +427,8 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-  - action: utter_direct_to_step2
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain nlu and try out stack
   steps:
   - intent: greet
@@ -469,7 +454,7 @@ stories:
   - action: utter_chitchat
   - action: utter_also_explain_core
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain nlu and try out stack
   steps:
   - intent: greet
@@ -492,10 +477,9 @@ stories:
   - action: utter_explain_nlu
   - action: utter_also_explain_core
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, don't explain and try out stack
   steps:
   - intent: greet
@@ -516,7 +500,7 @@ stories:
   - action: utter_chitchat
   - action: utter_ask_explain_nlucorex
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, don't explain and try out stack
   steps:
   - intent: greet
@@ -534,10 +518,9 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: not new to rasa + not interested in products
   steps:
   - intent: greet
@@ -636,7 +619,6 @@ stories:
     - intent: explain
   - action: utter_explain_nlu
   - action: utter_explain_core
-  - action: utter_direct_to_step2
 - story: not new to rasa + rasa x + nothing special
   steps:
   - intent: greet
@@ -660,7 +642,7 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa + rasa x + nothing special
   steps:
   - intent: greet
@@ -688,10 +670,9 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: chitchat
   - action: utter_chitchat
-  - action: utter_direct_to_step2
 - story: not new to rasa + nlu + unknown topic
   steps:
   - intent: greet
@@ -950,7 +931,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: chitchat interrupting step 2 flow
   steps:
   - intent: get_started_step2

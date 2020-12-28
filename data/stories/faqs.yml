@@ -422,62 +422,6 @@ stories:
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
-# - story: FAQ - Step 2 flow interrupted
-#   steps:
-#   - intent: get_started_step2
-#   - action: action_greet_user
-#   - slot_was_set:
-#     - step: '2'
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-# - story: FAQ - Step 2 flow interrupted
-#   steps:
-#   - intent: install_rasa
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: utter_ask_ready_to_build
-# - story: FAQ - Step 2 flow interrupted
-#   steps:
-#   - intent: install_rasa
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: utter_ask_ready_to_build
-#   - intent: affirm
-#   - action: utter_run_rasa_init
-#   - action: utter_direct_to_step3
-# - story: FAQ - Step 2 flow interrupted
-  # steps:
-  # - intent: install_rasa
-  # - action: utter_installation_command
-  # - action: utter_having_trouble_installing
-  # - action: utter_ask_ready_to_build
-  # - intent: faq
-  # - action: utter_faq
-  # - action: action_set_faq_slot
-  # - action: utter_ask_ready_to_build
-  # - intent: deny
-  # - action: utter_ask_if_problem
-  # - or:
-  #   - intent: technical_question
-  #   - intent: enter_data
-  #   - intent: out_of_scope
-  # - action: action_store_problem_description
-  # - action: utter_installation_instructions
-  # - action: utter_direct_to_forum_for_help
-  # - action: utter_run_rasa_init
-  # - action: utter_direct_to_step3
 - story: technical_question - docs_found - deny
   steps:
   - intent: technical_question
@@ -505,64 +449,6 @@ stories:
   - slot_was_set:
     - docs_found: false
   - action: action_forum_search
-# - story: FAQ - Step 2 flow interrupted
-#   steps:
-#   - intent: install_rasa
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-#   - intent: deny
-#   - action: utter_ask_if_problem
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: action_store_problem_description
-#   - action: utter_installation_instructions
-#   - action: utter_direct_to_forum_for_help
-#   - action: utter_run_rasa_init
-#   - action: utter_direct_to_step3
-# - story: FAQ - Step 2 flow interrupted
-#   steps:
-#   - intent: install_rasa
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-#   - intent: deny
-#   - action: utter_ask_if_problem
-#   - intent: affirm
-#   - action: utter_ask_describe_problem
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: action_store_problem_description
-#   - action: utter_installation_instructions
-#   - action: utter_direct_to_forum_for_help
-#   - action: utter_run_rasa_init
-#   - action: utter_direct_to_step3
-# - story: FAQ - Step 2 flow interrupted
-#   steps:
-#   - intent: get_started_step2
-#   - action: action_greet_user
-#   - slot_was_set:
-#     - step: '2'
-#   - intent: affirm
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: utter_ask_ready_to_build
-# - story: Just don't want to continue
-#   steps:
-#   - intent: install_rasa
-#   - action: utter_installation_command
-#   - action: utter_having_trouble_installing
-#   - action: utter_ask_ready_to_build
-#   - intent: faq
-#   - action: utter_faq
-#   - action: action_set_faq_slot
-#   - action: utter_ask_ready_to_build
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -593,7 +479,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -681,7 +566,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -713,7 +597,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -745,7 +628,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -777,7 +659,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa + not new to chatbots + not migrating
   steps:
   - intent: greet
@@ -805,11 +686,9 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain stack and try it out
   steps:
   - intent: greet
@@ -839,7 +718,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain stack and try it out
   steps:
   - intent: greet
@@ -869,7 +747,6 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain x and try it out
   steps:
   - intent: greet
@@ -896,11 +773,10 @@ stories:
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core and direct to step2
   steps:
   - intent: greet
@@ -927,7 +803,7 @@ stories:
   - action: action_set_faq_slot
   - action: utter_also_explain_nlu
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain core and direct to step2
   steps:
   - intent: greet
@@ -950,11 +826,10 @@ stories:
   - action: utter_explain_core
   - action: utter_also_explain_nlu
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain core, then nlu and direct to step2
   steps:
   - intent: greet
@@ -982,7 +857,6 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain x, then direct to step2
   steps:
   - intent: greet
@@ -1032,11 +906,9 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-  - action: utter_direct_to_step2
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, explain nlu and direct to step2
   steps:
   - intent: greet
@@ -1063,7 +935,7 @@ stories:
   - action: action_set_faq_slot
   - action: utter_also_explain_core
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain x and direct to step2
   steps:
   - intent: greet
@@ -1091,7 +963,7 @@ stories:
   - action: utter_faq
   - action: action_set_faq_slot
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, explain nlu and direct to step2
   steps:
   - intent: greet
@@ -1114,11 +986,10 @@ stories:
   - action: utter_explain_nlu
   - action: utter_also_explain_core
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-  - action: utter_direct_to_step2
 - story: new to rasa/bots, don't explain and direct to step2
   steps:
   - intent: greet
@@ -1140,7 +1011,7 @@ stories:
   - action: action_set_faq_slot
   - action: utter_ask_explain_nlucorex
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
 - story: new to rasa/bots, don't explain and direct to step2
   steps:
   - intent: greet
@@ -1158,11 +1029,10 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - intent: deny
-  - action: utter_direct_to_step2
+  - action: utter_anything_else
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-  - action: utter_direct_to_step2
 - story: not new to rasa + not interested in products
   steps:
   - intent: greet
