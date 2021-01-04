@@ -73,7 +73,8 @@ jobs:
     needs: [lint-testing, type-testing, training-testing]
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout git repository 🕝
+      uses: actions/checkout@v1
     - id: files
       uses: jitterbit/get-changed-files@v1
     - name: set_actions
@@ -81,24 +82,18 @@ jobs:
         contains(  steps.files.outputs.all, 'actions/' )
         || contains(  steps.files.outputs.all, 'Dockerfile' )
       run: echo "ACTIONS_CHANGED=true" >> $GITHUB_ENV
-    - name: Authenticate into Google Cloud Platform
+    - name: Build Actions Server Image
       if: env.ACTIONS_CHANGED == 'true'
-      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      uses: RasaHQ/rasa-action-server-gha@master
       with:
-        version: '275.0.0'
-        service_account_key: ${{ secrets.GCLOUD_AUTH }}
-    - name: Configure Docker to use Google Cloud Platform
-      if: env.ACTIONS_CHANGED == 'true'
-      run: |
-        gcloud auth configure-docker
-    - name: Pull Latest Image
-      if: env.ACTIONS_CHANGED == 'true'
-      run: |
-        docker pull gcr.io/replicated-test/rasa-demo:latest || true
-    - name: Build Image
-      if: env.ACTIONS_CHANGED == 'true'
-      run: |
-        docker build --cache-from gcr.io/replicated-test/rasa-demo:latest .
+        actions_directory: 'actions'
+        requirements_file: 'actions/requirements-actions.txt'
+        docker_registry: 'gcr.io'
+        docker_registry_login: '_token'
+        docker_registry_password: ${{ secrets.GCLOUD_AUTH }}
+        docker_image_name: 'replicated-test/rasa-demo'
+        docker_image_tag: 'latest'
+        rasa_sdk_version: '2.1.2'
 
   mergepal-merge: # run merge pal in the end
     runs-on: ubuntu-latest

@@ -10,8 +10,6 @@ jobs:
   docker:
     name: Build Action Server Docker Image
     runs-on: ubuntu-latest
-    env:
-      DOCKERHUB_USERNAME: oakela
     steps:
       - name: Checkout git repository 🕝
         uses: actions/checkout@v2
@@ -20,8 +18,9 @@ jobs:
         with:
           actions_directory: 'actions'
           requirements_file: 'actions/requirements-actions.txt'
-          docker_registry_login: ${{ env.DOCKERHUB_USERNAME }}
-          docker_registry_password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          docker_registry: 'gcr.io'
+          docker_registry_login: '_token'
+          docker_registry_password: ${{ secrets.GCLOUD_AUTH }}
           docker_image_name: 'replicated-test/rasa-demo'
           docker_image_tag: 'latest'
           rasa_sdk_version: '2.1.2'
