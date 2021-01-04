@@ -28,6 +28,7 @@ logger = logging.getLogger(__name__)
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 print("TEST CHANGE")
 
+
 class ActionSubmitSubscribeNewsletterForm(Action):
     def name(self) -> Text:
         return "action_submit_subscribe_newsletter_form"
