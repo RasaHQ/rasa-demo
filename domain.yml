@@ -215,7 +215,7 @@ responses:
   utter_ask_intro:
   - text: To help you best, I'd like to ask you a few questions about what brings you here.
   utter_ask_playground_or_install:
-  - text: Would you like to try out Rasa with our interactive Playground or are you trying to install Rasa?
+  - text: Would you like to try out Rasa in the online Rasa Playground or do you want to install Rasa on your own computer?
   utter_ask_playground_help:
   - text: Do you have any questions or issues you're running into with Rasa Playground?
   utter_ask_use_case:
@@ -679,4 +679,3 @@ forms:
         entity: email
       - type: from_text
         intent: enter_data
-
