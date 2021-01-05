@@ -88,7 +88,7 @@ jobs:
         actions_directory: 'actions'
         requirements_file: 'actions/requirements-actions.txt'
         docker_registry: 'gcr.io'
-        docker_registry_login: 'oauth2accesstoken'
+        docker_registry_login: '_json_key'
         docker_registry_password: ${{ secrets.GCLOUD_AUTH }}
         docker_image_name: 'replicated-test/rasa-demo'
         docker_image_tag: 'latest'
