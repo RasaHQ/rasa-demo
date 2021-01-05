@@ -37,37 +37,36 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
-  # training-testing:
-  #   name: Training and Testing
-  #   runs-on: ubuntu-latest
-  #   needs: [lint-testing, type-testing]
-  #   steps:
-  #     - uses: actions/checkout@v1
-  #     - id: files
-  #       uses: jitterbit/get-changed-files@v1
-  #     - name: set_training
-  #       if: |
-  #           contains(  steps.files.outputs.all, 'data/' )
-  #           || contains(  steps.files.outputs.all, 'config.yml' )
-  #           || contains(  steps.files.outputs.all, 'domain.yml' )
-  #       run: echo "RUN_TRAINING=true" >> $GITHUB_ENV
-  #     - name: Rasa Train and Test GitHub Action
-  #       if: env.RUN_TRAINING == 'true'
-  #       uses: RasaHQ/rasa-train-test-gha@main
-  #       with:
-  #         rasa_version: '2.1.3-spacy-en'
-  #         test_type: all
-  #         data_validate: true
-  #         cross_validation: true
-  #         publish_summary: true
-  #         github_token: ${{ secrets.GITHUB_TOKEN }}
-  #     - name: Upload model
-  #       if: github.ref == 'refs/heads/master'
-  #       uses: actions/upload-artifact@master
-  #       with:
-  #         name: model
-  #         path: models
-
+  training-testing:
+    name: Training and Testing
+    runs-on: ubuntu-latest
+    needs: [lint-testing, type-testing]
+    steps:
+      - uses: actions/checkout@v1
+      - id: files
+        uses: jitterbit/get-changed-files@v1
+      - name: set_training
+        if: |
+            contains(  steps.files.outputs.all, 'data/' )
+            || contains(  steps.files.outputs.all, 'config.yml' )
+            || contains(  steps.files.outputs.all, 'domain.yml' )
+        run: echo "RUN_TRAINING=true" >> $GITHUB_ENV
+      - name: Rasa Train and Test GitHub Action
+        if: env.RUN_TRAINING == 'true'
+        uses: RasaHQ/rasa-train-test-gha@main
+        with:
+          rasa_version: '2.1.3-spacy-en'
+          test_type: all
+          data_validate: true
+          cross_validation: true
+          publish_summary: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload model
+        if: github.ref == 'refs/heads/master'
+        uses: actions/upload-artifact@master
+        with:
+          name: model
+          path: models
   build-images:
     name: Build and Push Images
     needs: [lint-testing, type-testing]
