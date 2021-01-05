@@ -27,3 +27,9 @@ lint:
 
 types:
 	pytype --keep-going actions
+
+install:
+	pip install -r requirements.txt
+	pip install -e .
+	python -m spacy download en_core_web_md
+	python -m spacy link en_core_web_md en
