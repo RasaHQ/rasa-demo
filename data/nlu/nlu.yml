@@ -2405,6 +2405,8 @@ nlu:
     - playgrounds
     - Playground
     - rasaplaygrounds
+    - interactive playground
+    - Interactive Playground
 - synonym: local
   examples: |
     - locally
