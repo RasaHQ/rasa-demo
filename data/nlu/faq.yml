@@ -19,6 +19,8 @@ nlu:
     - Can you tell me about [rasa playground](product)?
     - I want information about [rasa playground](product)
     - [Rasa Playground](product)
+    - [interactive playground](product)
+    - [rasa playground](product)
     - Tell me about [rasa playgrounds](product)
     - can someone help me with infos about [rasa playground](product)
     - i want to learn more about [Rasa playground](product)
