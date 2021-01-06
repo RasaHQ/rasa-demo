@@ -8,19 +8,35 @@ on:
 
 jobs:
   docker:
-    name: Build Action Server Docker Image
+    name: Build and Push Images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout git repository 🕝
-        uses: actions/checkout@v2
-      - name: Build Actions Server Image
-        uses: RasaHQ/rasa-action-server-gha@master
-        with:
-          actions_directory: 'actions'
-          requirements_file: 'actions/requirements-actions.txt'
-          docker_registry: 'gcr.io'
-          docker_registry_login: '_json_key'
-          docker_registry_password: ${{ secrets.GCLOUD_AUTH }}
-          docker_image_name: 'replicated-test/rasa-demo'
-          docker_image_tag: 'latest'
-          rasa_sdk_version: '2.1.2'
+    - name: Checkout git repository 🕝
+      uses: actions/checkout@v1
+    - id: files
+      uses: jitterbit/get-changed-files@v1
+    - name: set_actions
+      if: |
+        contains(  steps.files.outputs.all, 'actions/' )
+        || contains(  steps.files.outputs.all, 'Dockerfile' )
+      run: echo "ACTIONS_CHANGED=true" >> $GITHUB_ENV
+    - name: Authenticate into Google Cloud Platform
+      if: env.ACTIONS_CHANGED == 'true'
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '275.0.0'
+        service_account_key: ${{ secrets.GCLOUD_AUTH }}
+    - name: Configure Docker to use Google Cloud Platform
+      if: env.ACTIONS_CHANGED == 'true'
+      run: |
+        gcloud auth configure-docker
+    - name: Build Actions Server Image
+      if: env.ACTIONS_CHANGED == 'true'
+      uses: RasaHQ/rasa-action-server-gha@master
+      with:
+        actions_directory: 'actions'
+        requirements_file: 'actions/requirements-actions.txt'
+        docker_registry: 'gcr.io'
+        docker_image_name: 'replicated-test/rasa-demo'
+        docker_image_tag: 'latest'
+        rasa_sdk_version: '2.1.2'
