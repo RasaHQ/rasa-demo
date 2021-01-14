@@ -8,6 +8,55 @@ stories:
     - intent: technical_question
     - intent: enter_data
     - intent: out_of_scope
+    - intent: broken
+  - action: action_store_problem_description
+  - slot_was_set:
+    - problem_description: I don't know how to customize the pipeline
+  - action: utter_direct_to_forum_for_help
+
+- story: Rasa Playground is broken
+  steps:
+  - intent: broken
+    entities:
+    - product: playground
+  - action: utter_ask_describe_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+    - intent: broken
+  - action: action_store_problem_description
+  - slot_was_set:
+    - problem_description: I don't know how to customize the pipeline
+  - action: utter_direct_to_forum_for_help
+
+- story: Rasa X is not working for user
+  steps:
+  - intent: broken
+    entities:
+    - product: x
+  - action: utter_ask_describe_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+    - intent: broken
+  - action: action_store_problem_description
+  - slot_was_set:
+    - problem_description: I don't know how to customize the pipeline
+  - action: utter_direct_to_forum_for_help
+
+- story: Rasa Open Source is not working for user
+  steps:
+  - intent: broken
+    entities:
+    - product: rasa
+  - action: utter_ask_describe_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+    - intent: broken
   - action: action_store_problem_description
   - slot_was_set:
     - problem_description: I don't know how to customize the pipeline

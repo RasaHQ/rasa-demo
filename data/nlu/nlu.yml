@@ -8,6 +8,13 @@ nlu:
     - [Playground](product) is broken
     - [rasa](product) is not working
     - help me can you fix it
+    - it's broken
+    - it's not training
+    - the [playground](product) is not training
+    - [Rasa X](product) isn't working for me
+    - [Rasa Open Source](product) is not training at all
+    - For some reason, [Rasa X](product) never loads and I don't know why
+    - help me please it's not working
 - intent: why_rasa
   examples: |
     - why should i use rasa instead of google [dialogflow](current_api)
