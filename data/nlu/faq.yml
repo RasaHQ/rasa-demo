@@ -29,6 +29,12 @@ nlu:
     - what is [rasaplayground](product)
     - what's [rasa playground](product)
     - tell me about [rasa playground](product)
+    - i want to try it online
+    - try out the [playground](product)
+    - see [playground](product)
+    - try [rasa playground]{"entity": "product", "value": "playground"}
+    - try rasa online
+    - try out online
 - intent: faq/rasax
   examples: |
     - what is [Rasa X](product) ?
@@ -515,8 +521,6 @@ nlu:
     - how do i get the [open source](product) rasa
     - is [rasa open source](product)?
     - is [rasa open source](product)
-    - is [rasa open source](product)?
-    - is [rasa open source](product)?
     - is it [open source](product)
     - is it [open source](product)?
     - is [rasa](product) Open-Source?
@@ -525,7 +529,6 @@ nlu:
     - is [rasa](product) considered [open source](product) software?
     - is [rasa](product) is open source?
     - is [rasa](product) like an open source software
-    - is [rasa open source](product)?
     - is [rasa](product) software that is classified as open source?
     - is the [Rasa](product) project open sourced?
     - is the project open source?

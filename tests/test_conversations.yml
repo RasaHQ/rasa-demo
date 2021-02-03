@@ -375,3 +375,40 @@ stories:
     intent: nlu_fallback
   - action: action_two_stage_fallback
   - active_loop: action_two_stage_fallback
+
+- story: Story from Conversation ID fa460b54c9fb4a0096b1fbf00ccfc054
+  steps:
+  - intent: get_started_intro
+    user: |-
+      /get_started_intro
+  - action: utter_greet
+  - action: utter_ask_intro
+  - action: utter_ask_playground_or_install
+  - intent: install_rasa
+    user: |-
+      install rasa
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    user: |-
+      [rasa open source]{"entity": "product", "value": "rasa"}
+  - slot_was_set:
+    - product: rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_run_rasa_init
+  - intent: install_rasa
+    user: |-
+      install [rasa x]{"entity": "product", "value": "x"}
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    user: |-
+      [local machine]{"entity": "product", "value": "local"}
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation

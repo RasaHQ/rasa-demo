@@ -15,6 +15,8 @@ nlu:
     - [Rasa Open Source](product) is not training at all
     - For some reason, [Rasa X](product) never loads and I don't know why
     - help me please it's not working
+    - it won't train
+    - the bot won't train
 - intent: why_rasa
   examples: |
     - why should i use rasa instead of google [dialogflow](current_api)
@@ -161,7 +163,6 @@ nlu:
     - i need information from posters in the forum
     - ok send me to the forum
     - to the forum
-    - need help on chatbot
 - intent: ask_which_events
   examples: |
     - Any other event like rasa meetup in future?
@@ -1195,6 +1196,7 @@ nlu:
     - [my computer](install_type)
     - [my machine](install_type)
     - [my laptop](install_type)
+    - [local machine](install_type)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -2426,9 +2428,3 @@ nlu:
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt
