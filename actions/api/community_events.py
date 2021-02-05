@@ -2,6 +2,10 @@ import ssl
 from datetime import datetime
 from typing import Dict, List, Optional, Text
 import logging
+import requests
+from bs4 import BeautifulSoup
+import datetime
+from geopy.geocoders import Nominatim
 
 logger = logging.getLogger(__name__)
 
@@ -68,11 +72,8 @@ def parse_community_date(date_string: Text) -> datetime:
 
 def get_community_events() -> List[CommunityEvent]:
     """Returns list of community events sorted ascending by their date."""
-    from bs4 import BeautifulSoup
-    import requests as r
-    import datetime
 
-    response = r.get("https://rasa.com/community/join/")
+    response = requests.get("https://rasa.com/community/join/")
 
     if response.status_code == 200:
         community_page = response.content
@@ -80,7 +81,6 @@ def get_community_events() -> List[CommunityEvent]:
         soup = BeautifulSoup(community_page, "html.parser")
 
         events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
-        # [1].find("ul").find_all("li")
         events = [CommunityEvent.from_html(e) for e in events]
 
         now = datetime.date.today()
@@ -91,8 +91,6 @@ def get_community_events() -> List[CommunityEvent]:
 
 
 def get_country_for(city: Text) -> Optional[Text]:
-    from geopy.geocoders import Nominatim
-
     ssl_context = ssl.create_default_context()
     ssl_context.check_hostname = False
     ssl_context.verify_mode = ssl.CERT_NONE
