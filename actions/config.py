@@ -12,7 +12,7 @@ algolia_search_key = os.environ.get("ALGOLIA_SEARCH_KEY", "")
 
 algolia_docs_index = os.environ.get("ALGOLIA_DOCS_INDEX", "")
 
-rasa_x_host = os.environ.get("RASA_X_HOST", "rasa-x:5002")
+rasa_x_host = os.environ.get("RASA_X_HOST", "localhost:5002")
 
 rasa_x_username = os.environ.get("RASA_X_USERNAME", "me")
 
