@@ -174,6 +174,18 @@ jobs:
           echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
           echo ${MODEL_PATH}
 
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
+      name: Authenticate with gcloud 🎫
+      # if: env.RUN_TRAINING == 'true'
+      with:
+        version: "${{ env.GCLOUD_VERSION }}"
+        service_account_email: ${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+        service_account_key: ${{ env.SARA_GKE_SERVICE_ACCOUNT_KEY }}
+    - name: Upload model to storage bucket
+      # if: env.RUN_TRAINING == 'true'
+      run: |
+          gsutil cp "${MODEL_PATH}" ${STORAGE_BUCKET_URL}/rasa_demo_models
+
     - name: Upload model to Rasa X
       # if: env.RUN_TRAINING == 'true'
       env:
@@ -193,14 +205,3 @@ jobs:
               --url ${RASA_X_DOMAIN}/api/projects/default/models \
               --header "Authorization: Bearer ${auth_token}"
 
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
-      name: Authenticate with gcloud 🎫
-      # if: env.RUN_TRAINING == 'true'
-      with:
-        version: "${{ env.GCLOUD_VERSION }}"
-        service_account_email: ${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}
-        service_account_key: ${{ env.SARA_GKE_SERVICE_ACCOUNT_KEY }}
-    - name: Upload model to storage bucket
-      # if: env.RUN_TRAINING == 'true'
-      run: |
-          gsutil cp "${MODEL_PATH}" ${STORAGE_BUCKET_URL}/rasa_demo_models
