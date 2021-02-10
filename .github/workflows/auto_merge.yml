@@ -149,22 +149,22 @@ jobs:
       #     || contains(  steps.files.outputs.all, 'domain.yml' )
       run: echo "RUN_TRAINING=true" >> $GITHUB_ENV
     - name: Set up Python 3.7
-      # if: env.RUN_TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
     - name: Install dependencies
-      # if: env.RUN_TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
     - name: Train Model
-      # if: env.RUN_TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       working-directory: ${{ github.workspace }}
       run: |
           rasa train
     - name: Set model name from Rasa version
-      # if: env.RUN_TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       run: |
           rasa_version=$(python -c "import rasa; print(rasa.__version__)")
           model_path=`ls models/*.tar.gz | head -n 1`
@@ -175,32 +175,20 @@ jobs:
           echo ${MODEL_PATH}
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
+      if: env.DEPLOY == 'true'
       name: Authenticate with gcloud 🎫
-      # if: env.RUN_TRAINING == 'true'
-      with:
-        version: "${{ env.GCLOUD_VERSION }}"
-        service_account_email: "${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}"
-        service_account_key: "${{ env.SARA_GKE_SERVICE_ACCOUNT_KEY }}"
-
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
-      name: Authenticate with gcloud 🎫
-      # if: env.RUN_TRAINING == 'true'
       with:
         version: "${{ env.GCLOUD_VERSION }}"
         service_account_email: ${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}
-        service_account_key: ${{ env.SARA_GKE_SERVICE_ACCOUNT_KEY }}
-    - name: Upload model to storage bucket
-      # if: env.RUN_TRAINING == 'true'
-      run: |
-          gsutil cp "${MODEL_PATH}" ${STORAGE_BUCKET_URL}/rasa_demo_models
+        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
 
     - name: Upload model to storage bucket
-      # if: env.RUN_TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       run: |
           gsutil cp "${MODEL_PATH}" ${STORAGE_BUCKET_URL}/rasa_demo_models
 
     - name: Upload model to Rasa X
-      # if: env.RUN_TRAINING == 'true'
+      if: env.RUN_TRAINING == 'true'
       working-directory: ${{ github.workspace }}
       run: |
            auth_token=$(curl --request POST \
