@@ -70,11 +70,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout git repository 🕝
-      if: github.event_name == 'pull_request'
       uses: actions/checkout@v2
 
     - name: Install Helm and helmfile ⛑
-      if: github.event_name == 'pull_request'
       run: |
         curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
         chmod 700 get_helm.sh
@@ -84,7 +82,6 @@ jobs:
         sudo chmod +x /usr/local/bin/helmfile
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
-      if: github.event_name == 'pull_request'
       name: Authenticate with gcloud 🎫
       with:
         version: "${{ env.GCLOUD_VERSION }}"
@@ -92,26 +89,22 @@ jobs:
         service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
 
     - name: Authenticate docker and configure cluster credentials 🎫
-      if: github.event_name == 'pull_request'
       run: |
         # Set up docker to authenticate via gcloud command-line tool.
         gcloud  --quiet auth configure-docker
         gcloud container clusters get-credentials "$GCLOUD_CLUSTER_NAME" --project ${GCLOUD_PROJECT_ID} --zone "$GCLOUD_ZONE_ID"
 
     - name: Prepare namespace
-      if: github.event_name == 'pull_request'
       run: |
         kubectl config set-context --current --namespace="${NAMESPACE}"
 
     - name: Deploy Rasa X chart ☸️
-      if: github.event_name == 'pull_request'
       run: |
         cd ${{ github.workspace }}/.github/deployments && 
         helmfile repos &&
         helmfile --environment development sync
 
     - name: Wait for deployment to be ready ⏰
-      if: github.event_name == 'pull_request'
       run: |
         kubectl wait \
           --for=condition=available \
