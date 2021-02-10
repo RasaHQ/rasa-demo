@@ -1,63 +1,203 @@
 name: Automatic PR Merger
-
+# name: Deploy Rasa X
 on:
-  push: {} # update PR when base branch is updated
-  status: {} # try to merge when other checks are completed
-  pull_request_review: # try to merge after review
-    types:
-      - submitted
-      - edited
-      - dismissed
-  pull_request: # try to merge if labels have changed (white/black list)
-    types:
-      - labeled
-      - unlabeled
+  push:
+    branches:
+    - 'master'
+    - 'k8s' # for testing only
+    # TODO: other conditions for deployment
 
-jobs:
+env:
+  # These values are viewable in the Sara K8s CI entry of 1password
+  # If updating secrets please also update the 1password entries
+  GCLOUD_ZONE_ID: ${{ secrets.GCLOUD_ZONE_ID }}
+  GCLOUD_CLUSTER_NAME: ${{ secrets.GCLOUD_CLUSTER_NAME }}
+  GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+  RASA_X_IMAGE_NAME: ${{ secrets.RASA_X_IMAGE_NAME }}
+  ACTION_SERVER_IMAGE_NAME: ${{ secrets.ACTION_SERVER_IMAGE_NAME }}
+  RASA_X_DOMAIN: ${{ secrets.RASA_X_DOMAIN }}
+  SARA_GKE_SERVICE_ACCOUNT_NAME: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+  RASA_X_DATABASE_PASSWORD: ${{ secrets.RASA_X_DATABASE_PASSWORD }}
+  RASA_X_PASSWORD: ${{ secrets.RASA_X_PASSWORD }}
+  RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
+  REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
+  RASA_TOKEN: ${{ secrets.RASA_TOKEN }}
+  RASA_X_TOKEN: ${{ secrets.RASA_X_TOKEN }}
+  JWT_SECRET: ${{ secrets.JWT_SECRET }}
+  PASSWORDSALT: ${{ secrets.PASSWORDSALT }}
+  STATIC_IP: ${{ secrets.STATIC_IP }}
+  INGRESS_CERTIFICATE: ${{ secrets.INGRESS_CERTIFICATE }}
+
+  NAMESPACE: "sara"
+  RASA_X_USERNAME: "ci_user"
+  RELEASE_NAME: "sara"
+  ACTION_SERVER_TAG: "566"
+  RASA_X_VERSION: "0.35.0"
+  RASA_VERSION: "2.2.8"
+
+  # Due to the issue with openssl library for Google Cloud SDK (gcloud)
+  # (https://github.com/GoogleCloudPlatform/github-actions/issues/128)
+  # we use 297.0.01 version
+  GCLOUD_VERSION: "297.0.1"
+# on:
+  # push: {} # update PR when base branch is updated
+  # status: {} # try to merge when other checks are completed
+  # pull_request_review: # try to merge after review
+  #   types:
+  #     - submitted
+  #     - edited
+  #     - dismissed
+  # pull_request: # try to merge if labels have changed (white/black list)
+  #   types:
+  #     - labeled
+  #     - unlabeled
+
+# jobs:
   # that's all. two steps are needed - if PR is mergeable according to
   # branch protection rules it will be merged automatically
   # and latest model file is trained & uploaded to Rasa X
-  mergepal:
-    runs-on: ubuntu-latest
+  # mergepal:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: rasahq/merge-pal-action@v0.5.1
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  deploy_to_k8s_cluster:
+    name: Rasa Enterprise K8s deployment
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: rasahq/merge-pal-action@v0.5.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout git repository 🕝
+      if: github.event_name == 'pull_request'
+      uses: actions/checkout@v2
+
+    - name: Install Helm and helmfile ⛑
+      if: github.event_name == 'pull_request'
+      run: |
+        curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+        chmod 700 get_helm.sh
+        ./get_helm.sh
+
+        sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.130.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
+        sudo chmod +x /usr/local/bin/helmfile
+
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
+      if: github.event_name == 'pull_request'
+      name: Authenticate with gcloud 🎫
+      with:
+        version: "${{ env.GCLOUD_VERSION }}"
+        service_account_email: ${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
+
+    - name: Authenticate docker and configure cluster credentials 🎫
+      if: github.event_name == 'pull_request'
+      run: |
+        # Set up docker to authenticate via gcloud command-line tool.
+        gcloud  --quiet auth configure-docker
+        gcloud container clusters get-credentials "$GCLOUD_CLUSTER_NAME" --project ${GCLOUD_PROJECT_ID} --zone "$GCLOUD_ZONE_ID"
+
+    - name: Prepare namespace
+      if: github.event_name == 'pull_request'
+      run: |
+        kubectl config set-context --current --namespace="${NAMESPACE}"
+
+    - name: Deploy Rasa X chart ☸️
+      if: github.event_name == 'pull_request'
+      run: |
+        cd ${{ github.workspace }}/.github/deployments && 
+        helmfile repos &&
+        helmfile --environment development sync
+
+    - name: Wait for deployment to be ready ⏰
+      if: github.event_name == 'pull_request'
+      run: |
+        kubectl wait \
+          --for=condition=available \
+          --timeout=600s \
+          -l "app.kubernetes.io/component=rasa-x" deployment
+
+        # Wait for DB migration to be done
+        until [[ $(curl -s "https://${{ env.RASA_X_DOMAIN }}/api/health" | tee /tmp/output_status.txt | jq -r .database_migration.status) -eq "completed" ]]
+        do
+          cat /tmp/output_status.txt || true
+          sleep 5
+        done
+        # Wait for deployment to be ready
+        until [[ $(curl -s https://${{ env.RASA_X_DOMAIN }}/api/health | tee /tmp/output_health.txt | jq -r .production.status) -eq 200 ]]
+        do
+          cat /tmp/output_health.txt || true
+          sleep 5
+        done
   train-upload-model:
     name: Train and Upload Model to Rasa X
     runs-on: ubuntu-latest
+    needs: deploy_to_k8s_cluster
     steps:
     - uses: actions/checkout@v1
     - id: files
       uses: jitterbit/get-changed-files@v1
     - name: set_training
-      if: |
-          contains(  steps.files.outputs.all, 'data/' )
-          || contains(  steps.files.outputs.all, 'config.yml' )
-          || contains(  steps.files.outputs.all, 'domain.yml' )
+      # if: |
+      #     contains(  steps.files.outputs.all, 'data/' )
+      #     || contains(  steps.files.outputs.all, 'config.yml' )
+      #     || contains(  steps.files.outputs.all, 'domain.yml' )
       run: echo "RUN_TRAINING=true" >> $GITHUB_ENV
     - name: Set up Python 3.7
-      if: env.RUN_TRAINING == 'true'
+      # if: env.RUN_TRAINING == 'true'
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
     - name: Install dependencies
-      if: env.RUN_TRAINING == 'true'
+      # if: env.RUN_TRAINING == 'true'
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
     - name: Train Model
-      if: env.RUN_TRAINING == 'true'
+      # if: env.RUN_TRAINING == 'true'
       working-directory: ${{ github.workspace }}
       run: |
-        rasa train
-    - name: Upload model
-      if: env.RUN_TRAINING == 'true'
+          rasa train
+    - name: Set model name from Rasa version
+      # if: env.RUN_TRAINING == 'true'
+      run: |
+          rasa_version=$(python -c "import rasa; print(rasa.__version__)")
+          model_path=`ls models/*.tar.gz | head -n 1`
+          model_timestamp=$(basename "$model_path" .tar.gz)
+          renamed_model_path=models/"$model_timestamp"_rasa"$rasa_version".tar.gz
+          mv $model_path $renamed_model_path
+          echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
+          echo ${MODEL_PATH}
+
+    - name: Upload model to Rasa X
+      # if: env.RUN_TRAINING == 'true'
       env:
         RASA_X_API_TOKEN: ${{ secrets.RASA_X_API_TOKEN }}
       working-directory: ${{ github.workspace }}
       run: |
-        model_path=`ls models/*.tar.gz | head -n 1`
-        curl -k -F "model=@${model_path}" "https://website-demo.rasa.com/api/projects/default/models?api_token=${RASA_X_API_TOKEN}"
+           auth_token=$(curl -vv --request POST \
+              --url ${RASA_X_DOMAIN}/api/auth \
+              --header 'Content-Type: application/json' \
+              --data "{
+              \"username\": \"${RASA_X_USERNAME}\",
+              \"password\": \"${RASA_X_PASSWORD}\"
+            }" \
+            | jq -r '.access_token')
 
+            curl -vv -k -F "model=@${MODEL_PATH}" \
+              --url ${RASA_X_DOMAIN}/api/projects/default/models \
+              --header "Authorization: Bearer ${auth_token}"
+
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
+      name: Authenticate with gcloud 🎫
+      # if: env.RUN_TRAINING == 'true'
+      with:
+        version: "${{ secrets.GCLOUD_VERSION }}"
+        service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
+    - name: Upload model to storage "https://storage.googleapis.com/upload/storage/v1/b/BUCKET_NAME/o?uploadType=media&name=OBJECT_NAME"
+      # if: env.RUN_TRAINING == 'true'
+      env:
+        STORAGE_BUCKET_URL: ${{ secrets.STORAGE_BUCKET_URL }}
+      run: |
+          gsutil cp "${MODEL_PATH}" "${STORAGE_BUCKET_URL}"/rasa_demo_models
