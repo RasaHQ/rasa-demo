@@ -11,7 +11,7 @@ pipeline:
   min_ngram: 1
   max_ngram: 4
 - name: DIETClassifier
-  epochs: 200
+  epochs: 1 # temporary for testing
   ranking_length: 5
 - name: DucklingEntityExtractor
   url: http://localhost:8000
@@ -23,21 +23,21 @@ pipeline:
 - name: ResponseSelector
   retrieval_intent: out_of_scope
   scale_loss: false
-  epochs: 100
+  epochs: 1 # temporary for testing
 - name: ResponseSelector
   retrieval_intent: faq
   scale_loss: false
-  epochs: 100
+  epochs: 1 # temporary for testing
 - name: ResponseSelector
   retrieval_intent: chitchat
   scale_loss: false
-  epochs: 100
+  epochs: 1 # temporary for testing
 - name: FallbackClassifier
   threshold: 0.7
 policies:
 - name: TEDPolicy
   max_history: 10
-  epochs: 20
+  epochs: 1 # temporary for testing
   batch_size:
   - 32
   - 64
