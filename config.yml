@@ -36,7 +36,7 @@ pipeline:
   threshold: 0.7
 policies:
 - name: TEDPolicy
-  max_history: 10
+  max_history: 1 # temporary for testing
   epochs: 1 # temporary for testing
   batch_size:
   - 32
