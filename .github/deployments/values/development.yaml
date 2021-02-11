@@ -1,1 +1,20 @@
 debugMode: "true"
+rasa:
+  versions:
+    rasaProduction:
+      resources:
+        requests:
+          memory: 2
+          cpu: 2
+    rasaWorker:
+      resources:
+        requests:
+          memory: 4
+          cpu: 4
+rasax:
+  versions:
+    rasaProduction:
+      resources:
+        requests:
+          memory: 1
+          cpu: 1

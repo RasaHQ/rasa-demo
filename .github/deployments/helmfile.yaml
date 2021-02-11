@@ -46,13 +46,25 @@ releases:
           initialUser:
             username: {{ requiredEnv "RASA_X_USERNAME" }}
             password: {{ requiredEnv "RASA_X_PASSWORD" }}
-          extraEnvs:
-          - name: MPLCONFIGDIR
-            value: /tmp/matplotlib
+          resources:
+            requests:
+              memory: {{ .Values.rasax.resources.requests.memory }}
+              cpu: {{ .Values.rasax.resources.requests.cpu }}
       - rasa:
           imagePullPolicy: Always
           token: {{ requiredEnv "RASA_TOKEN" }}
           tag: {{ requiredEnv "RASA_VERSION" }}-full
+          versions:
+            rasaProduction:
+              resources:
+                requests:
+                  memory: {{ .Values.rasaProduction.resources.requests.memory }}
+                  cpu: {{ .Values.rasaProduction.resources.requests.cpu}}
+            rasaWorker:
+              resources:
+                requests:
+                  memory: {{ .Values.rasaWorker.resources.requests.memory }}
+                  cpu: {{ .Values.rasaWorker.resources.requests.cpu}}
       - rabbitmq:
           rabbitmq:
             password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
