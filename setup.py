@@ -41,7 +41,7 @@ setup(
     maintainer_email="akela@rasa.com",
     license="GNU General Public License v3.0",
     url="https://github.com/rasahq/rasa-demo",
-    download_url="https://github.com/RasaHQ/rasa-demo/archive/master.zip",
+    download_url="https://github.com/RasaHQ/rasa-demo/archive/main.zip",
     project_urls={
         "Bug Reports": "https://github.com/rasahq/rasa-demo/issues",
         "Source": "https://github.com/rasahq/rasa-demo",

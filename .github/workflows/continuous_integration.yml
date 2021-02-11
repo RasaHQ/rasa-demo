@@ -2,7 +2,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - 'actions/**'
     - 'Dockerfile'
