@@ -12,9 +12,8 @@ rasa:
           memory: 4
           cpu: 4
 rasax:
-  versions:
-    rasaProduction:
-      resources:
-        requests:
-          memory: 1
-          cpu: 1
+  resources:
+    requests:
+      memory: 1
+      cpu: 1
+
