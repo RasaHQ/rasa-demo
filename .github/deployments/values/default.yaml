@@ -1,16 +1,15 @@
 debugMode: "false"
 rasa:
-  versions:
-    rasaProduction:
-      resources:
-        requests:
-          memory: 2
-          cpu: 2
-    rasaWorker:
-      resources:
-        requests:
-          memory: 4
-          cpu: 4
+  rasaProduction:
+    resources:
+      requests:
+        memory: 2
+        cpu: 2
+  rasaWorker:
+    resources:
+      requests:
+        memory: 4
+        cpu: 4
 rasax:
   resources:
     requests:
