@@ -2,7 +2,7 @@ name: Continuous Integration
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - 'actions/**'
     - 'Dockerfile'
@@ -22,7 +22,7 @@ jobs:
           version: '275.0.0'
           service_account_key: ${{ secrets.GCLOUD_AUTH }}
 
-      - name: Configure Docker to use Google Cloud Platform
+      - name: Configure Docker to use Google Cloud Platform ☁️
         run: |
           gcloud auth configure-docker
 
