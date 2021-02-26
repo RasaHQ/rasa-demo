@@ -2,7 +2,7 @@ version: "2.0"
 nlu:
 - intent: chitchat/ask_howbuilt
   examples: |
-    - By what means were you made?
+    - By what means were you made
     - By what method were you fashioned?
     - Can you explain how you were created?
     - Can you give me an idea as to how you were created?
