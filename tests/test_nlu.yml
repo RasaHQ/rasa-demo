@@ -233,10 +233,6 @@ nlu:
     - what are you good at?
     - options
     - cool! can I do something else here?
-- intent: ask_when_next_event
-  examples: |
-    - what's the next rasa event
-    - is there a Rasa event in [San Francisco](location)
 - intent: chitchat/ask_wherefrom
   examples: |
     - Where do you consider home?
