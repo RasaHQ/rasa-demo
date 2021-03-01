@@ -247,6 +247,8 @@ nlu:
   examples: |
     - Which community events do you have
     - i want to meet Rasa
+    - what's the next rasa event
+    - is there a Rasa event in [San Francisco](location)
 - intent: chitchat/ask_whoami
   examples: |
     - WHo am I
