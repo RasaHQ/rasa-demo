@@ -47,6 +47,22 @@ nlu:
     - why is rasa interesting
     - Why rasa?
     - Why choose rasa?
+    - how does rasa compare to [botpress](current_api)?
+    - WHy rasa?
+    - why rasa?
+    - why should use rasa
+    - what makes rasa unique
+    - Nice. What makes Rasa different?
+    - why would i choose rasa instead of [google](current_api)?
+    - is it better than [dialogflow](current_api)?
+    - how effective is Rasa compared to [IBM Watson](current_api)?
+    - Rasa is better than [Chatfuel](current_api)?
+    - Why is rasa good?
+    - why rasa is better than [dialogflow](current_api)?
+    - why is rasa good?
+    - why should I use rasa
+    - how does rasa compare to [dialogflow](current_api)?
+    - why use rasa !
 - intent: ask_how_contribute
   examples: |
     - Can I assist?
@@ -279,6 +295,13 @@ nlu:
     - why help out?
     - why offer my assistance?
     - why should I help?
+    - reasons to contribute
+    - Why should I contribute?
+    - why contribuute
+    - why should i contribute
+    - why should I contribute?
+    - why contribute
+    - why should i contribute to rasa
 - intent: contact_sales
   examples: |
     - But I wanted a sales call
@@ -1955,6 +1978,23 @@ nlu:
     - i need smalltalk.md file
     - source
     - github link?
+    - I want your code source if it's possible
+    - where is ur source code
+    - where do i find your github repo?
+    - tell me about your source code
+    - i need your source code?
+    - How do I download your source code?
+    - show me your source code
+    - give your source code
+    - can i see your source code
+    - please share your github repository
+    - can i get your source code?
+    - your source code
+    - can i have the source code of yours?
+    - show me your code
+    - cna i get your source code
+    - How do I get the sara source code
+    - Where can I see the code behind Sara ?
 - intent: switch
   examples: |
     - How to migrate from [DialogFlwo](current_api)
@@ -2245,6 +2285,9 @@ nlu:
     - hey, i said restart
     - restart session pls
     - restart ps
+    - restart
+    - search for restart
+    - Restart
 - synonym: english
   examples: |
     - English
@@ -2375,9 +2418,3 @@ nlu:
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt
