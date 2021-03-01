@@ -1,3 +1,4 @@
-rasa~=2.0.2 # when updating, check the sdk version in the Dockerfile as well!
+rasa~=2.3.4 # when updating, check the sdk version in the Dockerfile as well!
+numpy~=1.19.5
 -r actions/requirements-actions.txt
 pytablewriter
