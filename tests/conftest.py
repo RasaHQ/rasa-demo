@@ -45,5 +45,3 @@ def rasa_x_convo(tracker):
     
     del_endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}"
     del_response = requests.delete(del_endpoint, headers=headers)
-
-

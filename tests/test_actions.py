@@ -1,6 +1,8 @@
 import json
 import pytest
 import requests
+import datetime
+import pickle
 
 from rasa_sdk.executor import CollectingDispatcher, Tracker
 from rasa_sdk.events import SlotSet, ActionExecuted, SessionStarted
@@ -78,18 +80,32 @@ def test_get_discourse_links():
     link_result = requests.get(link)
     assert link_result.status_code == 200
 
-# def test_get_community_events():
-#     # monkey patch datetime.now so that there will always be an event? Probs won't work.
-#     # assert return of get matches mocked API?
-#     events = community_events.get_community_events()
+def test_get_community_events(monkeypatch):
+    """
+    Test that format of current events page is as expected and that parsing of a known events page finds the right events
+    """
+    with pytest.warns(None) as record:
+        community_events.get_community_events()
+    assert len(record) == 0
 
-def test_get_country_for():
-    country = community_events.get_country_for("Berlin")
-    assert country == "Germany"
+    monkeypatch.setattr(requests, "get", pickle.load(open("tests/data/events_page.pkl","rb")))
+    with pytest.warns(None) as record:
+        actual_events = [event.as_kwargs() for event in community_events.get_community_events()]
 
-# def test_from_html():
-#     # based on mocked api
-#     pass
+    expected_events = [community_events.CommunityEvent(
+        "WeAreDevelopers",
+        "Berlin",
+        "Germany",
+        "28 – June 29, 2021",
+        datetime.date.max,
+        "https://www.wearedevelopers.com/events/world-congress/"
+        ).as_kwargs()
+    ]
+
+    assert len(record) == 0
+    assert actual_events == expected_events
+
+
 
 @pytest.mark.parametrize(
     "intent, entity, expected_events", [
