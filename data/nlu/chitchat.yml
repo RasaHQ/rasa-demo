@@ -830,3 +830,23 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: chitchat/ask_whoisit
+  examples: |
+    - who are you
+    - who the hell are you?
+    - who are you?
+    - who are u
+    - who r u
+    - who is this
+    - tell me who you are
+    - what is your name
+    - hi what is your name?
+    - what is your name?
+    - what are you?
+    - what is ur name
+    - what I can call you
+    - your name?
+    - tell me your name
+    - what's your name
+    - what is you name
+    - what is you name and where are you from
