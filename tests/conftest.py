@@ -3,16 +3,23 @@ from pathlib import Path
 import pytest
 import json
 import requests
+import uuid
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
 from actions import config
+from actions.api.rasaxapi import RasaXAPI
 
 here = Path(__file__).parent.resolve()
 
 @pytest.fixture
 def tracker():
-    return Tracker.from_dict(json.load(open(here / "./data/initial_tracker.json")))
+    tracker = Tracker.from_dict(json.load(open(here / "./data/initial_tracker.json")))
+    # pytest appears not to wait long enough for convo to be deleted. 
+    # using random uuid prevents errors due to previous tests' actions on test conversation
+    tracker.sender_id = uuid.uuid4().hex 
+    return tracker
+
 
 
 @pytest.fixture
@@ -26,22 +33,19 @@ def domain():
 
 
 @pytest.fixture
-def rasa_x_convo(tracker):
-    auth_endpoint = f"http://{config.rasa_x_host}/api/auth"
-    auth_data = {
-        "username": config.rasa_x_username,
-        "password": config.rasa_x_password
-    }
-    auth_response = requests.post(url=auth_endpoint, json=auth_data)
+def rasa_x_conversation_endpoint():
+    return f"{RasaXAPI.schema}://{RasaXAPI.host}/api/conversations"
 
-    endpoint = f"http://{config.rasa_x_host}/api/conversations"
-    data = {
-        "sender_id": tracker.sender_id
-    }
-    headers = {"Authorization": f"Bearer {auth_response.json()['access_token']}"}
-    response = requests.post(endpoint, json=data, headers=headers)
+@pytest.fixture
+def rasa_x_auth_header():
+    return RasaXAPI.get_auth_header()
+
+@pytest.fixture
+def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker):
+    data = {"sender_id": tracker.sender_id}
+    response = requests.post(rasa_x_conversation_endpoint, json=data, headers=rasa_x_auth_header)
+
+    yield
     
-    yield (endpoint, headers)
-    
-    del_endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}"
-    del_response = requests.delete(del_endpoint, headers=headers)
+    del_endpoint = f"{rasa_x_conversation_endpoint}/{tracker.sender_id}"
+    del_response = requests.delete(del_endpoint, headers=rasa_x_auth_header)

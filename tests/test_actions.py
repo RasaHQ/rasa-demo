@@ -3,6 +3,7 @@ import pytest
 import requests
 import datetime
 import pickle
+import logging
 
 from rasa_sdk.executor import CollectingDispatcher, Tracker
 from rasa_sdk.events import SlotSet, ActionExecuted, SessionStarted
@@ -10,7 +11,7 @@ from rasa_sdk.events import SlotSet, ActionExecuted, SessionStarted
 from actions import actions, config
 from actions.api.algolia import AlgoliaAPI
 from actions.api.discourse import DiscourseAPI
-from actions.api import community_events
+from actions.api.community_events import CommunityEvent
 
 
 
@@ -21,16 +22,16 @@ from actions.api import community_events
         ("other",[])
     ]
 )
-def test_run_action_tag_feedback(tracker, dispatcher, domain, feedback_value, expected_tags, rasa_x_convo):
+def test_run_action_tag_feedback(
+    tracker, dispatcher, domain, feedback_value, expected_tags, rasa_x_convo,
+    rasa_x_auth_header, rasa_x_conversation_endpoint):
     tracker.slots["feedback_value"] = feedback_value
     action = actions.ActionTagFeedback()
     actual_events = action.run(dispatcher, tracker, domain)
     expected_events = []
     assert actual_events == expected_events
 
-    conversation_endpoint = rasa_x_convo[0]
-    auth_headers = rasa_x_convo[1]
-    tag_response = requests.get(f"{conversation_endpoint}/{tracker.sender_id}/tags", headers=auth_headers)
+    tag_response = requests.get(f"{rasa_x_conversation_endpoint}/{tracker.sender_id}/tags", headers=rasa_x_auth_header)
     actual_tags = [{"value":tag.get("value")} for tag in tag_response.json()]
     assert actual_tags == expected_tags
 
@@ -42,16 +43,15 @@ def test_run_action_tag_feedback(tracker, dispatcher, domain, feedback_value, ex
         ("other",[])
     ]
 )
-def test_run_action_tag_docs_search(tracker, dispatcher, domain, intent, expected_tags, rasa_x_convo):
+def test_run_action_tag_docs_search(tracker, dispatcher, domain, intent, expected_tags, rasa_x_convo,
+    rasa_x_auth_header, rasa_x_conversation_endpoint):
     tracker.latest_message["intent"]["name"] = intent
     action = actions.ActionTagDocsSearch()
     actual_events = action.run(dispatcher, tracker, domain)
     expected_events = []
     assert actual_events == expected_events
 
-    conversation_endpoint = rasa_x_convo[0]
-    auth_headers = rasa_x_convo[1]
-    tag_response = requests.get(f"{conversation_endpoint}/{tracker.sender_id}/tags", headers=auth_headers)
+    tag_response = requests.get(f"{rasa_x_conversation_endpoint}/{tracker.sender_id}/tags", headers=rasa_x_auth_header)
     actual_tags = [{"value":tag.get("value")} for tag in tag_response.json()]
     assert actual_tags == expected_tags
 
@@ -80,32 +80,6 @@ def test_get_discourse_links():
     link_result = requests.get(link)
     assert link_result.status_code == 200
 
-def test_get_community_events(monkeypatch):
-    """
-    Test that format of current events page is as expected and that parsing of a known events page finds the right events
-    """
-    with pytest.warns(None) as record:
-        community_events.get_community_events()
-    assert len(record) == 0
-
-    monkeypatch.setattr(requests, "get", pickle.load(open("tests/data/events_page.pkl","rb")))
-    with pytest.warns(None) as record:
-        actual_events = [event.as_kwargs() for event in community_events.get_community_events()]
-
-    expected_events = [community_events.CommunityEvent(
-        "WeAreDevelopers",
-        "Berlin",
-        "Germany",
-        "28 – June 29, 2021",
-        datetime.date.max,
-        "https://www.wearedevelopers.com/events/world-congress/"
-        ).as_kwargs()
-    ]
-
-    assert len(record) == 0
-    assert actual_events == expected_events
-
-
 
 @pytest.mark.parametrize(
     "intent, entity, expected_events", [
@@ -120,5 +94,31 @@ def test_action_set_onboarding(tracker, dispatcher, domain, intent, entity, expe
     tracker.latest_message["entities"].append(entity)
     action = actions.ActionSetOnboarding()
     actual_events = action.run(dispatcher, tracker, domain)
+    assert actual_events == expected_events
+
+
+def test_get_community_events(caplog):
+    """
+    Test that format of current events page is as expected and that parsing of a known events page finds the right events
+    """
+    with caplog.at_level(logging.WARNING):
+        CommunityEvent.get_community_events()
+    assert not caplog.text.startswith("Error when trying to parse event details from html.")
+
+
+def test_parse_community_events(mocker):
+    mocker.patch.object(CommunityEvent,"get_community_page", return_value=pickle.load(open("tests/data/events_page.pkl", "rb")))
+    actual_events = [event.as_kwargs() for event in CommunityEvent.get_community_events()]
+
+    expected_events = [CommunityEvent(
+        "WeAreDevelopers",
+        "Berlin",
+        "Germany",
+        "28 – June 29, 2021",
+        datetime.date.max,
+        "https://www.wearedevelopers.com/events/world-congress/"
+        ).as_kwargs()
+    ]
+
     assert actual_events == expected_events
 
