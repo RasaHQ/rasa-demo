@@ -22,7 +22,7 @@ from actions.api.community_events import CommunityEvent
         ("other",[])
     ]
 )
-def test_run_action_tag_feedback(
+def test_action_tag_feedback(
     tracker, dispatcher, domain, feedback_value, expected_tags, rasa_x_convo,
     rasa_x_auth_header, rasa_x_conversation_endpoint):
     tracker.slots["feedback_value"] = feedback_value
@@ -43,7 +43,7 @@ def test_run_action_tag_feedback(
         ("other",[])
     ]
 )
-def test_run_action_tag_docs_search(tracker, dispatcher, domain, intent, expected_tags, rasa_x_convo,
+def test_action_tag_docs_search(tracker, dispatcher, domain, intent, expected_tags, rasa_x_convo,
     rasa_x_auth_header, rasa_x_conversation_endpoint):
     tracker.latest_message["intent"]["name"] = intent
     action = actions.ActionTagDocsSearch()
@@ -122,3 +122,26 @@ def test_parse_community_events(mocker):
 
     assert actual_events == expected_events
 
+
+def test_action_submit_subscribe_newsletter_form_notsubscribed(
+     tracker, dispatcher, domain, mailchimp_new_email
+    ):
+
+    tracker.slots["email"] = mailchimp_new_email
+    action = actions.ActionSubmitSubscribeNewsletterForm()
+    actual_events = action.run(dispatcher, tracker, domain)
+    assert actual_events == []
+    assert len(dispatcher.messages) == 1
+    assert dispatcher.messages[0]["template"] == "utter_confirmationemail"
+
+
+def test_action_submit_subscribe_newsletter_form_subscribed(
+     tracker, dispatcher, domain, mailchimp_subscribed_email
+    ):
+    tracker.slots["email"] = mailchimp_subscribed_email
+    action = actions.ActionSubmitSubscribeNewsletterForm()
+    actual_events = action.run(dispatcher, tracker, domain)
+    assert actual_events == []
+    assert len(dispatcher.messages) == 1
+    assert dispatcher.messages[0]["template"] == "utter_already_subscribed"
+    

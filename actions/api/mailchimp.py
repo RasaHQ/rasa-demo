@@ -3,6 +3,7 @@
 from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
 from mailchimp3.helpers import check_email
+import hashlib
 from typing import Text
 import logging
 
@@ -15,6 +16,14 @@ class MailChimpAPI:
     def __init__(self, api_key: Text) -> None:
 
         self.client = MailChimp(mc_api=api_key)
+
+    @staticmethod
+    def hash_email(email: Text) -> Text:
+        """Create an md5 hash of an email address"""
+        encoded_email = email.lower().encode(encoding='utf-8')
+        hash = hashlib.md5(encoded_email).hexdigest()
+        return hash
+ 
 
     @staticmethod
     def is_valid_email(email: Text) -> bool:
@@ -44,6 +53,24 @@ class MailChimpAPI:
             )
             return True
 
-        # if the user is already subscribed, return False
+        
         except MailChimpError:
-            return False
+            try:
+                hash = self.hash_email(email)
+                status = self.client.lists.members.get(list_id, hash).get("status")
+                if status != "subscribed" and status != "pending":
+                    # if user is in database, but is unsubscribed or archived, attempt to resubscribe
+                    self.client.lists.members.update(
+                        list_id, hash, data={"email_address": email, "status": "pending"}
+                    )
+                    return True
+                return False
+            except MailChimpError:
+                return False
+
+
+    def unsubscribe_user(self, list_id: Text, email: Text):
+        hash = self.hash_email(email)
+        self.client.lists.members.update(list_id, hash, {"status": "unsubscribed"})
+
+

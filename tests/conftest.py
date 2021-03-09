@@ -3,21 +3,20 @@ from pathlib import Path
 import pytest
 import json
 import requests
-import uuid
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
+from mailchimp3.mailchimpclient import MailChimpError
+
 from actions import config
 from actions.api.rasaxapi import RasaXAPI
+from actions.api.mailchimp import MailChimpAPI
 
 here = Path(__file__).parent.resolve()
 
 @pytest.fixture
 def tracker():
     tracker = Tracker.from_dict(json.load(open(here / "./data/initial_tracker.json")))
-    # pytest appears not to wait long enough for convo to be deleted. 
-    # using random uuid prevents errors due to previous tests' actions on test conversation
-    tracker.sender_id = uuid.uuid4().hex 
     return tracker
 
 
@@ -42,10 +41,30 @@ def rasa_x_auth_header():
 
 @pytest.fixture
 def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker):
+    del_endpoint = f"{rasa_x_conversation_endpoint}/{tracker.sender_id}"
+    # delete the conversation in case it already exists due to an improperly exited test
+    requests.delete(del_endpoint, headers=rasa_x_auth_header)
+
     data = {"sender_id": tracker.sender_id}
-    response = requests.post(rasa_x_conversation_endpoint, json=data, headers=rasa_x_auth_header)
+    requests.post(rasa_x_conversation_endpoint, json=data, headers=rasa_x_auth_header)
 
     yield
     
-    del_endpoint = f"{rasa_x_conversation_endpoint}/{tracker.sender_id}"
-    del_response = requests.delete(del_endpoint, headers=rasa_x_auth_header)
+    requests.delete(del_endpoint, headers=rasa_x_auth_header)
+
+@pytest.fixture
+def mailchimp_new_email():
+    """make sure the fake email is not already subscribed, and delete it again once test completes"""
+    email = "example@rasa.com"
+    client = MailChimpAPI(config.mailchimp_api_key)
+    client.unsubscribe_user(config.mailchimp_list, email)
+    yield email
+    client.unsubscribe_user(config.mailchimp_list, email)
+
+@pytest.fixture
+def mailchimp_subscribed_email():
+    """make sure the fake email is subscribed"""
+    email = "example_subscribed@rasa.com"
+    client = MailChimpAPI(config.mailchimp_api_key)
+    client.subscribe_user(config.mailchimp_list, email)
+    yield email

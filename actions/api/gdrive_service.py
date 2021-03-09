@@ -67,8 +67,3 @@ class GDriveService:
                     f"Error: {e}",
                     exc_info=True,
                 )
-
-
-# TODO: gdrive_service
-
-# TODO: mailchimp api
