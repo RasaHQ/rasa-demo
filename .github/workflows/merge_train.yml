@@ -1,4 +1,4 @@
-name: Automatic PR Merger
+name: Automerge, Train and Upload
 
 on:
   push: {} # update PR when base branch is updated
