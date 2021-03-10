@@ -31,6 +31,9 @@ env:
   RASA_X_USERNAME: "ci_user"
   RELEASE_NAME: "rasa-x"
   ACTION_SERVER_TAG: "latest"
+  # NB! The rasa/rasa-x versions should be in sync with:
+  # * rasa version in requirements.txt
+  # * rasa-sdk base image version in Dockerfile
   RASA_X_VERSION: "0.37.1"
   RASA_VERSION: "2.3.4"
 
@@ -44,9 +47,10 @@ jobs:
     name: Check for file changes
     runs-on: ubuntu-20.04
     outputs:
+      nlu: ${{ steps.changed-files.outputs.nlu }}
+      core: ${{ steps.changed-files.outputs.core }}
       training: ${{ steps.changed-files.outputs.training }}
       actions: ${{ steps.changed-files.outputs.actions }}
-      deployment: ${{ steps.changed-files.outputs.deployment }}
     steps:
       - uses: actions/checkout@v2
       - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
@@ -92,6 +96,9 @@ jobs:
   deploy_to_k8s_cluster:
     name: Rasa Enterprise K8s deployment
     runs-on: ubuntu-20.04
+    needs: 
+    - check_changed_files
+    if:  ${{needs.check_changed_files.outputs.deployment}}
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0
