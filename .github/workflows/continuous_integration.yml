@@ -37,6 +37,23 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
+  unit-testing:
+    name: Actions Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade "pip<20"
+        pip install -r requirements-dev.txt
+    - name: Unit Tests
+      working-directory: ${{ github.workspace }}
+      run: |
+        pytest . -v
   data-validation:
     name: Data Validation
     runs-on: ubuntu-latest
