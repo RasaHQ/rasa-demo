@@ -1,0 +1,13 @@
+training:
+  - 'data/**/*'
+  - 'domain.yml'
+  - 'config.yml'
+  - 'requirements.txt'
+
+actions:
+  - 'actions/**/*'
+  - 'Dockerfile'
+
+deployment:
+  - '.github/deployments/**/*'
+  - '.github/workflows/continuous_deployment.yml'

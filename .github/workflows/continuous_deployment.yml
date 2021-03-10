@@ -41,26 +41,19 @@ env:
 
 jobs:
   check_changed_files:
-    runs-on: ubuntu-latest
+    name: Check for file changes
+    runs-on: ubuntu-20.04
     outputs:
-      training: ${{ steps.check_training.outputs.training }}
-      actions: ${{ steps.check_actions.outputs.actions }}
+      training: ${{ steps.changed-files.outputs.training }}
+      actions: ${{ steps.changed-files.outputs.actions }}
+      deployment: ${{ steps.changed-files.outputs.deployment }}
     steps:
-    - uses: actions/checkout@v1
-    - id: files
-      uses: jitterbit/get-changed-files@v1
-    - id: check_training
-      if: |
-          contains(  steps.files.outputs.all, 'data/' )
-          || contains(  steps.files.outputs.all, 'config.yml' )
-          || contains(  steps.files.outputs.all, 'domain.yml' )
-          || contains(  steps.files.outputs.all, 'requirements.txt' )
-      run: echo "::set-output name=training::true"
-    - id: check_actions
-      if: |
-          contains(  steps.files.outputs.all, 'actions/' )
-          || contains(  steps.files.outputs.all, 'Dockerfile' )
-      run: echo "::set-output name=actions::true"
+      - uses: actions/checkout@v2
+      - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
+        id: changed-files
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filters: .github/change_filters.yml
   build-push-action-server:
     name: Build Action Server Docker Image
     needs: 
