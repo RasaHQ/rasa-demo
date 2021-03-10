@@ -30,11 +30,14 @@ class RasaXAPI:
             authtoken = response.json()["access_token"]
             header = {"Authorization": f"Bearer {authtoken}"}
             return header
-        except:
+        except Exception as e:
+            logger.debug(
+                f"Failed to fetch authorization header from Rasa X, using empty auth error: {e}"
+            )
             return {}
 
     @classmethod
-    def tag_convo(cls, tracker: Tracker, label: Text) -> None:
+    def tag_convo(cls, tracker: Tracker, label: Text) -> requests.Response:
         """Tag a conversation in Rasa X with a given label"""
         auth_header = cls.get_auth_header()
         endpoint = (
