@@ -1,4 +1,4 @@
-name: Merge & Deploy
+name: Continuous Deployment
 on:
   push: 
     branches:
