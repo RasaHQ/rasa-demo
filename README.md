@@ -24,6 +24,8 @@ To install Sara, please clone the repo and run:
 ```
 cd rasa-demo
 pip install -r requirements.txt
+python -m spacy download en_core_web_md
+python -m spacy link en_core_web_md en 
 pip install -e .
 ```
 This will install the bot and all of its requirements.

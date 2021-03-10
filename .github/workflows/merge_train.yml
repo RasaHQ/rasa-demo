@@ -45,8 +45,7 @@ jobs:
     - name: Install dependencies
       if: env.RUN_TRAINING == 'true'
       run: |
-          python -m pip install --upgrade "pip<20"
-          pip install -r requirements-dev.txt
+          make install-dev
     - name: Train Model
       if: env.RUN_TRAINING == 'true'
       working-directory: ${{ github.workspace }}
