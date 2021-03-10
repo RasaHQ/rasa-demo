@@ -51,6 +51,7 @@ jobs:
       core: ${{ steps.changed-files.outputs.core }}
       training: ${{ steps.changed-files.outputs.training }}
       actions: ${{ steps.changed-files.outputs.actions }}
+      deployment: ${{ steps.changed-files.outputs.deployment }}
     steps:
       - uses: actions/checkout@v2
       - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
@@ -58,12 +59,13 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filters: .github/change_filters.yml
+          base: ${{ github.ref }}
   build-push-action-server:
     name: Build Action Server Docker Image
     needs: 
     - check_changed_files
     runs-on: ubuntu-latest
-    if:  ${{needs.check_changed_files.outputs.actions}}
+    if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
     steps:
       - name: Checkout git repository 🕝
         uses: actions/checkout@v2
@@ -98,7 +100,7 @@ jobs:
     runs-on: ubuntu-20.04
     needs: 
     - check_changed_files
-    if:  ${{needs.check_changed_files.outputs.deployment}}
+    if:  ${{ needs.check_changed_files.outputs.deployment == 'true' }}
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0
@@ -166,7 +168,7 @@ jobs:
     needs: 
     - check_changed_files
     - deploy_to_k8s_cluster
-    if: ${{needs.check_changed_files.outputs.training}}
+    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0

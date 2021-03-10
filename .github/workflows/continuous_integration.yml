@@ -18,6 +18,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filters: .github/change_filters.yml
+          base: ${{ github.ref }}
   lint-testing:
     name: Code Formatting Tests
     runs-on: ubuntu-latest
@@ -75,7 +76,7 @@ jobs:
     needs: 
     - data-validation
     - check_changed_files
-    if:  ${{needs.check_changed_files.outputs.training}}
+    if:  ${{ needs.check_changed_files.outputs.training == 'true' }}
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0
@@ -95,7 +96,7 @@ jobs:
       if: |
           ( 
               contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
-              && ${{ needs.check_changed_files.outputs.nlu }}
+              && ${{ needs.check_changed_files.outputs.nlu == 'true' }}
             )
       run: |  
           rasa test nlu -f 3 --cross-validation
@@ -113,7 +114,7 @@ jobs:
       run: |
         rasa train
     - name: Test Training Stories
-      if:  ${{needs.check_changed_files.outputs.core}}
+      if:  ${{ needs.check_changed_files.outputs.core == 'true' }}
       working-directory: ${{ github.workspace }}
       run: |
         rasa test core --stories test/test_stories.md --fail-on-prediction-errors
@@ -124,7 +125,7 @@ jobs:
     - type-testing
     - training-testing
     - check_changed_files
-    if: ${{ needs.check_changed_files.outputs.training }}
+    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
