@@ -51,14 +51,14 @@ jobs:
       uses: jitterbit/get-changed-files@v1
     - id: check_training
       if: |
-        contains(  steps.files.outputs.all, 'data/' )
+          contains(  steps.files.outputs.all, 'data/' )
           || contains(  steps.files.outputs.all, 'config.yml' )
           || contains(  steps.files.outputs.all, 'domain.yml' )
           || contains(  steps.files.outputs.all, 'requirements.txt' )
       run: echo "::set-output name=training::true"
     - id: check_actions
       if: |
-        contains(  steps.files.outputs.all, 'actions/' )
+          contains(  steps.files.outputs.all, 'actions/' )
           || contains(  steps.files.outputs.all, 'Dockerfile' )
       run: echo "::set-output name=actions::true"
   build-push-action-server:
