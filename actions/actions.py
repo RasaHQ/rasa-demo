@@ -22,6 +22,7 @@ from actions.api.algolia import AlgoliaAPI
 from actions.api.discourse import DiscourseAPI
 from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
+from actions.api.rasaxapi import RasaXAPI
 
 logger = logging.getLogger(__name__)
 
@@ -774,13 +775,6 @@ class ActionForumSearch(Action):
         return []
 
 
-def tag_convo(tracker: Tracker, label: Text) -> None:
-    """Tag a conversation in Rasa X with a given label"""
-    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
-    requests.post(url=endpoint, data=label)
-    return
-
-
 class ActionTagFeedback(Action):
     """Tag a conversation in Rasa X as positive or negative feedback """
 
@@ -803,7 +797,7 @@ class ActionTagFeedback(Action):
         else:
             return []
 
-        tag_convo(tracker, label)
+        RasaXAPI.tag_convo(tracker, label)
 
         return []
 
@@ -829,6 +823,6 @@ class ActionTagDocsSearch(Action):
         else:
             return []
 
-        tag_convo(tracker, label)
+        RasaXAPI.tag_convo(tracker, label)
 
         return []

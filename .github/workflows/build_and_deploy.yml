@@ -151,12 +151,3 @@ jobs:
       if: env.ACTIONS_CHANGED == 'true'
       run: |
         docker build --cache-from gcr.io/replicated-test/rasa-demo:latest .
-
-  mergepal-merge: # run merge pal in the end
-    runs-on: ubuntu-latest
-    needs: [lint-testing, type-testing, training-testing, build-images]
-    steps:
-      - uses: actions/checkout@v1
-      - uses: rasahq/merge-pal-action@v0.5.1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
