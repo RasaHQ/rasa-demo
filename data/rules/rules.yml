@@ -54,3 +54,39 @@ rules:
   - action: action_deactivate_loop
   - active_loop: null
   - action: utter_ask_more_details
+- rule: explain -> can't explain # the default; longer rules will handle cases where an explanation exists
+  steps:
+  - intent: explain
+  - action: utter_no_further_info
+  wait_for_user_input: false
+- rule: explain -> can't explain at conversation start
+  conversation_start: true
+  steps:
+  - intent: explain
+  - action: utter_no_further_info
+  - action: utter_possibilities
+- rule: explain in FAQ
+  steps:
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+  wait_for_user_input: false
+- rule: explain after utter_ask_explain_nlucorex # this just factors out a shared bit from many training stories 
+  steps:
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  wait_for_user_input: false
+- rule: explain after utter_ask_migration
+  steps:
+  - action: utter_ask_migration
+  - intent: explain
+  - action: utter_no_further_info
+  - action: utter_ask_migration
+- rule: explain after utter_direct_to_step2
+  steps:
+  - action: utter_direct_to_step2
+  - intent: explain
+  - action: action_next_step
