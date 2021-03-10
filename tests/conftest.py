@@ -11,6 +11,7 @@ from mailchimp3.mailchimpclient import MailChimpError
 from actions import config
 from actions.api.rasaxapi import RasaXAPI
 from actions.api.mailchimp import MailChimpAPI
+from actions.api.gdrive_service import GDriveService
 
 here = Path(__file__).parent.resolve()
 
@@ -68,3 +69,20 @@ def mailchimp_subscribed_email():
     client = MailChimpAPI(config.mailchimp_api_key)
     client.subscribe_user(config.mailchimp_list, email)
     yield email
+
+@pytest.fixture
+def gdrive_sheet():
+    """make sure test sheet has only one row before test starts and delete any created rows once the test finishes"""
+    test_sheet = "demobot_testing"
+    gdrive = GDriveService()
+    gdrive.SHEET_NAME = test_sheet
+    spreadsheet_name = gdrive.SPREADSHEET_NAME
+    spreadsheet = gdrive.request_sheet(spreadsheet_name)
+    worksheet = spreadsheet.worksheet(test_sheet)
+    worksheet.resize(rows=1)
+
+    yield test_sheet, worksheet
+
+    worksheet.resize(rows=1)
+
+    

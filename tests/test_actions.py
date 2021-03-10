@@ -4,6 +4,7 @@ import requests
 import datetime
 import pickle
 import logging
+import uuid
 
 from rasa_sdk.executor import CollectingDispatcher, Tracker
 from rasa_sdk.events import SlotSet, ActionExecuted, SessionStarted
@@ -12,6 +13,7 @@ from actions import actions, config
 from actions.api.algolia import AlgoliaAPI
 from actions.api.discourse import DiscourseAPI
 from actions.api.community_events import CommunityEvent
+from actions.api.gdrive_service import GDriveService
 
 
 
@@ -145,3 +147,34 @@ def test_action_submit_subscribe_newsletter_form_subscribed(
     assert len(dispatcher.messages) == 1
     assert dispatcher.messages[0]["template"] == "utter_already_subscribed"
     
+def test_action_submit_sales_form(
+        tracker, dispatcher, domain, mocker, gdrive_sheet
+    ):
+    company = "Sara CI"
+    use_case = "Unit Tests"
+    budget = '1000'
+    date = datetime.datetime.now().strftime("%d/%m/%Y")
+    # by using a random name we can verify that the line written to the spreadsheet is the one the test wrote
+    name = uuid.uuid1().hex
+    job_function = "Test Actions"
+    email = "example@rasa.com"
+
+    tracker.slots["budget"] = budget
+    tracker.slots["company"] = company
+    tracker.slots["business_email"] = email
+    tracker.slots["job_function"] = job_function
+    tracker.slots["person_name"] = name
+    tracker.slots["use_case"] = use_case
+
+    sheet_name = gdrive_sheet[0]
+    worksheet = gdrive_sheet[1]
+    row_values = [company, use_case, budget, date, name, job_function, email]
+
+    mocker.patch.object(GDriveService, "SHEET_NAME", sheet_name)
+    action = actions.ActionSubmitSalesForm()
+    actual_events = action.run(dispatcher, tracker, domain)
+
+    assert actual_events == []
+    assert len(dispatcher.messages) == 1
+    assert dispatcher.messages[0]["template"] == "utter_confirm_salesrequest"
+    assert worksheet.row_values(2) == row_values
