@@ -1,3 +1,13 @@
+nlu:
+  - 'data/nlu/*'
+  - 'config.yml'
+
+core:
+  - 'data/rules/*'
+  - 'data/stories/*'
+  - 'config.yml'
+  - 'domain.yml'
+
 training:
   - 'data/**/*'
   - 'domain.yml'
