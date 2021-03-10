@@ -70,6 +70,10 @@ jobs:
     name: Data Validation
     runs-on: ubuntu-latest
     steps:
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.8.0
+      with:
+        access_token: ${{ github.token }}
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
@@ -88,6 +92,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [data-validation]
     steps:
+    - name: Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.8.0
+      with:
+        access_token: ${{ github.token }}
     - uses: actions/checkout@v1
     - id: files
       uses: jitterbit/get-changed-files@v1
