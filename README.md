@@ -21,15 +21,14 @@ You can find planned enhancements for Sara in the
 
 To install Sara, please clone the repo and run:
 
-```
+```sh
 cd rasa-demo
-pip install -r requirements.txt
-python -m spacy download en_core_web_md
-python -m spacy link en_core_web_md en 
-pip install -e .
+make install
 ```
+
 This will install the bot and all of its requirements.
 Note that this bot should be used with python 3.6 or 3.7.
+
 
 ## 🤖 To run Sara:
 
@@ -45,7 +44,8 @@ rasa run actions --actions actions.actions
 There are some custom actions that require connections to external services,
 specifically `SubscribeNewsletterForm` and `SalesForm`. For these
 to run you would need to have your own MailChimp newsletter and a Google sheet
-to connect to.
+to connect to. See the [development](#development) section for instructions on providing
+credentials for external services.
 
 In another window, run the bot:
 ```bash
@@ -81,6 +81,39 @@ rasa test core --stories test/test_stories.md
 
 `config.yml` - training configurations for the NLU pipeline and policy ensemble
 
+
+## Development
+
+To install requirements for development, run:
+
+```sh
+make install-dev
+```
+
+To run or test custom actions locally, put a file called .env in the root of your local directory with values
+for the following environment variables. Most actions will work without them, but if you are working on actions
+connecting to external APIs you will need credentials.
+
+
+```
+GDRIVE_CREDENTIALS=#json access key for Google Drive API for action_submit_sales_form
+MAILCHIMP_LIST=#id of mailchimp list for action_submit_subscribe_newsletter_form
+MAILCHIMP_API_KEY=#api key for mailchimp
+ALGOLIA_APP_ID=#algolia app ID for action_docs_search 
+ALGOLIA_SEARCH_KEY=#algolia search key
+ALGOLIA_DOCS_INDEX=#algolia search index
+RASA_X_HOST=#Rasa X domain e.g. localhost:5002
+RASA_X_PASSWORD=#password for authenticating into Rasa X
+RASA_X_USERNAME=#username for authenticating into Rasa X
+RASA_X_HOST_SCHEMA=#Rasa X address schema (http/https)
+```
+
+To run unit tests for custom actions:
+
+```
+make test-actions
+```
+
 ## ⚫️ Code Style
 
 To ensure a standardized code style we use the formatter [black](https://github.com/ambv/black).
@@ -92,7 +125,7 @@ This will add a hook to the repository, which reformats files on every commit.
 If you want to set it up manually, install black via `pip install black`.
 To reformat files execute
 ```
-black .
+make formatter
 ```
 
 ## :gift: License

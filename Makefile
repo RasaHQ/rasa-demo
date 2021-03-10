@@ -1,5 +1,7 @@
 help:
 	@echo "make"
+	@echo "    install"
+	@echo "        Install all requirements for running the bot."
 	@echo "    install-dev"
 	@echo "        Install all requirements for development."
 	@echo "    clean"
@@ -12,6 +14,12 @@ help:
 	@echo "        Check for type errors using pytype."
 	@echo "    test-actions"
 	@echo "        Run custom action unit tests"
+
+install:
+	pip install -r requirements.txt
+	python -m spacy download en_core_web_md
+	python -m spacy link en_core_web_md en 
+	pip install -e .
 
 install-dev:
 	python -m pip install --upgrade "pip<20"
