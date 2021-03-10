@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
 import json
-import requests
 from datetime import datetime
 from typing import Any, Dict, List, Text, Optional
 

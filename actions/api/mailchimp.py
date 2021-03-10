@@ -20,10 +20,9 @@ class MailChimpAPI:
     @staticmethod
     def hash_email(email: Text) -> Text:
         """Create an md5 hash of an email address"""
-        encoded_email = email.lower().encode(encoding='utf-8')
+        encoded_email = email.lower().encode(encoding="utf-8")
         hash = hashlib.md5(encoded_email).hexdigest()
         return hash
- 
 
     @staticmethod
     def is_valid_email(email: Text) -> bool:
@@ -53,7 +52,6 @@ class MailChimpAPI:
             )
             return True
 
-        
         except MailChimpError:
             try:
                 hash = self.hash_email(email)
@@ -61,16 +59,15 @@ class MailChimpAPI:
                 if status != "subscribed" and status != "pending":
                     # if user is in database, but is unsubscribed or archived, attempt to resubscribe
                     self.client.lists.members.update(
-                        list_id, hash, data={"email_address": email, "status": "pending"}
+                        list_id,
+                        hash,
+                        data={"email_address": email, "status": "pending"},
                     )
                     return True
                 return False
             except MailChimpError:
                 return False
 
-
     def unsubscribe_user(self, list_id: Text, email: Text):
         hash = self.hash_email(email)
         self.client.lists.members.update(list_id, hash, {"status": "unsubscribed"})
-
-

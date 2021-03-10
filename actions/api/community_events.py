@@ -1,4 +1,4 @@
-from __future__ import annotations # for typing by enclosing class
+from __future__ import annotations  # for typing by enclosing class
 
 import ssl
 import datetime
@@ -68,7 +68,9 @@ class CommunityEvent:
             return datetime.datetime.strptime(dates[-1].strip(), DATE_FORMAT)
         except Exception as e:
             logger.warning(e)
-            return datetime.datetime.max # if date can't be parsed assume event is future
+            return (
+                datetime.datetime.max
+            )  # if date can't be parsed assume event is future
 
     @staticmethod
     def get_community_page() -> requests.Response:
@@ -88,7 +90,9 @@ class CommunityEvent:
             parsed_events = [cls.from_html(e) for e in events]
 
             now = datetime.date.today()
-            upcoming_events = [e for e in parsed_events if e is not None and e.date >= now]
+            upcoming_events = [
+                e for e in parsed_events if e is not None and e.date >= now
+            ]
             return sorted(upcoming_events, key=lambda e: e.date)
 
         return []
