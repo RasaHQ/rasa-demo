@@ -1,4 +1,4 @@
-name: Automerge, Train and Upload
+name: Train and Upload
 
 on:
   push: 
