@@ -8,6 +8,8 @@ help:
 	@echo "        Lint code with flake8, and check if black formatter should be applied."
 	@echo "    types"
 	@echo "        Check for type errors using pytype."
+	@echo "    test-actions"
+	@echo "        Run custom action unit tests"
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
@@ -27,3 +29,6 @@ lint:
 
 types:
 	pytype --keep-going actions
+
+test-actions:
+	pytest . -vv
