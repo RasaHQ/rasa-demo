@@ -1,5 +1,4 @@
 # Sara - the Rasa Demo Bot
-[![Build Status](https://travis-ci.com/RasaHQ/rasa-demo.svg?branch=master)](https://travis-ci.com/RasaHQ/rasa-demo)
 
 ## :surfer: Introduction
 The purpose of this repo is to showcase a contextual AI assistant built with the open source Rasa framework.
@@ -96,5 +95,5 @@ black .
 
 ## :gift: License
 Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies
-GmbH. [Copy of the license](https://github.com/RasaHQ/rasa-demo/blob/master/LICENSE).
+GmbH. [Copy of the license](https://github.com/RasaHQ/rasa-demo/blob/main/LICENSE).
 Licensees may convey the work under this license. There is no warranty for the work.
