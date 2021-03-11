@@ -58,18 +58,6 @@ rules:
   steps:
   - intent: next_step
   - action: action_next_step
-- rule: faq (when product slot gets set)
-  steps:
-  - intent: faq
-  - slot_was_set:
-    - product # the slot value doesn't matter
-  - action: utter_faq
-  - action: action_set_faq_slot
-- rule: faq (when product slot doesn't get set)
-  steps:
-  - intent: faq
-  - action: utter_faq
-  - action: action_set_faq_slot
 - rule: anything else? - yes
   steps:
   - action: utter_anything_else
