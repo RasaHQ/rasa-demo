@@ -1,9 +1,5 @@
 version: "2.0"
 stories:
-- story: next step prompt
-  steps:
-  - intent: next_step
-  - action: action_next_step
 - story: faqs
   steps:
   - intent: faq
