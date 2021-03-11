@@ -312,7 +312,9 @@ stories:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -327,7 +329,9 @@ stories:
     - current_api: __other__
   - action: utter_why_rasa
   - action: utter_ask_more
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -343,7 +347,9 @@ stories:
   - action: utter_why_rasa
   - action: utter_switch_luis
   - action: utter_ask_more_migrate
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -359,7 +365,9 @@ stories:
   - action: utter_why_rasa
   - action: utter_switch_dialogflow
   - action: utter_ask_more_migrate
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue

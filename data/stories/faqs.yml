@@ -161,7 +161,9 @@ stories:
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
+  - or:
+    - intent: nlu_info
+    - intent: explain
   - action: action_store_unknown_nlu_part
   - action: utter_dont_know_nlu_part
   - action: utter_search_bar
@@ -182,9 +184,13 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
+  - or:
+    - intent: nlu_info
+      entities:
+      - nlu_part: intent classification
+    - intent: nlu_info
+      entities:
+      - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - intent: faq
@@ -210,9 +216,13 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
+  - or:
+    - intent: nlu_info
+      entities:
+      - nlu_part: intent classification
+    - intent: explain
+      entities:
+      - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -246,9 +256,13 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
+  - or:
+    - intent: nlu_info
+      entities:
+      - nlu_part: intent classification
+    - intent: explain
+      entities:
+      - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -281,9 +295,13 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: intent classification
+  - or:
+    - intent: nlu_info
+      entities:
+      - nlu_part: intent classification
+    - intent: explain
+      entities:
+      - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -320,9 +338,13 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
+  - or:
+    - intent: nlu_info
+      entities:
+      - nlu_part: entity recognition
+    - intent: explain
+      entities:
+      - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
   - intent: faq
@@ -357,9 +379,13 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - intent: nlu_info
-    entities:
-    - nlu_part: entity recognition
+  - or:
+    - intent: nlu_info
+      entities:
+      - nlu_part: entity recognition
+    - intent: explain
+      entities:
+      - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -417,7 +443,9 @@ stories:
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_run_rasa_init
   - action: utter_direct_to_step3
 - story: FAQ - Step 2 flow interrupted
