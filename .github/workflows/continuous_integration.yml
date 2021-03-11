@@ -93,9 +93,7 @@ jobs:
           pip install -r requirements-dev.txt
     - name: Cross-validate NLU model
       id: cvnlu
-      if: |
-            ${{ needs.check_changed_files.outputs.nlu == 'true' }}
-            && contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
+      if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
       run: |  
           rasa test nlu -f 3 --cross-validation
           python .github/workflows/format_results.py
