@@ -423,3 +423,28 @@ stories:
   - action: utter_ask_more_details
   - intent: technical_question
   - action: action_docs_search
+
+# stories that should be rules but currently can't (see https://github.com/RasaHQ/rasa/issues/8176)
+- story: explain -> can't explain # the default "rule"; longer rules will handle cases where an explanation exists
+  steps:
+  - intent: explain
+  - action: utter_no_further_info
+  # wait_for_user_input: false
+# - story: explain -> can't explain at conversation start
+  # conversation_start: true
+  # steps:
+  # - intent: explain
+  # - action: utter_no_further_info
+  # - action: utter_possibilities
+- story: explain in FAQ
+  steps:
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+  # wait_for_user_input: false
+- story: explain + unknown product after utter_ask_for_nlu_specifics # based on a training story
+  steps:
+  - action: utter_ask_for_nlu_specifics
+  - intent: explain
+  - action: action_store_unknown_nlu_part
+  # wait_for_user_input: false
