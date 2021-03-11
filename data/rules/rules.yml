@@ -54,3 +54,12 @@ rules:
   - action: action_deactivate_loop
   - active_loop: null
   - action: utter_ask_more_details
+- rule: next step prompt
+  steps:
+  - intent: next_step
+  - action: action_next_step
+- rule: anything else? - yes
+  steps:
+  - action: utter_anything_else
+  - intent: affirm
+  - action: utter_what_help
