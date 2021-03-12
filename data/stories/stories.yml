@@ -283,11 +283,6 @@ stories:
   - action: action_tag_feedback
   - action: utter_great
   - action: utter_anything_else
-- story: anything else? - yes
-  steps:
-  - action: utter_anything_else
-  - intent: affirm
-  - action: utter_what_help
 - story: anything else? - no
   steps:
   - action: utter_anything_else
