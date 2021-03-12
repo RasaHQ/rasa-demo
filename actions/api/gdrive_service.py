@@ -15,11 +15,17 @@ logger = logging.getLogger(__name__)
 class GDriveService:
     """Service to write to a spread sheet in google drive."""
 
-    # Name of the spreadsheet
-    SPREADSHEET_NAME = "Qualify Inbounds"
+    # Name of the sales inbounds spreadsheet
+    SALES_SPREADSHEET_NAME = "Qualify Inbounds"
 
-    # Sheet where the new address change entries should be stored in
-    SHEET_NAME = "demobot"
+    # Sheet where the new inbounds should be stored in
+    SALES_WORKSHEET_NAME = "demobot"
+
+    # Name of the playground issues spreadsheet
+    ISSUES_SPREADSHEET_NAME = "Issues Reported to Sara"
+
+    # Name of the playground issues sheet
+    PLAYGROUND_WORKSHEET_NAME = "playground"
 
     def __init__(self, gdrive_credentials_json: Text = config.gdrive_credentials):
         scopes = [
@@ -35,27 +41,22 @@ class GDriveService:
                 f.name, scopes=scopes
             )
 
-    def request_sheet(self, sheet_name: Text) -> Optional[Spreadsheet]:
+    def request_sheet(self, spreadsheet_name: Text) -> Optional[Spreadsheet]:
         # fetch a specific sheet
         logging.debug("Refreshing auth")
         try:
-            return gspread.authorize(self.credentials).open(sheet_name)
+            return gspread.authorize(self.credentials).open(spreadsheet_name)
         except Exception as e:
             logging.error(
                 "Failed to create google spreadsheet connection. %s", e, exc_info=True
             )
             return None
 
-    def store_data(self, data: List[Text]) -> None:
-        """Adds a single new row to the sheet containing the user's
-        information"""
-        self.append_row(self.SPREADSHEET_NAME, data, self.SHEET_NAME)
-
     def append_row(
-        self, sheet_name: Text, row_values: List[Text], worksheet_name: Text
+        self, spreadsheet_name: Text, worksheet_name: Text, row_values: List[Text]
     ) -> None:
         # add a row to the spreadsheet
-        sheet = self.request_sheet(sheet_name)
+        sheet = self.request_sheet(spreadsheet_name)
         if sheet:
             try:
                 worksheet = sheet.worksheet(worksheet_name)
@@ -63,7 +64,7 @@ class GDriveService:
                     worksheet.append_row(row_values)
             except Exception as e:
                 logging.error(
-                    f"Failed to write row to gdocs. Sheet {sheet_name}/{worksheet_name}. "
+                    f"Failed to write row to gdocs. Sheet {spreadsheet_name}/{worksheet_name}. "
                     f"Error: {e}",
                     exc_info=True,
                 )

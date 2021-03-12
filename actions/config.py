@@ -1,3 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+You can create a file called `.env` in the root of the repo, containing your local env vars.
+
+It will be automatically loaded when starting the action server.
+"""
+from dotenv import load_dotenv
+
+# Load environment variables
+# needs to happen before anything else (to properly instantiate constants)
+
+load_dotenv(verbose=True)
+
 import os
 
 policy_model_dir = os.environ.get("POLICY_MODEL_DIR", "models/dialogue/")
@@ -43,3 +56,5 @@ algolia_search_key = os.environ.get("ALGOLIA_SEARCH_KEY", "")
 algolia_docs_index = os.environ.get("ALGOLIA_DOCS_INDEX", "")
 
 rasa_x_host = os.environ.get("RASA_X_HOST", "rasa-x:5002")
+
+rasa_x_host_schema = os.environ.get("RASA_X_HOST_SCHEMA", "http")

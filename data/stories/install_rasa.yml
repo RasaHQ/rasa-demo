@@ -120,7 +120,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: affirm
-  - action: utter_ask_describe_problem
+  - action: utter_ask_problem_description
   - or:
     - intent: technical_question
     - intent: enter_data
@@ -138,7 +138,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: affirm
-  - action: utter_ask_describe_problem
+  - action: utter_ask_problem_description
   - or:
     - intent: technical_question
     - intent: enter_data
@@ -185,7 +185,7 @@ stories:
   - intent: deny
   - action: utter_ask_if_problem
   - intent: affirm
-  - action: utter_ask_describe_problem
+  - action: utter_ask_problem_description
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot

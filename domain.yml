@@ -292,7 +292,7 @@ responses:
   - text: Do you want to go ahead with the steps to create a contextual assistant?
   utter_ask_continue_sales:
   - text: Do you still want to talk to sales?
-  utter_ask_describe_problem:
+  utter_ask_problem_description:
   - text: Can you describe the problem you're having?
   utter_ask_docs_help:
   - buttons:
@@ -334,6 +334,11 @@ responses:
   - text: What's your name?
   utter_ask_intro:
   - text: To help you best, I'd like to ask you a few questions about what brings you here.
+  utter_playground_intro:
+  - text: |-
+        In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
+          build a Rasa prototype entirely online. Once you've built your prototype, you can talk to
+          your bot online and download your project to continue developing it locally.
   utter_ask_playground_or_install:
   - text: Would you like to try out Rasa in the online Rasa Playground or do you want to install Rasa on your own computer?
   utter_ask_playground_help:
@@ -412,7 +417,7 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_direct_to_forum_for_help:
-  - text: If you're still stuck, please ask for help on our [forum](https://forum.rasa.com/).
+  - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.rasa.com/).
   utter_direct_to_step2:
   - channel: socketio
     text: You can click [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started.html%23build-an-assistant-with-rasa-open-source%22%3B) if you want to go to the next step to try out Rasa Open Source.
@@ -696,6 +701,7 @@ actions:
 - action_store_bot_language
 - action_store_entity_extractor
 - action_store_problem_description
+- action_submit_playground_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
 - action_tag_docs_search
@@ -706,6 +712,9 @@ actions:
 - validate_subscribe_newsletter_form
 - validate_sales_form
 forms:
+  playground_form:
+    problem_description:
+    - type: from_text
   suggestion_form:
     suggestion:
     - type: from_text

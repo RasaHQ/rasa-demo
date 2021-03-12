@@ -99,7 +99,9 @@ class ActionSubmitSalesForm(Action):
 
         try:
             gdrive = GDriveService()
-            gdrive.store_data(sales_info)
+            gdrive.append_row(
+                gdrive.SALES_SPREADSHEET_NAME, gdrive.SALES_WORKSHEET_NAME, sales_info
+            )
             dispatcher.utter_message(template="utter_confirm_salesrequest")
             return []
         except Exception as e:
@@ -377,6 +379,33 @@ class ActionStoreProblemDescription(Action):
         domain: Dict[Text, Any],
     ) -> List[EventType]:
         problem = tracker.latest_message.get("text")
+
+        return [SlotSet("problem_description", problem)]
+
+
+class ActionSubmitPlaygroundProblemDescription(Action):
+    """Stores the problem description in a slot."""
+
+    def name(self) -> Text:
+        return "action_submit_playground_problem_description"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+
+        problem = tracker.latest_message.get("text")
+        timestamp = tracker.events[-1]["timestamp"]
+        date = datetime.datetime.now().strftime("%d/%m/%Y")
+        message_link = f"{config.rasa_x_host_schema}://{config.rasa_x_host}/conversations/{tracker.sender_id}/{timestamp}"
+        row_values = [date, problem, message_link]
+
+        gdrive = GDriveService()
+        gdrive.append_row(
+            gdrive.ISSUES_SPREADSHEET_NAME, gdrive.PLAYGROUND_WORKSHEET_NAME, row_values
+        )
 
         return [SlotSet("problem_description", problem)]
 
@@ -776,7 +805,7 @@ class ActionForumSearch(Action):
 
 def tag_convo(tracker: Tracker, label: Text) -> None:
     """Tag a conversation in Rasa X with a given label"""
-    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
+    endpoint = f"{config.rasa_x_host_schema}://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
     requests.post(url=endpoint, data=label)
     return
 

@@ -3,6 +3,7 @@ stories:
 - story: Getting started on Playground Page
   steps:
   - intent: get_started_playground
+  - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: affirm
   - action: utter_what_help
@@ -10,6 +11,7 @@ stories:
 - story: Getting started on Playground Page, Rasa Open Source installation
   steps:
   - intent: get_started_playground
+  - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: deny
   - action: utter_interested_in_installation
@@ -27,6 +29,7 @@ stories:
 - story: Getting started on Playground Page, Rasa Open Source installation
   steps:
   - intent: get_started_playground
+  - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: deny
   - action: utter_interested_in_installation
@@ -44,6 +47,7 @@ stories:
 - story: Getting started on Playground Page, Rasa X installation
   steps:
   - intent: get_started_playground
+  - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: deny
   - action: utter_interested_in_installation
@@ -60,6 +64,7 @@ stories:
 - story: Getting started on Playground Page, Rasa X installation
   steps:
   - intent: get_started_playground
+  - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: deny
   - action: utter_interested_in_installation
@@ -75,6 +80,7 @@ stories:
 - story: Getting started on Playground Page, catch-all
   steps:
   - intent: get_started_playground
+  - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: deny
   - action: utter_interested_in_installation
