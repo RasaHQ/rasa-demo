@@ -1,0 +1,23 @@
+nlu:
+  - 'data/nlu/*'
+  - 'config.yml'
+
+core:
+  - 'data/rules/*'
+  - 'data/stories/*'
+  - 'config.yml'
+  - 'domain.yml'
+
+training:
+  - 'data/**/*'
+  - 'domain.yml'
+  - 'config.yml'
+  - 'requirements.txt'
+
+actions:
+  - 'actions/**/*'
+  - 'Dockerfile'
+
+deployment:
+  - '.github/deployments/**/*'
+  - '.github/workflows/continuous_deployment.yml'
