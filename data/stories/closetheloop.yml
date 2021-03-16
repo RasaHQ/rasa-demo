@@ -435,7 +435,7 @@ stories:
   - action: utter_thumbsup
   - action: utter_anything_else
   - intent: affirm
-  - action: utter_thumbsup
+  - action: utter_what_help
 - story: Story from conversation with 4c274f8d470e4b77adbfefe7cda7cad7 on October 27th 2018
   steps:
   - intent: greet

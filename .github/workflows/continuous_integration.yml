@@ -71,7 +71,7 @@ jobs:
       run: |
         rasa data validate --debug
   training-testing:
-    name: Testing Stories
+    name: Test Model
     runs-on: ubuntu-latest
     needs: 
     - data-validation
@@ -93,9 +93,7 @@ jobs:
           pip install -r requirements-dev.txt
     - name: Cross-validate NLU model
       id: cvnlu
-      if: |
-            ${{ needs.check_changed_files.outputs.nlu == 'true' }}
-            && contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
+      if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
       run: |  
           rasa test nlu -f 3 --cross-validation
           python .github/workflows/format_results.py
@@ -117,7 +115,7 @@ jobs:
       run: |
         rasa test core --stories test/test_stories.md --fail-on-prediction-errors
   build-images:
-    name: Build and Push Images
+    name: Build Action Server Image
     needs: 
     - lint-testing
     - type-testing
