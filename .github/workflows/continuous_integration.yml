@@ -53,8 +53,10 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
-  data-validation:
-    name: Data Validation
+  action-unit-tests:
+    env:
+        RASA_X_HOST: ${{ secrets.RASA_X_HOST }}
+    name: Custom Action Unit Tests
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -64,12 +66,12 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade "pip<20"
-        pip install -r requirements-dev.txt
-    - name: Rasa Data Validation
+        make install-dev
+    - name: Unit Tests
       working-directory: ${{ github.workspace }}
       run: |
-        rasa data validate --debug
+        make test-actions
+    - name: Install dependencies
   training-testing:
     name: Test Model
     runs-on: ubuntu-latest
