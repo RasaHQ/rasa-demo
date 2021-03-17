@@ -23,11 +23,6 @@ class CommunityEvent:
         self.date = date
         self.link = link
 
-    def __repr__(self) -> Text:
-        return "{} ({}): {} ({})".format(
-            self.name, self.city, self.formatted_date, self.date
-        )
-
     @classmethod
     def from_html(cls, html) -> Optional["CommunityEvent"]:
         try:
@@ -35,8 +30,8 @@ class CommunityEvent:
             link = html.contents[0].get("href")
             name = html.contents[0].contents[0]
             date_as_string = html.contents[3]
-            country = cls.get_country_for(city)
-            date = cls.parse_community_date(date_as_string).date()
+            country = get_country_for(city)
+            date = parse_community_date(date_as_string).date()
         except Exception as e:
             logger.warning(f"Error when trying to parse event details from html.\n{e}")
             return None
@@ -50,6 +45,11 @@ class CommunityEvent:
             link.strip(),
         )
 
+    def __repr__(self) -> Text:
+        return "{} ({}): {} ({})".format(
+            self.name, self.city, self.formatted_date, self.date
+        )
+
     def name_as_link(self) -> Text:
         return "[{}]({})".format(self.name, self.link)
 
@@ -60,54 +60,50 @@ class CommunityEvent:
             "event_date": self.formatted_date,
         }
 
-    @staticmethod
-    def parse_community_date(date_string: Text) -> datetime.datetime:
 
-        dates = date_string.split("-")
+def parse_community_date(date_string: Text) -> datetime.datetime:
+    """Parse string date as datetime object"""
+    dates = date_string.split("-")
 
-        try:
-            return datetime.datetime.strptime(dates[-1].strip(), DATE_FORMAT)
-        except Exception as e:
-            logger.warning(e)
-            return (
-                datetime.datetime.max
-            )  # if date can't be parsed assume event is future
+    try:
+        return datetime.datetime.strptime(dates[-1].strip(), DATE_FORMAT)
+    except Exception as e:
+        logger.warning(e)
+        return datetime.datetime.max  # if date can't be parsed assume event is future
 
-    @staticmethod
-    def get_community_page() -> requests.Response:
-        return requests.get(COMMUNITY_EVENT_PAGE)
 
-    @classmethod
-    def get_community_events(cls) -> List["CommunityEvent"]:
-        """Returns list of community events sorted ascending by their date."""
-        response = cls.get_community_page()
+def get_community_events() -> List["CommunityEvent"]:
+    """Return list of community events sorted ascending by their date."""
+    response = get_community_page()
 
-        if response.status_code == 200:
-            community_page = response.content
+    if response.status_code == 200:
+        community_page = response.content
 
-            soup = BeautifulSoup(community_page, "html.parser")
+        soup = BeautifulSoup(community_page, "html.parser")
 
-            events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
-            parsed_events = [cls.from_html(e) for e in events]
+        events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
+        parsed_events = [CommunityEvent.from_html(e) for e in events]
 
-            now = datetime.date.today()
-            upcoming_events = [
-                e for e in parsed_events if e is not None and e.date >= now
-            ]
-            return sorted(upcoming_events, key=lambda e: e.date)
+        now = datetime.date.today()
+        upcoming_events = [e for e in parsed_events if e is not None and e.date >= now]
+        return sorted(upcoming_events, key=lambda e: e.date)
 
-        return []
+    return []
 
-    @staticmethod
-    def get_country_for(city: Text) -> Optional[Text]:
-        ssl_context = ssl.create_default_context()
-        ssl_context.check_hostname = False
-        ssl_context.verify_mode = ssl.CERT_NONE
 
-        geo_locator = Nominatim(ssl_context=ssl_context, user_agent="rasa-demo")
-        location = geo_locator.geocode(city, language="en", addressdetails=True)
+def get_country_for(city: Text) -> Optional[Text]:
+    ssl_context = ssl.create_default_context()
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
 
-        if location:
-            return location.raw["address"].get("country")
+    geo_locator = Nominatim(ssl_context=ssl_context, user_agent="rasa-demo")
+    location = geo_locator.geocode(city, language="en", addressdetails=True)
 
-        return None
+    if location:
+        return location.raw["address"].get("country")
+
+    return None
+
+
+def get_community_page() -> requests.Response:
+    return requests.get(COMMUNITY_EVENT_PAGE)

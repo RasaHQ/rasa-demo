@@ -26,8 +26,7 @@ class MailChimpAPI:
 
     @staticmethod
     def is_valid_email(email: Text) -> bool:
-        """Use mailchimp3 helper function to validate that it will accept it as a valid
-        email"""
+        """Validate that mailchimp will accept email as valid"""
         try:
             email = str(email)
             check_email(email)
@@ -44,7 +43,7 @@ class MailChimpAPI:
             return False
 
     def subscribe_user(self, list_id: Text, email: Text) -> Optional[bool]:
-        """subscribe the user to the newsletter if they're not already"""
+        """Subscribe the user to the newsletter if they're not already"""
         try:
             # subscribe a user who is not in the database at all to the newsletter.
             # Will fail if they are already in database

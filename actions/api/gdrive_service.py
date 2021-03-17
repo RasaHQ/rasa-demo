@@ -47,7 +47,7 @@ class GDriveService:
             return None
 
     def store_data(self, data: List[Text]) -> None:
-        """Adds a single new row to the sheet containing the user's
+        """Add a single new row to the sheet containing the user's
         information"""
         self.append_row(self.SPREADSHEET_NAME, data, self.SHEET_NAME)
 

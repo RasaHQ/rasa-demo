@@ -20,9 +20,7 @@ class RasaXAPI:
 
     @classmethod
     def get_auth_header(cls):
-        """
-        get authorization header with bearer token if authentication succeeds
-        """
+        """Get authorization header with bearer token"""
         url = f"{cls.schema}://{cls.host}/api/auth"
         payload = {"username": cls.username, "password": cls.password}
         response = requests.post(url, json=payload)
