@@ -81,8 +81,7 @@ def test_action_tag_docs_search(
 
 
 def test_get_algolia_link():
-    """Test that the link returned is correctly formatted and goes to a valid webpage
-    """
+    """Test that the link returned is correctly formatted and goes to a valid webpage"""
     # This could also stop at algolia.search and assert that the return matches the mocked API used for other tests
     algolia = AlgoliaAPI(
         config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
@@ -95,8 +94,7 @@ def test_get_algolia_link():
 
 
 def test_get_discourse_links():
-    """Test that the link returned is correctly formatted and goes to a valid webpage
-    """
+    """Test that the link returned is correctly formatted and goes to a valid webpage"""
     # This could also stop at discourse.query and assert that the return matches the mocked API used for other tests
     discourse = DiscourseAPI("https://forum.rasa.com/search")
     disc_res = discourse.query("rasa")

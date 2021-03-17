@@ -556,7 +556,7 @@ class CommunityEventAction(Action):
         if self.events is None or self._are_events_expired():
             logger.debug("Getting events from website.")
             self.last_event_update = datetime.now()
-            self.events = community_events.CommunityEvent.get_community_events()
+            self.events = community_events.get_community_events()
 
         return self.events
 

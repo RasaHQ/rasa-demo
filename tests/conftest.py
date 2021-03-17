@@ -30,14 +30,14 @@ def dispatcher():
 
 @pytest.fixture
 def domain():
-    """Load the domain, return as a dictionary"""
+    """Load the domain and return it as a dictionary"""
     domain = Domain.load("domain.yml")
     return domain.as_dict()
 
 
 @pytest.fixture
 def rasa_x_conversation_endpoint():
-    """Return Rasa X conversations endpoint"""
+    """Return the Rasa X conversations endpoint"""
     return f"{RasaXAPI.schema}://{RasaXAPI.host}/api/conversations"
 
 
