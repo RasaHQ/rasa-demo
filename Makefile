@@ -45,7 +45,7 @@ lint:
 	black --check actions
 
 types:
-	pytype --keep-going actions
+	pytype --keep-going actions tests
 
 test-actions:
 	pytest . -vv

@@ -17,7 +17,8 @@ here = Path(__file__).parent.resolve()
 
 @pytest.fixture
 def tracker():
-    tracker = Tracker.from_dict(json.load(open(here / "./data/initial_tracker.json")))
+    with open("tests/data/initial_tracker.json") as json_file:
+        tracker = Tracker.from_dict(json.load(json_file))
     return tracker
 
 

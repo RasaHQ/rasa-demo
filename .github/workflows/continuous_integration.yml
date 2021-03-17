@@ -83,7 +83,6 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make test-actions
-    - name: Install dependencies
   data-validation:
     name: Data Validation
     runs-on: ubuntu-latest
