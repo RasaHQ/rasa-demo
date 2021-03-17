@@ -16,6 +16,7 @@ help:
 	@echo "        Run custom action unit tests"
 
 install:
+	python -m pip install --upgrade "pip<20"
 	pip install -r requirements.txt
 	python -m spacy download en_core_web_md
 	python -m spacy link en_core_web_md en 
@@ -38,11 +39,11 @@ clean:
 	rm -rf docs/_build
 
 formatter:
-	black actions
+	black actions tests
 
 lint:
-	flake8 actions
-	black --check actions
+	flake8 actions tests
+	black --check actions tests
 
 types:
 	pytype --keep-going actions tests

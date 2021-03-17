@@ -2,6 +2,19 @@
 name: Continuous Integration
 on: [pull_request]
 
+env:
+    GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
+    MAILCHIMP_LIST: ${{ secrets.MAILCHIMP_LIST }}
+    MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+    ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+    ALGOLIA_SEARCH_KEY: ${{ secrets.ALGOLIA_SEARCH_KEY }}
+    ALGOLIA_DOCS_INDEX: ${{ secrets.ALGOLIA_DOCS_INDEX }}
+    RASA_X_HOST: ${{ secrets.RASA_X_DOMAIN }}
+    RASA_X_PASSWORD: ${{ secrets.RASA_X_PASSWORD }}
+    RASA_X_USERNAME: ${{ secrets.RASA_X_USERNAME }}
+    RASA_X_HOST_SCHEMA: ${{ secrets.RASA_X_HOST_SCHEMA }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   check_changed_files:
     name: Check for file changes
@@ -57,17 +70,6 @@ jobs:
     needs:
       - lint-testing
       - type-testing
-    env:
-        GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
-        MAILCHIMP_LIST: ${{ secrets.MAILCHIMP_LIST }}
-        MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
-        ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-        ALGOLIA_SEARCH_KEY: ${{ secrets.ALGOLIA_SEARCH_KEY }}
-        ALGOLIA_DOCS_INDEX: ${{ secrets.ALGOLIA_DOCS_INDEX }}
-        RASA_X_HOST: ${{ secrets.RASA_X_DOMAIN }}
-        RASA_X_PASSWORD: ${{ secrets.RASA_X_PASSWORD }}
-        RASA_X_USERNAME: ${{ secrets.RASA_X_USERNAME }}
-        RASA_X_HOST_SCHEMA: ${{ secrets.RASA_X_HOST_SCHEMA }}
     name: Custom Action Unit Tests
     runs-on: ubuntu-latest
     steps:
@@ -131,8 +133,6 @@ jobs:
       if: steps.cvnlu.outcome == 'success'
       uses: amn41/comment-on-pr@comment-file-contents
       continue-on-error: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         msg: results.md
     - name: Train Model

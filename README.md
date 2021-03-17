@@ -122,8 +122,7 @@ If you want to automatically format your code on every commit, you can use [pre-
 Just install it via `pip install pre-commit` and execute `pre-commit install` in the root folder.
 This will add a hook to the repository, which reformats files on every commit.
 
-If you want to set it up manually, install black via `pip install black`.
-To reformat files execute
+To reformat files manuallly execute
 ```
 make formatter
 ```

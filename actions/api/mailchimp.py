@@ -4,7 +4,7 @@ from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
 from mailchimp3.helpers import check_email
 import hashlib
-from typing import Text
+from typing import Text, Optional
 import logging
 
 logger = logging.getLogger(__name__)
@@ -43,20 +43,26 @@ class MailChimpAPI:
             )
             return False
 
-    def subscribe_user(self, list_id: Text, email: Text) -> bool:
-        # subscribe the user to the newsletter if they're not already
-        # subscribed, with the status pending
+    def subscribe_user(self, list_id: Text, email: Text) -> Optional[bool]:
+        """subscribe the user to the newsletter if they're not already"""
         try:
+            # subscribe a user who is not in the database at all to the newsletter.
+            # Will fail if they are already in database
             self.client.lists.members.create(
                 list_id, data={"email_address": email, "status": "pending"}
             )
             return True
 
         except MailChimpError:
+            # user is already in the database, or new user creation failed for another reason
             try:
                 hash = self.hash_email(email)
+                # check status of user already in database. Will throw exception if they are not in database.
                 status = self.client.lists.members.get(list_id, hash).get("status")
-                if status != "subscribed" and status != "pending":
+                if status != "subscribed" or status != "pending":
+                    # if user is already subscribed, can't subscribe again
+                    return False
+                else:
                     # if user is in database, but is unsubscribed or archived, attempt to resubscribe
                     self.client.lists.members.update(
                         list_id,
@@ -64,9 +70,10 @@ class MailChimpAPI:
                         data={"email_address": email, "status": "pending"},
                     )
                     return True
-                return False
+
             except MailChimpError:
-                return False
+                # if the subscription of an unsubscribed user fails, return `None` instead of `False` to indicate failure
+                return None
 
     def unsubscribe_user(self, list_id: Text, email: Text):
         hash = self.hash_email(email)

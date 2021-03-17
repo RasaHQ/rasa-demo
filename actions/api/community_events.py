@@ -11,6 +11,7 @@ from geopy.geocoders import Nominatim
 logger = logging.getLogger(__name__)
 
 DATE_FORMAT = "%d %B, %Y"
+COMMUNITY_EVENT_PAGE = "https://rasa.com/community/join/"
 
 
 class CommunityEvent:
@@ -74,7 +75,7 @@ class CommunityEvent:
 
     @staticmethod
     def get_community_page() -> requests.Response:
-        return requests.get("https://rasa.com/community/join/")
+        return requests.get(COMMUNITY_EVENT_PAGE)
 
     @classmethod
     def get_community_events(cls) -> List["CommunityEvent"]:

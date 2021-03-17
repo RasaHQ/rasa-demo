@@ -43,13 +43,17 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         email = tracker.get_slot("email")
         client = MailChimpAPI(config.mailchimp_api_key)
         # if the email is already subscribed, this returns False
+        # if subscription fails although email is not subscribed, this returns None
         added_to_list = client.subscribe_user(config.mailchimp_list, email)
 
         # utter submit template
         if added_to_list:
             dispatcher.utter_message(template="utter_confirmationemail")
-        else:
+        elif added_to_list == False:
             dispatcher.utter_message(template="utter_already_subscribed")
+        else:
+            # if added_to_list == None i.e. subscription failed
+            dispatcher.utter_message(template="utter_could_not_subscribe")
         return []
 
 
