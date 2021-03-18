@@ -14,6 +14,7 @@ env:
     RASA_X_USERNAME: ${{ secrets.RASA_X_USERNAME }}
     RASA_X_HOST_SCHEMA: ${{ secrets.RASA_X_HOST_SCHEMA }}
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    TRACKER_DB_URL: ${{ secrets.TRACKER_DB_URL }}
 
 jobs:
   check_changed_files:

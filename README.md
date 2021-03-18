@@ -90,7 +90,7 @@ To install requirements for development, run:
 make install-dev
 ```
 
-To run or test custom actions locally, put a file called .env in the root of your local directory with values
+To run custom actions locally, put a file called .env in the root of your local directory with values
 for the following environment variables. Most actions will work without them, but if you are working on actions
 connecting to external APIs you will need credentials.
 
@@ -113,6 +113,12 @@ To run unit tests for custom actions:
 ```
 make test-actions
 ```
+
+To ensure proper database cleanup during testing, you will need to include a connection URL for your tracker store database in your .env file e.g.
+```
+TRACKER_DB_URL=postgresql:///tracker
+```
+This is not necessary for running the actions.
 
 ## ⚫️ Code Style
 

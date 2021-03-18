@@ -1,7 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+You can create a file called `.env` in the root of the repo, containing your local env vars.
+"""
+from dotenv import load_dotenv
+
+# Load environment variables
+# needs to happen before anything else (to properly instantiate constants)
+
+load_dotenv(verbose=True)
+
 import os
 import pytest
 import json
 import requests
+import sqlalchemy as sa
+from sqlalchemy.orm import Session, sessionmaker
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
@@ -12,6 +25,19 @@ from actions import config
 from actions.api.rasaxapi import RasaXAPI
 from actions.api.mailchimp import MailChimpAPI
 from actions.api.gdrive_service import GDriveService
+
+
+TRACKER_DB_URL = os.environ.setdefault("TRACKER_DB_URL", "postgresql:///tracker")
+
+
+@pytest.fixture
+def db_session():
+    engine = sa.create_engine(TRACKER_DB_URL)
+    session = sessionmaker(bind=engine)()
+    try:
+        yield session
+    finally:
+        session.close()
 
 
 @pytest.fixture
@@ -48,7 +74,7 @@ def rasa_x_auth_header():
 
 
 @pytest.fixture
-def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker):
+def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker, db_session):
     """Create an empty conversation in Rasa X"""
     del_endpoint = f"{rasa_x_conversation_endpoint}/{tracker.sender_id}"
     # delete the conversation in case it already exists due to an improperly exited test
@@ -58,8 +84,9 @@ def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker):
     requests.post(rasa_x_conversation_endpoint, json=data, headers=rasa_x_auth_header)
 
     yield
-
     requests.delete(del_endpoint, headers=rasa_x_auth_header)
+    db_session.execute(f"DELETE FROM events WHERE sender_id = '{tracker.sender_id}'")
+    db_session.commit()
 
 
 @pytest.fixture
