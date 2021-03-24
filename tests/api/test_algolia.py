@@ -12,7 +12,7 @@ def test_get_algolia_link():
     )
     algolia_result = algolia.search("rasa")
     link_string = algolia.get_algolia_link(algolia_result.get("hits"), 0)
-    markdown_link_pattern = "\[[^\]]+\]\([^\)]+\)$"
+    markdown_link_pattern = r"- \[[^\]]+\]\([^\)]+\)$"
     assert re.match(markdown_link_pattern, link_string)
 
     link = link_string.split("](")[1][:-1]

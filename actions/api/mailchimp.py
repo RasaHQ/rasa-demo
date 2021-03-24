@@ -4,7 +4,7 @@ from mailchimp3 import MailChimp
 from mailchimp3.mailchimpclient import MailChimpError
 from mailchimp3.helpers import check_email
 import hashlib
-from typing import Text, Optional
+from typing import Text
 import logging
 
 logger = logging.getLogger(__name__)

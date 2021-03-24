@@ -14,12 +14,12 @@ import pytest
 import json
 import requests
 import uuid
-from typing import Text, List, Dict, Tuple, Any, Iterator
+from typing import Text, Dict, Tuple, Any, Iterator
 import sqlalchemy as sa
 from sqlalchemy.orm import Session, sessionmaker
 from mailchimp3.mailchimpclient import MailChimpError
-from mailchimp3 import MailChimp
-from gspread.models import Worksheet
+from mailchimp3 import MailChimp  # noqa: F401
+from gspread.models import Worksheet  # noqa: F401
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
