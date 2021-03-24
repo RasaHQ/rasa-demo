@@ -53,7 +53,7 @@ class MailChimpAPI:
             return True
 
         except MailChimpError:
-            # user is already in the database, or new user creation failed for another reason
+            # user is already in the database, or new user creation failed for another reason, try to update the user
             try:
                 hash = self.hash_email(email)
                 # check status of user already in database. Will throw exception if they are not in database.
@@ -77,3 +77,7 @@ class MailChimpAPI:
     def unsubscribe_user(self, list_id: Text, email: Text):
         hash = self.hash_email(email)
         self.client.lists.members.update(list_id, hash, {"status": "unsubscribed"})
+
+    def delete_user(self, list_id: Text, email: Text):
+        hash = self.hash_email(email)
+        self.client.lists.members.delete_permanent(list_id, hash)

@@ -163,7 +163,19 @@ def test_parse_community_events(mocker):
     assert actual_events == expected_events
 
 
-def test_action_submit_subscribe_newsletter_form_notsubscribed(
+def test_action_submit_subscribe_newsletter_form_unsubscribed(
+    tracker, dispatcher, domain, mailchimp_unsubscribed_email
+):
+
+    tracker.slots["email"] = mailchimp_unsubscribed_email
+    action = actions.ActionSubmitSubscribeNewsletterForm()
+    actual_events = action.run(dispatcher, tracker, domain)
+    assert actual_events == []
+    assert len(dispatcher.messages) == 1
+    assert dispatcher.messages[0]["template"] == "utter_confirmationemail"
+
+
+def test_action_submit_subscribe_newsletter_form_new(
     tracker, dispatcher, domain, mailchimp_new_email
 ):
 

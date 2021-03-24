@@ -92,11 +92,34 @@ def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker, db_s
 @pytest.fixture
 def mailchimp_new_email():
     """Create a user who is not already subscribed to the newsletter"""
-    email = "example@rasa.com"
+    email = "example_new@rasa.com"
     client = MailChimpAPI(config.mailchimp_api_key)
-    client.unsubscribe_user(config.mailchimp_list, email)
+    # try to delete user in case of an improperly exited test
+    try:
+        client.delete_user(config.mailchimp_list, email)
+    except MailChimpError:
+        pass
     yield email
+    client.delete_user(config.mailchimp_list, email)
+
+
+@pytest.fixture
+def mailchimp_unsubscribed_email():
+    """Create a user who is not already subscribed to the newsletter"""
+    email = "example_unsubscribed@rasa.com"
+    client = MailChimpAPI(config.mailchimp_api_key)
+    # try to delete user in case of an improperly exited test
+    try:
+        client.delete_user(config.mailchimp_list, email)
+    except MailChimpError:
+        pass
+    # add user to db
+    client.subscribe_user(config.mailchimp_list, email)
+    # set user as unsubscribed
     client.unsubscribe_user(config.mailchimp_list, email)
+
+    yield email
+    client.delete_user(config.mailchimp_list, email)
 
 
 @pytest.fixture
