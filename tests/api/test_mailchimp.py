@@ -1,5 +1,6 @@
 import pytest
 from typing import Text
+from mailchimp3 import MailChimp  # noqa: F401
 
 from actions import config
 from actions.api.mailchimp import MailChimpAPI
@@ -21,25 +22,26 @@ def test_hash_email(email: Text, hash: Text):
     assert actual_hash == hash
 
 
-def test_subscribe_user_new(mailchimp_new_email: Text):
-    client = MailChimpAPI(config.mailchimp_api_key)
-    actual_subscription_status = client.subscribe_user(
-        config.mailchimp_list, mailchimp_new_email
+def test_subscribe_user_new(mailchimp_client: "MailChimp", mailchimp_email: Text):
+    actual_subscription_status = mailchimp_client.subscribe_user(
+        config.mailchimp_list, mailchimp_email
     )
     assert actual_subscription_status == "newly_subscribed"
 
 
-def test_subscribe_user_subscribed(mailchimp_subscribed_email: Text):
-    client = MailChimpAPI(config.mailchimp_api_key)
-    actual_subscription_status = client.subscribe_user(
+def test_subscribe_user_subscribed(
+    mailchimp_client: "MailChimp", mailchimp_subscribed_email: Text
+):
+    actual_subscription_status = mailchimp_client.subscribe_user(
         config.mailchimp_list, mailchimp_subscribed_email
     )
     assert actual_subscription_status == "already_subscribed"
 
 
-def test_subscribe_user_unsubscribed(mailchimp_unsubscribed_email: Text):
-    client = MailChimpAPI(config.mailchimp_api_key)
-    actual_subscription_status = client.subscribe_user(
+def test_subscribe_user_unsubscribed(
+    mailchimp_client: "MailChimp", mailchimp_unsubscribed_email: Text
+):
+    actual_subscription_status = mailchimp_client.subscribe_user(
         config.mailchimp_list, mailchimp_unsubscribed_email
     )
     assert actual_subscription_status == "newly_subscribed"

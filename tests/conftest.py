@@ -102,52 +102,48 @@ def rasa_x_convo(
 
 
 @pytest.fixture
-def mailchimp() -> Tuple[Text, "MailChimp"]:
-    """Create a user who is not already subscribed to the newsletter"""
+def mailchimp_client() -> "MailChimp":
+    client = MailChimpAPI(config.mailchimp_api_key)
+    return client
+
+
+@pytest.fixture
+def mailchimp_email(mailchimp_client: "MailChimp") -> Iterator[Text]:
+    """Create a user who is not on the newsletter list at all"""
     # use a random email to avoid mailchimp errors due to too many
     # attempted signups by the same email address
     email = f"{uuid.uuid4().hex}@rasa.com"
-    client = MailChimpAPI(config.mailchimp_api_key)
+
     # try to delete user in case of an improperly exited test
     try:
-        client.delete_user(config.mailchimp_list, email)
+        mailchimp_client.delete_user(config.mailchimp_list, email)
     except MailChimpError:
         pass
 
-    yield (email, client)
-
-    client.delete_user(config.mailchimp_list, email)
-
-
-@pytest.fixture
-def mailchimp_new_email(mailchimp: Tuple[Text, "MailChimp"]) -> Iterator[Text]:
-    """Create a user who is not already subscribed to the newsletter"""
-    email = mailchimp[0]
-
     yield email
 
+    mailchimp_client.delete_user(config.mailchimp_list, email)
+
 
 @pytest.fixture
-def mailchimp_unsubscribed_email(mailchimp: Tuple[Text, "MailChimp"]) -> Iterator[Text]:
-    """Create a user who is not already subscribed to the newsletter"""
-    email = mailchimp[0]
-    client = mailchimp[1]
+def mailchimp_unsubscribed_email(
+    mailchimp_client: "MailChimp", mailchimp_email: Text
+) -> Text:
+    """Create a user who is unsubscribed from the newsletter"""
     # add user to db
-    client.subscribe_user(config.mailchimp_list, email)
+    mailchimp_client.subscribe_user(config.mailchimp_list, mailchimp_email)
     # set user as unsubscribed
-    client.unsubscribe_user(config.mailchimp_list, email)
-
-    yield email
+    mailchimp_client.unsubscribe_user(config.mailchimp_list, mailchimp_email)
+    return mailchimp_email
 
 
 @pytest.fixture
-def mailchimp_subscribed_email(mailchimp: Tuple[Text, "MailChimp"]) -> Iterator[Text]:
-    """Create a user who is already subscribed to the newsletter"""
-    email = mailchimp[0]
-    client = mailchimp[1]
-    client.subscribe_user(config.mailchimp_list, email)
-
-    yield email
+def mailchimp_subscribed_email(
+    mailchimp_client: "MailChimp", mailchimp_email: Text
+) -> Text:
+    """Create a user who is subscribed to the newsletter"""
+    mailchimp_client.subscribe_user(config.mailchimp_list, mailchimp_email)
+    return mailchimp_email
 
 
 @pytest.fixture

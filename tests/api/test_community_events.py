@@ -17,11 +17,10 @@ def test_get_community_events(caplog: LogCaptureFixture):
 
 
 def test_parse_community_events(mocker: mocker):
-    mocker.patch.object(
-        community_events,
-        "get_community_page",
-        return_value=pickle.load(open("tests/data/events_page.pkl", "rb")),
-    )
+    with open("tests/data/events_page.pkl", "rb") as fh:
+        mocker.patch.object(
+            community_events, "get_community_page", return_value=pickle.load(fh),
+        )
     actual_events = [
         event.as_kwargs() for event in community_events.get_community_events()
     ]

@@ -161,9 +161,9 @@ def test_action_submit_subscribe_newsletter_form_new(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
     domain: Dict,
-    mailchimp_new_email: Text,
+    mailchimp_email: Text,
 ):
-    tracker.slots["email"] = mailchimp_new_email
+    tracker.slots["email"] = mailchimp_email
     action = actions.ActionSubmitSubscribeNewsletterForm()
     actual_events = action.run(dispatcher, tracker, domain)
     assert actual_events == []
