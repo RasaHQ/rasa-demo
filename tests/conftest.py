@@ -13,13 +13,14 @@ import os
 import pytest
 import json
 import requests
+import uuid
 import sqlalchemy as sa
-from sqlalchemy.orm import Session, sessionmaker
+from sqlalchemy.orm import sessionmaker
+from mailchimp3.mailchimpclient import MailChimpError
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
 from rasa.shared.core.domain import Domain
-from mailchimp3.mailchimpclient import MailChimpError
 
 from actions import config
 from actions.api.rasaxapi import RasaXAPI
@@ -64,13 +65,15 @@ def domain():
 @pytest.fixture
 def rasa_x_conversation_endpoint():
     """Return the Rasa X conversations endpoint"""
-    return f"{RasaXAPI.schema}://{RasaXAPI.host}/api/conversations"
+    rasax = RasaXAPI()
+    return f"{rasax.schema}://{rasax.host}/api/conversations"
 
 
 @pytest.fixture
 def rasa_x_auth_header():
     """Get authentication header for Rasa X"""
-    return RasaXAPI.get_auth_header()
+    rasax = RasaXAPI()
+    return rasax.get_auth_header()
 
 
 @pytest.fixture
@@ -90,59 +93,70 @@ def rasa_x_convo(rasa_x_conversation_endpoint, rasa_x_auth_header, tracker, db_s
 
 
 @pytest.fixture
-def mailchimp_new_email():
+def mailchimp():
     """Create a user who is not already subscribed to the newsletter"""
-    email = "example_new@rasa.com"
+    # use a random email to avoid mailchimp errors due to too many attempted signups by the same email address
+    email = f"{uuid.uuid4().hex}@rasa.com"
     client = MailChimpAPI(config.mailchimp_api_key)
     # try to delete user in case of an improperly exited test
     try:
         client.delete_user(config.mailchimp_list, email)
     except MailChimpError:
         pass
-    yield email
+
+    yield email, client
+
     client.delete_user(config.mailchimp_list, email)
 
 
 @pytest.fixture
-def mailchimp_unsubscribed_email():
+def mailchimp_new_email(mailchimp):
     """Create a user who is not already subscribed to the newsletter"""
-    email = "example_unsubscribed@rasa.com"
-    client = MailChimpAPI(config.mailchimp_api_key)
-    # try to delete user in case of an improperly exited test
-    try:
-        client.delete_user(config.mailchimp_list, email)
-    except MailChimpError:
-        pass
+    email = mailchimp[0]
+
+    yield email
+
+
+@pytest.fixture
+def mailchimp_unsubscribed_email(mailchimp):
+    """Create a user who is not already subscribed to the newsletter"""
+    email = mailchimp[0]
+    client = mailchimp[1]
     # add user to db
     client.subscribe_user(config.mailchimp_list, email)
     # set user as unsubscribed
     client.unsubscribe_user(config.mailchimp_list, email)
 
     yield email
-    client.delete_user(config.mailchimp_list, email)
 
 
 @pytest.fixture
-def mailchimp_subscribed_email():
+def mailchimp_subscribed_email(mailchimp):
     """Create a user who is already subscribed to the newsletter"""
-    email = "example_subscribed@rasa.com"
-    client = MailChimpAPI(config.mailchimp_api_key)
+    email = mailchimp[0]
+    client = mailchimp[1]
     client.subscribe_user(config.mailchimp_list, email)
+
     yield email
-    client.unsubscribe_user(config.mailchimp_list, email)
 
 
 @pytest.fixture
-def gdrive_sheet():
-    """Clear test sheet to allow asserting contents of rows"""
-    test_sheet = "demobot_testing"
-    gdrive = GDriveService()
-    gdrive.SHEET_NAME = test_sheet
-    spreadsheet_name = gdrive.SPREADSHEET_NAME
-    spreadsheet = gdrive.request_sheet(spreadsheet_name)
-    worksheet = spreadsheet.worksheet(test_sheet)
+def gdrive(mocker):
+    """Clear test worksheet to allow asserting contents of rows"""
+    spreadsheet_name = "SaraUnitTestingSalesSheet"
+    worksheet_name = "demobot_testing"
+    mocker.patch.object(
+        GDriveService, "SPREADSHEET_NAME", spreadsheet_name,
+    )
+    mocker.patch.object(
+        GDriveService, "WORKSHEET_NAME", worksheet_name,
+    )
+
+    gdrive_client = GDriveService()
+    spreadsheet = gdrive_client.request_spreadsheet(gdrive_client.SPREADSHEET_NAME)
+    worksheet = spreadsheet.worksheet(worksheet_name)
     worksheet.resize(rows=1)
 
-    yield test_sheet, worksheet
+    yield gdrive_client, worksheet
 
     worksheet.resize(rows=1)

@@ -49,7 +49,7 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         # utter submit template
         if added_to_list:
             dispatcher.utter_message(template="utter_confirmationemail")
-        elif added_to_list == False:
+        elif added_to_list is False:
             dispatcher.utter_message(template="utter_already_subscribed")
         else:
             # if added_to_list == None i.e. subscription failed
@@ -102,8 +102,8 @@ class ActionSubmitSalesForm(Action):
         sales_info = [company, use_case, budget, date, person_name, job_function, email]
 
         try:
-            gdrive = GDriveService()
-            gdrive.store_data(sales_info)
+            gdrive_client = GDriveService()
+            gdrive_client.store_data(sales_info)
             dispatcher.utter_message(template="utter_confirm_salesrequest")
             return []
         except Exception as e:
@@ -541,7 +541,7 @@ class ActionDefaultFallback(Action):
             return [UserUtteranceReverted()]
 
 
-class CommunityEventAction(Action):
+class ActionCommunityEvent(Action):
     """Utters Rasa community events."""
 
     def __init__(self) -> None:
@@ -606,7 +606,8 @@ class CommunityEventAction(Action):
         location: Text,
     ) -> None:
 
-        only_next = True if "next" in tracker.latest_message.get("text") else False
+        text = tracker.latest_message.get("text") or ""
+        only_next = True if "next" in text else False
 
         if location:
             if not events_for_location:
@@ -800,7 +801,8 @@ class ActionTagFeedback(Action):
         else:
             return []
 
-        RasaXAPI.tag_convo(tracker, label)
+        rasax = RasaXAPI()
+        rasax.tag_convo(tracker, label)
 
         return []
 
@@ -826,6 +828,7 @@ class ActionTagDocsSearch(Action):
         else:
             return []
 
-        RasaXAPI.tag_convo(tracker, label)
+        rasax = RasaXAPI()
+        rasax.tag_convo(tracker, label)
 
         return []

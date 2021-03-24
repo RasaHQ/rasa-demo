@@ -58,7 +58,7 @@ class MailChimpAPI:
                 hash = self.hash_email(email)
                 # check status of user already in database. Will throw exception if they are not in database.
                 status = self.client.lists.members.get(list_id, hash).get("status")
-                if status != "subscribed" or status != "pending":
+                if status in ["subscribed", "pending"]:
                     # if user is already subscribed, can't subscribe again
                     return False
                 else:
@@ -79,5 +79,11 @@ class MailChimpAPI:
         self.client.lists.members.update(list_id, hash, {"status": "unsubscribed"})
 
     def delete_user(self, list_id: Text, email: Text):
+        """
+        Unsubscribes and then permanently deletes a member from the mailing list.
+        Note that after permanent deletion, MailChimp does not allow resubscription of the deleted address
+        via the API.
+        """
+        self.unsubscribe_user(list_id, email)
         hash = self.hash_email(email)
         self.client.lists.members.delete_permanent(list_id, hash)

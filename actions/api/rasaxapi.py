@@ -13,16 +13,22 @@ logger = logging.getLogger(__name__)
 class RasaXAPI:
     """Class to connect to the Rasa X API"""
 
-    schema = config.rasa_x_host_schema
-    host = config.rasa_x_host
-    username = config.rasa_x_username
-    password = config.rasa_x_password
+    def __init__(
+        self,
+        schema: Text = config.rasa_x_host_schema,
+        host: Text = config.rasa_x_host,
+        username: Text = config.rasa_x_username,
+        password: Text = config.rasa_x_password,
+    ):
+        self.schema = schema
+        self.host = host
+        self.username = username
+        self.password = password
 
-    @classmethod
-    def get_auth_header(cls):
+    def get_auth_header(self):
         """Get authorization header with bearer token"""
-        url = f"{cls.schema}://{cls.host}/api/auth"
-        payload = {"username": cls.username, "password": cls.password}
+        url = f"{self.schema}://{self.host}/api/auth"
+        payload = {"username": self.username, "password": self.password}
         response = requests.post(url, json=payload)
         try:
             authtoken = response.json()["access_token"]
@@ -34,12 +40,11 @@ class RasaXAPI:
             )
             return {}
 
-    @classmethod
-    def tag_convo(cls, tracker: Tracker, label: Text) -> requests.Response:
+    def tag_convo(self, tracker: Tracker, label: Text) -> requests.Response:
         """Tag a conversation in Rasa X with a given label"""
-        auth_header = cls.get_auth_header()
+        auth_header = self.get_auth_header()
         endpoint = (
-            f"{cls.schema}://{cls.host}/api/conversations/{tracker.sender_id}/tags"
+            f"{self.schema}://{self.host}/api/conversations/{tracker.sender_id}/tags"
         )
         response = requests.post(url=endpoint, data=label, headers=auth_header)
         return response
