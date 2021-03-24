@@ -2,7 +2,7 @@
 # NB! when updating make sure the version is in sync with:
 # * rasa version in requirements.txt
 # * RASA_VERSION and RASA_X_VERSION  in .github/workflows/continuous-deployment.yml
-FROM rasa/rasa-sdk:2.3.0 
+FROM rasa/rasa-sdk:2.4.0 
 
 
 # Use subdirectory as working directory
