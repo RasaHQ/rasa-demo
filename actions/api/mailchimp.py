@@ -50,7 +50,7 @@ class MailChimpAPI:
             self.client.lists.members.create(
                 list_id, data={"email_address": email, "status": "pending"}
             )
-            return True
+            return "newly_subscribed"
 
         except MailChimpError:
             # user is already in the database, or new user creation failed for another reason, try to update the user
@@ -60,7 +60,7 @@ class MailChimpAPI:
                 status = self.client.lists.members.get(list_id, hash).get("status")
                 if status in ["subscribed", "pending"]:
                     # if user is already subscribed, can't subscribe again
-                    return False
+                    return "already_subscribed"
                 else:
                     # if user is in database, but is unsubscribed or archived, attempt to resubscribe
                     self.client.lists.members.update(
@@ -68,11 +68,11 @@ class MailChimpAPI:
                         hash,
                         data={"email_address": email, "status": "pending"},
                     )
-                    return True
+                    return "newly_subscribed"
 
             except MailChimpError:
                 # if the subscription of an unsubscribed user fails, return `None` instead of `False` to indicate failure
-                return None
+                return "error"
 
     def unsubscribe_user(self, list_id: Text, email: Text):
         hash = self.hash_email(email)

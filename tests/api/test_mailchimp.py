@@ -22,23 +22,23 @@ def test_hash_email(email, hash):
 
 def test_subscribe_user_new(mailchimp_new_email):
     client = MailChimpAPI(config.mailchimp_api_key)
-    actual_subscribed = client.subscribe_user(
+    actual_subscription_status = client.subscribe_user(
         config.mailchimp_list, mailchimp_new_email
     )
-    assert actual_subscribed is True
+    assert actual_subscription_status == "newly_subscribed"
 
 
 def test_subscribe_user_subscribed(mailchimp_subscribed_email):
     client = MailChimpAPI(config.mailchimp_api_key)
-    actual_subscribed = client.subscribe_user(
+    actual_subscription_status = client.subscribe_user(
         config.mailchimp_list, mailchimp_subscribed_email
     )
-    assert actual_subscribed is False
+    assert actual_subscription_status == "already_subscribed"
 
 
 def test_subscribe_user_unsubscribed(mailchimp_unsubscribed_email):
     client = MailChimpAPI(config.mailchimp_api_key)
-    actual_subscribed = client.subscribe_user(
+    actual_subscription_status = client.subscribe_user(
         config.mailchimp_list, mailchimp_unsubscribed_email
     )
-    assert actual_subscribed is True
+    assert actual_subscription_status == "newly_subscribed"
