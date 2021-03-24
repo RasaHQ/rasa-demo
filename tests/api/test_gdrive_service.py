@@ -1,11 +1,12 @@
 import uuid
+from typing import Tuple
 
-from gspread.models import Spreadsheet
+from gspread.models import Spreadsheet, Worksheet
 
 from actions.api.gdrive_service import GDriveService
 
 
-def test_append_row(gdrive):
+def test_append_row(gdrive: Tuple[GDriveService, Worksheet]):
     # by using a random name we can verify that the line written to the spreadsheet is the one the test wrote
     name = uuid.uuid1().hex
     gdrive_client = gdrive[0]

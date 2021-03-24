@@ -46,12 +46,10 @@ class CommunityEvent:
         )
 
     def __repr__(self) -> Text:
-        return "{} ({}): {} ({})".format(
-            self.name, self.city, self.formatted_date, self.date
-        )
+        return f"{self.name} ({self.city}): {self.formatted_date} ({self.date})"
 
     def name_as_link(self) -> Text:
-        return "[{}]({})".format(self.name, self.link)
+        return f"[{self.name}]({self.link})"
 
     def as_kwargs(self) -> Dict[Text, Text]:
         return {

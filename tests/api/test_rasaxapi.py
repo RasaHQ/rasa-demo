@@ -1,4 +1,7 @@
 import requests
+from typing import Dict, Text
+
+from rasa_sdk import Tracker
 
 from actions.api.rasaxapi import RasaXAPI
 
@@ -11,7 +14,10 @@ def test_get_auth():
 
 
 def test_tag_convo(
-    tracker, rasa_x_convo, rasa_x_auth_header, rasa_x_conversation_endpoint,
+    tracker: Tracker,
+    rasa_x_convo: None,
+    rasa_x_auth_header: Dict[Text, Text],
+    rasa_x_conversation_endpoint: Text,
 ):
     tag = {"value": "test"}
     labeldata = '[{"value":"test","color":"76af3c"}]'

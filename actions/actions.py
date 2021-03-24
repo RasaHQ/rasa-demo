@@ -104,8 +104,7 @@ class ActionSubmitSalesForm(Action):
             return []
         except Exception as e:
             logger.error(
-                "Failed to write data to gdocs. Error: {}" "".format(e.message),
-                exc_info=True,
+                f"Failed to write data to gdocs. Error: {e.message}", exc_info=True,
             )
             dispatcher.utter_message(template="utter_salesrequest_failed")
             return []

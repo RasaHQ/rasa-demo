@@ -42,7 +42,7 @@ class MailChimpAPI:
             )
             return False
 
-    def subscribe_user(self, list_id: Text, email: Text) -> Optional[bool]:
+    def subscribe_user(self, list_id: Text, email: Text) -> Text:
         """Subscribe the user to the newsletter if they're not already"""
         try:
             # subscribe a user who is not in the database at all to the newsletter.
@@ -71,7 +71,8 @@ class MailChimpAPI:
                     return "newly_subscribed"
 
             except MailChimpError:
-                # if the subscription of an unsubscribed user fails, return `None` instead of `False` to indicate failure
+                # if the subscription of an unsubscribed user fails, some other error occurred
+                # like e.g. a permanently deleted user attempting to resubscribe
                 return "error"
 
     def unsubscribe_user(self, list_id: Text, email: Text):

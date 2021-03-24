@@ -29,6 +29,6 @@ rasa_x_host = os.environ.get("RASA_X_HOST", "rasa-x:5002")
 
 rasa_x_password = os.environ.get("RASA_X_PASSWORD", "")
 
-rasa_x_username = os.environ.get("RASA_X_USERNAME", "")
+rasa_x_username = os.environ.get("RASA_X_USERNAME", "me")
 
 rasa_x_host_schema = os.environ.get("RASA_X_HOST_SCHEMA", "http")

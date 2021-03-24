@@ -1,4 +1,5 @@
 import requests
+import re
 
 from actions import config
 from actions.api.algolia import AlgoliaAPI
@@ -11,6 +12,9 @@ def test_get_algolia_link():
     )
     algolia_result = algolia.search("rasa")
     link_string = algolia.get_algolia_link(algolia_result.get("hits"), 0)
+    markdown_link_pattern = "\[[^\]]+\]\([^\)]+\)$"
+    assert re.match(markdown_link_pattern, link_string)
+
     link = link_string.split("](")[1][:-1]
     link_result = requests.get(link)
     assert link_result.status_code == 200

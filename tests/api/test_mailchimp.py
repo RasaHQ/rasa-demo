@@ -1,4 +1,5 @@
 import pytest
+from typing import Text
 
 from actions import config
 from actions.api.mailchimp import MailChimpAPI
@@ -7,7 +8,7 @@ from actions.api.mailchimp import MailChimpAPI
 @pytest.mark.parametrize(
     "email, validity", [("valid.email@rasa.com", True), ("notanemail", False)],
 )
-def test_is_valid_email(email, validity):
+def test_is_valid_email(email: Text, validity: bool):
     actual_validity = MailChimpAPI.is_valid_email(email)
     assert actual_validity == validity
 
@@ -15,12 +16,12 @@ def test_is_valid_email(email, validity):
 @pytest.mark.parametrize(
     "email, hash", [("valid.email@rasa.com", "c60f89d8592b8eebb2a463d78d37c0ee")],
 )
-def test_hash_email(email, hash):
+def test_hash_email(email: Text, hash: Text):
     actual_hash = MailChimpAPI.hash_email(email)
     assert actual_hash == hash
 
 
-def test_subscribe_user_new(mailchimp_new_email):
+def test_subscribe_user_new(mailchimp_new_email: Text):
     client = MailChimpAPI(config.mailchimp_api_key)
     actual_subscription_status = client.subscribe_user(
         config.mailchimp_list, mailchimp_new_email
@@ -28,7 +29,7 @@ def test_subscribe_user_new(mailchimp_new_email):
     assert actual_subscription_status == "newly_subscribed"
 
 
-def test_subscribe_user_subscribed(mailchimp_subscribed_email):
+def test_subscribe_user_subscribed(mailchimp_subscribed_email: Text):
     client = MailChimpAPI(config.mailchimp_api_key)
     actual_subscription_status = client.subscribe_user(
         config.mailchimp_list, mailchimp_subscribed_email
@@ -36,7 +37,7 @@ def test_subscribe_user_subscribed(mailchimp_subscribed_email):
     assert actual_subscription_status == "already_subscribed"
 
 
-def test_subscribe_user_unsubscribed(mailchimp_unsubscribed_email):
+def test_subscribe_user_unsubscribed(mailchimp_unsubscribed_email: Text):
     client = MailChimpAPI(config.mailchimp_api_key)
     actual_subscription_status = client.subscribe_user(
         config.mailchimp_list, mailchimp_unsubscribed_email

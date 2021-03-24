@@ -2,10 +2,15 @@ import pytest
 import requests
 import datetime
 import uuid
+from typing import Text, Dict, Tuple, List
+from gspread.models import Worksheet
 
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import EventType, SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk import Tracker
 
 from actions import actions
+from actions.api.gdrive_service import GDriveService
 
 
 @pytest.mark.parametrize(
@@ -17,14 +22,14 @@ from actions import actions
     ],
 )
 def test_action_tag_feedback(
-    tracker,
-    dispatcher,
-    domain,
-    feedback_value,
-    expected_tags,
-    rasa_x_convo,
-    rasa_x_auth_header,
-    rasa_x_conversation_endpoint,
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    feedback_value: Text,
+    expected_tags: List[Dict],
+    rasa_x_convo: None,
+    rasa_x_auth_header: Dict[Text, Text],
+    rasa_x_conversation_endpoint: Text,
 ):
     tracker.slots["feedback_value"] = feedback_value
     action = actions.ActionTagFeedback()
@@ -49,14 +54,14 @@ def test_action_tag_feedback(
     ],
 )
 def test_action_tag_docs_search(
-    tracker,
-    dispatcher,
-    domain,
-    intent,
-    expected_tags,
-    rasa_x_convo,
-    rasa_x_auth_header,
-    rasa_x_conversation_endpoint,
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    intent: Text,
+    expected_tags: List[Dict],
+    rasa_x_convo: None,
+    rasa_x_auth_header: Dict[Text, Text],
+    rasa_x_conversation_endpoint: Text,
 ):
     tracker.latest_message["intent"]["name"] = intent
     action = actions.ActionTagDocsSearch()
@@ -86,7 +91,12 @@ def test_action_tag_docs_search(
     ],
 )
 def test_action_set_onboarding(
-    tracker, dispatcher, domain, intent, entity, expected_events
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    intent: Text,
+    entity: Dict[Text, Text],
+    expected_events: List[EventType],
 ):
     tracker.latest_message["intent"]["name"] = intent
     tracker.latest_message["entities"].append(entity)
@@ -95,7 +105,12 @@ def test_action_set_onboarding(
     assert actual_events == expected_events
 
 
-def test_action_submit_sales_form(tracker, dispatcher, domain, gdrive):
+def test_action_submit_sales_form(
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    gdrive: Tuple[GDriveService, Worksheet],
+):
     collected_info = {
         "company": "Sara CI",
         "use_case": "Unit Tests",
@@ -129,7 +144,10 @@ def test_action_submit_sales_form(tracker, dispatcher, domain, gdrive):
 
 
 def test_action_submit_subscribe_newsletter_form_unsubscribed(
-    tracker, dispatcher, domain, mailchimp_unsubscribed_email
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    mailchimp_unsubscribed_email: Text,
 ):
     tracker.slots["email"] = mailchimp_unsubscribed_email
     action = actions.ActionSubmitSubscribeNewsletterForm()
@@ -140,7 +158,10 @@ def test_action_submit_subscribe_newsletter_form_unsubscribed(
 
 
 def test_action_submit_subscribe_newsletter_form_new(
-    tracker, dispatcher, domain, mailchimp_new_email
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    mailchimp_new_email: Text,
 ):
     tracker.slots["email"] = mailchimp_new_email
     action = actions.ActionSubmitSubscribeNewsletterForm()
@@ -151,7 +172,10 @@ def test_action_submit_subscribe_newsletter_form_new(
 
 
 def test_action_submit_subscribe_newsletter_form_subscribed(
-    tracker, dispatcher, domain, mailchimp_subscribed_email
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    mailchimp_subscribed_email: Text,
 ):
     tracker.slots["email"] = mailchimp_subscribed_email
     action = actions.ActionSubmitSubscribeNewsletterForm()
@@ -161,7 +185,12 @@ def test_action_submit_subscribe_newsletter_form_subscribed(
     assert dispatcher.messages[0]["template"] == "utter_already_subscribed"
 
 
-def test_action_community_events(tracker, dispatcher, domain):
+def test_action_community_events(
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: Dict,
+    mailchimp_unsubscribed_email: Text,
+):
     action = actions.ActionCommunityEvent()
     actual_events = action.run(dispatcher, tracker, domain)
     assert actual_events == []
