@@ -52,6 +52,7 @@ jobs:
       training: ${{ steps.changed-files.outputs.training }}
       actions: ${{ steps.changed-files.outputs.actions }}
       deployment: ${{ steps.changed-files.outputs.deployment }}
+
     steps:
       - uses: actions/checkout@v2
       - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
@@ -174,6 +175,8 @@ jobs:
       uses: styfle/cancel-workflow-action@0.8.0
       with:
         access_token: ${{ github.token }}
+    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
+    steps:
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
@@ -232,3 +235,4 @@ jobs:
             curl -X PUT  \
             --url https://$RASA_X_DOMAIN/api/projects/default/models/$MODEL_NAME/tags/production \
             --header "Authorization: Bearer ${AUTH_TOKEN}"
+

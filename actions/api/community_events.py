@@ -1,11 +1,17 @@
+from __future__ import annotations  # for typing by enclosing class
+
 import ssl
-from datetime import datetime
+import datetime
 from typing import Dict, List, Optional, Text
 import logging
+import requests
+from bs4 import BeautifulSoup
+from geopy.geocoders import Nominatim
 
 logger = logging.getLogger(__name__)
 
 DATE_FORMAT = "%d %B, %Y"
+COMMUNITY_EVENT_PAGE = "https://rasa.com/community/join/"
 
 
 class CommunityEvent:
@@ -17,18 +23,13 @@ class CommunityEvent:
         self.date = date
         self.link = link
 
-    def __repr__(self) -> Text:
-        return "{} ({}): {} ({})".format(
-            self.name, self.city, self.formatted_date, self.date
-        )
-
     @classmethod
     def from_html(cls, html) -> Optional["CommunityEvent"]:
         try:
-            city = html.contents[0]
-            link = html.contents[3].get("href")
-            name = html.contents[3].contents[0]
-            date_as_string = html.contents[8]
+            city = html.contents[-1]
+            link = html.contents[0].get("href")
+            name = html.contents[0].contents[0]
+            date_as_string = html.contents[3]
             country = get_country_for(city)
             date = parse_community_date(date_as_string).date()
         except Exception as e:
@@ -44,8 +45,11 @@ class CommunityEvent:
             link.strip(),
         )
 
+    def __repr__(self) -> Text:
+        return f"{self.name} ({self.city}): {self.formatted_date} ({self.date})"
+
     def name_as_link(self) -> Text:
-        return "[{}]({})".format(self.name, self.link)
+        return f"[{self.name}]({self.link})"
 
     def as_kwargs(self) -> Dict[Text, Text]:
         return {
@@ -55,24 +59,20 @@ class CommunityEvent:
         }
 
 
-def parse_community_date(date_string: Text) -> datetime:
-
+def parse_community_date(date_string: Text) -> datetime.datetime:
+    """Parse string date as datetime object"""
     dates = date_string.split("-")
 
     try:
-        return datetime.strptime(dates[-1].strip(), DATE_FORMAT)
+        return datetime.datetime.strptime(dates[-1].strip(), DATE_FORMAT)
     except Exception as e:
         logger.warning(e)
-        return datetime.min
+        return datetime.datetime.max  # if date can't be parsed assume event is future
 
 
-def get_community_events() -> List[CommunityEvent]:
-    """Returns list of community events sorted ascending by their date."""
-    from bs4 import BeautifulSoup
-    import requests as r
-    import datetime
-
-    response = r.get("https://rasa.com/community/join/")
+def get_community_events() -> List["CommunityEvent"]:
+    """Return list of community events sorted ascending by their date."""
+    response = get_community_page()
 
     if response.status_code == 200:
         community_page = response.content
@@ -80,27 +80,28 @@ def get_community_events() -> List[CommunityEvent]:
         soup = BeautifulSoup(community_page, "html.parser")
 
         events = soup.find("ul", attrs={"id": "events-list"}).find_all("li")
-        # [1].find("ul").find_all("li")
-        events = [CommunityEvent.from_html(e) for e in events]
+        parsed_events = [CommunityEvent.from_html(e) for e in events]
 
         now = datetime.date.today()
-        events = [e for e in events if e is not None and e.date >= now]
-        return sorted(events, key=lambda e: e.date)
+        upcoming_events = [e for e in parsed_events if e is not None and e.date >= now]
+        return sorted(upcoming_events, key=lambda e: e.date)
 
     return []
 
 
 def get_country_for(city: Text) -> Optional[Text]:
-    from geopy.geocoders import Nominatim
-
     ssl_context = ssl.create_default_context()
     ssl_context.check_hostname = False
     ssl_context.verify_mode = ssl.CERT_NONE
 
-    geo_locator = Nominatim(ssl_context=ssl_context)
+    geo_locator = Nominatim(ssl_context=ssl_context, user_agent="rasa-demo")
     location = geo_locator.geocode(city, language="en", addressdetails=True)
 
     if location:
         return location.raw["address"].get("country")
 
     return None
+
+
+def get_community_page() -> requests.Response:
+    return requests.get(COMMUNITY_EVENT_PAGE)

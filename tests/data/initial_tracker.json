@@ -1,0 +1,70 @@
+{
+  "sender_id": "unit_test_user",
+  "slots": {
+    "budget": null,
+    "business_email": null,
+    "can_use_spacy": null,
+    "company": null,
+    "current_api": null,
+    "email": null,
+    "entity_extractor": null,
+    "feedback_message": null,
+    "feedback_value": null,
+    "job_function": null,
+    "language": null,
+    "name": null,
+    "nlu_part": null,
+    "onboarding": null,
+    "person_name": null,
+    "problem_description": null,
+    "product": null,
+    "install_type": null,
+    "shown_privacy": null,
+    "step": null,
+    "suggestion": null,
+    "unknown_nlu_part": null,
+    "unknown_product": null,
+    "use_case": null,
+    "docs_found": null,
+    "faq": null,
+    "requested_slot": null
+  },
+  "latest_message": {
+    "intent": {},
+    "entities": [],
+    "text": null,
+    "message_id": null,
+    "metadata": {}
+  },
+  "latest_event_time": 1612422342.865033865,
+  "followup_action": null,
+  "paused": false,
+  "events": [
+    {
+      "event": "action",
+      "timestamp": 1612422342.8649258614,
+      "name": "action_session_start",
+      "policy": null,
+      "confidence": 1.0,
+      "action_text": null
+    },
+    {
+      "event": "session_started",
+      "timestamp": 1612422342.8649988174
+    },
+    {
+      "event": "action",
+      "timestamp": 1612422342.865033865,
+      "name": "action_listen",
+      "policy": null,
+      "confidence": null,
+      "action_text": null
+    }
+  ],
+  "latest_input_channel": null,
+  "active_loop": {},
+  "latest_action": {
+    "action_name": "action_listen"
+  },
+  "latest_action_name": "action_listen"
+}
