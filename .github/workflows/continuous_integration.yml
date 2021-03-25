@@ -2,6 +2,20 @@
 name: Continuous Integration
 on: [pull_request]
 
+env:
+    GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
+    MAILCHIMP_LIST: ${{ secrets.MAILCHIMP_LIST }}
+    MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+    ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+    ALGOLIA_SEARCH_KEY: ${{ secrets.ALGOLIA_SEARCH_KEY }}
+    ALGOLIA_DOCS_INDEX: ${{ secrets.ALGOLIA_DOCS_INDEX }}
+    RASA_X_HOST: ${{ secrets.RASA_X_DOMAIN }}
+    RASA_X_PASSWORD: ${{ secrets.RASA_X_PASSWORD }}
+    RASA_X_USERNAME: ${{ secrets.RASA_X_USERNAME }}
+    RASA_X_HOST_SCHEMA: ${{ secrets.RASA_X_HOST_SCHEMA }}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    TRACKER_DB_URL: ${{ secrets.TRACKER_DB_URL }}
+
 jobs:
   check_changed_files:
     name: Check for file changes
@@ -53,6 +67,25 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         make types
+  action-unit-tests:
+    needs:
+      - lint-testing
+      - type-testing
+    name: Custom Action Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        make install-dev
+    - name: Unit Tests
+      working-directory: ${{ github.workspace }}
+      run: |
+        make test-actions
   data-validation:
     name: Data Validation
     runs-on: ubuntu-latest
@@ -101,8 +134,6 @@ jobs:
       if: steps.cvnlu.outcome == 'success'
       uses: amn41/comment-on-pr@comment-file-contents
       continue-on-error: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         msg: results.md
     - name: Train Model

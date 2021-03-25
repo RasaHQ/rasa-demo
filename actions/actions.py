@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import logging
 import json
-import requests
 from datetime import datetime
 from typing import Any, Dict, List, Text, Optional
 
 from rasa_sdk import Action, Tracker
+from rasa_sdk.types import DomainDict
 from rasa_sdk.forms import FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import (
@@ -22,6 +22,7 @@ from actions.api.algolia import AlgoliaAPI
 from actions.api.discourse import DiscourseAPI
 from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
+from actions.api.rasaxapi import RasaXAPI
 
 logger = logging.getLogger(__name__)
 
@@ -33,23 +34,20 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         return "action_submit_subscribe_newsletter_form"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         """Once we have an email, attempt to add it to the database"""
 
         email = tracker.get_slot("email")
         client = MailChimpAPI(config.mailchimp_api_key)
-        # if the email is already subscribed, this returns False
-        added_to_list = client.subscribe_user(config.mailchimp_list, email)
+        subscription_status = client.subscribe_user(config.mailchimp_list, email)
 
-        # utter submit template
-        if added_to_list:
+        if subscription_status == "newly_subscribed":
             dispatcher.utter_message(template="utter_confirmationemail")
-        else:
+        elif subscription_status == "already_subscribed":
             dispatcher.utter_message(template="utter_already_subscribed")
+        elif subscription_status == "error":
+            dispatcher.utter_message(template="utter_could_not_subscribe")
         return []
 
 
@@ -62,7 +60,7 @@ class ValidateSubscribeNewsletterForm(FormValidationAction):
         value: Text,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any],
+        domain: DomainDict,
     ) -> Dict[Text, Any]:
 
         if MailChimpAPI.is_valid_email(value):
@@ -77,10 +75,7 @@ class ActionSubmitSalesForm(Action):
         return "action_submit_sales_form"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         """Once we have all the information, attempt to add it to the
         Google Drive database"""
@@ -98,14 +93,13 @@ class ActionSubmitSalesForm(Action):
         sales_info = [company, use_case, budget, date, person_name, job_function, email]
 
         try:
-            gdrive = GDriveService()
-            gdrive.store_data(sales_info)
+            gdrive_client = GDriveService()
+            gdrive_client.store_data(sales_info)
             dispatcher.utter_message(template="utter_confirm_salesrequest")
             return []
         except Exception as e:
             logger.error(
-                "Failed to write data to gdocs. Error: {}" "".format(e.message),
-                exc_info=True,
+                f"Failed to write data to gdocs. Error: {e.message}", exc_info=True,
             )
             dispatcher.utter_message(template="utter_salesrequest_failed")
             return []
@@ -120,7 +114,7 @@ class ValidateSalesForm(FormValidationAction):
         value: Text,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: Dict[Text, Any],
+        domain: DomainDict,
     ) -> Dict[Text, Any]:
 
         if MailChimpAPI.is_valid_email(value):
@@ -137,10 +131,7 @@ class ActionExplainSalesForm(Action):
         return "action_explain_sales_form"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         requested_slot = tracker.get_slot("requested_slot")
 
@@ -165,10 +156,7 @@ class ActionExplainFaqs(Action):
         return "action_explain_faq"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         topic = tracker.get_slot("faq")
 
@@ -187,10 +175,7 @@ class ActionSetFaqSlot(Action):
         return "action_set_faq_slot"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         full_intent = (
             tracker.latest_message.get("response_selector", {})
@@ -212,10 +197,7 @@ class ActionPause(Action):
         return "action_pause"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         return [ConversationPaused()]
 
@@ -227,10 +209,7 @@ class ActionStoreUnknownProduct(Action):
         return "action_store_unknown_product"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         # if we dont know the product the user is migrating from,
         # store their last message in a slot.
@@ -246,10 +225,7 @@ class ActionStoreUnknownNluPart(Action):
         return "action_store_unknown_nlu_part"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         # if we dont know the part of nlu the user wants information on,
         # store their last message in a slot.
@@ -263,10 +239,7 @@ class ActionStoreBotLanguage(Action):
         return "action_store_bot_language"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         spacy_languages = [
             "english",
@@ -300,10 +273,7 @@ class ActionStoreEntityExtractor(Action):
         return "action_store_entity_extractor"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         spacy_entities = ["place", "date", "name", "organisation"]
         duckling = [
@@ -335,10 +305,7 @@ class ActionSetOnboarding(Action):
         return "action_set_onboarding"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         user_type = next(tracker.get_latest_entity_values("user_type"), None)
@@ -355,10 +322,7 @@ class ActionSubmitSuggestionForm(Action):
         return "action_submit_suggestion_form"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         dispatcher.utter_message(template="utter_thank_suggestion")
         return []
@@ -371,10 +335,7 @@ class ActionStoreProblemDescription(Action):
         return "action_store_problem_description"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         problem = tracker.latest_message.get("text")
 
@@ -388,10 +349,7 @@ class ActionGreetUser(Action):
         return "action_greet_user"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
@@ -437,10 +395,7 @@ class ActionDefaultAskAffirmation(Action):
         )
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
 
         intent_ranking = tracker.latest_message.get("intent_ranking", [])
@@ -515,10 +470,7 @@ class ActionDefaultFallback(Action):
         return "action_default_fallback"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
 
         # Fallback caused by TwoStageFallbackPolicy
@@ -537,7 +489,7 @@ class ActionDefaultFallback(Action):
             return [UserUtteranceReverted()]
 
 
-class CommunityEventAction(Action):
+class ActionCommunityEvent(Action):
     """Utters Rasa community events."""
 
     def __init__(self) -> None:
@@ -564,10 +516,7 @@ class CommunityEventAction(Action):
         )
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
 
         events = self._get_events()
@@ -602,7 +551,8 @@ class CommunityEventAction(Action):
         location: Text,
     ) -> None:
 
-        only_next = True if "next" in tracker.latest_message.get("text") else False
+        text = tracker.latest_message.get("text") or ""
+        only_next = True if "next" in text else False
 
         if location:
             if not events_for_location:
@@ -642,10 +592,7 @@ class ActionNextStep(Action):
         return "action_next_step"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         if tracker.get_slot("step"):
             step = int(tracker.get_slot("step")) + 1
@@ -774,13 +721,6 @@ class ActionForumSearch(Action):
         return []
 
 
-def tag_convo(tracker: Tracker, label: Text) -> None:
-    """Tag a conversation in Rasa X with a given label"""
-    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
-    requests.post(url=endpoint, data=label)
-    return
-
-
 class ActionTagFeedback(Action):
     """Tag a conversation in Rasa X as positive or negative feedback """
 
@@ -788,10 +728,7 @@ class ActionTagFeedback(Action):
         return "action_tag_feedback"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
 
         feedback = tracker.get_slot("feedback_value")
@@ -803,7 +740,8 @@ class ActionTagFeedback(Action):
         else:
             return []
 
-        tag_convo(tracker, label)
+        rasax = RasaXAPI()
+        rasax.tag_convo(tracker, label)
 
         return []
 
@@ -815,10 +753,7 @@ class ActionTagDocsSearch(Action):
         return "action_tag_docs_search"
 
     def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: Dict[Text, Any],
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
 
@@ -829,6 +764,7 @@ class ActionTagDocsSearch(Action):
         else:
             return []
 
-        tag_convo(tracker, label)
+        rasax = RasaXAPI()
+        rasax.tag_convo(tracker, label)
 
         return []
