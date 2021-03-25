@@ -7,7 +7,8 @@ from gspread.models import Worksheet
 
 from rasa_sdk.events import EventType, SlotSet
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk import Tracker, Domain
+from rasa_sdk import Tracker
+from rasa_sdk.types import DomainDict
 
 from actions import actions
 from actions.api.gdrive_service import GDriveService
@@ -24,7 +25,7 @@ from actions.api.gdrive_service import GDriveService
 def test_action_tag_feedback(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     feedback_value: Text,
     expected_tags: List[Dict],
     rasa_x_convo: None,
@@ -56,7 +57,7 @@ def test_action_tag_feedback(
 def test_action_tag_docs_search(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     intent: Text,
     expected_tags: List[Dict],
     rasa_x_convo: None,
@@ -93,7 +94,7 @@ def test_action_tag_docs_search(
 def test_action_set_onboarding(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     intent: Text,
     entity: Dict[Text, Text],
     expected_events: List[EventType],
@@ -108,7 +109,7 @@ def test_action_set_onboarding(
 def test_action_submit_sales_form(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     gdrive: Tuple[GDriveService, Worksheet],
 ):
     collected_info = {
@@ -146,7 +147,7 @@ def test_action_submit_sales_form(
 def test_action_submit_subscribe_newsletter_form_unsubscribed(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     mailchimp_unsubscribed_email: Text,
 ):
     tracker.slots["email"] = mailchimp_unsubscribed_email
@@ -160,7 +161,7 @@ def test_action_submit_subscribe_newsletter_form_unsubscribed(
 def test_action_submit_subscribe_newsletter_form_new(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     mailchimp_email: Text,
 ):
     tracker.slots["email"] = mailchimp_email
@@ -174,7 +175,7 @@ def test_action_submit_subscribe_newsletter_form_new(
 def test_action_submit_subscribe_newsletter_form_subscribed(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     mailchimp_subscribed_email: Text,
 ):
     tracker.slots["email"] = mailchimp_subscribed_email
@@ -188,7 +189,7 @@ def test_action_submit_subscribe_newsletter_form_subscribed(
 def test_action_community_events(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
-    domain: Domain,
+    domain: DomainDict,
     mailchimp_unsubscribed_email: Text,
 ):
     action = actions.ActionCommunityEvent()

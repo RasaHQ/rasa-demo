@@ -14,7 +14,7 @@ import pytest
 import json
 import requests
 import uuid
-from typing import Text, Dict, Tuple, Any, Iterator
+from typing import Text, Dict, Tuple, Iterator
 import sqlalchemy as sa
 from sqlalchemy.orm import Session, sessionmaker
 from mailchimp3.mailchimpclient import MailChimpError
@@ -23,6 +23,7 @@ from gspread.models import Worksheet  # noqa: F401
 
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
+from rasa_sdk.types import DomainDict
 from rasa.shared.core.domain import Domain
 
 from actions import config
@@ -59,7 +60,7 @@ def dispatcher() -> CollectingDispatcher:
 
 
 @pytest.fixture
-def domain() -> Dict[Text, Any]:
+def domain() -> DomainDict:
     """Load the domain and return it as a dictionary"""
     domain = Domain.load("domain.yml")
     return domain.as_dict()
