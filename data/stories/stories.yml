@@ -307,9 +307,7 @@ stories:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
-  - or:
-    - intent: affirm
-    - intent: explain
+  - intent: affirm
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -324,9 +322,7 @@ stories:
     - current_api: __other__
   - action: utter_why_rasa
   - action: utter_ask_more
-  - or:
-    - intent: affirm
-    - intent: explain
+  - intent: affirm
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -342,9 +338,7 @@ stories:
   - action: utter_why_rasa
   - action: utter_switch_luis
   - action: utter_ask_more_migrate
-  - or:
-    - intent: affirm
-    - intent: explain
+  - intent: affirm
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -360,9 +354,7 @@ stories:
   - action: utter_why_rasa
   - action: utter_switch_dialogflow
   - action: utter_ask_more_migrate
-  - or:
-    - intent: affirm
-    - intent: explain
+  - intent: affirm
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -425,7 +417,7 @@ stories:
   - intent: explain
   - action: utter_no_further_info
   # wait_for_user_input: false
-# - story: explain -> can't explain at conversation start
+# - story: explain -> can't explain (at conversation start)
   # conversation_start: true
   # steps:
   # - intent: explain
@@ -436,10 +428,4 @@ stories:
   - action: action_set_faq_slot
   - intent: explain
   - action: action_explain_faq
-  # wait_for_user_input: false
-- story: explain + unknown product after utter_ask_for_nlu_specifics # based on a training story
-  steps:
-  - action: utter_ask_for_nlu_specifics
-  - intent: explain
-  - action: action_store_unknown_nlu_part
   # wait_for_user_input: false

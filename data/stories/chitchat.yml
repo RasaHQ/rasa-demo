@@ -711,9 +711,7 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-    - intent: explain
+  - intent: nlu_info
   - action: action_store_unknown_nlu_part
   - action: utter_dont_know_nlu_part
   - action: utter_search_bar
@@ -734,13 +732,9 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-      entities:
-      - nlu_part: intent classification
-    - intent: explain
-      entities:
-      - nlu_part: intent classification
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - intent: chitchat
@@ -765,13 +759,9 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-      entities:
-      - nlu_part: intent classification
-    - intent: explain
-      entities:
-      - nlu_part: intent classification
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -804,13 +794,9 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-      entities:
-      - nlu_part: intent classification
-    - intent: explain
-      entities:
-      - nlu_part: intent classification
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -846,13 +832,9 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-      entities:
-      - nlu_part: intent classification
-    - intent: explain
-      entities:
-      - nlu_part: intent classification
+  - intent: nlu_info
+    entities:
+    - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -884,13 +866,9 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-      entities:
-      - nlu_part: entity recognition
-    - intent: explain
-      entities:
-      - nlu_part: entity recognition
+  - intent: nlu_info
+    entities:
+    - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
   - intent: chitchat
@@ -924,13 +902,9 @@ stories:
     entities:
     - product: nlu
   - action: utter_ask_for_nlu_specifics
-  - or:
-    - intent: nlu_info
-      entities:
-      - nlu_part: entity recognition
-    - intent: explain
-      entities:
-      - nlu_part: entity recognition
+  - intent: nlu_info
+    entities:
+    - nlu_part: entity recognition
   - action: utter_nlu_entity_tutorial
   - action: utter_offer_recommendation
   - or:
@@ -986,9 +960,7 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - action: utter_ask_continue_rasa_init
-  - or:
-    - intent: affirm
-    - intent: explain
+  - intent: affirm
   - action: utter_run_rasa_init
 - story: chitchat interrupting and stopping step 2 flow
   steps:
