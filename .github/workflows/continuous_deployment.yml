@@ -30,11 +30,10 @@ env:
   NAMESPACE: "sara"
   RASA_X_USERNAME: "ci_user"
   RELEASE_NAME: "rasa-x"
-  ACTION_SERVER_TAG: "latest"
   # NB! The rasa/rasa-x versions should be in sync with:
   # * rasa version in requirements.txt
   # * rasa-sdk base image version in Dockerfile
-  RASA_X_VERSION: "0.38.0"
+  RASA_X_VERSION: "0.38.1"
   RASA_VERSION: "2.4.1"
 
   # Due to the issue with openssl library for Google Cloud SDK (gcloud)
@@ -44,6 +43,7 @@ env:
 
 jobs:
   check_changed_files:
+    # check change_filters.yml for filter details
     name: Check for file changes
     runs-on: ubuntu-20.04
     outputs:
@@ -94,13 +94,15 @@ jobs:
       
       - name: Push PR Image to Google Cloud Container Registry
         run: |
-          docker push gcr.io/replicated-test/rasa-demo
+          docker push gcr.io/replicated-test/rasa-demo:latest
+          docker push gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER 
 
   deploy_to_k8s_cluster:
     name: Rasa Enterprise K8s deployment
     runs-on: ubuntu-20.04
     needs: 
     - check_changed_files
+    - build-push-action-server
     if:  ${{ needs.check_changed_files.outputs.deployment == 'true' }}
     steps:
     - name: Cancel Previous Runs
@@ -135,6 +137,24 @@ jobs:
     - name: Prepare namespace
       run: |
         kubectl config set-context --current --namespace="${NAMESPACE}"
+
+    - name: Set action server tag to existing
+      # If the action server image was updated, the tag should be updated to run${{ env.BUILD_NUMBER }},
+      # otherwise it should be kept as the exisitng tag 
+      if:  ${{ needs.check_changed_files.outputs.actions == 'false' }}
+      run: |
+        tag=`helm get values --output json $RELEASE_NAME | jq .app.tag`
+        echo $tag
+        echo "ACTION_SERVER_TAG=${tag}" >> $GITHUB_ENV
+
+    - name: Update action server tag if actions changed
+      # If the action server image was updated, the tag should be updated to run${{ env.BUILD_NUMBER }},
+      # otherwise it should be kept as the exisitng tag 
+      if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
+      run: 
+        tag=run${BUILD_NUMBER}
+        echo $tag
+        echo "ACTION_SERVER_TAG=run${BUILD_NUMBER}" >> $GITHUB_ENV
 
     - name: Deploy Rasa X chart ☸️
       run: |
@@ -175,8 +195,6 @@ jobs:
       uses: styfle/cancel-workflow-action@0.8.0
       with:
         access_token: ${{ github.token }}
-    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
-    steps:
     - uses: actions/checkout@v1
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
@@ -192,13 +210,14 @@ jobs:
           rasa train
     - name: Set model name from Rasa version
       run: |
-          rasa_version=$(python -c "import rasa; print(rasa.__version__)")
+          python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
+          rasa_version=`cat rasaversion.txt`
           model_path=`ls models/*.tar.gz | head -n 1`
           model_timestamp=$(basename "$model_path" .tar.gz)
           model_name="$model_timestamp"_rasa"$rasa_version"
           renamed_model_path=models/"$model_name".tar.gz
           mv $model_path $renamed_model_path
-          echo "MODEL_NAME=${model_name} >> $GITHUB_ENV
+          echo "MODEL_NAME=${model_name}" >> $GITHUB_ENV
           echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
 
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
