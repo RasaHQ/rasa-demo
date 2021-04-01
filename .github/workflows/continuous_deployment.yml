@@ -151,7 +151,7 @@ jobs:
       # If the action server image was updated, the tag should be updated to run${{ env.BUILD_NUMBER }},
       # otherwise it should be kept as the exisitng tag 
       if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
-      run: 
+      run: |
         tag=run${BUILD_NUMBER}
         echo $tag
         echo "ACTION_SERVER_TAG=run${BUILD_NUMBER}" >> $GITHUB_ENV
@@ -220,7 +220,7 @@ jobs:
           echo "MODEL_NAME=${model_name}" >> $GITHUB_ENV
           echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
 
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
+    - uses: google-github-actions/setup-gcloud@master
       name: Authenticate with gcloud 🎫
       with:
         version: "${{ env.GCLOUD_VERSION }}"
