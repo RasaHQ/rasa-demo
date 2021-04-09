@@ -152,10 +152,9 @@ jobs:
       # otherwise it should be kept as the exisitng tag 
       if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
       run: |
-        echo "BUILD_NUMBER=$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID" >> $GITHUB_ENV
-        tag=run${BUILD_NUMBER}
+        tag=run$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID
         echo $tag
-        echo "ACTION_SERVER_TAG='run${BUILD_NUMBER}'" >> $GITHUB_ENV
+        echo "ACTION_SERVER_TAG='$tag'" >> $GITHUB_ENV
 
     - name: Deploy Rasa X chart ☸️
       run: |
