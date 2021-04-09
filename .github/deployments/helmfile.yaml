@@ -97,6 +97,11 @@ releases:
                 requests:
                   memory: {{ .Values.rasaWorker.resources.requests.memory }}
                   cpu: {{ .Values.rasaWorker.resources.requests.cpu}}
+            additionalChannelCredentials:
+              socketio:
+                user_message_evt: user_uttered
+                bot_message_evt: bot_uttered
+                session_persistence: true
       - rabbitmq:
           rabbitmq:
             password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
