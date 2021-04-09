@@ -145,16 +145,17 @@ jobs:
       run: |
         tag=`helm get values --output json $RELEASE_NAME | jq .app.tag`
         echo $tag
-        echo "ACTION_SERVER_TAG=${tag}" >> $GITHUB_ENV
+        echo "ACTION_SERVER_TAG='${tag}'" >> $GITHUB_ENV
 
     - name: Update action server tag if actions changed
       # If the action server image was updated, the tag should be updated to run${{ env.BUILD_NUMBER }},
       # otherwise it should be kept as the exisitng tag 
       if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
       run: |
+        echo "BUILD_NUMBER=$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID" >> $GITHUB_ENV
         tag=run${BUILD_NUMBER}
         echo $tag
-        echo "ACTION_SERVER_TAG=run${BUILD_NUMBER}" >> $GITHUB_ENV
+        echo "ACTION_SERVER_TAG='run${BUILD_NUMBER}'" >> $GITHUB_ENV
 
     - name: Deploy Rasa X chart ☸️
       run: |
