@@ -102,6 +102,7 @@ releases:
               user_message_evt: user_uttered
               bot_message_evt: bot_uttered
               session_persistence: true
+            rest: {}
       - rabbitmq:
           rabbitmq:
             password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
