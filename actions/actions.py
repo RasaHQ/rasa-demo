@@ -475,8 +475,8 @@ class ActionDefaultFallback(Action):
 
         # Fallback caused by TwoStageFallbackPolicy
         if (
-            len(tracker.events) >= 4
-            and tracker.events[-4].get("name") == "action_default_ask_affirmation"
+            len(tracker.events) >= 5
+            and tracker.events[-5].get("name") == "action_two_stage_fallback"
         ):
 
             dispatcher.utter_message(template="utter_restart_with_button")
