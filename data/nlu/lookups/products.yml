@@ -3,6 +3,7 @@ nlu:
   - lookup: products
     examples: |
       - core
+      - dialogue management
       - nlu
       - x
       - rasa x
