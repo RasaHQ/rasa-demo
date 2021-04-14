@@ -1,9 +1,5 @@
 version: "2.0"
 stories:
-- story: next step prompt
-  steps:
-  - intent: next_step
-  - action: action_next_step
 - story: faqs
   steps:
   - intent: faq
@@ -861,7 +857,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain core and direct to step2
+- story: new to rasa/bots, explain core
   steps:
   - intent: greet
   - action: action_greet_user
@@ -892,7 +888,7 @@ stories:
   - action: utter_also_explain_nlu
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain core and direct to step2
+- story: new to rasa/bots, explain core
   steps:
   - intent: greet
   - action: action_greet_user
@@ -922,7 +918,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain core, then nlu and direct to step2
+- story: new to rasa/bots, explain core, then nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -953,7 +949,7 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-- story: new to rasa/bots, explain x, then direct to step2
+- story: new to rasa/bots, explain x
   steps:
   - intent: greet
   - action: action_greet_user
@@ -983,7 +979,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain core, then nlu and direct to step2
+- story: new to rasa/bots, explain core, then nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1013,7 +1009,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain nlu and direct to step2
+- story: new to rasa/bots, explain nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1044,7 +1040,7 @@ stories:
   - action: utter_also_explain_core
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain x and direct to step2
+- story: new to rasa/bots, explain x
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1076,7 +1072,7 @@ stories:
   - action: action_set_faq_slot
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain nlu and direct to step2
+- story: new to rasa/bots, explain nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1106,7 +1102,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, don't explain and direct to step2
+- story: new to rasa/bots, don't explain
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1132,7 +1128,7 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, don't explain and direct to step2
+- story: new to rasa/bots, don't explain
   steps:
   - intent: greet
   - action: action_greet_user

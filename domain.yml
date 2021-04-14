@@ -521,7 +521,6 @@ actions:
 - action_forum_search
 - action_get_community_events
 - action_greet_user
-- action_next_step
 - action_pause
 - action_set_onboarding
 - action_store_bot_language

@@ -513,9 +513,6 @@ nlu:
     - Help me get Rasa Core.
     - How do I install Rasa X
     - install Rasa X
-- intent: next_step
-  examples: |
-    - Next step please
 - intent: nlu_generation_tool_recommendation
   examples: |
     - which tools can I use to create nlu data
