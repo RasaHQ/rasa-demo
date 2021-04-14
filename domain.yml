@@ -5,97 +5,57 @@ session_config:
   session_expiration_time: 480
   carry_over_slots_to_new_session: true
 intents:
-- affirm:
-    use_entities: true
-- ask_how_contribute:
-    use_entities: true
-- ask_question_in_forum:
-    use_entities: true
-- ask_when_next_event:
-    use_entities: true
-- ask_which_events:
-    use_entities: true
-- ask_why_contribute:
-    use_entities: true
-- book_demo:
-    use_entities: true
-- broken:
-    use_entities: true
-- bye:
-    use_entities: true
-- canthelp:
-    use_entities: true
+- affirm
+- ask_how_contribute
+- ask_question_in_forum
+- ask_when_next_event
+- ask_which_events
+- ask_why_contribute
+- book_demo
+- broken
+- bye
+- canthelp
 - chitchat:
     use_entities: []
-- contact_sales:
-    use_entities: true
-- deny:
-    use_entities: true
+- contact_sales
+- deny
 - enter_data:
     use_entities: []
-- explain:
-    use_entities: true
+- explain
 - faq:
     use_entities:
     - product
-- feedback:
-    use_entities: true
-- get_started_intro:
-    use_entities: true
-- get_started_playground:
-    use_entities: true
-- get_started_step1:
-    use_entities: true
-- get_started_step2:
-    use_entities: true
-- get_started_step3:
-    use_entities: true
-- get_started_step4:
-    use_entities: true
-- greet:
-    use_entities: true
-- how_to_get_started:
-    use_entities: true
-- human_handoff:
-    use_entities: true
-- install_rasa:
-    use_entities: true
-- need_help_broad:
-    use_entities: true
-- next_step:
-    use_entities: true
-- nlu_generation_tool_recommendation:
-    use_entities: true
-- nlu_info:
-    use_entities: true
-- out_of_scope:
-    use_entities: true
-- pipeline_recommendation:
-    use_entities: true
-- react_negative:
-    use_entities: true
-- react_positive:
-    use_entities: true
-- restart:
-    use_entities: true
-- signup_newsletter:
-    use_entities: true
-- source_code:
-    use_entities: true
-- suggestion:
-    use_entities: true
-- switch:
-    use_entities: true
-- technical_question:
-    use_entities: true
-- thank:
-    use_entities: true
-- trigger_rephrase:
-    use_entities: true
-- why_rasa:
-    use_entities: true
-- nlu_fallback:
-    use_entities: true
+- feedback
+- get_started_intro
+- get_started_playground
+- get_started_step1
+- get_started_step2
+- get_started_step3
+- get_started_step4
+- greet
+- how_to_get_started
+- human_handoff
+- install_rasa
+- need_help_broad
+- next_step
+- nlu_generation_tool_recommendation
+- nlu_info
+- out_of_scope
+- pipeline_recommendation
+- react_negative
+- react_positive
+- restart
+- signup_newsletter
+- source_code
+- suggestion
+- switch
+- technical_question
+- thank
+- trigger_rephrase
+- why_rasa
+- nlu_fallback
+- trigger_response_selector:
+    use_entities: false
 entities:
 - amount-of-money
 - company
@@ -112,108 +72,60 @@ entities:
 - product
 - user_type
 - install_type
+- retrieval_intent
 slots:
+  retrieval_intent:
+    type: any
   budget:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   business_email:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   can_use_spacy:
-    type: rasa.shared.core.slots.BooleanSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: bool
   company:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   current_api:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - dialogflow
     - luis
   email:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   entity_extractor:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - crfentityextractor
     - spacyentityextractor
     - ducklinghttpextractor
   feedback_message:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   feedback_value:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - positive
     - negative
   job_function:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   language:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - english
   name:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: text
   nlu_part:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - entity recognition
     - intent classification
     - duckling
   onboarding:
-    type: rasa.shared.core.slots.BooleanSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: bool
   person_name:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   problem_description:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: text
   product:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - core
     - nlu
@@ -222,53 +134,26 @@ slots:
     - all
     - playground
   install_type:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
     - local
     - server
   shown_privacy:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   step:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   suggestion:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   unknown_nlu_part:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   unknown_product:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   use_case:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
   docs_found:
-    type: rasa.shared.core.slots.BooleanSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: bool
   faq:
-    type: rasa.shared.core.slots.AnySlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: false
+    type: any
 responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received a newsletter in a while, maybe check your spam folder 🗑
@@ -334,6 +219,15 @@ responses:
   - text: What's your name?
   utter_ask_intro:
   - text: To help you best, I'd like to ask you a few questions about what brings you here.
+  utter_ask_playground_install_info:
+  - text: Which would you like to do first?
+    buttons:
+    - payload: /playground
+      title: Try out Rasa in the online Rasa Playground
+    - payload: /install_rasa
+      title: Install Rasa on your own computer
+    - payload: /trigger_response_selector{"retrieval_intent":"chitchat/ask_whatisrasa"}
+      title: Find out more about Rasa
   utter_playground_intro:
   - text: |-
         In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
@@ -686,6 +580,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Rasa has your back! You can deploy Rasa either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
 - action_docs_search
