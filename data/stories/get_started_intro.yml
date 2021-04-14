@@ -5,8 +5,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: affirm
   - action: utter_what_help
 
@@ -14,8 +13,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: faq
     entities:
     - product: playground
@@ -28,8 +26,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_ask_which_product
   - intent: faq
@@ -45,8 +42,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_ask_which_product
   - intent: how_to_get_started
@@ -62,8 +58,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_ask_which_product
   - intent: faq
@@ -84,8 +79,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_ask_which_product
   - intent: how_to_get_started
@@ -106,8 +100,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: install_rasa
   - action: utter_ask_which_product
   - intent: faq
@@ -127,8 +120,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: deny
   - action: utter_interested_in_starter_packs
   - intent: affirm
@@ -139,8 +131,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: deny
   - action: utter_interested_in_starter_packs
   - intent: deny
@@ -151,8 +142,7 @@ stories:
   steps:
   - intent: get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: faq
     entities:
     - product: playground
@@ -170,3 +160,14 @@ stories:
   - action: utter_ask_x_local_server
 
 
+- story: Getting started with more info
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
+  - action: utter_explain_
+  - action: utter_built_bot_before

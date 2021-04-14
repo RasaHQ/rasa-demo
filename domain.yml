@@ -217,8 +217,6 @@ responses:
   - text: What's your name?
   utter_ask_person_name:
   - text: What's your name?
-  utter_ask_intro:
-  - text: To help you best, I'd like to ask you a few questions about what brings you here.
   utter_ask_playground_install_info:
   - text: Which would you like to do first?
     buttons:
@@ -233,8 +231,6 @@ responses:
         In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
           build a Rasa prototype entirely online. Once you've built your prototype, you can talk to
           your bot online and download your project to continue developing it locally.
-  utter_ask_playground_or_install:
-  - text: Would you like to try out Rasa in the online Rasa Playground or do you want to install Rasa on your own computer?
   utter_ask_playground_help:
   - text: Do you have any questions or issues you're running into with Rasa Playground?
   utter_ask_use_case:

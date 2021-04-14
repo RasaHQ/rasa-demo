@@ -6,8 +6,7 @@ stories:
     user: |-
       /get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: faq
     user: |-
       whats [playground](product)
@@ -382,8 +381,7 @@ stories:
     user: |-
       /get_started_intro
   - action: utter_greet
-  - action: utter_ask_intro
-  - action: utter_ask_playground_or_install
+  - action: utter_ask_playground_install_info
   - intent: install_rasa
     user: |-
       install rasa
