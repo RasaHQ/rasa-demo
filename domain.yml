@@ -28,10 +28,6 @@ intents:
 - feedback
 - get_started_intro
 - get_started_playground
-- get_started_step1
-- get_started_step2
-- get_started_step3
-- get_started_step4
 - greet
 - how_to_get_started
 - human_handoff
@@ -270,33 +266,6 @@ responses:
   - text: We sent a confirmation email to {email}.
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com.
-  utter_continue_step2:
-  - channel: socketio
-    text: |-
-      Let's continue, please click
-       [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started%23build-an-assistant-with-rasa-open-source%22%3B).
-  - buttons:
-    - payload: /get_started_step2
-      title: Next step
-    text: Let's continue, please click the button below.
-  utter_continue_step3:
-  - channel: socketio
-    text: |-
-      Let's continue, please click
-       [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step3%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started%23improve-your-assistant-with-rasa-x%22%3B).
-  - buttons:
-    - payload: /get_started_step3
-      title: Next step
-    text: Let's continue, please click the button below.
-  utter_continue_step4:
-  - channel: socketio
-    text: |-
-      Let's continue, please click
-       [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step4%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started%23join-the-community%22%3B).
-  - buttons:
-    - payload: /get_started_step4
-      title: Next step
-    text: Let's continue, please click the button below.
   utter_crf:
   - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://rasa.com/docs/rasa/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://rasa.com/docs/nlu/dataformat/).
   utter_default:
@@ -308,32 +277,6 @@ responses:
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_direct_to_forum_for_help:
   - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.rasa.com/).
-  utter_direct_to_step2:
-  - channel: socketio
-    text: You can click [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step2%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started.html%23build-an-assistant-with-rasa-open-source%22%3B) if you want to go to the next step to try out Rasa Open Source.
-  - buttons:
-    - payload: /get_started_step2
-      title: Next step
-    text: You can click the button below if you want to go to the next step to try out Rasa Open Source.
-  utter_direct_to_step3:
-  - channel: socketio
-    text: |-
-      If you have no questions, click
-       [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step3%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started%23improve-your-assistant-with-rasa-x%22%3B)
-       when you're ready to go to the next step. Or, at any point after you're done asking questions, say 'take me to the next step'.
-  - buttons:
-    - payload: /get_started_step3
-      title: Next step
-    text: If you have no questions, click the button below to go to the next step when you're ready. Or, at any point after you're done asking questions, say 'take me to the next step'.
-  utter_direct_to_step4:
-  - channel: socketio
-    text: |-
-      The final step is to join the community, find more information about our
-       community [here](javascript:window.localStorage.setItem(%22mrbot_next_message%22%2CJSON.stringify(%7Bmessage%3A%22%2Fget_started_step4%22%2Cexpiry%3ADate.now()%2B6e4%7D))%2Clocation.href%3D%22https%3A%2F%2Frasa.com%2Fdocs%2Fgetting-started%23join-the-community%22%3B)
-  - buttons:
-    - payload: /get_started_step4
-      title: Next step
-    text: The final step is to join the community. Click the button to find more information about our community.
   utter_docu:
   - text: If you want some more awesome Rasa content, check out our [forum](https://forum.rasa.com/).
   utter_dont_know_nlu_part:
@@ -383,14 +326,6 @@ responses:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_first_bot_with_rasa:
   - text: Let's go. Are you new to Rasa?
-  utter_get_started_step1:
-  - text: If you're new to Rasa, I can help you get started! Shall we?
-  utter_get_started_step2:
-  - text: I can show you how to start building your first AI assistant with Rasa. Are you ready?
-  utter_get_started_step3:
-  - text: Now, let's take a look at Rasa X, to improve your assistant. Sound good?
-  utter_get_started_step4:
-  - text: As a Rasa developer you will be part of a huge community. You can ask me about the upcoming Rasa events, ways to contribute or about our forum.
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_getstarted_new:

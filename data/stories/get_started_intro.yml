@@ -169,5 +169,4 @@ stories:
     entities:
     - retrieval_intent: chitchat/ask_whatisrasa
   - action: action_trigger_response_selector
-  - action: utter_explain_
   - action: utter_built_bot_before

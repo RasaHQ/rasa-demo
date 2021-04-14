@@ -253,7 +253,11 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
 - story: story from linda
   steps:
@@ -263,7 +267,11 @@ stories:
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
 - story: Story from conversation with dfbb633d10854f97b880a2496d632f0d on November 16th 2018
   steps:
@@ -272,7 +280,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
 - story: Story from conversation with alan on November 16th 2018
   steps:
@@ -307,7 +319,11 @@ stories:
   - action: utter_pipeline_nonenglish_spacy
   - action: utter_anything_else
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
 - story: Story from conversation with alan on November 16th 2018 2
   steps:
@@ -335,7 +351,11 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
 - story: Story from conversation with 477ddbe73e374eedb07104c5d9f42c31 on November 16th 2018
   steps:
@@ -344,7 +364,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: greet
   - action: action_greet_user
@@ -357,7 +381,11 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -445,7 +473,11 @@ stories:
   - intent: affirm
   - action: utter_thumbsup
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
 - story: Story from conversation with d041ba4b0a89479e9bb6a5007f2cdc87 on November 15th 2018
   steps:
@@ -472,7 +504,11 @@ stories:
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -538,7 +574,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: deny
   - action: action_set_onboarding
@@ -591,7 +631,11 @@ stories:
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -672,7 +716,11 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -700,7 +748,11 @@ stories:
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -856,7 +908,11 @@ stories:
   - action: utter_not_sure
   - action: utter_possibilities
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -901,7 +957,11 @@ stories:
   - slot_was_set:
     - step: '1'
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
@@ -931,7 +991,11 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
   - action: action_set_onboarding
