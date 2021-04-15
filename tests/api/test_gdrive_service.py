@@ -21,13 +21,17 @@ def test_append_row(gdrive: Tuple[GDriveService, Worksheet]):
         "email",
     ]
     gdrive_client.append_row(
-        gdrive_client.SPREADSHEET_NAME, gdrive_client.WORKSHEET_NAME, row_values
+        gdrive_client.SALES_SPREADSHEET_NAME,
+        gdrive_client.SALES_WORKSHEET_NAME,
+        row_values,
     )
 
     assert worksheet.row_values(2) == row_values
 
 
-def test_request_spreadsheet():
-    gdrive_client = GDriveService()
-    spreadsheet = gdrive_client.request_spreadsheet(gdrive_client.SPREADSHEET_NAME)
+def test_request_spreadsheet(gdrive: Tuple[GDriveService, Worksheet]):
+    gdrive_client = gdrive[0]
+    spreadsheet = gdrive_client.request_spreadsheet(
+        gdrive_client.SALES_SPREADSHEET_NAME
+    )
     assert isinstance(spreadsheet, Spreadsheet)

@@ -150,18 +150,20 @@ def mailchimp_subscribed_email(
 @pytest.fixture
 def gdrive(mocker) -> Tuple[GDriveService, "Worksheet"]:
     """Clear test worksheet to allow asserting contents of rows"""
-    spreadsheet_name = "SaraUnitTestingSalesSheet"
-    worksheet_name = "demobot_testing"
+    sales_spreadsheet_name = "SaraUnitTestingSalesSheet"
+    sales_worksheet_name = "demobot_testing"
     mocker.patch.object(
-        GDriveService, "SPREADSHEET_NAME", spreadsheet_name,
+        GDriveService, "SALES_SPREADSHEET_NAME", sales_spreadsheet_name,
     )
     mocker.patch.object(
-        GDriveService, "WORKSHEET_NAME", worksheet_name,
+        GDriveService, "SALES_WORKSHEET_NAME", sales_worksheet_name,
     )
 
     gdrive_client = GDriveService()
-    spreadsheet = gdrive_client.request_spreadsheet(gdrive_client.SPREADSHEET_NAME)
-    worksheet = spreadsheet.worksheet(worksheet_name)
+    spreadsheet = gdrive_client.request_spreadsheet(
+        gdrive_client.SALES_SPREADSHEET_NAME
+    )
+    worksheet = spreadsheet.worksheet(gdrive_client.SALES_WORKSHEET_NAME)
     worksheet.resize(rows=1)
 
     yield (gdrive_client, worksheet)

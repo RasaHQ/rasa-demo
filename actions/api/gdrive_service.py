@@ -41,8 +41,8 @@ class GDriveService:
                 f.name, scopes=scopes
             )
 
-    def request_sheet(self, spreadsheet_name: Text) -> Optional[Spreadsheet]:
-        # fetch a specific sheet
+    def request_spreadsheet(self, spreadsheet_name: Text) -> Optional[Spreadsheet]:
+        # fetch a specific spreadsheet
         logging.debug("Refreshing auth")
         try:
             return gspread.authorize(self.credentials).open(spreadsheet_name)
@@ -55,7 +55,7 @@ class GDriveService:
     def append_row(
         self, spreadsheet_name: Text, worksheet_name: Text, row_values: List[Text]
     ) -> None:
-        # add a row to the spreadsheet
+        # add a row to a worksheet
         spreadsheet = self.request_spreadsheet(spreadsheet_name)
         if spreadsheet:
             try:
