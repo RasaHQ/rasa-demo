@@ -40,7 +40,6 @@ class RasaXAPI:
             )
             return {}
 
-          
     def tag_convo(self, tracker: Tracker, label: Text) -> requests.Response:
         """Tag a conversation in Rasa X with a given label"""
         auth_header = self.get_auth_header()
