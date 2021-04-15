@@ -13,7 +13,6 @@ from rasa_sdk.events import (
     UserUtteranceReverted,
     ConversationPaused,
     EventType,
-    FollowupAction,
 )
 
 from actions import config
@@ -359,7 +358,7 @@ class ActionSubmitPlaygroundProblemDescription(Action):
 
         problem = tracker.latest_message.get("text")
         timestamp = tracker.events[-1]["timestamp"]
-        date = datetime.datetime.now().strftime("%d/%m/%Y")
+        date = datetime.now().strftime("%d/%m/%Y")
         message_link = f"{config.rasa_x_host_schema}://{config.rasa_x_host}/conversations/{tracker.sender_id}/{timestamp}"
         row_values = [date, problem, message_link]
 
