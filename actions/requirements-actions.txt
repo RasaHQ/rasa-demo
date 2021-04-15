@@ -7,3 +7,4 @@ geopy~=1.18.1
 pandas~=0.24.1
 algoliasearch>=2.0,<3.0
 spacy~=2.2.4
+python-dotenv~=0.15.0
