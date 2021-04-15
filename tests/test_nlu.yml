@@ -13,7 +13,7 @@ nlu:
     - sure!
     - yop
     - ja
-- intent: ask_builder
+- intent: chitchat/ask_builder
   examples: |
     - Who's your builder?
     - Who fabricated you?
@@ -122,7 +122,7 @@ nlu:
     - how contribute to Rasa?
     - I want to make Rasa better
     - how can I support the community
-- intent: ask_howbuilt
+- intent: chitchat/ask_howbuilt
   examples: |
     - How did they build you?
     - How were you constructed?
@@ -135,7 +135,7 @@ nlu:
     - What process was used to build you?
     - How did you come into being?
     - How were you made?
-- intent: ask_howdoing
+- intent: chitchat/ask_howdoing
   examples: |
     - What's up man
     - how's your day going
@@ -149,7 +149,7 @@ nlu:
     - are you alright
     - How've you been?
     - Is everything ok?
-- intent: ask_howold
+- intent: chitchat/ask_howold
   examples: |
     - What is your age?
     - What year were you born?
@@ -159,7 +159,7 @@ nlu:
     - what age are you
     - Tell me your day, month and year of birth.
     - how old?
-- intent: ask_isbot
+- intent: chitchat/ask_isbot
   examples: |
     - are you sure that you're a bot?
     - are you a robot
@@ -169,7 +169,7 @@ nlu:
     - are you a bot ?
     - Are you the bot?
     - are you a Skynet ?
-- intent: ask_languagesbot
+- intent: chitchat/ask_languagesbot
   examples: |
     - Do you know any other languages?
     - What do you speak?
@@ -179,12 +179,12 @@ nlu:
 - intent: ask_question_in_forum
   examples: |
     - Can you help me to solve a problem?
-- intent: ask_restaurant
+- intent: chitchat/ask_restaurant
   examples: |
     - Could you find me a restaurant to eat at?
     - Show me how to find a restaurant
     - What's the closest restaurant open near me
-- intent: ask_time
+- intent: chitchat/ask_time
   examples: |
     - What is the time?
     - Hi, I need the time.
@@ -195,7 +195,7 @@ nlu:
     - Time?
     - What is the hour and minute right now?
     - Pardon me, but do you know the time?
-- intent: ask_weather
+- intent: chitchat/ask_weather
   examples: |
     - how is the weather in berlin?
     - Will the skies be clear today?
@@ -205,7 +205,7 @@ nlu:
     - Nice day out today?
     - is it sunny
     - how's the weather?
-- intent: ask_whatismyname
+- intent: chitchat/ask_whatismyname
   examples: |
     - I'd like to know what my name is
     - Please let me know what my name is
@@ -214,7 +214,7 @@ nlu:
     - What exactly is my name?
     - What does everyone call me?
     - Do you know what my name is?
-- intent: ask_whatisrasa
+- intent: chitchat/ask_whatisrasa
   examples: |
     - Give me more information about Rasa
     - I want to learn what rasa does
@@ -223,7 +223,7 @@ nlu:
     - tell me more about rasa
     - Can you tell me what Rasa does?
     - what is rasa?
-- intent: ask_whatspossible
+- intent: chitchat/ask_whatspossible
   examples: |
     - so now what
     - um what now
@@ -233,11 +233,7 @@ nlu:
     - what are you good at?
     - options
     - cool! can I do something else here?
-- intent: ask_when_next_event
-  examples: |
-    - what's the next rasa event
-    - is there a Rasa event in [San Francisco](location)
-- intent: ask_wherefrom
+- intent: chitchat/ask_wherefrom
   examples: |
     - Where do you consider home?
     - where are your parents from?
@@ -251,12 +247,14 @@ nlu:
   examples: |
     - Which community events do you have
     - i want to meet Rasa
-- intent: ask_whoami
+    - what's the next rasa event
+    - is there a Rasa event in [San Francisco](location)
+- intent: chitchat/ask_whoami
   examples: |
     - WHo am I
     - who am i
     - can you tell me who I am?
-- intent: ask_whoisit
+- intent: chitchat/ask_whoisit
   examples: |
     - whats ur name
     - I want to know who you are

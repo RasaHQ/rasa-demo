@@ -47,4 +47,3 @@ policies:
   batch_size:
   - 32
   - 64
-

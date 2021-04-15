@@ -1,5 +1,9 @@
 help:
 	@echo "make"
+	@echo "    install"
+	@echo "        Install all requirements for running the bot."
+	@echo "    install-dev"
+	@echo "        Install all requirements for development."
 	@echo "    clean"
 	@echo "        Remove Python/build artifacts."
 	@echo "    formatter"
@@ -8,6 +12,22 @@ help:
 	@echo "        Lint code with flake8, and check if black formatter should be applied."
 	@echo "    types"
 	@echo "        Check for type errors using pytype."
+	@echo "    test-actions"
+	@echo "        Run custom action unit tests"
+
+install:
+	python -m pip install --upgrade "pip<20"
+	pip install -r requirements.txt
+	python -m spacy download en_core_web_md
+	python -m spacy link en_core_web_md en 
+	pip install -e .
+
+install-dev:
+	python -m pip install --upgrade "pip<20"
+	pip install -r requirements-dev.txt
+	python -m spacy download en_core_web_md
+	python -m spacy link en_core_web_md en 
+	pip install -e .
 
 clean:
 	find . -name '*.pyc' -exec rm -f {} +
@@ -19,17 +39,14 @@ clean:
 	rm -rf docs/_build
 
 formatter:
-	black actions
+	black actions tests
 
 lint:
-	flake8 actions
-	black --check actions
+	flake8 actions tests
+	black --check actions tests
 
 types:
-	pytype --keep-going actions
+	pytype --keep-going actions tests
 
-install:
-	pip install -r requirements.txt
-	pip install -e .
-	python -m spacy download en_core_web_md
-	python -m spacy link en_core_web_md en
+test-actions:
+	pytest . -vv

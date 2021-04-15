@@ -264,6 +264,8 @@ responses:
   - text: Thanks a bunch, we'll be in touch soon! ✉️
   utter_confirmationemail:
   - text: We sent a confirmation email to {email}.
+  utter_could_not_subscribe:
+  - text: Something went wrong, I couldn't subscribe you to the Rasa newsletter 😞
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com.
   utter_crf:

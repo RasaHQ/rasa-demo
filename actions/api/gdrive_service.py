@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class GDriveService:
-    """Service to write to a spread sheet in google drive."""
+    """Service to write to a spreadsheet in google drive."""
 
     # Name of the sales inbounds spreadsheet
     SALES_SPREADSHEET_NAME = "Qualify Inbounds"
@@ -56,10 +56,10 @@ class GDriveService:
         self, spreadsheet_name: Text, worksheet_name: Text, row_values: List[Text]
     ) -> None:
         # add a row to the spreadsheet
-        sheet = self.request_sheet(spreadsheet_name)
-        if sheet:
+        spreadsheet = self.request_spreadsheet(spreadsheet_name)
+        if spreadsheet:
             try:
-                worksheet = sheet.worksheet(worksheet_name)
+                worksheet = spreadsheet.worksheet(worksheet_name)
                 if worksheet:
                     worksheet.append_row(row_values)
             except Exception as e:
