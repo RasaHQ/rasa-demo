@@ -1197,9 +1197,12 @@ nlu:
     - [my machine](install_type)
     - [my laptop](install_type)
     - [local machine](install_type)
-    - [core](product)
-    - [core](product) please
-    - [Core](product)
+    - [dialogue management](product)
+    - [Dialogue Management](product) please
+    - [DIALOGUE MANAGEMENT](product)
+    - [dialog management](product)
+    - [dialogue management](product) please
+    - [Dialogue management](product)
     - Rasa [Core](product)
     - Rasa [core](product)
     - rasa [core](product)
@@ -2207,11 +2210,12 @@ nlu:
 - synonym: all
   examples: |
     - both
-- synonym: dialogue management
+- synonym: core
   examples: |
     - CORE
     - Core
     - core
+    - dialogue management
     - Dialogue management
     - Dialogue Management
     - DIALOGUE MANAGEMENT

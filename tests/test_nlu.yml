@@ -658,6 +658,10 @@ nlu:
   examples: |
     - Core
     - CORE
+    - dialogue management
+    - Dialogue Management
+    - DIALOGUE MANAGEMENT
+    - dialog management
 - synonym: date
   examples: |
     - dates

@@ -154,11 +154,11 @@ responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received a newsletter in a while, maybe check your spam folder 🗑
   utter_also_explain_core:
-  - text: Would you also like me to explain Core?
+  - text: Would you also like me to explain Dialogue Management?
   utter_also_explain_nlu:
   - text: Would you also like me to explain NLU?
   utter_also_explain_nlucore:
-  - text: Would you also like me to explain NLU and Core?
+  - text: Would you also like me to explain NLU and Dialogue Management?
   utter_anything_else:
   - text: Is there anything else I can help you with?
   utter_ask_budget:
@@ -216,11 +216,11 @@ responses:
   utter_ask_playground_install_info:
   - text: Which would you like to do first?
     buttons:
-    - payload: /playground
+    - payload: /get_started_playground
       title: Try out Rasa in the online Rasa Playground
     - payload: /install_rasa
       title: Install Rasa on your own computer
-    - payload: /trigger_response_selector{"retrieval_intent":"chitchat/ask_whatisrasa"}
+    - payload: /trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}
       title: Find out more about Rasa
   utter_playground_intro:
   - text: |-
@@ -295,8 +295,8 @@ responses:
   - text: Just for completeness.
   utter_explain_core:
   - text: |-
-      Core decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.
-      (Example: Core has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)
+      Dialogue Management (previously known as "Core") decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.
+      (Example: Dialogue Management has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)
   utter_explain_job_function:
   - text: Your job function helps us in understanding how we can talk to you best.
   utter_explain_nlu:
@@ -325,7 +325,7 @@ responses:
   utter_tutorialnlu:
   - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_first_bot_with_rasa:
-  - text: Let's go. Are you new to Rasa?
+  - text: I can give you more specific info depending on where you're at in your Rasa journey. Are you new to Rasa?
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_getstarted_new:
@@ -511,6 +511,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Rasa has your back! You can deploy Rasa either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_store_playground_problem_description
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
