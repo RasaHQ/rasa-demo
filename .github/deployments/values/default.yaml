@@ -7,7 +7,7 @@ rasaProduction:
 rasaWorker:
   resources:
     requests:
-      memory: 4Gi
+      memory: 8Gi
       cpu: 4
 rasax:
   resources:

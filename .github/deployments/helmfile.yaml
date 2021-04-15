@@ -83,6 +83,8 @@ releases:
               memory: {{ .Values.rasax.resources.requests.memory }}
               cpu: {{ .Values.rasax.resources.requests.cpu }}
       - rasa:
+          nodeSelector:
+            nodeFeature: extraMemory
           imagePullPolicy: Always
           token: {{ requiredEnv "RASA_TOKEN" }}
           tag: {{ requiredEnv "RASA_VERSION" }}-full
