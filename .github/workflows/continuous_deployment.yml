@@ -160,7 +160,7 @@ jobs:
       run: |
         cd ${{ github.workspace }}/.github/deployments && 
         helmfile repos &&
-        helmfile --environment development sync
+        helmfile sync
 
     - name: Wait for deployment to be ready ⏰
       timeout-minutes: 15
