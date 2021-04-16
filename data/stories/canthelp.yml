@@ -22,3 +22,12 @@ stories:
   - slot_was_set:
     - product: nlu
   - action: utter_nlu_tools
+- story: Story from Conversation ID aa082d1583b1421dac8c2114fd0f50bc
+  steps:
+  - intent: greet
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - action: utter_anything_else
