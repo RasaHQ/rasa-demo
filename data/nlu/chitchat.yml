@@ -850,3 +850,6 @@ nlu:
     - what's your name
     - what is you name
     - what is you name and where are you from
+- intent: faq
+  examples: |
+    - What is [Rasa Open Source]{"entity": "product", "value": "rasa"}?

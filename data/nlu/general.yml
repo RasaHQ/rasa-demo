@@ -614,7 +614,6 @@ nlu:
     - hlo
     - hola
     - howdy
-    - i am [Karen Mease](name)
     - jojojo
     - jop
     - konichiwa
@@ -759,7 +758,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr

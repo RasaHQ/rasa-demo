@@ -1168,6 +1168,7 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
+    - dominik@rasa.com
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -2375,9 +2376,3 @@ nlu:
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt
