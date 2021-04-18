@@ -5,7 +5,12 @@ import uuid
 from typing import Text, Dict, Tuple, List
 from gspread.models import Worksheet
 
-from rasa_sdk.events import EventType, SlotSet, ConversationPaused, UserUtteranceReverted
+from rasa_sdk.events import (
+    EventType,
+    SlotSet,
+    ConversationPaused,
+    UserUtteranceReverted,
+)
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
 from rasa_sdk.types import DomainDict
@@ -199,15 +204,24 @@ def test_action_community_events(
     assert actual_events == []
     assert len(dispatcher.messages) == 1
 
-@pytest.mark.parametrize("last_intent, expected_events", [
-    (USER_INTENT_OUT_OF_SCOPE, [SlotSet("feedback_value", "negative"), ConversationPaused()]),
-    ("bye", [UserUtteranceReverted()])
-])
-def test_action_default_fallback( tracker: Tracker,
+
+@pytest.mark.parametrize(
+    "last_intent, expected_events",
+    [
+        (
+            USER_INTENT_OUT_OF_SCOPE,
+            [SlotSet("feedback_value", "negative"), ConversationPaused()],
+        ),
+        ("bye", [UserUtteranceReverted()]),
+    ],
+)
+def test_action_default_fallback(
+    tracker: Tracker,
     dispatcher: CollectingDispatcher,
     domain: DomainDict,
     last_intent,
-    expected_events):
+    expected_events,
+):
 
     tracker.latest_message["intent"]["name"] = last_intent
 
