@@ -24,6 +24,8 @@ from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
 from actions.api.rasaxapi import RasaXAPI
 
+from rasa.shared.core.constants import USER_INTENT_OUT_OF_SCOPE
+
 logger = logging.getLogger(__name__)
 
 INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
@@ -474,10 +476,8 @@ class ActionDefaultFallback(Action):
     ) -> List[EventType]:
 
         # Fallback caused by TwoStageFallbackPolicy
-        if (
-            len(tracker.events) >= 5
-            and tracker.events[-5].get("name") == "action_two_stage_fallback"
-        ):
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent == USER_INTENT_OUT_OF_SCOPE:
 
             dispatcher.utter_message(template="utter_restart_with_button")
 
