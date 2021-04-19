@@ -1,0 +1,34 @@
+language: en
+pipeline:
+- name: WhitespaceTokenizer
+  token_pattern: (?u)\b\w+\b
+- name: RegexFeaturizer
+- name: LexicalSyntacticFeaturizer
+- name: CountVectorsFeaturizer
+  OOV_token: oov
+- name: CountVectorsFeaturizer
+  analyzer: char_wb
+  min_ngram: 1
+  max_ngram: 4
+- name: DIETClassifier
+  epochs: 200
+  ranking_length: 5
+- name: DucklingEntityExtractor
+  url: http://localhost:8000
+  dimensions:
+  - email
+  - number
+  - amount-of-money
+- name: EntitySynonymMapper
+- name: ResponseSelector
+  retrieval_intent: out_of_scope
+  scale_loss: false
+  epochs: 100
+- name: ResponseSelector
+  retrieval_intent: faq
+  scale_loss: false
+  epochs: 100
+- name: ResponseSelector
+  retrieval_intent: chitchat
+  scale_loss: false
+  epochs: 100
