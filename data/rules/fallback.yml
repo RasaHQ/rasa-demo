@@ -5,15 +5,11 @@ rules:
       - intent: nlu_fallback
       - action: action_two_stage_fallback
       - active_loop: action_two_stage_fallback
-      - slot_was_set:
-        - feedback_value: null
       
   - rule: Optional restart after two stage fallback ends
     condition:
     - active_loop: action_two_stage_fallback
     steps:
       - action: action_two_stage_fallback
-      - slot_was_set:
-        - feedback_value: negative
       - active_loop: null
       - action: utter_restart_with_button
