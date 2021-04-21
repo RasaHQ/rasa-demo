@@ -478,10 +478,7 @@ class ActionDefaultFallback(Action):
         # Fallback caused by TwoStageFallbackPolicy
         last_intent = tracker.latest_message["intent"]["name"]
         if last_intent == USER_INTENT_OUT_OF_SCOPE:
-
-            dispatcher.utter_message(template="utter_restart_with_button")
-
-            return [SlotSet("feedback_value", "negative"), ConversationPaused()]
+            return [SlotSet("feedback_value", "negative")]
 
         # Fallback caused by Core
         else:
