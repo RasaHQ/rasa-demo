@@ -416,37 +416,51 @@ class ActionDefaultAskAffirmation(Action):
         # can distinguish between the different sub intents
         first_intent_names = [
             intent.get("name", "")
-            if intent.get("name", "") not in ["out_of_scope", "faq", "chitchat"]
+            if intent.get("name", "") not in ["faq", "chitchat"]
             else tracker.latest_message.get("response_selector")
             .get(intent.get("name", ""))
             .get("full_retrieval_intent")
             for intent in intent_ranking
         ]
-        message_title = (
-            "Sorry, I'm not sure I've understood " "you correctly 🤔 Do you mean..."
-        )
+        if "nlu_fallback" in first_intent_names:
+            first_intent_names.remove("nlu_fallback")
+        if "/out_of_scope" in first_intent_names:
+            first_intent_names.remove("/out_of_scope")
+        if "out_of_scope" in first_intent_names:
+            first_intent_names.remove("out_of_scope")
 
-        entities = tracker.latest_message.get("entities", [])
-        entities = {e["entity"]: e["value"] for e in entities}
+        if len(first_intent_names) > 0:
+            message_title = (
+                "Sorry, I'm not sure I've understood you correctly 🤔 Do you mean..."
+            )
 
-        entities_json = json.dumps(entities)
+            entities = tracker.latest_message.get("entities", [])
+            entities = {e["entity"]: e["value"] for e in entities}
 
-        buttons = []
-        for intent in first_intent_names:
-            button_title = self.get_button_title(intent, entities)
-            if "/" in intent:
-                # here we use the button title as the payload as well, because you
-                # can't force a response selector sub intent, so we need NLU to parse
-                # that correctly
-                buttons.append({"title": button_title, "payload": button_title})
-            else:
-                buttons.append(
-                    {"title": button_title, "payload": f"/{intent}{entities_json}"}
-                )
+            entities_json = json.dumps(entities)
 
-        buttons.append({"title": "Something else", "payload": "/out_of_scope"})
+            buttons = []
+            for intent in first_intent_names:
+                button_title = self.get_button_title(intent, entities)
+                if "/" in intent:
+                    # here we use the button title as the payload as well, because you
+                    # can't force a response selector sub intent, so we need NLU to parse
+                    # that correctly
+                    buttons.append({"title": button_title, "payload": button_title})
+                else:
+                    buttons.append(
+                        {"title": button_title, "payload": f"/{intent}{entities_json}"}
+                    )
 
-        dispatcher.utter_message(text=message_title, buttons=buttons)
+            buttons.append({"title": "Something else", "payload": "/out_of_scope"})
+
+            dispatcher.utter_message(text=message_title, buttons=buttons)
+        else:
+            message_title = (
+                "Sorry, I'm not sure I've understood "
+                "you correctly 🤔 Can you please rephrase?"
+            )
+            dispatcher.utter_message(text=message_title)
 
         return []
 
@@ -477,7 +491,7 @@ class ActionDefaultFallback(Action):
 
         # Fallback caused by TwoStageFallbackPolicy
         last_intent = tracker.latest_message["intent"]["name"]
-        if last_intent == USER_INTENT_OUT_OF_SCOPE:
+        if last_intent in ["nlu_fallback", USER_INTENT_OUT_OF_SCOPE]:
             return [SlotSet("feedback_value", "negative")]
 
         # Fallback caused by Core
