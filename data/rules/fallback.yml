@@ -7,6 +7,7 @@ rules:
       - active_loop: action_two_stage_fallback
       
   - rule: Optional restart after two stage fallback ends
+    condition:
     - active_loop: action_two_stage_fallback
     steps:
       - active_loop: null
