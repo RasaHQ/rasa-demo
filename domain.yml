@@ -86,6 +86,7 @@ slots:
   feedback_message:
     type: any
   feedback_value:
+    influence_conversation: false
     type: categorical
     values:
     - positive
