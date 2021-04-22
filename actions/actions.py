@@ -36,7 +36,10 @@ class ActionSubmitSubscribeNewsletterForm(Action):
         return "action_submit_subscribe_newsletter_form"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         """Once we have an email, attempt to add it to the database"""
 
@@ -77,7 +80,10 @@ class ActionSubmitSalesForm(Action):
         return "action_submit_sales_form"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         """Once we have all the information, attempt to add it to the
         Google Drive database"""
@@ -101,7 +107,8 @@ class ActionSubmitSalesForm(Action):
             return []
         except Exception as e:
             logger.error(
-                f"Failed to write data to gdocs. Error: {e.message}", exc_info=True,
+                f"Failed to write data to gdocs. Error: {e.message}",
+                exc_info=True,
             )
             dispatcher.utter_message(template="utter_salesrequest_failed")
             return []
@@ -133,7 +140,10 @@ class ActionExplainSalesForm(Action):
         return "action_explain_sales_form"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         requested_slot = tracker.get_slot("requested_slot")
 
@@ -158,7 +168,10 @@ class ActionExplainFaqs(Action):
         return "action_explain_faq"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         topic = tracker.get_slot("faq")
 
@@ -177,7 +190,10 @@ class ActionSetFaqSlot(Action):
         return "action_set_faq_slot"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         full_intent = (
             tracker.latest_message.get("response_selector", {})
@@ -199,7 +215,10 @@ class ActionPause(Action):
         return "action_pause"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         return [ConversationPaused()]
 
@@ -211,7 +230,10 @@ class ActionStoreUnknownProduct(Action):
         return "action_store_unknown_product"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         # if we dont know the product the user is migrating from,
         # store their last message in a slot.
@@ -227,7 +249,10 @@ class ActionStoreUnknownNluPart(Action):
         return "action_store_unknown_nlu_part"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         # if we dont know the part of nlu the user wants information on,
         # store their last message in a slot.
@@ -241,7 +266,10 @@ class ActionStoreBotLanguage(Action):
         return "action_store_bot_language"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         spacy_languages = [
             "english",
@@ -275,7 +303,10 @@ class ActionStoreEntityExtractor(Action):
         return "action_store_entity_extractor"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         spacy_entities = ["place", "date", "name", "organisation"]
         duckling = [
@@ -307,7 +338,10 @@ class ActionSetOnboarding(Action):
         return "action_set_onboarding"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         user_type = next(tracker.get_latest_entity_values("user_type"), None)
@@ -324,7 +358,10 @@ class ActionSubmitSuggestionForm(Action):
         return "action_submit_suggestion_form"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         dispatcher.utter_message(template="utter_thank_suggestion")
         return []
@@ -337,7 +374,10 @@ class ActionStoreProblemDescription(Action):
         return "action_store_problem_description"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         problem = tracker.latest_message.get("text")
 
@@ -351,7 +391,10 @@ class ActionGreetUser(Action):
         return "action_greet_user"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
@@ -397,7 +440,10 @@ class ActionDefaultAskAffirmation(Action):
         )
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
 
         intent_ranking = tracker.latest_message.get("intent_ranking", [])
@@ -487,7 +533,10 @@ class ActionDefaultFallback(Action):
         return "action_default_fallback"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
 
         # Fallback caused by TwoStageFallbackPolicy
@@ -506,7 +555,10 @@ class ActionRestartWithButton(Action):
         return "action_restart_with_button"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> None:
 
         dispatcher.utter_message(template="utter_restart_with_button")
@@ -541,7 +593,10 @@ class ActionCommunityEvent(Action):
         )
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
 
         events = self._get_events()
@@ -617,7 +672,10 @@ class ActionNextStep(Action):
         return "action_next_step"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         if tracker.get_slot("step"):
             step = int(tracker.get_slot("step")) + 1
@@ -753,7 +811,10 @@ class ActionTagFeedback(Action):
         return "action_tag_feedback"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
 
         feedback = tracker.get_slot("feedback_value")
@@ -778,7 +839,10 @@ class ActionTagDocsSearch(Action):
         return "action_tag_docs_search"
 
     def run(
-        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
     ) -> List[EventType]:
         intent = tracker.latest_message["intent"].get("name")
 
