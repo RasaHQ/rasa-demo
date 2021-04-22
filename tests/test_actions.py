@@ -208,10 +208,7 @@ def test_action_community_events(
 @pytest.mark.parametrize(
     "last_intent, expected_events",
     [
-        (
-            USER_INTENT_OUT_OF_SCOPE,
-            [SlotSet("feedback_value", "negative"), ConversationPaused()],
-        ),
+        (USER_INTENT_OUT_OF_SCOPE, [SlotSet("feedback_value", "negative")]),
         ("bye", [UserUtteranceReverted()]),
     ],
 )
