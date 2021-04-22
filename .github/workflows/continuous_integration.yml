@@ -66,6 +66,7 @@ jobs:
     - name: Type Checking
       working-directory: ${{ github.workspace }}
       run: |
+        pip list
         make types
   action-unit-tests:
     needs:
