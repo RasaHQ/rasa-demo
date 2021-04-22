@@ -31,8 +31,6 @@ stories:
   - intent: feedback
     entities:
     - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
   - action: utter_great
   - action: utter_anything_else
@@ -50,8 +48,6 @@ stories:
   - action: utter_ask_feedback
   - intent: feedback
     entities:
-    - feedback_value: positive
-  - slot_was_set:
     - feedback_value: positive
   - action: action_tag_feedback
   - action: utter_great
@@ -102,8 +98,6 @@ stories:
   - action: utter_ask_feedback
   - intent: feedback
     entities:
-    - feedback_value: negative
-  - slot_was_set:
     - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
@@ -156,8 +150,6 @@ stories:
   - intent: feedback
     entities:
     - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
   - action: utter_great
   - action: utter_anything_else
@@ -195,10 +187,8 @@ stories:
   - intent: feedback
     entities:
     - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
-  - action: utter_thumbsup
+  - action: utter_great
   - action: utter_anything_else
   - intent: contact_sales
   - action: utter_moreinformation
@@ -209,8 +199,6 @@ stories:
   - action: utter_ask_feedback
   - intent: feedback
     entities:
-    - feedback_value: positive
-  - slot_was_set:
     - feedback_value: positive
   - action: action_tag_feedback
   - action: utter_great
@@ -236,8 +224,6 @@ stories:
   - action: utter_ask_feedback
   - intent: feedback
     entities:
-    - feedback_value: negative
-  - slot_was_set:
     - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
@@ -277,8 +263,6 @@ stories:
   - action: utter_ask_feedback
   - intent: feedback
     entities:
-    - feedback_value: positive
-  - slot_was_set:
     - feedback_value: positive
   - action: action_tag_feedback
   - action: utter_great
