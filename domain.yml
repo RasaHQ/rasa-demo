@@ -582,6 +582,7 @@ responses:
 actions:
 - action_default_ask_affirmation
 - action_default_fallback
+- action_restart_with_button
 - action_docs_search
 - action_explain_sales_form
 - action_set_faq_slot
