@@ -501,6 +501,19 @@ class ActionDefaultFallback(Action):
             return [UserUtteranceReverted()]
 
 
+class ActionRestartWithButton(Action):
+    def name(self) -> Text:
+        return "action_restart_with_button"
+
+    def run(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: DomainDict,
+    ) -> None:
+
+        dispatcher.utter_message(template="utter_restart_with_button")
+
+        # return [ConversationPaused()]
+
+
 class ActionCommunityEvent(Action):
     """Utters Rasa community events."""
 
