@@ -419,7 +419,8 @@ class ActionDefaultAskAffirmation(Action):
             if intent.get("name", "") not in ["faq", "chitchat"]
             else tracker.latest_message.get("response_selector")
             .get(intent.get("name", ""))
-            .get("full_retrieval_intent")
+            .get("ranking")[0]
+            .get("intent_response_key")
             for intent in intent_ranking
         ]
         if "nlu_fallback" in first_intent_names:
