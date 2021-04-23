@@ -29,10 +29,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: newsletter + feedback
   steps:
@@ -47,10 +45,8 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: newsletter + affirm feedback
   steps:
@@ -97,8 +93,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -148,10 +142,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: sales then newsletter
   steps:
@@ -185,10 +177,8 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
   - intent: contact_sales
   - action: utter_moreinformation
@@ -198,10 +188,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: sales, then newsletter, then confirm
   steps:
@@ -223,8 +211,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -262,10 +248,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: anything else? - no
   steps:
