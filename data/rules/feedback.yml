@@ -30,23 +30,10 @@ rules:
   - intent: thank
   - action: utter_noworries
   - action: utter_anything_else
-  
-stories:
-- story: negative feedback
+- rule: provides feedback
   steps:
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
-  - action: utter_anything_else
-- story: positive feedback
-  steps:
-  - action: utter_ask_feedback
-  - intent: feedback
-    entities:
-    - feedback_value: positive
-  - action: action_tag_feedback
-  - action: utter_great
   - action: utter_anything_else
