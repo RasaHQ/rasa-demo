@@ -63,3 +63,54 @@ rules:
   - action: utter_anything_else
   - intent: affirm
   - action: utter_what_help
+
+# Rules for handling intent: explain
+- rule: explain after utter_ask_explain_nlucorex # just factors out a shared bit from many training stories 
+  steps:
+  - action: utter_ask_explain_nlucorex
+  - intent: explain
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  wait_for_user_input: false
+- rule: explain after utter_ask_migration
+  steps:
+  - action: utter_ask_migration
+  - intent: explain
+  - action: utter_no_further_info
+  - action: utter_ask_migration
+- rule: explain after utter_direct_to_step2
+  steps:
+  - action: utter_direct_to_step2
+  - intent: explain
+  - action: action_next_step
+- rule: explain after utter_first_bot_with_rasa # extracted from a training story
+  steps:
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: explain
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+- rule: explain NLU # from conversation 13dc0ea0b361417a9558d1db4f49141d
+  steps:
+  - intent: explain
+    entities:
+    - product: nlu
+  - action: utter_explain_nlu
+  wait_for_user_input: false
+- rule: explain Core
+  steps:
+  - intent: explain
+    entities:
+    - product: core
+  - action: utter_explain_core
+  wait_for_user_input: false
+- rule: explain X
+  steps:
+  - intent: explain
+    entities:
+    - product: x
+  - action: utter_explain_x
+  wait_for_user_input: false
