@@ -9,8 +9,9 @@ install_requires = [
     "beautifulsoup4~=4.6.3",
     "requests~=2.24.0",
     "geopy~=1.18.1",
-    "pandas~=0.24.1",
+    "pandas>=0.25.0",
     "algoliasearch>=2.0,<3.0",
+    "spacy~=2.2.4",
 ]
 
 here = os.path.abspath(os.path.dirname(__file__))
