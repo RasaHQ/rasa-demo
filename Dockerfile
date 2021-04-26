@@ -10,6 +10,21 @@ COPY actions/requirements-actions.txt ./
 # Change to root user to install dependencies
 USER root
 
+RUN apt-get update -qq && \
+  apt-get install -y --no-install-recommends \
+  python3 \
+  python3-venv \
+  python3-pip \
+  python3-dev \
+  # required by psycopg2 at build and runtime
+  libpq-dev \
+  # required for health check
+  curl \
+  && apt-get autoremove -y
+  
+# Make sure that all security updates are installed
+RUN apt-get update && apt-get dist-upgrade -y --no-install-recommends
+
 # Install extra requirements for actions code
 RUN pip install -r requirements-actions.txt
 
@@ -18,6 +33,7 @@ COPY ./actions /app/actions
 
 # Install modules from setup.py
 COPY setup.py /app
+COPY README.md /app
 RUN pip install . --no-cache-dir
 
 # Download spacy language data
