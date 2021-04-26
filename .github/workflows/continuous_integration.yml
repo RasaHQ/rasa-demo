@@ -141,11 +141,11 @@ jobs:
       working-directory: ${{ github.workspace }}
       run: |
         rasa train
-    - name: Test Training Stories
+    - name: Test End 2 End Stories
       if:  ${{ needs.check_changed_files.outputs.core == 'true' }}
       working-directory: ${{ github.workspace }}
       run: |
-        rasa test core --stories test/test_stories.md --fail-on-prediction-errors
+        rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
   build-images:
     name: Build Action Server Image
     needs: 
