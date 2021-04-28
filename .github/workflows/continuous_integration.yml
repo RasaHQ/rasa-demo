@@ -128,8 +128,8 @@ jobs:
     - name: Cross-validate NLU model
       id: cvnlu
       if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
-      run: |  
-          rasa test nlu -f 3 --cross-validation
+      run: |
+          rasa test nlu -f 3 --cross-validation --config config_nlu_testing.yml
           python .github/workflows/format_results.py
     - name: post cross-val results to PR
       if: steps.cvnlu.outcome == 'success'

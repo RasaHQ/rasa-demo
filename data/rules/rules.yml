@@ -54,10 +54,6 @@ rules:
   - action: action_deactivate_loop
   - active_loop: null
   - action: utter_ask_more_details
-- rule: next step prompt
-  steps:
-  - intent: next_step
-  - action: action_next_step
 - rule: anything else? - yes
   steps:
   - action: utter_anything_else
@@ -79,14 +75,8 @@ rules:
   - intent: explain
   - action: utter_no_further_info
   - action: utter_ask_migration
-- rule: explain after utter_direct_to_step2
-  steps:
-  - action: utter_direct_to_step2
-  - intent: explain
-  - action: action_next_step
 - rule: explain after utter_first_bot_with_rasa # extracted from a training story
   steps:
-  - action: utter_getstarted
   - action: utter_first_bot_with_rasa
   - intent: explain
   - action: action_set_onboarding
