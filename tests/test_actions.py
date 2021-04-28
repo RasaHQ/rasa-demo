@@ -8,7 +8,6 @@ from gspread.models import Worksheet
 from rasa_sdk.events import (
     EventType,
     SlotSet,
-    #    ConversationPaused,
     UserUtteranceReverted,
 )
 from rasa_sdk.executor import CollectingDispatcher

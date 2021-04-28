@@ -563,7 +563,7 @@ class ActionRestartWithButton(Action):
 
         dispatcher.utter_message(template="utter_restart_with_button")
 
-        # return [ConversationPaused()]
+        return []
 
 
 class ActionCommunityEvent(Action):
