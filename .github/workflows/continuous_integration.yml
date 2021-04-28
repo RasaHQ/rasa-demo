@@ -129,6 +129,7 @@ jobs:
       id: cvnlu
       if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
       run: |
+          rasa --version
           rasa test nlu -f 3 --cross-validation --config config_nlu_testing.yml
           python .github/workflows/format_results.py
     - name: post cross-val results to PR
@@ -140,11 +141,13 @@ jobs:
     - name: Train Model
       working-directory: ${{ github.workspace }}
       run: |
+        rasa --version
         rasa train
     - name: Test End 2 End Stories
       if:  ${{ needs.check_changed_files.outputs.core == 'true' }}
       working-directory: ${{ github.workspace }}
       run: |
+        rasa --version
         rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
   build-images:
     name: Build Action Server Image
