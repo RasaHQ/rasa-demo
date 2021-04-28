@@ -153,10 +153,14 @@ def gdrive(mocker) -> Tuple[GDriveService, "Worksheet"]:
     sales_spreadsheet_name = "SaraUnitTestingSalesSheet"
     sales_worksheet_name = "demobot_testing"
     mocker.patch.object(
-        GDriveService, "SALES_SPREADSHEET_NAME", sales_spreadsheet_name,
+        GDriveService,
+        "SALES_SPREADSHEET_NAME",
+        sales_spreadsheet_name,
     )
     mocker.patch.object(
-        GDriveService, "SALES_WORKSHEET_NAME", sales_worksheet_name,
+        GDriveService,
+        "SALES_WORKSHEET_NAME",
+        sales_worksheet_name,
     )
 
     gdrive_client = GDriveService()
