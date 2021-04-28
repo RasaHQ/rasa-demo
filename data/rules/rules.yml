@@ -1,11 +1,11 @@
 version: "2.0"
 rules:
-- rule: why rasa
+- rule: why rasa 1
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
-- rule: why rasa
+- rule: why rasa 2
   steps:
   - intent: why_rasa
     entities:
@@ -14,7 +14,7 @@ rules:
     - current_api: __other__
   - action: utter_why_rasa
   - action: utter_ask_more
-- rule: why rasa
+- rule: why rasa 3
   steps:
   - intent: why_rasa
     entities:
@@ -24,7 +24,7 @@ rules:
   - action: utter_why_rasa
   - action: utter_switch_luis
   - action: utter_ask_more_migrate
-- rule: why rasa
+- rule: why rasa 4
   steps:
   - intent: why_rasa
     entities:

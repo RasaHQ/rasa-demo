@@ -270,7 +270,7 @@ stories:
   steps:
   - intent: react_negative
   - action: utter_react_negative
-- story: why rasa
+- story: why rasa 1
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
@@ -281,7 +281,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 2
   steps:
   - intent: why_rasa
     entities:
@@ -296,7 +296,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 3
   steps:
   - intent: why_rasa
     entities:
@@ -312,7 +312,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 4
   steps:
   - intent: why_rasa
     entities:
@@ -328,14 +328,14 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 5
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 6
   steps:
   - intent: why_rasa
     entities:
@@ -346,7 +346,7 @@ stories:
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 7
   steps:
   - intent: why_rasa
     entities:
@@ -358,7 +358,7 @@ stories:
   - action: utter_ask_more_migrate
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 8
   steps:
   - intent: why_rasa
     entities:
