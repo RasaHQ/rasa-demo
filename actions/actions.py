@@ -563,8 +563,6 @@ class ActionRestartWithButton(Action):
 
         dispatcher.utter_message(template="utter_restart_with_button")
 
-        return []
-
 
 class ActionCommunityEvent(Action):
     """Utters Rasa community events."""
