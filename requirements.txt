@@ -1,4 +1,4 @@
-rasa~=2.5.0 # when updating, check the sdk version in the Dockerfile as well!
+rasa==2.5.0 # when updating, check the sdk version in the Dockerfile as well!
 -r actions/requirements-actions.txt
 pytablewriter
 python-dotenv~=0.15.0

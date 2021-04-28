@@ -125,6 +125,7 @@ jobs:
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
+          rasa --version
     - name: Cross-validate NLU model
       id: cvnlu
       if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
