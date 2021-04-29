@@ -283,7 +283,7 @@ stories:
     - retrieval_intent: chitchat/ask_whatisrasa
   - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
-  - intent: affirm
+  - intent: deny
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
