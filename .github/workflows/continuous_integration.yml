@@ -49,12 +49,12 @@ jobs:
     - name: Code Formatting Tests
       working-directory: ${{ github.workspace }}
       run: |
-        echo "------------------------------------"
-        echo "debugging black behavior in pipeline"
-        cp tests/test_actions.py tests/test_actions.py.save
-        make formatter
-        diff tests/test_actions.py tests/test_actions.py.save
-        echo "------------------------------------"
+        #        echo "------------------------------------"
+        #        echo "debugging black behavior in pipeline"
+        #        cp tests/test_actions.py tests/test_actions.py.save
+        #        make formatter
+        #        diff tests/test_actions.py tests/test_actions.py.save
+        #        echo "------------------------------------"
         make lint
   type-testing:
     name: Type Tests

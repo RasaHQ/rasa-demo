@@ -29,9 +29,7 @@ from rasa.shared.core.constants import USER_INTENT_OUT_OF_SCOPE
     ],
 )
 def test_action_tag_feedback(
-    tracker: Tracker,
-    dispatcher: CollectingDispatcher,
-    domain: DomainDict,
+    tracker: Tracker, dispatcher: CollectingDispatcher, domain: DomainDict,
     feedback_value: Text,
     expected_tags: List[Dict],
     rasa_x_convo: None,
