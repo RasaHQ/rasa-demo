@@ -374,35 +374,7 @@ stories:
     - entity_extractor: DucklingHTTPExtractor
   - action: utter_duckling
   - action: utter_anything_else
-- story: FAQ - tell more about rasa x ee
-  steps:
-  - intent: faq
-  - action: utter_faq
-  - action: action_set_faq_slot
-  - intent: explain
-  - action: action_explain_faq
-- story: FAQ - tell more about languages
-  steps:
-  - intent: faq
-  - action: utter_faq
-  - action: action_set_faq_slot
-  - intent: explain
-  - action: action_explain_faq
-- story: FAQ - tell more about voice
-  steps:
-  - intent: faq
-  - action: utter_faq
-  - action: action_set_faq_slot
-  - intent: explain
-  - action: action_explain_faq
-- story: FAQ - tell more about slots
-  steps:
-  - intent: faq
-  - action: utter_faq
-  - action: action_set_faq_slot
-  - intent: explain
-  - action: action_explain_faq
-- story: FAQ - tell more about channels
+- story: FAQ - tell more
   steps:
   - intent: faq
   - action: utter_faq
@@ -441,7 +413,9 @@ stories:
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_ready_to_build
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_run_rasa_init
   - action: utter_direct_to_step3
 - story: FAQ - Step 2 flow interrupted

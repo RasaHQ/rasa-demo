@@ -291,3 +291,324 @@ stories:
     intent: nlu_fallback
   - action: action_two_stage_fallback
   - active_loop: action_two_stage_fallback
+- story: chit-chat, explain
+  steps:
+  - intent: greet
+    user: |-
+      /greet
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat/ask_whoisit
+    user: |-
+      what's your name
+  - action: utter_chitchat
+  - intent: chitchat/ask_howdoing
+    user: |-
+      how are you
+  - action: utter_chitchat
+  - intent: chitchat/ask_howold
+    user: |-
+      how old
+  - action: utter_chitchat
+  - intent: greet
+    user: |-
+      hi again
+  - action: action_greet_user
+  - intent: greet
+    user: |-
+      hello
+  - action: action_greet_user
+  - intent: greet
+    user: |-
+      hi
+  - action: action_greet_user
+  - intent: chitchat/ask_whoisit
+    user: |-
+      tell me about yourself
+  - action: utter_chitchat
+  - intent: contact_sales
+    user: |-
+      talk to sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - slot_was_set:
+    - requested_slot: job_function
+  - intent: out_of_scope/other
+    user: |-
+      dd
+  - action: utter_out_of_scope
+  - action: utter_ask_continue_sales
+  - intent: enter_data
+    user: |-
+      [engineer](job_function)
+  - slot_was_set:
+    - job_function: engineer
+  - action: sales_form
+  - slot_was_set:
+    - job_function: engineer
+  - slot_was_set:
+    - requested_slot: use_case
+  - intent: chitchat/ask_whatspossible
+    user: |-
+      what can you do
+  - action: utter_chitchat
+  - action: utter_ask_continue_sales
+  - intent: chitchat/ask_whatisrasa
+    user: |-
+      what can rasa do
+  - action: utter_chitchat
+  - action: utter_ask_continue_sales
+  - intent: contact_sales
+    user: |-
+      sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - slot_was_set:
+    - requested_slot: use_case
+  - intent: explain
+    user: |-
+      why do you need to know that
+  - action: action_explain_sales_form
+  - action: utter_ask_continue_sales
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_great
+  - action: sales_form
+  - slot_was_set:
+    - requested_slot: use_case
+  - intent: deny
+    user: |-
+      no
+  - action: utter_thumbsup
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_ask_feedback
+  - intent: explain
+    user: |-
+      ?
+  - action: utter_no_further_info
+  - intent: contact_sales
+    user: |-
+      sales
+  - action: utter_moreinformation
+  - action: sales_form
+  - active_loop: sales_form
+  - slot_was_set:
+    - job_function: engineer
+  - slot_was_set:
+    - requested_slot: use_case
+- story: new to rasa, built bots, explain re migration
+  steps:
+  - intent: greet
+    user: |-
+      /greet
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: chitchat/ask_languagesbot
+    user: |-
+      can you speak [Chinese](language)?
+  - slot_was_set:
+    - language: __other__
+  - action: utter_chitchat
+  - intent: faq/languages
+    user: |-
+      Can I use rasa with [Chinese](language).
+  - slot_was_set:
+    - language: __other__
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - slot_was_set:
+    - faq: languages
+  - intent: chitchat/ask_whatspossible
+    user: |-
+      what should I do?
+  - action: utter_chitchat
+  - intent: how_to_get_started
+    user: |-
+      how to get started with rasa.
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+    user: |-
+      yes
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_ask_migration
+  - intent: explain
+    user: |-
+      such as ?
+  - action: utter_no_further_info
+  - action: utter_ask_migration
+- story: full onboarding flow; technical questions
+  steps:
+  - intent: get_started_step1
+    user: |-
+      /get_started_step1
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - slot_was_set:
+    - step: '1'
+  - intent: chitchat/ask_whoisit
+    user: |-
+      i want to know more about you
+  - action: utter_chitchat
+  - intent: react_positive
+    user: |-
+      nice
+  - action: utter_react_positive
+  - intent: chitchat/ask_whoisit
+    user: |-
+      your name?
+  - action: utter_chitchat
+  - intent: out_of_scope/other
+    user: |-
+      do you know maths?
+  - action: utter_out_of_scope
+  - action: utter_possibilities
+  - intent: chitchat/ask_whatspossible
+    user: |-
+      what can you do?
+  - action: utter_chitchat
+  - intent: how_to_get_started
+    user: |-
+      tell me your features
+  - action: utter_getstarted
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+    user: |-
+      yes
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: deny
+    user: |-
+      no
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+  - action: utter_explain_x
+  - action: utter_direct_to_step2
+  - intent: get_started_step2
+    user: |-
+      /get_started_step2
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '2'
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_run_rasa_init
+  - action: utter_direct_to_step3
+  - intent: next_step
+    user: |-
+      take me to next step
+  - action: action_next_step
+  - intent: get_started_step3
+    user: |-
+      /get_started_step3
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '3'
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_explain_x
+  - action: utter_direct_to_step4
+  - intent: get_started_step4
+    user: |-
+      /get_started_step4
+  - action: action_greet_user
+  - slot_was_set:
+    - step: '4'
+  - intent: affirm
+    user: |-
+      ok
+  - action: utter_thumbsup
+  - intent: chitchat/ask_languagesbot
+    user: |-
+      you speak [hindi](language)?
+  - slot_was_set:
+    - language: __other__
+  - action: utter_chitchat
+  - intent: affirm
+    user: |-
+      Ok
+  - action: utter_thumbsup
+  - intent: affirm
+    user: |-
+      ok
+  - action: utter_thumbsup
+  - intent: bye
+  - action: utter_bye
+  - intent: greet
+    user: |-
+      hello
+  - action: action_greet_user
+  - intent: chitchat/ask_howdoing
+    user: |-
+      how's you?
+  - action: utter_chitchat
+  - intent: why_rasa
+    user: |-
+      why Sara?
+  - action: utter_why_rasa
+  - action: utter_ask_more
+  - intent: chitchat/ask_whoisit
+    user: |-
+      what is your name?
+  - action: utter_chitchat
+  - intent: explain
+    user: |-
+      Why your name is Sara?
+  - action: utter_no_further_info
+  - intent: affirm
+    user: |-
+      ok
+  - action: utter_thumbsup
+  - intent: bye
+    user: |-
+      bye'
+  - action: utter_bye
+  - intent: technical_question
+    user: |-
+      is there any ready made APIs?
+  - action: action_docs_search
+  - slot_was_set:
+    - docs_found: true
+  - action: utter_ask_docs_help
+  - intent: technical_question
+    user: |-
+      poetry install
+  - action: action_docs_search
+  - slot_was_set:
+    - docs_found: true
+  - action: utter_ask_docs_help
+  - intent: affirm
+    user: |-
+      /affirm
+  - action: action_tag_docs_search
+  - action: utter_great

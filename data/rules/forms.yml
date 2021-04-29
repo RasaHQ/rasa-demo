@@ -227,6 +227,14 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
 
+- rule: explain in sales form
+  condition:
+  - active_loop: sales_form
+  steps:
+  - intent: explain
+  - action: action_explain_sales_form
+  - action: utter_ask_continue_sales
+
 - rule: Rasa x faq in sales form
   condition:
   - active_loop: sales_form
