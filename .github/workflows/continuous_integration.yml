@@ -57,6 +57,8 @@ jobs:
         echo "------------------------------------"
         cp tests/test_actions.py tests/test_actions.py.save
         echo "cat tests/test_actions.py.save"
+        cat -n tests/test_actions.py.save
+        echo "------------------------------------"
         make formatter
         echo "------------------------------------"
         echo "cat tests/test_actions.py"
