@@ -119,7 +119,7 @@ releases:
           tls:
             - secretName: rasa-x-tls
               hosts:
-                - website-demo.rasa.com
+                - {{ requiredEnv "RASA_X_DOMAIN" }}
           annotations:
             kubernetes.io/ingress.class: nginx
             nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
