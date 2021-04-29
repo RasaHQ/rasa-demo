@@ -1,3 +1,4 @@
+"""Unit tests for the custom actions"""
 import pytest
 import requests
 import datetime
@@ -194,7 +195,9 @@ def test_action_submit_subscribe_newsletter_form_subscribed(
 
 
 def test_action_community_events(
-    tracker: Tracker, dispatcher: CollectingDispatcher, domain: DomainDict,
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: DomainDict,
 ):
     action = actions.ActionCommunityEvent()
     actual_events = action.run(dispatcher, tracker, domain)
