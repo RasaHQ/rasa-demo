@@ -194,10 +194,7 @@ def test_action_submit_subscribe_newsletter_form_subscribed(
 
 
 def test_action_community_events(
-    tracker: Tracker,
-    dispatcher: CollectingDispatcher,
-    domain: DomainDict,
-    mailchimp_unsubscribed_email: Text,
+    tracker: Tracker, dispatcher: CollectingDispatcher, domain: DomainDict,
 ):
     action = actions.ActionCommunityEvent()
     actual_events = action.run(dispatcher, tracker, domain)
