@@ -52,12 +52,18 @@ jobs:
         echo "------------------------------------"
         echo "debugging black behavior in pipeline"
         echo "------------------------------------"
-        cat tests/test_actions.py
+        echo "cat tests/test_actions.py"
+        cat -n tests/test_actions.py
         echo "------------------------------------"
         cp tests/test_actions.py tests/test_actions.py.save
+        echo "cat tests/test_actions.py.save"
         make formatter
         echo "------------------------------------"
-        cat tests/test_actions.py
+        echo "cat tests/test_actions.py"
+        cat -n tests/test_actions.py
+        echo "------------------------------------"
+        echo "cat tests/test_actions.py.save"
+        cat -n tests/test_actions.py.save
         echo "------------------------------------"
         diff tests/test_actions.py tests/test_actions.py.save
         echo "------------------------------------"
