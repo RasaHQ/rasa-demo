@@ -4,7 +4,6 @@
 # * RASA_VERSION and RASA_X_VERSION  in .github/workflows/continuous-deployment.yml
 FROM rasa/rasa-sdk:2.5.0 
 
-
 # Use subdirectory as working directory
 WORKDIR /app
 

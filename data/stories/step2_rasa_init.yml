@@ -30,7 +30,9 @@ stories:
   - action: utter_installation_command
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_run_rasa_init
   - action: utter_direct_to_step3
 - story: Installation went well
@@ -43,7 +45,9 @@ stories:
   - action: utter_installation_command
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: explain
   - action: utter_run_rasa_init
   - action: utter_direct_to_step3
 - story: Problems installing

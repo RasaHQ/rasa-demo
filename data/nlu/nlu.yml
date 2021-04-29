@@ -146,7 +146,6 @@ nlu:
     - i need information from posters in the forum
     - ok send me to the forum
     - to the forum
-    - need help on chatbot
 - intent: ask_which_events
   examples: |
     - Any other event like rasa meetup in future?
