@@ -49,7 +49,11 @@ stories:
   - intent: how_to_get_started
     user: |-
       I want to get started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - intent: affirm
     user: |-
@@ -138,7 +142,11 @@ stories:
   - user: |
       How do I get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - user: |
       No
@@ -157,7 +165,11 @@ stories:
   - user: |
       How do I get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - user: |
       No
@@ -265,11 +277,13 @@ stories:
   - user: |
       help me get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
-  - user: |
-      no
-    intent: deny
+  - intent: affirm
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
@@ -286,7 +300,11 @@ stories:
   - user: |
       how to get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - user: |
       no
