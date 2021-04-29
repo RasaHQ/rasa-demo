@@ -26,18 +26,39 @@ jobs:
       training: ${{ steps.changed-files.outputs.training }}
       actions: ${{ steps.changed-files.outputs.actions }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
-        id: changed-files
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          filters: .github/change_filters.yml
-          base: ${{ github.ref }}
+    # Due to an issue with checking out a wrong commit, we make sure
+    # to checkout HEAD commit for a pull request.
+    # More details: https://github.com/actions/checkout/issues/299
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
+    - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
+      id: changed-files
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        filters: .github/change_filters.yml
+        base: ${{ github.ref }}
   lint-testing:
     name: Code Formatting Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -74,7 +95,16 @@ jobs:
     name: Type Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -95,7 +125,16 @@ jobs:
     name: Custom Action Unit Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -111,7 +150,16 @@ jobs:
     name: Data Validation
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -136,7 +184,16 @@ jobs:
       uses: styfle/cancel-workflow-action@0.8.0
       with:
         access_token: ${{ github.token }}
-    - uses: actions/checkout@v2
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -180,7 +237,16 @@ jobs:
     if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Authenticate into Google Cloud Platform
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
