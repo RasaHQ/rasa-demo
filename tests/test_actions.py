@@ -123,7 +123,8 @@ def test_action_submit_sales_form(
         "use_case": "Unit Tests",
         "budget": "1000",
         "date": datetime.datetime.now().strftime("%d/%m/%Y"),
-        # by using a random name we can verify that the line written to the spreadsheet is the one the test wrote
+        # by using a random name we can verify that the line written to the spreadsheet
+        # is the one the test wrote
         "person_name": uuid.uuid1().hex,
         "job_function": "Test Actions",
         "business_email": "example@rasa.com",
