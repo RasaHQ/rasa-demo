@@ -72,6 +72,8 @@ jobs:
       run: |
         echo "------------------------------------"
         echo "debugging black behavior in pipeline"
+        echo "/usr/bin/git log -1 --format='%H'"
+        /usr/bin/git log -1 --format='%H'
         echo "------------------------------------"
         echo "cat tests/test_actions.py"
         cat -n tests/test_actions.py
