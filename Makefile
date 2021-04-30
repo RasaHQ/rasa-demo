@@ -39,11 +39,11 @@ clean:
 	rm -rf docs/_build
 
 formatter:
-	black actions tests
+	black --verbose --config pyproject.toml actions tests
 
 lint:
 	flake8 actions tests
-	black --check actions tests
+	black --check --verbose --config pyproject.toml actions tests
 
 types:
 	pytype --keep-going actions tests

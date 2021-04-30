@@ -1,3 +1,4 @@
+"""Unit tests for the custom actions"""
 import pytest
 import requests
 import datetime
@@ -5,13 +6,19 @@ import uuid
 from typing import Text, Dict, Tuple, List
 from gspread.models import Worksheet
 
-from rasa_sdk.events import EventType, SlotSet
+from rasa_sdk.events import (
+    EventType,
+    SlotSet,
+    UserUtteranceReverted,
+)
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
 from rasa_sdk.types import DomainDict
 
 from actions import actions
 from actions.api.gdrive_service import GDriveService
+
+from rasa.shared.core.constants import USER_INTENT_OUT_OF_SCOPE
 
 
 @pytest.mark.parametrize(
@@ -117,7 +124,8 @@ def test_action_submit_sales_form(
         "use_case": "Unit Tests",
         "budget": "1000",
         "date": datetime.datetime.now().strftime("%d/%m/%Y"),
-        # by using a random name we can verify that the line written to the spreadsheet is the one the test wrote
+        # by using a random name we can verify that the line written to the spreadsheet
+        # is the one the test wrote
         "person_name": uuid.uuid1().hex,
         "job_function": "Test Actions",
         "business_email": "example@rasa.com",
@@ -187,9 +195,34 @@ def test_action_submit_subscribe_newsletter_form_subscribed(
 
 
 def test_action_community_events(
-    tracker: Tracker, dispatcher: CollectingDispatcher, domain: DomainDict,
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: DomainDict,
 ):
     action = actions.ActionCommunityEvent()
     actual_events = action.run(dispatcher, tracker, domain)
     assert actual_events == []
     assert len(dispatcher.messages) == 1
+
+
+@pytest.mark.parametrize(
+    "last_intent, expected_events",
+    [
+        (USER_INTENT_OUT_OF_SCOPE, [SlotSet("feedback_value", "negative")]),
+        ("bye", [UserUtteranceReverted()]),
+    ],
+)
+def test_action_default_fallback(
+    tracker: Tracker,
+    dispatcher: CollectingDispatcher,
+    domain: DomainDict,
+    last_intent,
+    expected_events,
+):
+
+    tracker.latest_message["intent"]["name"] = last_intent
+
+    action = actions.ActionDefaultFallback()
+    actual_events = action.run(dispatcher, tracker, domain)
+
+    assert actual_events == expected_events

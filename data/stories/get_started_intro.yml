@@ -1,0 +1,179 @@
+version: "2.0"
+stories:
+
+- story: Getting started with Rasa playground
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: affirm
+  - action: utter_what_help
+
+- story: Getting started with Rasa playground
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: faq
+    entities:
+    - product: playground
+  - slot_was_set:
+    - product: playground
+  - action: utter_faq
+  - action: action_set_faq_slot
+
+- story: Getting started with installation
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: install_rasa
+  - action: utter_ask_which_product
+
+- story: Getting started with Rasa Open Source installation
+  steps:
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - or:
+    - intent: faq
+      entities:
+      - product: rasa
+    - intent: enter_data
+      entities:
+      - product: rasa
+    - intent: how_to_get_started
+      entities:
+      - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+
+
+- story: Getting started with Rasa X installation
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - or:
+    - intent: faq
+      entities:
+      - product: x
+    - intent: enter_data
+      entities:
+      - product: x
+    - intent: how_to_get_started
+      entities:
+      - product: x
+  - slot_was_set:
+    - product: rasa
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+
+
+- story: Getting started with Rasa X local mode installation
+  steps:
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - or:
+    - intent: faq
+      entities:
+      - product: x
+    - intent: enter_data
+      entities:
+      - product: x
+    - intent: how_to_get_started
+      entities:
+      - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+- story: Getting started with Rasa X server installation
+  steps:
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - or:
+    - intent: faq
+      entities:
+      - product: x
+    - intent: enter_data
+      entities:
+      - product: x
+    - intent: how_to_get_started
+      entities:
+      - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: server
+  - slot_was_set:
+    - install_type: server
+  - action: utter_rasa_x_server_installation
+
+- story: Getting started with Starter Packs
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: deny
+  - action: utter_interested_in_starter_packs
+  - intent: affirm
+  - action: utter_starter_pack_info
+
+
+- story: Catch-all case of getting started
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: deny
+  - action: utter_interested_in_starter_packs
+  - intent: deny
+  - action: utter_what_help
+
+
+- story: Getting started with Rasa playground
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: faq
+    entities:
+    - product: playground
+  - slot_was_set:
+    - product: playground
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+
+
+- story: Getting started with more info
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
+  - action: utter_built_bot_before

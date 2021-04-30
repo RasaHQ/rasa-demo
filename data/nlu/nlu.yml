@@ -1,5 +1,22 @@
 version: "2.0"
 nlu:
+- intent: broken
+  examples: |
+    - it's not working
+    - I think it's broken
+    - [Rasa playgrounds](product) isn't working for me
+    - [Playground](product) is broken
+    - [rasa](product) is not working
+    - help me can you fix it
+    - it's broken
+    - it's not training
+    - the [playground](product) is not training
+    - [Rasa X](product) isn't working for me
+    - [Rasa Open Source](product) is not training at all
+    - For some reason, [Rasa X](product) never loads and I don't know why
+    - help me please it's not working
+    - it won't train
+    - the bot won't train
 - intent: why_rasa
   examples: |
     - why should i use rasa instead of google [dialogflow](current_api)
@@ -278,6 +295,14 @@ nlu:
     - why help out?
     - why offer my assistance?
     - why should I help?
+- intent: book_demo
+  examples: |
+    - I would like to have a demo scheduled
+    - Is there a live demo of rasa somewhere ?
+    - Can i have a deno
+    - bookin
+    - I want to see a demonstration of rasa enterprise
+    - How can I try out rasa enterprise
 - intent: contact_sales
   examples: |
     - But I wanted a sales call
@@ -309,7 +334,6 @@ nlu:
     - I would like to book a sales call
     - I would like to contact your sales team please
     - I would like to have a call with sales team
-    - I would like to have a demo scheduled
     - I would like to talk to someone from your sales team
     - i want to buy the enterprise edition
     - i would like rasa enterprise
@@ -436,9 +460,6 @@ nlu:
     - sign me up, my email is Elizabeth@yahoo.com
     - talk to sales team
     - we started working with rasa but now we need support
-    - Can i have a deno
-    - bookin
-    - Is there a live demo of rasa somewhere ?
 - intent: enter_data
   examples: |
     - $1
@@ -1167,15 +1188,45 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
+    - [local](install_type)
+    - [locally](install_type)
+    - [server](install_type)
+    - I'm interested in [local](install_type) installation
+    - I'm interested in [server](install_type) installation
+    - [my computer](install_type)
+    - [my machine](install_type)
+    - [my laptop](install_type)
+    - [local machine](install_type)
+    - [dialogue management](product)
+    - [Dialogue Management](product) please
+    - [DIALOGUE MANAGEMENT](product)
+    - [dialog management](product)
+    - [dialogue management](product) please
+    - [Dialogue management](product)
+    - Rasa [Core](product)
+    - Rasa [core](product)
+    - rasa [core](product)
+    - Only [NLU](product)
+    - RASA [NLU](product)
+    - Rasa [NLU](product)
+    - [nlu](product)
+    - [nlu](product) part
+    - [NLU](product)
+    - and rasa [nlu](product)?
+    - rasa [nlu](product)
+    - just Rasa [NLU](product)
+    - just [NLU](product)
+    - just rasa [nlu](product)
+    - [Rasa Playground](product)
+    - [interactive playground](product)
+    - [rasa playground](product)
+    - [Rasa X](product)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
     - can you tell me how to build a bot?
-    - About [Core](product)
     - Can I build a FAQ robot with Rasa?
-    - Can you shw me some information about intallation?
     - I wanted to build a bot my product customer support
-    - Can you tell me more about [NLU](product)?
     - Get started
     - HOW CAN i connect to rasa
     - Help me get started
@@ -1190,8 +1241,6 @@ nlu:
     - How can I try out Rasa?
     - How can i launch a bot?
     - How do I build a bot
-    - How do I download RASA
-    - How do I download rasa ?
     - How do I get started
     - How do I get started with Rasa?
     - How do I get started?
@@ -1213,73 +1262,37 @@ nlu:
     - I am [new](user_type) to Rasa
     - I like to build a bot
     - I need to know if I can use Rasa to build an application?
-    - I want know about Rasa [Core](product)
     - I want to build a bot
     - I want to build a chatbot
     - I want to create chatbot using Rasa
     - I want to implement rasa
     - I want to know how to get started with rasa
-    - I want to know more about [NLU](product)
-    - I want to know more about [core](product)
-    - I want to learn more about rasa
-    - I would like to know more about RASA [NLU](product)
     - I'm [new](user_type)
     - I'm [new](user_type) in Rasa, help me!
     - I'm [new](user_type) to Rasa
     - I'm [new](user_type) to rasa
     - Im [new](user_type)
     - Lets start with the basics
-    - More about [NLU](product)
-    - Only [NLU](product)
     - Please tell me how I can start?
     - Please tell me how to get started
     - Please tell me how to get started with rasa
-    - RASA [NLU](product)
-    - Rasa [Core](product)
-    - Rasa [NLU](product)
-    - Rasa [core](product)
     - Show me learning resources about Rasa
     - Sure, give me the basics
     - Tell me how to get started
     - Tell me how to get started with Rasa
     - Tell me more about Get started with Rasa
-    - The components of Rasa?
-    - What are Rasa's components?
-    - What are the components of Rasa?
-    - What are the components of rasa?
     - What are the prerequisites for installing RASA
     - What do I Need for Rasa implementation?
     - Yeah please help me out
     - Yes I am [new](user_type)
-    - Yes, I want to know more about [NLU](product)
-    - [Core](product)
-    - [NLU](product)
-    - [NLU](product) and [Core](product)
-    - [both](product)
-    - [both](product) please
-    - [core](product)
-    - [core](product) please
     - [new](user_type)
-    - [nlu](product)
-    - [nlu](product) part
-    - about [both](product)
-    - and rasa [nlu](product)?
-    - can give tell me about components of Rosa
     - can i just test features without having to deal with your predefined conversation
     - can i try it out
     - can u teach me
     - can you explain how can i make chatbot like you
-    - can you explain rasa [core](product)
     - can you guide me know to create knowledge base chatbot
     - can you help me build a chatbot
     - can you help me get started?
-    - can you help me with the rasa [core](product) ?
-    - compnnent of rasa
-    - components in rasa
-    - components of Rasa?
-    - components of rasa
-    - rasa components
-    - different parts of Rasa
     - do you know how to set up a chatbot?
     - find out how to get started with Rasa
     - from where I should start?
@@ -1289,14 +1302,10 @@ nlu:
     - get started with Rasa
     - get started with rasa
     - get strarted with rasa
-    - give me some information on [nlu](product)
-    - having trouble with rasa installation
     - help me build a bot
     - help me get started
     - help with rasa
     - hi can you help e build a chatbot
-    - hi, can you help in understanding NLU
-    - how about [nlu](product)
     - how about building chatbot
     - how can I build a chatbot
     - how can I get started
@@ -1307,10 +1316,8 @@ nlu:
     - how can i get started with rasa
     - how can i get started?
     - how can i start
-    - how can i start with rasa [core](product)?
     - how cna i get started with rasa
     - how do I build a bot?
-    - how do I get rasa [core](product)
     - how do I get started
     - how do I get started with Rasa
     - how do I get started with rasa
@@ -1321,8 +1328,6 @@ nlu:
     - how do i build a bot?
     - how do i build a chatbot?
     - how do i build a rasa chatbot?
-    - how do i get rasa [core](product)
-    - how do i get rasa [nlu](product)
     - how do i get startd?
     - how do i get started
     - how do i get started with [NLU](product)
@@ -1332,6 +1337,7 @@ nlu:
     - how do i get started with rasa myself?
     - how do i get started?
     - how do i learn rasa [core](product)
+    - how can i start with rasa [core](product)?
     - how do i set up a chatbot?
     - how do i sstart
     - how do i start
@@ -1380,7 +1386,6 @@ nlu:
     - i am a [new](user_type) user
     - i m [new](user_type)
     - i need help with rasa
-    - i need more info for rasa [core](product)
     - i wanna build a bot
     - i wanna get started
     - i wanna try rasa [nlu](product)
@@ -1388,117 +1393,42 @@ nlu:
     - i want to develop a chatbot
     - i want to get started
     - i want to get started with rasa
-    - i want to know about RASA [Nlu](product)
-    - i want to know about the parts of rasa
     - i want to know how can buld my own bot
     - i want to know how to start with Rasa
-    - i want to know more about [NLU](product)
-    - i want to learn about [nlu](product)
-    - i want to learn about rasa [core](product)
-    - i want to learn about rasa [nlu](product)
     - i want to make intelligence chatbot
     - i want to use [nlu](product)
     - i want to use rasa to build my chatbot
-    - i would like more explanation on RASA [Core](product)
     - i would like to know how to get started with Rasa
     - i'd like to get started with rasa
     - i'm [new](user_type)
     - i'm [new](user_type) to rasa
     - im a [new](user_type) to rasa
-    - information about rasa
-    - just Rasa [NLU](product)
-    - just [NLU](product)
-    - just rasa [nlu](product)
     - let's start
     - lets get started
-    - more about [NLU](product)
-    - more about [NLU](product) please
-    - more about [nlu](product)
-    - more info on components
-    - more info on components of rasa pls
-    - more information on components in rasa
-    - more information on rasa
-    - need help in finding information about rasa
     - ok i am [new](user_type) to Rasa
     - ow to get started with Rasa
-    - parts of rasa
     - please teach me
     - pls explain how to get started
-    - rasa [core](product)
-    - rasa [core](product) quickstart
-    - rasa [nlu](product)
     - so, how do I use rasa?
     - start rasa
-    - tell me about Rasa [Core](product)
-    - tell me about Rasa [NLU](product)
-    - tell me about [core](product)
-    - tell me about [core](product) please
-    - tell me about [nlu](product)
-    - tell me about the components
-    - tell me about the different parts of rasa
     - tell me how i can get started with rasa
     - tell me how to get started with [core](product)
     - tell me how to start
-    - tell me more about [NLU](product)
     - tell me more about how to use rasa
-    - tell me more about rasa [nlu](product)
-    - tell me something about [core](product)
-    - the components of Rasa
-    - the components of rasa
-    - want to build a chatbot
-    - whar are the components of rasa?
-    - what [rasa_nlu](product)
-    - what about [nlu](product)?
-    - what are Rasa's components
-    - what are the components of RASA
-    - what are the components of Rasa
-    - what are the components?
-    - what are your features ?
-    - what is [nlu](product)
-    - what is a component in rasa?
-    - what is componenbts
-    - what is components
-    - what is rasa [nlu](product)?
     - what is the best place to get started?
-    - what is this [nlu](product) thing?
-    - what's rasa [core](product)?
-    - what's rasa [nlu](product)
-    - where can I learn more about rasa
     - where can i learn to build a chatbot
     - where do i find instructions
     - where do i start?
     - where should i start from
     - where to start the development of rasa
     - where to start?
-    - yes i wanna know more about rasa [nlu](product)
     - I am trying to build a bot using rasa
     - i am [new](user_type) but so how can i start
-    - where can i find rasa document
-    - more about [Rasa open source](product)
-    - tell me about [rasa open source](product)
-    - i want to know about [rasa Open source](product)
-    - get started with [Rasa Open Source](product)
-    - [Rasa open source](product)
-    - [rasa open source](product)
-    - [rasa Open source](product)
-    - [Rasa Open Source](product)
-    - [rasa open source](product) then lets talk about [rasa x](product)
-    - [rasa open source](product) please and thank you
-    - [rasa open source](product) to begin with
-    - [open source rasa](product)
-    - the [rasa open source](product)
-    - Tell me about [rasa open source](product)
-    - Rada [open source](product)
-    - how to train [rasa open source](product)
-    - More about [Rasa open source](product)
-    - Rosa [open source](product)
-    - [rasa open source](product) first
     - rasa basics
     - how can i get stared
     - how to build assistant?
     - how to build assistant with rasa?
     - how to using you
-    - What are the coponent
     - create chatbot steps
     - can you tell me how to create a new rasa project
     - can you help me build my bot?
@@ -1577,6 +1507,17 @@ nlu:
     - i want to talk to a real person
 - intent: install_rasa
   examples: |
+    - how do I get rasa [core](product)
+    - how do i get rasa [core](product)
+    - how do i get rasa [nlu](product)
+    - Can you shw me some information about intallation?
+    - How do I download RASA
+    - How do I download rasa ?
+    - Hoe do I install [Rasa X](product)
+    - install [Rasa X](product)
+    - I want to install [Rasa X](product)
+    - How to install [rasa X](product)?
+    - Help me install [rasa x](product)
     - Can you get me Rasa [Core](product)?
     - Can you help me to install Rasa?
     - Do you mind helping me install Rasa?
@@ -2012,6 +1953,8 @@ nlu:
     - how do i migrate from [dialogflow](current_api)
 - intent: technical_question
   examples: |
+    - having trouble with rasa installation
+    - what is helm
     - how to restart the rasa server
     - i don't want to run rasa, i want to restart it
     - action_restart in rasa
@@ -2079,7 +2022,6 @@ nlu:
     - ok quick question here do i download this api
     - tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible.
     - training model?
-    - what are the features does rasa have?
     - what does on-premise mean?
     - what infrastructure is required to run a bot?
     - what is a synonym called?
@@ -2272,6 +2214,11 @@ nlu:
   examples: |
     - CORE
     - Core
+    - core
+    - dialogue management
+    - Dialogue management
+    - Dialogue Management
+    - DIALOGUE MANAGEMENT
 - synonym: custom actions
   examples: |
     - Actions
@@ -2368,15 +2315,27 @@ nlu:
     - RASA X
     - X
     - rasax
+- synonym: playground
+  examples: |
+    - Rasaplayground
+    - RASAPlayground
+    - Rasa Playground
+    - rasa playground
+    - RASA playgrounds
+    - playgrounds
+    - Playground
+    - rasaplaygrounds
+    - interactive playground
+    - Interactive Playground
+- synonym: local
+  examples: |
+    - locally
+    - my computer
+    - my machine
+    - my laptop
 - regex: greet
   examples: |
     - hey[^\s]*
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt

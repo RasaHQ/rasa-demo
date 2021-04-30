@@ -26,18 +26,39 @@ jobs:
       training: ${{ steps.changed-files.outputs.training }}
       actions: ${{ steps.changed-files.outputs.actions }}
     steps:
-      - uses: actions/checkout@v2
-      - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
-        id: changed-files
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          filters: .github/change_filters.yml
-          base: ${{ github.ref }}
+    # Due to an issue with checking out a wrong commit, we make sure
+    # to checkout HEAD commit for a pull request.
+    # More details: https://github.com/actions/checkout/issues/299
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
+    - uses: RasaHQ/pr-changed-files-filter@c4f7116a04b8a4596313469429e2ad235f59d9c4
+      id: changed-files
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        filters: .github/change_filters.yml
+        base: ${{ github.ref }}
   lint-testing:
     name: Code Formatting Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -47,14 +68,26 @@ jobs:
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
     - name: Code Formatting Tests
-      working-directory: ${{ github.workspace }}
       run: |
+        echo "------------------------------------"
+        echo "/usr/bin/git log -1 --format='%H'"
+        /usr/bin/git log -1 --format='%H'
+        echo "------------------------------------"
         make lint
   type-testing:
     name: Type Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -64,8 +97,8 @@ jobs:
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
     - name: Type Checking
-      working-directory: ${{ github.workspace }}
       run: |
+        pip list
         make types
   action-unit-tests:
     needs:
@@ -74,7 +107,16 @@ jobs:
     name: Custom Action Unit Tests
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -83,14 +125,22 @@ jobs:
       run: |
         make install-dev
     - name: Unit Tests
-      working-directory: ${{ github.workspace }}
       run: |
         make test-actions
   data-validation:
     name: Data Validation
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -100,7 +150,6 @@ jobs:
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
     - name: Rasa Data Validation
-      working-directory: ${{ github.workspace }}
       run: |
         rasa data validate --debug
   training-testing:
@@ -115,7 +164,16 @@ jobs:
       uses: styfle/cancel-workflow-action@0.8.0
       with:
         access_token: ${{ github.token }}
-    - uses: actions/checkout@v1
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
@@ -124,11 +182,13 @@ jobs:
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
+          rasa --version
     - name: Cross-validate NLU model
       id: cvnlu
       if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' ) 
-      run: |  
-          rasa test nlu -f 3 --cross-validation
+      run: |
+          rasa --version
+          rasa test nlu -f 3 --cross-validation --config config_nlu_testing.yml
           python .github/workflows/format_results.py
     - name: post cross-val results to PR
       if: steps.cvnlu.outcome == 'success'
@@ -137,14 +197,14 @@ jobs:
       with:
         msg: results.md
     - name: Train Model
-      working-directory: ${{ github.workspace }}
       run: |
+        rasa --version
         rasa train
-    - name: Test Training Stories
+    - name: Test End 2 End Stories
       if:  ${{ needs.check_changed_files.outputs.core == 'true' }}
-      working-directory: ${{ github.workspace }}
       run: |
-        rasa test core --stories test/test_stories.md --fail-on-prediction-errors
+        rasa --version
+        rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
   build-images:
     name: Build Action Server Image
     needs: 
@@ -155,7 +215,16 @@ jobs:
     if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout pull request HEAD commit instead of merge commit 
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+      
     - name: Authenticate into Google Cloud Platform
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:

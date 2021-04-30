@@ -584,7 +584,6 @@ nlu:
     - WHAT IS RASA
     - What Is rasa?
     - What can rasa do?
-    - What components does Rasa have?
     - What do you do as a company?
     - What do you do at Rasa?
     - What does Rasa build?
@@ -621,26 +620,21 @@ nlu:
     - tell me more about your company
     - what are the componensts of RASA
     - what can I do with Rasa?
-    - what can i build with rasa [core](product)?
     - what can i do with rasa
     - what do you guys do at rasa
     - what does rasa do
     - what does rasa do ?
     - what does rasa do?
     - what does rasa mean
-    - what is [core](product)
-    - what is [rasa](company)
-    - what is [rasa](company) ?
+    - what is rasa
+    - what is rasa?
     - what is in rasa
     - what is it for?
     - what is rasa
-    - what is rasa [core](product)
-    - what is rasa [core](product)?
     - what is rasa actually
     - what is rasa?
     - whats rasa
     - yeah go on explaining what rasa is
-    - what are the components of rasa
     - RASA IS SOFTWARE?
     - rasa os
     - what is Rasa

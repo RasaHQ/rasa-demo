@@ -65,7 +65,6 @@ how_to_get_started,How to get started with {product}?,product
 human_handoff,Talk to a human,
 install_rasa,I want to install Rasa.,
 install_rasa,I want to install Rasa with {package_manager}.,package_manager
-next_step,I want to go to the next step.,
 nlu_generation_tool_recommendation,I want a recommendation for an NLU data generation tool.,
 nlu_info,I want more information about NLU.,
 nlu_info,I want info on {nlu_part}.,nlu_part
