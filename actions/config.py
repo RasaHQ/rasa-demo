@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 You can create a file called `.env` in the root of the repo, containing your local env vars.
-
 It will be automatically loaded when starting the action server.
 """
 from dotenv import load_dotenv

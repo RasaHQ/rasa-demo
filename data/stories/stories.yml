@@ -29,12 +29,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: newsletter + feedback
   steps:
@@ -49,12 +45,8 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: newsletter + affirm feedback
   steps:
@@ -101,10 +93,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -154,12 +142,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: sales then newsletter
   steps:
@@ -193,10 +177,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -208,12 +188,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: sales, then newsletter, then confirm
   steps:
@@ -235,10 +211,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -276,12 +248,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: anything else? - no
   steps:
@@ -302,7 +270,7 @@ stories:
   steps:
   - intent: react_negative
   - action: utter_react_negative
-- story: why rasa
+- story: why rasa 1
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
@@ -313,7 +281,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 2
   steps:
   - intent: why_rasa
     entities:
@@ -328,7 +296,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 3
   steps:
   - intent: why_rasa
     entities:
@@ -344,7 +312,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 4
   steps:
   - intent: why_rasa
     entities:
@@ -360,14 +328,14 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 5
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 6
   steps:
   - intent: why_rasa
     entities:
@@ -378,7 +346,7 @@ stories:
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 7
   steps:
   - intent: why_rasa
     entities:
@@ -390,7 +358,7 @@ stories:
   - action: utter_ask_more_migrate
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 8
   steps:
   - intent: why_rasa
     entities:

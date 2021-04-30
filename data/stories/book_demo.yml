@@ -1,0 +1,27 @@
+version: "2.0"
+stories:
+- story: book demo CTA
+  steps:
+  - intent: book_demo
+  - action: utter_schedule_enterprise_demo
+- story: Story from Conversation ID d3e170ca24e74784acbef03e5db050ca
+  steps:
+  - intent: get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - slot_was_set:
+    - product: x
+  - intent: enter_data
+    entities:
+    - install_type: local machine
+  - slot_was_set:
+    - install_type: local machine
+  - action: utter_rasa_x_local_installation

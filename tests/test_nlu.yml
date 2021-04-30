@@ -509,9 +509,8 @@ nlu:
     - I need assistance in getting Rasa Stack.
     - I want to use Rasa Stack
     - Help me get Rasa Core.
-- intent: next_step
-  examples: |
-    - Next step please
+    - How do I install Rasa X
+    - install Rasa X
 - intent: nlu_generation_tool_recommendation
   examples: |
     - which tools can I use to create nlu data
@@ -657,6 +656,10 @@ nlu:
   examples: |
     - Core
     - CORE
+    - dialogue management
+    - Dialogue Management
+    - DIALOGUE MANAGEMENT
+    - dialog management
 - synonym: date
   examples: |
     - dates

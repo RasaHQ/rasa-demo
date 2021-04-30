@@ -224,11 +224,12 @@ nlu:
     - ok..
     - considering
     - More a less
-    - cool beans
     - sounds good!
     - really
 - intent: react_positive
   examples: |
+    - cool beans
+    - sweet
     - Cool
     - cool
     - cool :)
@@ -291,6 +292,7 @@ nlu:
     - you good
     - Great information
     - I mean to say that I liked the explanation
+    - Super! I love Rasa
 - intent: bye
   examples: |
     - Bye
@@ -632,23 +634,6 @@ nlu:
     - yoo
     - ssup?
     - helleo
-- intent: next_step
-  examples: |
-    - continue to next step
-    - go to the next step
-    - i have to go to the next step
-    - i want next step
-    - i want to go to the next step
-    - next please
-    - next step
-    - next step now
-    - next step please
-    - next step pls
-    - ok continue please
-    - ok, next step
-    - please go to the next step
-    - take me to the next step
-    - what is the next step ?
 - intent: react_negative
   examples: |
     - I am feeling bad
@@ -759,7 +744,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr

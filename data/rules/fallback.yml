@@ -1,7 +1,15 @@
 version: "2.0"
 rules:
-  - rule: Two stage fallback
+  - rule: Activate two stage fallback
     steps:
       - intent: nlu_fallback
       - action: action_two_stage_fallback
       - active_loop: action_two_stage_fallback
+      
+  - rule: Restart after a full two stage fallback
+    condition:
+    - active_loop: action_two_stage_fallback
+    steps:
+      - action: action_two_stage_fallback
+      - active_loop: null
+      - action: action_restart_with_button
