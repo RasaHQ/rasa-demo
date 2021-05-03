@@ -2,7 +2,7 @@ name: Continuous Deployment
 on:
   push: 
     branches:
-    - 'k8s' #TODO: main
+    - 'main'
 
 env:
   # These values are viewable in the Sara K8s CI entry of 1password
@@ -254,4 +254,3 @@ jobs:
             curl -X PUT  \
             --url https://$RASA_X_DOMAIN/api/projects/default/models/$MODEL_NAME/tags/production \
             --header "Authorization: Bearer ${AUTH_TOKEN}"
-
