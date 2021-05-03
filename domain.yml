@@ -121,6 +121,7 @@ slots:
     type: any
   problem_description:
     type: text
+    influence_conversation: false
   product:
     type: categorical
     values:

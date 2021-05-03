@@ -6,7 +6,5 @@ stories:
   - action: playground_form
   - active_loop: playground_form
   - active_loop: null
-  - action: action_store_playground_problem_description
-  - slot_was_set:
-    - problem_description: I don't know how to customize the pipeline
+  - action: action_store_problem_description
   - action: utter_direct_to_forum_for_help

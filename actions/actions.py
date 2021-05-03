@@ -355,7 +355,7 @@ class ActionStoreProblemDescription(Action):
             gdrive.ISSUES_SPREADSHEET_NAME, gdrive.PLAYGROUND_WORKSHEET_NAME, row_values
         )
 
-        return [SlotSet("problem_description", problem)]
+        return [SlotSet("problem_description", None)]
 
 
 class ActionGreetUser(Action):
