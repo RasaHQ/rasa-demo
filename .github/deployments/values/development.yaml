@@ -1,0 +1,16 @@
+debugMode: "true"
+rasaProduction:
+  resources:
+    requests:
+      memory: 2Gi
+      cpu: 2
+rasaWorker:
+  resources:
+    requests:
+      memory: 4Gi
+      cpu: 4
+rasax:
+  resources:
+    requests:
+      memory: 1Gi
+      cpu: 1

@@ -1,7 +1,6 @@
 
 name: Continuous Integration
 on: [pull_request]
-
 env:
     GDRIVE_CREDENTIALS: ${{ secrets.GDRIVE_CREDENTIALS }}
     MAILCHIMP_LIST: ${{ secrets.MAILCHIMP_LIST }}
@@ -15,6 +14,7 @@ env:
     RASA_X_HOST_SCHEMA: ${{ secrets.RASA_X_HOST_SCHEMA }}
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     TRACKER_DB_URL: ${{ secrets.TRACKER_DB_URL }}
+
 
 jobs:
   check_changed_files:

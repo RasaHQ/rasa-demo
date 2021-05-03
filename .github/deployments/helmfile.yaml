@@ -1,0 +1,132 @@
+# helmfile for Rasa X deployment
+environments:
+  # The "default" environment is available and used when `helmfile` is run without `--environment NAME`.
+  default:
+    values:
+    - values/default.yaml
+  # Any environment other than `default` is used only when `helmfile` is run with `--environment NAME`.
+  # That is, the "development" env below is used when and only when it is run like `helmfile --environment development sync`.
+  development:
+    values:
+    - values/development.yaml
+
+repositories:
+  - name: rasa-x
+    url: https://rasahq.github.io/rasa-x-helm
+
+releases:
+  - name: {{ requiredEnv "RELEASE_NAME" }}
+    namespace: {{ requiredEnv "NAMESPACE" }}
+    labels:
+        release: {{ requiredEnv "RELEASE_NAME" }}
+    chart: rasa-x/rasa-x
+    values:
+      - app:
+          imagePullPolicy: Always
+          name: {{ requiredEnv "ACTION_SERVER_IMAGE_NAME" }}
+          tag: {{ requiredEnv "ACTION_SERVER_TAG" }}
+          extraEnvs:
+          - name: RASA_X_HOST
+            value: {{ requiredEnv "RASA_X_DOMAIN" }}
+          - name: GDRIVE_CREDENTIALS
+            valueFrom:
+              secretKeyRef:
+                name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
+                key: "GDRIVE_CREDENTIALS"
+          - name: MAILCHIMP_LIST
+            valueFrom:
+              secretKeyRef:
+                name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
+                key: "MAILCHIMP_LIST"
+          - name: MAILCHIMP_API_KEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
+                key: "MAILCHIMP_API_KEY"
+          - name: ALGOLIA_APP_ID
+            valueFrom:
+              secretKeyRef:
+                name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
+                key: "ALGOLIA_APP_ID"
+          - name: ALGOLIA_SEARCH_KEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
+                key: "ALGOLIA_SEARCH_KEY"
+          - name: ALGOLIA_DOCS_INDEX
+            valueFrom:
+              secretKeyRef:
+                name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
+                key: "ALGOLIA_DOCS_INDEX"
+      - global:
+          postgresql:
+            postgresqlPassword: {{ requiredEnv "RASA_X_DATABASE_PASSWORD" }}
+          redis:
+            password: {{ requiredEnv "REDIS_PASSWORD" }}
+      - dbMigrationService:
+          name: {{ requiredEnv "RASA_X_IMAGE_NAME" }}
+          tag: {{ requiredEnv "RASA_X_VERSION" }}
+          ignoreVersionCheck: true
+      - rasax:
+          imagePullPolicy: Always
+          tag: {{ requiredEnv "RASA_X_VERSION" }}
+          name: {{ requiredEnv "RASA_X_IMAGE_NAME" }}
+          passwordSalt: {{ requiredEnv "PASSWORDSALT" }}
+          token: {{ requiredEnv "RASA_X_TOKEN" }}
+          jwtSecret: {{ requiredEnv "JWT_SECRET" }}
+          disableTelemetry: true
+          initialUser:
+            username: {{ requiredEnv "RASA_X_USERNAME" }}
+            password: {{ requiredEnv "RASA_X_PASSWORD" }}
+          resources:
+            requests:
+              memory: {{ .Values.rasax.resources.requests.memory }}
+              cpu: {{ .Values.rasax.resources.requests.cpu }}
+      - rasa:
+          imagePullPolicy: Always
+          token: {{ requiredEnv "RASA_TOKEN" }}
+          tag: {{ requiredEnv "RASA_VERSION" }}-full
+          versions:
+            rasaProduction:
+              resources:
+                requests:
+                  memory: {{ .Values.rasaProduction.resources.requests.memory }}
+                  cpu: {{ .Values.rasaProduction.resources.requests.cpu}}
+            rasaWorker:
+              nodeSelector:
+                nodeFeature: extraMemory
+              resources:
+                requests:
+                  memory: {{ .Values.rasaWorker.resources.requests.memory }}
+                  cpu: {{ .Values.rasaWorker.resources.requests.cpu}}
+          additionalChannelCredentials:
+            socketio:
+              user_message_evt: user_uttered
+              bot_message_evt: bot_uttered
+              session_persistence: true
+            rest: {}
+      - rabbitmq:
+          rabbitmq:
+            password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
+      - eventService:
+          tag: {{ requiredEnv "RASA_X_VERSION" }}
+          name: {{ requiredEnv "RASA_X_IMAGE_NAME" }}
+      - duckling:
+          enabled: true
+      - nginx:
+          enabled: false
+      - ingress:
+          tls:
+            - secretName: rasa-x-tls
+              hosts:
+                - {{ requiredEnv "RASA_X_DOMAIN" }}
+          annotations:
+            kubernetes.io/ingress.class: nginx
+            nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+            nginx.ingress.kubernetes.io/enable-cors: "true"
+            cert-manager.io/cluster-issuer: "letsencrypt"
+          hosts:
+            - host: {{ requiredEnv "RASA_X_DOMAIN" }}
+              paths:
+                - /*
+      - debugMode:  {{ .Values.debugMode }}

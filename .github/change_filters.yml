@@ -21,3 +21,5 @@ actions:
 deployment:
   - '.github/deployments/**/*'
   - '.github/workflows/continuous_deployment.yml'
+  - 'actions/**/*' # if action server changed, then deployment must update tag
+  - 'Dockerfile'
