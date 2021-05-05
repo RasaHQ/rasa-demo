@@ -3,3 +3,4 @@ repos:
     rev: stable
     hooks:
     - id: black
+      version: 20.8b1
