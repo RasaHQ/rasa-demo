@@ -441,3 +441,15 @@ stories:
   - action: action_two_stage_fallback
   - active_loop: null
   - action: action_restart_with_button
+
+- story: Playground form
+  steps:
+  - intent: get_started_playground
+    user: /get_started_playground
+  - action: utter_playground_intro
+  - action: utter_ask_playground_help
+  - intent: affirm
+  - action: playground_form
+  - active_loop: null
+  - action: action_store_problem_description
+  - action: utter_direct_to_forum_for_help
