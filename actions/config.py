@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 
 # Load environment variables
 # needs to happen before anything else (to properly instantiate constants)
-
-load_dotenv(verbose=True)
+load_dotenv(verbose=True, override=True)
 
 import os
 

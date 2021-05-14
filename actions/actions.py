@@ -23,7 +23,7 @@ from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
 from actions.api.rasaxapi import RasaXAPI
 
-from rasa.shared.core.constants import USER_INTENT_OUT_OF_SCOPE
+USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 
 logger = logging.getLogger(__name__)
 
@@ -378,23 +378,6 @@ class ActionStoreProblemDescription(Action):
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-        problem = tracker.latest_message.get("text")
-
-        return [SlotSet("problem_description", problem)]
-
-
-class ActionSubmitPlaygroundProblemDescription(Action):
-    """Stores the problem description in a slot."""
-
-    def name(self) -> Text:
-        return "action_submit_playground_problem_description"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
 
@@ -409,7 +392,7 @@ class ActionSubmitPlaygroundProblemDescription(Action):
             gdrive.ISSUES_SPREADSHEET_NAME, gdrive.PLAYGROUND_WORKSHEET_NAME, row_values
         )
 
-        return [SlotSet("problem_description", problem)]
+        return [SlotSet("problem_description", None)]
 
 
 class ActionGreetUser(Action):

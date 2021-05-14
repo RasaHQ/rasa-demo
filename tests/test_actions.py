@@ -17,8 +17,7 @@ from rasa_sdk.types import DomainDict
 
 from actions import actions
 from actions.api.gdrive_service import GDriveService
-
-from rasa.shared.core.constants import USER_INTENT_OUT_OF_SCOPE
+from actions.actions import USER_INTENT_OUT_OF_SCOPE
 
 
 @pytest.mark.parametrize(
