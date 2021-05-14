@@ -126,8 +126,6 @@ stories:
     - intent: enter_data
     - intent: out_of_scope
   - action: action_store_problem_description
-  - slot_was_set:
-    - problem_description: I don't know how to customize the pipeline
   - action: utter_installation_instructions
   - action: utter_direct_to_forum_for_help
   - action: utter_run_rasa_init
@@ -144,8 +142,6 @@ stories:
     - intent: enter_data
     - intent: out_of_scope
   - action: action_store_problem_description
-  - slot_was_set:
-    - problem_description: I don't know how to customize the pipeline
   - action: utter_installation_instructions
   - action: utter_direct_to_forum_for_help
   - action: utter_run_rasa_init

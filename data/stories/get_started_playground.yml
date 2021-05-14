@@ -6,7 +6,8 @@ stories:
   - action: utter_playground_intro
   - action: utter_ask_playground_help
   - intent: affirm
-  - action: utter_what_help
+  - action: playground_form
+  - active_loop: playground_form
 
 - story: Getting started on Playground Page, Rasa Open Source installation
   steps:

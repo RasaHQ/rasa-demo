@@ -1,5 +1,21 @@
 version: "2.0"
 rules:
+- rule: Activate playground form
+  steps:
+  - action: utter_ask_playground_help
+  - intent: affirm
+  - action: playground_form
+  - active_loop: playground_form
+
+- rule: Submit playground form
+  condition:
+  - active_loop: playground_form
+  steps:
+  - action: playground_form
+  - active_loop: null
+  - action: action_store_problem_description
+  - action: utter_direct_to_forum_for_help
+
 - rule: activate newsletter form
   steps:
   - intent: signup_newsletter

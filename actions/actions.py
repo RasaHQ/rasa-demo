@@ -378,23 +378,6 @@ class ActionStoreProblemDescription(Action):
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-        problem = tracker.latest_message.get("text")
-
-        return [SlotSet("problem_description", problem)]
-
-
-class ActionSubmitPlaygroundProblemDescription(Action):
-    """Stores the problem description in a slot."""
-
-    def name(self) -> Text:
-        return "action_submit_playground_problem_description"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
 
@@ -409,7 +392,7 @@ class ActionSubmitPlaygroundProblemDescription(Action):
             gdrive.ISSUES_SPREADSHEET_NAME, gdrive.PLAYGROUND_WORKSHEET_NAME, row_values
         )
 
-        return [SlotSet("problem_description", problem)]
+        return [SlotSet("problem_description", None)]
 
 
 class ActionGreetUser(Action):

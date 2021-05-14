@@ -121,6 +121,7 @@ slots:
     type: any
   problem_description:
     type: text
+    influence_conversation: false
   product:
     type: categorical
     values:
@@ -242,7 +243,7 @@ responses:
   - text: Thanks! 👌
   - text: Cool, thank you!
   utter_built_bot_before:
-  - text: And have you built a contextual assistant or a bot before?
+  - text: Have you built a contextual assistant or a bot before?
   utter_bye:
   - text: Goodbye!
   - text: Bye!
@@ -514,7 +515,6 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Rasa has your back! You can deploy Rasa either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
-- action_store_playground_problem_description
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
@@ -531,7 +531,6 @@ actions:
 - action_store_bot_language
 - action_store_entity_extractor
 - action_store_problem_description
-- action_submit_playground_problem_description
 - action_store_unknown_nlu_part
 - action_store_unknown_product
 - action_tag_docs_search
