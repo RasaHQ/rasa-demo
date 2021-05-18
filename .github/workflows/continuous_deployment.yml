@@ -33,7 +33,7 @@ env:
   # NB! The rasa/rasa-x versions should be in sync with:
   # * rasa version in requirements.txt
   # * rasa-sdk base image version in Dockerfile
-  RASA_X_VERSION: "0.39.2"
+  RASA_X_VERSION: "0.39.3" 
   RASA_VERSION: "2.5.0"
 
   # Due to the issue with openssl library for Google Cloud SDK (gcloud)
