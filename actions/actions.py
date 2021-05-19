@@ -23,7 +23,7 @@ from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
 from actions.api.rasaxapi import RasaXAPI
 
-from rasa.shared.core.constants import USER_INTENT_OUT_OF_SCOPE
+USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 
 logger = logging.getLogger(__name__)
 

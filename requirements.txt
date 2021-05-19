@@ -1,4 +1,4 @@
-rasa==2.5.0 # NB! when updating, make sure to also update:
+rasa==2.6.2 # NB! when updating, make sure to also update:
             # * rasa-sdk base image in Dockerfile
             # * RASA_VERSION and RASA_X_VERSION  in .github/workflows/continuous-deployment.yml
 -r actions/requirements-actions.txt

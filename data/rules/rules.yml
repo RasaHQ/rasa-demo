@@ -1,6 +1,9 @@
 version: "2.0"
 rules:
 - rule: why rasa 1
+  condition:
+  - slot_was_set:
+    - current_api: null
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
