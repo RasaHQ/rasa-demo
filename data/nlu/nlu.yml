@@ -1221,6 +1221,7 @@ nlu:
     - [interactive playground](product)
     - [rasa playground](product)
     - [Rasa X](product)
+    - farts@farts.com
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1859,6 +1860,7 @@ nlu:
     - yes I would like to subscribe
     - yes subscribe me
     - yes.I.would.like.to.subscrbe
+    - ok i'd like to subscribe
 - intent: source_code
   examples: |
     - Can u tell where is ur code
@@ -2214,7 +2216,6 @@ nlu:
   examples: |
     - CORE
     - Core
-    - core
     - dialogue management
     - Dialogue management
     - Dialogue Management
@@ -2315,18 +2316,6 @@ nlu:
     - RASA X
     - X
     - rasax
-- synonym: playground
-  examples: |
-    - Rasaplayground
-    - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
-    - playgrounds
-    - Playground
-    - rasaplaygrounds
-    - interactive playground
-    - Interactive Playground
 - synonym: local
   examples: |
     - locally
