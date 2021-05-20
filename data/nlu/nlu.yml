@@ -1221,6 +1221,9 @@ nlu:
     - [interactive playground](product)
     - [rasa playground](product)
     - [Rasa X](product)
+    - [researcher](job_function)
+    - farts@farts.com
+    - sam@sam.com
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1505,6 +1508,7 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
+    - Can I speak to someone?
 - intent: install_rasa
   examples: |
     - how do I get rasa [core](product)
@@ -1695,6 +1699,7 @@ nlu:
     - where to train [intents](nlu_part) in rasa?
     - what does NLU server do?
     - how enttity extrcation works
+    - what is an [intent]{"entity": "nlu_part", "value": "intent classification"}
 - intent: pipeline_recommendation
   examples: |
     - I don’t know which pipeline to use
@@ -1859,6 +1864,7 @@ nlu:
     - yes I would like to subscribe
     - yes subscribe me
     - yes.I.would.like.to.subscrbe
+    - ok i'd like to subscribe
 - intent: source_code
   examples: |
     - Can u tell where is ur code
@@ -2174,6 +2180,15 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - can you add videos in rasa
+    - Hi I have questions on twilio integration
+    - how do utterances work
+    - how to pprovide training data to rasa [nlu](product)
+    - [dialog](current_api) policy
+    - how do I Share with guest testers
+    - do you have a website explaining how the algorithms work?
+    - how i train my bot?
+    - how does rasa [core](product) model the [dialog](current_api)?
 - intent: restart
   examples: |
     - yep you can restart
@@ -2214,7 +2229,6 @@ nlu:
   examples: |
     - CORE
     - Core
-    - core
     - dialogue management
     - Dialogue management
     - Dialogue Management
@@ -2315,18 +2329,6 @@ nlu:
     - RASA X
     - X
     - rasax
-- synonym: playground
-  examples: |
-    - Rasaplayground
-    - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
-    - playgrounds
-    - Playground
-    - rasaplaygrounds
-    - interactive playground
-    - Interactive Playground
 - synonym: local
   examples: |
     - locally

@@ -630,9 +630,7 @@ nlu:
     - what is rasa?
     - what is in rasa
     - what is it for?
-    - what is rasa
     - what is rasa actually
-    - what is rasa?
     - whats rasa
     - yeah go on explaining what rasa is
     - RASA IS SOFTWARE?
@@ -844,3 +842,7 @@ nlu:
     - what's your name
     - what is you name
     - what is you name and where are you from
+- intent: out_of_scope
+  examples: |
+    - i like coconuts
+    - book authors
