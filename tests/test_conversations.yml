@@ -2,107 +2,107 @@ version: "2.0"
 stories:
 - story: faqs
   steps:
-  - user: |
+  - intent: faq
+    user: |-
       what is [Rasa X]{"entity": "product", "value": "x"}?
-    intent: faq
   - slot_was_set:
     - product: x
   - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
   steps:
-  - user: |
+  - intent: faq
+    user: |-
       Can you tell which messaging channels does rasa support?
-    intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
 - story: FAQ - tell more about rasa x ee
   steps:
-  - user: |
+  - intent: faq
+    user: |-
       Can you tell me about the enterprise edition?
-    intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
   - slot_was_set:
     - faq: ee
-  - user: |
+  - intent: explain
+    user: |-
       can you elaborate
-    intent: explain
   - action: action_explain_faq
 - story: new to rasa at start
   steps:
-  - user: |
-      I'm [new]{"entity": "user_type"} to Rasa
-    intent: how_to_get_started
+  - intent: how_to_get_started
+    user: |-
+      I'm [new](user_type) to Rasa
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: true
   - action: utter_getstarted_new
   - action: utter_built_bot_before
-  - user: |
+  - intent: deny
+    user: |-
       No
-    intent: deny
   - action: utter_explain_rasa_components
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
-  - user: |
+  - intent: faq
+    user: |-
       you are [open source]{"entity": "product", "value": "rasa"} ?
-    intent: faq
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: not new to rasa/bots, faq rasa
   steps:
-  - user: |
+  - intent: how_to_get_started
+    user: |-
       How do I get started
-    intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - user: |
+  - intent: deny
+    user: |-
       No
-    intent: deny
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
   - action: utter_ask_which_product
-  - user: |
+  - intent: faq
+    user: |-
       What is included in [RASA open source]{"entity": "product", "value": "rasa"} edition?
-    intent: faq
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: get started rasa open source
   steps:
-  - user: |
+  - intent: how_to_get_started
+    user: |-
       How do I get started
-    intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - user: |
+  - intent: deny
+    user: |-
       No
-    intent: deny
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
   - action: utter_ask_which_product
-  - user: |
+  - intent: how_to_get_started
+    user: |-
       [rasa open source]{"entity": "product", "value": "rasa"} first
-    intent: how_to_get_started
   - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: just newsletter + confirm
   steps:
-  - user: |
+  - intent: greet
+    user: |-
       hi!
-    intent: greet
   - action: action_greet_user
-  - user: |
+  - intent: chitchat
+    user: |-
       who built you?
-    intent: chitchat
   - action: utter_chitchat
-  - user: |
+  - intent: signup_newsletter
+    user: |-
       can I sign up for the newsletter?
-    intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
@@ -110,140 +110,140 @@ stories:
   - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
-  - user: |
+  - intent: affirm
+    user: |-
       Yes please
-    intent: affirm
   - action: utter_thumbsup
   - action: utter_anything_else
 - story: just newsletter, continue, + confirm
   steps:
-  - user: |
+  - intent: greet
+    user: |-
       hi
-    intent: greet
   - action: action_greet_user
-  - user: |
+  - intent: signup_newsletter
+    user: |-
       can i get emailed a newsletter?
-    intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
   - active_loop: subscribe_newsletter_form
-  - user: |
+  - intent: chitchat
+    user: |-
       are you a bot?
-    intent: chitchat
   - action: utter_chitchat
   - action: utter_ask_continue_newsletter
-  - user: |
+  - intent: affirm
+    user: |-
       yep
-    intent: affirm
   - action: utter_great
   - action: subscribe_newsletter_form
   - active_loop: null
   - action: action_submit_subscribe_newsletter_form
   - action: utter_docu
   - action: utter_ask_feedback
-  - user: |
+  - intent: affirm
+    user: |-
       sure
-    intent: affirm
   - action: utter_thumbsup
   - action: utter_anything_else
 - story: just sales, continue, + confirm
   steps:
-  - user: |
+  - intent: greet
+    user: |-
       hi
-    intent: greet
   - action: action_greet_user
-  - user: |
+  - intent: contact_sales
+    user: |-
       can i talk to sales?
-    intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
   - active_loop: sales_form
-  - user: |
+  - intent: chitchat
+    user: |-
       are you a bot?
-    intent: chitchat
   - action: utter_chitchat
   - action: utter_ask_continue_sales
-  - user: |
+  - intent: affirm
+    user: |-
       yep
-    intent: affirm
   - action: utter_great
   - action: sales_form
   - active_loop: null
   - action: action_submit_sales_form
   - action: utter_docu
   - action: utter_ask_feedback
-  - user: |
+  - intent: affirm
+    user: |-
       sure
-    intent: affirm
   - action: utter_thumbsup
   - action: utter_anything_else
 - story: not new to rasa + rasa
   steps:
-  - user: |
+  - intent: how_to_get_started
+    user: |-
       help me get started
-    intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - user: |
+  - intent: deny
+    user: |-
       no
-    intent: deny
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
   - action: utter_ask_which_product
-  - user: |
+  - intent: how_to_get_started
+    user: |-
       [rasa open source]{"entity": "product", "value": "rasa"}
-    intent: how_to_get_started
   - slot_was_set:
     - product: rasa
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: not new to rasa + rasax
   steps:
-  - user: |
+  - intent: how_to_get_started
+    user: |-
       how to get started
-    intent: how_to_get_started
   - action: utter_getstarted
   - action: utter_first_bot_with_rasa
-  - user: |
+  - intent: deny
+    user: |-
       no
-    intent: deny
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
   - action: utter_ask_which_product
-  - user: |
+  - intent: faq
+    user: |-
       [rasa x]{"entity": "product", "value": "x"}
-    intent: faq
   - slot_was_set:
     - product: x
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
 - story: faq with entities
   steps:
-  - user: |
-      what's the difference between [rasa]{"entity": "product"} and [rasa x]{"entity": "product", "value": "x"}
-    intent: faq
+  - intent: faq
+    user: |-
+      what's the difference between [rasa](product) and [rasa x]{"entity": "product", "value": "x"}
   - slot_was_set:
     - product: x
   - action: utter_faq
   - action: action_set_faq_slot
 - story: chitchat
   steps:
-  - user: |
+  - intent: chitchat
+    user: |-
       By what means were you made?
-    intent: chitchat
   - action: utter_chitchat
 - story: why rasa
   steps:
-  - user: |
+  - intent: why_rasa
+    user: |-
       Why should I go with Rasa?
-    intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
-  - user: |
+  - intent: affirm
+    user: |-
       yeah
-    intent: affirm
   - action: utter_why_rasa_research
   - action: utter_why_rasa_nlu
   - action: utter_why_rasa_dialogue
@@ -251,43 +251,50 @@ stories:
   - action: utter_why_rasa_compliant
 - story: why contribute
   steps:
-  - user: |
+  - intent: ask_why_contribute
+    user: |-
       Why should I contribute to Rasa?
-    intent: ask_why_contribute
   - action: utter_reasons_to_contribute
-  - user: |
+  - intent: ask_how_contribute
+    user: |-
       how can I contribute?
-    intent: ask_how_contribute
   - action: utter_possibilities_to_contribute
 - story: community events
   steps:
-  - user: |
+  - intent: ask_which_events
+    user: |-
       Does Rasa host any events?
-    intent: ask_which_events
   - action: action_get_community_events
 - story: forum question
   steps:
-  - user: |
+  - intent: ask_question_in_forum
+    user: |-
       How can I ask a question in the forum?
-    intent: ask_question_in_forum
   - action: utter_link_to_forum
 - story: out of scope
   steps:
-  - user: |
+  - intent: out_of_scope
+    user: |-
       do you sell vacuum robots
-    intent: out_of_scope
   - action: utter_out_of_scope
   - action: utter_possibilities
 - story: human handoff
   steps:
-  - user: |
+  - intent: human_handoff
+    user: |-
       I want to speak to a person
-    intent: human_handoff
   - action: utter_contact_email
 - story: fallback
   steps:
-  - user: |
+  - intent: nlu_fallback
+    user: |-
       /nlu_fallback
-    intent: nlu_fallback
   - action: action_two_stage_fallback
   - active_loop: action_two_stage_fallback
+- story: Story from Conversation ID 4a4e5bb63c954ec0a12c10c8b45d4571
+  steps:
+  - intent: enter_data
+    user: |-
+      big farts
+  - action: utter_not_sure
+  - action: utter_possibilities
