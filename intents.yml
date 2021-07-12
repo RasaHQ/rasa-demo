@@ -1,0 +1,110 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- affirm:
+    use_entities: true
+- ask_how_contribute:
+    use_entities: true
+- ask_question_in_forum:
+    use_entities: true
+- ask_when_next_event:
+    use_entities: true
+- ask_which_events:
+    use_entities: true
+- ask_why_contribute:
+    use_entities: true
+- bye:
+    use_entities: true
+- canthelp:
+    use_entities: true
+- chitchat:
+    use_entities: []
+- contact_sales:
+    use_entities: true
+- deny:
+    use_entities: true
+- enter_data:
+    use_entities: []
+- explain:
+    use_entities: true
+- faq:
+    use_entities:
+    - product
+- feedback:
+    use_entities: true
+- get_started_step1:
+    use_entities: true
+- get_started_step2:
+    use_entities: true
+- get_started_step3:
+    use_entities: true
+- get_started_step4:
+    use_entities: true
+- greet:
+    use_entities: true
+- how_to_get_started:
+    use_entities: true
+- human_handoff:
+    use_entities: true
+- install_rasa:
+    use_entities: true
+- need_help_broad:
+    use_entities: true
+- next_step:
+    use_entities: true
+- nlu_generation_tool_recommendation:
+    use_entities: true
+- nlu_info:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- pipeline_recommendation:
+    use_entities: true
+- react_negative:
+    use_entities: true
+- react_positive:
+    use_entities: true
+- restart:
+    use_entities: true
+- signup_newsletter:
+    use_entities: true
+- source_code:
+    use_entities: true
+- suggestion:
+    use_entities: true
+- switch:
+    use_entities: true
+- technical_question:
+    use_entities: true
+- thank:
+    use_entities: true
+- trigger_rephrase:
+    use_entities: true
+- why_rasa:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities:
+- amount-of-money
+- company
+- current_api
+- email
+- entity
+- feedback_value
+- job_function
+- language
+- location
+- name
+- nlu_part
+- number
+- product
+- user_type
+slots: {}
+responses: {}
+actions: []
+forms: {}
+e2e_actions: []
