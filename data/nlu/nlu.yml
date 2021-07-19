@@ -1677,6 +1677,7 @@ nlu:
     - where do i download rasa
     - I have a specific question regarding installation
     - I couldnot install rasa on my [windows](product)
+    - Can I install [rasa](product) on a gui-less server
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
