@@ -1169,6 +1169,7 @@ nlu:
     - T10
     - the company is called t10
     - I couldnot get answer in the [google](company)
+    - can i deploy my bot on [kubernetes](product)?
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
