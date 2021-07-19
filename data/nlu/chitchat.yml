@@ -830,3 +830,6 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: nlu_fallback
+  examples: |
+    - installation on [vscode](product) of [rasa](company)

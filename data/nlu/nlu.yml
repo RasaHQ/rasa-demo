@@ -1675,6 +1675,7 @@ nlu:
     - How to download rasa
     - where do i download rasa
     - I have a specific question regarding installation
+    - how can i install [rasa](company) in [vscode](product)
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -2375,9 +2376,3 @@ nlu:
 - regex: zipcode
   examples: |
     - [0-9]{5}
-# - lookup: location
-#   files: |
-#     - data/nlu/lookups/location.txt
-# - lookup: products
-#   files: |
-#     - data/nlu/lookups/products.txt
