@@ -1678,6 +1678,8 @@ nlu:
     - I have a specific question regarding installation
     - I couldnot install rasa on my [windows](product)
     - Can I install [rasa](product) on a gui-less server
+    - how can i install rasa in vscode
+    - installation on vscode of rasa
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
