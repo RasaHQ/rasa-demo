@@ -2,7 +2,7 @@
 # * rasa version in requirements.txt
 # * RASA_VERSION and RASA_X_VERSION  in .github/workflows/continuous-deployment.yml
 # Pull SDK image as base image
-FROM rasa/rasa-sdk:2.6.0
+FROM rasa/rasa-sdk:2.8.0
 
 # Use subdirectory as working directory
 WORKDIR /app
@@ -24,7 +24,7 @@ RUN apt-get update -qq && \
   # required for health check
   curl \
   && apt-get autoremove -y
-  
+
 # Make sure that all security updates are installed
 RUN apt-get update && apt-get dist-upgrade -y --no-install-recommends
 
