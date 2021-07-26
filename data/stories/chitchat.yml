@@ -9,7 +9,7 @@ stories:
   - intent: chitchat
   - action: utter_chitchat
   - intent: deny
-  - action: utter_nohelp
+  - action: utter_no_help
 - story: more chitchat
   steps:
   - intent: greet

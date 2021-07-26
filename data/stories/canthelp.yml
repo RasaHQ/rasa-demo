@@ -1,6 +1,6 @@
 version: "2.0"
 stories:
-- story: chitchat
+- story: chitcheeat
   steps:
   - intent: canthelp
   - action: utter_canthelp
@@ -22,3 +22,9 @@ stories:
   - slot_was_set:
     - product: nlu
   - action: utter_nlu_tools
+- story: Untitled Story
+  steps:
+  - intent: greet
+- story: Untitled Story
+  steps:
+  - intent: anotherone
