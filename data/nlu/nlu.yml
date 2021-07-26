@@ -102,6 +102,8 @@ nlu:
     - how to improve Rasa
     - in what ways can I help out?
     - what can I do?
+    - What's the difference between Rasa X and Rasa Enterprise?
+    - how to deploy
 - intent: ask_question_in_forum
   examples: |
     - Can we stop at the forum so I can ask a question
@@ -2237,6 +2239,7 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - I am getting lots of error on a installation part
 - intent: restart
   examples: |
     - yep you can restart
