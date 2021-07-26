@@ -2376,6 +2376,3 @@ nlu:
 - regex: greet
   examples: |
     - hey[^\s]*
-- regex: zipcode
-  examples: |
-    - [0-9]{5}

@@ -1,7 +1,13 @@
 version: "2.0"
 rules:
-  - rule: Two stage fallback
-    steps:
-      - intent: nlu_fallback
-      - action: action_two_stage_fallback
-      - active_loop: action_two_stage_fallback
+- rule: Two stage fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+- rule: Untitled Rule
+  steps:
+  - intent: greet
+- rule: Untitled Rule
+  steps:
+  - intent: anothergreet

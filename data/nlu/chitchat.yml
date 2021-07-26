@@ -830,3 +830,6 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- regex: the name
+  examples: |
+    - ^b&
