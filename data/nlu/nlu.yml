@@ -1169,6 +1169,7 @@ nlu:
     - T10
     - the company is called t10
     - I couldnot get answer in the [google](company)
+    - can i deploy my bot on [kubernetes]{"entity": "company", "role": "new_role"}?
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -2237,6 +2238,7 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - I am getting lots of error on a [installation](company) part
 - intent: restart
   examples: |
     - yep you can restart
@@ -2273,6 +2275,7 @@ nlu:
 - synonym: all
   examples: |
     - both
+    - installation
 - synonym: core
   examples: |
     - CORE
