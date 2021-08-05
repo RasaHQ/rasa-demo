@@ -1506,6 +1506,7 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - the components of [Rasa](company),
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
