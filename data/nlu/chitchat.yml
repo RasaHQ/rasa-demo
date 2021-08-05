@@ -830,3 +830,7 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: nlu_fallback
+  examples: |
+    - installation on vscode of [rasa](company)
+    - i want to install rasa 1.10.4 version
