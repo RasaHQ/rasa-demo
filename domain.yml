@@ -222,7 +222,7 @@ responses:
       title: Try out Rasa in the online Rasa Playground
     - payload: /install_rasa
       title: Install Rasa on your own computer
-    - payload: /trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}
+    - payload: '/trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}'
       title: Find out more about Rasa
   utter_playground_intro:
   - text: |-
