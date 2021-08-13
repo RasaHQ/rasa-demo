@@ -751,6 +751,7 @@ nlu:
     - what can you teache me?
     - Can rasa do calculations?
     - what you can
+    - can you help me deploy my bot
 - intent: chitchat/ask_wherefrom
   examples: |
     - Are you from around here?
