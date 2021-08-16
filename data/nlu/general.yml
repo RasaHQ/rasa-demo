@@ -363,6 +363,10 @@ nlu:
     - you cant help me
     - quit
     - that does not help
+    - ver
+    - hwfw
+    - exiy
+    - Chat not suck
 - intent: deny
   examples: |
     - I don't want to
@@ -759,7 +763,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr

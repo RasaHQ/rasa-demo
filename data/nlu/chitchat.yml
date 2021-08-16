@@ -830,3 +830,26 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: out_of_scope
+  examples: |
+    - dsa;l;lfja;ls;lkflf
+    - asdjflsajfl;ajsf;lf;lj
+    - i want a pizzzza
+    - I hope you are being stupid!
+    - testtest
+    - testestest
+    - i need vitamin c
+    - good afternoon
+    - my job is airforce
+    - what
+    - Whaaaaaaaa .... ?
+    - what d you think about alexa
+    - de
+    - bcj
+    - i meant to say hi
+    - why do you keep showing me buttons
+    - You are so professional.
+    - what is rasa scability
+    - list of services rasa provide
+    - whats my today sales
+    - book authors

@@ -95,15 +95,12 @@ nlu:
     - Mail me the guide
     - Make me a sandwich
     - NLW
-    - Nice name
     - Now?
     - Pizza bot
     - Recharge
     - SEL ME SOMETHING
-    - The Try it out is not working
     - The weather is good
     - Today
-    - Try it out broken
     - What day is it today?
     - What did you eat yesterday?
     - What do you prefer?
@@ -117,7 +114,6 @@ nlu:
     - Where am I?
     - Who ?
     - Who are your customers
-    - Why don’t you answer?
     - Why is my TRUST score set to 50 after I completed the registration process?
     - Won't you ask me how I am?
     - You'r blue.
@@ -214,9 +210,7 @@ nlu:
     - i am not a developer but need this for business
     - i am qq
     - i can't deal with _your_ request
-    - i do not care how are you
     - i hope you will be better
-    - i immediately need help with implementing the coolest bot you can imagine
     - i m looking for job
     - i told you already
     - i wanna party
@@ -395,7 +389,6 @@ nlu:
     - your contry name
     - you girl
     - gsaf
-    - expert of rasa
     - i want play ball
     - flight catch up
     - how do you like your coffee
@@ -415,3 +408,19 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - mo
+    - what about the summit?
+    - something else
+    - i want to get warm
+- intent: react_positive
+  examples: |
+    - Nice name
+- intent: react_negative
+  examples: |
+    - The Try it out is not working
+    - Try it out broken
+    - Why don’t you answer?
+    - i do not care how are you
+- intent: need_help_broad
+  examples: |
+    - i immediately need help with implementing the coolest bot you can imagine
