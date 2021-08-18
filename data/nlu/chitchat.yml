@@ -830,3 +830,8 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: nlu_fallback
+  examples: |
+    - first setup
+    - installation on vscode of rasa
+    - it didnot help me

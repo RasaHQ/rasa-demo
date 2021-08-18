@@ -2237,6 +2237,7 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - How much storage space does rasa open source take
 - intent: restart
   examples: |
     - yep you can restart
