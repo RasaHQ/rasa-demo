@@ -1679,6 +1679,7 @@ nlu:
     - I couldnot install rasa on my [windows](product)
     - Can I install [rasa](product) on a gui-less server
     - how can i install [rasa](company) in vscode
+    - i want to install rasa 1.10.4 version
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -2237,6 +2238,8 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - jwt token
+    - tell me about dispatcher
 - intent: restart
   examples: |
     - yep you can restart

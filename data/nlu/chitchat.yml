@@ -51,6 +51,7 @@ nlu:
     - Are you built using rasa?
     - Are u developed in rasa
     - are you build with rasa ?
+    - who build you?
 - intent: chitchat/ask_howdoing
   examples: |
     - Ahoy matey how are you?
@@ -242,6 +243,7 @@ nlu:
     - you robo
     - real bot then?
     - are you really a bbot?
+    - Are you a bot?
 - intent: chitchat/ask_ishuman
   examples: |
     - hey are you human
@@ -563,6 +565,10 @@ nlu:
     - what is my name
     - what is my name?
     - what's my name?
+    - what I can call you
+    - what is your name?
+    - what is ur name
+    - your name?
 - intent: chitchat/ask_whatisrasa
   examples: |
     - Can you brief me about rasa
@@ -751,6 +757,8 @@ nlu:
     - what can you teache me?
     - Can rasa do calculations?
     - what you can
+    - menu
+    - what can u help?
 - intent: chitchat/ask_wherefrom
   examples: |
     - Are you from around here?
@@ -830,3 +838,7 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+    - who the hell are you?
+    - who are you?
+    - who r u
+    - who are u

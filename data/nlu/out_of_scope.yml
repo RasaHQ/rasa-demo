@@ -43,6 +43,7 @@ nlu:
     - αστεία λές
     - rasa codigo abierto
     - 卧槽
+    - come va?
 - intent: out_of_scope/other
   examples: |
     - I am asking you an out of scope question
@@ -415,3 +416,8 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - i want to kill you
+    - Ddfdsf
+    - give me a kiss
+    - are you satanist?
+    - May you play with me?
