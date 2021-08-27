@@ -204,7 +204,7 @@ jobs:
       if:  ${{ needs.check_changed_files.outputs.core == 'true' }}
       run: |
         rasa --version
-        rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
+        rasa test --stories tests/test_conversations.yml --fail-on-prediction-errors
   build-images:
     name: Build Action Server Image
     needs: 
