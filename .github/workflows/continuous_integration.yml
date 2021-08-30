@@ -244,7 +244,7 @@ jobs:
       run: |
         while true; do
           # Get a list of checks information, excluding training-testing and build-images
-          CHECKS_LIST=$(gh api /repos/${{ github.repository }}/commits/${{ github.event.pull_request.head.sha }}/check-runs --jq '.check_runs.[] | select(.name != "training-testing" and .name != "build-images")')
+          CHECKS_LIST=$(gh api /repos/${{ github.repository }}/commits/${{ github.event.pull_request.head.sha }}/check-runs --jq '.check_runs.[] | select(.name != "Test Model" and .name != "Build Action Server Image")')
 
           # Get the status and conclusion of echo jobs
           STATUS_LIST=$(echo $CHECKS_LIST | jq -r '.status')
