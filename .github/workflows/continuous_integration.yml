@@ -301,7 +301,7 @@ jobs:
         (github.event_name == 'pull_request' &&
         contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
         steps.check-runs-conclusion.outputs.upload-model == 'true'
-      run: gsutil cp "${MODEL_PATH}" ${secrets.STORAGE_BUCKET_URL}/rasa_demo_models
+      run: gsutil cp "${MODEL_PATH}" ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models
 
 
   build-images:
