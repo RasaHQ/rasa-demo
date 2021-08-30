@@ -14,6 +14,10 @@ env:
     RASA_X_HOST_SCHEMA: ${{ secrets.RASA_X_HOST_SCHEMA }}
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     TRACKER_DB_URL: ${{ secrets.TRACKER_DB_URL }}
+    # Due to the issue with openssl library for Google Cloud SDK (gcloud)
+    # (https://github.com/GoogleCloudPlatform/github-actions/issues/128)
+    # we use 297.0.01 version
+    GCLOUD_VERSION: "297.0.1"
 
 
 jobs:
@@ -74,6 +78,8 @@ jobs:
         /usr/bin/git log -1 --format='%H'
         echo "------------------------------------"
         make lint
+
+
   type-testing:
     name: Type Tests
     runs-on: ubuntu-latest
@@ -92,20 +98,25 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
+
     - name: Type Checking
       run: |
         pip list
         make types
+
+
   action-unit-tests:
     needs:
       - lint-testing
       - type-testing
     name: Custom Action Unit Tests
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout pull request HEAD commit instead of merge commit
       uses: actions/checkout@v2
@@ -121,15 +132,20 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+
     - name: Install dependencies
       run: |
         make install-dev
+
     - name: Unit Tests
       run: |
         make test-actions
+
+
   data-validation:
     name: Data Validation
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout pull request HEAD commit instead of merge commit
       uses: actions/checkout@v2
@@ -145,13 +161,17 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
+
     - name: Rasa Data Validation
       run: |
         rasa data validate --debug
+
+
   training-testing:
     name: Test Model
     runs-on: ubuntu-latest
@@ -159,11 +179,13 @@ jobs:
     - data-validation
     - check_changed_files
     if: ${{ needs.check_changed_files.outputs.training == 'true' }}
+
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0
       with:
         access_token: ${{ github.token }}
+
     - name: Checkout pull request HEAD commit instead of merge commit
       uses: actions/checkout@v2
       if: github.event_name == 'pull_request'
@@ -178,11 +200,13 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
+
     - name: Install dependencies
       run: |
           python -m pip install --upgrade "pip<20"
           pip install -r requirements-dev.txt
           rasa --version
+
     - name: Cross-validate NLU model
       id: cvnlu
       if: contains( github.event.pull_request.labels.*.name, 'nlu_testing_required' )
@@ -190,21 +214,93 @@ jobs:
           rasa --version
           rasa test nlu -f 3 --cross-validation --config config_nlu_testing.yml
           python .github/workflows/format_results.py
+
     - name: post cross-val results to PR
       if: steps.cvnlu.outcome == 'success'
       uses: amn41/comment-on-pr@comment-file-contents
       continue-on-error: true
       with:
         msg: results.md
+
     - name: Train Model
       run: |
         rasa --version
         rasa train
+
     - name: Test End 2 End Stories
       if: ${{ needs.check_changed_files.outputs.core == 'true' }}
       run: |
         rasa --version
         rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
+
+    - name: Wait for the conclusion of all other workflow runs
+      # upload model from PR
+      if: github.event_name == 'pull_request'
+      id: check-runs-conclusion
+      env:
+        WAIT_INTERVAL_SECS: 10
+      timeout-minutes: 20
+      run: |
+        while true; do
+          # Get a list of checks information, excluding training-testing and build-images
+          CHECKS_LIST=$(gh api /repos/${{ github.repository }}/commits/${{ github.event.pull_request.head.sha }}/check-runs --jq '.check_runs.[] | select(.name != "training-testing" and .name != "build-images")')
+
+          # Get the status and conclusion of echo jobs
+          STATUS_LIST=$(echo $CHECKS_LIST | jq -r '.status')
+          CONCLUSION_LIST=$(echo $CHECKS_LIST | jq -r '.conclusion')
+
+          # Make sure all other check runs are completed
+          if [[ "$(echo $STATUS_LIST | tr ' ' '\n' | sort | uniq)" == "completed" ]]; then
+            # Check the conclusion of all other check runs
+            # Fail the step if there is any failture
+            if [[ "$(echo CONCLUSION_LIST | tr ' ' '\n' | sort | uniq)" =~ "failure" ]]; then
+              echo "::error:: Some check runs failed. Skip uploading model."
+              exit 1
+            else
+              echo "All other check runs are successed."
+              echo "::set-output name=upload-model::true"
+              exit 0
+            fi
+          fi
+
+          sleep $WAIT_INTERVAL_SECS
+          echo "Wait for $WAIT_INTERVAL_SECS seconds..."
+        done
+
+    - name: Set model name from Rasa version
+      if: |
+        github.event_name == 'pull_request' &&
+        steps.check-runs-conclusion.outputs.upload-model == 'true'
+      run: |
+          python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
+          rasa_version=`cat rasaversion.txt`
+          model_path=`ls models/*.tar.gz | head -n 1`
+          model_timestamp=$(basename "$model_path" .tar.gz)
+          model_name="$model_timestamp"_rasa"$rasa_version"
+          renamed_model_path=models/"$model_name".tar.gz
+          mv $model_path $renamed_model_path
+          echo "MODEL_NAME=${model_name}" >> $GITHUB_ENV
+          echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
+
+    - uses: google-github-actions/setup-gcloud@master
+      if: |
+        (github.event_name == 'pull_request' &&
+        contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
+        steps.check-runs-conclusion.outputs.upload-model == 'true'
+      name: Authenticate with gcloud 🎫
+      with:
+        version: "${{ env.GCLOUD_VERSION }}"
+        service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
+
+    - name: Upload model to storage bucket
+      if: |
+        (github.event_name == 'pull_request' &&
+        contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
+        steps.check-runs-conclusion.outputs.upload-model == 'true'
+      run: gsutil cp "${MODEL_PATH}" ${secrets.STORAGE_BUCKET_URL}/rasa_demo_models
+
+
   build-images:
     name: Build Action Server Image
     needs:
