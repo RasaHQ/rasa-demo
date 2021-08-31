@@ -125,6 +125,13 @@ jobs:
         sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.130.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
         sudo chmod +x /usr/local/bin/helmfile
 
+    - name: Authenticate with gcloud 🎫
+      uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba
+      with:
+        version: "${{ env.GCLOUD_VERSION }}"
+        service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
+
     - name: Authenticate docker and configure cluster credentials 🎫
       run: |
         # Set up docker to authenticate via gcloud command-line tool.
@@ -179,17 +186,6 @@ jobs:
           cat /tmp/output_health.txt || true
           sleep 5
         done
-
-    - name: Authenticate with gcloud 🎫
-      uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba
-      if: |
-        (github.event_name == 'pull_request' &&
-        contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
-        steps.check-runs-conclusion.outputs.upload-model == 'true'
-      with:
-        version: "${{ env.GCLOUD_VERSION }}"
-        service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
-        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
 
     - name: Download model from storage bucket
       run: |
