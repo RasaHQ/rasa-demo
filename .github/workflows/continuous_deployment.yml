@@ -200,23 +200,25 @@ jobs:
     - name: Upload model to Rasa X
       working-directory: ${{ github.workspace }}
       run: |
-           auth_token=$(curl --request POST \
-              --url https://${RASA_X_DOMAIN}/api/auth \
-              --header 'Content-Type: application/json' \
-              --data "{
-              \"username\": \"${RASA_X_USERNAME}\",
-              \"password\": \"${RASA_X_PASSWORD}\"
-            }" | jq -r '.access_token')
+          ls
+          echo $MODEL_PATH
+          auth_token=$(curl --request POST \
+            --url https://${RASA_X_DOMAIN}/api/auth \
+            --header 'Content-Type: application/json' \
+            --data "{
+            \"username\": \"${RASA_X_USERNAME}\",
+            \"password\": \"${RASA_X_PASSWORD}\"
+          }" | jq -r '.access_token')
 
-            echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
+          echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
 
-            curl -k -F "model=@${MODEL_PATH}" \
-              --url https://$RASA_X_DOMAIN/api/projects/default/models \
-              --header "Authorization: Bearer ${auth_token}"
+          curl -k -F "model=@${MODEL_PATH}" \
+            --url https://$RASA_X_DOMAIN/api/projects/default/models \
+            --header "Authorization: Bearer ${auth_token}"
 
     - name: Tag model as production
       working-directory: ${{ github.workspace }}
       run: |
-            curl -X PUT  \
-            --url https://$RASA_X_DOMAIN/api/projects/default/models/$MODEL_NAME/tags/production \
-            --header "Authorization: Bearer ${AUTH_TOKEN}"
+          curl -X PUT  \
+          --url https://$RASA_X_DOMAIN/api/projects/default/models/$MODEL_NAME/tags/production \
+          --header "Authorization: Bearer ${AUTH_TOKEN}"
