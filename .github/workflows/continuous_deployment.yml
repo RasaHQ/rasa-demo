@@ -188,10 +188,8 @@ jobs:
 
     - name: Download model from storage bucket
       run: |
-        python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
-        RASA_VERSION=`cat rasaversion.txt`
-        # Fetch the latest model based on rasa version and creat time
-        MODEL_URL=$(gsutil ls -l ${storage_bucket_url}/rasa_demo_models/${model_path} | grep "${rasa_version}.tar.gz" | sort -k2 | tail -n1 | awk '{print $3}')
+        # Fetch the latest model based on when it created
+        MODEL_URL=$(gsutil ls -l ${storage_bucket_url}/rasa_demo_models/${model_path} | grep "tar.gz" | sort -k2 | tail -n1 | awk '{print $3}')
         # Get the model local path, get rid of bucket rul
         MODEL_PATH=$(basename $MODEL_URL)
         # Download the model from bucket
