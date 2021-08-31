@@ -21,6 +21,14 @@ env:
 
 
 jobs:
+  # TODO: delete
+  test_job:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - run: exit 1
+
+
   check_changed_files:
     name: Check for file changes
     runs-on: ubuntu-20.04
