@@ -3,6 +3,7 @@ on:
   push:
     branches:
     - 'main'
+  pull_request: # TODO: test
 
 env:
   # These values are viewable in the Sara K8s CI entry of 1password
@@ -23,6 +24,7 @@ env:
   PASSWORDSALT: ${{ secrets.PASSWORDSALT }}
   STATIC_IP: ${{ secrets.STATIC_IP }}
   INGRESS_CERTIFICATE: ${{ secrets.INGRESS_CERTIFICATE }}
+  STORAGE_BUCKET_URL: ${{ secrets.STORAGE_BUCKET_URL }}
   ACTION_SERVER_SECRET_NAME: ${{ secrets.ACTION_SERVER_SECRET_NAME }}
 
   NAMESPACE: "sara"
@@ -184,21 +186,19 @@ jobs:
         service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
         service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
 
-    - name: Prepare model name
+    - name: Download model from storage bucket
       run: |
-          python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
-          rasa_version=`cat rasaversion.txt`
-          model_path=`ls models/*.tar.gz | head -n 1`
-          model_timestamp=$(basename "$model_path" .tar.gz)
-          model_name="$model_timestamp"_rasa"$rasa_version"
-          renamed_model_path=models/"$model_name".tar.gz
-          mv $model_path $renamed_model_path
-          echo "MODEL_NAME=${model_name}" >> $GITHUB_ENV
-          echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
+        python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
+        RASA_VERSION=`cat rasaversion.txt`
+        # Fetch the latest model based on rasa version and creat time
+        MODEL_URL=$(gsutil ls -l ${storage_bucket_url}/rasa_demo_models/${model_path} | grep "${rasa_version}.tar.gz" | sort -k2 | tail -n1 | awk '{print $3}')
+        # Get the model local path, get rid of bucket rul
+        MODEL_PATH=$(basename $MODEL_URL)
+        # Download the model from bucket
+        gsutil -m cp ${MODEL_URL} ${MODEL_PATH}
 
-    - name: Download model from Bucket
-      run: |
-        gsutil cp gs://rasa-x-ci/${MODEL_PATH} ${MODEL_PATH}
+        echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
+
 
     - name: Upload model to Rasa X
       working-directory: ${{ github.workspace }}
