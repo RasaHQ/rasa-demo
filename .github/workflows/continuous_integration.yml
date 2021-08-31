@@ -49,7 +49,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         filters: .github/change_filters.yml
         base: ${{ github.ref }}
-
   lint-testing:
     name: Code Formatting Tests
     runs-on: ubuntu-latest
@@ -111,36 +110,36 @@ jobs:
         make types
 
 
-#   action-unit-tests:
-#     needs:
-#       - lint-testing
-#       - type-testing
-#     name: Custom Action Unit Tests
-#     runs-on: ubuntu-latest
-#
-#     steps:
-#     - name: Checkout pull request HEAD commit instead of merge commit
-#       uses: actions/checkout@v2
-#       if: github.event_name == 'pull_request'
-#       with:
-#         ref: ${{ github.event.pull_request.head.sha }}
-#
-#     - name: Checkout git repository
-#       uses: actions/checkout@v2
-#       if: github.event_name != 'pull_request'
-#
-#     - name: Set up Python 3.7
-#       uses: actions/setup-python@v1
-#       with:
-#         python-version: 3.7
-#
-#     - name: Install dependencies
-#       run: |
-#         make install-dev
-#
-#     - name: Unit Tests
-#       run: |
-#         make test-actions
+  action-unit-tests:
+    needs:
+      - lint-testing
+      - type-testing
+    name: Custom Action Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout pull request HEAD commit instead of merge commit
+      uses: actions/checkout@v2
+      if: github.event_name == 'pull_request'
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout git repository
+      uses: actions/checkout@v2
+      if: github.event_name != 'pull_request'
+
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.7
+
+    - name: Install dependencies
+      run: |
+        make install-dev
+
+    - name: Unit Tests
+      run: |
+        make test-actions
 
 
   data-validation:
@@ -179,7 +178,7 @@ jobs:
     needs:
     - data-validation
     - check_changed_files
-    # if: ${{ needs.check_changed_files.outputs.training == 'true' }}
+    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
 
     steps:
     - name: Cancel Previous Runs
@@ -232,7 +231,7 @@ jobs:
       if: ${{ needs.check_changed_files.outputs.core == 'true' }}
       run: |
         rasa --version
-        rasa test core --stories tests/test_conversations.yml # --fail-on-prediction-errors
+        rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
 
     - name: Wait for the conclusion of all other workflow runs
       # upload model from PR
@@ -250,8 +249,6 @@ jobs:
           STATUS_LIST=$(echo $CHECKS_LIST | jq -r '.status')
           CONCLUSION_LIST=$(echo $CHECKS_LIST | jq -r '.conclusion')
 
-          echo $STATUS_LIST
-          echo $CONCLUSION_LIST
           # Make sure all other check runs are completed
           if [[ "$(echo $STATUS_LIST | tr ' ' '\n' | sort | uniq)" == "completed" ]]; then
             # Check the conclusion of all other check runs
