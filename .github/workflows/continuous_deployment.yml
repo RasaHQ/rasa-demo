@@ -60,12 +60,15 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           filters: .github/change_filters.yml
           base: ${{ github.ref }}
+
+
   build-push-action-server:
     name: Build Action Server Docker Image
     needs:
     - check_changed_files
     runs-on: ubuntu-latest
-    if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
+    # if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
+
     steps:
       - name: Checkout git repository 🕝
         uses: actions/checkout@v2
@@ -96,13 +99,15 @@ jobs:
           docker push gcr.io/replicated-test/rasa-demo:latest
           docker push gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER
 
+
   deploy_to_k8s_cluster:
     name: Rasa Enterprise K8s deployment
     runs-on: ubuntu-20.04
     needs:
     - check_changed_files
     - build-push-action-server
-    if: ${{ needs.check_changed_files.outputs.deployment == 'true' }}
+    # if: ${{ needs.check_changed_files.outputs.deployment == 'true' }}
+
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0
@@ -198,7 +203,6 @@ jobs:
         gsutil -m cp ${MODEL_URL} ${MODEL_PATH}
 
         echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
-
 
     - name: Upload model to Rasa X
       working-directory: ${{ github.workspace }}
