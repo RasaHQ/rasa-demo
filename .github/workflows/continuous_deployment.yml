@@ -161,10 +161,9 @@ jobs:
         echo "ACTION_SERVER_TAG='$tag'" >> $GITHUB_ENV
 
     - name: Deploy Rasa X chart ☸️
-      run: |
+      run: >-
         cd ${{ github.workspace }}/.github/deployments &&
-        helmfile repos &&
-        helmfile sync
+        helmfile repos && sync
 
     - name: Wait for deployment to be ready ⏰
       timeout-minutes: 15
