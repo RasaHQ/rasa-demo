@@ -77,8 +77,7 @@ jobs:
         name: Authenticate with gcloud 🎫
         with:
           version: "${{ env.GCLOUD_VERSION }}"
-          service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
-          service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
+          service_account_key: ${{ secrets.GCLOUD_AUTH }}
 
       - name: Configure Docker to use Google Cloud Platform ☁️
         run: |
