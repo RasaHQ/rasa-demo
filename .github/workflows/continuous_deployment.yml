@@ -213,12 +213,12 @@ jobs:
           echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
 
           curl -k -F "model=@${MODEL_PATH}" \
-            --url https://$RASA_X_DOMAIN/api/projects/default/models \
+            --url https://${RASA_X_DOMAIN}/api/projects/default/models \
             --header "Authorization: Bearer ${auth_token}"
 
     - name: Tag model as production
       working-directory: ${{ github.workspace }}
       run: |
           curl -X PUT  \
-          --url https://$RASA_X_DOMAIN/api/projects/default/models/$MODEL_NAME/tags/production \
+          --url https://${RASA_X_DOMAIN}/api/projects/default/models/$MODEL_NAME/tags/production \
           --header "Authorization: Bearer ${AUTH_TOKEN}"
