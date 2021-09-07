@@ -19,6 +19,10 @@ env:
     # we use 297.0.01 version
     GCLOUD_VERSION: "297.0.1"
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 
 jobs:
   check_changed_files:

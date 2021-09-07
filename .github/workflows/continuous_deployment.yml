@@ -5,6 +5,11 @@ on:
     - 'main'
   pull_request: # TODO: test
 
+concurrency:
+  group: cd-${{ github.ref }}
+  cancel-in-progress: true
+
+
 env:
   # These values are viewable in the Sara K8s CI entry of 1password
   # If updating secrets please also update the 1password entries
