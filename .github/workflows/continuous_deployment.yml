@@ -39,7 +39,7 @@ env:
   # * rasa version in requirements.txt
   # * rasa-sdk base image version in Dockerfile
   RASA_X_VERSION: "0.40.1"
-  RASA_VERSION: "2.6.3"
+  RASA_VERSION: "2.6.2"
   # Due to the issue with openssl library for Google Cloud SDK (gcloud)
   # (https://github.com/GoogleCloudPlatform/github-actions/issues/128)
   # we use 297.0.01 version
@@ -194,7 +194,7 @@ jobs:
     - name: Download model from storage bucket
       run: |
         # Fetch the latest model based on when it created
-        MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | sort -k2 | tail -n1 | awk '{print $3}')
+        MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | grep $RASA_VERSION | sort -k2 | tail -n1 | awk '{print $3}')
         # Get the model local path, get rid of bucket rul
         MODEL_PATH=$(basename $MODEL_URL)
         # Download the model from bucket
