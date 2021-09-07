@@ -206,16 +206,16 @@ jobs:
           auth_token=$(curl -s -X POST \
             -H 'Accept: application/json' \
             -H 'Content-Type: application/json' \
-            --data '{"username": "'${{ env.RASA_X_USERNAME }}'","password": "'${{ env.RASA_X_PASSWORD}}'"' \
+            --data '{"username": "'${{ env.RASA_X_USERNAME }}'","password": "'${{ env.RASA_X_PASSWORD }}'"' \
             https://${{ env.RASA_X_DOMAIN }}/api/auth | tee /tmp/output_auth.txt | jq -r '.access_token')
 
-          echo "$auth_token"
           echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
 
           # Upload model
-          curl -k -F "model=@${MODEL_PATH}" \
-            --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models \
-            --header "Authorization: Bearer ${auth_token}"
+           curl -X POST \
+            -H "Authorization: Bearer ${auth_token}" \
+            -F "model=@${{ env.MODEL_NAME }}.tar.gz" \
+            "https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models"
 
           # wait util the model is ready
           while [[ $(curl -s -X GET -H "Authorization: Bearer ${auth_token}" -H 'Accept: application/json' -H 'Content-Type: application/json' https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models | tee /tmp/output.txt | jq -r '.[]? | select(.model=="'${MODEL_NAME}'") | .model') != "${MODEL_NAME}" ]]; do
@@ -231,4 +231,4 @@ jobs:
       run: |
           curl -X PUT  \
           --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models/${{ env.MODEL_NAME }}/tags/production \
-          --header "Authorization: Bearer ${AUTH_TOKEN}"
+          --header "Authorization: Bearer ${{ env.AUTH_TOKEN }}"
