@@ -214,14 +214,15 @@ jobs:
             --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models \
             --header "Authorization: Bearer ${auth_token}"
 
+          # MODEL_NAME=$(basename $MODEL_PATH .tar.gz)
           # wait util the model is ready
-          while [[ $(curl -s -X GET -H "Authorization: Bearer ${auth_token}" -H 'Accept: application/json' -H 'Content-Type: application/json' https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models | tee /tmp/output.txt | jq -r '.[]? | select(.model=="'$MODEL_NAME'") | .model') != "${MODEL_NAME}" ]]; do
-            # need to wait until the model is available before we can tag it
-            echo "Waiting for model ${MODEL_PATH} to be available.."
-            cat /tmp/output.txt
-            echo ""
-            sleep 10
-          done
+          # while [[ $(curl -s -X GET -H "Authorization: Bearer ${auth_token}" -H 'Accept: application/json' -H 'Content-Type: application/json' https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models | tee /tmp/output.txt | jq -r '.[]? | select(.model=="'${MODEL_NAME}'") | .model') != "${MODEL_NAME}" ]]; do
+          #   # need to wait until the model is available before we can tag it
+          #   echo "Waiting for model ${MODEL_PATH} to be available.."
+          #   cat /tmp/output.txt
+          #   echo ""
+          #   sleep 10
+          # done
 
     - name: Tag model as production
       working-directory: ${{ github.workspace }}
