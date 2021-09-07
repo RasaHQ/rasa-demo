@@ -200,15 +200,17 @@ jobs:
     - name: Upload model to Rasa X
       working-directory: ${{ github.workspace }}
       run: |
-          auth_token=$(curl -s -X POST \
+          auth_token=$(curl -v -s -X POST \
             -H 'Accept: application/json' \
             -H 'Content-Type: application/json' \
-            --data '{"username": "'${RASA_X_USERNAME}'","password": "'${RASA_X_PASSWORD}'"}' \
+            --data '{"username": "'${{ env.RASA_X_USERNAME }}'","password": "'${{ env.RASA_X_PASSWORD}}'"' \
             https://${{ env.RASA_X_DOMAIN }}/api/auth | tee /tmp/output_auth.txt | jq -r '.access_token')
 
+          echo "$auth_token"
           echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
 
-          curl -k -F "model=@${MODEL_PATH}" \
+          # Upload model
+          curl -v -k -F "model=@${MODEL_PATH}" \
             --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models \
             --header "Authorization: Bearer ${auth_token}"
 
