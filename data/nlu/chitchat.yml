@@ -242,6 +242,7 @@ nlu:
     - you robo
     - real bot then?
     - are you really a bbot?
+    - robot
 - intent: chitchat/ask_ishuman
   examples: |
     - hey are you human
@@ -524,6 +525,7 @@ nlu:
     - whats the weather like tomorrow?
     - wheather at you location?
     - wheather be like at your place?
+    - tell me about dispatcher
 - intent: chitchat/ask_whatismyname
   examples: |
     - Can you tell me my name?
@@ -563,6 +565,8 @@ nlu:
     - what is my name
     - what is my name?
     - what's my name?
+    - what is your name?
+    - your name?
 - intent: chitchat/ask_whatisrasa
   examples: |
     - Can you brief me about rasa
@@ -644,6 +648,7 @@ nlu:
     - RASA IS SOFTWARE?
     - rasa os
     - what is Rasa
+    - What is RASA
 - intent: chitchat/ask_whatspossible
   examples: |
     - Can you explain me in one sentence what you are doing?
@@ -751,6 +756,12 @@ nlu:
     - what can you teache me?
     - Can rasa do calculations?
     - what you can
+    - tell me
+    - menu
+    - what I can call you
+    - then what you doing
+    - what can u help?
+    - are you satanist?
 - intent: chitchat/ask_wherefrom
   examples: |
     - Are you from around here?
@@ -802,6 +813,7 @@ nlu:
     - where do you live
     - where do you live?
     - where's your home town?
+    - who build you?
 - intent: chitchat/ask_whoami
   examples: |
     - Can you tell me who I am?
@@ -830,3 +842,15 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: nlu_fallback
+  examples: |
+    - rasa meaning
+    - ready
+    - USER: nlu_fallback (1.00): "the local mode share your bot generate link does not work for me. I ge an unauthorized error.."
+    - the local mode share your bot generate link does not work for me. I ge an unauthorized error.
+    - Yes, but not using Rasa
+    - no I'm starting from scratch
+    - sure why not
+- intent: chitchat
+  examples: |
+    - Are you a bot?

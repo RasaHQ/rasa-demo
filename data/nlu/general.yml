@@ -227,6 +227,8 @@ nlu:
     - cool beans
     - sounds good!
     - really
+    - so
+    - hmm
 - intent: react_positive
   examples: |
     - Cool
@@ -335,6 +337,7 @@ nlu:
     - Exit
     - Close this talk
     - byr
+    - Ciao
 - intent: canthelp
   examples: |
     - I think you cant help me
@@ -465,6 +468,7 @@ nlu:
     - stop it, i do not care!!!
     - none of them
     - I don't agree
+    - not my
 - intent: explain
   examples: |
     - can you elaborate
@@ -632,6 +636,9 @@ nlu:
     - yoo
     - ssup?
     - helleo
+    - yo yo
+    - hy
+    - sara
 - intent: next_step
   examples: |
     - continue to next step
@@ -649,6 +656,8 @@ nlu:
     - please go to the next step
     - take me to the next step
     - what is the next step ?
+    - okay what's the next step
+    - let's look at the next step
 - intent: react_negative
   examples: |
     - I am feeling bad
@@ -739,6 +748,7 @@ nlu:
     - yes thanks
     - thanks for your information
     - thanks f
+    - Alright that's everything for now. Thanks
 - intent: need_help_broad
   examples: |
     - need help on chatbot
@@ -759,7 +769,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr
