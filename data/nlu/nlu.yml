@@ -256,6 +256,7 @@ nlu:
     - What is the next event for [Seattle](location)?
     - When is the next event for [India](location)?
     - What is the next event for [paris](location)?
+    - Yea, i want to develop a virtual agent
 - intent: ask_why_contribute
   examples: |
     - What can I bring to help your code
@@ -1506,6 +1507,9 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - tell me rasa's [components](company)
+    - I'm [new](user_type) here and want to develop a small VA
+    - Illegal instruction ([core](product) dumped)
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -2237,6 +2241,7 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - Getting an error
 - intent: restart
   examples: |
     - yep you can restart

@@ -43,6 +43,7 @@ nlu:
     - αστεία λές
     - rasa codigo abierto
     - 卧槽
+    - 你好啊
 - intent: out_of_scope/other
   examples: |
     - I am asking you an out of scope question
