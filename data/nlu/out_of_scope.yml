@@ -415,3 +415,5 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - I want to buy rasa
+    - I'm your [father](current_api)

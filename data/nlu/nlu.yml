@@ -147,6 +147,20 @@ nlu:
     - ok send me to the forum
     - to the forum
     - need help on chatbot
+    - setup the rasa port
+    - iam sas
+    - your name
+    - how to train a model first
+    - test
+    - you
+    - h
+    - xcv
+    - sdf
+    - idiot
+    - Can integrate API
+    - take me to the beginners totorial
+    - 你会干哈
+    - the components of Rasa,
 - intent: ask_which_events
   examples: |
     - Any other event like rasa meetup in future?
@@ -1506,6 +1520,7 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - can you help me deploy my bot
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -1679,6 +1694,7 @@ nlu:
     - I couldnot install rasa on my [windows](product)
     - Can I install [rasa](product) on a gui-less server
     - how can i install [rasa](company) in vscode
+    - Can conversation state be saved and resumed later?
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
