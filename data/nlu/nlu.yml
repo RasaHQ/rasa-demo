@@ -47,6 +47,8 @@ nlu:
     - why is rasa interesting
     - Why rasa?
     - Why choose rasa?
+    - im [new](user_type) to rasa
+    - [rasa open](product)
 - intent: ask_how_contribute
   examples: |
     - Can I assist?
@@ -256,6 +258,7 @@ nlu:
     - What is the next event for [Seattle](location)?
     - When is the next event for [India](location)?
     - What is the next event for [paris](location)?
+    - [helloo](current_api)
 - intent: ask_why_contribute
   examples: |
     - What can I bring to help your code
@@ -1169,6 +1172,8 @@ nlu:
     - T10
     - the company is called t10
     - I couldnot get answer in the [google](company)
+    - human
+    - My [Guy]{"entity": "name", "role": "new"}
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1506,6 +1511,11 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - tell me about open [source](product)
+    - yeah why not
+    - different part of Rasa
+    - oh ok, how do i get started [then]{"entity": "company", "role": "other role"}
+    - i think i am a [new developor](user_type)
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -1577,6 +1587,7 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
+    - i want to get warm
 - intent: install_rasa
   examples: |
     - Can you get me Rasa [Core](product)?
@@ -1695,6 +1706,7 @@ nlu:
     - How to generate [NLU](product) using frontend.
     - [NLU](product) data  generation
     - i want a recommendation for an [nlu](product) data generation tool
+    - difrence bettwen  [rasa open source]{"entity": "product", "value": "rasa"} and rasax
 - intent: nlu_info
   examples: |
     - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -1923,6 +1935,7 @@ nlu:
     - yes I would like to subscribe
     - yes subscribe me
     - yes.I.would.like.to.subscrbe
+    - i need to in ssl [cert](name)
 - intent: source_code
   examples: |
     - Can u tell where is ur code
@@ -2237,6 +2250,13 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - where is the [conversations](entity) endpoint?
+    - which version you [run](current_api)
+    - how to start up docker
+    - what is a lock store?
+    - can i deploy my bot on kubernetes?
+    - how to deploy
+    - I am getting lots of error on a installation part
 - intent: restart
   examples: |
     - yep you can restart

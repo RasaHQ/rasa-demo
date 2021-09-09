@@ -830,3 +830,8 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: nlu_fallback
+  examples: |
+    - [ui](job_function)
+    - hum
+    - installation on vscode of [rasa](job_function)

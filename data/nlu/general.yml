@@ -227,6 +227,9 @@ nlu:
     - cool beans
     - sounds good!
     - really
+    - let's do it
+    - [good](company)
+    - Is [that]{"entity": "job_function", "group": "lu group"} all?
 - intent: react_positive
   examples: |
     - Cool
@@ -465,6 +468,7 @@ nlu:
     - stop it, i do not care!!!
     - none of them
     - I don't agree
+    - yes , but not more
 - intent: explain
   examples: |
     - can you elaborate
@@ -632,6 +636,8 @@ nlu:
     - yoo
     - ssup?
     - helleo
+    - i want to kill you
+    - YO
 - intent: next_step
   examples: |
     - continue to next step
@@ -739,6 +745,7 @@ nlu:
     - yes thanks
     - thanks for your information
     - thanks f
+    - thats all boring, [thanks](company)
 - intent: need_help_broad
   examples: |
     - need help on chatbot
@@ -759,7 +766,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr
