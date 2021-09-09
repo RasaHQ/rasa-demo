@@ -830,3 +830,7 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+    - tell me a j[oke](company)
+- intent: out_of_scope
+  examples: |
+    - my job is airforce
