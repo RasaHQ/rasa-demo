@@ -563,6 +563,9 @@ nlu:
     - what is my name
     - what is my name?
     - what's my name?
+    - tell me your name
+    - I'm asking your name
+    - so what is your name?
 - intent: chitchat/ask_whatisrasa
   examples: |
     - Can you brief me about rasa
@@ -644,6 +647,7 @@ nlu:
     - RASA IS SOFTWARE?
     - rasa os
     - what is Rasa
+    - what is a story?
 - intent: chitchat/ask_whatspossible
   examples: |
     - Can you explain me in one sentence what you are doing?
@@ -830,3 +834,34 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+    - who am i?
+- intent: nlu_fallback
+  examples: |
+    - oh! be careful
+    - Can you show me rules
+    - do i need docker
+    - how to set up FAQ bot
+- intent: out_of_scope/other
+  examples: |
+    - fjdskjfsklfjdsljfds fjdskj fdsakljfa
+- intent: contact_sales
+  examples: |
+    - Rules
+    - book a sales call
+    - [ENglish]{"entity": "language", "value": "english"}
+- intent: how_to_get_started
+  examples: |
+    - Rasa components
+    - how to get
+    - How to get started?
+    - how to get started
+- intent: out_of_scope
+  examples: |
+    - dfyhgtyrt
+    - how much questions I can ask for a single subject
+    - Whaaaaaaaa .... ?
+    - i only need chats
+- intent: faq
+  examples: |
+    - I want to see old conversation in rasa
+    - which version of rasa

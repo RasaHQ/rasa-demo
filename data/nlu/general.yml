@@ -227,6 +227,11 @@ nlu:
     - cool beans
     - sounds good!
     - really
+    - wont tell
+    - (y)
+    - ok nice
+    - Yeah cool
+    - yeah nice sara
 - intent: react_positive
   examples: |
     - Cool
@@ -291,6 +296,7 @@ nlu:
     - you good
     - Great information
     - I mean to say that I liked the explanation
+    - u r cute
 - intent: bye
   examples: |
     - Bye
@@ -465,6 +471,8 @@ nlu:
     - stop it, i do not care!!!
     - none of them
     - I don't agree
+    - no\
+    - no problem
 - intent: explain
   examples: |
     - can you elaborate
@@ -632,6 +640,7 @@ nlu:
     - yoo
     - ssup?
     - helleo
+    - Hii
 - intent: next_step
   examples: |
     - continue to next step
@@ -698,6 +707,8 @@ nlu:
     - sadly
     - That tool here isnt good
     - boring
+    - leave it sara
+    - Nope ! I guess you are being useless
 - intent: thank
   examples: |
     - Cool. Thanks
@@ -739,6 +750,8 @@ nlu:
     - yes thanks
     - thanks for your information
     - thanks f
+    - First learn properly to talk to me
+    - ok, thanks
 - intent: need_help_broad
   examples: |
     - need help on chatbot
@@ -759,7 +772,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr
@@ -782,3 +795,5 @@ nlu:
     - I have error during the installation
     - i get error when initializing a project
     - I'm getting an error while installing Rasa
+    - jwt token
+    - rasa init

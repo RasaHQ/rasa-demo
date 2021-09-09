@@ -327,7 +327,6 @@ nlu:
     - book a call
     - book a sale call
     - book a sales
-    - book a sales call
     - book an appointment
     - book call
     - book sales call
@@ -1168,7 +1167,12 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
-    - I couldnot get answer in the [google](company)
+    - I couldnot get answer in the google
+    - [rasa-x](product)
+    - haa
+    - [low](job_function)
+    - I want to make a FAQ bot
+    - whats new in 2.0?
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1207,7 +1211,6 @@ nlu:
     - How to get started with Rasa
     - How to get started with Rasa [core](product)?
     - How to get started with Rasa?
-    - How to get started?
     - How to get starter?
     - How to make a bot
     - How to start using Rasa
@@ -1351,7 +1354,6 @@ nlu:
     - how to get sarted
     - how to get start
     - how to get start with Rasa
-    - how to get started
     - how to get started with
     - how to get started with Rasa
     - how to get started with Rasa?
@@ -1577,6 +1579,7 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
+    - i will talk to you later
 - intent: install_rasa
   examples: |
     - Can you get me Rasa [Core](product)?
@@ -1676,8 +1679,8 @@ nlu:
     - How to download rasa
     - where do i download rasa
     - I have a specific question regarding installation
-    - I couldnot install rasa on my [windows](product)
-    - Can I install [rasa](product) on a gui-less server
+    - I couldnot install rasa on my windows
+    - Can I install rasa on a gui-less server
     - how can i install [rasa](company) in vscode
 - intent: nlu_generation_tool_recommendation
   examples: |
@@ -1959,6 +1962,7 @@ nlu:
     - i need smalltalk.md file
     - source
     - github link?
+    - whats a policy?
 - intent: switch
   examples: |
     - How to migrate from [DialogFlwo](current_api)
@@ -2237,6 +2241,11 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - I want to connect database with chatbot
+    - what about responses
+    - is gif supported？
+    - how to write utter in rasa 2
+    - what is rasa_sdk
 - intent: restart
   examples: |
     - yep you can restart
