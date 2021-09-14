@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - 'main'
-  pull_request: # TODO: test
 
 concurrency:
   group: cd-${{ github.ref }}
@@ -39,7 +38,7 @@ env:
   # * rasa version in requirements.txt
   # * rasa-sdk base image version in Dockerfile
   RASA_X_VERSION: "0.40.1"
-  RASA_VERSION: "2.6.2"
+  RASA_VERSION: "2.6.3"
   # Due to the issue with openssl library for Google Cloud SDK (gcloud)
   # (https://github.com/GoogleCloudPlatform/github-actions/issues/128)
   # we use 297.0.01 version
@@ -72,7 +71,7 @@ jobs:
     needs:
     - check_changed_files
     runs-on: ubuntu-latest
-    # if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
+    if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
 
     steps:
       - name: Checkout git repository 🕝
@@ -111,7 +110,7 @@ jobs:
     needs:
     - check_changed_files
     - build-push-action-server
-    # if: ${{ needs.check_changed_files.outputs.deployment == 'true' }}
+    if: ${{ needs.check_changed_files.outputs.deployment == 'true' }}
 
     steps:
     - name: Cancel Previous Runs
