@@ -203,7 +203,6 @@ jobs:
         echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
         echo "MODEL_NAME=$(basename $MODEL_PATH .tar.gz)" >> $GITHUB_ENV
 
-
     - name: Upload model to Rasa X
       working-directory: ${{ github.workspace }}
       timeout-minutes: 10
