@@ -478,7 +478,7 @@ nlu:
     - please explain
     - why do you need to know that
     - why is that necessary
-    - give me more details
+    - give me more [details](company)
     - why
     - what do you mean
     - what does that mean
@@ -759,7 +759,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr
