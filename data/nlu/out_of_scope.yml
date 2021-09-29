@@ -43,6 +43,10 @@ nlu:
     - αστεία λές
     - rasa codigo abierto
     - 卧槽
+    - 你好啊
+    - h
+    - test
+    - 你会干哈
 - intent: out_of_scope/other
   examples: |
     - I am asking you an out of scope question
@@ -415,3 +419,13 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - your name
+    - sdf
+    - I want to buy rasa
+    - what about the summit?
+    - Ddfdsf
+    - I am [chandhana](language)
+    - Chandhana
+    - what the heck?
+    - I'm your father
+    - give me a kiss

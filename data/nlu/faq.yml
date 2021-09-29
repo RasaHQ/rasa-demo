@@ -27,6 +27,9 @@ nlu:
     - what is [rasa x](product) ?
     - what is [rasax](product)
     - what's [rasa x](product)
+    - what is [rasa x]{"entity": "product", "value": "x"}
+    - [rasa x]{"entity": "product", "value": "x"}
+    - how does [rasa x]{"entity": "product", "value": "x"} work
 - intent: faq/channels
   examples: |
     - Can you tell which messaging channels does rasa support?
@@ -95,6 +98,10 @@ nlu:
     - custom connection
     - Can I create a chat bot and set it up on a web page?
     - Does Rasa have the functionality of being able to set up the bot on web pages?
+    - I have never used Rasa before
+    - setup the rasa port
+    - will the services of rasa version 1 be deactivated
+    - will rasa version 1 be deactivated
 - intent: faq/community_size
   examples: |
     - Did you know the size of rasa community?
@@ -200,6 +207,7 @@ nlu:
     - whats the difference between [core](product) and [nlu](product)
     - does the [open source](product) version have [core](product)?
     - What are the two components that make up [Rasa Open Source](product)?
+    - two stage fallback
 - intent: faq/differencerasarasax
   examples: |
     - Are [Rasa](product) and [Rasa X](product) the same thing?
@@ -229,6 +237,8 @@ nlu:
     - difference between [Rasa](product) and [Rasa X](product)
     - install [rasa x](product) with or without [rasa open source](product) ?
     - relationship between [rasa open source](product) and [rasa x](product)
+    - how can i define the rasa port?
+    - What's the difference between Rasa X and Rasa Enterprise?
 - intent: faq/ee
   examples: |
     - Can you tell me about the enterprise edition?
@@ -255,6 +265,9 @@ nlu:
     - more info about enterprise
     - tell me about rasa enterpeise
     - rasa enterprise plans
+    - what is [rasa](product) current version
+    - what is difference between opensource and enterprise
+    - But what about Rasa Enterprise?
 - intent: faq/is_programming_required
   examples: |
     - Does rasa require programming knowledge
@@ -486,8 +499,6 @@ nlu:
     - how do i get the [open source](product) rasa
     - is [rasa open source](product)?
     - is [rasa open source](product)
-    - is [rasa open source](product)?
-    - is [rasa open source](product)?
     - is it [open source](product)
     - is it [open source](product)?
     - is [rasa](product) Open-Source?
@@ -496,7 +507,6 @@ nlu:
     - is [rasa](product) considered [open source](product) software?
     - is [rasa](product) is open source?
     - is [rasa](product) like an open source software
-    - is [rasa open source](product)?
     - is [rasa](product) software that is classified as open source?
     - is the [Rasa](product) project open sourced?
     - is the project open source?
@@ -521,6 +531,7 @@ nlu:
     - you are [open source](product)
     - is [rasa](product) opensource?
     - how much is [Rasa](product) stack?
+    - how to get free version of [rasa](product)
 - intent: faq/python_version
   examples: |
     - What Python version should I use?
@@ -603,6 +614,8 @@ nlu:
     - where slots getting values
     - which are the slots?
     - which slots are there?
+    - slot filling
+    - what are slots?
 - intent: faq/tutorialcore
   examples: |
     - are there some core tutorials i could look at
@@ -676,6 +689,7 @@ nlu:
     - where can i get a tutorial on rasa
     - yes, where I can find some hand-on tutorials to use RASA products?
     - I need to study RASA step by step, which is the best site to study?
+    - take me to the beginners totorial
 - intent: faq/voice
   examples: |
     - Building a rasa voice bot?

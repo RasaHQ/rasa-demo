@@ -256,6 +256,8 @@ nlu:
     - What is the next event for [Seattle](location)?
     - When is the next event for [India](location)?
     - What is the next event for [paris](location)?
+    - comment tu vas
+    - what are the upcoming events
 - intent: ask_why_contribute
   examples: |
     - What can I bring to help your code
@@ -1169,6 +1171,19 @@ nlu:
     - T10
     - the company is called t10
     - I couldnot get answer in the [google](company)
+    - [low](job_function)
+    - xcv
+    - [Software developer](job_function)
+    - I don't know
+    - is it in 2.0 version
+    - healthcare assistant
+    - 90
+    - My Guy
+    - ssl cert
+    - i need to in ssl cert
+    - I am just bored
+    - Illegal instruction ([core](product) dumped)
+    - can i deploy my bot on kubernetes?
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1506,6 +1521,17 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - start with rasa
+    - the components of Rasa,
+    - how can i test rasa bot?
+    - Can you tell me how to get started. I'm thinking about using Rasa
+    - I want to build an assistant. Where should I get started?
+    - tell me about open [source](product)
+    - different part of Rasa
+    - i think i am a [new developor](user_type)
+    - oh ok, how do i get started then
+    - I'm [new](user_type) here and want to develop a small VA
+    - tell me rasa's components
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -1577,6 +1603,10 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
+    - human
+    - stupid
+    - Yea, i want to develop a virtual agent
+    - Stupid
 - intent: install_rasa
   examples: |
     - Can you get me Rasa [Core](product)?
@@ -1679,6 +1709,8 @@ nlu:
     - I couldnot install rasa on my [windows](product)
     - Can I install [rasa](product) on a gui-less server
     - how can i install [rasa](company) in vscode
+    - how to install rasa
+    - I couldn't install rasa properly
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -1759,6 +1791,7 @@ nlu:
     - where to train [intents](nlu_part) in rasa?
     - what does NLU server do?
     - how enttity extrcation works
+    - multi [intent]{"entity": "nlu_part", "value": "intent classification"}
 - intent: pipeline_recommendation
   examples: |
     - I don’t know which pipeline to use
@@ -1959,6 +1992,7 @@ nlu:
     - i need smalltalk.md file
     - source
     - github link?
+    - where is ur source code
 - intent: switch
   examples: |
     - How to migrate from [DialogFlwo](current_api)
@@ -2015,6 +2049,7 @@ nlu:
     - how to migrate to [dialogueflow](current_api)
     - switch from [dilogueflow](current_api)
     - how do i migrate from [dialogflow](current_api)
+    - I am not migrating
 - intent: technical_question
   examples: |
     - how to restart the rasa server
@@ -2237,6 +2272,29 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - how to deploy
+    - rasa sdk documentation
+    - could you show buttons
+    - what is an diet
+    - git error
+    - I am getting erro that matpotlib is not writable when rasa init is
+    - I get the following: zsh: command not found: rasa
+    - can you tell me about training a model with the api?
+    - where is the conversations endpoint?
+    - how do I combine multiple policies?
+    - how to install SSL cert on my docker-compose.yml
+    - how to start up docker
+    - I'm having problem.
+    - how can i implement custom polcies?
+    - which version you run
+    - how to train a model first
+    - Can integrate API
+    - Can conversation state be saved and resumed later?
+    - what is a lock store?
+    - Getting an error
+    - I am getting lots of error on a installation part
+    - regex
+    - stories
 - intent: restart
   examples: |
     - yep you can restart
@@ -2249,6 +2307,7 @@ nlu:
     - hey, i said restart
     - restart session pls
     - restart ps
+    - restart
 - synonym: english
   examples: |
     - English

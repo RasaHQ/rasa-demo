@@ -51,6 +51,7 @@ nlu:
     - Are you built using rasa?
     - Are u developed in rasa
     - are you build with rasa ?
+    - May you play with me?
 - intent: chitchat/ask_howdoing
   examples: |
     - Ahoy matey how are you?
@@ -242,6 +243,7 @@ nlu:
     - you robo
     - real bot then?
     - are you really a bbot?
+    - robot
 - intent: chitchat/ask_ishuman
   examples: |
     - hey are you human
@@ -524,6 +526,7 @@ nlu:
     - whats the weather like tomorrow?
     - wheather at you location?
     - wheather be like at your place?
+    - tell me about dispatcher
 - intent: chitchat/ask_whatismyname
   examples: |
     - Can you tell me my name?
@@ -563,6 +566,8 @@ nlu:
     - what is my name
     - what is my name?
     - what's my name?
+    - what is ur name
+    - my name is also Sara
 - intent: chitchat/ask_whatisrasa
   examples: |
     - Can you brief me about rasa
@@ -644,6 +649,7 @@ nlu:
     - RASA IS SOFTWARE?
     - rasa os
     - what is Rasa
+    - come va?
 - intent: chitchat/ask_whatspossible
   examples: |
     - Can you explain me in one sentence what you are doing?
@@ -751,6 +757,9 @@ nlu:
     - what can you teache me?
     - Can rasa do calculations?
     - what you can
+    - what can u help?
+    - are you satanist?
+    - can you help me deploy my bot
 - intent: chitchat/ask_wherefrom
   examples: |
     - Are you from around here?
@@ -830,3 +839,30 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+    - who are u
+    - who r u
+    - who are you?
+    - who the hell are you?
+- intent: nlu_fallback
+  examples: |
+    - sure why not
+    - hum
+    - name
+    - USER: nlu_fallback (1.00): "the local mode share your bot generate link does not work for me. I ge an unauthorized error.."
+    - the local mode share your bot generate link does not work for me. I ge an unauthorized error.
+    - Yes, but not using Rasa
+    - no I'm starting from scratch
+    - to buil
+    - how to start rasa worker image
+    - oh! be careful
+    - docker versus kubernets
+    - rasa version 1
+    - rasa version 1 deactivation time
+    - it didnot help me
+    - first setup
+    - installation on vscode of rasa
+    - i want to install rasa 1.10.4 version
+    - ui
+- intent: chitchat
+  examples: |
+    - Are you a bot?
