@@ -209,7 +209,7 @@ jobs:
           auth_token=$(curl -s -X POST \
             -H 'Accept: application/json' \
             -H 'Content-Type: application/json' \
-            --data '{\"username\": \"${RASA_X_USERNAME}\",\"password\": \"${RASA_X_PASSWORD}\"}' \
+            --data "{\"username\": \"${RASA_X_USERNAME}\",\"password\": \"${RASA_X_PASSWORD}\"}" \
             https://${{ env.RASA_X_DOMAIN }}/api/auth | tee /tmp/output_auth.txt | jq -r '.access_token')
 
           echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
