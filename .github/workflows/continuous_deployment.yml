@@ -55,7 +55,7 @@ jobs:
       core: ${{ steps.changed-files.outputs.core }}
       training: ${{ steps.changed-files.outputs.training }}
       actions: ${{ steps.changed-files.outputs.actions }}
-      deployment: true # ${{ steps.changed-files.outputs.deployment }}
+      deployment: 'true' # ${{ steps.changed-files.outputs.deployment }}
 
     steps:
       - uses: actions/checkout@v2
