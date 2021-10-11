@@ -54,7 +54,7 @@ jobs:
       nlu: ${{ steps.changed-files.outputs.nlu }}
       core: ${{ steps.changed-files.outputs.core }}
       training: ${{ steps.changed-files.outputs.training }}
-      actions: ${{ steps.changed-files.outputs.actions }}
+      actions: 'true'  # ${{ steps.changed-files.outputs.actions }}
       deployment: 'true' # ${{ steps.changed-files.outputs.deployment }}
 
     steps:
