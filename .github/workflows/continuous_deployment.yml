@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - 'main'
-  pull_request:
 
 concurrency:
   group: cd-${{ github.ref }}
@@ -54,8 +53,8 @@ jobs:
       nlu: ${{ steps.changed-files.outputs.nlu }}
       core: ${{ steps.changed-files.outputs.core }}
       training: ${{ steps.changed-files.outputs.training }}
-      actions: 'true'  # ${{ steps.changed-files.outputs.actions }}
-      deployment: 'true' # ${{ steps.changed-files.outputs.deployment }}
+      actions: ${{ steps.changed-files.outputs.actions }}
+      deployment: ${{ steps.changed-files.outputs.deployment }}
 
     steps:
       - uses: actions/checkout@v2
