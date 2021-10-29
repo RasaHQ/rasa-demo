@@ -4,7 +4,7 @@ from typing import Text, List
 
 import spacy
 
-en_spacy = spacy.load("en")
+en_spacy = spacy.load("en_core_web_md")
 
 additional_stopwords = {"need", "want", "help", "able", "unable", "know", "use"}
 STOPWORDS = spacy.lang.en.stop_words.STOP_WORDS.union(additional_stopwords)

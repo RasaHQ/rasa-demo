@@ -1,8 +1,13 @@
 name: Continuous Deployment
 on:
-  push: 
+  push:
     branches:
     - 'main'
+
+concurrency:
+  group: cd-${{ github.ref }}
+  cancel-in-progress: true
+
 
 env:
   # These values are viewable in the Sara K8s CI entry of 1password
@@ -13,7 +18,6 @@ env:
   RASA_X_IMAGE_NAME: ${{ secrets.RASA_X_IMAGE_NAME }}
   ACTION_SERVER_IMAGE_NAME: ${{ secrets.ACTION_SERVER_IMAGE_NAME }}
   RASA_X_DOMAIN: ${{ secrets.RASA_X_DOMAIN }}
-  SARA_GKE_SERVICE_ACCOUNT_NAME: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
   RASA_X_DATABASE_PASSWORD: ${{ secrets.RASA_X_DATABASE_PASSWORD }}
   RASA_X_PASSWORD: ${{ secrets.RASA_X_PASSWORD }}
   RASA_X_PVC: ${{ secrets.RASA_X_PVC }}
@@ -62,20 +66,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           filters: .github/change_filters.yml
           base: ${{ github.ref }}
+
+
   build-push-action-server:
     name: Build Action Server Docker Image
-    needs: 
+    needs:
     - check_changed_files
     runs-on: ubuntu-latest
-    if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
+    if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
+
     steps:
       - name: Checkout git repository 🕝
         uses: actions/checkout@v2
 
-      - name: Authenticate into Google Cloud Platform
-        uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      - uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba
+        name: Authenticate with gcloud 🎫
         with:
-          version: '275.0.0'
+          version: "${{ env.GCLOUD_VERSION }}"
           service_account_key: ${{ secrets.GCLOUD_AUTH }}
 
       - name: Configure Docker to use Google Cloud Platform ☁️
@@ -92,19 +99,21 @@ jobs:
       - name: Build Image
         run: |
           docker build -t gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
-      
+
       - name: Push PR Image to Google Cloud Container Registry
         run: |
           docker push gcr.io/replicated-test/rasa-demo:latest
-          docker push gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER 
+          docker push gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER
+
 
   deploy_to_k8s_cluster:
     name: Rasa Enterprise K8s deployment
     runs-on: ubuntu-20.04
-    needs: 
+    needs:
     - check_changed_files
     - build-push-action-server
-    if:  ${{ needs.check_changed_files.outputs.deployment == 'true' }}
+    if: ${{ needs.check_changed_files.outputs.deployment == 'true' }}
+
     steps:
     - name: Cancel Previous Runs
       uses: styfle/cancel-workflow-action@0.8.0
@@ -122,17 +131,17 @@ jobs:
         sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.130.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
         sudo chmod +x /usr/local/bin/helmfile
 
-    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@e23988b2af9696c66e87d1efbc688d3a80c3be14
-      name: Authenticate with gcloud 🎫
+    - name: Authenticate with gcloud 🎫
+      uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba
       with:
         version: "${{ env.GCLOUD_VERSION }}"
-        service_account_email: ${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}
+        service_account_email: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_NAME }}
         service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
 
     - name: Authenticate docker and configure cluster credentials 🎫
       run: |
         # Set up docker to authenticate via gcloud command-line tool.
-        gcloud  --quiet auth configure-docker
+        gcloud --quiet auth configure-docker
         gcloud container clusters get-credentials "$GCLOUD_CLUSTER_NAME" --project ${GCLOUD_PROJECT_ID} --zone "$GCLOUD_ZONE_ID"
 
     - name: Prepare namespace
@@ -141,8 +150,8 @@ jobs:
 
     - name: Set action server tag to existing
       # If the action server image was updated, the tag should be updated to run${{ env.BUILD_NUMBER }},
-      # otherwise it should be kept as the exisitng tag 
-      if:  ${{ needs.check_changed_files.outputs.actions == 'false' }}
+      # otherwise it should be kept as the exisitng tag
+      if: ${{ needs.check_changed_files.outputs.actions == 'false' }}
       run: |
         tag=`helm get values --output json $RELEASE_NAME | jq .app.tag`
         echo $tag
@@ -150,18 +159,17 @@ jobs:
 
     - name: Update action server tag if actions changed
       # If the action server image was updated, the tag should be updated to run${{ env.BUILD_NUMBER }},
-      # otherwise it should be kept as the exisitng tag 
-      if:  ${{ needs.check_changed_files.outputs.actions == 'true' }}
+      # otherwise it should be kept as the exisitng tag
+      if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
       run: |
         tag=run$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID
         echo $tag
         echo "ACTION_SERVER_TAG='$tag'" >> $GITHUB_ENV
 
     - name: Deploy Rasa X chart ☸️
-      run: |
-        cd ${{ github.workspace }}/.github/deployments && 
-        helmfile repos &&
-        helmfile sync
+      run: >-
+        cd ${{ github.workspace }}/.github/deployments &&
+        helmfile repos && sync
 
     - name: Wait for deployment to be ready ⏰
       timeout-minutes: 15
@@ -184,74 +192,42 @@ jobs:
           sleep 5
         done
 
-  train-upload-model:
-    name: Train and Upload Model to Rasa X
-    runs-on: ubuntu-latest
-    needs: 
-    - check_changed_files
-    - deploy_to_k8s_cluster
-    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
-    steps:
-    - name: Cancel Previous Runs
-      uses: styfle/cancel-workflow-action@0.8.0
-      with:
-        access_token: ${{ github.token }}
-    - uses: actions/checkout@v1
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v1
-      with:
-        python-version: 3.7
-    - name: Install dependencies
+    - name: Download model from storage bucket
       run: |
-          python -m pip install --upgrade "pip<20"
-          pip install -r requirements-dev.txt
-    - name: Train Model
-      working-directory: ${{ github.workspace }}
-      run: |
-          rasa train
-    - name: Set model name from Rasa version
-      run: |
-          python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
-          rasa_version=`cat rasaversion.txt`
-          model_path=`ls models/*.tar.gz | head -n 1`
-          model_timestamp=$(basename "$model_path" .tar.gz)
-          model_name="$model_timestamp"_rasa"$rasa_version"
-          renamed_model_path=models/"$model_name".tar.gz
-          mv $model_path $renamed_model_path
-          echo "MODEL_NAME=${model_name}" >> $GITHUB_ENV
-          echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
+        RASA_VERSION_SHORT=${RASA_VERSION::3}
+        echo "Greping model that trained on rasa ${RASA_VERSION_SHORT}.x ..."
+        # Fetch the latest model based on when it created and which MAJOR rasa version is trained on
+        MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | grep "rasa$RASA_VERSION_SHORT" | sort -k2 | tail -n1 | awk '{print $3}')
+        # Get the model local path, get rid of bucket rul
+        MODEL_PATH=$(basename $MODEL_URL)
+        # Download the model from bucket
+        gsutil -m cp ${MODEL_URL} ${MODEL_PATH}
 
-    - uses: google-github-actions/setup-gcloud@master
-      name: Authenticate with gcloud 🎫
-      with:
-        version: "${{ env.GCLOUD_VERSION }}"
-        service_account_email: ${{ env.SARA_GKE_SERVICE_ACCOUNT_NAME }}
-        service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
-
-    - name: Upload model to storage bucket
-      run: |
-          gsutil cp "${MODEL_PATH}" ${STORAGE_BUCKET_URL}/rasa_demo_models
+        echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
+        echo "MODEL_NAME=$(basename $MODEL_PATH .tar.gz)" >> $GITHUB_ENV
 
     - name: Upload model to Rasa X
       working-directory: ${{ github.workspace }}
+      timeout-minutes: 10
       run: |
-           auth_token=$(curl --request POST \
-              --url https://${RASA_X_DOMAIN}/api/auth \
-              --header 'Content-Type: application/json' \
-              --data "{
-              \"username\": \"${RASA_X_USERNAME}\",
-              \"password\": \"${RASA_X_PASSWORD}\"
-            }" | jq -r '.access_token')
+          auth_token=$(curl --request POST \
+            --url https://${RASA_X_DOMAIN}/api/auth \
+            --header 'Content-Type: application/json' \
+            --data "{
+            \"username\": \"${RASA_X_USERNAME}\",
+            \"password\": \"${RASA_X_PASSWORD}\"
+          }" | jq -r '.access_token')
 
-            echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
+          echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
 
-            curl -k -F "model=@${MODEL_PATH}" \
-              --url https://$RASA_X_DOMAIN/api/projects/default/models \
-              --header "Authorization: Bearer ${auth_token}"
+          # Upload model
+          curl -k -F "model=@${MODEL_PATH}" \
+            --url https://$RASA_X_DOMAIN/api/projects/default/models \
+            --header "Authorization: Bearer ${auth_token}"
 
     - name: Tag model as production
       working-directory: ${{ github.workspace }}
       run: |
-            curl -X PUT  \
-            --url https://$RASA_X_DOMAIN/api/projects/default/models/$MODEL_NAME/tags/production \
-            --header "Authorization: Bearer ${AUTH_TOKEN}"
+          curl -X PUT  \
+          --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models/${{ env.MODEL_NAME }}/tags/production \
+          --header "Authorization: Bearer ${{ env.AUTH_TOKEN }}"
