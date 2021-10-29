@@ -1,25 +1,15 @@
-nlu:
-  - 'data/nlu/*'
-  - 'config.yml'
-
-core:
-  - 'data/rules/*'
-  - 'data/stories/*'
-  - 'config.yml'
-  - 'domain.yml'
-
-training:
-  - 'data/**/*'
-  - 'domain.yml'
-  - 'config.yml'
-  - 'requirements.txt'
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents: []
+entities: []
+slots: {}
+responses: {}
 actions:
-  - 'actions/**/*'
-  - 'Dockerfile'
-
-deployment:
-  - '.github/deployments/**/*'
-  - '.github/workflows/continuous_deployment.yml'
-  - 'actions/**/*' # if action server changed, then deployment must update tag
-  - 'Dockerfile'
+- actions/**/*
+- Dockerfile
+forms: {}
+e2e_actions: []

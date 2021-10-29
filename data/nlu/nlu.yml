@@ -1,5 +1,22 @@
 version: "2.0"
 nlu:
+- intent: nlu_generation_tool_recommendation
+  examples: |
+    - hi
+    - are there simpler ways to create [nlu](product) data
+    - are there tools to create [nlu](product) data
+    - how can I get [nlu](product) data
+    - how to work with [nlu](product) data
+    - i have to less [nlu](product) data
+    - i need more [nlu](product) data
+    - i require more [nlu](product) data
+    - need more data for [nlu](product)
+    - recommend me some [nlu](product) tools
+    - where can i get data for the [nlu](product)
+    - which tools can I use to create [nlu](product) data
+    - How to generate [NLU](product) using frontend.
+    - [NLU](product) data  generation
+    - i want a recommendation for an [nlu](product) data generation tool
 - intent: broken
   examples: |
     - it's not working
@@ -1221,6 +1238,7 @@ nlu:
     - [interactive playground](product)
     - [rasa playground](product)
     - [Rasa X](product)
+    - 123
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1615,22 +1633,6 @@ nlu:
     - How to download rasa
     - where do i download rasa
     - I have a specific question regarding installation
-- intent: nlu_generation_tool_recommendation
-  examples: |
-    - are there simpler ways to create [nlu](product) data
-    - are there tools to create [nlu](product) data
-    - how can I get [nlu](product) data
-    - how to work with [nlu](product) data
-    - i have to less [nlu](product) data
-    - i need more [nlu](product) data
-    - i require more [nlu](product) data
-    - need more data for [nlu](product)
-    - recommend me some [nlu](product) tools
-    - where can i get data for the [nlu](product)
-    - which tools can I use to create [nlu](product) data
-    - How to generate [NLU](product) using frontend.
-    - [NLU](product) data  generation
-    - i want a recommendation for an [nlu](product) data generation tool
 - intent: nlu_info
   examples: |
     - I checked the documentation on [entity recognition](nlu_part) but I still don’t understand it
@@ -2214,7 +2216,6 @@ nlu:
   examples: |
     - CORE
     - Core
-    - core
     - dialogue management
     - Dialogue management
     - Dialogue Management
@@ -2315,18 +2316,6 @@ nlu:
     - RASA X
     - X
     - rasax
-- synonym: playground
-  examples: |
-    - Rasaplayground
-    - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
-    - playgrounds
-    - Playground
-    - rasaplaygrounds
-    - interactive playground
-    - Interactive Playground
 - synonym: local
   examples: |
     - locally
