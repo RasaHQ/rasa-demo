@@ -2,7 +2,7 @@ name: Continuous Deployment
 on:
   push:
     branches:
-    - 'main'
+    - 'this_one'
 
 concurrency:
   group: cd-${{ github.ref }}
@@ -169,7 +169,7 @@ jobs:
     - name: Deploy Rasa X chart ☸️
       run: >-
         cd ${{ github.workspace }}/.github/deployments &&
-        helmfile repos && sync
+        helmfile repos && helmfile sync
 
     - name: Wait for deployment to be ready ⏰
       timeout-minutes: 15
@@ -192,42 +192,42 @@ jobs:
           sleep 5
         done
 
-    - name: Download model from storage bucket
-      run: |
-        RASA_VERSION_SHORT=${RASA_VERSION::3}
-        echo "Greping model that trained on rasa ${RASA_VERSION_SHORT}.x ..."
-        # Fetch the latest model based on when it created and which MAJOR rasa version is trained on
-        MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | grep "rasa$RASA_VERSION_SHORT" | sort -k2 | tail -n1 | awk '{print $3}')
-        # Get the model local path, get rid of bucket rul
-        MODEL_PATH=$(basename $MODEL_URL)
-        # Download the model from bucket
-        gsutil -m cp ${MODEL_URL} ${MODEL_PATH}
+    # - name: Download model from storage bucket
+    #   run: |
+    #     RASA_VERSION_SHORT=${RASA_VERSION::3}
+    #     echo "Greping model that trained on rasa ${RASA_VERSION_SHORT}.x ..."
+    #     # Fetch the latest model based on when it created and which MAJOR rasa version is trained on
+    #     MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | grep "rasa$RASA_VERSION_SHORT" | sort -k2 | tail -n1 | awk '{print $3}')
+    #     # Get the model local path, get rid of bucket rul
+    #     MODEL_PATH=$(basename $MODEL_URL)
+    #     # Download the model from bucket
+    #     gsutil -m cp ${MODEL_URL} ${MODEL_PATH}
 
-        echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
-        echo "MODEL_NAME=$(basename $MODEL_PATH .tar.gz)" >> $GITHUB_ENV
+    #     echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
+    #     echo "MODEL_NAME=$(basename $MODEL_PATH .tar.gz)" >> $GITHUB_ENV
 
-    - name: Upload model to Rasa X
-      working-directory: ${{ github.workspace }}
-      timeout-minutes: 10
-      run: |
-          auth_token=$(curl --request POST \
-            --url https://${RASA_X_DOMAIN}/api/auth \
-            --header 'Content-Type: application/json' \
-            --data "{
-            \"username\": \"${RASA_X_USERNAME}\",
-            \"password\": \"${RASA_X_PASSWORD}\"
-          }" | jq -r '.access_token')
+    # - name: Upload model to Rasa X
+    #   working-directory: ${{ github.workspace }}
+    #   timeout-minutes: 10
+    #   run: |
+    #       auth_token=$(curl --request POST \
+    #         --url https://${RASA_X_DOMAIN}/api/auth \
+    #         --header 'Content-Type: application/json' \
+    #         --data "{
+    #         \"username\": \"${RASA_X_USERNAME}\",
+    #         \"password\": \"${RASA_X_PASSWORD}\"
+    #       }" | jq -r '.access_token')
 
-          echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
+    #       echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
 
-          # Upload model
-          curl -k -F "model=@${MODEL_PATH}" \
-            --url https://$RASA_X_DOMAIN/api/projects/default/models \
-            --header "Authorization: Bearer ${auth_token}"
+    #       # Upload model
+    #       curl -k -F "model=@${MODEL_PATH}" \
+    #         --url https://$RASA_X_DOMAIN/api/projects/default/models \
+    #         --header "Authorization: Bearer ${auth_token}"
 
-    - name: Tag model as production
-      working-directory: ${{ github.workspace }}
-      run: |
-          curl -X PUT  \
-          --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models/${{ env.MODEL_NAME }}/tags/production \
-          --header "Authorization: Bearer ${{ env.AUTH_TOKEN }}"
+    # - name: Tag model as production
+    #   working-directory: ${{ github.workspace }}
+    #   run: |
+    #       curl -X PUT  \
+    #       --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models/${{ env.MODEL_NAME }}/tags/production \
+    #       --header "Authorization: Bearer ${{ env.AUTH_TOKEN }}"
