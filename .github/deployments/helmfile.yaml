@@ -58,6 +58,9 @@ releases:
               secretKeyRef:
                 name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
                 key: "ALGOLIA_DOCS_INDEX"
+      - postgresql:
+          persistence:
+            existingClaim: {{ requiredEnv "POSTGRES_PVC" }}
       - global:
           postgresql:
             postgresqlPassword: {{ requiredEnv "RASA_X_DATABASE_PASSWORD" }}
@@ -82,6 +85,8 @@ releases:
             requests:
               memory: {{ .Values.rasax.resources.requests.memory }}
               cpu: {{ .Values.rasax.resources.requests.cpu }}
+          persistence:
+            existingClaim: {{ requiredEnv "RASA_X_PVC" }}
       - rasa:
           imagePullPolicy: Always
           token: {{ requiredEnv "RASA_TOKEN" }}
