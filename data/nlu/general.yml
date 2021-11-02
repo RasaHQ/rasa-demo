@@ -483,6 +483,8 @@ nlu:
     - what do you mean
     - what does that mean
     - how come?
+    - why ?
+    - get user details
 - intent: greet
   examples: |
     - Bom dia
@@ -759,7 +761,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr
