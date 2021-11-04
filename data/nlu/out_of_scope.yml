@@ -43,6 +43,8 @@ nlu:
     - αστεία λές
     - rasa codigo abierto
     - 卧槽
+    - test
+    - h
 - intent: out_of_scope/other
   examples: |
     - I am asking you an out of scope question
@@ -415,3 +417,6 @@ nlu:
     - sudo reboot
     - asdfgasd
     - asdfgasdas
+    - what the heck?
+    - I want to buy rasa
+    - your name

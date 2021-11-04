@@ -256,6 +256,7 @@ nlu:
     - What is the next event for [Seattle](location)?
     - When is the next event for [India](location)?
     - What is the next event for [paris](location)?
+    - comment tu vas
 - intent: ask_why_contribute
   examples: |
     - What can I bring to help your code
@@ -1169,6 +1170,10 @@ nlu:
     - T10
     - the company is called t10
     - I couldnot get answer in the [google](company)
+    - My Guy
+    - I am just bored
+    - I don't know
+    - [low](job_function)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1506,6 +1511,9 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - i think i am a [new developor](user_type)
+    - different part of Rasa
+    - start with rasa
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -1577,6 +1585,7 @@ nlu:
     - let me speak to a real person
     - let me speak to a real person please
     - i want to talk to a real person
+    - stupid
 - intent: install_rasa
   examples: |
     - Can you get me Rasa [Core](product)?
@@ -1679,6 +1688,8 @@ nlu:
     - I couldnot install rasa on my [windows](product)
     - Can I install [rasa](product) on a gui-less server
     - how can i install [rasa](company) in vscode
+    - how to install rasa
+    - I couldn't install rasa properly
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -1923,6 +1934,7 @@ nlu:
     - yes I would like to subscribe
     - yes subscribe me
     - yes.I.would.like.to.subscrbe
+    - i need to in ssl cert
 - intent: source_code
   examples: |
     - Can u tell where is ur code
@@ -2237,6 +2249,13 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - how to install SSL cert on my docker-compose.yml
+    - where is the conversations endpoint?
+    - stories
+    - which version you run
+    - how can i implement custom polcies?
+    - I'm having problem.
+    - how to start up docker
 - intent: restart
   examples: |
     - yep you can restart

@@ -51,6 +51,7 @@ nlu:
     - Are you built using rasa?
     - Are u developed in rasa
     - are you build with rasa ?
+    - May you play with me?
 - intent: chitchat/ask_howdoing
   examples: |
     - Ahoy matey how are you?
@@ -563,6 +564,8 @@ nlu:
     - what is my name
     - what is my name?
     - what's my name?
+    - my name is also Sara
+    - what is ur name
 - intent: chitchat/ask_whatisrasa
   examples: |
     - Can you brief me about rasa
@@ -644,6 +647,7 @@ nlu:
     - RASA IS SOFTWARE?
     - rasa os
     - what is Rasa
+    - come va?
 - intent: chitchat/ask_whatspossible
   examples: |
     - Can you explain me in one sentence what you are doing?
@@ -751,6 +755,7 @@ nlu:
     - what can you teache me?
     - Can rasa do calculations?
     - what you can
+    - are you satanist?
 - intent: chitchat/ask_wherefrom
   examples: |
     - Are you from around here?
@@ -830,3 +835,15 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+    - who are you?
+    - who are u
+    - who the hell are you?
+- intent: nlu_fallback
+  examples: |
+    - ui
+    - how to start rasa worker image
+    - to buil
+    - name
+    - hum
+    - docker versus kubernets
+    - oh! be careful
