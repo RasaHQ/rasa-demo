@@ -242,6 +242,7 @@ nlu:
     - you robo
     - real bot then?
     - are you really a bbot?
+    - robot
 - intent: chitchat/ask_ishuman
   examples: |
     - hey are you human
@@ -830,3 +831,15 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+    - who r u
+- intent: chitchat
+  examples: |
+    - Are you a bot?
+- intent: nlu_fallback
+  examples: |
+    - sure why not
+    - installation on vscode of rasa
+    - it didnot help me
+    - rasa version 1 deactivation time
+    - first setup
+    - rasa version 1
