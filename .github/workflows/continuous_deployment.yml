@@ -129,7 +129,7 @@ jobs:
         chmod 700 get_helm.sh
         ./get_helm.sh
 
-        sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.130.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
+        sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.141.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
         sudo chmod +x /usr/local/bin/helmfile
 
     - name: Authenticate with gcloud 🎫
