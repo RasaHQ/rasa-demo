@@ -200,7 +200,7 @@ jobs:
 
     - name: Add deployment to rasactl
       run: |
-        rasactl add ${NAMESPACE} --rasa-x-release-name ${RELEASE_NAME}
+        rasactl add ${{ env.NAMESPACE }} --rasa-x-release-name ${{ env.RELEASE_NAME }}
         rasactl status
 
     - name: Download model from storage bucket
