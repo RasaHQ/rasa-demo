@@ -201,6 +201,7 @@ jobs:
 
     - name: Add deployment to rasactl
       run: |
+        kubectl -n sara delete secret rasactl
         rasactl add ${NAMESPACE} --verbose || true
         rasactl status
 
