@@ -147,6 +147,7 @@ jobs:
 
     - name: Prepare namespace
       run: |
+        kubectl label ns ${NAMESPACE} deployment=sara
         kubectl config set-context --current --namespace="${NAMESPACE}"
 
     - name: Set action server tag to existing
@@ -200,7 +201,7 @@ jobs:
 
     - name: Add deployment to rasactl
       run: |
-        rasactl add ${NAMESPACE} --rasa-x-release-name ${RELEASE_NAME} --verbose
+        rasactl add ${NAMESPACE} --rasa-x-release-name ${RELEASE_NAME} --verbose || true
         rasactl status
 
     - name: Download model from storage bucket
