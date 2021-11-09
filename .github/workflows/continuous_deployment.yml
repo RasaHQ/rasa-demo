@@ -147,7 +147,7 @@ jobs:
 
     - name: Prepare namespace
       run: |
-        kubectl label ns ${NAMESPACE} deployment=sara
+        kubectl label ns ${NAMESPACE} deployment=sara || true
         kubectl config set-context --current --namespace="${NAMESPACE}"
 
     - name: Set action server tag to existing
