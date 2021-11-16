@@ -227,9 +227,11 @@ jobs:
         RASACTL_AUTH_PASSWORD: ${{ env.RASA_X_PASSWORD }}
       timeout-minutes: 10
       run: |
-        rasactl model upload ${MODEL_PATH}
+        # Disable http2client. Current Rasa X (2.6) endpoint doesn’t support http2.
+        GODEBUG=http2client=0 rasactl model upload ${MODEL_PATH}
 
     - name: Tag model as production
       working-directory: ${{ github.workspace }}
       run: |
-        rasactl model tag ${MODEL_NAME} production
+        # Disable http2client. Current Rasa X (2.6) endpoint doesn’t support http2.
+        GODEBUG=http2client=0 rasactl model tag ${MODEL_NAME} production
