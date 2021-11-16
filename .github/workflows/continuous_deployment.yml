@@ -3,7 +3,6 @@ on:
   push:
     branches:
     - 'main'
-    - 'fix-cd' # DEBUG: enable deployment for testing
 
 concurrency:
   group: cd-${{ github.ref }}
