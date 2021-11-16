@@ -201,7 +201,11 @@ jobs:
 
     - name: Add deployment to rasactl
       run: |
+        # Delete secret 'rasactl' that added by previous runner
         kubectl -n ${NAMESPACE} delete secret rasactl || true
+        # Delete label 'rasactl=true' to prevent the error 'secrets "rasactl" not found'
+        kubectl label namespace sara rasactl- || true
+
         rasactl add ${NAMESPACE} --rasa-x-release-name ${RELEASE_NAME} --verbose --debug || true
         rasactl status
 
