@@ -128,7 +128,7 @@ jobs:
         chmod 700 get_helm.sh
         ./get_helm.sh
 
-        sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.130.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
+        sudo curl -fsSL https://github.com/roboll/helmfile/releases/download/v0.141.0/helmfile_linux_amd64 --output /usr/local/bin/helmfile
         sudo chmod +x /usr/local/bin/helmfile
 
     - name: Authenticate with gcloud 🎫
@@ -192,6 +192,21 @@ jobs:
           sleep 5
         done
 
+    - name: Install rasactl
+      run: |
+        brew tap rasahq/rasactl
+        brew install rasactl
+
+    - name: Add deployment to rasactl
+      run: |
+        # Delete secret 'rasactl' that added by previous runner
+        kubectl -n ${NAMESPACE} delete secret rasactl || true
+        # Delete label 'rasactl=true' to prevent the error 'secrets "rasactl" not found'
+        kubectl label namespace sara rasactl- || true
+
+        rasactl add ${NAMESPACE} --rasa-x-release-name ${RELEASE_NAME} --verbose --debug || true
+        rasactl status
+
     - name: Download model from storage bucket
       run: |
         RASA_VERSION_SHORT=${RASA_VERSION::3}
@@ -206,28 +221,17 @@ jobs:
         echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
         echo "MODEL_NAME=$(basename $MODEL_PATH .tar.gz)" >> $GITHUB_ENV
 
-    - name: Upload model to Rasa X
+    - name: Upload model to Rasa X and tag model to production
       working-directory: ${{ github.workspace }}
+      env:
+        RASACTL_RASA_X_URL: https://${{ env.RASA_X_DOMAIN }}
+        RASACTL_AUTH_USER: ${{ env.RASA_X_USERNAME }}
+        RASACTL_AUTH_PASSWORD: ${{ env.RASA_X_PASSWORD }}
+        # Disable http2client. Current Rasa X (2.6) endpoint doesn’t support http2.
+        GODEBUG: http2client=0
       timeout-minutes: 10
       run: |
-          auth_token=$(curl --request POST \
-            --url https://${RASA_X_DOMAIN}/api/auth \
-            --header 'Content-Type: application/json' \
-            --data "{
-            \"username\": \"${RASA_X_USERNAME}\",
-            \"password\": \"${RASA_X_PASSWORD}\"
-          }" | jq -r '.access_token')
-
-          echo "AUTH_TOKEN=${auth_token}" >> $GITHUB_ENV
-
-          # Upload model
-          curl -k -F "model=@${MODEL_PATH}" \
-            --url https://$RASA_X_DOMAIN/api/projects/default/models \
-            --header "Authorization: Bearer ${auth_token}"
-
-    - name: Tag model as production
-      working-directory: ${{ github.workspace }}
-      run: |
-          curl -X PUT  \
-          --url https://${{ env.RASA_X_DOMAIN }}/api/projects/default/models/${{ env.MODEL_NAME }}/tags/production \
-          --header "Authorization: Bearer ${{ env.AUTH_TOKEN }}"
+        # Upload model
+        rasactl model upload ${MODEL_PATH}
+        # Tag model as production
+        rasactl model tag ${MODEL_NAME} production
