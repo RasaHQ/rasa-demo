@@ -483,6 +483,7 @@ nlu:
     - what do you mean
     - what does that mean
     - how come?
+    - where are yo
 - intent: greet
   examples: |
     - Bom dia
@@ -588,7 +589,6 @@ nlu:
     - heyho
     - heyo
     - hhola
-    - hi
     - hi !
     - hi Mister
     - hi again
@@ -652,7 +652,6 @@ nlu:
 - intent: react_negative
   examples: |
     - I am feeling bad
-    - I am sad
     - I am super sad
     - I'm sad
     - I'm super sad
@@ -759,7 +758,7 @@ nlu:
     - i am stuck
     - i am stuck with error
     - I got stuck with the installation
-    - i m stuck while importing data 
+    - i m stuck while importing data
     - I am stuck with action
     - I am stuck with fallback
     - i  am stuck with an erorr

@@ -524,6 +524,7 @@ nlu:
     - whats the weather like tomorrow?
     - wheather at you location?
     - wheather be like at your place?
+    - hi
 - intent: chitchat/ask_whatismyname
   examples: |
     - Can you tell me my name?
@@ -633,7 +634,6 @@ nlu:
     - what is [rasa](company) ?
     - what is in rasa
     - what is it for?
-    - what is rasa
     - what is rasa [core](product)
     - what is rasa [core](product)?
     - what is rasa actually
@@ -644,6 +644,10 @@ nlu:
     - RASA IS SOFTWARE?
     - rasa os
     - what is Rasa
+- intent: chitchat
+  examples: |
+    - what is rasa
+    - I am sad
 - intent: chitchat/ask_whatspossible
   examples: |
     - Can you explain me in one sentence what you are doing?
@@ -830,3 +834,6 @@ nlu:
     - who am i
     - who are I ?
     - who may i ?
+- intent: order_drink
+  examples: |
+    - why your still in development
