@@ -23,6 +23,7 @@ env:
   RASA_X_PVC: ${{ secrets.RASA_X_PVC }}
   POSTGRES_PVC: ${{ secrets.POSTGRES_PVC }}
   RABBITMQ_PASSWORD: ${{ secrets.RABBITMQ_PASSWORD }}
+  RABBITMQ_ERLANGCOOKIE: ${{ secrets.RABBITMQ_ERLANGCOOKIE }}
   REDIS_PASSWORD: ${{ secrets.REDIS_PASSWORD }}
   RASA_TOKEN: ${{ secrets.RASA_TOKEN }}
   RASA_X_TOKEN: ${{ secrets.RASA_X_TOKEN }}
