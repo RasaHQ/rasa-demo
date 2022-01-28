@@ -542,34 +542,37 @@ actions:
 - validate_sales_form
 forms:
   playground_form:
-    problem_description:
-    - type: from_text
+    required_slots:
+      problem_description:
+      - type: from_text
   suggestion_form:
-    suggestion:
-    - type: from_text
+    required_slots:
+      suggestion:
+      - type: from_text
   sales_form:
-    budget:
-    - entity: amount-of-money
-      type: from_entity
-    - entity: number
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    business_email:
-    - entity: email
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    company:
-    - entity: company
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    job_function:
-    - entity: job_function
-      type: from_entity
-    - intent: enter_data
-      type: from_text
+    required_slots:
+      budget:
+      - entity: amount-of-money
+        type: from_entity
+      - entity: number
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+      business_email:
+      - entity: email
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+      company:
+      - entity: company
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+      job_function:
+      - entity: job_function
+        type: from_entity
+      - intent: enter_data
+        type: from_text
     person_name:
     - entity: name
       type: from_entity
@@ -579,9 +582,10 @@ forms:
     - intent: enter_data
       type: from_text
   subscribe_newsletter_form:
-    email:
-    - entity: email
-      type: from_entity
-    - intent: enter_data
-      type: from_text
+    required_slots:
+      email:
+      - entity: email
+        type: from_entity
+      - intent: enter_data
+        type: from_text
 e2e_actions: []
