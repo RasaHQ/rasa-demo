@@ -34,7 +34,6 @@ def test_action_tag_feedback(
     domain: DomainDict,
     feedback_value: Text,
     expected_tags: List[Dict],
-    rasa_x_convo: None,
     rasa_x_auth_header: Dict[Text, Text],
     rasa_x_conversation_endpoint: Text,
 ):
@@ -45,7 +44,7 @@ def test_action_tag_feedback(
     assert actual_events == expected_events
 
     tag_response = requests.get(
-        f"{rasa_x_conversation_endpoint}/{tracker.sender_id}/tags",
+        f"{rasa_x_conversation_endpoint}/{tracker.sender_id}/data-tags",
         headers=rasa_x_auth_header,
     )
     actual_tags = [{"value": tag.get("value")} for tag in tag_response.json()]
