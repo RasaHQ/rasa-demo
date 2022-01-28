@@ -1,10 +1,12 @@
 import requests
 from typing import Dict, Text
+import logging
 
 from rasa_sdk import Tracker
 
 from actions.api.rasaxapi import RasaXAPI
 
+logger = logging.getLogger(__name__)
 
 def test_get_auth():
     rasax = RasaXAPI()
