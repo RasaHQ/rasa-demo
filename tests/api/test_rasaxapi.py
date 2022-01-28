@@ -24,7 +24,7 @@ def test_tag_convo(
     rasax = RasaXAPI()
     rasax.tag_convo(tracker, labeldata)
     tag_response = requests.get(
-        f"{rasa_x_conversation_endpoint}/{tracker.sender_id}/tags",
+        f"{rasa_x_conversation_endpoint}/{tracker.sender_id}/data-tags",
         headers=rasa_x_auth_header,
     )
     actual_tags = [{"value": tag.get("value")} for tag in tag_response.json()]
