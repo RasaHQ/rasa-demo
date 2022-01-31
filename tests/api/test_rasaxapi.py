@@ -8,6 +8,7 @@ from actions.api.rasaxapi import RasaXAPI
 
 logger = logging.getLogger(__name__)
 
+
 def test_get_auth():
     rasax = RasaXAPI()
     actual_auth_headers = rasax.get_auth_header()

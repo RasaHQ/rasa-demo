@@ -36,7 +36,7 @@ def test_action_tag_feedback(
     expected_tags: List[Dict],
     rasa_x_convo: None,
     rasa_x_auth_header: Dict[Text, Text],
-    rasa_x_conversation_endpoint: Text
+    rasa_x_conversation_endpoint: Text,
 ):
     tracker.slots["feedback_value"] = feedback_value
     action = actions.ActionTagFeedback()
