@@ -43,8 +43,6 @@ class RasaXAPI:
     def tag_convo(self, tracker: Tracker, label: Text) -> requests.Response:
         """Tag a conversation in Rasa X with a given label"""
         auth_header = self.get_auth_header()
-        endpoint = (
-            f"{self.schema}://{self.host}/api/conversations/{tracker.sender_id}/tags"
-        )
+        endpoint = f"{self.schema}://{self.host}/api/conversations/{tracker.sender_id}/data-tags"
         response = requests.post(url=endpoint, data=label, headers=auth_header)
         return response

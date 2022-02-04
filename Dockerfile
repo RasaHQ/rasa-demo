@@ -2,7 +2,7 @@
 # * rasa version in requirements.txt
 # * RASA_VERSION and RASA_X_VERSION  in .github/workflows/continuous-deployment.yml
 # Pull SDK image as base image
-FROM rasa/rasa-sdk:2.8.0
+FROM rasa/rasa-sdk:2.8.3
 
 # Use subdirectory as working directory
 WORKDIR /app
