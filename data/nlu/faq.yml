@@ -486,8 +486,6 @@ nlu:
     - how do i get the [open source](product) rasa
     - is [rasa open source](product)?
     - is [rasa open source](product)
-    - is [rasa open source](product)?
-    - is [rasa open source](product)?
     - is it [open source](product)
     - is it [open source](product)?
     - is [rasa](product) Open-Source?
@@ -496,7 +494,6 @@ nlu:
     - is [rasa](product) considered [open source](product) software?
     - is [rasa](product) is open source?
     - is [rasa](product) like an open source software
-    - is [rasa open source](product)?
     - is [rasa](product) software that is classified as open source?
     - is the [Rasa](product) project open sourced?
     - is the project open source?
