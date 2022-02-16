@@ -1,4 +1,4 @@
-version: '2.0'
+version: "3.0"
 config:
   store_entities_as_slots: true
 session_config:
@@ -72,56 +72,149 @@ entities:
 slots:
   retrieval_intent:
     type: any
+    mappings:
+    - type: from_entity
+      entity: retrieval_intent
   budget:
     type: any
+    mappings:
+    - entity: amount-of-money
+      type: from_entity
+      conditions:
+      - active_loop: sales_form
+    - entity: number
+      type: from_entity
+      conditions:
+      - active_loop: sales_form
+    - intent: enter_data
+      type: from_text
+      conditions:
+      - active_loop: sales_form
+        requested_slot: budget
   business_email:
     type: any
+    mappings:
+    - entity: email
+      type: from_entity
+      conditions:
+      - active_loop: sales_form
+    - intent: enter_data
+      type: from_text
+      conditions:
+      - active_loop: sales_form
+        requested_slot: business_email
   can_use_spacy:
     type: bool
+    mappings:
+    - type: custom
   company:
     type: any
+    mappings:
+    - entity: company
+      type: from_entity
+      conditions:
+      - active_loop: sales_form
+    - intent: enter_data
+      type: from_text
+      conditions:
+      - active_loop: sales_form
+        requested_slot: company
+    - type: from_entity
+      entity: company
   current_api:
     type: categorical
     values:
     - dialogflow
     - luis
+    mappings:
+    - type: from_entity
+      entity: current_api
   email:
     type: any
+    mappings:
+    - entity: email
+      type: from_entity
+      conditions:
+      - active_loop: subscribe_newsletter_form
+    - intent: enter_data
+      type: from_text
+      conditions:
+      - active_loop: subscribe_newsletter_form
+        requested_slot: email
+    - type: from_entity
+      entity: email
   entity_extractor:
     type: categorical
     values:
     - crfentityextractor
     - spacyentityextractor
     - ducklinghttpextractor
+    mappings:
+    - type: custom
   feedback_message:
     type: any
+    mappings:
+    - type: custom
   feedback_value:
     influence_conversation: false
     type: categorical
     values:
     - positive
     - negative
+    mappings:
+    - type: from_entity
+      entity: feedback_value
   job_function:
     type: any
+    mappings:
+    - entity: job_function
+      type: from_entity
+      conditions:
+      - active_loop: sales_form
+    - intent: enter_data
+      type: from_text
+      conditions:
+      - active_loop: sales_form
+        requested_slot: job_function
+    - type: from_entity
+      entity: job_function
   language:
     type: categorical
     values:
     - english
+    mappings:
+    - type: from_entity
+      entity: language
   name:
     type: text
+    mappings:
+    - type: from_entity
+      entity: name
   nlu_part:
     type: categorical
     values:
     - entity recognition
     - intent classification
     - duckling
+    mappings:
+    - type: from_entity
+      entity: nlu_part
   onboarding:
     type: bool
+    mappings:
+    - type: custom
   person_name:
     type: any
+    mappings:
+    - type: custom
   problem_description:
     type: text
     influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: playground_form
+        requested_slot: problem_description
   product:
     type: categorical
     values:
@@ -131,27 +224,52 @@ slots:
     - rasa
     - all
     - playground
+    mappings:
+    - type: from_entity
+      entity: product
   install_type:
     type: categorical
     values:
     - local
     - server
+    mappings:
+    - type: from_entity
+      entity: install_type
   shown_privacy:
     type: any
+    mappings:
+    - type: custom
   step:
     type: any
+    mappings:
+    - type: custom
   suggestion:
     type: any
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: suggestion_form
+        requested_slot: suggestion
   unknown_nlu_part:
     type: any
+    mappings:
+    - type: custom
   unknown_product:
     type: any
+    mappings:
+    - type: custom
   use_case:
     type: any
+    mappings:
+    - type: custom
   docs_found:
     type: bool
+    mappings:
+    - type: custom
   faq:
     type: any
+    mappings:
+    - type: custom
 responses:
   utter_already_subscribed:
   - text: Looks like {email} is already subscribed - good choice! If you haven't received a newsletter in a while, maybe check your spam folder 🗑
@@ -222,13 +340,10 @@ responses:
       title: Try out Rasa in the online Rasa Playground
     - payload: /install_rasa
       title: Install Rasa on your own computer
-    - payload: '/trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}'
+    - payload: /trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}
       title: Find out more about Rasa
   utter_playground_intro:
-  - text: |-
-        In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
-          build a Rasa prototype entirely online. Once you've built your prototype, you can talk to
-          your bot online and download your project to continue developing it locally.
+  - text: "In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can\n  build a Rasa prototype entirely online. Once you've built your prototype, you can talk to\n  your bot online and download your project to continue developing it locally."
   utter_ask_playground_help:
   - text: Do you have any questions or issues you're running into with Rasa Playground?
   utter_ask_use_case:
@@ -298,16 +413,11 @@ responses:
   utter_explain_company:
   - text: Just for completeness.
   utter_explain_core:
-  - text: |-
-      Dialogue Management (previously known as "Core") decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.
-      (Example: Dialogue Management has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)
+  - text: "Dialogue Management (previously known as \"Core\") decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.\n(Example: Dialogue Management has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)"
   utter_explain_job_function:
   - text: Your job function helps us in understanding how we can talk to you best.
   utter_explain_nlu:
-  - text: |-
-      NLU understands the user’s message based on your previous training data:
-      - Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)
-      - Entity extraction: Recognizing structured data (Example: amy@example.com is an email).
+  - text: "NLU understands the user’s message based on your previous training data:\n- Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)\n- Entity extraction: Recognizing structured data (Example: amy@example.com is an email)."
   utter_explain_person_name:
   - text: To be able to contact you later on, we would like to know your name.
   utter_explain_rasa_components:
@@ -356,15 +466,9 @@ responses:
   utter_inform_privacypolicy:
   - text: By chatting to me you agree to our [privacy policy](https://rasa.com/privacy-policy/).
   utter_installation_command:
-  - text: |-
-      You will first need to install Rasa Open Source using this installation command. 
-
-      "pip install rasa"
+  - text: "You will first need to install Rasa Open Source using this installation command. \n\n\"pip install rasa\""
   utter_installation_command_followup:
-  - text: |-
-      Once you're done, you can install Rasa Open Source with pip using the following command. 
-
-      "pip install rasa"
+  - text: "Once you're done, you can install Rasa Open Source with pip using the following command. \n\n\"pip install rasa\""
   utter_interested_in_starter_packs:
   - text: Got it, are you interested in seeing any example Rasa Open Source assistants to help you get started?
   utter_interested_in_installation:
@@ -406,12 +510,7 @@ responses:
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
   utter_possibilities:
-  - text: |
-      You can ask me about:
-      - how to get started with Rasa
-      - the components of Rasa,
-      - booking a sales call
-      - subscribing to our newsletter
+  - text: "You can ask me about:\n- how to get started with Rasa\n- the components of Rasa,\n- booking a sales call\n- subscribing to our newsletter\n"
   utter_possibilities_to_contribute:
   - text: Check out the [Contribute to Rasa](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how to contribute code or content. You can also help by answering other members' questions on the [forum](http://forum.rasa.com).
   utter_rasa_x_local_installation:
@@ -431,11 +530,7 @@ responses:
   - text: 👏
   - text: 😍
   utter_reasons_to_contribute:
-  - text: |
-      Here a few reasons why you should contribute:
-      - Explore the source code in depth
-      - Contribute to open source software
-      - Earn [Rasa swag])(https://rasa.com/community/contribute/)!
+  - text: "Here a few reasons why you should contribute:\n- Explore the source code in depth\n- Contribute to open source software\n- Earn [Rasa swag])(https://rasa.com/community/contribute/)!\n"
   utter_recommend_forum:
   - text: You should join the [Rasa Community forum](https://forum.rasa.com), where you can ask questions about Rasa Open Source and Rasa X, find resources, and stay up-to-date with what's happening at Rasa.
   utter_response_why_email:
@@ -450,9 +545,7 @@ responses:
       title: Restart
     text: Click the button below if you want to start over.
   utter_run_rasa_init:
-  - text: |-
-      You can now create a new Rasa assistant and also talk to it by simply running "rasa init".
-      This comes with some sample training data and the required configuration files to get you started. You can also talk to the assistant after it is done training. 
+  - text: "You can now create a new Rasa assistant and also talk to it by simply running \"rasa init\".\nThis comes with some sample training data and the required configuration files to get you started. You can also talk to the assistant after it is done training. "
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
@@ -542,50 +635,22 @@ actions:
 - validate_sales_form
 forms:
   playground_form:
+    ignored_intents: []
     required_slots:
-      problem_description:
-      - type: from_text
+    - problem_description
   suggestion_form:
+    ignored_intents: []
     required_slots:
-      suggestion:
-      - type: from_text
+    - suggestion
   sales_form:
+    ignored_intents: []
     required_slots:
-      budget:
-      - entity: amount-of-money
-        type: from_entity
-      - entity: number
-        type: from_entity
-      - intent: enter_data
-        type: from_text
-      business_email:
-      - entity: email
-        type: from_entity
-      - intent: enter_data
-        type: from_text
-      company:
-      - entity: company
-        type: from_entity
-      - intent: enter_data
-        type: from_text
-      job_function:
-      - entity: job_function
-        type: from_entity
-      - intent: enter_data
-        type: from_text
-    person_name:
-    - entity: name
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    use_case:
-    - intent: enter_data
-      type: from_text
+    - budget
+    - business_email
+    - company
+    - job_function
   subscribe_newsletter_form:
+    ignored_intents: []
     required_slots:
-      email:
-      - entity: email
-        type: from_entity
-      - intent: enter_data
-        type: from_text
+    - email
 e2e_actions: []
