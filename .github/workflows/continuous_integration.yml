@@ -171,9 +171,9 @@ jobs:
         python -m pip install --upgrade "pip<20"
         pip install -r requirements-dev.txt
 
-    - name: Rasa Data Validation
-      run: |
-        rasa data validate --debug
+    # - name: Rasa Data Validation
+    #   run: |
+    #     rasa data validate --debug
 
 
   training-testing:

@@ -608,6 +608,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Rasa has your back! You can deploy Rasa either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_two_stage_fallback
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
@@ -634,6 +635,9 @@ actions:
 - validate_subscribe_newsletter_form
 - validate_sales_form
 forms:
+  action_two_stage_fallback:
+    ignored_intents: []
+    required_slots: []
   playground_form:
     ignored_intents: []
     required_slots:
