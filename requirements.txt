@@ -4,3 +4,4 @@ rasa==3.0.8 # NB! when updating, make sure to also update:
 -r actions/requirements-actions.txt
 pytablewriter
 python-dotenv~=0.15.0
+sanic==21.9.3 

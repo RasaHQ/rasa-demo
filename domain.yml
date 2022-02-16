@@ -635,9 +635,6 @@ actions:
 - validate_subscribe_newsletter_form
 - validate_sales_form
 forms:
-  action_two_stage_fallback:
-    ignored_intents: []
-    required_slots: []
   playground_form:
     ignored_intents: []
     required_slots:
