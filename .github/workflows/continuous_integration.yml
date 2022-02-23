@@ -272,9 +272,9 @@ jobs:
     #     done
 
     - name: Set model name from Rasa version
-      if: |
-        github.event_name == 'pull_request' &&
-        steps.check-runs-conclusion.outputs.upload-model == 'true'
+      # if: |
+      #   github.event_name == 'pull_request' &&
+      #   steps.check-runs-conclusion.outputs.upload-model == 'true'
       run: |
           python -c "import rasa; open('rasaversion.txt','w+').write(rasa.__version__)"
           rasa_version=`cat rasaversion.txt`
@@ -287,10 +287,10 @@ jobs:
           echo "MODEL_PATH=${renamed_model_path}" >> $GITHUB_ENV
 
     - uses: google-github-actions/setup-gcloud@master
-      if: |
-        (github.event_name == 'pull_request' &&
-        contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
-        steps.check-runs-conclusion.outputs.upload-model == 'true'
+      # if: |
+      #   (github.event_name == 'pull_request' &&
+      #   contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
+      #   steps.check-runs-conclusion.outputs.upload-model == 'true'
       name: Authenticate with gcloud 🎫
       with:
         version: "${{ env.GCLOUD_VERSION }}"
@@ -298,10 +298,10 @@ jobs:
         service_account_key: ${{ secrets.SARA_GKE_SERVICE_ACCOUNT_KEY }}
 
     - name: Upload model to storage bucket
-      if: |
-        (github.event_name == 'pull_request' &&
-        contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
-        steps.check-runs-conclusion.outputs.upload-model == 'true'
+      # if: |
+      #   (github.event_name == 'pull_request' &&
+      #   contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
+      #   steps.check-runs-conclusion.outputs.upload-model == 'true'
       run: gsutil cp "${MODEL_PATH}" ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models
 
 
