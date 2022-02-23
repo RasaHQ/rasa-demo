@@ -179,10 +179,10 @@ jobs:
   training-testing:
     name: Test Model
     runs-on: ubuntu-latest
-    needs:
-    - data-validation
-    - check_changed_files
-    if: ${{ needs.check_changed_files.outputs.training == 'true' }}
+    # needs:
+    # - data-validation
+    # - check_changed_files
+    # if: ${{ needs.check_changed_files.outputs.training == 'true' }}
 
     steps:
     - name: Cancel Previous Runs
