@@ -237,39 +237,39 @@ jobs:
     #     rasa --version
     #     rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
 
-    - name: Wait for the conclusion of all other workflow runs
-      # upload model from PR
-      if: github.event_name == 'pull_request'
-      id: check-runs-conclusion
-      env:
-        WAIT_INTERVAL_SECS: 10
-      timeout-minutes: 20
-      run: |
-        while true; do
-          # Get a list of checks information, excluding training-testing and build-images
-          CHECKS_LIST=$(gh api /repos/${{ github.repository }}/commits/${{ github.event.pull_request.head.sha }}/check-runs --jq '.check_runs.[] | select(.name != "Test Model" and .name != "Build Action Server Image")')
+    # - name: Wait for the conclusion of all other workflow runs
+    #   # upload model from PR
+    #   if: github.event_name == 'pull_request'
+    #   id: check-runs-conclusion
+    #   env:
+    #     WAIT_INTERVAL_SECS: 10
+    #   timeout-minutes: 20
+    #   run: |
+    #     while true; do
+    #       # Get a list of checks information, excluding training-testing and build-images
+    #       CHECKS_LIST=$(gh api /repos/${{ github.repository }}/commits/${{ github.event.pull_request.head.sha }}/check-runs --jq '.check_runs.[] | select(.name != "Test Model" and .name != "Build Action Server Image")')
 
-          # Get the status and conclusion of echo jobs
-          STATUS_LIST=$(echo $CHECKS_LIST | jq -r '.status')
-          CONCLUSION_LIST=$(echo $CHECKS_LIST | jq -r '.conclusion')
+    #       # Get the status and conclusion of echo jobs
+    #       STATUS_LIST=$(echo $CHECKS_LIST | jq -r '.status')
+    #       CONCLUSION_LIST=$(echo $CHECKS_LIST | jq -r '.conclusion')
 
-          # Make sure all other check runs are completed
-          if [[ "$(echo $STATUS_LIST | tr ' ' '\n' | sort | uniq)" == "completed" ]]; then
-            # Check the conclusion of all other check runs
-            # Fail the step if there is any failture
-            if [[ "$(echo CONCLUSION_LIST | tr ' ' '\n' | sort | uniq)" =~ "failure" ]]; then
-              echo "::error:: Some check runs failed. Skip uploading model."
-              exit 1
-            else
-              echo "All other check runs are successed."
-              echo "::set-output name=upload-model::true"
-              exit 0
-            fi
-          fi
+    #       # Make sure all other check runs are completed
+    #       if [[ "$(echo $STATUS_LIST | tr ' ' '\n' | sort | uniq)" == "completed" ]]; then
+    #         # Check the conclusion of all other check runs
+    #         # Fail the step if there is any failture
+    #         if [[ "$(echo CONCLUSION_LIST | tr ' ' '\n' | sort | uniq)" =~ "failure" ]]; then
+    #           echo "::error:: Some check runs failed. Skip uploading model."
+    #           exit 1
+    #         else
+    #           echo "All other check runs are successed."
+    #           echo "::set-output name=upload-model::true"
+    #           exit 0
+    #         fi
+    #       fi
 
-          sleep $WAIT_INTERVAL_SECS
-          echo "Wait for $WAIT_INTERVAL_SECS seconds..."
-        done
+    #       sleep $WAIT_INTERVAL_SECS
+    #       echo "Wait for $WAIT_INTERVAL_SECS seconds..."
+    #     done
 
     - name: Set model name from Rasa version
       if: |
@@ -305,41 +305,41 @@ jobs:
       run: gsutil cp "${MODEL_PATH}" ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models
 
 
-  build-images:
-    name: Build Action Server Image
-    needs:
-    - lint-testing
-    - type-testing
-    - training-testing
-    - check_changed_files
-    if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
-    runs-on: ubuntu-latest
+  # build-images:
+  #   name: Build Action Server Image
+  #   needs:
+  #   - lint-testing
+  #   - type-testing
+  #   - training-testing
+  #   - check_changed_files
+  #   if: ${{ needs.check_changed_files.outputs.actions == 'true' }}
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout pull request HEAD commit instead of merge commit
-      uses: actions/checkout@v2
-      if: github.event_name == 'pull_request'
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
+  #   steps:
+  #   - name: Checkout pull request HEAD commit instead of merge commit
+  #     uses: actions/checkout@v2
+  #     if: github.event_name == 'pull_request'
+  #     with:
+  #       ref: ${{ github.event.pull_request.head.sha }}
 
-    - name: Checkout git repository
-      uses: actions/checkout@v2
-      if: github.event_name != 'pull_request'
+  #   - name: Checkout git repository
+  #     uses: actions/checkout@v2
+  #     if: github.event_name != 'pull_request'
 
-    - name: Authenticate with gcloud 🎫
-      uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba
-      with:
-        version: ${{ env.GCLOUD_VERSION }}
-        service_account_key: ${{ secrets.GCLOUD_AUTH }}
+  #   - name: Authenticate with gcloud 🎫
+  #     uses: google-github-actions/setup-gcloud@daadedc81d5f9d3c06d2c92f49202a3cc2b919ba
+  #     with:
+  #       version: ${{ env.GCLOUD_VERSION }}
+  #       service_account_key: ${{ secrets.GCLOUD_AUTH }}
 
-    - name: Configure Docker to use Google Cloud Platform
-      run: |
-        gcloud auth configure-docker
+  #   - name: Configure Docker to use Google Cloud Platform
+  #     run: |
+  #       gcloud auth configure-docker
 
-    - name: Pull Latest Image
-      run: |
-        docker pull gcr.io/replicated-test/rasa-demo:latest || true
+  #   - name: Pull Latest Image
+  #     run: |
+  #       docker pull gcr.io/replicated-test/rasa-demo:latest || true
 
-    - name: Build Image
-      run: |
-        docker build --cache-from gcr.io/replicated-test/rasa-demo:latest .
+  #   - name: Build Image
+  #     run: |
+  #       docker build --cache-from gcr.io/replicated-test/rasa-demo:latest .
