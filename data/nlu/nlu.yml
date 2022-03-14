@@ -2189,64 +2189,63 @@ nlu:
 - synonym: english
   examples: |
     - English
-    - en
+    - ENGLISH
     - eng
     - Eng
-    - ENGLISH
+    - en
 - synonym: ' duration'
   examples: |
     - durations
     - how long
 - synonym: USA
   examples: |
-    - US
-    - United States
     - U.S.
+    - United States
     - usa
+    - US
 - synonym: United Kingdom
   examples: |
-    - UK
     - U.K.
+    - UK
 - synonym: all
   examples: |
     - both
 - synonym: core
   examples: |
     - CORE
-    - Core
-    - core
-    - dialogue management
-    - Dialogue management
-    - Dialogue Management
     - DIALOGUE MANAGEMENT
+    - Core
+    - Dialogue Management
+    - Dialogue management
+    - dialogue management
 - synonym: custom actions
   examples: |
     - Actions
-    - Custom actions
     - actions
+    - Custom actions
 - synonym: date
   examples: |
     - dates
 - synonym: dialogflow
   examples: |
+    - dilogueflow
     - dialog flow
+    - dialogueflow
     - DialogFlwo
     - DialogFlow
     - google
-    - dialogueflow
-    - dilogueflow
 - synonym: distance
   examples: |
     - distances
 - synonym: entity recognition
   examples: |
     - entities
-    - ner
-    - entity extraction
-    - Entity recognition
+    - recognition
     - NER
     - etnity extraction
-    - recognition
+    - ner
+    - Entity recognition
+    - entity extraction
 - synonym: full stack developer
   examples: |
     - full stack develope
@@ -2255,18 +2254,18 @@ nlu:
     - Helvetia
 - synonym: intent classification
   examples: |
-    - intent classificaton
+    - intents
     - intent
     - intent recognition
-    - intents
+    - intent classificaton
 - synonym: italian
   examples: |
     - italina
 - synonym: luis
   examples: |
-    - LUIS
     - luis.ai
     - LUIS.ai
+    - LUIS
     - Luis
 - synonym: money
   examples: |
@@ -2285,54 +2284,42 @@ nlu:
     - companies
 - synonym: rasa
   examples: |
-    - Rasa
-    - rasa open source
     - Rasa Open Source
-    - Rasa open source
     - rasa Open Source
-    - open source
-    - open source rasa
+    - Rasa
     - RASA open source
+    - open source
+    - rasa open source
+    - Rasa open source
+    - open source rasa
 - synonym: stack
   examples: |
-    - fullstack
-    - full
-    - Full stack
-    - full staclk
     - full framework
+    - Full stack
     - full stack
+    - fullstack
     - Full
+    - full
     - Full Stack
+    - full staclk
 - synonym: wit.ai
   examples: |
     - wit
 - synonym: x
   examples: |
-    - Rasax
+    - rasax
+    - rasa x
     - RASAX
     - Rasa X
-    - rasa x
-    - RASA X
     - X
-    - rasax
-- synonym: playground
-  examples: |
-    - Rasaplayground
-    - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
-    - playgrounds
-    - Playground
-    - rasaplaygrounds
-    - interactive playground
-    - Interactive Playground
+    - Rasax
+    - RASA X
 - synonym: local
   examples: |
-    - locally
     - my computer
-    - my machine
+    - locally
     - my laptop
+    - my machine
 - regex: greet
   examples: |
     - hey[^\s]*
