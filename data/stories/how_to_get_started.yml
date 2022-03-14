@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 stories:
 - story: new to rasa at start, built bot before
   steps:

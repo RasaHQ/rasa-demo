@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 stories:
 - story: Story from Conversation ID 720bf563105641a2935bfcebb8cb821c
   steps:
