@@ -1,5 +1,92 @@
-version: "2.0"
+version: "3.0"
 stories:
+- story: Story from Conversation ID 720bf563105641a2935bfcebb8cb821c
+  steps:
+  - intent: get_started_intro
+    user: |-
+      /get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: faq
+    user: |-
+      whats [playground](product)
+    entities:
+    - product: playground
+  - slot_was_set:
+    - product: playground
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - slot_was_set:
+    - faq: null
+  - intent: install_rasa
+    user: |-
+      how do I install rasa
+  - action: utter_ask_which_product
+  - intent: faq
+    user: |-
+      [Rasa X]{"entity": "product", "value": "x"}
+    entities:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    user: |-
+      [local](install_type)
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+
+- story: Story from Conversation ID 532c6dbd87994e20807a45c67f012a46
+  steps:
+  - intent: greet
+    user: |-
+      hi
+  - action: action_greet_user
+  - slot_was_set:
+    - shown_privacy: true
+  - intent: how_to_get_started
+    user: |-
+      I want to get started
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
+  - action: utter_first_bot_with_rasa
+  - intent: affirm
+    user: |-
+      yes
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: true
+  - action: utter_built_bot_before
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_ask_migration
+  - intent: deny
+    user: |-
+      no
+  - action: utter_explain_rasa_components
+  - action: utter_rasa_components_details
+  - action: utter_ask_explain_nlucorex
+  - intent: faq
+    user: |-
+      [Rasa X]{"entity": "product", "value": "x"} plz
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_explain_x
+  - action: utter_also_explain_nlucore
+  - intent: affirm
+    user: |-
+      sure
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+
 - story: faqs
   steps:
   - user: |
@@ -55,7 +142,11 @@ stories:
   - user: |
       How do I get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - user: |
       No
@@ -74,7 +165,11 @@ stories:
   - user: |
       How do I get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - user: |
       No
@@ -182,11 +277,13 @@ stories:
   - user: |
       help me get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
-  - user: |
-      no
-    intent: deny
+  - intent: deny
   - action: action_set_onboarding
   - slot_was_set:
     - onboarding: false
@@ -203,7 +300,11 @@ stories:
   - user: |
       how to get started
     intent: how_to_get_started
-  - action: utter_getstarted
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
   - action: utter_first_bot_with_rasa
   - user: |
       no
@@ -284,10 +385,71 @@ stories:
       I want to speak to a person
     intent: human_handoff
   - action: utter_contact_email
-- story: fallback
+- story: Activate 2 stage fallback
   steps:
   - user: |
       /nlu_fallback
     intent: nlu_fallback
   - action: action_two_stage_fallback
   - active_loop: action_two_stage_fallback
+
+- story: Story from Conversation ID fa460b54c9fb4a0096b1fbf00ccfc054
+  steps:
+  - intent: get_started_intro
+    user: |-
+      /get_started_intro
+  - action: utter_greet
+  - action: utter_ask_playground_install_info
+  - intent: install_rasa
+    user: |-
+      install rasa
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    user: |-
+      [rasa open source]{"entity": "product", "value": "rasa"}
+  - slot_was_set:
+    - product: rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+    user: |-
+      yes
+  - action: utter_run_rasa_init
+  - intent: install_rasa
+    user: |-
+      install [rasa x]{"entity": "product", "value": "x"}
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    user: |-
+      [local machine]{"entity": "product", "value": "local"}
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+- story: Complete 2 stage fallback & restart
+  steps:
+  - user: |
+      /nlu_fallback
+    intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+  - user: |
+      /nlu_fallback
+    intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: null
+  - action: action_restart_with_button
+
+- story: Playground form
+  steps:
+  - intent: get_started_playground
+    user: /get_started_playground
+  - action: utter_playground_intro
+  - action: utter_ask_playground_help
+  - intent: affirm
+  - action: playground_form
+  - active_loop: null
+  - action: action_store_problem_description
+  - action: utter_direct_to_forum_for_help

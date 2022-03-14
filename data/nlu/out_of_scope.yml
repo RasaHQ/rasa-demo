@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 nlu:
 - intent: out_of_scope/non_english
   examples: |
@@ -135,7 +135,6 @@ nlu:
     - are you dev?
     - are you russian?
     - are you sick
-    - are you using Rasa [Core](product) and [NLU](product) ?
     - are you vegan
     - better than you
     - book a ticket

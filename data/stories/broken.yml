@@ -1,0 +1,10 @@
+version: "3.0"
+stories:
+- story: Something is broken
+  steps:
+  - intent: broken
+  - action: playground_form
+  - active_loop: playground_form
+  - active_loop: null
+  - action: action_store_problem_description
+  - action: utter_direct_to_forum_for_help

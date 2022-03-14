@@ -1,0 +1,199 @@
+version: "3.0"
+stories:
+- story: install rasa
+  steps:
+  - intent: install_rasa
+  - action: utter_ask_which_product
+
+- story: install rasa x
+  steps:
+  - intent: install_rasa
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+
+- story: install rasa open source
+  steps:
+  - intent: install_rasa
+    entities:
+    - product: rasa
+  - slot_was_set:
+    - product: rasa
+  - action: utter_installation_command
+  - action: utter_having_trouble_installing
+  - action: utter_ask_ready_to_build
+
+- story: install rasa x server
+  steps:
+  - intent: install_rasa
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: server
+  - slot_was_set:
+    - install_type: server
+  - action: utter_rasa_x_server_installation
+
+- story: install rasa x locally
+  steps:
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+
+- story: Local Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+- story: Server Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: server
+  - slot_was_set:
+    - install_type: server
+  - action: utter_rasa_x_server_installation
+
+- story: Local Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: faq
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+- story: Server Rasa X installation
+  steps:
+  - action: utter_ask_x_local_server
+  - intent: faq
+    entities:
+    - install_type: server
+  - slot_was_set:
+    - install_type: server
+  - action: utter_rasa_x_server_installation
+
+- story: install rasa x local
+  steps:
+  - intent: install_rasa
+    entities:
+    - product: x
+  - slot_was_set:
+    - product: x
+  - action: utter_ask_x_local_server
+  - intent: enter_data
+    entities:
+    - install_type: local
+  - slot_was_set:
+    - install_type: local
+  - action: utter_rasa_x_local_installation
+
+
+- story: Installation went well
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: affirm
+  - action: utter_run_rasa_init
+
+- story: Problems installing
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_problem_description
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+
+- story: Problems installing
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_problem_description
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+
+
+
+- story: Problems installing (cut to the chase)
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+
+
+- story: Problems installing (cut to the chase)
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - or:
+    - intent: technical_question
+    - intent: enter_data
+    - intent: out_of_scope
+  - action: action_store_problem_description
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+
+- story: Problems installing (but FAQ)
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: affirm
+  - action: utter_ask_problem_description
+  - intent: faq
+  - action: utter_faq
+  - action: action_set_faq_slot
+  - action: action_store_problem_description
+  - action: utter_installation_instructions
+  - action: utter_direct_to_forum_for_help
+  - action: utter_run_rasa_init
+
+- story: Just don't want to continue
+  steps:
+  - action: utter_ask_ready_to_build
+  - intent: deny
+  - action: utter_ask_if_problem
+  - intent: deny
+  - action: utter_anything_else

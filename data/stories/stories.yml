@@ -1,4 +1,4 @@
-version: "2.0"
+version: "3.0"
 stories:
 - story: thanks
   steps:
@@ -29,12 +29,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: newsletter + feedback
   steps:
@@ -49,12 +45,8 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: newsletter + affirm feedback
   steps:
@@ -101,10 +93,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -154,12 +142,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: sales then newsletter
   steps:
@@ -193,10 +177,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -208,12 +188,8 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
 - story: sales, then newsletter, then confirm
   steps:
@@ -235,10 +211,6 @@ stories:
   - action: utter_docu
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: negative
-  - slot_was_set:
-    - feedback_value: negative
   - action: action_tag_feedback
   - action: utter_thumbsup
   - action: utter_anything_else
@@ -276,18 +248,9 @@ stories:
   - action: action_submit_sales_form
   - action: utter_ask_feedback
   - intent: feedback
-    entities:
-    - feedback_value: positive
-  - slot_was_set:
-    - feedback_value: positive
   - action: action_tag_feedback
-  - action: utter_great
+  - action: utter_thumbsup
   - action: utter_anything_else
-- story: anything else? - yes
-  steps:
-  - action: utter_anything_else
-  - intent: affirm
-  - action: utter_what_help
 - story: anything else? - no
   steps:
   - action: utter_anything_else
@@ -307,7 +270,7 @@ stories:
   steps:
   - intent: react_negative
   - action: utter_react_negative
-- story: why rasa
+- story: why rasa 1
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
@@ -318,7 +281,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 2
   steps:
   - intent: why_rasa
     entities:
@@ -333,7 +296,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 3
   steps:
   - intent: why_rasa
     entities:
@@ -349,7 +312,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 4
   steps:
   - intent: why_rasa
     entities:
@@ -365,14 +328,14 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa
+- story: why rasa 5
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 6
   steps:
   - intent: why_rasa
     entities:
@@ -383,7 +346,7 @@ stories:
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 7
   steps:
   - intent: why_rasa
     entities:
@@ -395,7 +358,7 @@ stories:
   - action: utter_ask_more_migrate
   - intent: deny
   - action: utter_anything_else
-- story: why rasa
+- story: why rasa 8
   steps:
   - intent: why_rasa
     entities:
@@ -415,3 +378,22 @@ stories:
   - action: utter_ask_more_details
   - intent: technical_question
   - action: action_docs_search
+
+# stories that should be rules but currently can't (see https://github.com/RasaHQ/rasa/issues/8176)
+- story: explain -> can't explain # the default "rule"; longer rules will handle cases where an explanation exists
+  steps:
+  - intent: explain
+  - action: utter_no_further_info
+  # wait_for_user_input: false
+# - story: explain -> can't explain (at conversation start)
+  # conversation_start: true
+  # steps:
+  # - intent: explain
+  # - action: utter_no_further_info
+  # - action: utter_possibilities
+- story: explain in FAQ
+  steps:
+  - action: action_set_faq_slot
+  - intent: explain
+  - action: action_explain_faq
+  # wait_for_user_input: false
