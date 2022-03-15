@@ -613,24 +613,24 @@ nlu:
 - synonym: x
   examples: |
     - rasa x
-    - Rasa X
     - RASA X
     - X
+    - Rasa X
 - synonym: rasa
   examples: |
     - Rasa
 - synonym: nlu
   examples: |
-    - NLU
     - Natural Language Understanding
+    - NLU
 - synonym: all
   examples: |
-    - Both
     - both
+    - Both
 - synonym: dialogflow
   examples: |
-    - dialog flow
     - DialogFlow
+    - dialog flow
 - synonym: luis
   examples: |
     - LUIS.ai
@@ -641,25 +641,25 @@ nlu:
     - one
 - synonym: USA
   examples: |
-    - US
     - U.S.
-    - usa
     - United States
+    - usa
+    - US
 - synonym: United Kingdom
   examples: |
-    - UK
     - U.K.
+    - UK
 - synonym: conda
   examples: |
     - anaconda
 - synonym: core
   examples: |
-    - Core
-    - CORE
     - dialogue management
-    - Dialogue Management
+    - CORE
     - DIALOGUE MANAGEMENT
     - dialog management
+    - Core
+    - Dialogue Management
 - synonym: date
   examples: |
     - dates
@@ -671,8 +671,8 @@ nlu:
     - distances
 - synonym: duration
   examples: |
-    - how long
     - durations
+    - how long
 - synonym: entity recognition
   examples: |
     - entity extraction

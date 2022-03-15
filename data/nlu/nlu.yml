@@ -2189,150 +2189,47 @@ nlu:
 - synonym: english
   examples: |
     - English
-    - en
     - eng
     - Eng
     - ENGLISH
+    - en
 - synonym: ' duration'
   examples: |
     - durations
     - how long
-- synonym: USA
-  examples: |
-    - US
-    - United States
-    - U.S.
-    - usa
-- synonym: United Kingdom
-  examples: |
-    - UK
-    - U.K.
-- synonym: all
-  examples: |
-    - both
-- synonym: core
-  examples: |
-    - CORE
-    - Core
-    - core
-    - dialogue management
-    - Dialogue management
-    - Dialogue Management
-    - DIALOGUE MANAGEMENT
 - synonym: custom actions
   examples: |
-    - Actions
     - Custom actions
     - actions
-- synonym: date
-  examples: |
-    - dates
-- synonym: dialogflow
-  examples: |
-    - dialog flow
-    - DialogFlwo
-    - DialogFlow
-    - google
-    - dialogueflow
-    - dilogueflow
-- synonym: distance
-  examples: |
-    - distances
-- synonym: entity recognition
-  examples: |
-    - entities
-    - ner
-    - entity extraction
-    - Entity recognition
-    - NER
-    - etnity extraction
-    - recognition
+    - Actions
 - synonym: full stack developer
   examples: |
     - full stack develope
 - synonym: helvetia
   examples: |
     - Helvetia
-- synonym: intent classification
-  examples: |
-    - intent classificaton
-    - intent
-    - intent recognition
-    - intents
 - synonym: italian
   examples: |
     - italina
-- synonym: luis
-  examples: |
-    - LUIS
-    - luis.ai
-    - LUIS.ai
-    - Luis
-- synonym: money
-  examples: |
-    - amounts
-- synonym: name
-  examples: |
-    - names
-- synonym: nlu
-  examples: |
-    - Natural Language Understanding
-    - Nlu
-    - rasa_nlu
-    - NLU
-- synonym: organisation
-  examples: |
-    - companies
-- synonym: rasa
-  examples: |
-    - Rasa
-    - rasa open source
-    - Rasa Open Source
-    - Rasa open source
-    - rasa Open Source
-    - open source
-    - open source rasa
-    - RASA open source
 - synonym: stack
   examples: |
     - fullstack
-    - full
-    - Full stack
     - full staclk
-    - full framework
     - full stack
-    - Full
     - Full Stack
+    - full
+    - Full
+    - Full stack
+    - full framework
 - synonym: wit.ai
   examples: |
     - wit
-- synonym: x
-  examples: |
-    - Rasax
-    - RASAX
-    - Rasa X
-    - rasa x
-    - RASA X
-    - X
-    - rasax
-- synonym: playground
-  examples: |
-    - Rasaplayground
-    - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
-    - playgrounds
-    - Playground
-    - rasaplaygrounds
-    - interactive playground
-    - Interactive Playground
 - synonym: local
   examples: |
-    - locally
     - my computer
-    - my machine
     - my laptop
+    - locally
+    - my machine
 - regex: greet
   examples: |
     - hey[^\s]*
