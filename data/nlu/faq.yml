@@ -34,7 +34,7 @@ nlu:
     - different parts of Rasa
     - tell me about the different parts of rasa
     - what are your features ?
-    - what are the features does rasa have?    
+    - what are the features does rasa have?
 - intent: faq/dialogue_management
   examples: |
     - can you help me with the rasa [core](product) ?
@@ -920,3 +920,17 @@ nlu:
     - which are the topics covered in this forum
     - who is the forum for?
     - why should I join the forum
+- intent: greeting_malayalam
+  examples: |
+    - namskaram
+    - i am talking in [malayalam](job_function)
+- intent: ask_languagesbot
+  examples: |
+    - do you know any [malayalam](language) movies?
+- intent: ask_faq_languages
+  examples: |
+    - your NLU understand [malayalam](language)
+    - does Rasa support other languages like [malayalam](language)?
+- synonym: playground
+  examples: |
+    - rasa playground

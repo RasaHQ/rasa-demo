@@ -135,6 +135,7 @@ nlu:
     - What process was used to build you?
     - How did you come into being?
     - How were you made?
+    - what are you made of?
 - intent: chitchat/ask_howdoing
   examples: |
     - What's up man
@@ -176,6 +177,8 @@ nlu:
     - what languages do you know?
     - What are the languages you can speak?
     - What languages can you communicate in?
+    - do you know [malayalam](language)
+    - do you know malayalam?
 - intent: ask_question_in_forum
   examples: |
     - Can you help me to solve a problem?
@@ -449,6 +452,9 @@ nlu:
     - the assistant is in [italian](language)
     - health care
     - language: [dutch](language)
+    - [malayalam](language) ariyumo?
+    - [malayalam](language)?
+    - [malayalam](language)
 - intent: explain
   examples: |
     - what is the difference
@@ -613,24 +619,24 @@ nlu:
 - synonym: x
   examples: |
     - rasa x
-    - Rasa X
     - RASA X
     - X
+    - Rasa X
 - synonym: rasa
   examples: |
     - Rasa
 - synonym: nlu
   examples: |
-    - NLU
     - Natural Language Understanding
+    - NLU
 - synonym: all
   examples: |
-    - Both
     - both
+    - Both
 - synonym: dialogflow
   examples: |
-    - dialog flow
     - DialogFlow
+    - dialog flow
 - synonym: luis
   examples: |
     - LUIS.ai
@@ -641,25 +647,25 @@ nlu:
     - one
 - synonym: USA
   examples: |
-    - US
     - U.S.
-    - usa
     - United States
+    - usa
+    - US
 - synonym: United Kingdom
   examples: |
-    - UK
     - U.K.
+    - UK
 - synonym: conda
   examples: |
     - anaconda
 - synonym: core
   examples: |
-    - Core
-    - CORE
     - dialogue management
-    - Dialogue Management
+    - CORE
     - DIALOGUE MANAGEMENT
     - dialog management
+    - Core
+    - Dialogue Management
 - synonym: date
   examples: |
     - dates
@@ -671,8 +677,8 @@ nlu:
     - distances
 - synonym: duration
   examples: |
-    - how long
     - durations
+    - how long
 - synonym: entity recognition
   examples: |
     - entity extraction
