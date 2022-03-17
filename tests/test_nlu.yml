@@ -612,10 +612,10 @@ nlu:
     - Cool. Thanks
 - synonym: x
   examples: |
-    - rasa x
-    - Rasa X
-    - RASA X
     - X
+    - RASA X
+    - Rasa X
+    - rasa x
 - synonym: rasa
   examples: |
     - Rasa
@@ -633,22 +633,22 @@ nlu:
     - DialogFlow
 - synonym: luis
   examples: |
+    - luis.ai
     - LUIS.ai
     - LUIS
-    - luis.ai
 - synonym: '1'
   examples: |
     - one
 - synonym: USA
   examples: |
-    - US
-    - U.S.
     - usa
+    - US
     - United States
+    - U.S.
 - synonym: United Kingdom
   examples: |
-    - UK
     - U.K.
+    - UK
 - synonym: conda
   examples: |
     - anaconda
@@ -656,10 +656,10 @@ nlu:
   examples: |
     - Core
     - CORE
+    - dialog management
     - dialogue management
     - Dialogue Management
     - DIALOGUE MANAGEMENT
-    - dialog management
 - synonym: date
   examples: |
     - dates
@@ -671,15 +671,15 @@ nlu:
     - distances
 - synonym: duration
   examples: |
-    - how long
     - durations
+    - how long
 - synonym: entity recognition
   examples: |
     - entity extraction
 - synonym: intent classification
   examples: |
-    - intents
     - intent
+    - intents
 - synonym: money
   examples: |
     - amounts
