@@ -58,6 +58,13 @@ releases:
               secretKeyRef:
                 name: {{ requiredEnv "ACTION_SERVER_SECRET_NAME" }}
                 key: "ALGOLIA_DOCS_INDEX"
+      - postgresql:
+          tag: "12.9.0"
+          extraEnv:
+            - name: PGDATA
+              value: /bitnami/postgresql/data_12
+          persistence:
+            existingClaim: {{ requiredEnv "POSTGRES_PVC" }}
       - global:
           postgresql:
             postgresqlPassword: {{ requiredEnv "RASA_X_DATABASE_PASSWORD" }}
@@ -82,12 +89,15 @@ releases:
             requests:
               memory: {{ .Values.rasax.resources.requests.memory }}
               cpu: {{ .Values.rasax.resources.requests.cpu }}
+          persistence:
+            existingClaim: {{ requiredEnv "RASA_X_PVC" }}
       - rasa:
           imagePullPolicy: Always
           token: {{ requiredEnv "RASA_TOKEN" }}
           tag: {{ requiredEnv "RASA_VERSION" }}-full
           versions:
             rasaProduction:
+              enabled: true
               resources:
                 requests:
                   memory: {{ .Values.rasaProduction.resources.requests.memory }}
@@ -106,8 +116,9 @@ releases:
               session_persistence: true
             rest: {}
       - rabbitmq:
-          rabbitmq:
+          auth:
             password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
+            erlangCookie: {{ requiredEnv "RABBITMQ_ERLANGCOOKIE" }}
       - eventService:
           tag: {{ requiredEnv "RASA_X_VERSION" }}
           name: {{ requiredEnv "RASA_X_IMAGE_NAME" }}
