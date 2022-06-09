@@ -2214,7 +2214,6 @@ nlu:
   examples: |
     - CORE
     - Core
-    - core
     - dialogue management
     - Dialogue management
     - Dialogue Management
@@ -2315,18 +2314,6 @@ nlu:
     - RASA X
     - X
     - rasax
-- synonym: playground
-  examples: |
-    - Rasaplayground
-    - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
-    - playgrounds
-    - Playground
-    - rasaplaygrounds
-    - interactive playground
-    - Interactive Playground
 - synonym: local
   examples: |
     - locally
