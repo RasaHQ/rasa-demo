@@ -779,7 +779,7 @@ class ActionForumSearch(Action):
 
 
 class ActionTagFeedback(Action):
-    """Tag a conversation in Rasa X as positive or negative feedback """
+    """Tag a conversation in Rasa X as positive or negative feedback"""
 
     def name(self):
         return "action_tag_feedback"
