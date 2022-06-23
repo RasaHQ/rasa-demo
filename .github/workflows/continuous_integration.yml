@@ -235,7 +235,7 @@ jobs:
       if: ${{ needs.check_changed_files.outputs.core == 'true' }}
       run: |
         rasa --version
-        rasa test core --stories tests/test_conversations.yml --fail-on-prediction-errors
+        rasa test --stories tests/test_conversations.yml --fail-on-prediction-errors
 
     - name: Wait for the conclusion of all other workflow runs
       # upload model from PR
@@ -303,7 +303,6 @@ jobs:
         contains( github.event.pull_request.labels.*.name, 'upload_model' )) ||
         steps.check-runs-conclusion.outputs.upload-model == 'true'
       run: gsutil cp "${MODEL_PATH}" ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models
-
 
   build-images:
     name: Build Action Server Image
