@@ -41,7 +41,7 @@ env:
   # * rasa version in requirements.txt
   # * rasa-sdk base image version in Dockerfile
   RASA_X_VERSION: "1.0.1"
-  RASA_VERSION: "2.8.17"
+  RASA_VERSION: "2.8.21"
   # Due to the issue with openssl library for Google Cloud SDK (gcloud)
   # (https://github.com/GoogleCloudPlatform/github-actions/issues/128)
   # we use 297.0.01 version
