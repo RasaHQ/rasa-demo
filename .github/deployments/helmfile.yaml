@@ -109,8 +109,6 @@ releases:
                 requests:
                   memory: {{ .Values.rasaWorker.resources.requests.memory }}
                   cpu: {{ .Values.rasaWorker.resources.requests.cpu}}
-          additionalChannelCredentials:
-            rest: {}
       - rabbitmq:
           auth:
             password: {{ requiredEnv "RABBITMQ_PASSWORD" }}
