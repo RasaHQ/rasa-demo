@@ -38,6 +38,7 @@ if you want to train it faster, try the training command with
 
 Then, to run, first set up your action server in one terminal window:
 ```bash
+Need to Open to Separate terminal For running Action
 rasa run actions --actions actions.actions
 ```
 
