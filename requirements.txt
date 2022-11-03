@@ -4,3 +4,7 @@ rasa==2.8.21 # NB! when updating, make sure to also update:
 -r actions/requirements-actions.txt
 pytablewriter
 python-dotenv~=0.15.0
+httpx>=0.23.0 # not directly required, pinned by Snyk to avoid a vulnerability
+sanic>=20.12.6 # not directly required, pinned by Snyk to avoid a vulnerability
+ujson>=5.4.0 # not directly required, pinned by Snyk to avoid a vulnerability
+websockets>=10.0 # not directly required, pinned by Snyk to avoid a vulnerability
