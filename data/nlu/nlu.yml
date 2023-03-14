@@ -1168,7 +1168,8 @@ nlu:
     - [dialogueflow](current_api)
     - T10
     - the company is called t10
-    - I couldnot get answer in the [google](company)
+    - healthcare assistant
+    - haa
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
@@ -1506,6 +1507,8 @@ nlu:
     - can you help me build my bot?
     - start
     - how to build bot with rasa x
+    - can i get tea?
+    - I want to build [an assistant](company). Where should I get started?
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -1676,9 +1679,6 @@ nlu:
     - How to download rasa
     - where do i download rasa
     - I have a specific question regarding installation
-    - I couldnot install rasa on my [windows](product)
-    - Can I install [rasa](product) on a gui-less server
-    - how can i install [rasa](company) in vscode
 - intent: nlu_generation_tool_recommendation
   examples: |
     - are there simpler ways to create [nlu](product) data
@@ -2237,6 +2237,10 @@ nlu:
     - is Rasa works with Unity3d?
     - rasa uses deep learning ?
     - i want to extract predefined entity from user query
+    - what is the rasa roadmap?
+    - Can you show me rules
+    - ResponseSelector
+    - I am getting erro that matpotlib is not writable when rasa init is
 - intent: restart
   examples: |
     - yep you can restart
@@ -2351,6 +2355,7 @@ nlu:
     - open source
     - open source rasa
     - RASA open source
+    - Rasa Enterprise
 - synonym: stack
   examples: |
     - fullstack
