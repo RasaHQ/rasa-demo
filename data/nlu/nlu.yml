@@ -1,142 +1,66 @@
-version: "2.0"
+version: "3.1"
+
 nlu:
-- synonym: english
+- intent: greet
   examples: |
-    - English
-    - en
-    - eng
-    - Eng
-    - ENGLISH
-- synonym: ' duration'
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - 你好！
+    - 您好！
+    - 在么！
+    - 在吗！
+    - 喂！
+
+- intent: goodbye
   examples: |
-    - durations
-    - how long
-- synonym: USA
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - 拜拜！
+    - 再见！
+    - 拜！
+    - 退出。
+    - 结束。
+    - exit
+
+- intent: affirm
   examples: |
-    - US
-    - United States
-    - U.S.
-    - usa
-- synonym: United Kingdom
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - 是的
+    - 是
+
+- intent: deny
   examples: |
-    - UK
-    - U.K.
-- synonym: all
-  examples: |
-    - both
-- synonym: core
-  examples: |
-    - CORE
-    - Core
-    - dialogue management
-    - Dialogue management
-    - Dialogue Management
-    - DIALOGUE MANAGEMENT
-- synonym: custom actions
-  examples: |
-    - Actions
-    - Custom actions
-    - actions
-- synonym: date
-  examples: |
-    - dates
-- synonym: dialogflow
-  examples: |
-    - dialog flow
-    - DialogFlwo
-    - DialogFlow
-    - google
-    - dialogueflow
-    - dilogueflow
-- synonym: distance
-  examples: |
-    - distances
-- synonym: entity recognition
-  examples: |
-    - entities
-    - ner
-    - entity extraction
-    - Entity recognition
-    - NER
-    - etnity extraction
-    - recognition
-- synonym: full stack developer
-  examples: |
-    - full stack develope
-- synonym: helvetia
-  examples: |
-    - Helvetia
-- synonym: intent classification
-  examples: |
-    - intent classificaton
-    - intent
-    - intent recognition
-    - intents
-- synonym: italian
-  examples: |
-    - italina
-- synonym: luis
-  examples: |
-    - LUIS
-    - luis.ai
-    - LUIS.ai
-    - Luis
-- synonym: money
-  examples: |
-    - amounts
-- synonym: name
-  examples: |
-    - names
-- synonym: nlu
-  examples: |
-    - Natural Language Understanding
-    - Nlu
-    - rasa_nlu
-    - NLU
-- synonym: organisation
-  examples: |
-    - companies
-- synonym: rasa
-  examples: |
-    - Rasa
-    - rasa open source
-    - Rasa Open Source
-    - Rasa open source
-    - rasa Open Source
-    - open source
-    - open source rasa
-    - RASA open source
-- synonym: stack
-  examples: |
-    - fullstack
-    - full
-    - Full stack
-    - full staclk
-    - full framework
-    - full stack
-    - Full
-    - Full Stack
-- synonym: wit.ai
-  examples: |
-    - wit
-- synonym: x
-  examples: |
-    - Rasax
-    - RASAX
-    - Rasa X
-    - rasa x
-    - RASA X
-    - X
-    - rasax
-- synonym: local
-  examples: |
-    - locally
-    - my computer
-    - my machine
-    - my laptop
-- regex: greet
-  examples: |
-    - hey[^\s]*
-- regex: zipcode
-  examples: |
-    - [0-9]{5}
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - 不
+    - 不是的
+    - 不是
