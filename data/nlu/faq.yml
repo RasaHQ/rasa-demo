@@ -34,7 +34,7 @@ nlu:
     - different parts of Rasa
     - tell me about the different parts of rasa
     - what are your features ?
-    - what are the features does rasa have?    
+    - what are the features does rasa have?
 - intent: faq/dialogue_management
   examples: |
     - can you help me with the rasa [core](product) ?
@@ -920,3 +920,6 @@ nlu:
     - which are the topics covered in this forum
     - who is the forum for?
     - why should I join the forum
+- synonym: playground
+  examples: |
+    - rasa playground
