@@ -16,17 +16,17 @@ help:
 	@echo "        Run custom action unit tests"
 
 install:
-	python -m pip install --upgrade "pip<20"
+	python3 -m pip install --upgrade "pip<20"
 	pip install -r requirements.txt
-	python -m spacy download en_core_web_md
-	python -m spacy link en_core_web_md en 
+	python3 -m spacy download en_core_web_md
+	python3 -m spacy link en_core_web_md en
 	pip install -e .
 
 install-dev:
-	python -m pip install --upgrade "pip<20"
+	python3 -m pip install --upgrade "pip<20"
 	pip install -r requirements-dev.txt
-	python -m spacy download en_core_web_md
-	python -m spacy link en_core_web_md en 
+	python3 -m spacy download en_core_web_md
+	python3 -m spacy link en_core_web_md en
 	pip install -e .
 
 clean:
