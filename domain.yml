@@ -72,6 +72,9 @@ entities:
 slots:
   retrieval_intent:
     type: any
+    mappings:
+    - type: custom
+      influence_conversation: false
   budget:
     type: any
   business_email:
